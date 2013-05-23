@@ -15,6 +15,6 @@ GoQt is a cross-platform toolkit. Currently supported platforms are  Microsoft W
  * Source code
   * https://github.com/visualfc/goqt
  * Binary downloads 
-  * http://code.google.com/p/goqt/downloads
+  * <s>http://code.google.com/p/goqt/downloads</s>
  * Google group
   * https://groups.google.com/group/liteide-dev
