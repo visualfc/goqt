@@ -46,7 +46,7 @@ static void init()
 	qtdrv(&app_async_task,1,18,0,0,0,0,0,0,0,0,0,0,0,0);
 }
 #cgo linux LDFLAGS: -L../bin -L../../bin -L. -lqtdrv.ui
-#cgo macosx LDFLAGS: -L../bin -L../../bin -L. -lqtdrv.ui
+#cgo darwin LDFLAGS: -L../bin -L../../bin -L. -lqtdrv.ui
 */
 import "C"
 import (
@@ -545,7 +545,7 @@ func Run(fn func()) int {
 	Async(func() {
 		fn()
 	})
-	return app.Exec()	
+	return app.Exec()
 }
 
 func Application() *QApplication {
