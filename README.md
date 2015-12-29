@@ -1,11 +1,16 @@
 GoQt
 ====
 
-Golang bindings to the Qt cross-platform application framework.
+## Introduction
+
+_GoQt is golang bindings to the Qt cross-platform application framework._
+
+* Version: 0.1
+* Author: [visualfc](mailto:visualfc@gmail.com)
 
 
 ## Experiment
-GoQt project is experiment.
+GoQt project current is experiment.
 
 ## What is GoQt
 GoQt is a GUI toolkit for the Go programming language. It allows Go programmers to create programs with a robust, highly functional graphical user interface, simply and easily. It is implemented as a Golang extension module (cgo code) that wraps the popular Qt cross platform GUI library, which is written in C++.
@@ -66,6 +71,8 @@ GoQt is a cross-platform toolkit, But my test platforms are Microsoft Windows (x
 ### Website
  * Source code
   * https://github.com/visualfc/goqt
+ * Examples
+  * https://github.com/visualfc/goqt/examples
  * LiteIDE
   * https://github.com/visualfc/liteide
 
