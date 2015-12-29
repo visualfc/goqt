@@ -18,7 +18,11 @@ GoQt is a GUI toolkit for the Go programming language. It allows Go programmers 
 Like Golang and Qt, GoQt is Open Source. The Golang extension module(cgo code) under the BSD license. The C++ bindings library under the LGPL license. 
 
 ## Platforms
-GoQt is a cross-platform toolkit, But my test platforms are Microsoft Windows (x86) Qt4.8.5 and Qt5.5.1 toolkit.
+
+* Golang : 1.5.2
+
+* GoQt is a cross-platform toolkit, But my test platforms are Microsoft Windows (x86) Qt4.8.5 and Qt5.5.1 toolkit and go1.5.2
+
 
 ## Install GoQt
 
