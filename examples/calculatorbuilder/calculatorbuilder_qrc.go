@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Resource object code
 **
-** Created: ?? 12? 29 10:47:21 2015
+** Created: ?? 12? 29 15:33:00 2015
 **      by: The Resource Compiler for Qt version 4.8.5
 **
 ** WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ package main
 import "github.com/visualfc/goqt/ui"
 
 var qt_resource_data = []byte{
-  // I:/goproj/src/github.com/visualfc/goqt/examples/calculatorbuilder/calculatorform.ui
+  // F:/vfc/liteide-git/liteidex/src/github.com/visualfc/goqt/examples/calculatorbuilder/calculatorform.ui
   0x0,0x0,0x4,0x67,
   0x0,
   0x0,0x20,0x2b,0x78,0x9c,0xed,0x59,0x51,0x6f,0xdb,0x36,0x10,0x7e,0x1f,0xd0,0xff,
