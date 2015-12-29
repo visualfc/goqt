@@ -72,7 +72,7 @@ GoQt is a cross-platform toolkit, But my test platforms are Microsoft Windows (x
  * Source code
   * https://github.com/visualfc/goqt
  * Examples
-  * https://github.com/visualfc/goqt/examples
+  * https://github.com/visualfc/goqt/tree/master/examples
  * LiteIDE
   * https://github.com/visualfc/liteide
 
