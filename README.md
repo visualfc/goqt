@@ -46,15 +46,15 @@ Like Golang and Qt, GoQt is Open Source. The Golang extension module(cgo code) u
 #### 1.get goqt
     > go get github.com/visualfc/goqt
 #### 2.build qtdrv, need install QtSDK
-    > cd goqt/qtdrv
+    > cd goqt\qtdrv
     > qmake "CONFIG+=release"
     > make
 #### 3.build rcc	
-	> cd goqt/tools/rcc
+	> cd goqt\tools\rcc
 	> qmake "CONFIG+=release"	
 	> make
 #### 4.build ui, need CGO_ENABLED=1 and install gcc
-    > cd goqt/ui
+    > cd goqt\ui
     > go install -v
 #### 5.build examples
     > cd goqt\examples\minimal
@@ -77,7 +77,7 @@ Like Golang and Qt, GoQt is Open Source. The Golang extension module(cgo code) u
     > cd goqt/ui
     > go install -v
 #### 5.build examples
-    > cd goqt\examples\minimal
+    > cd goqt/examples/minimal
     > build.sh
     > ../../bin/minimal
 	
@@ -97,7 +97,7 @@ Like Golang and Qt, GoQt is Open Source. The Golang extension module(cgo code) u
     > cd goqt/ui
     > go install -v
 #### 5.build examples
-    > cd goqt\examples\minimal
+    > cd goqt/examples/minimal
     > build.sh
     > ../../bin/minimal	
 		
