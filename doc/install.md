@@ -24,6 +24,10 @@
 
 ## Install GoQt
 
+1. Download github.com/visualfc/goqt
+2. Use QtCreator or make build goqt/qtdrv and goqt/tools/rcc, need install QtSDK
+3. Install goqt/ui
+
 ### Windows
 
 #### 1.get goqt
