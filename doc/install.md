@@ -65,7 +65,7 @@
     > go install -v
 #### 5.build examples
     > cd goqt/examples/minimal
-    > build.sh
+    > ./build.sh
     > ../../bin/minimal
 	
 ### MacOS X
@@ -85,5 +85,5 @@
     > go install -v
 #### 5.build examples
     > cd goqt/examples/minimal
-    > build.sh
+    > ./build.sh
     > ../../bin/minimal	
