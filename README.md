@@ -19,13 +19,13 @@ Like Golang and Qt, GoQt is Open Source. The Golang extension module(cgo code) u
 
 ## Documents
 
-[GoQt Documents](https://github.com/visualfc/goqt/tree/master/doc)
+[GoQt Documents](doc)
 
 Instructions install GoQt and learning documents.
 
 ## Examples
 
-[GoQt Examples](https://github.com/visualfc/goqt/tree/master/examples)
+[GoQt Examples](examples)
 
 Some examples of learning to use GoQt source code.
 
