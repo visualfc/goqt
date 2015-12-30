@@ -31,11 +31,11 @@
 #### 2.build qtdrv, need install QtSDK
     > cd goqt\qtdrv
     > qmake "CONFIG+=release"
-    > make
+    > mingw32-make
 #### 3.build rcc	
 	> cd goqt\tools\rcc
 	> qmake "CONFIG+=release"	
-	> make
+	> mingw32-make
 #### 4.build ui, need CGO_ENABLED=1 and install gcc
     > cd goqt\ui
     > go install -v
