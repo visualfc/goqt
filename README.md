@@ -133,6 +133,8 @@ Like Golang and Qt, GoQt is Open Source. The Golang extension module(cgo code) u
 ### Website
  * Source code
   * https://github.com/visualfc/goqt
+ * Documents
+  * https://github.com/visualfc/goqt/tree/master/doc
  * Examples
   * https://github.com/visualfc/goqt/tree/master/examples
  * LiteIDE
