@@ -42,7 +42,7 @@
 
 * go
 	
-		pt := ui.NewPoint()
+		pt := ui.NewQPoint()
 		pt.SetX(100)
 		pt.SetY(100)
 		
@@ -89,14 +89,14 @@
 		
 		func NewMyWidget() *MyWidget {
 			w := &MyWidget{}
-			w.QWidget = ui.NewWidget()
+			w.QWidget = ui.NewQWidget()
 			w.InstallEventFilter(w)
 		}	
 		
 		func (w *MyWidget) OnPaintEvent(e *ui.QPaintEvent) bool {
 			w.PaintEvent() //w.QWidget.PaintEvent()
 			
-			painter := ui.NewPainterWithPaintDevice(w)
+			painter := ui.NewQPainterWithPaintDevice(w)
 			defer painter.Delete()
 			
 			//painter.Draw ...	
