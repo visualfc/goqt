@@ -21,29 +21,24 @@ func IsValidDriver(v ui.Driver) bool {
 
 func NewCalclatorForm() (*CalclatorForm, error) {
 	w := &CalclatorForm{}
-	w.QWidget = ui.NewWidget()
+	w.QWidget = ui.NewQWidget()
 
-	file := ui.NewFileWithName(":/forms/calculatorform.ui")
+	file := ui.NewQFileWithName(":/forms/calculatorform.ui")
 	if !file.Open(ui.QIODevice_ReadOnly) {
 		return nil, errors.New("error load ui")
 	}
 
-	loader := ui.NewUiLoader()
+	loader := ui.NewQUiLoader()
 	formWidget := loader.Load(file)
 	if formWidget == nil {
 		return nil, errors.New("error load form widget")
 	}
 
-	w.spinBox1 = &ui.QSpinBox{}
-	w.spinBox1.SetDriverFrom(formWidget.FindChild("inputSpinBox1"))
+	w.spinBox1 = ui.NewQSpinBoxFromDriver(formWidget.FindChild("inputSpinBox1"))
+	w.spinBox2 = ui.NewQSpinBoxFromDriver(formWidget.FindChild("inputSpinBox2"))
+	w.outputLable = ui.NewQLabelFromDriver(formWidget.FindChild("outputWidget"))
 
-	w.spinBox2 = &ui.QSpinBox{}
-	w.spinBox2.SetDriverFrom(formWidget.FindChild("inputSpinBox2"))
-
-	w.outputLable = &ui.QLabel{}
-	w.outputLable.SetDriverFrom(formWidget.FindChild("outputWidget"))
-
-	if w.spinBox1.IsValidDriver() && w.spinBox2.IsValidDriver() && w.outputLable.IsValidDriver() {
+	if ui.IsValidDriver(w.spinBox1) && ui.IsValidDriver(w.spinBox2) && ui.IsValidDriver(w.outputLable) {
 		fnChanged := func() {
 			w.outputLable.SetText(fmt.Sprintf("%d", w.spinBox1.Value()+w.spinBox2.Value()))
 		}
@@ -56,7 +51,7 @@ func NewCalclatorForm() (*CalclatorForm, error) {
 		})
 	}
 
-	layout := ui.NewVBoxLayout()
+	layout := ui.NewQVBoxLayout()
 	layout.AddWidget(formWidget)
 	w.SetLayout(layout)
 

@@ -1,2 +1,2 @@
 #!/bin/sh
-go build -ldflags "-r ." -o ../../bin/codeedit
+go build -ldflags "-r ." -o ../../bin/minimal

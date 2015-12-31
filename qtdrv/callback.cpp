@@ -220,6 +220,9 @@ int init_callback(void *p, int id, void *p1, void *p2, void *p3)
     case 105:
         *(void**)p2 = drvNewFilter(p,(Iface*)p1);
         break;
+    case 106:
+        drvSetString(p1,qVersion());
+        break;
     case 200:
         uidrv.call_async_task();
         break;

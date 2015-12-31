@@ -58,10 +58,6 @@ import (
 	"unsafe"
 )
 
-func Version() string {
-	return "0.1"
-}
-
 type Error int
 
 var (
@@ -168,17 +164,19 @@ func (b *BaseDrv) QtDrv() _qt_drv {
 	return b.drv
 }
 
-func IsValidDriver(v Driver) bool {
+func isNilDriver(v Driver) bool {
 	return !reflect.ValueOf(v).IsNil()
 }
 
-func (b *BaseDrv) SetDriverFrom(from Driver) error {
-	if !IsValidDriver(from) {
+func IsValidDriver(v Driver) bool {
+	return isNilDriver(v) && v.IsValidDriver()
+}
+
+func (b *BaseDrv) SetDriverFrom(v Driver) error {
+	if !IsValidDriver(v) {
 		return ErrInvalid
 	}
-	if from.IsValidDriver() {
-		b.drv = from.QtDrv()
-	}
+	b.drv = v.QtDrv()
 	return nil
 }
 
@@ -522,32 +520,13 @@ var (
 	tasks TaskList
 )
 
-func Async(fn func()) {
-	tasks.Append(fn)
-	_DirectQtDrv(nil, 1, 200, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
-}
-
 //export app_async_task
 func app_async_task() {
 	tasks.Run()
 }
 
-func RunEx(args []string, fn func()) int {
-	app := NewApplication(args)
-	Async(func() {
-		fn()
-	})
-	return app.Exec()
-}
-
-func Run(fn func()) int {
-	app := NewApplication(nil)
-	Async(func() {
-		fn()
-	})
-	return app.Exec()
-}
-
-func Application() *QApplication {
-	return QApplicationInstance()
+func QtVersion() string {
+	var __rv string
+	_DirectQtDrv(nil, 1, 106, unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	return __rv
 }

@@ -14,7 +14,7 @@ type WigglyWidget struct {
 }
 
 func NewWiggleWidget() *WigglyWidget {
-	w := &WigglyWidget{ui.NewWidget(), 0, "Hello World", make(chan bool)}
+	w := &WigglyWidget{ui.NewQWidget(), 0, "Hello World", make(chan bool)}
 	w.SetBackgroundRole(ui.QPalette_Midlight)
 	w.SetAutoFillBackground(true)
 
@@ -24,7 +24,7 @@ func NewWiggleWidget() *WigglyWidget {
 
 	w.InstallEventFilter(w)
 
-	t := ui.NewTimer()
+	t := ui.NewQTimer()
 	t.SetInterval(60)
 	t.OnTimeout(func() {
 		w.step++
@@ -43,16 +43,16 @@ var sineTablep = [16]int{0, 38, 71, 92, 100, 92, 71, 38, 0, -38, -71, -92, -100,
 
 func (w *WigglyWidget) OnPaintEvent(e *ui.QPaintEvent) bool {
 	w.PaintEvent(e)
-	merics := ui.NewFontMetrics(w.Font())
+	merics := ui.NewQFontMetrics(w.Font())
 	defer merics.Delete()
 
 	x := (w.Width() - merics.WidthWithString(w.text)) / 2
 	y := (w.Height() + merics.Ascent() - merics.Descent()) / 2
 
-	color := ui.NewColor()
+	color := ui.NewQColor()
 	defer color.Delete()
 
-	painter := ui.NewPainterWithPaintDevice(w)
+	painter := ui.NewQPainterWithPaintDevice(w)
 	defer painter.Delete()
 
 	for i, s := range w.text {
@@ -72,13 +72,13 @@ type Dialog struct {
 
 func NewDialog() *Dialog {
 	dlg := &Dialog{}
-	dlg.QDialog = ui.NewDialog()
+	dlg.QDialog = ui.NewQDialog()
 
-	vbox := ui.NewVBoxLayout()
+	vbox := ui.NewQVBoxLayout()
 	dlg.SetLayout(vbox)
 
 	dlg.widdly = NewWiggleWidget()
-	edit := ui.NewLineEdit()
+	edit := ui.NewQLineEdit()
 
 	vbox.AddWidget(dlg.widdly)
 	vbox.AddWidget(edit)

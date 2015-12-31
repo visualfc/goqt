@@ -17,14 +17,14 @@ type CodeEdit struct {
 
 func NewCodeEdit() *CodeEdit {
 	w := &CodeEdit{}
-	w.QWidget = ui.NewWidget()
-	w.edit = ui.NewPlainTextEdit()
+	w.QWidget = ui.NewQWidget()
+	w.edit = ui.NewQPlainTextEdit()
 	w.edit.SetLineWrapMode(ui.QPlainTextEdit_NoWrap)
-	w.syntax = ui.NewSyntaxHighlighterHookWithDoc(w.edit.Document())
-	w.lineArea = ui.NewWidget()
+	w.syntax = ui.NewQSyntaxHighlighterHookWithDoc(w.edit.Document())
+	w.lineArea = ui.NewQWidget()
 	w.lineArea.SetFixedWidth(0)
 
-	hbox := ui.NewHBoxLayout()
+	hbox := ui.NewQHBoxLayout()
 	hbox.SetMargin(0)
 	hbox.SetSpacing(0)
 	hbox.AddWidget(w.lineArea)
@@ -65,8 +65,8 @@ continue     for          import       return       var
 
 func (w *CodeEdit) MakeRules() {
 	w.rules = make(map[*ui.QRegExp]*ui.QTextCharFormat)
-	keyword := ui.NewTextCharFormat()
-	b := ui.NewBrush()
+	keyword := ui.NewQTextCharFormat()
+	b := ui.NewQBrush()
 	b.SetStyle(ui.Qt_SolidPattern)
 	b.SetColorWithGlobalcolor(ui.Qt_darkBlue)
 	keyword.SetForeground(b)
@@ -76,7 +76,7 @@ func (w *CodeEdit) MakeRules() {
 			if len(v) == 0 {
 				continue
 			}
-			r := ui.NewRegExp()
+			r := ui.NewQRegExp()
 			r.SetPattern("\\b" + v + "\\b")
 			w.rules[r] = keyword
 		}
@@ -117,9 +117,9 @@ func (w *CodeEdit) OnPaintEvent(obj *ui.QObject, e *ui.QPaintEvent) bool {
 }
 
 func (w *CodeEdit) paintLineArea(event *ui.QPaintEvent) {
-	painter := ui.NewPainterWithPaintDevice(w.lineArea)
+	painter := ui.NewQPainterWithPaintDevice(w.lineArea)
 	defer painter.Delete()
-	painter.FillRectWithRectColor(w.lineArea.Rect(), ui.NewColorWithGlobalcolor(ui.Qt_lightGray))
+	painter.FillRectWithRectColor(w.lineArea.Rect(), ui.NewQColorWithGlobalcolor(ui.Qt_lightGray))
 
 	block := w.edit.FirstVisibleBlock()
 	blockNumber := block.BlockNumber() + 1
@@ -128,8 +128,8 @@ func (w *CodeEdit) paintLineArea(event *ui.QPaintEvent) {
 	height := w.lineArea.FontMetrics().Height()
 	for block.IsValid() && top < event.Rect().Bottom() {
 		if block.IsVisible() && bottom >= event.Rect().Top() {
-			painter.SetPen(ui.NewColorWithGlobalcolor(ui.Qt_black))
-			painter.DrawTextWithXYWidthHeightFlagsTextRect(0, top, w.lineArea.Width(), height, int(ui.Qt_AlignRight), strconv.Itoa(blockNumber), ui.NewRect())
+			painter.SetPen(ui.NewQColorWithGlobalcolor(ui.Qt_black))
+			painter.DrawTextWithXYWidthHeightFlagsTextRect(0, top, w.lineArea.Width(), height, int(ui.Qt_AlignRight), strconv.Itoa(blockNumber), ui.NewQRect())
 		}
 		block = block.Next()
 		top = bottom
