@@ -27,7 +27,7 @@
 
 * go
 	
-		widget := ui.NewWidget()
+		widget := ui.NewQWidget()
 		widget.Show()
 
 ###  Plain class
@@ -107,9 +107,9 @@
 ## Rename
 
 ### New
-	QAction::QAction(QObject*) => func NewAction(parent QObjectInterface) *QAction
-	QAction::QAction(QString const&,QObject*) => func NewActionWithTextParent(text string,parent QObjectInterface) *QAction
-	QAction::QAction(QIcon const&,QString const&,QObject*) => func NewActionWithIconTextParent(icon *QIcon,text string,parent QObjectInterface) *QAction
+	QAction::QAction(QObject*) => func NewQAction(parent QObjectInterface) *QAction
+	QAction::QAction(QString const&,QObject*) => func NewQActionWithTextParent(text string,parent QObjectInterface) *QAction
+	QAction::QAction(QIcon const&,QString const&,QObject*) => func NewQActionWithIconTextParent(icon *QIcon,text string,parent QObjectInterface) *QAction
 
 ### Function
 
