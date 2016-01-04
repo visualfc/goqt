@@ -10,6 +10,7 @@
 
 ### Golang
 
+* Go1.4.2
 * Go1.5.2
 
 ### Qt Version

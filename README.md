@@ -27,6 +27,7 @@ Like Golang and Qt, GoQt is Open Source. The Golang extension module(cgo code) u
 
 ### Golang
 
+* Go1.4.2
 * Go1.5.2
 
 ### Qt Version

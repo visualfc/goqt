@@ -287,7 +287,7 @@ func utf8_to_string(dst unsafe.Pointer, src unsafe.Pointer, size int32) {
 
 //export array_to_slice
 func array_to_slice(dst, src unsafe.Pointer, size int32) {
-	*(*[]byte)(dst) = (*[1 << 30]byte)(unsafe.Pointer(src))[0:size]
+	*(*[]byte)(dst) = C.GoBytes(src, C.int(size))
 }
 
 //export append_utf8_to_slice
