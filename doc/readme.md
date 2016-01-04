@@ -12,3 +12,7 @@ Instructions for downloading and installing the GoQt and build.
 [Design Document](design.md)
 
 GoQt naming and conversion design document.
+
+[Memory Manager] (memory.md)
+
+GoQt memory manager document.
