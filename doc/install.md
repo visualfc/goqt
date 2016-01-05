@@ -31,6 +31,10 @@
 
 ### Windows
 
+	QtSDK x86_32 build for GOARCH=amd64 and CGO_ENABLED=1
+	QtSDK x86_64 build for GOARCH=386 and CGO_ENABLED=1
+
+
 #### 1.get goqt
     > go get github.com/visualfc/goqt
 #### 2.build qtdrv, need install QtSDK
@@ -42,9 +46,13 @@
 	> qmake "CONFIG+=release"	
 	> mingw32-make
 #### 4.build ui, need CGO_ENABLED=1 and install gcc
+	> set GOARCH=386
+	> set CGO_ENABLED=1
     > cd goqt\ui
     > go install -v
 #### 5.build examples
+	> set GOARCH=386
+	> set CGO_ENABLED=1
     > cd goqt\examples\minimal
     > build.bat
     > ..\..\bin\minimal.exe
