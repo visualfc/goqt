@@ -66,6 +66,18 @@ var (
 	fnErrHandler func(error, int32, int32, int) = DefaultErrorHandler
 )
 
+var (
+	qtdrv_init_error error
+)
+
+func InitError() error {
+	return qtdrv_init_error
+}
+
+func IsLoaded() bool {
+	return qtdrv_init_error == nil
+}
+
 func (err Error) Error() string {
 	switch err {
 	case -1:
@@ -78,7 +90,7 @@ func (err Error) Error() string {
 	return "unknown error"
 }
 
-func init() {
+func cdrv_init() {
 	C.init()
 }
 

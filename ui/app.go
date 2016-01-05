@@ -4,6 +4,10 @@
 
 package ui
 
+import (
+	"log"
+)
+
 func Version() string {
 	return "0.1.1"
 }
@@ -14,6 +18,10 @@ func Async(fn func()) {
 }
 
 func Run(fn func()) int {
+	if qtdrv_init_error != nil {
+		log.Println(qtdrv_init_error)
+		return -2
+	}
 	app := NewQApplication(nil)
 	Async(func() {
 		fn()
@@ -22,6 +30,10 @@ func Run(fn func()) int {
 }
 
 func RunEx(args []string, fn func()) int {
+	if qtdrv_init_error != nil {
+		log.Println(qtdrv_init_error)
+		return -2
+	}
 	app := NewQApplication(args)
 	Async(func() {
 		fn()
