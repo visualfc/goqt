@@ -1,1 +1,1 @@
-go build -ldflags "-H windowsgui" -o ..\..\bin\minimal.exe
+go build -o ..\..\bin\minimal.exe
