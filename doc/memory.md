@@ -2,11 +2,22 @@
 
 ## Go to Qt C++ pointer mapping
 
-	pt := ui.NewQPoint() // create new QPoint c++ pointer
-	pt.Delete()		     // delete c++ pointer
-	
-	widget := ui.NewQWidget()  // create new QWidget c++ pointer
-	widget.Delete()			  // delete c++ pointer and children
+* Non QObject based
+
+		pt := ui.NewQPoint() // create new QPoint c++ pointer
+		//pt.Delete()		 // delete c++ pointer. 
+		//The pt can manual delete or use golang auto gc.
+		//When golang auto gc and clean pt, the c++ pointer auto delete.
+		
+* QObject based	
+
+		widget := ui.NewQWidget()  // create new QWidget c++ pointer
+		widget.Delete()			   // delete c++ pointer and children
+
+* System resources
+
+		painter := ui.NewQPainterWithPaintDevice(widget) //create new QPinter c++ pointer, resources must delete
+		defer painter.Delete()	//delete c++ pointer and resources
 	
 
 ## QObject based struct
