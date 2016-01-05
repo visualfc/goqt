@@ -31,9 +31,8 @@
 
 ### Windows
 
-	QtSDK x86_32 build for GOARCH=amd64 and CGO_ENABLED=1
-	QtSDK x86_64 build for GOARCH=386 and CGO_ENABLED=1
-
+	QtSDK x86_32 build for GOARCH=386 and CGO_ENABLED=1
+	QtSDK x86_64 build for GOARCH=amd64 and CGO_ENABLED=1
 
 #### 1.get goqt
     > go get github.com/visualfc/goqt
