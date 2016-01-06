@@ -20,8 +20,6 @@
 #include <QDebug>
 #include <QMutex>
 
-UIApplication theApp;
-
 UIApplication::UIApplication(int argc, char **argv) :
     QApplication(argc,argv)
 {
