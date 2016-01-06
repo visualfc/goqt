@@ -129,7 +129,7 @@ func drvSignalCall(fn interface{},id int32, v1,v2,v3,v4 unsafe.Pointer) error{
 	case 35:
 	_v1 := &QRect{}
 	_v1.SetDriver(uintptr(v1),110000,false)
-	fn.(func(*QRect,int))(_v1,*(*int)(v2))
+	fn.(func(*QRect,int32))(_v1,*(*int32)(v2))
 	case 36:
 	_v1 := &QRectF{}
 	_v1.SetDriver(uintptr(v1),111000,false)
@@ -209,7 +209,7 @@ var _v3 string
 	case 54:
 	_v1 := &QTreeWidgetItem{}
 	_v1.SetDriver(uintptr(v1),177000,false)
-	fn.(func(*QTreeWidgetItem,int))(_v1,*(*int)(v2))
+	fn.(func(*QTreeWidgetItem,int32))(_v1,*(*int32)(v2))
 	case 55:
 	_v1 := &QUndoStack{}
 	_v1.SetDriver(uintptr(v1),389000,false)
@@ -243,7 +243,7 @@ var _v3 string
 	case 63:
 	fn.(func(Qt_Orientation))(*(*Qt_Orientation)(v1))
 	case 64:
-	fn.(func(Qt_Orientation,int,int))(*(*Qt_Orientation)(v1),*(*int)(v2),*(*int)(v3))
+	fn.(func(Qt_Orientation,int32,int32))(*(*Qt_Orientation)(v1),*(*int32)(v2),*(*int32)(v3))
 	case 65:
 	fn.(func(Qt_ToolButtonStyle))(*(*Qt_ToolButtonStyle)(v1))
 	case 66:
@@ -251,19 +251,19 @@ var _v3 string
 	case 67:
 	fn.(func(float64))(*(*float64)(v1))
 	case 68:
-	fn.(func(int))(*(*int)(v1))
+	fn.(func(int32))(*(*int32)(v1))
 	case 69:
-	fn.(func(int,QHeaderView_ResizeMode))(*(*int)(v1),*(*QHeaderView_ResizeMode)(v2))
+	fn.(func(int32,QHeaderView_ResizeMode))(*(*int32)(v1),*(*QHeaderView_ResizeMode)(v2))
 	case 70:
-	fn.(func(int,QProcess_ExitStatus))(*(*int)(v1),*(*QProcess_ExitStatus)(v2))
+	fn.(func(int32,QProcess_ExitStatus))(*(*int32)(v1),*(*QProcess_ExitStatus)(v2))
 	case 71:
-	fn.(func(int,Qt_SortOrder))(*(*int)(v1),*(*Qt_SortOrder)(v2))
+	fn.(func(int32,Qt_SortOrder))(*(*int32)(v1),*(*Qt_SortOrder)(v2))
 	case 72:
-	fn.(func(int,int))(*(*int)(v1),*(*int)(v2))
+	fn.(func(int32,int32))(*(*int32)(v1),*(*int32)(v2))
 	case 73:
-	fn.(func(int,int,int))(*(*int)(v1),*(*int)(v2),*(*int)(v3))
+	fn.(func(int32,int32,int32))(*(*int32)(v1),*(*int32)(v2),*(*int32)(v3))
 	case 74:
-	fn.(func(int,int,int,int))(*(*int)(v1),*(*int)(v2),*(*int)(v3),*(*int)(v4))
+	fn.(func(int32,int32,int32,int32))(*(*int32)(v1),*(*int32)(v2),*(*int32)(v3),*(*int32)(v4))
 	case 75:
 	fn.(func(int64))(*(*int64)(v1))
 	default:

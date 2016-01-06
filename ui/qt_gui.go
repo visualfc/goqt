@@ -99,7 +99,7 @@ type QActionEvent struct {
 	QEvent
 }
 //QActionEvent::QActionEvent(int,QAction*,QAction*)	
-func NewQActionEvent(_type int,action *QAction,before *QAction) *QActionEvent {
+func NewQActionEvent(_type int32,action *QAction,before *QAction) *QActionEvent {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),5000,5102,unsafe.Pointer(&_type),Native(action),Native(before),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -293,11 +293,11 @@ func (q *QApplication) Alert(widget QWidgetInterface)  {
 	q.Drv(6000,6113,Native(widget),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QApplication::alert(QWidget*,int)	
-func QApplicationAlertWithWidgetDuration(widget QWidgetInterface,duration int)  {
+func QApplicationAlertWithWidgetDuration(widget QWidgetInterface,duration int32)  {
 	DirectQtDrv(nil,6000,6114,Native(widget),unsafe.Pointer(&duration),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QApplication::alert(QWidget*,int)
-func (q *QApplication) AlertWithWidgetDuration(widget QWidgetInterface,duration int)  {
+func (q *QApplication) AlertWithWidgetDuration(widget QWidgetInterface,duration int32)  {
 	q.Drv(6000,6114,Native(widget),unsafe.Pointer(&duration),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QApplication::allWidgets()	
@@ -449,26 +449,26 @@ func (q *QApplication) ClosingDown() bool {
 	return __rv
 }	
 //QApplication::colorSpec()	
-func QApplicationColorSpec() int {
-	var __rv int
+func QApplicationColorSpec() int32 {
+	var __rv int32
 	DirectQtDrv(nil,6000,6128,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QApplication::colorSpec()
-func (q *QApplication) ColorSpec() int {
-	var __rv int
+func (q *QApplication) ColorSpec() int32 {
+	var __rv int32
 	q.Drv(6000,6128,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QApplication::cursorFlashTime()	
-func QApplicationCursorFlashTime() int {
-	var __rv int
+func QApplicationCursorFlashTime() int32 {
+	var __rv int32
 	DirectQtDrv(nil,6000,6129,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QApplication::cursorFlashTime()
-func (q *QApplication) CursorFlashTime() int {
-	var __rv int
+func (q *QApplication) CursorFlashTime() int32 {
+	var __rv int32
 	q.Drv(6000,6129,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -507,14 +507,14 @@ func (q *QApplication) DesktopSettingsAware() bool {
 	return __rv
 }	
 //QApplication::doubleClickInterval()	
-func QApplicationDoubleClickInterval() int {
-	var __rv int
+func QApplicationDoubleClickInterval() int32 {
+	var __rv int32
 	DirectQtDrv(nil,6000,6132,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QApplication::doubleClickInterval()
-func (q *QApplication) DoubleClickInterval() int {
-	var __rv int
+func (q *QApplication) DoubleClickInterval() int32 {
+	var __rv int32
 	q.Drv(6000,6132,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -525,14 +525,14 @@ func (q *QApplication) Event(value *QEvent) bool {
 	return __rv
 }	
 //QApplication::exec()	
-func QApplicationExec() int {
-	var __rv int
+func QApplicationExec() int32 {
+	var __rv int32
 	DirectQtDrv(nil,6000,6134,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QApplication::exec()
-func (q *QApplication) Exec() int {
-	var __rv int
+func (q *QApplication) Exec() int32 {
+	var __rv int32
 	q.Drv(6000,6134,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -545,11 +545,11 @@ func (q *QApplication) Exit()  {
 	q.Drv(6000,6135,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QCoreApplication::exit(int)	
-func QApplicationExitWithRetcode(retcode int)  {
+func QApplicationExitWithRetcode(retcode int32)  {
 	DirectQtDrv(nil,6000,6136,unsafe.Pointer(&retcode),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QCoreApplication::exit(int)
-func (q *QApplication) ExitWithRetcode(retcode int)  {
+func (q *QApplication) ExitWithRetcode(retcode int32)  {
 	q.Drv(6000,6136,unsafe.Pointer(&retcode),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QCoreApplication::flush()	
@@ -777,14 +777,14 @@ func (q *QApplication) IsSessionRestored() bool {
 	return __rv
 }	
 //QApplication::keyboardInputInterval()	
-func QApplicationKeyboardInputInterval() int {
-	var __rv int
+func QApplicationKeyboardInputInterval() int32 {
+	var __rv int32
 	DirectQtDrv(nil,6000,6151,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QApplication::keyboardInputInterval()
-func (q *QApplication) KeyboardInputInterval() int {
-	var __rv int
+func (q *QApplication) KeyboardInputInterval() int32 {
+	var __rv int32
 	q.Drv(6000,6151,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -1091,19 +1091,19 @@ func (q *QApplication) SetAutoSipEnabled(enabled bool)  {
 	q.Drv(6000,6179,unsafe.Pointer(&enabled),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QApplication::setColorSpec(int)	
-func QApplicationSetColorSpec(value int)  {
+func QApplicationSetColorSpec(value int32)  {
 	DirectQtDrv(nil,6000,6180,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QApplication::setColorSpec(int)
-func (q *QApplication) SetColorSpec(value int)  {
+func (q *QApplication) SetColorSpec(value int32)  {
 	q.Drv(6000,6180,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QApplication::setCursorFlashTime(int)	
-func QApplicationSetCursorFlashTime(value int)  {
+func QApplicationSetCursorFlashTime(value int32)  {
 	DirectQtDrv(nil,6000,6181,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QApplication::setCursorFlashTime(int)
-func (q *QApplication) SetCursorFlashTime(value int)  {
+func (q *QApplication) SetCursorFlashTime(value int32)  {
 	q.Drv(6000,6181,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QApplication::setDesktopSettingsAware(bool)	
@@ -1115,11 +1115,11 @@ func (q *QApplication) SetDesktopSettingsAware(value bool)  {
 	q.Drv(6000,6182,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QApplication::setDoubleClickInterval(int)	
-func QApplicationSetDoubleClickInterval(value int)  {
+func QApplicationSetDoubleClickInterval(value int32)  {
 	DirectQtDrv(nil,6000,6183,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QApplication::setDoubleClickInterval(int)
-func (q *QApplication) SetDoubleClickInterval(value int)  {
+func (q *QApplication) SetDoubleClickInterval(value int32)  {
 	q.Drv(6000,6183,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QApplication::setEffectEnabled(Qt::UIEffect)	
@@ -1163,11 +1163,11 @@ func (q *QApplication) SetGlobalStrut(value *QSize)  {
 	q.Drv(6000,6188,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QApplication::setKeyboardInputInterval(int)	
-func QApplicationSetKeyboardInputInterval(value int)  {
+func QApplicationSetKeyboardInputInterval(value int32)  {
 	DirectQtDrv(nil,6000,6189,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QApplication::setKeyboardInputInterval(int)
-func (q *QApplication) SetKeyboardInputInterval(value int)  {
+func (q *QApplication) SetKeyboardInputInterval(value int32)  {
 	q.Drv(6000,6189,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QApplication::setLayoutDirection(Qt::LayoutDirection)	
@@ -1235,19 +1235,19 @@ func (q *QApplication) SetQuitOnLastWindowClosed(quit bool)  {
 	q.Drv(6000,6197,unsafe.Pointer(&quit),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QApplication::setStartDragDistance(int)	
-func QApplicationSetStartDragDistance(l int)  {
+func QApplicationSetStartDragDistance(l int32)  {
 	DirectQtDrv(nil,6000,6198,unsafe.Pointer(&l),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QApplication::setStartDragDistance(int)
-func (q *QApplication) SetStartDragDistance(l int)  {
+func (q *QApplication) SetStartDragDistance(l int32)  {
 	q.Drv(6000,6198,unsafe.Pointer(&l),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QApplication::setStartDragTime(int)	
-func QApplicationSetStartDragTime(ms int)  {
+func QApplicationSetStartDragTime(ms int32)  {
 	DirectQtDrv(nil,6000,6199,unsafe.Pointer(&ms),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QApplication::setStartDragTime(int)
-func (q *QApplication) SetStartDragTime(ms int)  {
+func (q *QApplication) SetStartDragTime(ms int32)  {
 	q.Drv(6000,6199,unsafe.Pointer(&ms),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QApplication::setStyle(QString const&)	
@@ -1285,11 +1285,11 @@ func (q *QApplication) SetStyleSheet(sheet string)  {
 	q.Drv(6000,6202,unsafe.Pointer(&sheet),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QApplication::setWheelScrollLines(int)	
-func QApplicationSetWheelScrollLines(value int)  {
+func QApplicationSetWheelScrollLines(value int32)  {
 	DirectQtDrv(nil,6000,6203,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QApplication::setWheelScrollLines(int)
-func (q *QApplication) SetWheelScrollLines(value int)  {
+func (q *QApplication) SetWheelScrollLines(value int32)  {
 	q.Drv(6000,6203,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QApplication::setWindowIcon(QIcon const&)	
@@ -1301,26 +1301,26 @@ func (q *QApplication) SetWindowIcon(icon *QIcon)  {
 	q.Drv(6000,6204,Native(icon),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QApplication::startDragDistance()	
-func QApplicationStartDragDistance() int {
-	var __rv int
+func QApplicationStartDragDistance() int32 {
+	var __rv int32
 	DirectQtDrv(nil,6000,6205,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QApplication::startDragDistance()
-func (q *QApplication) StartDragDistance() int {
-	var __rv int
+func (q *QApplication) StartDragDistance() int32 {
+	var __rv int32
 	q.Drv(6000,6205,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QApplication::startDragTime()	
-func QApplicationStartDragTime() int {
-	var __rv int
+func QApplicationStartDragTime() int32 {
+	var __rv int32
 	DirectQtDrv(nil,6000,6206,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QApplication::startDragTime()
-func (q *QApplication) StartDragTime() int {
-	var __rv int
+func (q *QApplication) StartDragTime() int32 {
+	var __rv int32
 	q.Drv(6000,6206,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -1399,7 +1399,7 @@ func (q *QApplication) TopLevelAt(p *QPoint) *QWidget {
 	return _rp
 }	
 //QApplication::topLevelAt(int,int)	
-func QApplicationTopLevelAtWithXY(x int,y int) *QWidget {
+func QApplicationTopLevelAtWithXY(x int32,y int32) *QWidget {
 	var __rv uintptr
 	DirectQtDrv(nil,6000,6212,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -1410,7 +1410,7 @@ func QApplicationTopLevelAtWithXY(x int,y int) *QWidget {
 	return _rp
 }	
 //QApplication::topLevelAt(int,int)
-func (q *QApplication) TopLevelAtWithXY(x int,y int) *QWidget {
+func (q *QApplication) TopLevelAtWithXY(x int32,y int32) *QWidget {
 	var __rv uintptr
 	q.Drv(6000,6212,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -1445,26 +1445,26 @@ func (q *QApplication) Translate(context string,key string,disambiguation string
 	return __rv
 }	
 //QCoreApplication::translaten(char const*,char const*,char const*,int)	
-func QApplicationTranslaten(context string,key string,disambiguation string,n int) string {
+func QApplicationTranslaten(context string,key string,disambiguation string,n int32) string {
 	var __rv string
 	DirectQtDrv(nil,6000,6215,unsafe.Pointer(&context),unsafe.Pointer(&key),unsafe.Pointer(&disambiguation),unsafe.Pointer(&n),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QCoreApplication::translaten(char const*,char const*,char const*,int)
-func (q *QApplication) Translaten(context string,key string,disambiguation string,n int) string {
+func (q *QApplication) Translaten(context string,key string,disambiguation string,n int32) string {
 	var __rv string
 	q.Drv(6000,6215,unsafe.Pointer(&context),unsafe.Pointer(&key),unsafe.Pointer(&disambiguation),unsafe.Pointer(&n),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QApplication::wheelScrollLines()	
-func QApplicationWheelScrollLines() int {
-	var __rv int
+func QApplicationWheelScrollLines() int32 {
+	var __rv int32
 	DirectQtDrv(nil,6000,6216,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QApplication::wheelScrollLines()
-func (q *QApplication) WheelScrollLines() int {
-	var __rv int
+func (q *QApplication) WheelScrollLines() int32 {
+	var __rv int32
 	q.Drv(6000,6216,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -1491,7 +1491,7 @@ func (q *QApplication) WidgetAt(p *QPoint) *QWidget {
 	return _rp
 }	
 //QApplication::widgetAt(int,int)	
-func QApplicationWidgetAtWithXY(x int,y int) *QWidget {
+func QApplicationWidgetAtWithXY(x int32,y int32) *QWidget {
 	var __rv uintptr
 	DirectQtDrv(nil,6000,6218,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -1502,7 +1502,7 @@ func QApplicationWidgetAtWithXY(x int,y int) *QWidget {
 	return _rp
 }	
 //QApplication::widgetAt(int,int)
-func (q *QApplication) WidgetAtWithXY(x int,y int) *QWidget {
+func (q *QApplication) WidgetAtWithXY(x int32,y int32) *QWidget {
 	var __rv uintptr
 	q.Drv(6000,6218,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -1557,7 +1557,7 @@ func (q *QBasicTimer) IsActive() bool {
 	return __rv
 }	
 //QBasicTimer::start(int,QObject*)
-func (q *QBasicTimer) Start(msec int,obj QObjectInterface)  {
+func (q *QBasicTimer) Start(msec int32,obj QObjectInterface)  {
 	q.Drv(7000,7104,unsafe.Pointer(&msec),Native(obj),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QBasicTimer::stop()
@@ -1565,8 +1565,8 @@ func (q *QBasicTimer) Stop()  {
 	q.Drv(7000,7105,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QBasicTimer::timerId()
-func (q *QBasicTimer) TimerId() int {
-	var __rv int
+func (q *QBasicTimer) TimerId() int32 {
+	var __rv int32
 	q.Drv(7000,7106,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -1620,7 +1620,7 @@ func NewQBitmapWithFilenameFormat(fileName string,format string) *QBitmap {
 	return _p
 } 
 //QBitmap::QBitmap(int,int)	
-func NewQBitmapWithWidthHeight(w int,h int) *QBitmap {
+func NewQBitmapWithWidthHeight(w int32,h int32) *QBitmap {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),8000,8106,unsafe.Pointer(&w),unsafe.Pointer(&h),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -1988,14 +1988,14 @@ func NewQByteArrayMatcherCopy(other *QByteArrayMatcher) *QByteArrayMatcher {
 	return _p
 } 
 //QByteArrayMatcher::indexIn(QByteArray const&)
-func (q *QByteArrayMatcher) IndexIn(ba []byte) int {
-	var __rv int
+func (q *QByteArrayMatcher) IndexIn(ba []byte) int32 {
+	var __rv int32
 	q.Drv(10000,10105,unsafe.Pointer(&ba),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QByteArrayMatcher::indexIn(QByteArray const&,int)
-func (q *QByteArrayMatcher) IndexInWithBaIfrom(ba []byte,from int) int {
-	var __rv int
+func (q *QByteArrayMatcher) IndexInWithBaIfrom(ba []byte,from int32) int32 {
+	var __rv int32
 	q.Drv(10000,10106,unsafe.Pointer(&ba),unsafe.Pointer(&from),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -2140,7 +2140,7 @@ func NewQColorWithGlobalcolor(color Qt_GlobalColor) *QColor {
 	return _p
 } 
 //QColor::QColor(unsigned int)	
-func NewQColorWithRgb(rgb uint) *QColor {
+func NewQColorWithRgb(rgb uint32) *QColor {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),13000,13107,unsafe.Pointer(&rgb),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -2151,7 +2151,7 @@ func NewQColorWithRgb(rgb uint) *QColor {
 	return _p
 } 
 //QColor::QColor(int,int,int,int)	
-func NewQColorWithRGBA(r int,g int,b int,a int) *QColor {
+func NewQColorWithInt32Int32Int32Int32(r int32,g int32,b int32,a int32) *QColor {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),13000,13108,unsafe.Pointer(&r),unsafe.Pointer(&g),unsafe.Pointer(&b),unsafe.Pointer(&a),nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -2162,8 +2162,8 @@ func NewQColorWithRGBA(r int,g int,b int,a int) *QColor {
 	return _p
 } 
 //QColor::alpha()
-func (q *QColor) Alpha() int {
-	var __rv int
+func (q *QColor) Alpha() int32 {
+	var __rv int32
 	q.Drv(13000,13109,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -2174,8 +2174,8 @@ func (q *QColor) AlphaF() float64 {
 	return __rv
 }	
 //QColor::black()
-func (q *QColor) Black() int {
-	var __rv int
+func (q *QColor) Black() int32 {
+	var __rv int32
 	q.Drv(13000,13111,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -2186,8 +2186,8 @@ func (q *QColor) BlackF() float64 {
 	return __rv
 }	
 //QColor::blue()
-func (q *QColor) Blue() int {
-	var __rv int
+func (q *QColor) Blue() int32 {
+	var __rv int32
 	q.Drv(13000,13113,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -2221,8 +2221,8 @@ func (q *QColor) ConvertTo(colorSpec QColor_Spec) *QColor {
 	return _rp
 }	
 //QColor::cyan()
-func (q *QColor) Cyan() int {
-	var __rv int
+func (q *QColor) Cyan() int32 {
+	var __rv int32
 	q.Drv(13000,13117,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -2244,7 +2244,7 @@ func (q *QColor) Dark() *QColor {
 	return _rp
 }	
 //QColor::dark(int)
-func (q *QColor) DarkWithInt(f int) *QColor {
+func (q *QColor) DarkWithInt32(f int32) *QColor {
 	var __rv uintptr
 	q.Drv(13000,13120,unsafe.Pointer(&f),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -2266,7 +2266,7 @@ func (q *QColor) Darker() *QColor {
 	return _rp
 }	
 //QColor::darker(int)
-func (q *QColor) DarkerWithInt(f int) *QColor {
+func (q *QColor) DarkerWithInt32(f int32) *QColor {
 	var __rv uintptr
 	q.Drv(13000,13122,unsafe.Pointer(&f),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -2277,7 +2277,7 @@ func (q *QColor) DarkerWithInt(f int) *QColor {
 	return _rp
 }	
 //QColor::fromCmyk(int,int,int,int,int)	
-func QColorFromCmyk(c int,m int,y int,k int,a int) *QColor {
+func QColorFromCmyk(c int32,m int32,y int32,k int32,a int32) *QColor {
 	var __rv uintptr
 	DirectQtDrv(nil,13000,13123,unsafe.Pointer(&c),unsafe.Pointer(&m),unsafe.Pointer(&y),unsafe.Pointer(&k),unsafe.Pointer(&a),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -2288,7 +2288,7 @@ func QColorFromCmyk(c int,m int,y int,k int,a int) *QColor {
 	return _rp
 }	
 //QColor::fromCmyk(int,int,int,int,int)
-func (q *QColor) FromCmyk(c int,m int,y int,k int,a int) *QColor {
+func (q *QColor) FromCmyk(c int32,m int32,y int32,k int32,a int32) *QColor {
 	var __rv uintptr
 	q.Drv(13000,13123,unsafe.Pointer(&c),unsafe.Pointer(&m),unsafe.Pointer(&y),unsafe.Pointer(&k),unsafe.Pointer(&a),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -2321,7 +2321,7 @@ func (q *QColor) FromCmykF(c float64,m float64,y float64,k float64,a float64) *Q
 	return _rp
 }	
 //QColor::fromHsl(int,int,int,int)	
-func QColorFromHsl(h int,s int,l int,a int) *QColor {
+func QColorFromHsl(h int32,s int32,l int32,a int32) *QColor {
 	var __rv uintptr
 	DirectQtDrv(nil,13000,13125,unsafe.Pointer(&h),unsafe.Pointer(&s),unsafe.Pointer(&l),unsafe.Pointer(&a),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -2332,7 +2332,7 @@ func QColorFromHsl(h int,s int,l int,a int) *QColor {
 	return _rp
 }	
 //QColor::fromHsl(int,int,int,int)
-func (q *QColor) FromHsl(h int,s int,l int,a int) *QColor {
+func (q *QColor) FromHsl(h int32,s int32,l int32,a int32) *QColor {
 	var __rv uintptr
 	q.Drv(13000,13125,unsafe.Pointer(&h),unsafe.Pointer(&s),unsafe.Pointer(&l),unsafe.Pointer(&a),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -2365,7 +2365,7 @@ func (q *QColor) FromHslF(h float64,s float64,l float64,a float64) *QColor {
 	return _rp
 }	
 //QColor::fromHsv(int,int,int,int)	
-func QColorFromHsv(h int,s int,v int,a int) *QColor {
+func QColorFromHsv(h int32,s int32,v int32,a int32) *QColor {
 	var __rv uintptr
 	DirectQtDrv(nil,13000,13127,unsafe.Pointer(&h),unsafe.Pointer(&s),unsafe.Pointer(&v),unsafe.Pointer(&a),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -2376,7 +2376,7 @@ func QColorFromHsv(h int,s int,v int,a int) *QColor {
 	return _rp
 }	
 //QColor::fromHsv(int,int,int,int)
-func (q *QColor) FromHsv(h int,s int,v int,a int) *QColor {
+func (q *QColor) FromHsv(h int32,s int32,v int32,a int32) *QColor {
 	var __rv uintptr
 	q.Drv(13000,13127,unsafe.Pointer(&h),unsafe.Pointer(&s),unsafe.Pointer(&v),unsafe.Pointer(&a),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -2409,7 +2409,7 @@ func (q *QColor) FromHsvF(h float64,s float64,v float64,a float64) *QColor {
 	return _rp
 }	
 //QColor::fromRgb(unsigned int)	
-func QColorFromRgb(rgb uint) *QColor {
+func QColorFromRgb(rgb uint32) *QColor {
 	var __rv uintptr
 	DirectQtDrv(nil,13000,13129,unsafe.Pointer(&rgb),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -2420,7 +2420,7 @@ func QColorFromRgb(rgb uint) *QColor {
 	return _rp
 }	
 //QColor::fromRgb(unsigned int)
-func (q *QColor) FromRgb(rgb uint) *QColor {
+func (q *QColor) FromRgb(rgb uint32) *QColor {
 	var __rv uintptr
 	q.Drv(13000,13129,unsafe.Pointer(&rgb),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -2431,7 +2431,7 @@ func (q *QColor) FromRgb(rgb uint) *QColor {
 	return _rp
 }	
 //QColor::fromRgb(int,int,int,int)	
-func QColorFromRgbWithRGBA(r int,g int,b int,a int) *QColor {
+func QColorFromRgbWithInt32Int32Int32Int32(r int32,g int32,b int32,a int32) *QColor {
 	var __rv uintptr
 	DirectQtDrv(nil,13000,13130,unsafe.Pointer(&r),unsafe.Pointer(&g),unsafe.Pointer(&b),unsafe.Pointer(&a),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -2442,7 +2442,7 @@ func QColorFromRgbWithRGBA(r int,g int,b int,a int) *QColor {
 	return _rp
 }	
 //QColor::fromRgb(int,int,int,int)
-func (q *QColor) FromRgbWithRGBA(r int,g int,b int,a int) *QColor {
+func (q *QColor) FromRgbWithInt32Int32Int32Int32(r int32,g int32,b int32,a int32) *QColor {
 	var __rv uintptr
 	q.Drv(13000,13130,unsafe.Pointer(&r),unsafe.Pointer(&g),unsafe.Pointer(&b),unsafe.Pointer(&a),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -2475,7 +2475,7 @@ func (q *QColor) FromRgbF(r float64,g float64,b float64,a float64) *QColor {
 	return _rp
 }	
 //QColor::fromRgba(unsigned int)	
-func QColorFromRgba(rgba uint) *QColor {
+func QColorFromRgba(rgba uint32) *QColor {
 	var __rv uintptr
 	DirectQtDrv(nil,13000,13132,unsafe.Pointer(&rgba),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -2486,7 +2486,7 @@ func QColorFromRgba(rgba uint) *QColor {
 	return _rp
 }	
 //QColor::fromRgba(unsigned int)
-func (q *QColor) FromRgba(rgba uint) *QColor {
+func (q *QColor) FromRgba(rgba uint32) *QColor {
 	var __rv uintptr
 	q.Drv(13000,13132,unsafe.Pointer(&rgba),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -2497,7 +2497,7 @@ func (q *QColor) FromRgba(rgba uint) *QColor {
 	return _rp
 }	
 //QColor::getCmyk(int*,int*,int*,int*,int*)
-func (q *QColor) GetCmyk(c *int,m *int,y *int,k *int,a *int)  {
+func (q *QColor) GetCmyk(c *int32,m *int32,y *int32,k *int32,a *int32)  {
 	q.Drv(13000,13133,unsafe.Pointer(&c),unsafe.Pointer(&m),unsafe.Pointer(&y),unsafe.Pointer(&k),unsafe.Pointer(&a),nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColor::getCmykF(double*,double*,double*,double*,double*)
@@ -2505,7 +2505,7 @@ func (q *QColor) GetCmykF(c *float64,m *float64,y *float64,k *float64,a *float64
 	q.Drv(13000,13134,unsafe.Pointer(&c),unsafe.Pointer(&m),unsafe.Pointer(&y),unsafe.Pointer(&k),unsafe.Pointer(&a),nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColor::getHsl(int*,int*,int*,int*)
-func (q *QColor) GetHsl(h *int,s *int,l *int,a *int)  {
+func (q *QColor) GetHsl(h *int32,s *int32,l *int32,a *int32)  {
 	q.Drv(13000,13135,unsafe.Pointer(&h),unsafe.Pointer(&s),unsafe.Pointer(&l),unsafe.Pointer(&a),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColor::getHslF(double*,double*,double*,double*)
@@ -2513,7 +2513,7 @@ func (q *QColor) GetHslF(h *float64,s *float64,l *float64,a *float64)  {
 	q.Drv(13000,13136,unsafe.Pointer(&h),unsafe.Pointer(&s),unsafe.Pointer(&l),unsafe.Pointer(&a),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColor::getHsv(int*,int*,int*,int*)
-func (q *QColor) GetHsv(h *int,s *int,v *int,a *int)  {
+func (q *QColor) GetHsv(h *int32,s *int32,v *int32,a *int32)  {
 	q.Drv(13000,13137,unsafe.Pointer(&h),unsafe.Pointer(&s),unsafe.Pointer(&v),unsafe.Pointer(&a),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColor::getHsvF(double*,double*,double*,double*)
@@ -2521,7 +2521,7 @@ func (q *QColor) GetHsvF(h *float64,s *float64,v *float64,a *float64)  {
 	q.Drv(13000,13138,unsafe.Pointer(&h),unsafe.Pointer(&s),unsafe.Pointer(&v),unsafe.Pointer(&a),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColor::getRgb(int*,int*,int*,int*)
-func (q *QColor) GetRgb(r *int,g *int,b *int,a *int)  {
+func (q *QColor) GetRgb(r *int32,g *int32,b *int32,a *int32)  {
 	q.Drv(13000,13139,unsafe.Pointer(&r),unsafe.Pointer(&g),unsafe.Pointer(&b),unsafe.Pointer(&a),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColor::getRgbF(double*,double*,double*,double*)
@@ -2529,8 +2529,8 @@ func (q *QColor) GetRgbF(r *float64,g *float64,b *float64,a *float64)  {
 	q.Drv(13000,13140,unsafe.Pointer(&r),unsafe.Pointer(&g),unsafe.Pointer(&b),unsafe.Pointer(&a),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColor::green()
-func (q *QColor) Green() int {
-	var __rv int
+func (q *QColor) Green() int32 {
+	var __rv int32
 	q.Drv(13000,13141,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -2541,8 +2541,8 @@ func (q *QColor) GreenF() float64 {
 	return __rv
 }	
 //QColor::hslHue()
-func (q *QColor) HslHue() int {
-	var __rv int
+func (q *QColor) HslHue() int32 {
+	var __rv int32
 	q.Drv(13000,13143,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -2553,8 +2553,8 @@ func (q *QColor) HslHueF() float64 {
 	return __rv
 }	
 //QColor::hslSaturation()
-func (q *QColor) HslSaturation() int {
-	var __rv int
+func (q *QColor) HslSaturation() int32 {
+	var __rv int32
 	q.Drv(13000,13145,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -2565,8 +2565,8 @@ func (q *QColor) HslSaturationF() float64 {
 	return __rv
 }	
 //QColor::hsvHue()
-func (q *QColor) HsvHue() int {
-	var __rv int
+func (q *QColor) HsvHue() int32 {
+	var __rv int32
 	q.Drv(13000,13147,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -2577,8 +2577,8 @@ func (q *QColor) HsvHueF() float64 {
 	return __rv
 }	
 //QColor::hsvSaturation()
-func (q *QColor) HsvSaturation() int {
-	var __rv int
+func (q *QColor) HsvSaturation() int32 {
+	var __rv int32
 	q.Drv(13000,13149,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -2589,8 +2589,8 @@ func (q *QColor) HsvSaturationF() float64 {
 	return __rv
 }	
 //QColor::hue()
-func (q *QColor) Hue() int {
-	var __rv int
+func (q *QColor) Hue() int32 {
+	var __rv int32
 	q.Drv(13000,13151,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -2630,7 +2630,7 @@ func (q *QColor) Light() *QColor {
 	return _rp
 }	
 //QColor::light(int)
-func (q *QColor) LightWithInt(f int) *QColor {
+func (q *QColor) LightWithInt32(f int32) *QColor {
 	var __rv uintptr
 	q.Drv(13000,13156,unsafe.Pointer(&f),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -2652,7 +2652,7 @@ func (q *QColor) Lighter() *QColor {
 	return _rp
 }	
 //QColor::lighter(int)
-func (q *QColor) LighterWithInt(f int) *QColor {
+func (q *QColor) LighterWithInt32(f int32) *QColor {
 	var __rv uintptr
 	q.Drv(13000,13158,unsafe.Pointer(&f),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -2663,8 +2663,8 @@ func (q *QColor) LighterWithInt(f int) *QColor {
 	return _rp
 }	
 //QColor::lightness()
-func (q *QColor) Lightness() int {
-	var __rv int
+func (q *QColor) Lightness() int32 {
+	var __rv int32
 	q.Drv(13000,13159,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -2675,8 +2675,8 @@ func (q *QColor) LightnessF() float64 {
 	return __rv
 }	
 //QColor::magenta()
-func (q *QColor) Magenta() int {
-	var __rv int
+func (q *QColor) Magenta() int32 {
+	var __rv int32
 	q.Drv(13000,13161,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -2693,8 +2693,8 @@ func (q *QColor) Name() string {
 	return __rv
 }	
 //QColor::red()
-func (q *QColor) Red() int {
-	var __rv int
+func (q *QColor) Red() int32 {
+	var __rv int32
 	q.Drv(13000,13164,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -2705,20 +2705,20 @@ func (q *QColor) RedF() float64 {
 	return __rv
 }	
 //QColor::rgb()
-func (q *QColor) Rgb() uint {
-	var __rv uint
+func (q *QColor) Rgb() uint32 {
+	var __rv uint32
 	q.Drv(13000,13166,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QColor::rgba()
-func (q *QColor) Rgba() uint {
-	var __rv uint
+func (q *QColor) Rgba() uint32 {
+	var __rv uint32
 	q.Drv(13000,13167,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QColor::saturation()
-func (q *QColor) Saturation() int {
-	var __rv int
+func (q *QColor) Saturation() int32 {
+	var __rv int32
 	q.Drv(13000,13168,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -2729,7 +2729,7 @@ func (q *QColor) SaturationF() float64 {
 	return __rv
 }	
 //QColor::setAlpha(int)
-func (q *QColor) SetAlpha(alpha int)  {
+func (q *QColor) SetAlpha(alpha int32)  {
 	q.Drv(13000,13170,unsafe.Pointer(&alpha),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColor::setAlphaF(double)
@@ -2737,7 +2737,7 @@ func (q *QColor) SetAlphaF(alpha float64)  {
 	q.Drv(13000,13171,unsafe.Pointer(&alpha),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColor::setBlue(int)
-func (q *QColor) SetBlue(blue int)  {
+func (q *QColor) SetBlue(blue int32)  {
 	q.Drv(13000,13172,unsafe.Pointer(&blue),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColor::setBlueF(double)
@@ -2745,7 +2745,7 @@ func (q *QColor) SetBlueF(blue float64)  {
 	q.Drv(13000,13173,unsafe.Pointer(&blue),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColor::setCmyk(int,int,int,int,int)
-func (q *QColor) SetCmyk(c int,m int,y int,k int,a int)  {
+func (q *QColor) SetCmyk(c int32,m int32,y int32,k int32,a int32)  {
 	q.Drv(13000,13174,unsafe.Pointer(&c),unsafe.Pointer(&m),unsafe.Pointer(&y),unsafe.Pointer(&k),unsafe.Pointer(&a),nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColor::setCmykF(double,double,double,double,double)
@@ -2753,7 +2753,7 @@ func (q *QColor) SetCmykF(c float64,m float64,y float64,k float64,a float64)  {
 	q.Drv(13000,13175,unsafe.Pointer(&c),unsafe.Pointer(&m),unsafe.Pointer(&y),unsafe.Pointer(&k),unsafe.Pointer(&a),nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColor::setGreen(int)
-func (q *QColor) SetGreen(green int)  {
+func (q *QColor) SetGreen(green int32)  {
 	q.Drv(13000,13176,unsafe.Pointer(&green),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColor::setGreenF(double)
@@ -2761,7 +2761,7 @@ func (q *QColor) SetGreenF(green float64)  {
 	q.Drv(13000,13177,unsafe.Pointer(&green),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColor::setHsl(int,int,int,int)
-func (q *QColor) SetHsl(h int,s int,l int,a int)  {
+func (q *QColor) SetHsl(h int32,s int32,l int32,a int32)  {
 	q.Drv(13000,13178,unsafe.Pointer(&h),unsafe.Pointer(&s),unsafe.Pointer(&l),unsafe.Pointer(&a),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColor::setHslF(double,double,double,double)
@@ -2769,7 +2769,7 @@ func (q *QColor) SetHslF(h float64,s float64,l float64,a float64)  {
 	q.Drv(13000,13179,unsafe.Pointer(&h),unsafe.Pointer(&s),unsafe.Pointer(&l),unsafe.Pointer(&a),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColor::setHsv(int,int,int,int)
-func (q *QColor) SetHsv(h int,s int,v int,a int)  {
+func (q *QColor) SetHsv(h int32,s int32,v int32,a int32)  {
 	q.Drv(13000,13180,unsafe.Pointer(&h),unsafe.Pointer(&s),unsafe.Pointer(&v),unsafe.Pointer(&a),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColor::setHsvF(double,double,double,double)
@@ -2781,7 +2781,7 @@ func (q *QColor) SetNamedColor(name string)  {
 	q.Drv(13000,13182,unsafe.Pointer(&name),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColor::setRed(int)
-func (q *QColor) SetRed(red int)  {
+func (q *QColor) SetRed(red int32)  {
 	q.Drv(13000,13183,unsafe.Pointer(&red),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColor::setRedF(double)
@@ -2789,11 +2789,11 @@ func (q *QColor) SetRedF(red float64)  {
 	q.Drv(13000,13184,unsafe.Pointer(&red),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColor::setRgb(unsigned int)
-func (q *QColor) SetRgb(rgb uint)  {
+func (q *QColor) SetRgb(rgb uint32)  {
 	q.Drv(13000,13185,unsafe.Pointer(&rgb),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColor::setRgb(int,int,int,int)
-func (q *QColor) SetRgbWithRGBA(r int,g int,b int,a int)  {
+func (q *QColor) SetRgbWithInt32Int32Int32Int32(r int32,g int32,b int32,a int32)  {
 	q.Drv(13000,13186,unsafe.Pointer(&r),unsafe.Pointer(&g),unsafe.Pointer(&b),unsafe.Pointer(&a),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColor::setRgbF(double,double,double,double)
@@ -2801,7 +2801,7 @@ func (q *QColor) SetRgbF(r float64,g float64,b float64,a float64)  {
 	q.Drv(13000,13187,unsafe.Pointer(&r),unsafe.Pointer(&g),unsafe.Pointer(&b),unsafe.Pointer(&a),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColor::setRgba(unsigned int)
-func (q *QColor) SetRgba(rgba uint)  {
+func (q *QColor) SetRgba(rgba uint32)  {
 	q.Drv(13000,13188,unsafe.Pointer(&rgba),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColor::spec()
@@ -2855,8 +2855,8 @@ func (q *QColor) ToRgb() *QColor {
 	return _rp
 }	
 //QColor::value()
-func (q *QColor) Value() int {
-	var __rv int
+func (q *QColor) Value() int32 {
+	var __rv int32
 	q.Drv(13000,13194,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -2867,8 +2867,8 @@ func (q *QColor) ValueF() float64 {
 	return __rv
 }	
 //QColor::yellow()
-func (q *QColor) Yellow() int {
-	var __rv int
+func (q *QColor) Yellow() int32 {
+	var __rv int32
 	q.Drv(13000,13196,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -2910,7 +2910,7 @@ func (q *QColormap) Cleanup()  {
 	q.Drv(14000,14103,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColormap::colorAt(unsigned int)
-func (q *QColormap) ColorAt(pixel uint) *QColor {
+func (q *QColormap) ColorAt(pixel uint32) *QColor {
 	var __rv uintptr
 	q.Drv(14000,14104,unsafe.Pointer(&pixel),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -2927,8 +2927,8 @@ func (q *QColormap) Colormap() []*QColor {
 	return __rv
 }	
 //QColormap::depth()
-func (q *QColormap) Depth() int {
-	var __rv int
+func (q *QColormap) Depth() int32 {
+	var __rv int32
 	q.Drv(14000,14106,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -2963,7 +2963,7 @@ func (q *QColormap) Instance() *QColormap {
 	return _rp
 }	
 //QColormap::instance(int)	
-func QColormapInstanceWithScreen(screen int) *QColormap {
+func QColormapInstanceWithScreen(screen int32) *QColormap {
 	var __rv uintptr
 	DirectQtDrv(nil,14000,14109,unsafe.Pointer(&screen),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -2974,7 +2974,7 @@ func QColormapInstanceWithScreen(screen int) *QColormap {
 	return _rp
 }	
 //QColormap::instance(int)
-func (q *QColormap) InstanceWithScreen(screen int) *QColormap {
+func (q *QColormap) InstanceWithScreen(screen int32) *QColormap {
 	var __rv uintptr
 	q.Drv(14000,14109,unsafe.Pointer(&screen),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -2991,14 +2991,14 @@ func (q *QColormap) Mode() QColormap_Mode {
 	return __rv
 }	
 //QColormap::pixel(QColor const&)
-func (q *QColormap) Pixel(color *QColor) uint {
-	var __rv uint
+func (q *QColormap) Pixel(color *QColor) uint32 {
+	var __rv uint32
 	q.Drv(14000,14111,Native(color),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QColormap::size()
-func (q *QColormap) Size() int {
-	var __rv int
+func (q *QColormap) Size() int32 {
+	var __rv int32
 	q.Drv(14000,14112,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -3126,14 +3126,14 @@ func (q *QContextMenuEvent) GlobalPos() *QPoint {
 	return _rp
 }	
 //QContextMenuEvent::globalX()
-func (q *QContextMenuEvent) GlobalX() int {
-	var __rv int
+func (q *QContextMenuEvent) GlobalX() int32 {
+	var __rv int32
 	q.Drv(16000,16106,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QContextMenuEvent::globalY()
-func (q *QContextMenuEvent) GlobalY() int {
-	var __rv int
+func (q *QContextMenuEvent) GlobalY() int32 {
+	var __rv int32
 	q.Drv(16000,16107,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -3155,14 +3155,14 @@ func (q *QContextMenuEvent) Reason() QContextMenuEvent_Reason {
 	return __rv
 }	
 //QContextMenuEvent::x()
-func (q *QContextMenuEvent) X() int {
-	var __rv int
+func (q *QContextMenuEvent) X() int32 {
+	var __rv int32
 	q.Drv(16000,16110,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QContextMenuEvent::y()
-func (q *QContextMenuEvent) Y() int {
-	var __rv int
+func (q *QContextMenuEvent) Y() int32 {
+	var __rv int32
 	q.Drv(16000,16111,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -3254,7 +3254,7 @@ func NewQCursorWithShape(shape Qt_CursorShape) *QCursor {
 	return _p
 } 
 //QCursor::QCursor(QPixmap const&,int,int)	
-func NewQCursorWithPixmapHotxHoty(pixmap *QPixmap,hotX int,hotY int) *QCursor {
+func NewQCursorWithPixmapHotxHoty(pixmap *QPixmap,hotX int32,hotY int32) *QCursor {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),18000,18105,Native(pixmap),unsafe.Pointer(&hotX),unsafe.Pointer(&hotY),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -3265,7 +3265,7 @@ func NewQCursorWithPixmapHotxHoty(pixmap *QPixmap,hotX int,hotY int) *QCursor {
 	return _p
 } 
 //QCursor::QCursor(QBitmap const&,QBitmap const&,int,int)	
-func NewQCursorWithBitmapMaskHotxHoty(bitmap *QBitmap,mask *QBitmap,hotX int,hotY int) *QCursor {
+func NewQCursorWithBitmapMaskHotxHoty(bitmap *QBitmap,mask *QBitmap,hotX int32,hotY int32) *QCursor {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),18000,18106,Native(bitmap),Native(mask),unsafe.Pointer(&hotX),unsafe.Pointer(&hotY),nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -3350,11 +3350,11 @@ func (q *QCursor) SetPos(p *QPoint)  {
 	q.Drv(18000,18112,Native(p),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QCursor::setPos(int,int)	
-func QCursorSetPosWithXY(x int,y int)  {
+func QCursorSetPosWithXY(x int32,y int32)  {
 	DirectQtDrv(nil,18000,18113,unsafe.Pointer(&x),unsafe.Pointer(&y),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QCursor::setPos(int,int)
-func (q *QCursor) SetPosWithXY(x int,y int)  {
+func (q *QCursor) SetPosWithXY(x int32,y int32)  {
 	q.Drv(18000,18113,unsafe.Pointer(&x),unsafe.Pointer(&y),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QCursor::setShape(Qt::CursorShape)
@@ -3401,7 +3401,7 @@ func NewQDateCopy(other *QDate) *QDate {
 	return _p
 } 
 //QDate::QDate(int,int,int)	
-func NewQDateWithYMD(y int,m int,d int) *QDate {
+func NewQDateWithYInt32Int32(y int32,m int32,d int32) *QDate {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),19000,19104,unsafe.Pointer(&y),unsafe.Pointer(&m),unsafe.Pointer(&d),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -3412,7 +3412,7 @@ func NewQDateWithYMD(y int,m int,d int) *QDate {
 	return _p
 } 
 //QDate::addDays(int)
-func (q *QDate) AddDays(days int) *QDate {
+func (q *QDate) AddDays(days int32) *QDate {
 	var __rv uintptr
 	q.Drv(19000,19105,unsafe.Pointer(&days),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -3423,7 +3423,7 @@ func (q *QDate) AddDays(days int) *QDate {
 	return _rp
 }	
 //QDate::addMonths(int)
-func (q *QDate) AddMonths(months int) *QDate {
+func (q *QDate) AddMonths(months int32) *QDate {
 	var __rv uintptr
 	q.Drv(19000,19106,unsafe.Pointer(&months),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -3434,7 +3434,7 @@ func (q *QDate) AddMonths(months int) *QDate {
 	return _rp
 }	
 //QDate::addYears(int)
-func (q *QDate) AddYears(years int) *QDate {
+func (q *QDate) AddYears(years int32) *QDate {
 	var __rv uintptr
 	q.Drv(19000,19107,unsafe.Pointer(&years),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -3467,43 +3467,43 @@ func (q *QDate) CurrentDate() *QDate {
 	return _rp
 }	
 //QDate::day()
-func (q *QDate) Day() int {
-	var __rv int
+func (q *QDate) Day() int32 {
+	var __rv int32
 	q.Drv(19000,19109,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::dayOfWeek()
-func (q *QDate) DayOfWeek() int {
-	var __rv int
+func (q *QDate) DayOfWeek() int32 {
+	var __rv int32
 	q.Drv(19000,19110,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::dayOfYear()
-func (q *QDate) DayOfYear() int {
-	var __rv int
+func (q *QDate) DayOfYear() int32 {
+	var __rv int32
 	q.Drv(19000,19111,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::daysInMonth()
-func (q *QDate) DaysInMonth() int {
-	var __rv int
+func (q *QDate) DaysInMonth() int32 {
+	var __rv int32
 	q.Drv(19000,19112,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::daysInYear()
-func (q *QDate) DaysInYear() int {
-	var __rv int
+func (q *QDate) DaysInYear() int32 {
+	var __rv int32
 	q.Drv(19000,19113,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::daysTo(QDate const&)
-func (q *QDate) DaysTo(value *QDate) int {
-	var __rv int
+func (q *QDate) DaysTo(value *QDate) int32 {
+	var __rv int32
 	q.Drv(19000,19114,Native(value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::fromJulianDay(int)	
-func QDateFromJulianDay(jd int) *QDate {
+func QDateFromJulianDay(jd int32) *QDate {
 	var __rv uintptr
 	DirectQtDrv(nil,19000,19115,unsafe.Pointer(&jd),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -3514,7 +3514,7 @@ func QDateFromJulianDay(jd int) *QDate {
 	return _rp
 }	
 //QDate::fromJulianDay(int)
-func (q *QDate) FromJulianDay(jd int) *QDate {
+func (q *QDate) FromJulianDay(jd int32) *QDate {
 	var __rv uintptr
 	q.Drv(19000,19115,unsafe.Pointer(&jd),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -3591,17 +3591,17 @@ func (q *QDate) FromStringWithTextDateformat(s string,f Qt_DateFormat) *QDate {
 	return _rp
 }	
 //QDate::getDate(int*,int*,int*)
-func (q *QDate) GetDate(year *int,month *int,day *int)  {
+func (q *QDate) GetDate(year *int32,month *int32,day *int32)  {
 	q.Drv(19000,19119,unsafe.Pointer(&year),unsafe.Pointer(&month),unsafe.Pointer(&day),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QDate::isLeapYear(int)	
-func QDateIsLeapYear(year int) bool {
+func QDateIsLeapYear(year int32) bool {
 	var __rv bool
 	DirectQtDrv(nil,19000,19120,unsafe.Pointer(&year),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::isLeapYear(int)
-func (q *QDate) IsLeapYear(year int) bool {
+func (q *QDate) IsLeapYear(year int32) bool {
 	var __rv bool
 	q.Drv(19000,19120,unsafe.Pointer(&year),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -3619,128 +3619,128 @@ func (q *QDate) IsValid() bool {
 	return __rv
 }	
 //QDate::isValid(int,int,int)	
-func QDateIsValidWithYMD(y int,m int,d int) bool {
+func QDateIsValidWithYInt32Int32(y int32,m int32,d int32) bool {
 	var __rv bool
 	DirectQtDrv(nil,19000,19123,unsafe.Pointer(&y),unsafe.Pointer(&m),unsafe.Pointer(&d),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::isValid(int,int,int)
-func (q *QDate) IsValidWithYMD(y int,m int,d int) bool {
+func (q *QDate) IsValidWithYInt32Int32(y int32,m int32,d int32) bool {
 	var __rv bool
 	q.Drv(19000,19123,unsafe.Pointer(&y),unsafe.Pointer(&m),unsafe.Pointer(&d),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::longDayName(int)	
-func QDateLongDayName(weekday int) string {
+func QDateLongDayName(weekday int32) string {
 	var __rv string
 	DirectQtDrv(nil,19000,19124,unsafe.Pointer(&weekday),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::longDayName(int)
-func (q *QDate) LongDayName(weekday int) string {
+func (q *QDate) LongDayName(weekday int32) string {
 	var __rv string
 	q.Drv(19000,19124,unsafe.Pointer(&weekday),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::longDayName(int,QDate::MonthNameType)	
-func QDateLongDayNameWithWeekdayType(weekday int,_type QDate_MonthNameType) string {
+func QDateLongDayNameWithWeekdayType(weekday int32,_type QDate_MonthNameType) string {
 	var __rv string
 	DirectQtDrv(nil,19000,19125,unsafe.Pointer(&weekday),unsafe.Pointer(&_type),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::longDayName(int,QDate::MonthNameType)
-func (q *QDate) LongDayNameWithWeekdayType(weekday int,_type QDate_MonthNameType) string {
+func (q *QDate) LongDayNameWithWeekdayType(weekday int32,_type QDate_MonthNameType) string {
 	var __rv string
 	q.Drv(19000,19125,unsafe.Pointer(&weekday),unsafe.Pointer(&_type),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::longMonthName(int)	
-func QDateLongMonthName(month int) string {
+func QDateLongMonthName(month int32) string {
 	var __rv string
 	DirectQtDrv(nil,19000,19126,unsafe.Pointer(&month),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::longMonthName(int)
-func (q *QDate) LongMonthName(month int) string {
+func (q *QDate) LongMonthName(month int32) string {
 	var __rv string
 	q.Drv(19000,19126,unsafe.Pointer(&month),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::longMonthName(int,QDate::MonthNameType)	
-func QDateLongMonthNameWithMonthType(month int,_type QDate_MonthNameType) string {
+func QDateLongMonthNameWithMonthType(month int32,_type QDate_MonthNameType) string {
 	var __rv string
 	DirectQtDrv(nil,19000,19127,unsafe.Pointer(&month),unsafe.Pointer(&_type),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::longMonthName(int,QDate::MonthNameType)
-func (q *QDate) LongMonthNameWithMonthType(month int,_type QDate_MonthNameType) string {
+func (q *QDate) LongMonthNameWithMonthType(month int32,_type QDate_MonthNameType) string {
 	var __rv string
 	q.Drv(19000,19127,unsafe.Pointer(&month),unsafe.Pointer(&_type),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::month()
-func (q *QDate) Month() int {
-	var __rv int
+func (q *QDate) Month() int32 {
+	var __rv int32
 	q.Drv(19000,19128,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::setDate(int,int,int)
-func (q *QDate) SetDate(year int,month int,day int) bool {
+func (q *QDate) SetDate(year int32,month int32,day int32) bool {
 	var __rv bool
 	q.Drv(19000,19129,unsafe.Pointer(&year),unsafe.Pointer(&month),unsafe.Pointer(&day),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::shortDayName(int)	
-func QDateShortDayName(weekday int) string {
+func QDateShortDayName(weekday int32) string {
 	var __rv string
 	DirectQtDrv(nil,19000,19130,unsafe.Pointer(&weekday),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::shortDayName(int)
-func (q *QDate) ShortDayName(weekday int) string {
+func (q *QDate) ShortDayName(weekday int32) string {
 	var __rv string
 	q.Drv(19000,19130,unsafe.Pointer(&weekday),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::shortDayName(int,QDate::MonthNameType)	
-func QDateShortDayNameWithWeekdayType(weekday int,_type QDate_MonthNameType) string {
+func QDateShortDayNameWithWeekdayType(weekday int32,_type QDate_MonthNameType) string {
 	var __rv string
 	DirectQtDrv(nil,19000,19131,unsafe.Pointer(&weekday),unsafe.Pointer(&_type),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::shortDayName(int,QDate::MonthNameType)
-func (q *QDate) ShortDayNameWithWeekdayType(weekday int,_type QDate_MonthNameType) string {
+func (q *QDate) ShortDayNameWithWeekdayType(weekday int32,_type QDate_MonthNameType) string {
 	var __rv string
 	q.Drv(19000,19131,unsafe.Pointer(&weekday),unsafe.Pointer(&_type),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::shortMonthName(int)	
-func QDateShortMonthName(month int) string {
+func QDateShortMonthName(month int32) string {
 	var __rv string
 	DirectQtDrv(nil,19000,19132,unsafe.Pointer(&month),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::shortMonthName(int)
-func (q *QDate) ShortMonthName(month int) string {
+func (q *QDate) ShortMonthName(month int32) string {
 	var __rv string
 	q.Drv(19000,19132,unsafe.Pointer(&month),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::shortMonthName(int,QDate::MonthNameType)	
-func QDateShortMonthNameWithMonthType(month int,_type QDate_MonthNameType) string {
+func QDateShortMonthNameWithMonthType(month int32,_type QDate_MonthNameType) string {
 	var __rv string
 	DirectQtDrv(nil,19000,19133,unsafe.Pointer(&month),unsafe.Pointer(&_type),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::shortMonthName(int,QDate::MonthNameType)
-func (q *QDate) ShortMonthNameWithMonthType(month int,_type QDate_MonthNameType) string {
+func (q *QDate) ShortMonthNameWithMonthType(month int32,_type QDate_MonthNameType) string {
 	var __rv string
 	q.Drv(19000,19133,unsafe.Pointer(&month),unsafe.Pointer(&_type),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::toJulianDay()
-func (q *QDate) ToJulianDay() int {
-	var __rv int
+func (q *QDate) ToJulianDay() int32 {
+	var __rv int32
 	q.Drv(19000,19134,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -3763,20 +3763,20 @@ func (q *QDate) ToStringWithDateformat(f Qt_DateFormat) string {
 	return __rv
 }	
 //QDate::weekNumber()
-func (q *QDate) WeekNumber() int {
-	var __rv int
+func (q *QDate) WeekNumber() int32 {
+	var __rv int32
 	q.Drv(19000,19138,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::weekNumber(int*)
-func (q *QDate) WeekNumberWithYearnum(yearNum *int) int {
-	var __rv int
+func (q *QDate) WeekNumberWithYearnum(yearNum *int32) int32 {
+	var __rv int32
 	q.Drv(19000,19139,unsafe.Pointer(&yearNum),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDate::year()
-func (q *QDate) Year() int {
-	var __rv int
+func (q *QDate) Year() int32 {
+	var __rv int32
 	q.Drv(19000,19140,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -3830,7 +3830,7 @@ func NewQDateTimeWithDateTimeSpec(value2 *QDate,value3 *QTime,spec Qt_TimeSpec) 
 	return _p
 } 
 //QDateTime::addDays(int)
-func (q *QDateTime) AddDays(days int) *QDateTime {
+func (q *QDateTime) AddDays(days int32) *QDateTime {
 	var __rv uintptr
 	q.Drv(20000,20106,unsafe.Pointer(&days),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -3852,7 +3852,7 @@ func (q *QDateTime) AddMSecs(msecs int64) *QDateTime {
 	return _rp
 }	
 //QDateTime::addMonths(int)
-func (q *QDateTime) AddMonths(months int) *QDateTime {
+func (q *QDateTime) AddMonths(months int32) *QDateTime {
 	var __rv uintptr
 	q.Drv(20000,20108,unsafe.Pointer(&months),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -3863,7 +3863,7 @@ func (q *QDateTime) AddMonths(months int) *QDateTime {
 	return _rp
 }	
 //QDateTime::addSecs(int)
-func (q *QDateTime) AddSecs(secs int) *QDateTime {
+func (q *QDateTime) AddSecs(secs int32) *QDateTime {
 	var __rv uintptr
 	q.Drv(20000,20109,unsafe.Pointer(&secs),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -3874,7 +3874,7 @@ func (q *QDateTime) AddSecs(secs int) *QDateTime {
 	return _rp
 }	
 //QDateTime::addYears(int)
-func (q *QDateTime) AddYears(years int) *QDateTime {
+func (q *QDateTime) AddYears(years int32) *QDateTime {
 	var __rv uintptr
 	q.Drv(20000,20110,unsafe.Pointer(&years),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -3952,8 +3952,8 @@ func (q *QDateTime) Date() *QDate {
 	return _rp
 }	
 //QDateTime::daysTo(QDateTime const&)
-func (q *QDateTime) DaysTo(value *QDateTime) int {
-	var __rv int
+func (q *QDateTime) DaysTo(value *QDateTime) int32 {
+	var __rv int32
 	q.Drv(20000,20115,Native(value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -4046,7 +4046,7 @@ func (q *QDateTime) FromStringWithTextDateformat(s string,f Qt_DateFormat) *QDat
 	return _rp
 }	
 //QDateTime::fromTime_t(unsigned int)	
-func QDateTimeFromTime_t(secsSince1Jan1970UTC uint) *QDateTime {
+func QDateTimeFromTime_t(secsSince1Jan1970UTC uint32) *QDateTime {
 	var __rv uintptr
 	DirectQtDrv(nil,20000,20120,unsafe.Pointer(&secsSince1Jan1970UTC),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -4057,7 +4057,7 @@ func QDateTimeFromTime_t(secsSince1Jan1970UTC uint) *QDateTime {
 	return _rp
 }	
 //QDateTime::fromTime_t(unsigned int)
-func (q *QDateTime) FromTime_t(secsSince1Jan1970UTC uint) *QDateTime {
+func (q *QDateTime) FromTime_t(secsSince1Jan1970UTC uint32) *QDateTime {
 	var __rv uintptr
 	q.Drv(20000,20120,unsafe.Pointer(&secsSince1Jan1970UTC),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -4086,8 +4086,8 @@ func (q *QDateTime) MsecsTo(value *QDateTime) int64 {
 	return __rv
 }	
 //QDateTime::secsTo(QDateTime const&)
-func (q *QDateTime) SecsTo(value *QDateTime) int {
-	var __rv int
+func (q *QDateTime) SecsTo(value *QDateTime) int32 {
+	var __rv int32
 	q.Drv(20000,20124,Native(value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -4108,11 +4108,11 @@ func (q *QDateTime) SetTimeSpec(spec Qt_TimeSpec)  {
 	q.Drv(20000,20128,unsafe.Pointer(&spec),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QDateTime::setTime_t(unsigned int)
-func (q *QDateTime) SetTime_t(secsSince1Jan1970UTC uint)  {
+func (q *QDateTime) SetTime_t(secsSince1Jan1970UTC uint32)  {
 	q.Drv(20000,20129,unsafe.Pointer(&secsSince1Jan1970UTC),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QDateTime::setUtcOffset(int)
-func (q *QDateTime) SetUtcOffset(seconds int)  {
+func (q *QDateTime) SetUtcOffset(seconds int32)  {
 	q.Drv(20000,20130,unsafe.Pointer(&seconds),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QDateTime::time()
@@ -4179,8 +4179,8 @@ func (q *QDateTime) ToTimeSpec(spec Qt_TimeSpec) *QDateTime {
 	return _rp
 }	
 //QDateTime::toTime_t()
-func (q *QDateTime) ToTime_t() uint {
-	var __rv uint
+func (q *QDateTime) ToTime_t() uint32 {
+	var __rv uint32
 	q.Drv(20000,20139,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -4196,8 +4196,8 @@ func (q *QDateTime) ToUTC() *QDateTime {
 	return _rp
 }	
 //QDateTime::utcOffset()
-func (q *QDateTime) UtcOffset() int {
-	var __rv int
+func (q *QDateTime) UtcOffset() int32 {
+	var __rv int32
 	q.Drv(20000,20141,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -4432,8 +4432,8 @@ func (q *QDir) CleanPath(path string) string {
 	return __rv
 }	
 //QDir::count()
-func (q *QDir) Count() uint {
-	var __rv uint
+func (q *QDir) Count() uint32 {
+	var __rv uint32
 	q.Drv(22000,22114,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -5574,26 +5574,26 @@ func (q *QEvent) IsAccepted() bool {
 	return __rv
 }	
 //QEvent::registerEventType()	
-func QEventRegisterEventType() int {
-	var __rv int
+func QEventRegisterEventType() int32 {
+	var __rv int32
 	DirectQtDrv(nil,31000,31106,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QEvent::registerEventType()
-func (q *QEvent) RegisterEventType() int {
-	var __rv int
+func (q *QEvent) RegisterEventType() int32 {
+	var __rv int32
 	q.Drv(31000,31106,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QEvent::registerEventType(int)	
-func QEventRegisterEventTypeWithHint(hint int) int {
-	var __rv int
+func QEventRegisterEventTypeWithHint(hint int32) int32 {
+	var __rv int32
 	DirectQtDrv(nil,31000,31107,unsafe.Pointer(&hint),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QEvent::registerEventType(int)
-func (q *QEvent) RegisterEventTypeWithHint(hint int) int {
-	var __rv int
+func (q *QEvent) RegisterEventTypeWithHint(hint int32) int32 {
+	var __rv int32
 	q.Drv(31000,31107,unsafe.Pointer(&hint),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -5851,8 +5851,8 @@ func (q *QFileInfo) Group() string {
 	return __rv
 }	
 //QFileInfo::groupId()
-func (q *QFileInfo) GroupId() uint {
-	var __rv uint
+func (q *QFileInfo) GroupId() uint32 {
+	var __rv uint32
 	q.Drv(34000,34123,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -5957,8 +5957,8 @@ func (q *QFileInfo) Owner() string {
 	return __rv
 }	
 //QFileInfo::ownerId()
-func (q *QFileInfo) OwnerId() uint {
-	var __rv uint
+func (q *QFileInfo) OwnerId() uint32 {
+	var __rv uint32
 	q.Drv(34000,34139,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -6238,7 +6238,7 @@ func NewQFontWithFontPaintDevice(value2 *QFont,pd QPaintDeviceInterface) *QFont 
 	return _p
 } 
 //QFont::QFont(QString const&,int,int,bool)	
-func NewQFontWithFamilyPointsizeWeightItalic(family string,pointSize int,weight int,italic bool) *QFont {
+func NewQFontWithFamilyPointsizeWeightItalic(family string,pointSize int32,weight int32,italic bool) *QFont {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),37000,37105,unsafe.Pointer(&family),unsafe.Pointer(&pointSize),unsafe.Pointer(&weight),unsafe.Pointer(&italic),nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -6385,14 +6385,14 @@ func (q *QFont) Overline() bool {
 	return __rv
 }	
 //QFont::pixelSize()
-func (q *QFont) PixelSize() int {
-	var __rv int
+func (q *QFont) PixelSize() int32 {
+	var __rv int32
 	q.Drv(37000,37127,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFont::pointSize()
-func (q *QFont) PointSize() int {
-	var __rv int
+func (q *QFont) PointSize() int32 {
+	var __rv int32
 	q.Drv(37000,37128,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -6423,8 +6423,8 @@ func (q *QFont) RemoveSubstitutions(value string)  {
 	q.Drv(37000,37132,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFont::resolve()
-func (q *QFont) Resolve() uint {
-	var __rv uint
+func (q *QFont) Resolve() uint32 {
+	var __rv uint32
 	q.Drv(37000,37133,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -6440,7 +6440,7 @@ func (q *QFont) ResolveWithFont(value *QFont) *QFont {
 	return _rp
 }	
 //QFont::resolve(unsigned int)
-func (q *QFont) ResolveWithMask(mask uint)  {
+func (q *QFont) ResolveWithMask(mask uint32)  {
 	q.Drv(37000,37135,unsafe.Pointer(&mask),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFont::setBold(bool)
@@ -6476,11 +6476,11 @@ func (q *QFont) SetOverline(value bool)  {
 	q.Drv(37000,37143,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFont::setPixelSize(int)
-func (q *QFont) SetPixelSize(value int)  {
+func (q *QFont) SetPixelSize(value int32)  {
 	q.Drv(37000,37144,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFont::setPointSize(int)
-func (q *QFont) SetPointSize(value int)  {
+func (q *QFont) SetPointSize(value int32)  {
 	q.Drv(37000,37145,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFont::setPointSizeF(double)
@@ -6496,7 +6496,7 @@ func (q *QFont) SetRawName(value string)  {
 	q.Drv(37000,37148,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFont::setStretch(int)
-func (q *QFont) SetStretch(value int)  {
+func (q *QFont) SetStretch(value int32)  {
 	q.Drv(37000,37149,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFont::setStrikeOut(bool)
@@ -6524,7 +6524,7 @@ func (q *QFont) SetUnderline(value bool)  {
 	q.Drv(37000,37155,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFont::setWeight(int)
-func (q *QFont) SetWeight(value int)  {
+func (q *QFont) SetWeight(value int32)  {
 	q.Drv(37000,37156,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFont::setWordSpacing(double)
@@ -6532,8 +6532,8 @@ func (q *QFont) SetWordSpacing(spacing float64)  {
 	q.Drv(37000,37157,unsafe.Pointer(&spacing),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFont::stretch()
-func (q *QFont) Stretch() int {
-	var __rv int
+func (q *QFont) Stretch() int32 {
+	var __rv int32
 	q.Drv(37000,37158,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -6610,8 +6610,8 @@ func (q *QFont) Underline() bool {
 	return __rv
 }	
 //QFont::weight()
-func (q *QFont) Weight() int {
-	var __rv int
+func (q *QFont) Weight() int32 {
+	var __rv int32
 	q.Drv(37000,37168,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -6678,37 +6678,37 @@ func NewQFontDatabase() *QFontDatabase {
 	return _p
 } 
 //QFontDatabase::addApplicationFont(QString const&)	
-func QFontDatabaseAddApplicationFont(fileName string) int {
-	var __rv int
+func QFontDatabaseAddApplicationFont(fileName string) int32 {
+	var __rv int32
 	DirectQtDrv(nil,38000,38103,unsafe.Pointer(&fileName),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontDatabase::addApplicationFont(QString const&)
-func (q *QFontDatabase) AddApplicationFont(fileName string) int {
-	var __rv int
+func (q *QFontDatabase) AddApplicationFont(fileName string) int32 {
+	var __rv int32
 	q.Drv(38000,38103,unsafe.Pointer(&fileName),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontDatabase::addApplicationFontFromData(QByteArray const&)	
-func QFontDatabaseAddApplicationFontFromData(fontData []byte) int {
-	var __rv int
+func QFontDatabaseAddApplicationFontFromData(fontData []byte) int32 {
+	var __rv int32
 	DirectQtDrv(nil,38000,38104,unsafe.Pointer(&fontData),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontDatabase::addApplicationFontFromData(QByteArray const&)
-func (q *QFontDatabase) AddApplicationFontFromData(fontData []byte) int {
-	var __rv int
+func (q *QFontDatabase) AddApplicationFontFromData(fontData []byte) int32 {
+	var __rv int32
 	q.Drv(38000,38104,unsafe.Pointer(&fontData),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontDatabase::applicationFontFamilies(int)	
-func QFontDatabaseApplicationFontFamilies(id int) []string {
+func QFontDatabaseApplicationFontFamilies(id int32) []string {
 	var __rv []string
 	DirectQtDrv(nil,38000,38105,unsafe.Pointer(&id),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontDatabase::applicationFontFamilies(int)
-func (q *QFontDatabase) ApplicationFontFamilies(id int) []string {
+func (q *QFontDatabase) ApplicationFontFamilies(id int32) []string {
 	var __rv []string
 	q.Drv(38000,38105,unsafe.Pointer(&id),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -6732,7 +6732,7 @@ func (q *QFontDatabase) FamiliesWithWritingsystem(writingSystem QFontDatabase_Wr
 	return __rv
 }	
 //QFontDatabase::font(QString const&,QString const&,int)
-func (q *QFontDatabase) Font(family string,style string,pointSize int) *QFont {
+func (q *QFontDatabase) Font(family string,style string,pointSize int32) *QFont {
 	var __rv uintptr
 	q.Drv(38000,38109,unsafe.Pointer(&family),unsafe.Pointer(&style),unsafe.Pointer(&pointSize),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -6797,14 +6797,14 @@ func (q *QFontDatabase) Italic(family string,style string) bool {
 	return __rv
 }	
 //QFontDatabase::pointSizes(QString const&)
-func (q *QFontDatabase) PointSizes(family string) []int {
-	var __rv []int
+func (q *QFontDatabase) PointSizes(family string) []int32 {
+	var __rv []int32
 	q.Drv(38000,38119,unsafe.Pointer(&family),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontDatabase::pointSizes(QString const&,QString const&)
-func (q *QFontDatabase) PointSizesWithFamilyStyle(family string,style string) []int {
-	var __rv []int
+func (q *QFontDatabase) PointSizesWithFamilyStyle(family string,style string) []int32 {
+	var __rv []int32
 	q.Drv(38000,38120,unsafe.Pointer(&family),unsafe.Pointer(&style),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -6821,32 +6821,32 @@ func (q *QFontDatabase) RemoveAllApplicationFonts() bool {
 	return __rv
 }	
 //QFontDatabase::removeApplicationFont(int)	
-func QFontDatabaseRemoveApplicationFont(id int) bool {
+func QFontDatabaseRemoveApplicationFont(id int32) bool {
 	var __rv bool
 	DirectQtDrv(nil,38000,38122,unsafe.Pointer(&id),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontDatabase::removeApplicationFont(int)
-func (q *QFontDatabase) RemoveApplicationFont(id int) bool {
+func (q *QFontDatabase) RemoveApplicationFont(id int32) bool {
 	var __rv bool
 	q.Drv(38000,38122,unsafe.Pointer(&id),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontDatabase::smoothSizes(QString const&,QString const&)
-func (q *QFontDatabase) SmoothSizes(family string,style string) []int {
-	var __rv []int
+func (q *QFontDatabase) SmoothSizes(family string,style string) []int32 {
+	var __rv []int32
 	q.Drv(38000,38123,unsafe.Pointer(&family),unsafe.Pointer(&style),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontDatabase::standardSizes()	
-func QFontDatabaseStandardSizes() []int {
-	var __rv []int
+func QFontDatabaseStandardSizes() []int32 {
+	var __rv []int32
 	DirectQtDrv(nil,38000,38124,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontDatabase::standardSizes()
-func (q *QFontDatabase) StandardSizes() []int {
-	var __rv []int
+func (q *QFontDatabase) StandardSizes() []int32 {
+	var __rv []int32
 	q.Drv(38000,38124,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -6881,8 +6881,8 @@ func (q *QFontDatabase) SupportsThreadedFontRendering() bool {
 	return __rv
 }	
 //QFontDatabase::weight(QString const&,QString const&)
-func (q *QFontDatabase) Weight(family string,style string) int {
-	var __rv int
+func (q *QFontDatabase) Weight(family string,style string) int32 {
+	var __rv int32
 	q.Drv(38000,38129,unsafe.Pointer(&family),unsafe.Pointer(&style),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -6986,14 +6986,14 @@ func (q *QFontInfo) Overline() bool {
 	return __rv
 }	
 //QFontInfo::pixelSize()
-func (q *QFontInfo) PixelSize() int {
-	var __rv int
+func (q *QFontInfo) PixelSize() int32 {
+	var __rv int32
 	q.Drv(39000,39110,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontInfo::pointSize()
-func (q *QFontInfo) PointSize() int {
-	var __rv int
+func (q *QFontInfo) PointSize() int32 {
+	var __rv int32
 	q.Drv(39000,39111,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -7034,8 +7034,8 @@ func (q *QFontInfo) Underline() bool {
 	return __rv
 }	
 //QFontInfo::weight()
-func (q *QFontInfo) Weight() int {
-	var __rv int
+func (q *QFontInfo) Weight() int32 {
+	var __rv int32
 	q.Drv(39000,39118,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -7078,14 +7078,14 @@ func NewQFontMetricsWithFontPaintDevice(value2 *QFont,pd QPaintDeviceInterface) 
 	return _p
 } 
 //QFontMetrics::ascent()
-func (q *QFontMetrics) Ascent() int {
-	var __rv int
+func (q *QFontMetrics) Ascent() int32 {
+	var __rv int32
 	q.Drv(40000,40105,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontMetrics::averageCharWidth()
-func (q *QFontMetrics) AverageCharWidth() int {
-	var __rv int
+func (q *QFontMetrics) AverageCharWidth() int32 {
+	var __rv int32
 	q.Drv(40000,40106,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -7112,7 +7112,7 @@ func (q *QFontMetrics) BoundingRectWithText(text string) *QRect {
 	return _rp
 }	
 //QFontMetrics::boundingRect(QRect const&,int,QString const&,int,int*)
-func (q *QFontMetrics) BoundingRectWithRectFlagsTextTabstopsTabarray(r *QRect,flags int,text string,tabstops int,tabarray *int) *QRect {
+func (q *QFontMetrics) BoundingRectWithRectFlagsTextTabstopsTabarray(r *QRect,flags int32,text string,tabstops int32,tabarray *int32) *QRect {
 	var __rv uintptr
 	q.Drv(40000,40109,Native(r),unsafe.Pointer(&flags),unsafe.Pointer(&text),unsafe.Pointer(&tabstops),unsafe.Pointer(&tabarray),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -7123,7 +7123,7 @@ func (q *QFontMetrics) BoundingRectWithRectFlagsTextTabstopsTabarray(r *QRect,fl
 	return _rp
 }	
 //QFontMetrics::boundingRect(int,int,int,int,int,QString const&,int,int*)
-func (q *QFontMetrics) BoundingRectWithXYWidthHeightFlagsTextTabstopsTabarray(x int,y int,w int,h int,flags int,text string,tabstops int,tabarray *int) *QRect {
+func (q *QFontMetrics) BoundingRectWithXYWidthHeightFlagsTextTabstopsTabarray(x int32,y int32,w int32,h int32,flags int32,text string,tabstops int32,tabarray *int32) *QRect {
 	var __rv uintptr
 	q.Drv(40000,40110,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&flags),unsafe.Pointer(&text),unsafe.Pointer(&tabstops),unsafe.Pointer(&tabarray),unsafe.Pointer(&__rv),nil,nil,nil)
 	if __rv == 0 {
@@ -7134,26 +7134,26 @@ func (q *QFontMetrics) BoundingRectWithXYWidthHeightFlagsTextTabstopsTabarray(x 
 	return _rp
 }	
 //QFontMetrics::charWidth(QString const&,int)
-func (q *QFontMetrics) CharWidth(str string,pos int) int {
-	var __rv int
+func (q *QFontMetrics) CharWidth(str string,pos int32) int32 {
+	var __rv int32
 	q.Drv(40000,40111,unsafe.Pointer(&str),unsafe.Pointer(&pos),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontMetrics::descent()
-func (q *QFontMetrics) Descent() int {
-	var __rv int
+func (q *QFontMetrics) Descent() int32 {
+	var __rv int32
 	q.Drv(40000,40112,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontMetrics::elidedText(QString const&,Qt::TextElideMode,int,int)
-func (q *QFontMetrics) ElidedText(text string,mode Qt_TextElideMode,width int,flags int) string {
+func (q *QFontMetrics) ElidedText(text string,mode Qt_TextElideMode,width int32,flags int32) string {
 	var __rv string
 	q.Drv(40000,40113,unsafe.Pointer(&text),unsafe.Pointer(&mode),unsafe.Pointer(&width),unsafe.Pointer(&flags),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontMetrics::height()
-func (q *QFontMetrics) Height() int {
-	var __rv int
+func (q *QFontMetrics) Height() int32 {
+	var __rv int32
 	q.Drv(40000,40114,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -7164,61 +7164,61 @@ func (q *QFontMetrics) InFont(value rune) bool {
 	return __rv
 }	
 //QFontMetrics::leading()
-func (q *QFontMetrics) Leading() int {
-	var __rv int
+func (q *QFontMetrics) Leading() int32 {
+	var __rv int32
 	q.Drv(40000,40116,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontMetrics::leftBearing(QChar)
-func (q *QFontMetrics) LeftBearing(value rune) int {
-	var __rv int
+func (q *QFontMetrics) LeftBearing(value rune) int32 {
+	var __rv int32
 	q.Drv(40000,40117,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontMetrics::lineSpacing()
-func (q *QFontMetrics) LineSpacing() int {
-	var __rv int
+func (q *QFontMetrics) LineSpacing() int32 {
+	var __rv int32
 	q.Drv(40000,40118,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontMetrics::lineWidth()
-func (q *QFontMetrics) LineWidth() int {
-	var __rv int
+func (q *QFontMetrics) LineWidth() int32 {
+	var __rv int32
 	q.Drv(40000,40119,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontMetrics::maxWidth()
-func (q *QFontMetrics) MaxWidth() int {
-	var __rv int
+func (q *QFontMetrics) MaxWidth() int32 {
+	var __rv int32
 	q.Drv(40000,40120,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontMetrics::minLeftBearing()
-func (q *QFontMetrics) MinLeftBearing() int {
-	var __rv int
+func (q *QFontMetrics) MinLeftBearing() int32 {
+	var __rv int32
 	q.Drv(40000,40121,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontMetrics::minRightBearing()
-func (q *QFontMetrics) MinRightBearing() int {
-	var __rv int
+func (q *QFontMetrics) MinRightBearing() int32 {
+	var __rv int32
 	q.Drv(40000,40122,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontMetrics::overlinePos()
-func (q *QFontMetrics) OverlinePos() int {
-	var __rv int
+func (q *QFontMetrics) OverlinePos() int32 {
+	var __rv int32
 	q.Drv(40000,40123,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontMetrics::rightBearing(QChar)
-func (q *QFontMetrics) RightBearing(value rune) int {
-	var __rv int
+func (q *QFontMetrics) RightBearing(value rune) int32 {
+	var __rv int32
 	q.Drv(40000,40124,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontMetrics::size(int,QString const&,int,int*)
-func (q *QFontMetrics) Size(flags int,str string,tabstops int,tabarray *int) *QSize {
+func (q *QFontMetrics) Size(flags int32,str string,tabstops int32,tabarray *int32) *QSize {
 	var __rv uintptr
 	q.Drv(40000,40125,unsafe.Pointer(&flags),unsafe.Pointer(&str),unsafe.Pointer(&tabstops),unsafe.Pointer(&tabarray),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -7229,8 +7229,8 @@ func (q *QFontMetrics) Size(flags int,str string,tabstops int,tabarray *int) *QS
 	return _rp
 }	
 //QFontMetrics::strikeOutPos()
-func (q *QFontMetrics) StrikeOutPos() int {
-	var __rv int
+func (q *QFontMetrics) StrikeOutPos() int32 {
+	var __rv int32
 	q.Drv(40000,40126,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -7246,38 +7246,38 @@ func (q *QFontMetrics) TightBoundingRect(text string) *QRect {
 	return _rp
 }	
 //QFontMetrics::underlinePos()
-func (q *QFontMetrics) UnderlinePos() int {
-	var __rv int
+func (q *QFontMetrics) UnderlinePos() int32 {
+	var __rv int32
 	q.Drv(40000,40128,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontMetrics::width(QChar)
-func (q *QFontMetrics) Width(value rune) int {
-	var __rv int
+func (q *QFontMetrics) Width(value rune) int32 {
+	var __rv int32
 	q.Drv(40000,40129,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontMetrics::width(QString const&)
-func (q *QFontMetrics) WidthWithString(value string) int {
-	var __rv int
+func (q *QFontMetrics) WidthWithString(value string) int32 {
+	var __rv int32
 	q.Drv(40000,40130,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontMetrics::width(QString const&,int)
-func (q *QFontMetrics) WidthWithStringLen(value2 string,len int) int {
-	var __rv int
+func (q *QFontMetrics) WidthWithStringLen(value2 string,len int32) int32 {
+	var __rv int32
 	q.Drv(40000,40131,unsafe.Pointer(&value2),unsafe.Pointer(&len),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontMetrics::width(QString const&,int,int)
-func (q *QFontMetrics) WidthWithStringLenFlags(value2 string,len int,flags int) int {
-	var __rv int
+func (q *QFontMetrics) WidthWithStringLenFlags(value2 string,len int32,flags int32) int32 {
+	var __rv int32
 	q.Drv(40000,40132,unsafe.Pointer(&value2),unsafe.Pointer(&len),unsafe.Pointer(&flags),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFontMetrics::xHeight()
-func (q *QFontMetrics) XHeight() int {
-	var __rv int
+func (q *QFontMetrics) XHeight() int32 {
+	var __rv int32
 	q.Drv(40000,40133,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -7365,7 +7365,7 @@ func (q *QFontMetricsF) BoundingRectWithString(string string) *QRectF {
 	return _rp
 }	
 //QFontMetricsF::boundingRect(QRectF const&,int,QString const&,int,int*)
-func (q *QFontMetricsF) BoundingRectFWithRectfFlagsStringTabstopsTabarray(r *QRectF,flags int,string string,tabstops int,tabarray *int) *QRectF {
+func (q *QFontMetricsF) BoundingRectFWithRectfFlagsStringTabstopsTabarray(r *QRectF,flags int32,string string,tabstops int32,tabarray *int32) *QRectF {
 	var __rv uintptr
 	q.Drv(41000,41110,Native(r),unsafe.Pointer(&flags),unsafe.Pointer(&string),unsafe.Pointer(&tabstops),unsafe.Pointer(&tabarray),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -7382,7 +7382,7 @@ func (q *QFontMetricsF) Descent() float64 {
 	return __rv
 }	
 //QFontMetricsF::elidedText(QString const&,Qt::TextElideMode,double,int)
-func (q *QFontMetricsF) ElidedText(text string,mode Qt_TextElideMode,width float64,flags int) string {
+func (q *QFontMetricsF) ElidedText(text string,mode Qt_TextElideMode,width float64,flags int32) string {
 	var __rv string
 	q.Drv(41000,41112,unsafe.Pointer(&text),unsafe.Pointer(&mode),unsafe.Pointer(&width),unsafe.Pointer(&flags),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -7454,7 +7454,7 @@ func (q *QFontMetricsF) RightBearing(value rune) float64 {
 	return __rv
 }	
 //QFontMetricsF::size(int,QString const&,int,int*)
-func (q *QFontMetricsF) Size(flags int,str string,tabstops int,tabarray *int) *QSizeF {
+func (q *QFontMetricsF) Size(flags int32,str string,tabstops int32,tabarray *int32) *QSizeF {
 	var __rv uintptr
 	q.Drv(41000,41124,unsafe.Pointer(&flags),unsafe.Pointer(&str),unsafe.Pointer(&tabstops),unsafe.Pointer(&tabarray),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -7871,14 +7871,14 @@ func (q *QHelpEvent) GlobalPos() *QPoint {
 	return _rp
 }	
 //QHelpEvent::globalX()
-func (q *QHelpEvent) GlobalX() int {
-	var __rv int
+func (q *QHelpEvent) GlobalX() int32 {
+	var __rv int32
 	q.Drv(48000,48104,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QHelpEvent::globalY()
-func (q *QHelpEvent) GlobalY() int {
-	var __rv int
+func (q *QHelpEvent) GlobalY() int32 {
+	var __rv int32
 	q.Drv(48000,48105,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -7894,14 +7894,14 @@ func (q *QHelpEvent) Pos() *QPoint {
 	return _rp
 }	
 //QHelpEvent::x()
-func (q *QHelpEvent) X() int {
-	var __rv int
+func (q *QHelpEvent) X() int32 {
+	var __rv int32
 	q.Drv(48000,48107,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QHelpEvent::y()
-func (q *QHelpEvent) Y() int {
-	var __rv int
+func (q *QHelpEvent) Y() int32 {
+	var __rv int32
 	q.Drv(48000,48108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -8161,7 +8161,7 @@ func (q *QIcon) PaintWithPainterRectAlignmentModeState(painter *QPainter,rect *Q
 	q.Drv(51000,51122,Native(painter),Native(rect),unsafe.Pointer(&alignment),unsafe.Pointer(&mode),unsafe.Pointer(&state),nil,nil,nil,nil,nil,nil,nil)
 }	
 //QIcon::paint(QPainter*,int,int,int,int,QFlags<Qt::AlignmentFlag>,QIcon::Mode,QIcon::State)
-func (q *QIcon) PaintWithPainterXYWidthHeightAlignmentModeState(painter *QPainter,x int,y int,w int,h int,alignment Qt_AlignmentFlag,mode QIcon_Mode,state QIcon_State)  {
+func (q *QIcon) PaintWithPainterXYWidthHeightAlignmentModeState(painter *QPainter,x int32,y int32,w int32,h int32,alignment Qt_AlignmentFlag,mode QIcon_Mode,state QIcon_State)  {
 	q.Drv(51000,51123,Native(painter),unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&alignment),unsafe.Pointer(&mode),unsafe.Pointer(&state),nil,nil,nil,nil)
 }	
 //QIcon::pixmap(QSize const&)
@@ -8176,7 +8176,7 @@ func (q *QIcon) Pixmap(size *QSize) *QPixmap {
 	return _rp
 }	
 //QIcon::pixmap(int)
-func (q *QIcon) PixmapWithExtent(extent int) *QPixmap {
+func (q *QIcon) PixmapWithExtent(extent int32) *QPixmap {
 	var __rv uintptr
 	q.Drv(51000,51125,unsafe.Pointer(&extent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -8198,7 +8198,7 @@ func (q *QIcon) PixmapWithSizeModeState(size *QSize,mode QIcon_Mode,state QIcon_
 	return _rp
 }	
 //QIcon::pixmap(int,QIcon::Mode,QIcon::State)
-func (q *QIcon) PixmapWithExtentModeState(extent int,mode QIcon_Mode,state QIcon_State) *QPixmap {
+func (q *QIcon) PixmapWithExtentModeState(extent int32,mode QIcon_Mode,state QIcon_State) *QPixmap {
 	var __rv uintptr
 	q.Drv(51000,51127,unsafe.Pointer(&extent),unsafe.Pointer(&mode),unsafe.Pointer(&state),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -8209,7 +8209,7 @@ func (q *QIcon) PixmapWithExtentModeState(extent int,mode QIcon_Mode,state QIcon
 	return _rp
 }	
 //QIcon::pixmap(int,int,QIcon::Mode,QIcon::State)
-func (q *QIcon) PixmapWithWidthHeightModeState(w int,h int,mode QIcon_Mode,state QIcon_State) *QPixmap {
+func (q *QIcon) PixmapWithWidthHeightModeState(w int32,h int32,mode QIcon_Mode,state QIcon_State) *QPixmap {
 	var __rv uintptr
 	q.Drv(51000,51128,unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&mode),unsafe.Pointer(&state),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -8364,7 +8364,7 @@ func NewQImageWithFilenameFormat(fileName string,format string) *QImage {
 	return _p
 } 
 //QImage::QImage(int,int,QImage::Format)	
-func NewQImageWithWidthHeightFormat(width int,height int,format QImage_Format) *QImage {
+func NewQImageWithWidthHeightFormat(width int32,height int32,format QImage_Format) *QImage {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),53000,53107,unsafe.Pointer(&width),unsafe.Pointer(&height),unsafe.Pointer(&format),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -8375,7 +8375,7 @@ func NewQImageWithWidthHeightFormat(width int,height int,format QImage_Format) *
 	return _p
 } 
 //QImage::QImage(unsigned char const*,int,int,QImage::Format)	
-func NewQImageWithDataWidthHeightFormat(data *byte,width int,height int,format QImage_Format) *QImage {
+func NewQImageWithDataWidthHeightFormat(data *byte,width int32,height int32,format QImage_Format) *QImage {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),53000,53108,unsafe.Pointer(&data),unsafe.Pointer(&width),unsafe.Pointer(&height),unsafe.Pointer(&format),nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -8386,7 +8386,7 @@ func NewQImageWithDataWidthHeightFormat(data *byte,width int,height int,format Q
 	return _p
 } 
 //QImage::QImage(unsigned char const*,int,int,int,QImage::Format)	
-func NewQImageWithDataWidthHeightBytesperlineFormat(data *byte,width int,height int,bytesPerLine int,format QImage_Format) *QImage {
+func NewQImageWithDataWidthHeightBytesperlineFormat(data *byte,width int32,height int32,bytesPerLine int32,format QImage_Format) *QImage {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),53000,53109,unsafe.Pointer(&data),unsafe.Pointer(&width),unsafe.Pointer(&height),unsafe.Pointer(&bytesPerLine),unsafe.Pointer(&format),nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -8403,8 +8403,8 @@ func (q *QImage) AllGray() bool {
 	return __rv
 }	
 //QImage::bitPlaneCount()
-func (q *QImage) BitPlaneCount() int {
-	var __rv int
+func (q *QImage) BitPlaneCount() int32 {
+	var __rv int32
 	q.Drv(53000,53111,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -8415,14 +8415,14 @@ func (q *QImage) Bits() *byte {
 	return __rv
 }	
 //QImage::byteCount()
-func (q *QImage) ByteCount() int {
-	var __rv int
+func (q *QImage) ByteCount() int32 {
+	var __rv int32
 	q.Drv(53000,53113,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QImage::bytesPerLine()
-func (q *QImage) BytesPerLine() int {
-	var __rv int
+func (q *QImage) BytesPerLine() int32 {
+	var __rv int32
 	q.Drv(53000,53114,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -8433,14 +8433,14 @@ func (q *QImage) CacheKey() int64 {
 	return __rv
 }	
 //QImage::color(int)
-func (q *QImage) Color(i int) uint {
-	var __rv uint
+func (q *QImage) Color(i int32) uint32 {
+	var __rv uint32
 	q.Drv(53000,53116,unsafe.Pointer(&i),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QImage::colorCount()
-func (q *QImage) ColorCount() int {
-	var __rv int
+func (q *QImage) ColorCount() int32 {
+	var __rv int32
 	q.Drv(53000,53117,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -8457,7 +8457,7 @@ func (q *QImage) ConstBits() *byte {
 	return __rv
 }	
 //QImage::constScanLine(int)
-func (q *QImage) ConstScanLine(value int) *byte {
+func (q *QImage) ConstScanLine(value int32) *byte {
 	var __rv *byte
 	q.Drv(53000,53120,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -8518,7 +8518,7 @@ func (q *QImage) CopyWithRect(rect *QRect) *QImage {
 	return _rp
 }	
 //QImage::copy(int,int,int,int)
-func (q *QImage) CopyWithXYWidthHeight(x int,y int,w int,h int) *QImage {
+func (q *QImage) CopyWithXYWidthHeight(x int32,y int32,w int32,h int32) *QImage {
 	var __rv uintptr
 	q.Drv(53000,53126,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -8562,7 +8562,7 @@ func (q *QImage) CreateHeuristicMask(clipTight bool) *QImage {
 	return _rp
 }	
 //QImage::createMaskFromColor(unsigned int)
-func (q *QImage) CreateMaskFromColor(color uint) *QImage {
+func (q *QImage) CreateMaskFromColor(color uint32) *QImage {
 	var __rv uintptr
 	q.Drv(53000,53130,unsafe.Pointer(&color),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -8573,7 +8573,7 @@ func (q *QImage) CreateMaskFromColor(color uint) *QImage {
 	return _rp
 }	
 //QImage::createMaskFromColor(unsigned int,Qt::MaskMode)
-func (q *QImage) CreateMaskFromColorWithColorMode(color uint,mode Qt_MaskMode) *QImage {
+func (q *QImage) CreateMaskFromColorWithColorMode(color uint32,mode Qt_MaskMode) *QImage {
 	var __rv uintptr
 	q.Drv(53000,53131,unsafe.Pointer(&color),unsafe.Pointer(&mode),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -8584,8 +8584,8 @@ func (q *QImage) CreateMaskFromColorWithColorMode(color uint,mode Qt_MaskMode) *
 	return _rp
 }	
 //QImage::depth()
-func (q *QImage) Depth() int {
-	var __rv int
+func (q *QImage) Depth() int32 {
+	var __rv int32
 	q.Drv(53000,53132,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -8594,25 +8594,25 @@ func (q *QImage) Detach()  {
 	q.Drv(53000,53133,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QImage::devType()
-func (q *QImage) DevType() int {
-	var __rv int
+func (q *QImage) DevType() int32 {
+	var __rv int32
 	q.Drv(53000,53134,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QImage::dotsPerMeterX()
-func (q *QImage) DotsPerMeterX() int {
-	var __rv int
+func (q *QImage) DotsPerMeterX() int32 {
+	var __rv int32
 	q.Drv(53000,53135,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QImage::dotsPerMeterY()
-func (q *QImage) DotsPerMeterY() int {
-	var __rv int
+func (q *QImage) DotsPerMeterY() int32 {
+	var __rv int32
 	q.Drv(53000,53136,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QImage::fill(unsigned int)
-func (q *QImage) Fill(pixel uint)  {
+func (q *QImage) Fill(pixel uint32)  {
 	q.Drv(53000,53137,unsafe.Pointer(&pixel),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QImage::format()
@@ -8666,7 +8666,7 @@ func (q *QImage) FromDataWithDataFormat(data []byte,format string) *QImage {
 	return _rp
 }	
 //QImage::fromData(unsigned char const*,int,char const*)	
-func QImageFromDataWithDataSizeFormat(data *byte,size int,format string) *QImage {
+func QImageFromDataWithDataSizeFormat(data *byte,size int32,format string) *QImage {
 	var __rv uintptr
 	DirectQtDrv(nil,53000,53141,unsafe.Pointer(&data),unsafe.Pointer(&size),unsafe.Pointer(&format),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -8677,7 +8677,7 @@ func QImageFromDataWithDataSizeFormat(data *byte,size int,format string) *QImage
 	return _rp
 }	
 //QImage::fromData(unsigned char const*,int,char const*)
-func (q *QImage) FromDataWithDataSizeFormat(data *byte,size int,format string) *QImage {
+func (q *QImage) FromDataWithDataSizeFormat(data *byte,size int32,format string) *QImage {
 	var __rv uintptr
 	q.Drv(53000,53141,unsafe.Pointer(&data),unsafe.Pointer(&size),unsafe.Pointer(&format),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -8694,8 +8694,8 @@ func (q *QImage) HasAlphaChannel() bool {
 	return __rv
 }	
 //QImage::height()
-func (q *QImage) Height() int {
-	var __rv int
+func (q *QImage) Height() int32 {
+	var __rv int32
 	q.Drv(53000,53143,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -8756,7 +8756,7 @@ func (q *QImage) LoadFromDataWithDataAformat(data []byte,aformat string) bool {
 	return __rv
 }	
 //QImage::loadFromData(unsigned char const*,int,char const*)
-func (q *QImage) LoadFromDataWithBufLenFormat(buf *byte,len int,format string) bool {
+func (q *QImage) LoadFromDataWithBufLenFormat(buf *byte,len int32,format string) bool {
 	var __rv bool
 	q.Drv(53000,53154,unsafe.Pointer(&buf),unsafe.Pointer(&len),unsafe.Pointer(&format),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -8806,26 +8806,26 @@ func (q *QImage) PaintEngine() *QPaintEngine {
 	return _rp
 }	
 //QImage::pixel(QPoint const&)
-func (q *QImage) Pixel(pt *QPoint) uint {
-	var __rv uint
+func (q *QImage) Pixel(pt *QPoint) uint32 {
+	var __rv uint32
 	q.Drv(53000,53159,Native(pt),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QImage::pixel(int,int)
-func (q *QImage) PixelWithXY(x int,y int) uint {
-	var __rv uint
+func (q *QImage) PixelWithXY(x int32,y int32) uint32 {
+	var __rv uint32
 	q.Drv(53000,53160,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QImage::pixelIndex(QPoint const&)
-func (q *QImage) PixelIndex(pt *QPoint) int {
-	var __rv int
+func (q *QImage) PixelIndex(pt *QPoint) int32 {
+	var __rv int32
 	q.Drv(53000,53161,Native(pt),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QImage::pixelIndex(int,int)
-func (q *QImage) PixelIndexWithXY(x int,y int) int {
-	var __rv int
+func (q *QImage) PixelIndexWithXY(x int32,y int32) int32 {
+	var __rv int32
 	q.Drv(53000,53162,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -8864,13 +8864,13 @@ func (q *QImage) SaveWithFilename(fileName string) bool {
 	return __rv
 }	
 //QImage::save(QIODevice*,char const*,int)
-func (q *QImage) SaveWithDeviceFormatQuality(device QIODeviceInterface,format string,quality int) bool {
+func (q *QImage) SaveWithDeviceFormatQuality(device QIODeviceInterface,format string,quality int32) bool {
 	var __rv bool
 	q.Drv(53000,53167,Native(device),unsafe.Pointer(&format),unsafe.Pointer(&quality),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QImage::save(QString const&,char const*,int)
-func (q *QImage) SaveWithFilenameFormatQuality(fileName string,format string,quality int) bool {
+func (q *QImage) SaveWithFilenameFormatQuality(fileName string,format string,quality int32) bool {
 	var __rv bool
 	q.Drv(53000,53168,unsafe.Pointer(&fileName),unsafe.Pointer(&format),unsafe.Pointer(&quality),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -8898,7 +8898,7 @@ func (q *QImage) ScaledWithSizeAspectmodeMode(s *QSize,aspectMode Qt_AspectRatio
 	return _rp
 }	
 //QImage::scaled(int,int,Qt::AspectRatioMode,Qt::TransformationMode)
-func (q *QImage) ScaledWithWidthHeightAspectmodeMode(w int,h int,aspectMode Qt_AspectRatioMode,mode Qt_TransformationMode) *QImage {
+func (q *QImage) ScaledWithWidthHeightAspectmodeMode(w int32,h int32,aspectMode Qt_AspectRatioMode,mode Qt_TransformationMode) *QImage {
 	var __rv uintptr
 	q.Drv(53000,53171,unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&aspectMode),unsafe.Pointer(&mode),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -8909,7 +8909,7 @@ func (q *QImage) ScaledWithWidthHeightAspectmodeMode(w int,h int,aspectMode Qt_A
 	return _rp
 }	
 //QImage::scaledToHeight(int)
-func (q *QImage) ScaledToHeight(h int) *QImage {
+func (q *QImage) ScaledToHeight(h int32) *QImage {
 	var __rv uintptr
 	q.Drv(53000,53172,unsafe.Pointer(&h),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -8920,7 +8920,7 @@ func (q *QImage) ScaledToHeight(h int) *QImage {
 	return _rp
 }	
 //QImage::scaledToHeight(int,Qt::TransformationMode)
-func (q *QImage) ScaledToHeightWithHeightMode(h int,mode Qt_TransformationMode) *QImage {
+func (q *QImage) ScaledToHeightWithHeightMode(h int32,mode Qt_TransformationMode) *QImage {
 	var __rv uintptr
 	q.Drv(53000,53173,unsafe.Pointer(&h),unsafe.Pointer(&mode),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -8931,7 +8931,7 @@ func (q *QImage) ScaledToHeightWithHeightMode(h int,mode Qt_TransformationMode) 
 	return _rp
 }	
 //QImage::scaledToWidth(int)
-func (q *QImage) ScaledToWidth(w int) *QImage {
+func (q *QImage) ScaledToWidth(w int32) *QImage {
 	var __rv uintptr
 	q.Drv(53000,53174,unsafe.Pointer(&w),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -8942,7 +8942,7 @@ func (q *QImage) ScaledToWidth(w int) *QImage {
 	return _rp
 }	
 //QImage::scaledToWidth(int,Qt::TransformationMode)
-func (q *QImage) ScaledToWidthWithWidthMode(w int,mode Qt_TransformationMode) *QImage {
+func (q *QImage) ScaledToWidthWithWidthMode(w int32,mode Qt_TransformationMode) *QImage {
 	var __rv uintptr
 	q.Drv(53000,53175,unsafe.Pointer(&w),unsafe.Pointer(&mode),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -8953,17 +8953,17 @@ func (q *QImage) ScaledToWidthWithWidthMode(w int,mode Qt_TransformationMode) *Q
 	return _rp
 }	
 //QImage::scanLine(int)
-func (q *QImage) ScanLine(value int) *byte {
+func (q *QImage) ScanLine(value int32) *byte {
 	var __rv *byte
 	q.Drv(53000,53176,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QImage::setColor(int,unsigned int)
-func (q *QImage) SetColor(i int,c uint)  {
+func (q *QImage) SetColor(i int32,c uint32)  {
 	q.Drv(53000,53177,unsafe.Pointer(&i),unsafe.Pointer(&c),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QImage::setColorCount(int)
-func (q *QImage) SetColorCount(value int)  {
+func (q *QImage) SetColorCount(value int32)  {
 	q.Drv(53000,53178,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QImage::setColorTable(QVector<QRgb> const)
@@ -8971,11 +8971,11 @@ func (q *QImage) SetColorTable(colors []QRgb)  {
 	q.Drv(53000,53179,unsafe.Pointer(&colors),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QImage::setDotsPerMeterX(int)
-func (q *QImage) SetDotsPerMeterX(value int)  {
+func (q *QImage) SetDotsPerMeterX(value int32)  {
 	q.Drv(53000,53180,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QImage::setDotsPerMeterY(int)
-func (q *QImage) SetDotsPerMeterY(value int)  {
+func (q *QImage) SetDotsPerMeterY(value int32)  {
 	q.Drv(53000,53181,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QImage::setOffset(QPoint const&)
@@ -8983,11 +8983,11 @@ func (q *QImage) SetOffset(value *QPoint)  {
 	q.Drv(53000,53182,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QImage::setPixel(QPoint const&,unsigned int)
-func (q *QImage) SetPixelWithPointIndex_or_rgb(pt *QPoint,index_or_rgb uint)  {
+func (q *QImage) SetPixelWithPointIndex_or_rgb(pt *QPoint,index_or_rgb uint32)  {
 	q.Drv(53000,53183,Native(pt),unsafe.Pointer(&index_or_rgb),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QImage::setPixel(int,int,unsigned int)
-func (q *QImage) SetPixelWithXYIndex_or_rgb(x int,y int,index_or_rgb uint)  {
+func (q *QImage) SetPixelWithXYIndex_or_rgb(x int32,y int32,index_or_rgb uint32)  {
 	q.Drv(53000,53184,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&index_or_rgb),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QImage::setText(QString const&,QString const&)
@@ -9068,7 +9068,7 @@ func (q *QImage) TransformedWithTransformMode(matrix *QTransform,mode Qt_Transfo
 	return _rp
 }	
 //QImage::trueMatrix(QMatrix const&,int,int)	
-func QImageTrueMatrixWithMatrixWidthHeight(value2 *QMatrix,w int,h int) *QMatrix {
+func QImageTrueMatrixWithMatrixWidthHeight(value2 *QMatrix,w int32,h int32) *QMatrix {
 	var __rv uintptr
 	DirectQtDrv(nil,53000,53194,Native(value2),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -9079,7 +9079,7 @@ func QImageTrueMatrixWithMatrixWidthHeight(value2 *QMatrix,w int,h int) *QMatrix
 	return _rp
 }	
 //QImage::trueMatrix(QMatrix const&,int,int)
-func (q *QImage) TrueMatrixWithMatrixWidthHeight(value2 *QMatrix,w int,h int) *QMatrix {
+func (q *QImage) TrueMatrixWithMatrixWidthHeight(value2 *QMatrix,w int32,h int32) *QMatrix {
 	var __rv uintptr
 	q.Drv(53000,53194,Native(value2),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -9090,7 +9090,7 @@ func (q *QImage) TrueMatrixWithMatrixWidthHeight(value2 *QMatrix,w int,h int) *Q
 	return _rp
 }	
 //QImage::trueMatrix(QTransform const&,int,int)	
-func QImageTrueMatrixWithTransformWidthHeight(value2 *QTransform,w int,h int) *QTransform {
+func QImageTrueMatrixWithTransformWidthHeight(value2 *QTransform,w int32,h int32) *QTransform {
 	var __rv uintptr
 	DirectQtDrv(nil,53000,53195,Native(value2),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -9101,7 +9101,7 @@ func QImageTrueMatrixWithTransformWidthHeight(value2 *QTransform,w int,h int) *Q
 	return _rp
 }	
 //QImage::trueMatrix(QTransform const&,int,int)
-func (q *QImage) TrueMatrixWithTransformWidthHeight(value2 *QTransform,w int,h int) *QTransform {
+func (q *QImage) TrueMatrixWithTransformWidthHeight(value2 *QTransform,w int32,h int32) *QTransform {
 	var __rv uintptr
 	q.Drv(53000,53195,Native(value2),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -9118,14 +9118,14 @@ func (q *QImage) Valid(pt *QPoint) bool {
 	return __rv
 }	
 //QImage::valid(int,int)
-func (q *QImage) ValidWithXY(x int,y int) bool {
+func (q *QImage) ValidWithXY(x int32,y int32) bool {
 	var __rv bool
 	q.Drv(53000,53197,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QImage::width()
-func (q *QImage) Width() int {
-	var __rv int
+func (q *QImage) Width() int32 {
+	var __rv int32
 	q.Drv(53000,53198,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -9160,8 +9160,8 @@ func (q *QImageIOHandler) CanRead() bool {
 	return __rv
 }	
 //QImageIOHandler::currentImageNumber()
-func (q *QImageIOHandler) CurrentImageNumber() int {
-	var __rv int
+func (q *QImageIOHandler) CurrentImageNumber() int32 {
+	var __rv int32
 	q.Drv(54000,54103,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -9194,13 +9194,13 @@ func (q *QImageIOHandler) Format() []byte {
 	return __rv
 }	
 //QImageIOHandler::imageCount()
-func (q *QImageIOHandler) ImageCount() int {
-	var __rv int
+func (q *QImageIOHandler) ImageCount() int32 {
+	var __rv int32
 	q.Drv(54000,54107,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QImageIOHandler::jumpToImage(int)
-func (q *QImageIOHandler) JumpToImage(imageNumber int) bool {
+func (q *QImageIOHandler) JumpToImage(imageNumber int32) bool {
 	var __rv bool
 	q.Drv(54000,54108,unsafe.Pointer(&imageNumber),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -9212,8 +9212,8 @@ func (q *QImageIOHandler) JumpToNextImage() bool {
 	return __rv
 }	
 //QImageIOHandler::loopCount()
-func (q *QImageIOHandler) LoopCount() int {
-	var __rv int
+func (q *QImageIOHandler) LoopCount() int32 {
+	var __rv int32
 	q.Drv(54000,54110,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -9224,8 +9224,8 @@ func (q *QImageIOHandler) Name() []byte {
 	return __rv
 }	
 //QImageIOHandler::nextImageDelay()
-func (q *QImageIOHandler) NextImageDelay() int {
-	var __rv int
+func (q *QImageIOHandler) NextImageDelay() int32 {
+	var __rv int32
 	q.Drv(54000,54112,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -9352,8 +9352,8 @@ func (q *QImageReader) ClipRect() *QRect {
 	return _rp
 }	
 //QImageReader::currentImageNumber()
-func (q *QImageReader) CurrentImageNumber() int {
-	var __rv int
+func (q *QImageReader) CurrentImageNumber() int32 {
+	var __rv int32
 	q.Drv(55000,55109,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -9410,8 +9410,8 @@ func (q *QImageReader) Format() []byte {
 	return __rv
 }	
 //QImageReader::imageCount()
-func (q *QImageReader) ImageCount() int {
-	var __rv int
+func (q *QImageReader) ImageCount() int32 {
+	var __rv int32
 	q.Drv(55000,55117,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -9446,7 +9446,7 @@ func (q *QImageReader) ImageFormatWithFilename(fileName string) []byte {
 	return __rv
 }	
 //QImageReader::jumpToImage(int)
-func (q *QImageReader) JumpToImage(imageNumber int) bool {
+func (q *QImageReader) JumpToImage(imageNumber int32) bool {
 	var __rv bool
 	q.Drv(55000,55121,unsafe.Pointer(&imageNumber),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -9458,20 +9458,20 @@ func (q *QImageReader) JumpToNextImage() bool {
 	return __rv
 }	
 //QImageReader::loopCount()
-func (q *QImageReader) LoopCount() int {
-	var __rv int
+func (q *QImageReader) LoopCount() int32 {
+	var __rv int32
 	q.Drv(55000,55123,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QImageReader::nextImageDelay()
-func (q *QImageReader) NextImageDelay() int {
-	var __rv int
+func (q *QImageReader) NextImageDelay() int32 {
+	var __rv int32
 	q.Drv(55000,55124,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QImageReader::quality()
-func (q *QImageReader) Quality() int {
-	var __rv int
+func (q *QImageReader) Quality() int32 {
+	var __rv int32
 	q.Drv(55000,55125,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -9543,7 +9543,7 @@ func (q *QImageReader) SetFormat(format []byte)  {
 	q.Drv(55000,55136,unsafe.Pointer(&format),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QImageReader::setQuality(int)
-func (q *QImageReader) SetQuality(quality int)  {
+func (q *QImageReader) SetQuality(quality int32)  {
 	q.Drv(55000,55137,unsafe.Pointer(&quality),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QImageReader::setScaledClipRect(QRect const&)
@@ -9653,8 +9653,8 @@ func (q *QImageWriter) CanWrite() bool {
 	return __rv
 }	
 //QImageWriter::compression()
-func (q *QImageWriter) Compression() int {
-	var __rv int
+func (q *QImageWriter) Compression() int32 {
+	var __rv int32
 	q.Drv(56000,56106,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -9706,13 +9706,13 @@ func (q *QImageWriter) Gamma() float32 {
 	return __rv
 }	
 //QImageWriter::quality()
-func (q *QImageWriter) Quality() int {
-	var __rv int
+func (q *QImageWriter) Quality() int32 {
+	var __rv int32
 	q.Drv(56000,56114,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QImageWriter::setCompression(int)
-func (q *QImageWriter) SetCompression(compression int)  {
+func (q *QImageWriter) SetCompression(compression int32)  {
 	q.Drv(56000,56115,unsafe.Pointer(&compression),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QImageWriter::setDescription(QString const&)
@@ -9736,7 +9736,7 @@ func (q *QImageWriter) SetGamma(gamma float32)  {
 	q.Drv(56000,56120,unsafe.Pointer(&gamma),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QImageWriter::setQuality(int)
-func (q *QImageWriter) SetQuality(quality int)  {
+func (q *QImageWriter) SetQuality(quality int32)  {
 	q.Drv(56000,56121,unsafe.Pointer(&quality),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QImageWriter::setText(QString const&,QString const&)
@@ -9859,14 +9859,14 @@ func (q *QInputMethodEvent) PreeditString() string {
 	return __rv
 }	
 //QInputMethodEvent::replacementLength()
-func (q *QInputMethodEvent) ReplacementLength() int {
-	var __rv int
+func (q *QInputMethodEvent) ReplacementLength() int32 {
+	var __rv int32
 	q.Drv(58000,58108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QInputMethodEvent::replacementStart()
-func (q *QInputMethodEvent) ReplacementStart() int {
-	var __rv int
+func (q *QInputMethodEvent) ReplacementStart() int32 {
+	var __rv int32
 	q.Drv(58000,58109,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -9875,7 +9875,7 @@ func (q *QInputMethodEvent) SetCommitString(commitString string)  {
 	q.Drv(58000,58110,unsafe.Pointer(&commitString),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QInputMethodEvent::setCommitString(QString const&,int,int)
-func (q *QInputMethodEvent) SetCommitStringWithCommitstringReplacefromReplacelength(commitString string,replaceFrom int,replaceLength int)  {
+func (q *QInputMethodEvent) SetCommitStringWithCommitstringReplacefromReplacelength(commitString string,replaceFrom int32,replaceLength int32)  {
 	q.Drv(58000,58111,unsafe.Pointer(&commitString),unsafe.Pointer(&replaceFrom),unsafe.Pointer(&replaceLength),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 
@@ -9884,7 +9884,7 @@ type QInputMethodEventAttribute struct {
 	BaseDrv
 }
 //QInputMethodEvent::Attribute::Attribute(QInputMethodEvent::AttributeType,int,int,QVariant)	
-func NewQInputMethodEventAttribute(t QInputMethodEvent_AttributeType,s int,l int,val *QVariant) *QInputMethodEventAttribute {
+func NewQInputMethodEventAttribute(t QInputMethodEvent_AttributeType,s int32,l int32,val *QVariant) *QInputMethodEventAttribute {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),59000,59102,unsafe.Pointer(&t),unsafe.Pointer(&s),unsafe.Pointer(&l),Native(val),nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -10088,8 +10088,8 @@ func NewQItemSelectionRangeWithTopleftBottomright(topLeft *QModelIndex,bottomRig
 	return _p
 } 
 //QItemSelectionRange::bottom()
-func (q *QItemSelectionRange) Bottom() int {
-	var __rv int
+func (q *QItemSelectionRange) Bottom() int32 {
+	var __rv int32
 	q.Drv(63000,63106,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -10111,14 +10111,14 @@ func (q *QItemSelectionRange) Contains(index *QModelIndex) bool {
 	return __rv
 }	
 //QItemSelectionRange::contains(int,int,QModelIndex const&)
-func (q *QItemSelectionRange) ContainsWithRowColumnParentindex(row int,column int,parentIndex *QModelIndex) bool {
+func (q *QItemSelectionRange) ContainsWithRowColumnParentindex(row int32,column int32,parentIndex *QModelIndex) bool {
 	var __rv bool
 	q.Drv(63000,63109,unsafe.Pointer(&row),unsafe.Pointer(&column),Native(parentIndex),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QItemSelectionRange::height()
-func (q *QItemSelectionRange) Height() int {
-	var __rv int
+func (q *QItemSelectionRange) Height() int32 {
+	var __rv int32
 	q.Drv(63000,63110,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -10158,8 +10158,8 @@ func (q *QItemSelectionRange) IsValid() bool {
 	return __rv
 }	
 //QItemSelectionRange::left()
-func (q *QItemSelectionRange) Left() int {
-	var __rv int
+func (q *QItemSelectionRange) Left() int32 {
+	var __rv int32
 	q.Drv(63000,63116,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -10186,14 +10186,14 @@ func (q *QItemSelectionRange) Parent() *QModelIndex {
 	return _rp
 }	
 //QItemSelectionRange::right()
-func (q *QItemSelectionRange) Right() int {
-	var __rv int
+func (q *QItemSelectionRange) Right() int32 {
+	var __rv int32
 	q.Drv(63000,63119,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QItemSelectionRange::top()
-func (q *QItemSelectionRange) Top() int {
-	var __rv int
+func (q *QItemSelectionRange) Top() int32 {
+	var __rv int32
 	q.Drv(63000,63120,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -10209,8 +10209,8 @@ func (q *QItemSelectionRange) TopLeft() *QModelIndex {
 	return _rp
 }	
 //QItemSelectionRange::width()
-func (q *QItemSelectionRange) Width() int {
-	var __rv int
+func (q *QItemSelectionRange) Width() int32 {
+	var __rv int32
 	q.Drv(63000,63122,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -10220,7 +10220,7 @@ type QKeyEvent struct {
 	QInputEvent
 }
 //QKeyEvent::QKeyEvent(QEvent::Type,int,QFlags<Qt::KeyboardModifier>,QString const&,bool,unsigned short)	
-func NewQKeyEvent(_type QEvent_Type,key int,modifiers Qt_KeyboardModifier,text string,autorep bool,count uint16) *QKeyEvent {
+func NewQKeyEvent(_type QEvent_Type,key int32,modifiers Qt_KeyboardModifier,text string,autorep bool,count uint16) *QKeyEvent {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),64000,64102,unsafe.Pointer(&_type),unsafe.Pointer(&key),unsafe.Pointer(&modifiers),unsafe.Pointer(&text),unsafe.Pointer(&autorep),unsafe.Pointer(&count),nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -10231,8 +10231,8 @@ func NewQKeyEvent(_type QEvent_Type,key int,modifiers Qt_KeyboardModifier,text s
 	return _p
 } 
 //QKeyEvent::count()
-func (q *QKeyEvent) Count() int {
-	var __rv int
+func (q *QKeyEvent) Count() int32 {
+	var __rv int32
 	q.Drv(64000,64103,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -10243,8 +10243,8 @@ func (q *QKeyEvent) IsAutoRepeat() bool {
 	return __rv
 }	
 //QKeyEvent::key()
-func (q *QKeyEvent) Key() int {
-	var __rv int
+func (q *QKeyEvent) Key() int32 {
+	var __rv int32
 	q.Drv(64000,64105,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -10261,20 +10261,20 @@ func (q *QKeyEvent) Modifiers() Qt_KeyboardModifier {
 	return __rv
 }	
 //QKeyEvent::nativeModifiers()
-func (q *QKeyEvent) NativeModifiers() uint {
-	var __rv uint
+func (q *QKeyEvent) NativeModifiers() uint32 {
+	var __rv uint32
 	q.Drv(64000,64108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QKeyEvent::nativeScanCode()
-func (q *QKeyEvent) NativeScanCode() uint {
-	var __rv uint
+func (q *QKeyEvent) NativeScanCode() uint32 {
+	var __rv uint32
 	q.Drv(64000,64109,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QKeyEvent::nativeVirtualKey()
-func (q *QKeyEvent) NativeVirtualKey() uint {
-	var __rv uint
+func (q *QKeyEvent) NativeVirtualKey() uint32 {
+	var __rv uint32
 	q.Drv(64000,64110,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -10428,7 +10428,7 @@ func NewQKeySequenceWithKeyFormat(key string,format QKeySequence_SequenceFormat)
 	return _p
 } 
 //QKeySequence::QKeySequence(int,int,int,int)	
-func NewQKeySequenceWithK1K2K3K4(k1 int,k2 int,k3 int,k4 int) *QKeySequence {
+func NewQKeySequenceWithK1K2K3K4(k1 int32,k2 int32,k3 int32,k4 int32) *QKeySequence {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),65000,65107,unsafe.Pointer(&k1),unsafe.Pointer(&k2),unsafe.Pointer(&k3),unsafe.Pointer(&k4),nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -10439,8 +10439,8 @@ func NewQKeySequenceWithK1K2K3K4(k1 int,k2 int,k3 int,k4 int) *QKeySequence {
 	return _p
 } 
 //QKeySequence::count()
-func (q *QKeySequence) Count() uint {
-	var __rv uint
+func (q *QKeySequence) Count() uint32 {
+	var __rv uint32
 	q.Drv(65000,65108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -10593,8 +10593,8 @@ func (q *QLayoutItem) HasHeightForWidth() bool {
 	return __rv
 }	
 //QLayoutItem::heightForWidth(int)
-func (q *QLayoutItem) HeightForWidth(value int) int {
-	var __rv int
+func (q *QLayoutItem) HeightForWidth(value int32) int32 {
+	var __rv int32
 	q.Drv(66000,66107,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -10631,8 +10631,8 @@ func (q *QLayoutItem) MaximumSize() *QSize {
 	return _rp
 }	
 //QLayoutItem::minimumHeightForWidth(int)
-func (q *QLayoutItem) MinimumHeightForWidth(value int) int {
-	var __rv int
+func (q *QLayoutItem) MinimumHeightForWidth(value int32) int32 {
+	var __rv int32
 	q.Drv(66000,66112,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -10795,7 +10795,7 @@ func NewQLineWithPt1Pt2(pt1 *QPoint,pt2 *QPoint) *QLine {
 	return _p
 } 
 //QLine::QLine(int,int,int,int)	
-func NewQLineWithX1Y1X2Y2(x1 int,y1 int,x2 int,y2 int) *QLine {
+func NewQLineWithX1Y1X2Y2(x1 int32,y1 int32,x2 int32,y2 int32) *QLine {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),68000,68104,unsafe.Pointer(&x1),unsafe.Pointer(&y1),unsafe.Pointer(&x2),unsafe.Pointer(&y2),nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -10806,14 +10806,14 @@ func NewQLineWithX1Y1X2Y2(x1 int,y1 int,x2 int,y2 int) *QLine {
 	return _p
 } 
 //QLine::dx()
-func (q *QLine) Dx() int {
-	var __rv int
+func (q *QLine) Dx() int32 {
+	var __rv int32
 	q.Drv(68000,68105,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QLine::dy()
-func (q *QLine) Dy() int {
-	var __rv int
+func (q *QLine) Dy() int32 {
+	var __rv int32
 	q.Drv(68000,68106,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -10846,7 +10846,7 @@ func (q *QLine) P2() *QPoint {
 	return _rp
 }	
 //QLine::setLine(int,int,int,int)
-func (q *QLine) SetLine(x1 int,y1 int,x2 int,y2 int)  {
+func (q *QLine) SetLine(x1 int32,y1 int32,x2 int32,y2 int32)  {
 	q.Drv(68000,68110,unsafe.Pointer(&x1),unsafe.Pointer(&y1),unsafe.Pointer(&x2),unsafe.Pointer(&y2),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLine::setP1(QPoint const&)
@@ -10866,7 +10866,7 @@ func (q *QLine) Translate(p *QPoint)  {
 	q.Drv(68000,68114,Native(p),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLine::translate(int,int)
-func (q *QLine) TranslateWithDxDy(dx int,dy int)  {
+func (q *QLine) TranslateWithDxDy(dx int32,dy int32)  {
 	q.Drv(68000,68115,unsafe.Pointer(&dx),unsafe.Pointer(&dy),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLine::translated(QPoint const&)
@@ -10881,7 +10881,7 @@ func (q *QLine) Translated(p *QPoint) *QLine {
 	return _rp
 }	
 //QLine::translated(int,int)
-func (q *QLine) TranslatedWithDxDy(dx int,dy int) *QLine {
+func (q *QLine) TranslatedWithDxDy(dx int32,dy int32) *QLine {
 	var __rv uintptr
 	q.Drv(68000,68117,unsafe.Pointer(&dx),unsafe.Pointer(&dy),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -10892,26 +10892,26 @@ func (q *QLine) TranslatedWithDxDy(dx int,dy int) *QLine {
 	return _rp
 }	
 //QLine::x1()
-func (q *QLine) X1() int {
-	var __rv int
+func (q *QLine) X1() int32 {
+	var __rv int32
 	q.Drv(68000,68118,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QLine::x2()
-func (q *QLine) X2() int {
-	var __rv int
+func (q *QLine) X2() int32 {
+	var __rv int32
 	q.Drv(68000,68119,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QLine::y1()
-func (q *QLine) Y1() int {
-	var __rv int
+func (q *QLine) Y1() int32 {
+	var __rv int32
 	q.Drv(68000,68120,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QLine::y2()
-func (q *QLine) Y2() int {
-	var __rv int
+func (q *QLine) Y2() int32 {
+	var __rv int32
 	q.Drv(68000,68121,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -11306,7 +11306,7 @@ func NewQListWidgetItemCopy(other *QListWidgetItem) *QListWidgetItem {
 	return _p
 } 
 //QListWidgetItem::QListWidgetItem(QListWidget*,int)	
-func NewQListWidgetItemWithViewType(view *QListWidget,_type int) *QListWidgetItem {
+func NewQListWidgetItemWithViewType(view *QListWidget,_type int32) *QListWidgetItem {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),71000,71104,Native(view),unsafe.Pointer(&_type),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -11317,7 +11317,7 @@ func NewQListWidgetItemWithViewType(view *QListWidget,_type int) *QListWidgetIte
 	return _p
 } 
 //QListWidgetItem::QListWidgetItem(QString const&,QListWidget*,int)	
-func NewQListWidgetItemWithTextViewType(text string,view *QListWidget,_type int) *QListWidgetItem {
+func NewQListWidgetItemWithTextViewType(text string,view *QListWidget,_type int32) *QListWidgetItem {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),71000,71105,unsafe.Pointer(&text),Native(view),unsafe.Pointer(&_type),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -11328,7 +11328,7 @@ func NewQListWidgetItemWithTextViewType(text string,view *QListWidget,_type int)
 	return _p
 } 
 //QListWidgetItem::QListWidgetItem(QIcon const&,QString const&,QListWidget*,int)	
-func NewQListWidgetItemWithIconTextViewType(icon *QIcon,text string,view *QListWidget,_type int) *QListWidgetItem {
+func NewQListWidgetItemWithIconTextViewType(icon *QIcon,text string,view *QListWidget,_type int32) *QListWidgetItem {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),71000,71106,Native(icon),unsafe.Pointer(&text),Native(view),unsafe.Pointer(&_type),nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -11378,7 +11378,7 @@ func (q *QListWidgetItem) Clone() *QListWidgetItem {
 	return _rp
 }	
 //QListWidgetItem::data(int)
-func (q *QListWidgetItem) Data(role int) *QVariant {
+func (q *QListWidgetItem) Data(role int32) *QVariant {
 	var __rv uintptr
 	q.Drv(71000,71111,unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -11463,7 +11463,7 @@ func (q *QListWidgetItem) SetCheckState(state Qt_CheckState)  {
 	q.Drv(71000,71121,unsafe.Pointer(&state),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListWidgetItem::setData(int,QVariant const&)
-func (q *QListWidgetItem) SetData(role int,value *QVariant)  {
+func (q *QListWidgetItem) SetData(role int32,value *QVariant)  {
 	q.Drv(71000,71122,unsafe.Pointer(&role),Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListWidgetItem::setFlags(QFlags<Qt::ItemFlag>)
@@ -11503,7 +11503,7 @@ func (q *QListWidgetItem) SetText(text string)  {
 	q.Drv(71000,71131,unsafe.Pointer(&text),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListWidgetItem::setTextAlignment(int)
-func (q *QListWidgetItem) SetTextAlignment(alignment int)  {
+func (q *QListWidgetItem) SetTextAlignment(alignment int32)  {
 	q.Drv(71000,71132,unsafe.Pointer(&alignment),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListWidgetItem::setTextColor(QColor const&)
@@ -11542,8 +11542,8 @@ func (q *QListWidgetItem) Text() string {
 	return __rv
 }	
 //QListWidgetItem::textAlignment()
-func (q *QListWidgetItem) TextAlignment() int {
-	var __rv int
+func (q *QListWidgetItem) TextAlignment() int32 {
+	var __rv int32
 	q.Drv(71000,71139,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -11565,8 +11565,8 @@ func (q *QListWidgetItem) ToolTip() string {
 	return __rv
 }	
 //QListWidgetItem::type()
-func (q *QListWidgetItem) Type() int {
-	var __rv int
+func (q *QListWidgetItem) Type() int32 {
+	var __rv int32
 	q.Drv(71000,71142,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -12200,13 +12200,13 @@ func (q *QLocale) DateTimeFormatWithFormatType(format QLocale_FormatType) string
 	return __rv
 }	
 //QLocale::dayName(int)
-func (q *QLocale) DayName(value int) string {
+func (q *QLocale) DayName(value int32) string {
 	var __rv string
 	q.Drv(72000,72115,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QLocale::dayName(int,QLocale::FormatType)
-func (q *QLocale) DayNameWithIntFormatType(value2 int,format QLocale_FormatType) string {
+func (q *QLocale) DayNameWithInt32FormatType(value2 int32,format QLocale_FormatType) string {
 	var __rv string
 	q.Drv(72000,72116,unsafe.Pointer(&value2),unsafe.Pointer(&format),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -12254,13 +12254,13 @@ func (q *QLocale) MeasurementSystem() QLocale_MeasurementSystem {
 	return __rv
 }	
 //QLocale::monthName(int)
-func (q *QLocale) MonthName(value int) string {
+func (q *QLocale) MonthName(value int32) string {
 	var __rv string
 	q.Drv(72000,72123,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QLocale::monthName(int,QLocale::FormatType)
-func (q *QLocale) MonthNameWithIntFormatType(value2 int,format QLocale_FormatType) string {
+func (q *QLocale) MonthNameWithInt32FormatType(value2 int32,format QLocale_FormatType) string {
 	var __rv string
 	q.Drv(72000,72124,unsafe.Pointer(&value2),unsafe.Pointer(&format),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -12314,25 +12314,25 @@ func (q *QLocale) SetNumberOptions(options QLocale_NumberOption)  {
 	q.Drv(72000,72132,unsafe.Pointer(&options),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLocale::standaloneDayName(int)
-func (q *QLocale) StandaloneDayName(value int) string {
+func (q *QLocale) StandaloneDayName(value int32) string {
 	var __rv string
 	q.Drv(72000,72133,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QLocale::standaloneDayName(int,QLocale::FormatType)
-func (q *QLocale) StandaloneDayNameWithIntFormatType(value2 int,format QLocale_FormatType) string {
+func (q *QLocale) StandaloneDayNameWithInt32FormatType(value2 int32,format QLocale_FormatType) string {
 	var __rv string
 	q.Drv(72000,72134,unsafe.Pointer(&value2),unsafe.Pointer(&format),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QLocale::standaloneMonthName(int)
-func (q *QLocale) StandaloneMonthName(value int) string {
+func (q *QLocale) StandaloneMonthName(value int32) string {
 	var __rv string
 	q.Drv(72000,72135,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QLocale::standaloneMonthName(int,QLocale::FormatType)
-func (q *QLocale) StandaloneMonthNameWithIntFormatType(value2 int,format QLocale_FormatType) string {
+func (q *QLocale) StandaloneMonthNameWithInt32FormatType(value2 int32,format QLocale_FormatType) string {
 	var __rv string
 	q.Drv(72000,72136,unsafe.Pointer(&value2),unsafe.Pointer(&format),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -12468,14 +12468,14 @@ func (q *QLocale) ToFloatWithTextOk(s string,ok *bool) float32 {
 	return __rv
 }	
 //QLocale::toInt(QString const&)
-func (q *QLocale) ToInt(s string) int {
-	var __rv int
+func (q *QLocale) ToInt(s string) int32 {
+	var __rv int32
 	q.Drv(72000,72151,unsafe.Pointer(&s),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QLocale::toInt(QString const&,bool*,int)
-func (q *QLocale) ToIntWithTextOkBase(s string,ok *bool) int {
-	var __rv int
+func (q *QLocale) ToIntWithTextOkBase(s string,ok *bool) int32 {
+	var __rv int32
 	q.Drv(72000,72152,unsafe.Pointer(&s),unsafe.Pointer(&ok),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -12534,7 +12534,7 @@ func (q *QLocale) ToStringFWithFloat32(i float32) string {
 	return __rv
 }	
 //QLocale::toString(int)
-func (q *QLocale) ToStringWithInt(i int) string {
+func (q *QLocale) ToStringWithInt32(i int32) string {
 	var __rv string
 	q.Drv(72000,72162,unsafe.Pointer(&i),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -12552,7 +12552,7 @@ func (q *QLocale) ToStringWithInt16(i int16) string {
 	return __rv
 }	
 //QLocale::toString(unsigned int)
-func (q *QLocale) ToStringWithUint(i uint) string {
+func (q *QLocale) ToStringWithUint32(i uint32) string {
 	var __rv string
 	q.Drv(72000,72165,unsafe.Pointer(&i),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -12600,13 +12600,13 @@ func (q *QLocale) ToStringWithTimeFormatstr(time *QTime,formatStr string) string
 	return __rv
 }	
 //QLocale::toString(double,char,int)
-func (q *QLocale) ToStringFWithFloat64FmtPrec(i float64,f byte,prec int) string {
+func (q *QLocale) ToStringFWithFloat64FmtPrec(i float64,f byte,prec int32) string {
 	var __rv string
 	q.Drv(72000,72173,unsafe.Pointer(&i),unsafe.Pointer(&f),unsafe.Pointer(&prec),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QLocale::toString(float,char,int)
-func (q *QLocale) ToStringFWithFloat32FmtPrec(i float32,f byte,prec int) string {
+func (q *QLocale) ToStringFWithFloat32FmtPrec(i float32,f byte,prec int32) string {
 	var __rv string
 	q.Drv(72000,72174,unsafe.Pointer(&i),unsafe.Pointer(&f),unsafe.Pointer(&prec),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -12645,14 +12645,14 @@ func (q *QLocale) ToTimeWithStringFormat(string string,format string) *QTime {
 	return _rp
 }	
 //QLocale::toUInt(QString const&)
-func (q *QLocale) ToUInt(s string) uint {
-	var __rv uint
+func (q *QLocale) ToUInt(s string) uint32 {
+	var __rv uint32
 	q.Drv(72000,72178,unsafe.Pointer(&s),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QLocale::toUInt(QString const&,bool*,int)
-func (q *QLocale) ToUIntWithTextOkBase(s string,ok *bool) uint {
-	var __rv uint
+func (q *QLocale) ToUIntWithTextOkBase(s string,ok *bool) uint32 {
+	var __rv uint32
 	q.Drv(72000,72179,unsafe.Pointer(&s),unsafe.Pointer(&ok),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -12703,7 +12703,7 @@ func NewQMargins() *QMargins {
 	return _p
 } 
 //QMargins::QMargins(int,int,int,int)	
-func NewQMarginsWithLeftTopRightBottom(left int,top int,right int,bottom int) *QMargins {
+func NewQMarginsWithLeftTopRightBottom(left int32,top int32,right int32,bottom int32) *QMargins {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),73000,73103,unsafe.Pointer(&left),unsafe.Pointer(&top),unsafe.Pointer(&right),unsafe.Pointer(&bottom),nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -12714,8 +12714,8 @@ func NewQMarginsWithLeftTopRightBottom(left int,top int,right int,bottom int) *Q
 	return _p
 } 
 //QMargins::bottom()
-func (q *QMargins) Bottom() int {
-	var __rv int
+func (q *QMargins) Bottom() int32 {
+	var __rv int32
 	q.Drv(73000,73104,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -12726,36 +12726,36 @@ func (q *QMargins) IsNull() bool {
 	return __rv
 }	
 //QMargins::left()
-func (q *QMargins) Left() int {
-	var __rv int
+func (q *QMargins) Left() int32 {
+	var __rv int32
 	q.Drv(73000,73106,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMargins::right()
-func (q *QMargins) Right() int {
-	var __rv int
+func (q *QMargins) Right() int32 {
+	var __rv int32
 	q.Drv(73000,73107,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMargins::setBottom(int)
-func (q *QMargins) SetBottom(bottom int)  {
+func (q *QMargins) SetBottom(bottom int32)  {
 	q.Drv(73000,73108,unsafe.Pointer(&bottom),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QMargins::setLeft(int)
-func (q *QMargins) SetLeft(left int)  {
+func (q *QMargins) SetLeft(left int32)  {
 	q.Drv(73000,73109,unsafe.Pointer(&left),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QMargins::setRight(int)
-func (q *QMargins) SetRight(right int)  {
+func (q *QMargins) SetRight(right int32)  {
 	q.Drv(73000,73110,unsafe.Pointer(&right),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QMargins::setTop(int)
-func (q *QMargins) SetTop(top int)  {
+func (q *QMargins) SetTop(top int32)  {
 	q.Drv(73000,73111,unsafe.Pointer(&top),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QMargins::top()
-func (q *QMargins) Top() int {
-	var __rv int
+func (q *QMargins) Top() int32 {
+	var __rv int32
 	q.Drv(73000,73112,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -12998,26 +12998,26 @@ func (q *QMetaEnum) IsValid() bool {
 	return __rv
 }	
 //QMetaEnum::key(int)
-func (q *QMetaEnum) Key(index int) string {
+func (q *QMetaEnum) Key(index int32) string {
 	var __rv string
 	q.Drv(75000,75106,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMetaEnum::keyCount()
-func (q *QMetaEnum) KeyCount() int {
-	var __rv int
+func (q *QMetaEnum) KeyCount() int32 {
+	var __rv int32
 	q.Drv(75000,75107,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMetaEnum::keyToValue(char const*)
-func (q *QMetaEnum) KeyToValue(key string) int {
-	var __rv int
+func (q *QMetaEnum) KeyToValue(key string) int32 {
+	var __rv int32
 	q.Drv(75000,75108,unsafe.Pointer(&key),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMetaEnum::keysToValue(char const*)
-func (q *QMetaEnum) KeysToValue(keys string) int {
-	var __rv int
+func (q *QMetaEnum) KeysToValue(keys string) int32 {
+	var __rv int32
 	q.Drv(75000,75109,unsafe.Pointer(&keys),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -13034,19 +13034,19 @@ func (q *QMetaEnum) Scope() string {
 	return __rv
 }	
 //QMetaEnum::value(int)
-func (q *QMetaEnum) Value(index int) int {
-	var __rv int
+func (q *QMetaEnum) Value(index int32) int32 {
+	var __rv int32
 	q.Drv(75000,75112,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMetaEnum::valueToKey(int)
-func (q *QMetaEnum) ValueToKey(value int) string {
+func (q *QMetaEnum) ValueToKey(value int32) string {
 	var __rv string
 	q.Drv(75000,75113,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMetaEnum::valueToKeys(int)
-func (q *QMetaEnum) ValueToKeys(value int) []byte {
+func (q *QMetaEnum) ValueToKeys(value int32) []byte {
 	var __rv []byte
 	q.Drv(75000,75114,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -13096,8 +13096,8 @@ func (q *QMetaMethod) Access() QMetaMethod_Access {
 	return __rv
 }	
 //QMetaMethod::attributes()
-func (q *QMetaMethod) Attributes() int {
-	var __rv int
+func (q *QMetaMethod) Attributes() int32 {
+	var __rv int32
 	q.Drv(76000,76104,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -13113,8 +13113,8 @@ func (q *QMetaMethod) EnclosingMetaObject() *QMetaObject {
 	return _rp
 }	
 //QMetaMethod::methodIndex()
-func (q *QMetaMethod) MethodIndex() int {
-	var __rv int
+func (q *QMetaMethod) MethodIndex() int32 {
+	var __rv int32
 	q.Drv(76000,76106,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -13208,14 +13208,14 @@ func (q *QMetaObject) CheckConnectArgs(signal string,method string) bool {
 	return __rv
 }	
 //QMetaObject::classInfoCount()
-func (q *QMetaObject) ClassInfoCount() int {
-	var __rv int
+func (q *QMetaObject) ClassInfoCount() int32 {
+	var __rv int32
 	q.Drv(77000,77105,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMetaObject::classInfoOffset()
-func (q *QMetaObject) ClassInfoOffset() int {
-	var __rv int
+func (q *QMetaObject) ClassInfoOffset() int32 {
+	var __rv int32
 	q.Drv(77000,77106,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -13226,13 +13226,13 @@ func (q *QMetaObject) ClassName() string {
 	return __rv
 }	
 //QMetaObject::connect(QObject const*,int,QObject const*,int,int,int*)	
-func QMetaObjectConnect(sender QObjectInterface,signal_index int,receiver QObjectInterface,method_index int,_type int,types *int) bool {
+func QMetaObjectConnect(sender QObjectInterface,signal_index int32,receiver QObjectInterface,method_index int32,_type int32,types *int32) bool {
 	var __rv bool
 	DirectQtDrv(nil,77000,77108,Native(sender),unsafe.Pointer(&signal_index),Native(receiver),unsafe.Pointer(&method_index),unsafe.Pointer(&_type),unsafe.Pointer(&types),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMetaObject::connect(QObject const*,int,QObject const*,int,int,int*)
-func (q *QMetaObject) Connect(sender QObjectInterface,signal_index int,receiver QObjectInterface,method_index int,_type int,types *int) bool {
+func (q *QMetaObject) Connect(sender QObjectInterface,signal_index int32,receiver QObjectInterface,method_index int32,_type int32,types *int32) bool {
 	var __rv bool
 	q.Drv(77000,77108,Native(sender),unsafe.Pointer(&signal_index),Native(receiver),unsafe.Pointer(&method_index),unsafe.Pointer(&_type),unsafe.Pointer(&types),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil)
 	return __rv
@@ -13246,7 +13246,7 @@ func (q *QMetaObject) ConnectSlotsByName(o QObjectInterface)  {
 	q.Drv(77000,77109,Native(o),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QMetaObject::constructor(int)
-func (q *QMetaObject) Constructor(index int) *QMetaMethod {
+func (q *QMetaObject) Constructor(index int32) *QMetaMethod {
 	var __rv uintptr
 	q.Drv(77000,77110,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -13257,37 +13257,37 @@ func (q *QMetaObject) Constructor(index int) *QMetaMethod {
 	return _rp
 }	
 //QMetaObject::constructorCount()
-func (q *QMetaObject) ConstructorCount() int {
-	var __rv int
+func (q *QMetaObject) ConstructorCount() int32 {
+	var __rv int32
 	q.Drv(77000,77111,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMetaObject::disconnect(QObject const*,int,QObject const*,int)	
-func QMetaObjectDisconnect(sender QObjectInterface,signal_index int,receiver QObjectInterface,method_index int) bool {
+func QMetaObjectDisconnect(sender QObjectInterface,signal_index int32,receiver QObjectInterface,method_index int32) bool {
 	var __rv bool
 	DirectQtDrv(nil,77000,77112,Native(sender),unsafe.Pointer(&signal_index),Native(receiver),unsafe.Pointer(&method_index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMetaObject::disconnect(QObject const*,int,QObject const*,int)
-func (q *QMetaObject) Disconnect(sender QObjectInterface,signal_index int,receiver QObjectInterface,method_index int) bool {
+func (q *QMetaObject) Disconnect(sender QObjectInterface,signal_index int32,receiver QObjectInterface,method_index int32) bool {
 	var __rv bool
 	q.Drv(77000,77112,Native(sender),unsafe.Pointer(&signal_index),Native(receiver),unsafe.Pointer(&method_index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMetaObject::disconnectOne(QObject const*,int,QObject const*,int)	
-func QMetaObjectDisconnectOne(sender QObjectInterface,signal_index int,receiver QObjectInterface,method_index int) bool {
+func QMetaObjectDisconnectOne(sender QObjectInterface,signal_index int32,receiver QObjectInterface,method_index int32) bool {
 	var __rv bool
 	DirectQtDrv(nil,77000,77113,Native(sender),unsafe.Pointer(&signal_index),Native(receiver),unsafe.Pointer(&method_index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMetaObject::disconnectOne(QObject const*,int,QObject const*,int)
-func (q *QMetaObject) DisconnectOne(sender QObjectInterface,signal_index int,receiver QObjectInterface,method_index int) bool {
+func (q *QMetaObject) DisconnectOne(sender QObjectInterface,signal_index int32,receiver QObjectInterface,method_index int32) bool {
 	var __rv bool
 	q.Drv(77000,77113,Native(sender),unsafe.Pointer(&signal_index),Native(receiver),unsafe.Pointer(&method_index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMetaObject::enumerator(int)
-func (q *QMetaObject) Enumerator(index int) *QMetaEnum {
+func (q *QMetaObject) Enumerator(index int32) *QMetaEnum {
 	var __rv uintptr
 	q.Drv(77000,77114,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -13298,61 +13298,61 @@ func (q *QMetaObject) Enumerator(index int) *QMetaEnum {
 	return _rp
 }	
 //QMetaObject::enumeratorCount()
-func (q *QMetaObject) EnumeratorCount() int {
-	var __rv int
+func (q *QMetaObject) EnumeratorCount() int32 {
+	var __rv int32
 	q.Drv(77000,77115,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMetaObject::enumeratorOffset()
-func (q *QMetaObject) EnumeratorOffset() int {
-	var __rv int
+func (q *QMetaObject) EnumeratorOffset() int32 {
+	var __rv int32
 	q.Drv(77000,77116,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMetaObject::indexOfClassInfo(char const*)
-func (q *QMetaObject) IndexOfClassInfo(name string) int {
-	var __rv int
+func (q *QMetaObject) IndexOfClassInfo(name string) int32 {
+	var __rv int32
 	q.Drv(77000,77117,unsafe.Pointer(&name),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMetaObject::indexOfConstructor(char const*)
-func (q *QMetaObject) IndexOfConstructor(constructor string) int {
-	var __rv int
+func (q *QMetaObject) IndexOfConstructor(constructor string) int32 {
+	var __rv int32
 	q.Drv(77000,77118,unsafe.Pointer(&constructor),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMetaObject::indexOfEnumerator(char const*)
-func (q *QMetaObject) IndexOfEnumerator(name string) int {
-	var __rv int
+func (q *QMetaObject) IndexOfEnumerator(name string) int32 {
+	var __rv int32
 	q.Drv(77000,77119,unsafe.Pointer(&name),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMetaObject::indexOfMethod(char const*)
-func (q *QMetaObject) IndexOfMethod(method string) int {
-	var __rv int
+func (q *QMetaObject) IndexOfMethod(method string) int32 {
+	var __rv int32
 	q.Drv(77000,77120,unsafe.Pointer(&method),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMetaObject::indexOfProperty(char const*)
-func (q *QMetaObject) IndexOfProperty(name string) int {
-	var __rv int
+func (q *QMetaObject) IndexOfProperty(name string) int32 {
+	var __rv int32
 	q.Drv(77000,77121,unsafe.Pointer(&name),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMetaObject::indexOfSignal(char const*)
-func (q *QMetaObject) IndexOfSignal(signal string) int {
-	var __rv int
+func (q *QMetaObject) IndexOfSignal(signal string) int32 {
+	var __rv int32
 	q.Drv(77000,77122,unsafe.Pointer(&signal),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMetaObject::indexOfSlot(char const*)
-func (q *QMetaObject) IndexOfSlot(slot string) int {
-	var __rv int
+func (q *QMetaObject) IndexOfSlot(slot string) int32 {
+	var __rv int32
 	q.Drv(77000,77123,unsafe.Pointer(&slot),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMetaObject::method(int)
-func (q *QMetaObject) Method(index int) *QMetaMethod {
+func (q *QMetaObject) Method(index int32) *QMetaMethod {
 	var __rv uintptr
 	q.Drv(77000,77124,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -13363,14 +13363,14 @@ func (q *QMetaObject) Method(index int) *QMetaMethod {
 	return _rp
 }	
 //QMetaObject::methodCount()
-func (q *QMetaObject) MethodCount() int {
-	var __rv int
+func (q *QMetaObject) MethodCount() int32 {
+	var __rv int32
 	q.Drv(77000,77125,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMetaObject::methodOffset()
-func (q *QMetaObject) MethodOffset() int {
-	var __rv int
+func (q *QMetaObject) MethodOffset() int32 {
+	var __rv int32
 	q.Drv(77000,77126,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -13421,7 +13421,7 @@ func (q *QMetaObject) NormalizedType(_type string) []byte {
 	return __rv
 }	
 //QMetaObject::property(int)
-func (q *QMetaObject) Property(index int) *QMetaProperty {
+func (q *QMetaObject) Property(index int32) *QMetaProperty {
 	var __rv uintptr
 	q.Drv(77000,77131,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -13432,14 +13432,14 @@ func (q *QMetaObject) Property(index int) *QMetaProperty {
 	return _rp
 }	
 //QMetaObject::propertyCount()
-func (q *QMetaObject) PropertyCount() int {
-	var __rv int
+func (q *QMetaObject) PropertyCount() int32 {
+	var __rv int32
 	q.Drv(77000,77132,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMetaObject::propertyOffset()
-func (q *QMetaObject) PropertyOffset() int {
-	var __rv int
+func (q *QMetaObject) PropertyOffset() int32 {
+	var __rv int32
 	q.Drv(77000,77133,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -13461,7 +13461,7 @@ func (q *QMetaObject) TrWithSC(s string,c string) string {
 	return __rv
 }	
 //QMetaObject::tr(char const*,char const*,int)
-func (q *QMetaObject) TrWithSCN(s string,c string,n int) string {
+func (q *QMetaObject) TrWithSCInt32(s string,c string,n int32) string {
 	var __rv string
 	q.Drv(77000,77136,unsafe.Pointer(&s),unsafe.Pointer(&c),unsafe.Pointer(&n),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -13653,14 +13653,14 @@ func (q *QMetaProperty) NotifySignal() *QMetaMethod {
 	return _rp
 }	
 //QMetaProperty::notifySignalIndex()
-func (q *QMetaProperty) NotifySignalIndex() int {
-	var __rv int
+func (q *QMetaProperty) NotifySignalIndex() int32 {
+	var __rv int32
 	q.Drv(78000,78127,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMetaProperty::propertyIndex()
-func (q *QMetaProperty) PropertyIndex() int {
-	var __rv int
+func (q *QMetaProperty) PropertyIndex() int32 {
+	var __rv int32
 	q.Drv(78000,78128,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -13694,8 +13694,8 @@ func (q *QMetaProperty) TypeName() string {
 	return __rv
 }	
 //QMetaProperty::userType()
-func (q *QMetaProperty) UserType() int {
-	var __rv int
+func (q *QMetaProperty) UserType() int32 {
+	var __rv int32
 	q.Drv(78000,78133,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -13733,7 +13733,7 @@ func NewQModelIndexCopy(other *QModelIndex) *QModelIndex {
 	return _p
 } 
 //QModelIndex::child(int,int)
-func (q *QModelIndex) Child(row int,column int) *QModelIndex {
+func (q *QModelIndex) Child(row int32,column int32) *QModelIndex {
 	var __rv uintptr
 	q.Drv(79000,79104,unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -13744,8 +13744,8 @@ func (q *QModelIndex) Child(row int,column int) *QModelIndex {
 	return _rp
 }	
 //QModelIndex::column()
-func (q *QModelIndex) Column() int {
-	var __rv int
+func (q *QModelIndex) Column() int32 {
+	var __rv int32
 	q.Drv(79000,79105,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -13761,7 +13761,7 @@ func (q *QModelIndex) Data() *QVariant {
 	return _rp
 }	
 //QModelIndex::data(int)
-func (q *QModelIndex) DataWithRole(role int) *QVariant {
+func (q *QModelIndex) DataWithRole(role int32) *QVariant {
 	var __rv uintptr
 	q.Drv(79000,79107,unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -13818,13 +13818,13 @@ func (q *QModelIndex) Parent() *QModelIndex {
 	return _rp
 }	
 //QModelIndex::row()
-func (q *QModelIndex) Row() int {
-	var __rv int
+func (q *QModelIndex) Row() int32 {
+	var __rv int32
 	q.Drv(79000,79114,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QModelIndex::sibling(int,int)
-func (q *QModelIndex) Sibling(row int,column int) *QModelIndex {
+func (q *QModelIndex) Sibling(row int32,column int32) *QModelIndex {
 	var __rv uintptr
 	q.Drv(79000,79115,unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -13885,14 +13885,14 @@ func (q *QMouseEvent) GlobalPos() *QPoint {
 	return _rp
 }	
 //QMouseEvent::globalX()
-func (q *QMouseEvent) GlobalX() int {
-	var __rv int
+func (q *QMouseEvent) GlobalX() int32 {
+	var __rv int32
 	q.Drv(80000,80107,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMouseEvent::globalY()
-func (q *QMouseEvent) GlobalY() int {
-	var __rv int
+func (q *QMouseEvent) GlobalY() int32 {
+	var __rv int32
 	q.Drv(80000,80108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -13919,14 +13919,14 @@ func (q *QMouseEvent) LocalPos() *QPointF {
 	return _rp
 }	
 //QMouseEvent::x()
-func (q *QMouseEvent) X() int {
-	var __rv int
+func (q *QMouseEvent) X() int32 {
+	var __rv int32
 	q.Drv(80000,80111,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMouseEvent::y()
-func (q *QMouseEvent) Y() int {
-	var __rv int
+func (q *QMouseEvent) Y() int32 {
+	var __rv int32
 	q.Drv(80000,80112,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -13988,44 +13988,44 @@ type QPaintDevice struct {
 	BaseDrv
 }
 //QPaintDevice::colorCount()
-func (q *QPaintDevice) ColorCount() int {
-	var __rv int
+func (q *QPaintDevice) ColorCount() int32 {
+	var __rv int32
 	q.Drv(82000,82102,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QPaintDevice::depth()
-func (q *QPaintDevice) Depth() int {
-	var __rv int
+func (q *QPaintDevice) Depth() int32 {
+	var __rv int32
 	q.Drv(82000,82103,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QPaintDevice::devType()
-func (q *QPaintDevice) DevType() int {
-	var __rv int
+func (q *QPaintDevice) DevType() int32 {
+	var __rv int32
 	q.Drv(82000,82104,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QPaintDevice::height()
-func (q *QPaintDevice) Height() int {
-	var __rv int
+func (q *QPaintDevice) Height() int32 {
+	var __rv int32
 	q.Drv(82000,82105,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QPaintDevice::heightMM()
-func (q *QPaintDevice) HeightMM() int {
-	var __rv int
+func (q *QPaintDevice) HeightMM() int32 {
+	var __rv int32
 	q.Drv(82000,82106,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QPaintDevice::logicalDpiX()
-func (q *QPaintDevice) LogicalDpiX() int {
-	var __rv int
+func (q *QPaintDevice) LogicalDpiX() int32 {
+	var __rv int32
 	q.Drv(82000,82107,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QPaintDevice::logicalDpiY()
-func (q *QPaintDevice) LogicalDpiY() int {
-	var __rv int
+func (q *QPaintDevice) LogicalDpiY() int32 {
+	var __rv int32
 	q.Drv(82000,82108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -14047,26 +14047,26 @@ func (q *QPaintDevice) PaintingActive() bool {
 	return __rv
 }	
 //QPaintDevice::physicalDpiX()
-func (q *QPaintDevice) PhysicalDpiX() int {
-	var __rv int
+func (q *QPaintDevice) PhysicalDpiX() int32 {
+	var __rv int32
 	q.Drv(82000,82111,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QPaintDevice::physicalDpiY()
-func (q *QPaintDevice) PhysicalDpiY() int {
-	var __rv int
+func (q *QPaintDevice) PhysicalDpiY() int32 {
+	var __rv int32
 	q.Drv(82000,82112,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QPaintDevice::width()
-func (q *QPaintDevice) Width() int {
-	var __rv int
+func (q *QPaintDevice) Width() int32 {
+	var __rv int32
 	q.Drv(82000,82113,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QPaintDevice::widthMM()
-func (q *QPaintDevice) WidthMM() int {
-	var __rv int
+func (q *QPaintDevice) WidthMM() int32 {
+	var __rv int32
 	q.Drv(82000,82114,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -14181,11 +14181,11 @@ func (q *QPaintEngine) DrawImage(r *QRectF,pm *QImage,sr *QRectF,flags Qt_ImageC
 	q.Drv(83000,83107,Native(r),Native(pm),Native(sr),unsafe.Pointer(&flags),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPaintEngine::drawLines(QLine const*,int)
-func (q *QPaintEngine) DrawLinesWithLinesLinecount(lines *QLine,lineCount int)  {
+func (q *QPaintEngine) DrawLinesWithLinesLinecount(lines *QLine,lineCount int32)  {
 	q.Drv(83000,83108,Native(lines),unsafe.Pointer(&lineCount),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPaintEngine::drawLines(QLineF const*,int)
-func (q *QPaintEngine) DrawLinesFWithLinesLinecount(lines *QLineF,lineCount int)  {
+func (q *QPaintEngine) DrawLinesFWithLinesLinecount(lines *QLineF,lineCount int32)  {
 	q.Drv(83000,83109,Native(lines),unsafe.Pointer(&lineCount),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPaintEngine::drawPath(QPainterPath const&)
@@ -14197,27 +14197,27 @@ func (q *QPaintEngine) DrawPixmap(r *QRectF,pm *QPixmap,sr *QRectF)  {
 	q.Drv(83000,83111,Native(r),Native(pm),Native(sr),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPaintEngine::drawPoints(QPoint const*,int)
-func (q *QPaintEngine) DrawPointsWithPointsPointcount(points *QPoint,pointCount int)  {
+func (q *QPaintEngine) DrawPointsWithPointsPointcount(points *QPoint,pointCount int32)  {
 	q.Drv(83000,83112,Native(points),unsafe.Pointer(&pointCount),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPaintEngine::drawPoints(QPointF const*,int)
-func (q *QPaintEngine) DrawPointsFWithPointsPointcount(points *QPointF,pointCount int)  {
+func (q *QPaintEngine) DrawPointsFWithPointsPointcount(points *QPointF,pointCount int32)  {
 	q.Drv(83000,83113,Native(points),unsafe.Pointer(&pointCount),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPaintEngine::drawPolygon(QPoint const*,int,QPaintEngine::PolygonDrawMode)
-func (q *QPaintEngine) DrawPolygonWithPointsPointcountMode(points *QPoint,pointCount int,mode QPaintEngine_PolygonDrawMode)  {
+func (q *QPaintEngine) DrawPolygonWithPointsPointcountMode(points *QPoint,pointCount int32,mode QPaintEngine_PolygonDrawMode)  {
 	q.Drv(83000,83114,Native(points),unsafe.Pointer(&pointCount),unsafe.Pointer(&mode),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPaintEngine::drawPolygon(QPointF const*,int,QPaintEngine::PolygonDrawMode)
-func (q *QPaintEngine) DrawPolygonFWithPointsPointcountMode(points *QPointF,pointCount int,mode QPaintEngine_PolygonDrawMode)  {
+func (q *QPaintEngine) DrawPolygonFWithPointsPointcountMode(points *QPointF,pointCount int32,mode QPaintEngine_PolygonDrawMode)  {
 	q.Drv(83000,83115,Native(points),unsafe.Pointer(&pointCount),unsafe.Pointer(&mode),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPaintEngine::drawRects(QRect const*,int)
-func (q *QPaintEngine) DrawRectsWithRectsRectcount(rects *QRect,rectCount int)  {
+func (q *QPaintEngine) DrawRectsWithRectsRectcount(rects *QRect,rectCount int32)  {
 	q.Drv(83000,83116,Native(rects),unsafe.Pointer(&rectCount),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPaintEngine::drawRects(QRectF const*,int)
-func (q *QPaintEngine) DrawRectsFWithRectsRectcount(rects *QRectF,rectCount int)  {
+func (q *QPaintEngine) DrawRectsFWithRectsRectcount(rects *QRectF,rectCount int32)  {
 	q.Drv(83000,83117,Native(rects),unsafe.Pointer(&rectCount),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPaintEngine::drawTextItem(QPointF const&,QTextItem const&)
@@ -14235,7 +14235,7 @@ func (q *QPaintEngine) End() bool {
 	return __rv
 }	
 //QPaintEngine::fix_neg_rect(int*,int*,int*,int*)
-func (q *QPaintEngine) Fix_neg_rect(x *int,y *int,w *int,h *int)  {
+func (q *QPaintEngine) Fix_neg_rect(x *int32,y *int32,w *int32,h *int32)  {
 	q.Drv(83000,83121,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPaintEngine::hasFeature(QFlags<QPaintEngine::PaintEngineFeature>)
@@ -14675,7 +14675,7 @@ func (q *QPainter) BeginNativePainting()  {
 	q.Drv(86000,86107,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::boundingRect(QRect const&,int,QString const&)
-func (q *QPainter) BoundingRectWithRectFlagsText(rect *QRect,flags int,text string) *QRect {
+func (q *QPainter) BoundingRectWithRectFlagsText(rect *QRect,flags int32,text string) *QRect {
 	var __rv uintptr
 	q.Drv(86000,86108,Native(rect),unsafe.Pointer(&flags),unsafe.Pointer(&text),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -14697,7 +14697,7 @@ func (q *QPainter) BoundingRectFWithRectTextOption(rect *QRectF,text string,o *Q
 	return _rp
 }	
 //QPainter::boundingRect(QRectF const&,int,QString const&)
-func (q *QPainter) BoundingRectFWithRectFlagsText(rect *QRectF,flags int,text string) *QRectF {
+func (q *QPainter) BoundingRectFWithRectFlagsText(rect *QRectF,flags int32,text string) *QRectF {
 	var __rv uintptr
 	q.Drv(86000,86110,Native(rect),unsafe.Pointer(&flags),unsafe.Pointer(&text),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -14708,7 +14708,7 @@ func (q *QPainter) BoundingRectFWithRectFlagsText(rect *QRectF,flags int,text st
 	return _rp
 }	
 //QPainter::boundingRect(int,int,int,int,int,QString const&)
-func (q *QPainter) BoundingRectWithXYWidthHeightFlagsText(x int,y int,w int,h int,flags int,text string) *QRect {
+func (q *QPainter) BoundingRectWithXYWidthHeightFlagsText(x int32,y int32,w int32,h int32,flags int32,text string) *QRect {
 	var __rv uintptr
 	q.Drv(86000,86111,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&flags),unsafe.Pointer(&text),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -14824,27 +14824,27 @@ func (q *QPainter) DeviceTransform() *QTransform {
 	return _rp
 }	
 //QPainter::drawArc(QRect const&,int,int)
-func (q *QPainter) DrawArcWithRectStartangleSpanangle(value2 *QRect,startAngle int,spanAngle int)  {
+func (q *QPainter) DrawArcWithRectStartangleSpanangle(value2 *QRect,startAngle int32,spanAngle int32)  {
 	q.Drv(86000,86122,Native(value2),unsafe.Pointer(&startAngle),unsafe.Pointer(&spanAngle),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawArc(QRectF const&,int,int)
-func (q *QPainter) DrawArcFWithRectStartangleSpanangle(rect *QRectF,startAngle int,spanAngle int)  {
+func (q *QPainter) DrawArcFWithRectStartangleSpanangle(rect *QRectF,startAngle int32,spanAngle int32)  {
 	q.Drv(86000,86123,Native(rect),unsafe.Pointer(&startAngle),unsafe.Pointer(&spanAngle),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawArc(int,int,int,int,int,int)
-func (q *QPainter) DrawArcWithXYWidthHeightStartangleSpanangle(x int,y int,w int,h int,startAngle int,spanAngle int)  {
+func (q *QPainter) DrawArcWithXYWidthHeightStartangleSpanangle(x int32,y int32,w int32,h int32,startAngle int32,spanAngle int32)  {
 	q.Drv(86000,86124,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&startAngle),unsafe.Pointer(&spanAngle),nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawChord(QRect const&,int,int)
-func (q *QPainter) DrawChordWithRectStartangleSpanangle(value2 *QRect,startAngle int,spanAngle int)  {
+func (q *QPainter) DrawChordWithRectStartangleSpanangle(value2 *QRect,startAngle int32,spanAngle int32)  {
 	q.Drv(86000,86125,Native(value2),unsafe.Pointer(&startAngle),unsafe.Pointer(&spanAngle),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawChord(QRectF const&,int,int)
-func (q *QPainter) DrawChordFWithRectStartangleSpanangle(rect *QRectF,startAngle int,spanAngle int)  {
+func (q *QPainter) DrawChordFWithRectStartangleSpanangle(rect *QRectF,startAngle int32,spanAngle int32)  {
 	q.Drv(86000,86126,Native(rect),unsafe.Pointer(&startAngle),unsafe.Pointer(&spanAngle),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawChord(int,int,int,int,int,int)
-func (q *QPainter) DrawChordWithXYWidthHeightStartangleSpanangle(x int,y int,w int,h int,startAngle int,spanAngle int)  {
+func (q *QPainter) DrawChordWithXYWidthHeightStartangleSpanangle(x int32,y int32,w int32,h int32,startAngle int32,spanAngle int32)  {
 	q.Drv(86000,86127,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&startAngle),unsafe.Pointer(&spanAngle),nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawConvexPolygon(QPolygon const&)
@@ -14856,11 +14856,11 @@ func (q *QPainter) DrawConvexPolygonFWithPolygon(polygon *QPolygonF)  {
 	q.Drv(86000,86129,Native(polygon),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawConvexPolygon(QPoint const*,int)
-func (q *QPainter) DrawConvexPolygonWithPointsPointcount(points *QPoint,pointCount int)  {
+func (q *QPainter) DrawConvexPolygonWithPointsPointcount(points *QPoint,pointCount int32)  {
 	q.Drv(86000,86130,Native(points),unsafe.Pointer(&pointCount),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawConvexPolygon(QPointF const*,int)
-func (q *QPainter) DrawConvexPolygonFWithPointsPointcount(points *QPointF,pointCount int)  {
+func (q *QPainter) DrawConvexPolygonFWithPointsPointcount(points *QPointF,pointCount int32)  {
 	q.Drv(86000,86131,Native(points),unsafe.Pointer(&pointCount),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawEllipse(QRect const&)
@@ -14872,7 +14872,7 @@ func (q *QPainter) DrawEllipseFWithRectf(r *QRectF)  {
 	q.Drv(86000,86133,Native(r),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawEllipse(QPoint const&,int,int)
-func (q *QPainter) DrawEllipseWithCenterRxRy(center *QPoint,rx int,ry int)  {
+func (q *QPainter) DrawEllipseWithCenterRxRy(center *QPoint,rx int32,ry int32)  {
 	q.Drv(86000,86134,Native(center),unsafe.Pointer(&rx),unsafe.Pointer(&ry),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawEllipse(QPointF const&,double,double)
@@ -14880,7 +14880,7 @@ func (q *QPainter) DrawEllipseFWithCenterRxRy(center *QPointF,rx float64,ry floa
 	q.Drv(86000,86135,Native(center),unsafe.Pointer(&rx),unsafe.Pointer(&ry),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawEllipse(int,int,int,int)
-func (q *QPainter) DrawEllipseWithXYWidthHeight(x int,y int,w int,h int)  {
+func (q *QPainter) DrawEllipseWithXYWidthHeight(x int32,y int32,w int32,h int32)  {
 	q.Drv(86000,86136,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawImage(QPoint const&,QImage const&)
@@ -14916,7 +14916,7 @@ func (q *QPainter) DrawImageFWithTargetrectImageSourcerectFlags(targetRect *QRec
 	q.Drv(86000,86144,Native(targetRect),Native(image),Native(sourceRect),unsafe.Pointer(&flags),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawImage(int,int,QImage const&,int,int,int,int,QFlags<Qt::ImageConversionFlag>)
-func (q *QPainter) DrawImageWithXYImageSxSySwShFlags(x int,y int,image *QImage,sx int,sy int,sw int,sh int,flags Qt_ImageConversionFlag)  {
+func (q *QPainter) DrawImageWithXYImageSxSySwShFlags(x int32,y int32,image *QImage,sx int32,sy int32,sw int32,sh int32,flags Qt_ImageConversionFlag)  {
 	q.Drv(86000,86145,unsafe.Pointer(&x),unsafe.Pointer(&y),Native(image),unsafe.Pointer(&sx),unsafe.Pointer(&sy),unsafe.Pointer(&sw),unsafe.Pointer(&sh),unsafe.Pointer(&flags),nil,nil,nil,nil)
 }	
 //QPainter::drawLine(QLine const&)
@@ -14936,7 +14936,7 @@ func (q *QPainter) DrawLineFWithPointfPointf(p1 *QPointF,p2 *QPointF)  {
 	q.Drv(86000,86149,Native(p1),Native(p2),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawLine(int,int,int,int)
-func (q *QPainter) DrawLineWithX1Y1X2Y2(x1 int,y1 int,x2 int,y2 int)  {
+func (q *QPainter) DrawLineWithX1Y1X2Y2(x1 int32,y1 int32,x2 int32,y2 int32)  {
 	q.Drv(86000,86150,unsafe.Pointer(&x1),unsafe.Pointer(&y1),unsafe.Pointer(&x2),unsafe.Pointer(&y2),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawLines(QVector<QLine> const&)
@@ -14956,19 +14956,19 @@ func (q *QPainter) DrawLinesWithPointfpairs(pointPairs []*QPointF)  {
 	q.Drv(86000,86154,unsafe.Pointer(&pointPairs),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawLines(QLine const*,int)
-func (q *QPainter) DrawLinesWithLinesLinecount(lines *QLine,lineCount int)  {
+func (q *QPainter) DrawLinesWithLinesLinecount(lines *QLine,lineCount int32)  {
 	q.Drv(86000,86155,Native(lines),unsafe.Pointer(&lineCount),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawLines(QLineF const*,int)
-func (q *QPainter) DrawLinesFWithLinesLinecount(lines *QLineF,lineCount int)  {
+func (q *QPainter) DrawLinesFWithLinesLinecount(lines *QLineF,lineCount int32)  {
 	q.Drv(86000,86156,Native(lines),unsafe.Pointer(&lineCount),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawLines(QPoint const*,int)
-func (q *QPainter) DrawLinesWithPointpairsLinecount(pointPairs *QPoint,lineCount int)  {
+func (q *QPainter) DrawLinesWithPointpairsLinecount(pointPairs *QPoint,lineCount int32)  {
 	q.Drv(86000,86157,Native(pointPairs),unsafe.Pointer(&lineCount),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawLines(QPointF const*,int)
-func (q *QPainter) DrawLinesFWithPointpairsLinecount(pointPairs *QPointF,lineCount int)  {
+func (q *QPainter) DrawLinesFWithPointpairsLinecount(pointPairs *QPointF,lineCount int32)  {
 	q.Drv(86000,86158,Native(pointPairs),unsafe.Pointer(&lineCount),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawPath(QPainterPath const&)
@@ -14984,19 +14984,19 @@ func (q *QPainter) DrawPictureFWithPointfPicture(p *QPointF,picture *QPicture)  
 	q.Drv(86000,86161,Native(p),Native(picture),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawPicture(int,int,QPicture const&)
-func (q *QPainter) DrawPictureWithXYPicture(x int,y int,picture *QPicture)  {
+func (q *QPainter) DrawPictureWithXYPicture(x int32,y int32,picture *QPicture)  {
 	q.Drv(86000,86162,unsafe.Pointer(&x),unsafe.Pointer(&y),Native(picture),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawPie(QRect const&,int,int)
-func (q *QPainter) DrawPieWithRectStartangleSpanangle(value2 *QRect,startAngle int,spanAngle int)  {
+func (q *QPainter) DrawPieWithRectStartangleSpanangle(value2 *QRect,startAngle int32,spanAngle int32)  {
 	q.Drv(86000,86163,Native(value2),unsafe.Pointer(&startAngle),unsafe.Pointer(&spanAngle),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawPie(QRectF const&,int,int)
-func (q *QPainter) DrawPieFWithRectStartangleSpanangle(rect *QRectF,startAngle int,spanAngle int)  {
+func (q *QPainter) DrawPieFWithRectStartangleSpanangle(rect *QRectF,startAngle int32,spanAngle int32)  {
 	q.Drv(86000,86164,Native(rect),unsafe.Pointer(&startAngle),unsafe.Pointer(&spanAngle),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawPie(int,int,int,int,int,int)
-func (q *QPainter) DrawPieWithXYWidthHeightStartangleSpanangle(x int,y int,w int,h int,startAngle int,spanAngle int)  {
+func (q *QPainter) DrawPieWithXYWidthHeightStartangleSpanangle(x int32,y int32,w int32,h int32,startAngle int32,spanAngle int32)  {
 	q.Drv(86000,86165,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&startAngle),unsafe.Pointer(&spanAngle),nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawPixmap(QPoint const&,QPixmap const&)
@@ -15028,23 +15028,23 @@ func (q *QPainter) DrawPixmapFWithTargetrectPixmapSourcerect(targetRect *QRectF,
 	q.Drv(86000,86172,Native(targetRect),Native(pixmap),Native(sourceRect),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawPixmap(int,int,QPixmap const&)
-func (q *QPainter) DrawPixmapWithXYPixmap(x int,y int,pm *QPixmap)  {
+func (q *QPainter) DrawPixmapWithXYPixmap(x int32,y int32,pm *QPixmap)  {
 	q.Drv(86000,86173,unsafe.Pointer(&x),unsafe.Pointer(&y),Native(pm),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawPixmap(int,int,int,int,QPixmap const&)
-func (q *QPainter) DrawPixmapWithXYWidthHeightPixmap(x int,y int,w int,h int,pm *QPixmap)  {
+func (q *QPainter) DrawPixmapWithXYWidthHeightPixmap(x int32,y int32,w int32,h int32,pm *QPixmap)  {
 	q.Drv(86000,86174,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),Native(pm),nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawPixmap(int,int,QPixmap const&,int,int,int,int)
-func (q *QPainter) DrawPixmapWithXYPixmapSxSySwSh(x int,y int,pm *QPixmap,sx int,sy int,sw int,sh int)  {
+func (q *QPainter) DrawPixmapWithXYPixmapSxSySwSh(x int32,y int32,pm *QPixmap,sx int32,sy int32,sw int32,sh int32)  {
 	q.Drv(86000,86175,unsafe.Pointer(&x),unsafe.Pointer(&y),Native(pm),unsafe.Pointer(&sx),unsafe.Pointer(&sy),unsafe.Pointer(&sw),unsafe.Pointer(&sh),nil,nil,nil,nil,nil)
 }	
 //QPainter::drawPixmap(int,int,int,int,QPixmap const&,int,int,int,int)
-func (q *QPainter) DrawPixmapWithXYWidthHeightPixmapSxSySwSh(x int,y int,w int,h int,pm *QPixmap,sx int,sy int,sw int,sh int)  {
+func (q *QPainter) DrawPixmapWithXYWidthHeightPixmapSxSySwSh(x int32,y int32,w int32,h int32,pm *QPixmap,sx int32,sy int32,sw int32,sh int32)  {
 	q.Drv(86000,86176,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),Native(pm),unsafe.Pointer(&sx),unsafe.Pointer(&sy),unsafe.Pointer(&sw),unsafe.Pointer(&sh),nil,nil,nil)
 }	
 //QPainter::drawPixmapFragments(QPainter::PixmapFragment const*,int,QPixmap const&,QFlags<QPainter::PixmapFragmentHint>)
-func (q *QPainter) DrawPixmapFragments(fragments *QPainterPixmapFragment,fragmentCount int,pixmap *QPixmap,hints QPainter_PixmapFragmentHint)  {
+func (q *QPainter) DrawPixmapFragments(fragments *QPainterPixmapFragment,fragmentCount int32,pixmap *QPixmap,hints QPainter_PixmapFragmentHint)  {
 	q.Drv(86000,86177,Native(fragments),unsafe.Pointer(&fragmentCount),Native(pixmap),unsafe.Pointer(&hints),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawPoint(QPoint const&)
@@ -15056,7 +15056,7 @@ func (q *QPainter) DrawPointFWithPointf(pt *QPointF)  {
 	q.Drv(86000,86179,Native(pt),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawPoint(int,int)
-func (q *QPainter) DrawPointWithXY(x int,y int)  {
+func (q *QPainter) DrawPointWithXY(x int32,y int32)  {
 	q.Drv(86000,86180,unsafe.Pointer(&x),unsafe.Pointer(&y),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawPoints(QPolygon const&)
@@ -15068,11 +15068,11 @@ func (q *QPainter) DrawPointsFWithPoints(points *QPolygonF)  {
 	q.Drv(86000,86182,Native(points),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawPoints(QPoint const*,int)
-func (q *QPainter) DrawPointsWithPointsPointcount(points *QPoint,pointCount int)  {
+func (q *QPainter) DrawPointsWithPointsPointcount(points *QPoint,pointCount int32)  {
 	q.Drv(86000,86183,Native(points),unsafe.Pointer(&pointCount),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawPoints(QPointF const*,int)
-func (q *QPainter) DrawPointsFWithPointsPointcount(points *QPointF,pointCount int)  {
+func (q *QPainter) DrawPointsFWithPointsPointcount(points *QPointF,pointCount int32)  {
 	q.Drv(86000,86184,Native(points),unsafe.Pointer(&pointCount),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawPolygon(QPolygon const&)
@@ -15092,11 +15092,11 @@ func (q *QPainter) DrawPolygonFWithPolygonFillrule(polygon *QPolygonF,fillRule Q
 	q.Drv(86000,86188,Native(polygon),unsafe.Pointer(&fillRule),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawPolygon(QPoint const*,int,Qt::FillRule)
-func (q *QPainter) DrawPolygonWithPointsPointcountFillrule(points *QPoint,pointCount int,fillRule Qt_FillRule)  {
+func (q *QPainter) DrawPolygonWithPointsPointcountFillrule(points *QPoint,pointCount int32,fillRule Qt_FillRule)  {
 	q.Drv(86000,86189,Native(points),unsafe.Pointer(&pointCount),unsafe.Pointer(&fillRule),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawPolygon(QPointF const*,int,Qt::FillRule)
-func (q *QPainter) DrawPolygonFWithPointsPointcountFillrule(points *QPointF,pointCount int,fillRule Qt_FillRule)  {
+func (q *QPainter) DrawPolygonFWithPointsPointcountFillrule(points *QPointF,pointCount int32,fillRule Qt_FillRule)  {
 	q.Drv(86000,86190,Native(points),unsafe.Pointer(&pointCount),unsafe.Pointer(&fillRule),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawPolyline(QPolygon const&)
@@ -15108,11 +15108,11 @@ func (q *QPainter) DrawPolylineFWithPolyline(polyline *QPolygonF)  {
 	q.Drv(86000,86192,Native(polyline),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawPolyline(QPoint const*,int)
-func (q *QPainter) DrawPolylineWithPointsPointcount(points *QPoint,pointCount int)  {
+func (q *QPainter) DrawPolylineWithPointsPointcount(points *QPoint,pointCount int32)  {
 	q.Drv(86000,86193,Native(points),unsafe.Pointer(&pointCount),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawPolyline(QPointF const*,int)
-func (q *QPainter) DrawPolylineFWithPointsPointcount(points *QPointF,pointCount int)  {
+func (q *QPainter) DrawPolylineFWithPointsPointcount(points *QPointF,pointCount int32)  {
 	q.Drv(86000,86194,Native(points),unsafe.Pointer(&pointCount),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawRect(QRect const&)
@@ -15124,7 +15124,7 @@ func (q *QPainter) DrawRectFWithRect(rect *QRectF)  {
 	q.Drv(86000,86196,Native(rect),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawRect(int,int,int,int)
-func (q *QPainter) DrawRectWithXYWidthHeight(x int,y int,w int,h int)  {
+func (q *QPainter) DrawRectWithXYWidthHeight(x int32,y int32,w int32,h int32)  {
 	q.Drv(86000,86197,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawRects(QVector<QRect> const&)
@@ -15136,11 +15136,11 @@ func (q *QPainter) DrawRectsWithRectanglefs(rectangles []*QRectF)  {
 	q.Drv(86000,86199,unsafe.Pointer(&rectangles),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawRects(QRect const*,int)
-func (q *QPainter) DrawRectsWithRectsRectcount(rects *QRect,rectCount int)  {
+func (q *QPainter) DrawRectsWithRectsRectcount(rects *QRect,rectCount int32)  {
 	q.Drv(86000,86200,Native(rects),unsafe.Pointer(&rectCount),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawRects(QRectF const*,int)
-func (q *QPainter) DrawRectsFWithRectsRectcount(rects *QRectF,rectCount int)  {
+func (q *QPainter) DrawRectsFWithRectsRectcount(rects *QRectF,rectCount int32)  {
 	q.Drv(86000,86201,Native(rects),unsafe.Pointer(&rectCount),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawRoundRect(QRect const&)
@@ -15152,15 +15152,15 @@ func (q *QPainter) DrawRoundRectFWithRectf(r *QRectF)  {
 	q.Drv(86000,86203,Native(r),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawRoundRect(QRect const&,int,int)
-func (q *QPainter) DrawRoundRectWithRectXroundYround(r *QRect,xround int,yround int)  {
+func (q *QPainter) DrawRoundRectWithRectXroundYround(r *QRect,xround int32,yround int32)  {
 	q.Drv(86000,86204,Native(r),unsafe.Pointer(&xround),unsafe.Pointer(&yround),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawRoundRect(QRectF const&,int,int)
-func (q *QPainter) DrawRoundRectFWithRectfXroundYround(r *QRectF,xround int,yround int)  {
+func (q *QPainter) DrawRoundRectFWithRectfXroundYround(r *QRectF,xround int32,yround int32)  {
 	q.Drv(86000,86205,Native(r),unsafe.Pointer(&xround),unsafe.Pointer(&yround),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawRoundRect(int,int,int,int,int,int)
-func (q *QPainter) DrawRoundRectWithXYWidthHeightIntInt(x int,y int,w int,h int,value2 int,value3 int)  {
+func (q *QPainter) DrawRoundRectWithXYWidthHeightInt32Int32(x int32,y int32,w int32,h int32,value2 int32,value3 int32)  {
 	q.Drv(86000,86206,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&value2),unsafe.Pointer(&value3),nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawRoundedRect(QRect const&,double,double,Qt::SizeMode)
@@ -15172,7 +15172,7 @@ func (q *QPainter) DrawRoundedRectFWithRectXradiusYradiusMode(rect *QRectF,xRadi
 	q.Drv(86000,86208,Native(rect),unsafe.Pointer(&xRadius),unsafe.Pointer(&yRadius),unsafe.Pointer(&mode),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawRoundedRect(int,int,int,int,double,double,Qt::SizeMode)
-func (q *QPainter) DrawRoundedRectFWithXYWidthHeightXradiusYradiusMode(x int,y int,w int,h int,xRadius float64,yRadius float64,mode Qt_SizeMode)  {
+func (q *QPainter) DrawRoundedRectFWithXYWidthHeightXradiusYradiusMode(x int32,y int32,w int32,h int32,xRadius float64,yRadius float64,mode Qt_SizeMode)  {
 	q.Drv(86000,86209,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&xRadius),unsafe.Pointer(&yRadius),unsafe.Pointer(&mode),nil,nil,nil,nil,nil)
 }	
 //QPainter::drawStaticText(QPoint const&,QStaticText const&)
@@ -15184,7 +15184,7 @@ func (q *QPainter) DrawStaticTextFWithTopleftpositionStatictext(topLeftPosition 
 	q.Drv(86000,86211,Native(topLeftPosition),Native(staticText),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawStaticText(int,int,QStaticText const&)
-func (q *QPainter) DrawStaticTextWithLeftTopStatictext(left int,top int,staticText *QStaticText)  {
+func (q *QPainter) DrawStaticTextWithLeftTopStatictext(left int32,top int32,staticText *QStaticText)  {
 	q.Drv(86000,86212,unsafe.Pointer(&left),unsafe.Pointer(&top),Native(staticText),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawText(QPoint const&,QString const&)
@@ -15200,23 +15200,23 @@ func (q *QPainter) DrawTextFWithRectfTextOption(r *QRectF,text string,o *QTextOp
 	q.Drv(86000,86215,Native(r),unsafe.Pointer(&text),Native(o),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawText(int,int,QString const&)
-func (q *QPainter) DrawTextWithXYText(x int,y int,s string)  {
+func (q *QPainter) DrawTextWithXYText(x int32,y int32,s string)  {
 	q.Drv(86000,86216,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&s),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawText(QPointF const&,QString const&,int,int)
-func (q *QPainter) DrawTextFWithPointfTextTfJustificationpadding(p *QPointF,str string,tf int,justificationPadding int)  {
+func (q *QPainter) DrawTextFWithPointfTextTfJustificationpadding(p *QPointF,str string,tf int32,justificationPadding int32)  {
 	q.Drv(86000,86217,Native(p),unsafe.Pointer(&str),unsafe.Pointer(&tf),unsafe.Pointer(&justificationPadding),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawText(QRect const&,int,QString const&,QRect*)
-func (q *QPainter) DrawTextWithRectFlagsTextRect(r *QRect,flags int,text string,br *QRect)  {
+func (q *QPainter) DrawTextWithRectFlagsTextRect(r *QRect,flags int32,text string,br *QRect)  {
 	q.Drv(86000,86218,Native(r),unsafe.Pointer(&flags),unsafe.Pointer(&text),Native(br),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawText(QRectF const&,int,QString const&,QRectF*)
-func (q *QPainter) DrawTextFWithRectfFlagsTextRectf(r *QRectF,flags int,text string,br *QRectF)  {
+func (q *QPainter) DrawTextFWithRectfFlagsTextRectf(r *QRectF,flags int32,text string,br *QRectF)  {
 	q.Drv(86000,86219,Native(r),unsafe.Pointer(&flags),unsafe.Pointer(&text),Native(br),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawText(int,int,int,int,int,QString const&,QRect*)
-func (q *QPainter) DrawTextWithXYWidthHeightFlagsTextRect(x int,y int,w int,h int,flags int,text string,br *QRect)  {
+func (q *QPainter) DrawTextWithXYWidthHeightFlagsTextRect(x int32,y int32,w int32,h int32,flags int32,text string,br *QRect)  {
 	q.Drv(86000,86220,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&flags),unsafe.Pointer(&text),Native(br),nil,nil,nil,nil,nil)
 }	
 //QPainter::drawTextItem(QPoint const&,QTextItem const&)
@@ -15228,7 +15228,7 @@ func (q *QPainter) DrawTextItemFWithPointfTi(p *QPointF,ti *QTextItem)  {
 	q.Drv(86000,86222,Native(p),Native(ti),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawTextItem(int,int,QTextItem const&)
-func (q *QPainter) DrawTextItemWithXYTi(x int,y int,ti *QTextItem)  {
+func (q *QPainter) DrawTextItemWithXYTi(x int32,y int32,ti *QTextItem)  {
 	q.Drv(86000,86223,unsafe.Pointer(&x),unsafe.Pointer(&y),Native(ti),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawTiledPixmap(QRect const&,QPixmap const&,QPoint const&)
@@ -15240,7 +15240,7 @@ func (q *QPainter) DrawTiledPixmapFWithRectPixmapOffset(rect *QRectF,pm *QPixmap
 	q.Drv(86000,86225,Native(rect),Native(pm),Native(offset),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::drawTiledPixmap(int,int,int,int,QPixmap const&,int,int)
-func (q *QPainter) DrawTiledPixmapWithXYWidthHeightPixmapSxSy(x int,y int,w int,h int,value2 *QPixmap,sx int,sy int)  {
+func (q *QPainter) DrawTiledPixmapWithXYWidthHeightPixmapSxSy(x int32,y int32,w int32,h int32,value2 *QPixmap,sx int32,sy int32)  {
 	q.Drv(86000,86226,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),Native(value2),unsafe.Pointer(&sx),unsafe.Pointer(&sy),nil,nil,nil,nil,nil)
 }	
 //QPainter::end()
@@ -15262,7 +15262,7 @@ func (q *QPainter) EraseRectFWithRectf(value *QRectF)  {
 	q.Drv(86000,86230,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::eraseRect(int,int,int,int)
-func (q *QPainter) EraseRectWithXYWidthHeight(x int,y int,w int,h int)  {
+func (q *QPainter) EraseRectWithXYWidthHeight(x int32,y int32,w int32,h int32)  {
 	q.Drv(86000,86231,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::fillPath(QPainterPath const&,QBrush const&)
@@ -15302,19 +15302,19 @@ func (q *QPainter) FillRectFWithRectfGlobalcolor(r *QRectF,c Qt_GlobalColor)  {
 	q.Drv(86000,86240,Native(r),unsafe.Pointer(&c),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::fillRect(int,int,int,int,QBrush const&)
-func (q *QPainter) FillRectWithXYWidthHeightBrush(x int,y int,w int,h int,value2 *QBrush)  {
+func (q *QPainter) FillRectWithXYWidthHeightBrush(x int32,y int32,w int32,h int32,value2 *QBrush)  {
 	q.Drv(86000,86241,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),Native(value2),nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::fillRect(int,int,int,int,QColor const&)
-func (q *QPainter) FillRectWithXYWidthHeightColor(x int,y int,w int,h int,color *QColor)  {
+func (q *QPainter) FillRectWithXYWidthHeightColor(x int32,y int32,w int32,h int32,color *QColor)  {
 	q.Drv(86000,86242,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),Native(color),nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::fillRect(int,int,int,int,Qt::BrushStyle)
-func (q *QPainter) FillRectWithXYWidthHeightStyle(x int,y int,w int,h int,style Qt_BrushStyle)  {
+func (q *QPainter) FillRectWithXYWidthHeightStyle(x int32,y int32,w int32,h int32,style Qt_BrushStyle)  {
 	q.Drv(86000,86243,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&style),nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::fillRect(int,int,int,int,Qt::GlobalColor)
-func (q *QPainter) FillRectWithXYWidthHeightGlobalcolor(x int,y int,w int,h int,c Qt_GlobalColor)  {
+func (q *QPainter) FillRectWithXYWidthHeightGlobalcolor(x int32,y int32,w int32,h int32,c Qt_GlobalColor)  {
 	q.Drv(86000,86244,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&c),nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::font()
@@ -15524,7 +15524,7 @@ func (q *QPainter) SetBrushOriginFWithPointf(value *QPointF)  {
 	q.Drv(86000,86272,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::setBrushOrigin(int,int)
-func (q *QPainter) SetBrushOriginWithXY(x int,y int)  {
+func (q *QPainter) SetBrushOriginWithXY(x int32,y int32)  {
 	q.Drv(86000,86273,unsafe.Pointer(&x),unsafe.Pointer(&y),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::setClipPath(QPainterPath const&)
@@ -15552,7 +15552,7 @@ func (q *QPainter) SetClipRectFWithRectfOp(value2 *QRectF,op Qt_ClipOperation)  
 	q.Drv(86000,86279,Native(value2),unsafe.Pointer(&op),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::setClipRect(int,int,int,int,Qt::ClipOperation)
-func (q *QPainter) SetClipRectWithXYWidthHeightOp(x int,y int,w int,h int,op Qt_ClipOperation)  {
+func (q *QPainter) SetClipRectWithXYWidthHeightOp(x int32,y int32,w int32,h int32,op Qt_ClipOperation)  {
 	q.Drv(86000,86280,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&op),nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::setClipRegion(QRegion const&)
@@ -15648,7 +15648,7 @@ func (q *QPainter) SetViewport(viewport *QRect)  {
 	q.Drv(86000,86302,Native(viewport),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::setViewport(int,int,int,int)
-func (q *QPainter) SetViewportWithXYWidthHeight(x int,y int,w int,h int)  {
+func (q *QPainter) SetViewportWithXYWidthHeight(x int32,y int32,w int32,h int32)  {
 	q.Drv(86000,86303,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::setWindow(QRect const&)
@@ -15656,7 +15656,7 @@ func (q *QPainter) SetWindow(window *QRect)  {
 	q.Drv(86000,86304,Native(window),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::setWindow(int,int,int,int)
-func (q *QPainter) SetWindowWithXYWidthHeight(x int,y int,w int,h int)  {
+func (q *QPainter) SetWindowWithXYWidthHeight(x int32,y int32,w int32,h int32)  {
 	q.Drv(86000,86305,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainter::setWorldMatrix(QMatrix const&)
@@ -15889,19 +15889,19 @@ func (q *QPainterPath) AddRegion(region *QRegion)  {
 	q.Drv(88000,88112,Native(region),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainterPath::addRoundRect(QRectF const&,int)
-func (q *QPainterPath) AddRoundRectFWithRectRoundness(rect *QRectF,roundness int)  {
+func (q *QPainterPath) AddRoundRectFWithRectRoundness(rect *QRectF,roundness int32)  {
 	q.Drv(88000,88113,Native(rect),unsafe.Pointer(&roundness),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainterPath::addRoundRect(QRectF const&,int,int)
-func (q *QPainterPath) AddRoundRectFWithRectXrndYrnd(rect *QRectF,xRnd int,yRnd int)  {
+func (q *QPainterPath) AddRoundRectFWithRectXrndYrnd(rect *QRectF,xRnd int32,yRnd int32)  {
 	q.Drv(88000,88114,Native(rect),unsafe.Pointer(&xRnd),unsafe.Pointer(&yRnd),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainterPath::addRoundRect(double,double,double,double,int)
-func (q *QPainterPath) AddRoundRectFWithXYWidthHeightRoundness(x float64,y float64,w float64,h float64,roundness int)  {
+func (q *QPainterPath) AddRoundRectFWithXYWidthHeightRoundness(x float64,y float64,w float64,h float64,roundness int32)  {
 	q.Drv(88000,88115,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&roundness),nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainterPath::addRoundRect(double,double,double,double,int,int)
-func (q *QPainterPath) AddRoundRectFWithXYWidthHeightXrndYrnd(x float64,y float64,w float64,h float64,xRnd int,yRnd int)  {
+func (q *QPainterPath) AddRoundRectFWithXYWidthHeightXrndYrnd(x float64,y float64,w float64,h float64,xRnd int32,yRnd int32)  {
 	q.Drv(88000,88116,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&xRnd),unsafe.Pointer(&yRnd),nil,nil,nil,nil,nil,nil)
 }	
 //QPainterPath::addRoundedRect(QRectF const&,double,double,Qt::SizeMode)
@@ -16010,7 +16010,7 @@ func (q *QPainterPath) CurrentPosition() *QPointF {
 	return _rp
 }	
 //QPainterPath::elementAt(int)
-func (q *QPainterPath) ElementAt(i int) *QPainterPathElement {
+func (q *QPainterPath) ElementAt(i int32) *QPainterPathElement {
 	var __rv uintptr
 	q.Drv(88000,88136,unsafe.Pointer(&i),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -16021,8 +16021,8 @@ func (q *QPainterPath) ElementAt(i int) *QPainterPathElement {
 	return _rp
 }	
 //QPainterPath::elementCount()
-func (q *QPainterPath) ElementCount() int {
-	var __rv int
+func (q *QPainterPath) ElementCount() int32 {
+	var __rv int32
 	q.Drv(88000,88137,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -16109,7 +16109,7 @@ func (q *QPainterPath) QuadToFWithCtrlptxCtrlptyEndptxEndpty(ctrlPtx float64,ctr
 	q.Drv(88000,88151,unsafe.Pointer(&ctrlPtx),unsafe.Pointer(&ctrlPty),unsafe.Pointer(&endPtx),unsafe.Pointer(&endPty),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainterPath::setElementPositionAt(int,double,double)
-func (q *QPainterPath) SetElementPositionAt(i int,x float64,y float64)  {
+func (q *QPainterPath) SetElementPositionAt(i int32,x float64,y float64)  {
 	q.Drv(88000,88152,unsafe.Pointer(&i),unsafe.Pointer(&x),unsafe.Pointer(&y),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPainterPath::setFillRule(Qt::FillRule)
@@ -16771,8 +16771,8 @@ func (q *QPalette) Midlight() *QBrush {
 	return _rp
 }	
 //QPalette::resolve()
-func (q *QPalette) Resolve() uint {
-	var __rv uint
+func (q *QPalette) Resolve() uint32 {
+	var __rv uint32
 	q.Drv(91000,91133,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -16788,7 +16788,7 @@ func (q *QPalette) ResolveWithPalette(value *QPalette) *QPalette {
 	return _rp
 }	
 //QPalette::resolve(unsigned int)
-func (q *QPalette) ResolveWithMask(mask uint)  {
+func (q *QPalette) ResolveWithMask(mask uint32)  {
 	q.Drv(91000,91135,unsafe.Pointer(&mask),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPalette::setBrush(QPalette::ColorRole,QBrush const&)
@@ -17048,7 +17048,7 @@ func (q *QPen) SetStyle(value Qt_PenStyle)  {
 	q.Drv(92000,92125,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPen::setWidth(int)
-func (q *QPen) SetWidth(width int)  {
+func (q *QPen) SetWidth(width int32)  {
 	q.Drv(92000,92126,unsafe.Pointer(&width),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPen::setWidthF(double)
@@ -17062,8 +17062,8 @@ func (q *QPen) Style() Qt_PenStyle {
 	return __rv
 }	
 //QPen::width()
-func (q *QPen) Width() int {
-	var __rv int
+func (q *QPen) Width() int32 {
+	var __rv int32
 	q.Drv(92000,92129,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -17112,7 +17112,7 @@ func NewQPersistentModelIndexCopy(other *QPersistentModelIndex) *QPersistentMode
 	return _p
 } 
 //QPersistentModelIndex::child(int,int)
-func (q *QPersistentModelIndex) Child(row int,column int) *QModelIndex {
+func (q *QPersistentModelIndex) Child(row int32,column int32) *QModelIndex {
 	var __rv uintptr
 	q.Drv(93000,93105,unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -17123,8 +17123,8 @@ func (q *QPersistentModelIndex) Child(row int,column int) *QModelIndex {
 	return _rp
 }	
 //QPersistentModelIndex::column()
-func (q *QPersistentModelIndex) Column() int {
-	var __rv int
+func (q *QPersistentModelIndex) Column() int32 {
+	var __rv int32
 	q.Drv(93000,93106,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -17140,7 +17140,7 @@ func (q *QPersistentModelIndex) Data() *QVariant {
 	return _rp
 }	
 //QPersistentModelIndex::data(int)
-func (q *QPersistentModelIndex) DataWithRole(role int) *QVariant {
+func (q *QPersistentModelIndex) DataWithRole(role int32) *QVariant {
 	var __rv uintptr
 	q.Drv(93000,93108,unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -17197,13 +17197,13 @@ func (q *QPersistentModelIndex) Parent() *QModelIndex {
 	return _rp
 }	
 //QPersistentModelIndex::row()
-func (q *QPersistentModelIndex) Row() int {
-	var __rv int
+func (q *QPersistentModelIndex) Row() int32 {
+	var __rv int32
 	q.Drv(93000,93115,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QPersistentModelIndex::sibling(int,int)
-func (q *QPersistentModelIndex) Sibling(row int,column int) *QModelIndex {
+func (q *QPersistentModelIndex) Sibling(row int32,column int32) *QModelIndex {
 	var __rv uintptr
 	q.Drv(93000,93116,unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -17241,7 +17241,7 @@ func NewQPictureCopy(value *QPicture) *QPicture {
 	return _p
 } 
 //QPicture::QPicture(int)	
-func NewQPictureWithFormatversion(formatVersion int) *QPicture {
+func NewQPictureWithFormatversion(formatVersion int32) *QPicture {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),94000,94104,unsafe.Pointer(&formatVersion),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -17273,8 +17273,8 @@ func (q *QPicture) Detach()  {
 	q.Drv(94000,94107,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPicture::devType()
-func (q *QPicture) DevType() int {
-	var __rv int
+func (q *QPicture) DevType() int32 {
+	var __rv int32
 	q.Drv(94000,94108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -17420,12 +17420,12 @@ func (q *QPicture) SetBoundingRect(r *QRect)  {
 	q.Drv(94000,94126,Native(r),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPicture::setData(char const*,unsigned int)
-func (q *QPicture) SetData(data string,size uint)  {
+func (q *QPicture) SetData(data string,size uint32)  {
 	q.Drv(94000,94127,unsafe.Pointer(&data),unsafe.Pointer(&size),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPicture::size()
-func (q *QPicture) Size() uint {
-	var __rv uint
+func (q *QPicture) Size() uint32 {
+	var __rv uint32
 	q.Drv(94000,94128,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -17568,8 +17568,8 @@ func (q *QPictureIO) PictureFormatWithFilename(fileName string) []byte {
 	return __rv
 }	
 //QPictureIO::quality()
-func (q *QPictureIO) Quality() int {
-	var __rv int
+func (q *QPictureIO) Quality() int32 {
+	var __rv int32
 	q.Drv(95000,95116,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -17608,16 +17608,16 @@ func (q *QPictureIO) SetPicture(value *QPicture)  {
 	q.Drv(95000,95124,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPictureIO::setQuality(int)
-func (q *QPictureIO) SetQuality(value int)  {
+func (q *QPictureIO) SetQuality(value int32)  {
 	q.Drv(95000,95125,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPictureIO::setStatus(int)
-func (q *QPictureIO) SetStatus(value int)  {
+func (q *QPictureIO) SetStatus(value int32)  {
 	q.Drv(95000,95126,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPictureIO::status()
-func (q *QPictureIO) Status() int {
-	var __rv int
+func (q *QPictureIO) Status() int32 {
+	var __rv int32
 	q.Drv(95000,95127,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -17691,7 +17691,7 @@ func NewQPixmapWithXpm(xpm [][]byte) *QPixmap {
 	return _p
 } 
 //QPixmap::QPixmap(int,int)	
-func NewQPixmapWithWidthHeight(w int,h int) *QPixmap {
+func NewQPixmapWithWidthHeight(w int32,h int32) *QPixmap {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),96000,96106,unsafe.Pointer(&w),unsafe.Pointer(&h),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -17753,7 +17753,7 @@ func (q *QPixmap) CopyWithRect(rect *QRect) *QPixmap {
 	return _rp
 }	
 //QPixmap::copy(int,int,int,int)
-func (q *QPixmap) CopyWithXYWidthHeight(x int,y int,width int,height int) *QPixmap {
+func (q *QPixmap) CopyWithXYWidthHeight(x int32,y int32,width int32,height int32) *QPixmap {
 	var __rv uintptr
 	q.Drv(96000,96113,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&width),unsafe.Pointer(&height),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -17797,20 +17797,20 @@ func (q *QPixmap) CreateMaskFromColorWithColorMode(maskColor *QColor,mode Qt_Mas
 	return _rp
 }	
 //QPixmap::defaultDepth()	
-func QPixmapDefaultDepth() int {
-	var __rv int
+func QPixmapDefaultDepth() int32 {
+	var __rv int32
 	DirectQtDrv(nil,96000,96117,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QPixmap::defaultDepth()
-func (q *QPixmap) DefaultDepth() int {
-	var __rv int
+func (q *QPixmap) DefaultDepth() int32 {
+	var __rv int32
 	q.Drv(96000,96117,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QPixmap::depth()
-func (q *QPixmap) Depth() int {
-	var __rv int
+func (q *QPixmap) Depth() int32 {
+	var __rv int32
 	q.Drv(96000,96118,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -17819,8 +17819,8 @@ func (q *QPixmap) Detach()  {
 	q.Drv(96000,96119,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPixmap::devType()
-func (q *QPixmap) DevType() int {
-	var __rv int
+func (q *QPixmap) DevType() int32 {
+	var __rv int32
 	q.Drv(96000,96120,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -17837,7 +17837,7 @@ func (q *QPixmap) FillWithWidgetOfs(widget QWidgetInterface,ofs *QPoint)  {
 	q.Drv(96000,96123,Native(widget),Native(ofs),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPixmap::fill(QWidget const*,int,int)
-func (q *QPixmap) FillWithWidgetXofsYofs(widget QWidgetInterface,xofs int,yofs int)  {
+func (q *QPixmap) FillWithWidgetXofsYofs(widget QWidgetInterface,xofs int32,yofs int32)  {
 	q.Drv(96000,96124,Native(widget),unsafe.Pointer(&xofs),unsafe.Pointer(&yofs),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPixmap::fromImage(QImage const&)	
@@ -17973,7 +17973,7 @@ func (q *QPixmap) GrabWidgetWithWidgetRect(widget QWidgetInterface,rect *QRect) 
 	return _rp
 }	
 //QPixmap::grabWidget(QWidget*,int,int,int,int)	
-func QPixmapGrabWidgetWithWidgetXYWidthHeight(widget QWidgetInterface,x int,y int,w int,h int) *QPixmap {
+func QPixmapGrabWidgetWithWidgetXYWidthHeight(widget QWidgetInterface,x int32,y int32,w int32,h int32) *QPixmap {
 	var __rv uintptr
 	DirectQtDrv(nil,96000,96131,Native(widget),unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -17984,7 +17984,7 @@ func QPixmapGrabWidgetWithWidgetXYWidthHeight(widget QWidgetInterface,x int,y in
 	return _rp
 }	
 //QPixmap::grabWidget(QWidget*,int,int,int,int)
-func (q *QPixmap) GrabWidgetWithWidgetXYWidthHeight(widget QWidgetInterface,x int,y int,w int,h int) *QPixmap {
+func (q *QPixmap) GrabWidgetWithWidgetXYWidthHeight(widget QWidgetInterface,x int32,y int32,w int32,h int32) *QPixmap {
 	var __rv uintptr
 	q.Drv(96000,96131,Native(widget),unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -18007,8 +18007,8 @@ func (q *QPixmap) HasAlphaChannel() bool {
 	return __rv
 }	
 //QPixmap::height()
-func (q *QPixmap) Height() int {
-	var __rv int
+func (q *QPixmap) Height() int32 {
+	var __rv int32
 	q.Drv(96000,96134,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -18055,7 +18055,7 @@ func (q *QPixmap) LoadFromDataWithDataFormatFlags(data []byte,format string,flag
 	return __rv
 }	
 //QPixmap::loadFromData(unsigned char const*,unsigned int,char const*,QFlags<Qt::ImageConversionFlag>)
-func (q *QPixmap) LoadFromDataWithBufLenFormatFlags(buf *byte,len uint,format string,flags Qt_ImageConversionFlag) bool {
+func (q *QPixmap) LoadFromDataWithBufLenFormatFlags(buf *byte,len uint32,format string,flags Qt_ImageConversionFlag) bool {
 	var __rv bool
 	q.Drv(96000,96142,unsafe.Pointer(&buf),unsafe.Pointer(&len),unsafe.Pointer(&format),unsafe.Pointer(&flags),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -18106,13 +18106,13 @@ func (q *QPixmap) SaveWithFilename(fileName string) bool {
 	return __rv
 }	
 //QPixmap::save(QIODevice*,char const*,int)
-func (q *QPixmap) SaveWithDeviceFormatQuality(device QIODeviceInterface,format string,quality int) bool {
+func (q *QPixmap) SaveWithDeviceFormatQuality(device QIODeviceInterface,format string,quality int32) bool {
 	var __rv bool
 	q.Drv(96000,96148,Native(device),unsafe.Pointer(&format),unsafe.Pointer(&quality),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QPixmap::save(QString const&,char const*,int)
-func (q *QPixmap) SaveWithFilenameFormatQuality(fileName string,format string,quality int) bool {
+func (q *QPixmap) SaveWithFilenameFormatQuality(fileName string,format string,quality int32) bool {
 	var __rv bool
 	q.Drv(96000,96149,unsafe.Pointer(&fileName),unsafe.Pointer(&format),unsafe.Pointer(&quality),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -18140,7 +18140,7 @@ func (q *QPixmap) ScaledWithSizeAspectmodeMode(s *QSize,aspectMode Qt_AspectRati
 	return _rp
 }	
 //QPixmap::scaled(int,int,Qt::AspectRatioMode,Qt::TransformationMode)
-func (q *QPixmap) ScaledWithWidthHeightAspectmodeMode(w int,h int,aspectMode Qt_AspectRatioMode,mode Qt_TransformationMode) *QPixmap {
+func (q *QPixmap) ScaledWithWidthHeightAspectmodeMode(w int32,h int32,aspectMode Qt_AspectRatioMode,mode Qt_TransformationMode) *QPixmap {
 	var __rv uintptr
 	q.Drv(96000,96152,unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&aspectMode),unsafe.Pointer(&mode),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -18151,7 +18151,7 @@ func (q *QPixmap) ScaledWithWidthHeightAspectmodeMode(w int,h int,aspectMode Qt_
 	return _rp
 }	
 //QPixmap::scaledToHeight(int)
-func (q *QPixmap) ScaledToHeight(h int) *QPixmap {
+func (q *QPixmap) ScaledToHeight(h int32) *QPixmap {
 	var __rv uintptr
 	q.Drv(96000,96153,unsafe.Pointer(&h),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -18162,7 +18162,7 @@ func (q *QPixmap) ScaledToHeight(h int) *QPixmap {
 	return _rp
 }	
 //QPixmap::scaledToHeight(int,Qt::TransformationMode)
-func (q *QPixmap) ScaledToHeightWithHeightMode(h int,mode Qt_TransformationMode) *QPixmap {
+func (q *QPixmap) ScaledToHeightWithHeightMode(h int32,mode Qt_TransformationMode) *QPixmap {
 	var __rv uintptr
 	q.Drv(96000,96154,unsafe.Pointer(&h),unsafe.Pointer(&mode),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -18173,7 +18173,7 @@ func (q *QPixmap) ScaledToHeightWithHeightMode(h int,mode Qt_TransformationMode)
 	return _rp
 }	
 //QPixmap::scaledToWidth(int)
-func (q *QPixmap) ScaledToWidth(w int) *QPixmap {
+func (q *QPixmap) ScaledToWidth(w int32) *QPixmap {
 	var __rv uintptr
 	q.Drv(96000,96155,unsafe.Pointer(&w),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -18184,7 +18184,7 @@ func (q *QPixmap) ScaledToWidth(w int) *QPixmap {
 	return _rp
 }	
 //QPixmap::scaledToWidth(int,Qt::TransformationMode)
-func (q *QPixmap) ScaledToWidthWithWidthMode(w int,mode Qt_TransformationMode) *QPixmap {
+func (q *QPixmap) ScaledToWidthWithWidthMode(w int32,mode Qt_TransformationMode) *QPixmap {
 	var __rv uintptr
 	q.Drv(96000,96156,unsafe.Pointer(&w),unsafe.Pointer(&mode),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -18195,11 +18195,11 @@ func (q *QPixmap) ScaledToWidthWithWidthMode(w int,mode Qt_TransformationMode) *
 	return _rp
 }	
 //QPixmap::scroll(int,int,QRect const&,QRegion*)
-func (q *QPixmap) ScrollWithDxDyRectExposed(dx int,dy int,rect *QRect,exposed *QRegion)  {
+func (q *QPixmap) ScrollWithDxDyRectExposed(dx int32,dy int32,rect *QRect,exposed *QRegion)  {
 	q.Drv(96000,96157,unsafe.Pointer(&dx),unsafe.Pointer(&dy),Native(rect),Native(exposed),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPixmap::scroll(int,int,int,int,int,int,QRegion*)
-func (q *QPixmap) ScrollWithDxDyXYWidthHeightExposed(dx int,dy int,x int,y int,width int,height int,exposed *QRegion)  {
+func (q *QPixmap) ScrollWithDxDyXYWidthHeightExposed(dx int32,dy int32,x int32,y int32,width int32,height int32,exposed *QRegion)  {
 	q.Drv(96000,96158,unsafe.Pointer(&dx),unsafe.Pointer(&dy),unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&width),unsafe.Pointer(&height),Native(exposed),nil,nil,nil,nil,nil)
 }	
 //QPixmap::setMask(QBitmap const&)
@@ -18273,7 +18273,7 @@ func (q *QPixmap) TransformedWithTransformMode(value2 *QTransform,mode Qt_Transf
 	return _rp
 }	
 //QPixmap::trueMatrix(QMatrix const&,int,int)	
-func QPixmapTrueMatrixWithMWidthHeight(m *QMatrix,w int,h int) *QMatrix {
+func QPixmapTrueMatrixWithMWidthHeight(m *QMatrix,w int32,h int32) *QMatrix {
 	var __rv uintptr
 	DirectQtDrv(nil,96000,96166,Native(m),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -18284,7 +18284,7 @@ func QPixmapTrueMatrixWithMWidthHeight(m *QMatrix,w int,h int) *QMatrix {
 	return _rp
 }	
 //QPixmap::trueMatrix(QMatrix const&,int,int)
-func (q *QPixmap) TrueMatrixWithMWidthHeight(m *QMatrix,w int,h int) *QMatrix {
+func (q *QPixmap) TrueMatrixWithMWidthHeight(m *QMatrix,w int32,h int32) *QMatrix {
 	var __rv uintptr
 	q.Drv(96000,96166,Native(m),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -18295,7 +18295,7 @@ func (q *QPixmap) TrueMatrixWithMWidthHeight(m *QMatrix,w int,h int) *QMatrix {
 	return _rp
 }	
 //QPixmap::trueMatrix(QTransform const&,int,int)	
-func QPixmapTrueMatrixWithTransformWidthHeight(m *QTransform,w int,h int) *QTransform {
+func QPixmapTrueMatrixWithTransformWidthHeight(m *QTransform,w int32,h int32) *QTransform {
 	var __rv uintptr
 	DirectQtDrv(nil,96000,96167,Native(m),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -18306,7 +18306,7 @@ func QPixmapTrueMatrixWithTransformWidthHeight(m *QTransform,w int,h int) *QTran
 	return _rp
 }	
 //QPixmap::trueMatrix(QTransform const&,int,int)
-func (q *QPixmap) TrueMatrixWithTransformWidthHeight(m *QTransform,w int,h int) *QTransform {
+func (q *QPixmap) TrueMatrixWithTransformWidthHeight(m *QTransform,w int32,h int32) *QTransform {
 	var __rv uintptr
 	q.Drv(96000,96167,Native(m),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -18317,8 +18317,8 @@ func (q *QPixmap) TrueMatrixWithTransformWidthHeight(m *QTransform,w int,h int) 
 	return _rp
 }	
 //QPixmap::width()
-func (q *QPixmap) Width() int {
-	var __rv int
+func (q *QPixmap) Width() int32 {
+	var __rv int32
 	q.Drv(96000,96168,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -18339,14 +18339,14 @@ func NewQPixmapCache() *QPixmapCache {
 	return _p
 } 
 //QPixmapCache::cacheLimit()	
-func QPixmapCacheCacheLimit() int {
-	var __rv int
+func QPixmapCacheCacheLimit() int32 {
+	var __rv int32
 	DirectQtDrv(nil,97000,97103,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QPixmapCache::cacheLimit()
-func (q *QPixmapCache) CacheLimit() int {
-	var __rv int
+func (q *QPixmapCache) CacheLimit() int32 {
+	var __rv int32
 	q.Drv(97000,97103,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -18467,11 +18467,11 @@ func (q *QPixmapCache) Replace(key *QPixmapCacheKey,pixmap *QPixmap) bool {
 	return __rv
 }	
 //QPixmapCache::setCacheLimit(int)	
-func QPixmapCacheSetCacheLimit(value int)  {
+func QPixmapCacheSetCacheLimit(value int32)  {
 	DirectQtDrv(nil,97000,97113,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPixmapCache::setCacheLimit(int)
-func (q *QPixmapCache) SetCacheLimit(value int)  {
+func (q *QPixmapCache) SetCacheLimit(value int32)  {
 	q.Drv(97000,97113,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 
@@ -18518,7 +18518,7 @@ func NewQPoint() *QPoint {
 	return _p
 } 
 //QPoint::QPoint(int,int)	
-func NewQPointWithXposYpos(xpos int,ypos int) *QPoint {
+func NewQPointWithXposYpos(xpos int32,ypos int32) *QPoint {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),99000,99103,unsafe.Pointer(&xpos),unsafe.Pointer(&ypos),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -18535,40 +18535,40 @@ func (q *QPoint) IsNull() bool {
 	return __rv
 }	
 //QPoint::manhattanLength()
-func (q *QPoint) ManhattanLength() int {
-	var __rv int
+func (q *QPoint) ManhattanLength() int32 {
+	var __rv int32
 	q.Drv(99000,99105,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QPoint::rx()
-func (q *QPoint) Rx() *int {
-	var __rv *int
+func (q *QPoint) Rx() *int32 {
+	var __rv *int32
 	q.Drv(99000,99106,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QPoint::ry()
-func (q *QPoint) Ry() *int {
-	var __rv *int
+func (q *QPoint) Ry() *int32 {
+	var __rv *int32
 	q.Drv(99000,99107,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QPoint::setX(int)
-func (q *QPoint) SetX(x int)  {
+func (q *QPoint) SetX(x int32)  {
 	q.Drv(99000,99108,unsafe.Pointer(&x),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPoint::setY(int)
-func (q *QPoint) SetY(y int)  {
+func (q *QPoint) SetY(y int32)  {
 	q.Drv(99000,99109,unsafe.Pointer(&y),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPoint::x()
-func (q *QPoint) X() int {
-	var __rv int
+func (q *QPoint) X() int32 {
+	var __rv int32
 	q.Drv(99000,99110,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QPoint::y()
-func (q *QPoint) Y() int {
-	var __rv int
+func (q *QPoint) Y() int32 {
+	var __rv int32
 	q.Drv(99000,99111,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -18704,7 +18704,7 @@ func NewQPolygonWithPointarray(v []*QPoint) *QPolygon {
 	return _p
 } 
 //QPolygon::QPolygon(int)	
-func NewQPolygonWithSize(size int) *QPolygon {
+func NewQPolygonWithSize(size int32) *QPolygon {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),101000,101105,unsafe.Pointer(&size),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -18726,7 +18726,7 @@ func NewQPolygonWithRectClosed(r *QRect,closed bool) *QPolygon {
 	return _p
 } 
 //QPolygon::QPolygon(int,int const*)	
-func NewQPolygonWithNpointsPoints(nPoints int,points *int) *QPolygon {
+func NewQPolygonWithNpointsPoints(nPoints int32,points *int) *QPolygon {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),101000,101107,unsafe.Pointer(&nPoints),unsafe.Pointer(&points),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -18765,7 +18765,7 @@ func (q *QPolygon) Intersected(r *QPolygon) *QPolygon {
 	return _rp
 }	
 //QPolygon::point(int)
-func (q *QPolygon) Point(i int) *QPoint {
+func (q *QPolygon) Point(i int32) *QPoint {
 	var __rv uintptr
 	q.Drv(101000,101111,unsafe.Pointer(&i),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -18776,15 +18776,15 @@ func (q *QPolygon) Point(i int) *QPoint {
 	return _rp
 }	
 //QPolygon::point(int,int*,int*)
-func (q *QPolygon) PointWithIXY(i int,x *int,y *int)  {
+func (q *QPolygon) PointWithInt32XY(i int32,x *int32,y *int32)  {
 	q.Drv(101000,101112,unsafe.Pointer(&i),unsafe.Pointer(&x),unsafe.Pointer(&y),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPolygon::setPoint(int,QPoint const&)
-func (q *QPolygon) SetPointWithIndexPoint(index int,p *QPoint)  {
+func (q *QPolygon) SetPointWithIndexPoint(index int32,p *QPoint)  {
 	q.Drv(101000,101113,unsafe.Pointer(&index),Native(p),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPolygon::setPoint(int,int,int)
-func (q *QPolygon) SetPointWithIndexXY(index int,x int,y int)  {
+func (q *QPolygon) SetPointWithIndexXY(index int32,x int32,y int32)  {
 	q.Drv(101000,101114,unsafe.Pointer(&index),unsafe.Pointer(&x),unsafe.Pointer(&y),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPolygon::subtracted(QPolygon const&)
@@ -18803,7 +18803,7 @@ func (q *QPolygon) Translate(offset *QPoint)  {
 	q.Drv(101000,101116,Native(offset),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPolygon::translate(int,int)
-func (q *QPolygon) TranslateWithDxDy(dx int,dy int)  {
+func (q *QPolygon) TranslateWithDxDy(dx int32,dy int32)  {
 	q.Drv(101000,101117,unsafe.Pointer(&dx),unsafe.Pointer(&dy),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPolygon::translated(QPoint const&)
@@ -18818,7 +18818,7 @@ func (q *QPolygon) Translated(offset *QPoint) *QPolygon {
 	return _rp
 }	
 //QPolygon::translated(int,int)
-func (q *QPolygon) TranslatedWithDxDy(dx int,dy int) *QPolygon {
+func (q *QPolygon) TranslatedWithDxDy(dx int32,dy int32) *QPolygon {
 	var __rv uintptr
 	q.Drv(101000,101119,unsafe.Pointer(&dx),unsafe.Pointer(&dy),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -18900,7 +18900,7 @@ func NewQPolygonFWithPointfarray(v []*QPointF) *QPolygonF {
 	return _p
 } 
 //QPolygonF::QPolygonF(int)	
-func NewQPolygonFWithSize(size int) *QPolygonF {
+func NewQPolygonFWithSize(size int32) *QPolygonF {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),102000,102107,unsafe.Pointer(&size),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -19052,8 +19052,8 @@ func (q *QPrintEngine) Abort() bool {
 	return __rv
 }	
 //QPrintEngine::metric(QPaintDevice::PaintDeviceMetric)
-func (q *QPrintEngine) Metric(value QPaintDevice_PaintDeviceMetric) int {
-	var __rv int
+func (q *QPrintEngine) Metric(value QPaintDevice_PaintDeviceMetric) int32 {
+	var __rv int32
 	q.Drv(103000,103103,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -19288,8 +19288,8 @@ func (q *QPrinter) Abort() bool {
 	return __rv
 }	
 //QPrinter::actualNumCopies()
-func (q *QPrinter) ActualNumCopies() int {
-	var __rv int
+func (q *QPrinter) ActualNumCopies() int32 {
+	var __rv int32
 	q.Drv(104000,104106,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -19306,8 +19306,8 @@ func (q *QPrinter) ColorMode() QPrinter_ColorMode {
 	return __rv
 }	
 //QPrinter::copyCount()
-func (q *QPrinter) CopyCount() int {
-	var __rv int
+func (q *QPrinter) CopyCount() int32 {
+	var __rv int32
 	q.Drv(104000,104109,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -19318,8 +19318,8 @@ func (q *QPrinter) Creator() string {
 	return __rv
 }	
 //QPrinter::devType()
-func (q *QPrinter) DevType() int {
-	var __rv int
+func (q *QPrinter) DevType() int32 {
+	var __rv int32
 	q.Drv(104000,104111,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -19348,8 +19348,8 @@ func (q *QPrinter) FontEmbeddingEnabled() bool {
 	return __rv
 }	
 //QPrinter::fromPage()
-func (q *QPrinter) FromPage() int {
-	var __rv int
+func (q *QPrinter) FromPage() int32 {
+	var __rv int32
 	q.Drv(104000,104116,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -19376,8 +19376,8 @@ func (q *QPrinter) NewPage() bool {
 	return __rv
 }	
 //QPrinter::numCopies()
-func (q *QPrinter) NumCopies() int {
-	var __rv int
+func (q *QPrinter) NumCopies() int32 {
+	var __rv int32
 	q.Drv(104000,104121,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -19525,8 +19525,8 @@ func (q *QPrinter) PrinterState() QPrinter_PrinterState {
 	return __rv
 }	
 //QPrinter::resolution()
-func (q *QPrinter) Resolution() int {
-	var __rv int
+func (q *QPrinter) Resolution() int32 {
+	var __rv int32
 	q.Drv(104000,104140,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -19539,7 +19539,7 @@ func (q *QPrinter) SetColorMode(value QPrinter_ColorMode)  {
 	q.Drv(104000,104142,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPrinter::setCopyCount(int)
-func (q *QPrinter) SetCopyCount(value int)  {
+func (q *QPrinter) SetCopyCount(value int32)  {
 	q.Drv(104000,104143,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPrinter::setCreator(QString const&)
@@ -19563,7 +19563,7 @@ func (q *QPrinter) SetFontEmbeddingEnabled(enable bool)  {
 	q.Drv(104000,104148,unsafe.Pointer(&enable),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPrinter::setFromTo(int,int)
-func (q *QPrinter) SetFromTo(fromPage int,toPage int)  {
+func (q *QPrinter) SetFromTo(fromPage int32,toPage int32)  {
 	q.Drv(104000,104149,unsafe.Pointer(&fromPage),unsafe.Pointer(&toPage),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPrinter::setFullPage(bool)
@@ -19571,7 +19571,7 @@ func (q *QPrinter) SetFullPage(value bool)  {
 	q.Drv(104000,104150,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPrinter::setNumCopies(int)
-func (q *QPrinter) SetNumCopies(value int)  {
+func (q *QPrinter) SetNumCopies(value int32)  {
 	q.Drv(104000,104151,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPrinter::setOrientation(QPrinter::Orientation)
@@ -19623,12 +19623,12 @@ func (q *QPrinter) SetPrinterName(value string)  {
 	q.Drv(104000,104163,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPrinter::setResolution(int)
-func (q *QPrinter) SetResolution(value int)  {
+func (q *QPrinter) SetResolution(value int32)  {
 	q.Drv(104000,104164,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPrinter::supportedResolutions()
-func (q *QPrinter) SupportedResolutions() []int {
-	var __rv []int
+func (q *QPrinter) SupportedResolutions() []int32 {
+	var __rv []int32
 	q.Drv(104000,104165,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -19639,8 +19639,8 @@ func (q *QPrinter) SupportsMultipleCopies() bool {
 	return __rv
 }	
 //QPrinter::toPage()
-func (q *QPrinter) ToPage() int {
-	var __rv int
+func (q *QPrinter) ToPage() int32 {
+	var __rv int32
 	q.Drv(104000,104167,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -20270,7 +20270,7 @@ func NewQRectWithTopleftSize(topleft *QPoint,size *QSize) *QRect {
 	return _p
 } 
 //QRect::QRect(int,int,int,int)	
-func NewQRectWithLeftTopWidthHeight(left int,top int,width int,height int) *QRect {
+func NewQRectWithLeftTopWidthHeight(left int32,top int32,width int32,height int32) *QRect {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),110000,110106,unsafe.Pointer(&left),unsafe.Pointer(&top),unsafe.Pointer(&width),unsafe.Pointer(&height),nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -20281,11 +20281,11 @@ func NewQRectWithLeftTopWidthHeight(left int,top int,width int,height int) *QRec
 	return _p
 } 
 //QRect::adjust(int,int,int,int)
-func (q *QRect) Adjust(x1 int,y1 int,x2 int,y2 int)  {
+func (q *QRect) Adjust(x1 int32,y1 int32,x2 int32,y2 int32)  {
 	q.Drv(110000,110107,unsafe.Pointer(&x1),unsafe.Pointer(&y1),unsafe.Pointer(&x2),unsafe.Pointer(&y2),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRect::adjusted(int,int,int,int)
-func (q *QRect) Adjusted(x1 int,y1 int,x2 int,y2 int) *QRect {
+func (q *QRect) Adjusted(x1 int32,y1 int32,x2 int32,y2 int32) *QRect {
 	var __rv uintptr
 	q.Drv(110000,110108,unsafe.Pointer(&x1),unsafe.Pointer(&y1),unsafe.Pointer(&x2),unsafe.Pointer(&y2),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -20296,8 +20296,8 @@ func (q *QRect) Adjusted(x1 int,y1 int,x2 int,y2 int) *QRect {
 	return _rp
 }	
 //QRect::bottom()
-func (q *QRect) Bottom() int {
-	var __rv int
+func (q *QRect) Bottom() int32 {
+	var __rv int32
 	q.Drv(110000,110109,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -20359,28 +20359,28 @@ func (q *QRect) ContainsWithRectProper(r *QRect,proper bool) bool {
 	return __rv
 }	
 //QRect::contains(int,int)
-func (q *QRect) ContainsWithXY(x int,y int) bool {
+func (q *QRect) ContainsWithXY(x int32,y int32) bool {
 	var __rv bool
 	q.Drv(110000,110117,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QRect::contains(int,int,bool)
-func (q *QRect) ContainsWithXYProper(x int,y int,proper bool) bool {
+func (q *QRect) ContainsWithXYProper(x int32,y int32,proper bool) bool {
 	var __rv bool
 	q.Drv(110000,110118,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&proper),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QRect::getCoords(int*,int*,int*,int*)
-func (q *QRect) GetCoords(x1 *int,y1 *int,x2 *int,y2 *int)  {
+func (q *QRect) GetCoords(x1 *int32,y1 *int32,x2 *int32,y2 *int32)  {
 	q.Drv(110000,110119,unsafe.Pointer(&x1),unsafe.Pointer(&y1),unsafe.Pointer(&x2),unsafe.Pointer(&y2),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRect::getRect(int*,int*,int*,int*)
-func (q *QRect) GetRect(x *int,y *int,w *int,h *int)  {
+func (q *QRect) GetRect(x *int32,y *int32,w *int32,h *int32)  {
 	q.Drv(110000,110120,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRect::height()
-func (q *QRect) Height() int {
-	var __rv int
+func (q *QRect) Height() int32 {
+	var __rv int32
 	q.Drv(110000,110121,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -20420,13 +20420,13 @@ func (q *QRect) IsValid() bool {
 	return __rv
 }	
 //QRect::left()
-func (q *QRect) Left() int {
-	var __rv int
+func (q *QRect) Left() int32 {
+	var __rv int32
 	q.Drv(110000,110127,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QRect::moveBottom(int)
-func (q *QRect) MoveBottom(pos int)  {
+func (q *QRect) MoveBottom(pos int32)  {
 	q.Drv(110000,110128,unsafe.Pointer(&pos),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRect::moveBottomLeft(QPoint const&)
@@ -20442,11 +20442,11 @@ func (q *QRect) MoveCenter(p *QPoint)  {
 	q.Drv(110000,110131,Native(p),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRect::moveLeft(int)
-func (q *QRect) MoveLeft(pos int)  {
+func (q *QRect) MoveLeft(pos int32)  {
 	q.Drv(110000,110132,unsafe.Pointer(&pos),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRect::moveRight(int)
-func (q *QRect) MoveRight(pos int)  {
+func (q *QRect) MoveRight(pos int32)  {
 	q.Drv(110000,110133,unsafe.Pointer(&pos),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRect::moveTo(QPoint const&)
@@ -20454,11 +20454,11 @@ func (q *QRect) MoveTo(p *QPoint)  {
 	q.Drv(110000,110134,Native(p),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRect::moveTo(int,int)
-func (q *QRect) MoveToWithXY(x int,y int)  {
+func (q *QRect) MoveToWithXY(x int32,y int32)  {
 	q.Drv(110000,110135,unsafe.Pointer(&x),unsafe.Pointer(&y),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRect::moveTop(int)
-func (q *QRect) MoveTop(pos int)  {
+func (q *QRect) MoveTop(pos int32)  {
 	q.Drv(110000,110136,unsafe.Pointer(&pos),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRect::moveTopLeft(QPoint const&)
@@ -20481,13 +20481,13 @@ func (q *QRect) Normalized() *QRect {
 	return _rp
 }	
 //QRect::right()
-func (q *QRect) Right() int {
-	var __rv int
+func (q *QRect) Right() int32 {
+	var __rv int32
 	q.Drv(110000,110140,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QRect::setBottom(int)
-func (q *QRect) SetBottom(pos int)  {
+func (q *QRect) SetBottom(pos int32)  {
 	q.Drv(110000,110141,unsafe.Pointer(&pos),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRect::setBottomLeft(QPoint const&)
@@ -20499,23 +20499,23 @@ func (q *QRect) SetBottomRight(p *QPoint)  {
 	q.Drv(110000,110143,Native(p),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRect::setCoords(int,int,int,int)
-func (q *QRect) SetCoords(x1 int,y1 int,x2 int,y2 int)  {
+func (q *QRect) SetCoords(x1 int32,y1 int32,x2 int32,y2 int32)  {
 	q.Drv(110000,110144,unsafe.Pointer(&x1),unsafe.Pointer(&y1),unsafe.Pointer(&x2),unsafe.Pointer(&y2),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRect::setHeight(int)
-func (q *QRect) SetHeight(h int)  {
+func (q *QRect) SetHeight(h int32)  {
 	q.Drv(110000,110145,unsafe.Pointer(&h),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRect::setLeft(int)
-func (q *QRect) SetLeft(pos int)  {
+func (q *QRect) SetLeft(pos int32)  {
 	q.Drv(110000,110146,unsafe.Pointer(&pos),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRect::setRect(int,int,int,int)
-func (q *QRect) SetRect(x int,y int,w int,h int)  {
+func (q *QRect) SetRect(x int32,y int32,w int32,h int32)  {
 	q.Drv(110000,110147,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRect::setRight(int)
-func (q *QRect) SetRight(pos int)  {
+func (q *QRect) SetRight(pos int32)  {
 	q.Drv(110000,110148,unsafe.Pointer(&pos),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRect::setSize(QSize const&)
@@ -20523,7 +20523,7 @@ func (q *QRect) SetSize(s *QSize)  {
 	q.Drv(110000,110149,Native(s),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRect::setTop(int)
-func (q *QRect) SetTop(pos int)  {
+func (q *QRect) SetTop(pos int32)  {
 	q.Drv(110000,110150,unsafe.Pointer(&pos),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRect::setTopLeft(QPoint const&)
@@ -20535,15 +20535,15 @@ func (q *QRect) SetTopRight(p *QPoint)  {
 	q.Drv(110000,110152,Native(p),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRect::setWidth(int)
-func (q *QRect) SetWidth(w int)  {
+func (q *QRect) SetWidth(w int32)  {
 	q.Drv(110000,110153,unsafe.Pointer(&w),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRect::setX(int)
-func (q *QRect) SetX(x int)  {
+func (q *QRect) SetX(x int32)  {
 	q.Drv(110000,110154,unsafe.Pointer(&x),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRect::setY(int)
-func (q *QRect) SetY(y int)  {
+func (q *QRect) SetY(y int32)  {
 	q.Drv(110000,110155,unsafe.Pointer(&y),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRect::size()
@@ -20558,8 +20558,8 @@ func (q *QRect) Size() *QSize {
 	return _rp
 }	
 //QRect::top()
-func (q *QRect) Top() int {
-	var __rv int
+func (q *QRect) Top() int32 {
+	var __rv int32
 	q.Drv(110000,110157,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -20590,7 +20590,7 @@ func (q *QRect) Translate(p *QPoint)  {
 	q.Drv(110000,110160,Native(p),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRect::translate(int,int)
-func (q *QRect) TranslateWithDxDy(dx int,dy int)  {
+func (q *QRect) TranslateWithDxDy(dx int32,dy int32)  {
 	q.Drv(110000,110161,unsafe.Pointer(&dx),unsafe.Pointer(&dy),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRect::translated(QPoint const&)
@@ -20605,7 +20605,7 @@ func (q *QRect) Translated(p *QPoint) *QRect {
 	return _rp
 }	
 //QRect::translated(int,int)
-func (q *QRect) TranslatedWithDxDy(dx int,dy int) *QRect {
+func (q *QRect) TranslatedWithDxDy(dx int32,dy int32) *QRect {
 	var __rv uintptr
 	q.Drv(110000,110163,unsafe.Pointer(&dx),unsafe.Pointer(&dy),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -20627,20 +20627,20 @@ func (q *QRect) United(other *QRect) *QRect {
 	return _rp
 }	
 //QRect::width()
-func (q *QRect) Width() int {
-	var __rv int
+func (q *QRect) Width() int32 {
+	var __rv int32
 	q.Drv(110000,110165,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QRect::x()
-func (q *QRect) X() int {
-	var __rv int
+func (q *QRect) X() int32 {
+	var __rv int32
 	q.Drv(110000,110166,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QRect::y()
-func (q *QRect) Y() int {
-	var __rv int
+func (q *QRect) Y() int32 {
+	var __rv int32
 	q.Drv(110000,110167,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -21145,14 +21145,14 @@ func (q *QRegExp) Cap() string {
 	return __rv
 }	
 //QRegExp::cap(int)
-func (q *QRegExp) CapWithNth(nth int) string {
+func (q *QRegExp) CapWithNth(nth int32) string {
 	var __rv string
 	q.Drv(112000,112106,unsafe.Pointer(&nth),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QRegExp::captureCount()
-func (q *QRegExp) CaptureCount() int {
-	var __rv int
+func (q *QRegExp) CaptureCount() int32 {
+	var __rv int32
 	q.Drv(112000,112107,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -21193,14 +21193,14 @@ func (q *QRegExp) ExactMatch(str string) bool {
 	return __rv
 }	
 //QRegExp::indexIn(QString const&)
-func (q *QRegExp) IndexIn(str string) int {
-	var __rv int
+func (q *QRegExp) IndexIn(str string) int32 {
+	var __rv int32
 	q.Drv(112000,112113,unsafe.Pointer(&str),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QRegExp::indexIn(QString const&,int,QRegExp::CaretMode)
-func (q *QRegExp) IndexInWithTextOffsetCaretmode(str string,offset int,caretMode QRegExp_CaretMode) int {
-	var __rv int
+func (q *QRegExp) IndexInWithTextOffsetCaretmode(str string,offset int32,caretMode QRegExp_CaretMode) int32 {
+	var __rv int32
 	q.Drv(112000,112114,unsafe.Pointer(&str),unsafe.Pointer(&offset),unsafe.Pointer(&caretMode),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -21223,20 +21223,20 @@ func (q *QRegExp) IsValid() bool {
 	return __rv
 }	
 //QRegExp::lastIndexIn(QString const&)
-func (q *QRegExp) LastIndexIn(str string) int {
-	var __rv int
+func (q *QRegExp) LastIndexIn(str string) int32 {
+	var __rv int32
 	q.Drv(112000,112118,unsafe.Pointer(&str),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QRegExp::lastIndexIn(QString const&,int,QRegExp::CaretMode)
-func (q *QRegExp) LastIndexInWithTextOffsetCaretmode(str string,offset int,caretMode QRegExp_CaretMode) int {
-	var __rv int
+func (q *QRegExp) LastIndexInWithTextOffsetCaretmode(str string,offset int32,caretMode QRegExp_CaretMode) int32 {
+	var __rv int32
 	q.Drv(112000,112119,unsafe.Pointer(&str),unsafe.Pointer(&offset),unsafe.Pointer(&caretMode),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QRegExp::matchedLength()
-func (q *QRegExp) MatchedLength() int {
-	var __rv int
+func (q *QRegExp) MatchedLength() int32 {
+	var __rv int32
 	q.Drv(112000,112120,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -21253,14 +21253,14 @@ func (q *QRegExp) PatternSyntax() QRegExp_PatternSyntax {
 	return __rv
 }	
 //QRegExp::pos()
-func (q *QRegExp) Pos() int {
-	var __rv int
+func (q *QRegExp) Pos() int32 {
+	var __rv int32
 	q.Drv(112000,112123,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QRegExp::pos(int)
-func (q *QRegExp) PosWithNth(nth int) int {
-	var __rv int
+func (q *QRegExp) PosWithNth(nth int32) int32 {
+	var __rv int32
 	q.Drv(112000,112124,unsafe.Pointer(&nth),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -21347,7 +21347,7 @@ func NewQRegionWithRectType(r *QRect,t QRegion_RegionType) *QRegion {
 	return _p
 } 
 //QRegion::QRegion(int,int,int,int,QRegion::RegionType)	
-func NewQRegionWithXYWidthHeightType(x int,y int,w int,h int,t QRegion_RegionType) *QRegion {
+func NewQRegionWithXYWidthHeightType(x int32,y int32,w int32,h int32,t QRegion_RegionType) *QRegion {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),113000,113107,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&t),nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -21421,8 +21421,8 @@ func (q *QRegion) IsEmpty() bool {
 	return __rv
 }	
 //QRegion::rectCount()
-func (q *QRegion) RectCount() int {
-	var __rv int
+func (q *QRegion) RectCount() int32 {
+	var __rv int32
 	q.Drv(113000,113116,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -21452,7 +21452,7 @@ func (q *QRegion) Translate(p *QPoint)  {
 	q.Drv(113000,113120,Native(p),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRegion::translate(int,int)
-func (q *QRegion) TranslateWithDxDy(dx int,dy int)  {
+func (q *QRegion) TranslateWithDxDy(dx int32,dy int32)  {
 	q.Drv(113000,113121,unsafe.Pointer(&dx),unsafe.Pointer(&dy),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRegion::translated(QPoint const&)
@@ -21467,7 +21467,7 @@ func (q *QRegion) Translated(p *QPoint) *QRegion {
 	return _rp
 }	
 //QRegion::translated(int,int)
-func (q *QRegion) TranslatedWithDxDy(dx int,dy int) *QRegion {
+func (q *QRegion) TranslatedWithDxDy(dx int32,dy int32) *QRegion {
 	var __rv uintptr
 	q.Drv(113000,113123,unsafe.Pointer(&dx),unsafe.Pointer(&dy),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -21516,25 +21516,25 @@ type QResHelp struct {
 	BaseDrv
 }
 //QResHelp::registerResourceData(int,uchar const*,uchar const*,uchar const*)	
-func QResHelpRegisterResourceData(version int,tree *byte,name *byte,data *byte) bool {
+func QResHelpRegisterResourceData(version int32,tree *byte,name *byte,data *byte) bool {
 	var __rv bool
 	DirectQtDrv(nil,114000,114102,unsafe.Pointer(&version),unsafe.Pointer(&tree),unsafe.Pointer(&name),unsafe.Pointer(&data),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QResHelp::registerResourceData(int,uchar const*,uchar const*,uchar const*)
-func (q *QResHelp) RegisterResourceData(version int,tree *byte,name *byte,data *byte) bool {
+func (q *QResHelp) RegisterResourceData(version int32,tree *byte,name *byte,data *byte) bool {
 	var __rv bool
 	q.Drv(114000,114102,unsafe.Pointer(&version),unsafe.Pointer(&tree),unsafe.Pointer(&name),unsafe.Pointer(&data),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QResHelp::unregisterResourceData(int,uchar const*,uchar const*,uchar const*)	
-func QResHelpUnregisterResourceData(version int,tree *byte,name *byte,data *byte) bool {
+func QResHelpUnregisterResourceData(version int32,tree *byte,name *byte,data *byte) bool {
 	var __rv bool
 	DirectQtDrv(nil,114000,114103,unsafe.Pointer(&version),unsafe.Pointer(&tree),unsafe.Pointer(&name),unsafe.Pointer(&data),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QResHelp::unregisterResourceData(int,uchar const*,uchar const*,uchar const*)
-func (q *QResHelp) UnregisterResourceData(version int,tree *byte,name *byte,data *byte) bool {
+func (q *QResHelp) UnregisterResourceData(version int32,tree *byte,name *byte,data *byte) bool {
 	var __rv bool
 	q.Drv(114000,114103,unsafe.Pointer(&version),unsafe.Pointer(&tree),unsafe.Pointer(&name),unsafe.Pointer(&data),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -21781,7 +21781,7 @@ type QShortcutEvent struct {
 	QEvent
 }
 //QShortcutEvent::QShortcutEvent(QKeySequence const&,int,bool)	
-func NewQShortcutEvent(key *QKeySequence,id int,ambiguous bool) *QShortcutEvent {
+func NewQShortcutEvent(key *QKeySequence,id int32,ambiguous bool) *QShortcutEvent {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),117000,117102,Native(key),unsafe.Pointer(&id),unsafe.Pointer(&ambiguous),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -21809,8 +21809,8 @@ func (q *QShortcutEvent) Key() *QKeySequence {
 	return _rp
 }	
 //QShortcutEvent::shortcutId()
-func (q *QShortcutEvent) ShortcutId() int {
-	var __rv int
+func (q *QShortcutEvent) ShortcutId() int32 {
+	var __rv int32
 	q.Drv(117000,117105,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -21858,7 +21858,7 @@ func NewQSizeCopy(other *QSize) *QSize {
 	return _p
 } 
 //QSize::QSize(int,int)	
-func NewQSizeWithWidthHeight(w int,h int) *QSize {
+func NewQSizeWithWidthHeight(w int32,h int32) *QSize {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),119000,119104,unsafe.Pointer(&w),unsafe.Pointer(&h),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -21891,8 +21891,8 @@ func (q *QSize) ExpandedTo(value *QSize) *QSize {
 	return _rp
 }	
 //QSize::height()
-func (q *QSize) Height() int {
-	var __rv int
+func (q *QSize) Height() int32 {
+	var __rv int32
 	q.Drv(119000,119107,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -21915,14 +21915,14 @@ func (q *QSize) IsValid() bool {
 	return __rv
 }	
 //QSize::rheight()
-func (q *QSize) Rheight() *int {
-	var __rv *int
+func (q *QSize) Rheight() *int32 {
+	var __rv *int32
 	q.Drv(119000,119111,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QSize::rwidth()
-func (q *QSize) Rwidth() *int {
-	var __rv *int
+func (q *QSize) Rwidth() *int32 {
+	var __rv *int32
 	q.Drv(119000,119112,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -21931,15 +21931,15 @@ func (q *QSize) ScaleWithSizeMode(s *QSize,mode Qt_AspectRatioMode)  {
 	q.Drv(119000,119113,Native(s),unsafe.Pointer(&mode),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSize::scale(int,int,Qt::AspectRatioMode)
-func (q *QSize) ScaleWithWidthHeightMode(w int,h int,mode Qt_AspectRatioMode)  {
+func (q *QSize) ScaleWithWidthHeightMode(w int32,h int32,mode Qt_AspectRatioMode)  {
 	q.Drv(119000,119114,unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&mode),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSize::setHeight(int)
-func (q *QSize) SetHeight(h int)  {
+func (q *QSize) SetHeight(h int32)  {
 	q.Drv(119000,119115,unsafe.Pointer(&h),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSize::setWidth(int)
-func (q *QSize) SetWidth(w int)  {
+func (q *QSize) SetWidth(w int32)  {
 	q.Drv(119000,119116,unsafe.Pointer(&w),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSize::transpose()
@@ -21947,8 +21947,8 @@ func (q *QSize) Transpose()  {
 	q.Drv(119000,119117,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSize::width()
-func (q *QSize) Width() int {
-	var __rv int
+func (q *QSize) Width() int32 {
+	var __rv int32
 	q.Drv(119000,119118,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -22221,8 +22221,8 @@ func (q *QSizePolicy) HorizontalPolicy() QSizePolicy_Policy {
 	return __rv
 }	
 //QSizePolicy::horizontalStretch()
-func (q *QSizePolicy) HorizontalStretch() int {
-	var __rv int
+func (q *QSizePolicy) HorizontalStretch() int32 {
+	var __rv int32
 	q.Drv(121000,121110,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -22261,8 +22261,8 @@ func (q *QSizePolicy) VerticalPolicy() QSizePolicy_Policy {
 	return __rv
 }	
 //QSizePolicy::verticalStretch()
-func (q *QSizePolicy) VerticalStretch() int {
-	var __rv int
+func (q *QSizePolicy) VerticalStretch() int32 {
+	var __rv int32
 	q.Drv(121000,121119,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -22272,7 +22272,7 @@ type QSpacerItem struct {
 	QLayoutItem
 }
 //QSpacerItem::QSpacerItem(int,int,QSizePolicy::Policy,QSizePolicy::Policy)	
-func NewQSpacerItem(w int,h int,hData QSizePolicy_Policy,vData QSizePolicy_Policy) *QSpacerItem {
+func NewQSpacerItem(w int32,h int32,hData QSizePolicy_Policy,vData QSizePolicy_Policy) *QSpacerItem {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),122000,122102,unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&hData),unsafe.Pointer(&vData),nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -22283,7 +22283,7 @@ func NewQSpacerItem(w int,h int,hData QSizePolicy_Policy,vData QSizePolicy_Polic
 	return _p
 } 
 //QSpacerItem::changeSize(int,int,QSizePolicy::Policy,QSizePolicy::Policy)
-func (q *QSpacerItem) ChangeSize(w int,h int,hData QSizePolicy_Policy,vData QSizePolicy_Policy)  {
+func (q *QSpacerItem) ChangeSize(w int32,h int32,hData QSizePolicy_Policy,vData QSizePolicy_Policy)  {
 	q.Drv(122000,122103,unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&hData),unsafe.Pointer(&vData),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSpacerItem::expandingDirections()
@@ -22402,7 +22402,7 @@ func NewQStandardItemWithIconText(icon *QIcon,text string) *QStandardItem {
 	return _p
 } 
 //QStandardItem::QStandardItem(int,int)	
-func NewQStandardItemWithRowsColumns(rows int,columns int) *QStandardItem {
+func NewQStandardItemWithRowsColumns(rows int32,columns int32) *QStandardItem {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),123000,123105,unsafe.Pointer(&rows),unsafe.Pointer(&columns),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -22458,7 +22458,7 @@ func (q *QStandardItem) CheckState() Qt_CheckState {
 	return __rv
 }	
 //QStandardItem::child(int)
-func (q *QStandardItem) Child(row int) *QStandardItem {
+func (q *QStandardItem) Child(row int32) *QStandardItem {
 	var __rv uintptr
 	q.Drv(123000,123114,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -22469,7 +22469,7 @@ func (q *QStandardItem) Child(row int) *QStandardItem {
 	return _rp
 }	
 //QStandardItem::child(int,int)
-func (q *QStandardItem) ChildWithRowColumn(row int,column int) *QStandardItem {
+func (q *QStandardItem) ChildWithRowColumn(row int32,column int32) *QStandardItem {
 	var __rv uintptr
 	q.Drv(123000,123115,unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -22491,14 +22491,14 @@ func (q *QStandardItem) Clone() *QStandardItem {
 	return _rp
 }	
 //QStandardItem::column()
-func (q *QStandardItem) Column() int {
-	var __rv int
+func (q *QStandardItem) Column() int32 {
+	var __rv int32
 	q.Drv(123000,123117,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStandardItem::columnCount()
-func (q *QStandardItem) ColumnCount() int {
-	var __rv int
+func (q *QStandardItem) ColumnCount() int32 {
+	var __rv int32
 	q.Drv(123000,123118,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -22514,7 +22514,7 @@ func (q *QStandardItem) Data() *QVariant {
 	return _rp
 }	
 //QStandardItem::data(int)
-func (q *QStandardItem) DataWithRole(role int) *QVariant {
+func (q *QStandardItem) DataWithRole(role int32) *QVariant {
 	var __rv uintptr
 	q.Drv(123000,123120,unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -22581,27 +22581,27 @@ func (q *QStandardItem) Index() *QModelIndex {
 	return _rp
 }	
 //QStandardItem::insertColumn(int,QList<QStandardItem*> const&)
-func (q *QStandardItem) InsertColumn(column int,items []*QStandardItem)  {
+func (q *QStandardItem) InsertColumn(column int32,items []*QStandardItem)  {
 	q.Drv(123000,123127,unsafe.Pointer(&column),unsafe.Pointer(&items),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItem::insertColumns(int,int)
-func (q *QStandardItem) InsertColumns(column int,count int)  {
+func (q *QStandardItem) InsertColumns(column int32,count int32)  {
 	q.Drv(123000,123128,unsafe.Pointer(&column),unsafe.Pointer(&count),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItem::insertRow(int,QList<QStandardItem*> const&)
-func (q *QStandardItem) InsertRowWithRowItems(row int,items []*QStandardItem)  {
+func (q *QStandardItem) InsertRowWithRowItems(row int32,items []*QStandardItem)  {
 	q.Drv(123000,123129,unsafe.Pointer(&row),unsafe.Pointer(&items),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItem::insertRow(int,QStandardItem*)
-func (q *QStandardItem) InsertRowWithRowItem(row int,item *QStandardItem)  {
+func (q *QStandardItem) InsertRowWithRowItem(row int32,item *QStandardItem)  {
 	q.Drv(123000,123130,unsafe.Pointer(&row),Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItem::insertRows(int,QList<QStandardItem*> const&)
-func (q *QStandardItem) InsertRowsWithRowItems(row int,items []*QStandardItem)  {
+func (q *QStandardItem) InsertRowsWithRowItems(row int32,items []*QStandardItem)  {
 	q.Drv(123000,123131,unsafe.Pointer(&row),unsafe.Pointer(&items),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItem::insertRows(int,int)
-func (q *QStandardItem) InsertRowsWithRowCount(row int,count int)  {
+func (q *QStandardItem) InsertRowsWithRowCount(row int32,count int32)  {
 	q.Drv(123000,123132,unsafe.Pointer(&row),unsafe.Pointer(&count),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItem::isCheckable()
@@ -22669,30 +22669,30 @@ func (q *QStandardItem) Parent() *QStandardItem {
 	return _rp
 }	
 //QStandardItem::removeColumn(int)
-func (q *QStandardItem) RemoveColumn(column int)  {
+func (q *QStandardItem) RemoveColumn(column int32)  {
 	q.Drv(123000,123142,unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItem::removeColumns(int,int)
-func (q *QStandardItem) RemoveColumns(column int,count int)  {
+func (q *QStandardItem) RemoveColumns(column int32,count int32)  {
 	q.Drv(123000,123143,unsafe.Pointer(&column),unsafe.Pointer(&count),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItem::removeRow(int)
-func (q *QStandardItem) RemoveRow(row int)  {
+func (q *QStandardItem) RemoveRow(row int32)  {
 	q.Drv(123000,123144,unsafe.Pointer(&row),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItem::removeRows(int,int)
-func (q *QStandardItem) RemoveRows(row int,count int)  {
+func (q *QStandardItem) RemoveRows(row int32,count int32)  {
 	q.Drv(123000,123145,unsafe.Pointer(&row),unsafe.Pointer(&count),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItem::row()
-func (q *QStandardItem) Row() int {
-	var __rv int
+func (q *QStandardItem) Row() int32 {
+	var __rv int32
 	q.Drv(123000,123146,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStandardItem::rowCount()
-func (q *QStandardItem) RowCount() int {
-	var __rv int
+func (q *QStandardItem) RowCount() int32 {
+	var __rv int32
 	q.Drv(123000,123147,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -22717,15 +22717,15 @@ func (q *QStandardItem) SetCheckable(checkable bool)  {
 	q.Drv(123000,123152,unsafe.Pointer(&checkable),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItem::setChild(int,QStandardItem*)
-func (q *QStandardItem) SetChildWithRowItem(row int,item *QStandardItem)  {
+func (q *QStandardItem) SetChildWithRowItem(row int32,item *QStandardItem)  {
 	q.Drv(123000,123153,unsafe.Pointer(&row),Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItem::setChild(int,int,QStandardItem*)
-func (q *QStandardItem) SetChildWithRowColumnItem(row int,column int,item *QStandardItem)  {
+func (q *QStandardItem) SetChildWithRowColumnItem(row int32,column int32,item *QStandardItem)  {
 	q.Drv(123000,123154,unsafe.Pointer(&row),unsafe.Pointer(&column),Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItem::setColumnCount(int)
-func (q *QStandardItem) SetColumnCount(columns int)  {
+func (q *QStandardItem) SetColumnCount(columns int32)  {
 	q.Drv(123000,123155,unsafe.Pointer(&columns),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItem::setData(QVariant const&)
@@ -22733,7 +22733,7 @@ func (q *QStandardItem) SetData(value *QVariant)  {
 	q.Drv(123000,123156,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItem::setData(QVariant const&,int)
-func (q *QStandardItem) SetDataWithValueRole(value *QVariant,role int)  {
+func (q *QStandardItem) SetDataWithValueRole(value *QVariant,role int32)  {
 	q.Drv(123000,123157,Native(value),unsafe.Pointer(&role),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItem::setDragEnabled(bool)
@@ -22769,7 +22769,7 @@ func (q *QStandardItem) SetIcon(icon *QIcon)  {
 	q.Drv(123000,123165,Native(icon),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItem::setRowCount(int)
-func (q *QStandardItem) SetRowCount(rows int)  {
+func (q *QStandardItem) SetRowCount(rows int32)  {
 	q.Drv(123000,123166,unsafe.Pointer(&rows),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItem::setSelectable(bool)
@@ -22816,11 +22816,11 @@ func (q *QStandardItem) SizeHint() *QSize {
 	return _rp
 }	
 //QStandardItem::sortChildren(int)
-func (q *QStandardItem) SortChildren(column int)  {
+func (q *QStandardItem) SortChildren(column int32)  {
 	q.Drv(123000,123176,unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItem::sortChildren(int,Qt::SortOrder)
-func (q *QStandardItem) SortChildrenWithColumnOrder(column int,order Qt_SortOrder)  {
+func (q *QStandardItem) SortChildrenWithColumnOrder(column int32,order Qt_SortOrder)  {
 	q.Drv(123000,123177,unsafe.Pointer(&column),unsafe.Pointer(&order),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItem::statusTip()
@@ -22830,7 +22830,7 @@ func (q *QStandardItem) StatusTip() string {
 	return __rv
 }	
 //QStandardItem::takeChild(int)
-func (q *QStandardItem) TakeChild(row int) *QStandardItem {
+func (q *QStandardItem) TakeChild(row int32) *QStandardItem {
 	var __rv uintptr
 	q.Drv(123000,123179,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -22841,7 +22841,7 @@ func (q *QStandardItem) TakeChild(row int) *QStandardItem {
 	return _rp
 }	
 //QStandardItem::takeChild(int,int)
-func (q *QStandardItem) TakeChildWithRowColumn(row int,column int) *QStandardItem {
+func (q *QStandardItem) TakeChildWithRowColumn(row int32,column int32) *QStandardItem {
 	var __rv uintptr
 	q.Drv(123000,123180,unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -22852,13 +22852,13 @@ func (q *QStandardItem) TakeChildWithRowColumn(row int,column int) *QStandardIte
 	return _rp
 }	
 //QStandardItem::takeColumn(int)
-func (q *QStandardItem) TakeColumn(column int) []*QStandardItem {
+func (q *QStandardItem) TakeColumn(column int32) []*QStandardItem {
 	var __rv []*QStandardItem
 	q.Drv(123000,123181,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStandardItem::takeRow(int)
-func (q *QStandardItem) TakeRow(row int) []*QStandardItem {
+func (q *QStandardItem) TakeRow(row int32) []*QStandardItem {
 	var __rv []*QStandardItem
 	q.Drv(123000,123182,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -22882,8 +22882,8 @@ func (q *QStandardItem) ToolTip() string {
 	return __rv
 }	
 //QStandardItem::type()
-func (q *QStandardItem) Type() int {
-	var __rv int
+func (q *QStandardItem) Type() int32 {
+	var __rv int32
 	q.Drv(123000,123186,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -22899,7 +22899,7 @@ type QStateMachineSignalEvent struct {
 	QEvent
 }
 //QStateMachine::SignalEvent::SignalEvent(QObject*,int,QList<QVariant> const&)	
-func NewQStateMachineSignalEvent(sender QObjectInterface,signalIndex int,arguments []*QVariant) *QStateMachineSignalEvent {
+func NewQStateMachineSignalEvent(sender QObjectInterface,signalIndex int32,arguments []*QVariant) *QStateMachineSignalEvent {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),124000,124102,Native(sender),unsafe.Pointer(&signalIndex),unsafe.Pointer(&arguments),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -22927,8 +22927,8 @@ func (q *QStateMachineSignalEvent) Sender() *QObject {
 	return _rp
 }	
 //QStateMachine::SignalEvent::signalIndex()
-func (q *QStateMachineSignalEvent) SignalIndex() int {
-	var __rv int
+func (q *QStateMachineSignalEvent) SignalIndex() int32 {
+	var __rv int32
 	q.Drv(124000,124105,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -23149,7 +23149,7 @@ func NewQStringMatcherWithPatternCs(pattern string,cs Qt_CaseSensitivity) *QStri
 	return _p
 } 
 //QStringMatcher::QStringMatcher(QChar const*,int,Qt::CaseSensitivity)	
-func NewQStringMatcherWithUcLenCs(uc *rune,len int,cs Qt_CaseSensitivity) *QStringMatcher {
+func NewQStringMatcherWithUcLenCs(uc *rune,len int32,cs Qt_CaseSensitivity) *QStringMatcher {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),128000,128105,unsafe.Pointer(&uc),unsafe.Pointer(&len),unsafe.Pointer(&cs),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -23166,20 +23166,20 @@ func (q *QStringMatcher) CaseSensitivity() Qt_CaseSensitivity {
 	return __rv
 }	
 //QStringMatcher::indexIn(QString const&)
-func (q *QStringMatcher) IndexIn(str string) int {
-	var __rv int
+func (q *QStringMatcher) IndexIn(str string) int32 {
+	var __rv int32
 	q.Drv(128000,128107,unsafe.Pointer(&str),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStringMatcher::indexIn(QString const&,int)
-func (q *QStringMatcher) IndexInWithTextIfrom(str string,from int) int {
-	var __rv int
+func (q *QStringMatcher) IndexInWithTextIfrom(str string,from int32) int32 {
+	var __rv int32
 	q.Drv(128000,128108,unsafe.Pointer(&str),unsafe.Pointer(&from),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStringMatcher::indexIn(QChar const*,int,int)
-func (q *QStringMatcher) IndexInWithStrLengthIfrom(str *rune,length int,from int) int {
-	var __rv int
+func (q *QStringMatcher) IndexInWithStrLengthIfrom(str *rune,length int32,from int32) int32 {
+	var __rv int32
 	q.Drv(128000,128109,unsafe.Pointer(&str),unsafe.Pointer(&length),unsafe.Pointer(&from),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -23281,7 +23281,7 @@ func NewQStyleHintReturn() *QStyleHintReturn {
 	return _p
 } 
 //QStyleHintReturn::QStyleHintReturn(int,int)	
-func NewQStyleHintReturnWithVersionType(version int,_type int) *QStyleHintReturn {
+func NewQStyleHintReturnWithVersionType(version int32,_type int32) *QStyleHintReturn {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),130000,130103,unsafe.Pointer(&version),unsafe.Pointer(&_type),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -23394,11 +23394,11 @@ func (q *QStylePainter) BeginWithPaintDeviceWidget(pd QPaintDeviceInterface,w QW
 	return __rv
 }	
 //QStylePainter::drawItemPixmap(QRect const&,int,QPixmap const&)
-func (q *QStylePainter) DrawItemPixmap(r *QRect,flags int,pixmap *QPixmap)  {
+func (q *QStylePainter) DrawItemPixmap(r *QRect,flags int32,pixmap *QPixmap)  {
 	q.Drv(133000,133107,Native(r),unsafe.Pointer(&flags),Native(pixmap),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStylePainter::drawItemText(QRect const&,int,QPalette const&,bool,QString const&,QPalette::ColorRole)
-func (q *QStylePainter) DrawItemText(r *QRect,flags int,pal *QPalette,enabled bool,text string,textRole QPalette_ColorRole)  {
+func (q *QStylePainter) DrawItemText(r *QRect,flags int32,pal *QPalette,enabled bool,text string,textRole QPalette_ColorRole)  {
 	q.Drv(133000,133108,Native(r),unsafe.Pointer(&flags),Native(pal),unsafe.Pointer(&enabled),unsafe.Pointer(&text),unsafe.Pointer(&textRole),nil,nil,nil,nil,nil,nil)
 }	
 //QStylePainter::style()
@@ -23446,7 +23446,7 @@ func NewQTableWidgetItemCopy(other *QTableWidgetItem) *QTableWidgetItem {
 	return _p
 } 
 //QTableWidgetItem::QTableWidgetItem(int)	
-func NewQTableWidgetItemWithType(_type int) *QTableWidgetItem {
+func NewQTableWidgetItemWithType(_type int32) *QTableWidgetItem {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),134000,134104,unsafe.Pointer(&_type),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -23457,7 +23457,7 @@ func NewQTableWidgetItemWithType(_type int) *QTableWidgetItem {
 	return _p
 } 
 //QTableWidgetItem::QTableWidgetItem(QString const&,int)	
-func NewQTableWidgetItemWithTextType(text string,_type int) *QTableWidgetItem {
+func NewQTableWidgetItemWithTextType(text string,_type int32) *QTableWidgetItem {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),134000,134105,unsafe.Pointer(&text),unsafe.Pointer(&_type),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -23468,7 +23468,7 @@ func NewQTableWidgetItemWithTextType(text string,_type int) *QTableWidgetItem {
 	return _p
 } 
 //QTableWidgetItem::QTableWidgetItem(QIcon const&,QString const&,int)	
-func NewQTableWidgetItemWithIconTextType(icon *QIcon,text string,_type int) *QTableWidgetItem {
+func NewQTableWidgetItemWithIconTextType(icon *QIcon,text string,_type int32) *QTableWidgetItem {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),134000,134106,Native(icon),unsafe.Pointer(&text),unsafe.Pointer(&_type),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -23518,13 +23518,13 @@ func (q *QTableWidgetItem) Clone() *QTableWidgetItem {
 	return _rp
 }	
 //QTableWidgetItem::column()
-func (q *QTableWidgetItem) Column() int {
-	var __rv int
+func (q *QTableWidgetItem) Column() int32 {
+	var __rv int32
 	q.Drv(134000,134111,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTableWidgetItem::data(int)
-func (q *QTableWidgetItem) Data(role int) *QVariant {
+func (q *QTableWidgetItem) Data(role int32) *QVariant {
 	var __rv uintptr
 	q.Drv(134000,134112,unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -23580,8 +23580,8 @@ func (q *QTableWidgetItem) IsSelected() bool {
 	return __rv
 }	
 //QTableWidgetItem::row()
-func (q *QTableWidgetItem) Row() int {
-	var __rv int
+func (q *QTableWidgetItem) Row() int32 {
+	var __rv int32
 	q.Drv(134000,134118,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -23598,7 +23598,7 @@ func (q *QTableWidgetItem) SetCheckState(state Qt_CheckState)  {
 	q.Drv(134000,134121,unsafe.Pointer(&state),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidgetItem::setData(int,QVariant const&)
-func (q *QTableWidgetItem) SetData(role int,value *QVariant)  {
+func (q *QTableWidgetItem) SetData(role int32,value *QVariant)  {
 	q.Drv(134000,134122,unsafe.Pointer(&role),Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidgetItem::setFlags(QFlags<Qt::ItemFlag>)
@@ -23634,7 +23634,7 @@ func (q *QTableWidgetItem) SetText(text string)  {
 	q.Drv(134000,134130,unsafe.Pointer(&text),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidgetItem::setTextAlignment(int)
-func (q *QTableWidgetItem) SetTextAlignment(alignment int)  {
+func (q *QTableWidgetItem) SetTextAlignment(alignment int32)  {
 	q.Drv(134000,134131,unsafe.Pointer(&alignment),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidgetItem::setTextColor(QColor const&)
@@ -23684,8 +23684,8 @@ func (q *QTableWidgetItem) Text() string {
 	return __rv
 }	
 //QTableWidgetItem::textAlignment()
-func (q *QTableWidgetItem) TextAlignment() int {
-	var __rv int
+func (q *QTableWidgetItem) TextAlignment() int32 {
+	var __rv int32
 	q.Drv(134000,134139,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -23707,8 +23707,8 @@ func (q *QTableWidgetItem) ToolTip() string {
 	return __rv
 }	
 //QTableWidgetItem::type()
-func (q *QTableWidgetItem) Type() int {
-	var __rv int
+func (q *QTableWidgetItem) Type() int32 {
+	var __rv int32
 	q.Drv(134000,134142,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -23746,7 +23746,7 @@ func NewQTableWidgetSelectionRangeCopy(other *QTableWidgetSelectionRange) *QTabl
 	return _p
 } 
 //QTableWidgetSelectionRange::QTableWidgetSelectionRange(int,int,int,int)	
-func NewQTableWidgetSelectionRangeWithTopLeftBottomRight(top int,left int,bottom int,right int) *QTableWidgetSelectionRange {
+func NewQTableWidgetSelectionRangeWithTopLeftBottomRight(top int32,left int32,bottom int32,right int32) *QTableWidgetSelectionRange {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),135000,135104,unsafe.Pointer(&top),unsafe.Pointer(&left),unsafe.Pointer(&bottom),unsafe.Pointer(&right),nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -23757,38 +23757,38 @@ func NewQTableWidgetSelectionRangeWithTopLeftBottomRight(top int,left int,bottom
 	return _p
 } 
 //QTableWidgetSelectionRange::bottomRow()
-func (q *QTableWidgetSelectionRange) BottomRow() int {
-	var __rv int
+func (q *QTableWidgetSelectionRange) BottomRow() int32 {
+	var __rv int32
 	q.Drv(135000,135105,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTableWidgetSelectionRange::columnCount()
-func (q *QTableWidgetSelectionRange) ColumnCount() int {
-	var __rv int
+func (q *QTableWidgetSelectionRange) ColumnCount() int32 {
+	var __rv int32
 	q.Drv(135000,135106,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTableWidgetSelectionRange::leftColumn()
-func (q *QTableWidgetSelectionRange) LeftColumn() int {
-	var __rv int
+func (q *QTableWidgetSelectionRange) LeftColumn() int32 {
+	var __rv int32
 	q.Drv(135000,135107,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTableWidgetSelectionRange::rightColumn()
-func (q *QTableWidgetSelectionRange) RightColumn() int {
-	var __rv int
+func (q *QTableWidgetSelectionRange) RightColumn() int32 {
+	var __rv int32
 	q.Drv(135000,135108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTableWidgetSelectionRange::rowCount()
-func (q *QTableWidgetSelectionRange) RowCount() int {
-	var __rv int
+func (q *QTableWidgetSelectionRange) RowCount() int32 {
+	var __rv int32
 	q.Drv(135000,135109,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTableWidgetSelectionRange::topRow()
-func (q *QTableWidgetSelectionRange) TopRow() int {
-	var __rv int
+func (q *QTableWidgetSelectionRange) TopRow() int32 {
+	var __rv int32
 	q.Drv(135000,135110,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -23834,14 +23834,14 @@ func (q *QTabletEvent) GlobalPos() *QPoint {
 	return _rp
 }	
 //QTabletEvent::globalX()
-func (q *QTabletEvent) GlobalX() int {
-	var __rv int
+func (q *QTabletEvent) GlobalX() int32 {
+	var __rv int32
 	q.Drv(136000,136104,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTabletEvent::globalY()
-func (q *QTabletEvent) GlobalY() int {
-	var __rv int
+func (q *QTabletEvent) GlobalY() int32 {
+	var __rv int32
 	q.Drv(136000,136105,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -23899,32 +23899,32 @@ func (q *QTabletEvent) UniqueId() int64 {
 	return __rv
 }	
 //QTabletEvent::x()
-func (q *QTabletEvent) X() int {
-	var __rv int
+func (q *QTabletEvent) X() int32 {
+	var __rv int32
 	q.Drv(136000,136114,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTabletEvent::xTilt()
-func (q *QTabletEvent) XTilt() int {
-	var __rv int
+func (q *QTabletEvent) XTilt() int32 {
+	var __rv int32
 	q.Drv(136000,136115,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTabletEvent::y()
-func (q *QTabletEvent) Y() int {
-	var __rv int
+func (q *QTabletEvent) Y() int32 {
+	var __rv int32
 	q.Drv(136000,136116,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTabletEvent::yTilt()
-func (q *QTabletEvent) YTilt() int {
-	var __rv int
+func (q *QTabletEvent) YTilt() int32 {
+	var __rv int32
 	q.Drv(136000,136117,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTabletEvent::z()
-func (q *QTabletEvent) Z() int {
-	var __rv int
+func (q *QTabletEvent) Z() int32 {
+	var __rv int32
 	q.Drv(136000,136118,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -23978,14 +23978,14 @@ func (q *QTextBlock) BlockFormat() *QTextBlockFormat {
 	return _rp
 }	
 //QTextBlock::blockFormatIndex()
-func (q *QTextBlock) BlockFormatIndex() int {
-	var __rv int
+func (q *QTextBlock) BlockFormatIndex() int32 {
+	var __rv int32
 	q.Drv(137000,137106,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextBlock::blockNumber()
-func (q *QTextBlock) BlockNumber() int {
-	var __rv int
+func (q *QTextBlock) BlockNumber() int32 {
+	var __rv int32
 	q.Drv(137000,137107,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -24001,8 +24001,8 @@ func (q *QTextBlock) CharFormat() *QTextCharFormat {
 	return _rp
 }	
 //QTextBlock::charFormatIndex()
-func (q *QTextBlock) CharFormatIndex() int {
-	var __rv int
+func (q *QTextBlock) CharFormatIndex() int32 {
+	var __rv int32
 	q.Drv(137000,137109,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -24011,7 +24011,7 @@ func (q *QTextBlock) ClearLayout()  {
 	q.Drv(137000,137110,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextBlock::contains(int)
-func (q *QTextBlock) Contains(position int) bool {
+func (q *QTextBlock) Contains(position int32) bool {
 	var __rv bool
 	q.Drv(137000,137111,unsafe.Pointer(&position),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -24039,14 +24039,14 @@ func (q *QTextBlock) End() *QTextBlockiterator {
 	return _rp
 }	
 //QTextBlock::firstLineNumber()
-func (q *QTextBlock) FirstLineNumber() int {
-	var __rv int
+func (q *QTextBlock) FirstLineNumber() int32 {
+	var __rv int32
 	q.Drv(137000,137114,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextBlock::fragmentIndex()
-func (q *QTextBlock) FragmentIndex() int {
-	var __rv int
+func (q *QTextBlock) FragmentIndex() int32 {
+	var __rv int32
 	q.Drv(137000,137115,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -24074,14 +24074,14 @@ func (q *QTextBlock) Layout() *QTextLayout {
 	return _rp
 }	
 //QTextBlock::length()
-func (q *QTextBlock) Length() int {
-	var __rv int
+func (q *QTextBlock) Length() int32 {
+	var __rv int32
 	q.Drv(137000,137119,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextBlock::lineCount()
-func (q *QTextBlock) LineCount() int {
-	var __rv int
+func (q *QTextBlock) LineCount() int32 {
+	var __rv int32
 	q.Drv(137000,137120,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -24097,8 +24097,8 @@ func (q *QTextBlock) Next() *QTextBlock {
 	return _rp
 }	
 //QTextBlock::position()
-func (q *QTextBlock) Position() int {
-	var __rv int
+func (q *QTextBlock) Position() int32 {
+	var __rv int32
 	q.Drv(137000,137122,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -24114,17 +24114,17 @@ func (q *QTextBlock) Previous() *QTextBlock {
 	return _rp
 }	
 //QTextBlock::revision()
-func (q *QTextBlock) Revision() int {
-	var __rv int
+func (q *QTextBlock) Revision() int32 {
+	var __rv int32
 	q.Drv(137000,137124,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextBlock::setLineCount(int)
-func (q *QTextBlock) SetLineCount(count int)  {
+func (q *QTextBlock) SetLineCount(count int32)  {
 	q.Drv(137000,137125,unsafe.Pointer(&count),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextBlock::setRevision(int)
-func (q *QTextBlock) SetRevision(rev int)  {
+func (q *QTextBlock) SetRevision(rev int32)  {
 	q.Drv(137000,137126,unsafe.Pointer(&rev),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextBlock::setUserData(QTextBlockUserData*)
@@ -24132,7 +24132,7 @@ func (q *QTextBlock) SetUserData(data *QTextBlockUserData)  {
 	q.Drv(137000,137127,Native(data),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextBlock::setUserState(int)
-func (q *QTextBlock) SetUserState(state int)  {
+func (q *QTextBlock) SetUserState(state int32)  {
 	q.Drv(137000,137128,unsafe.Pointer(&state),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextBlock::setVisible(bool)
@@ -24174,8 +24174,8 @@ func (q *QTextBlock) UserData() *QTextBlockUserData {
 	return _rp
 }	
 //QTextBlock::userState()
-func (q *QTextBlock) UserState() int {
-	var __rv int
+func (q *QTextBlock) UserState() int32 {
+	var __rv int32
 	q.Drv(137000,137134,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -24252,8 +24252,8 @@ func (q *QTextBlockFormat) BottomMargin() float64 {
 	return __rv
 }	
 //QTextBlockFormat::indent()
-func (q *QTextBlockFormat) Indent() int {
-	var __rv int
+func (q *QTextBlockFormat) Indent() int32 {
+	var __rv int32
 	q.Drv(139000,139105,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -24296,7 +24296,7 @@ func (q *QTextBlockFormat) SetBottomMargin(margin float64)  {
 	q.Drv(139000,139112,unsafe.Pointer(&margin),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextBlockFormat::setIndent(int)
-func (q *QTextBlockFormat) SetIndent(indent int)  {
+func (q *QTextBlockFormat) SetIndent(indent int32)  {
 	q.Drv(139000,139113,unsafe.Pointer(&indent),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextBlockFormat::setLeftMargin(double)
@@ -24415,7 +24415,7 @@ func NewQTextBoundaryFinderWithTypeString(_type QTextBoundaryFinder_BoundaryType
 	return _p
 } 
 //QTextBoundaryFinder::QTextBoundaryFinder(QTextBoundaryFinder::BoundaryType,QChar const*,int,unsigned char*,int)	
-func NewQTextBoundaryFinderWithTypeCharsLengthBufferBuffersize(_type QTextBoundaryFinder_BoundaryType,chars *rune,length int,buffer *byte,bufferSize int) *QTextBoundaryFinder {
+func NewQTextBoundaryFinderWithTypeCharsLengthBufferBuffersize(_type QTextBoundaryFinder_BoundaryType,chars *rune,length int32,buffer *byte,bufferSize int32) *QTextBoundaryFinder {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),141000,141105,unsafe.Pointer(&_type),unsafe.Pointer(&chars),unsafe.Pointer(&length),unsafe.Pointer(&buffer),unsafe.Pointer(&bufferSize),nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -24444,13 +24444,13 @@ func (q *QTextBoundaryFinder) IsValid() bool {
 	return __rv
 }	
 //QTextBoundaryFinder::position()
-func (q *QTextBoundaryFinder) Position() int {
-	var __rv int
+func (q *QTextBoundaryFinder) Position() int32 {
+	var __rv int32
 	q.Drv(141000,141109,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextBoundaryFinder::setPosition(int)
-func (q *QTextBoundaryFinder) SetPosition(position int)  {
+func (q *QTextBoundaryFinder) SetPosition(position int32)  {
 	q.Drv(141000,141110,unsafe.Pointer(&position),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextBoundaryFinder::string()
@@ -24464,14 +24464,14 @@ func (q *QTextBoundaryFinder) ToEnd()  {
 	q.Drv(141000,141112,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextBoundaryFinder::toNextBoundary()
-func (q *QTextBoundaryFinder) ToNextBoundary() int {
-	var __rv int
+func (q *QTextBoundaryFinder) ToNextBoundary() int32 {
+	var __rv int32
 	q.Drv(141000,141113,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextBoundaryFinder::toPreviousBoundary()
-func (q *QTextBoundaryFinder) ToPreviousBoundary() int {
-	var __rv int
+func (q *QTextBoundaryFinder) ToPreviousBoundary() int32 {
+	var __rv int32
 	q.Drv(141000,141114,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -24625,8 +24625,8 @@ func (q *QTextCharFormat) FontUnderline() bool {
 	return __rv
 }	
 //QTextCharFormat::fontWeight()
-func (q *QTextCharFormat) FontWeight() int {
-	var __rv int
+func (q *QTextCharFormat) FontWeight() int32 {
+	var __rv int32
 	q.Drv(142000,142119,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -24721,7 +24721,7 @@ func (q *QTextCharFormat) SetFontUnderline(underline bool)  {
 	q.Drv(142000,142140,unsafe.Pointer(&underline),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextCharFormat::setFontWeight(int)
-func (q *QTextCharFormat) SetFontWeight(weight int)  {
+func (q *QTextCharFormat) SetFontWeight(weight int32)  {
 	q.Drv(142000,142141,unsafe.Pointer(&weight),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextCharFormat::setFontWordSpacing(double)
@@ -24729,11 +24729,11 @@ func (q *QTextCharFormat) SetFontWordSpacing(spacing float64)  {
 	q.Drv(142000,142142,unsafe.Pointer(&spacing),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextCharFormat::setTableCellColumnSpan(int)
-func (q *QTextCharFormat) SetTableCellColumnSpan(tableCellColumnSpan int)  {
+func (q *QTextCharFormat) SetTableCellColumnSpan(tableCellColumnSpan int32)  {
 	q.Drv(142000,142143,unsafe.Pointer(&tableCellColumnSpan),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextCharFormat::setTableCellRowSpan(int)
-func (q *QTextCharFormat) SetTableCellRowSpan(tableCellRowSpan int)  {
+func (q *QTextCharFormat) SetTableCellRowSpan(tableCellRowSpan int32)  {
 	q.Drv(142000,142144,unsafe.Pointer(&tableCellRowSpan),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextCharFormat::setTextOutline(QPen const&)
@@ -24757,14 +24757,14 @@ func (q *QTextCharFormat) SetVerticalAlignment(alignment QTextCharFormat_Vertica
 	q.Drv(142000,142149,unsafe.Pointer(&alignment),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextCharFormat::tableCellColumnSpan()
-func (q *QTextCharFormat) TableCellColumnSpan() int {
-	var __rv int
+func (q *QTextCharFormat) TableCellColumnSpan() int32 {
+	var __rv int32
 	q.Drv(142000,142150,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextCharFormat::tableCellRowSpan()
-func (q *QTextCharFormat) TableCellRowSpan() int {
-	var __rv int
+func (q *QTextCharFormat) TableCellRowSpan() int32 {
+	var __rv int32
 	q.Drv(142000,142151,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -24840,14 +24840,14 @@ func (q *QTextCodec) AvailableCodecs() [][]byte {
 	return __rv
 }	
 //QTextCodec::availableMibs()	
-func QTextCodecAvailableMibs() []int {
-	var __rv []int
+func QTextCodecAvailableMibs() []int32 {
+	var __rv []int32
 	DirectQtDrv(nil,143000,143104,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextCodec::availableMibs()
-func (q *QTextCodec) AvailableMibs() []int {
-	var __rv []int
+func (q *QTextCodec) AvailableMibs() []int32 {
+	var __rv []int32
 	q.Drv(143000,143104,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -24930,7 +24930,7 @@ func (q *QTextCodec) CodecForLocale() *QTextCodec {
 	return _rp
 }	
 //QTextCodec::codecForMib(int)	
-func QTextCodecCodecForMib(mib int) *QTextCodec {
+func QTextCodecCodecForMib(mib int32) *QTextCodec {
 	var __rv uintptr
 	DirectQtDrv(nil,143000,143110,unsafe.Pointer(&mib),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -24941,7 +24941,7 @@ func QTextCodecCodecForMib(mib int) *QTextCodec {
 	return _rp
 }	
 //QTextCodec::codecForMib(int)
-func (q *QTextCodec) CodecForMib(mib int) *QTextCodec {
+func (q *QTextCodec) CodecForMib(mib int32) *QTextCodec {
 	var __rv uintptr
 	q.Drv(143000,143110,unsafe.Pointer(&mib),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -25046,7 +25046,7 @@ func (q *QTextCodec) FromUnicode(uc string) []byte {
 	return __rv
 }	
 //QTextCodec::fromUnicode(QChar const*,int,QTextCodec::ConverterState*)
-func (q *QTextCodec) FromUnicodeWithInLengthState(in *rune,length int,state *QTextCodecConverterState) []byte {
+func (q *QTextCodec) FromUnicodeWithInLengthState(in *rune,length int32,state *QTextCodecConverterState) []byte {
 	var __rv []byte
 	q.Drv(143000,143116,unsafe.Pointer(&in),unsafe.Pointer(&length),Native(state),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -25096,8 +25096,8 @@ func (q *QTextCodec) MakeEncoderWithFlags(flags QTextCodec_ConversionFlag) *QTex
 	return _rp
 }	
 //QTextCodec::mibEnum()
-func (q *QTextCodec) MibEnum() int {
-	var __rv int
+func (q *QTextCodec) MibEnum() int32 {
+	var __rv int32
 	q.Drv(143000,143121,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -25258,8 +25258,8 @@ func NewQTextCursorWithFrame(frame *QTextFrame) *QTextCursor {
 	return _p
 } 
 //QTextCursor::anchor()
-func (q *QTextCursor) Anchor() int {
-	var __rv int
+func (q *QTextCursor) Anchor() int32 {
+	var __rv int32
 	q.Drv(145000,145107,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -25325,8 +25325,8 @@ func (q *QTextCursor) BlockFormat() *QTextBlockFormat {
 	return _rp
 }	
 //QTextCursor::blockNumber()
-func (q *QTextCursor) BlockNumber() int {
-	var __rv int
+func (q *QTextCursor) BlockNumber() int32 {
+	var __rv int32
 	q.Drv(145000,145116,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -25346,8 +25346,8 @@ func (q *QTextCursor) ClearSelection()  {
 	q.Drv(145000,145118,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextCursor::columnNumber()
-func (q *QTextCursor) ColumnNumber() int {
-	var __rv int
+func (q *QTextCursor) ColumnNumber() int32 {
+	var __rv int32
 	q.Drv(145000,145119,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -25515,7 +25515,7 @@ func (q *QTextCursor) InsertListWithStyle(style QTextListFormat_Style) *QTextLis
 	return _rp
 }	
 //QTextCursor::insertTable(int,int)
-func (q *QTextCursor) InsertTableWithRowsCols(rows int,cols int) *QTextTable {
+func (q *QTextCursor) InsertTableWithRowsCols(rows int32,cols int32) *QTextTable {
 	var __rv uintptr
 	q.Drv(145000,145144,unsafe.Pointer(&rows),unsafe.Pointer(&cols),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -25526,7 +25526,7 @@ func (q *QTextCursor) InsertTableWithRowsCols(rows int,cols int) *QTextTable {
 	return _rp
 }	
 //QTextCursor::insertTable(int,int,QTextTableFormat const&)
-func (q *QTextCursor) InsertTableWithRowsColsFormat(rows int,cols int,format *QTextTableFormat) *QTextTable {
+func (q *QTextCursor) InsertTableWithRowsColsFormat(rows int32,cols int32,format *QTextTableFormat) *QTextTable {
 	var __rv uintptr
 	q.Drv(145000,145145,unsafe.Pointer(&rows),unsafe.Pointer(&cols),Native(format),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -25585,20 +25585,20 @@ func (q *QTextCursor) MovePosition(op QTextCursor_MoveOperation) bool {
 	return __rv
 }	
 //QTextCursor::movePosition(QTextCursor::MoveOperation,QTextCursor::MoveMode,int)
-func (q *QTextCursor) MovePositionWithOpMovemodeN(op QTextCursor_MoveOperation,value2 QTextCursor_MoveMode,n int) bool {
+func (q *QTextCursor) MovePositionWithOpMovemodeInt32(op QTextCursor_MoveOperation,value2 QTextCursor_MoveMode,n int32) bool {
 	var __rv bool
 	q.Drv(145000,145156,unsafe.Pointer(&op),unsafe.Pointer(&value2),unsafe.Pointer(&n),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextCursor::position()
-func (q *QTextCursor) Position() int {
-	var __rv int
+func (q *QTextCursor) Position() int32 {
+	var __rv int32
 	q.Drv(145000,145157,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextCursor::positionInBlock()
-func (q *QTextCursor) PositionInBlock() int {
-	var __rv int
+func (q *QTextCursor) PositionInBlock() int32 {
+	var __rv int32
 	q.Drv(145000,145158,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -25611,7 +25611,7 @@ func (q *QTextCursor) Select(selection QTextCursor_SelectionType)  {
 	q.Drv(145000,145160,unsafe.Pointer(&selection),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextCursor::selectedTableCells(int*,int*,int*,int*)
-func (q *QTextCursor) SelectedTableCells(firstRow *int,numRows *int,firstColumn *int,numColumns *int)  {
+func (q *QTextCursor) SelectedTableCells(firstRow *int32,numRows *int32,firstColumn *int32,numColumns *int32)  {
 	q.Drv(145000,145161,unsafe.Pointer(&firstRow),unsafe.Pointer(&numRows),unsafe.Pointer(&firstColumn),unsafe.Pointer(&numColumns),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextCursor::selectedText()
@@ -25632,14 +25632,14 @@ func (q *QTextCursor) Selection() *QTextDocumentFragment {
 	return _rp
 }	
 //QTextCursor::selectionEnd()
-func (q *QTextCursor) SelectionEnd() int {
-	var __rv int
+func (q *QTextCursor) SelectionEnd() int32 {
+	var __rv int32
 	q.Drv(145000,145164,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextCursor::selectionStart()
-func (q *QTextCursor) SelectionStart() int {
-	var __rv int
+func (q *QTextCursor) SelectionStart() int32 {
+	var __rv int32
 	q.Drv(145000,145165,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -25660,15 +25660,15 @@ func (q *QTextCursor) SetKeepPositionOnInsert(b bool)  {
 	q.Drv(145000,145169,unsafe.Pointer(&b),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextCursor::setPosition(int)
-func (q *QTextCursor) SetPosition(pos int)  {
+func (q *QTextCursor) SetPosition(pos int32)  {
 	q.Drv(145000,145170,unsafe.Pointer(&pos),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextCursor::setPosition(int,QTextCursor::MoveMode)
-func (q *QTextCursor) SetPositionWithPosMode(pos int,mode QTextCursor_MoveMode)  {
+func (q *QTextCursor) SetPositionWithPosMode(pos int32,mode QTextCursor_MoveMode)  {
 	q.Drv(145000,145171,unsafe.Pointer(&pos),unsafe.Pointer(&mode),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextCursor::setVerticalMovementX(int)
-func (q *QTextCursor) SetVerticalMovementX(x int)  {
+func (q *QTextCursor) SetVerticalMovementX(x int32)  {
 	q.Drv(145000,145172,unsafe.Pointer(&x),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextCursor::setVisualNavigation(bool)
@@ -25676,8 +25676,8 @@ func (q *QTextCursor) SetVisualNavigation(b bool)  {
 	q.Drv(145000,145173,unsafe.Pointer(&b),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextCursor::verticalMovementX()
-func (q *QTextCursor) VerticalMovementX() int {
-	var __rv int
+func (q *QTextCursor) VerticalMovementX() int32 {
+	var __rv int32
 	q.Drv(145000,145174,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -26016,7 +26016,7 @@ func (q *QTextEncoder) FromUnicode(str string) []byte {
 	return __rv
 }	
 //QTextEncoder::fromUnicode(QChar const*,int)
-func (q *QTextEncoder) FromUnicodeWithUcLen(uc *rune,len int) []byte {
+func (q *QTextEncoder) FromUnicodeWithUcLen(uc *rune,len int32) []byte {
 	var __rv []byte
 	q.Drv(150000,150105,unsafe.Pointer(&uc),unsafe.Pointer(&len),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -26161,7 +26161,7 @@ func NewQTextFormatCopy(rhs *QTextFormat) *QTextFormat {
 	return _p
 } 
 //QTextFormat::QTextFormat(int)	
-func NewQTextFormatWithType(_type int) *QTextFormat {
+func NewQTextFormatWithType(_type int32) *QTextFormat {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),151000,151104,unsafe.Pointer(&_type),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -26183,13 +26183,13 @@ func (q *QTextFormat) Background() *QBrush {
 	return _rp
 }	
 //QTextFormat::boolProperty(int)
-func (q *QTextFormat) BoolProperty(propertyId int) bool {
+func (q *QTextFormat) BoolProperty(propertyId int32) bool {
 	var __rv bool
 	q.Drv(151000,151106,unsafe.Pointer(&propertyId),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextFormat::brushProperty(int)
-func (q *QTextFormat) BrushProperty(propertyId int) *QBrush {
+func (q *QTextFormat) BrushProperty(propertyId int32) *QBrush {
 	var __rv uintptr
 	q.Drv(151000,151107,unsafe.Pointer(&propertyId),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -26208,11 +26208,11 @@ func (q *QTextFormat) ClearForeground()  {
 	q.Drv(151000,151109,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextFormat::clearProperty(int)
-func (q *QTextFormat) ClearProperty(propertyId int)  {
+func (q *QTextFormat) ClearProperty(propertyId int32)  {
 	q.Drv(151000,151110,unsafe.Pointer(&propertyId),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextFormat::colorProperty(int)
-func (q *QTextFormat) ColorProperty(propertyId int) *QColor {
+func (q *QTextFormat) ColorProperty(propertyId int32) *QColor {
 	var __rv uintptr
 	q.Drv(151000,151111,unsafe.Pointer(&propertyId),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -26223,7 +26223,7 @@ func (q *QTextFormat) ColorProperty(propertyId int) *QColor {
 	return _rp
 }	
 //QTextFormat::doubleProperty(int)
-func (q *QTextFormat) DoubleProperty(propertyId int) float64 {
+func (q *QTextFormat) DoubleProperty(propertyId int32) float64 {
 	var __rv float64
 	q.Drv(151000,151112,unsafe.Pointer(&propertyId),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -26240,14 +26240,14 @@ func (q *QTextFormat) Foreground() *QBrush {
 	return _rp
 }	
 //QTextFormat::hasProperty(int)
-func (q *QTextFormat) HasProperty(propertyId int) bool {
+func (q *QTextFormat) HasProperty(propertyId int32) bool {
 	var __rv bool
 	q.Drv(151000,151114,unsafe.Pointer(&propertyId),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextFormat::intProperty(int)
-func (q *QTextFormat) IntProperty(propertyId int) int {
-	var __rv int
+func (q *QTextFormat) IntProperty(propertyId int32) int32 {
+	var __rv int32
 	q.Drv(151000,151115,unsafe.Pointer(&propertyId),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -26306,7 +26306,7 @@ func (q *QTextFormat) LayoutDirection() Qt_LayoutDirection {
 	return __rv
 }	
 //QTextFormat::lengthProperty(int)
-func (q *QTextFormat) LengthProperty(propertyId int) *QTextLength {
+func (q *QTextFormat) LengthProperty(propertyId int32) *QTextLength {
 	var __rv uintptr
 	q.Drv(151000,151125,unsafe.Pointer(&propertyId),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -26317,7 +26317,7 @@ func (q *QTextFormat) LengthProperty(propertyId int) *QTextLength {
 	return _rp
 }	
 //QTextFormat::lengthVectorProperty(int)
-func (q *QTextFormat) LengthVectorProperty(propertyId int) []*QTextLength {
+func (q *QTextFormat) LengthVectorProperty(propertyId int32) []*QTextLength {
 	var __rv []*QTextLength
 	q.Drv(151000,151126,unsafe.Pointer(&propertyId),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -26327,19 +26327,19 @@ func (q *QTextFormat) Merge(other *QTextFormat)  {
 	q.Drv(151000,151127,Native(other),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextFormat::objectIndex()
-func (q *QTextFormat) ObjectIndex() int {
-	var __rv int
+func (q *QTextFormat) ObjectIndex() int32 {
+	var __rv int32
 	q.Drv(151000,151128,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextFormat::objectType()
-func (q *QTextFormat) ObjectType() int {
-	var __rv int
+func (q *QTextFormat) ObjectType() int32 {
+	var __rv int32
 	q.Drv(151000,151129,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextFormat::penProperty(int)
-func (q *QTextFormat) PenProperty(propertyId int) *QPen {
+func (q *QTextFormat) PenProperty(propertyId int32) *QPen {
 	var __rv uintptr
 	q.Drv(151000,151130,unsafe.Pointer(&propertyId),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -26356,7 +26356,7 @@ func (q *QTextFormat) Properties() map[int]*QVariant {
 	return __rv
 }	
 //QTextFormat::property(int)
-func (q *QTextFormat) Property(propertyId int) *QVariant {
+func (q *QTextFormat) Property(propertyId int32) *QVariant {
 	var __rv uintptr
 	q.Drv(151000,151132,unsafe.Pointer(&propertyId),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -26367,8 +26367,8 @@ func (q *QTextFormat) Property(propertyId int) *QVariant {
 	return _rp
 }	
 //QTextFormat::propertyCount()
-func (q *QTextFormat) PropertyCount() int {
-	var __rv int
+func (q *QTextFormat) PropertyCount() int32 {
+	var __rv int32
 	q.Drv(151000,151133,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -26385,23 +26385,23 @@ func (q *QTextFormat) SetLayoutDirection(direction Qt_LayoutDirection)  {
 	q.Drv(151000,151136,unsafe.Pointer(&direction),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextFormat::setObjectIndex(int)
-func (q *QTextFormat) SetObjectIndex(object int)  {
+func (q *QTextFormat) SetObjectIndex(object int32)  {
 	q.Drv(151000,151137,unsafe.Pointer(&object),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextFormat::setObjectType(int)
-func (q *QTextFormat) SetObjectType(_type int)  {
+func (q *QTextFormat) SetObjectType(_type int32)  {
 	q.Drv(151000,151138,unsafe.Pointer(&_type),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextFormat::setProperty(int,QVariant const&)
-func (q *QTextFormat) SetPropertyWithPropertyidValue(propertyId int,value *QVariant)  {
+func (q *QTextFormat) SetPropertyWithPropertyidValue(propertyId int32,value *QVariant)  {
 	q.Drv(151000,151139,unsafe.Pointer(&propertyId),Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextFormat::setProperty(int,QVector<QTextLength> const&)
-func (q *QTextFormat) SetPropertyWithPropertyidLengths(propertyId int,lengths []*QTextLength)  {
+func (q *QTextFormat) SetPropertyWithPropertyidLengths(propertyId int32,lengths []*QTextLength)  {
 	q.Drv(151000,151140,unsafe.Pointer(&propertyId),unsafe.Pointer(&lengths),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextFormat::stringProperty(int)
-func (q *QTextFormat) StringProperty(propertyId int) string {
+func (q *QTextFormat) StringProperty(propertyId int32) string {
 	var __rv string
 	q.Drv(151000,151141,unsafe.Pointer(&propertyId),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -26484,8 +26484,8 @@ func (q *QTextFormat) ToTableFormat() *QTextTableFormat {
 	return _rp
 }	
 //QTextFormat::type()
-func (q *QTextFormat) Type() int {
-	var __rv int
+func (q *QTextFormat) Type() int32 {
+	var __rv int32
 	q.Drv(151000,151149,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -26528,13 +26528,13 @@ func (q *QTextFragment) CharFormat() *QTextCharFormat {
 	return _rp
 }	
 //QTextFragment::charFormatIndex()
-func (q *QTextFragment) CharFormatIndex() int {
-	var __rv int
+func (q *QTextFragment) CharFormatIndex() int32 {
+	var __rv int32
 	q.Drv(152000,152105,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextFragment::contains(int)
-func (q *QTextFragment) Contains(position int) bool {
+func (q *QTextFragment) Contains(position int32) bool {
 	var __rv bool
 	q.Drv(152000,152106,unsafe.Pointer(&position),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -26546,14 +26546,14 @@ func (q *QTextFragment) IsValid() bool {
 	return __rv
 }	
 //QTextFragment::length()
-func (q *QTextFragment) Length() int {
-	var __rv int
+func (q *QTextFragment) Length() int32 {
+	var __rv int32
 	q.Drv(152000,152108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextFragment::position()
-func (q *QTextFragment) Position() int {
-	var __rv int
+func (q *QTextFragment) Position() int32 {
+	var __rv int32
 	q.Drv(152000,152109,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -26918,8 +26918,8 @@ func (q *QTextInlineObject) Format() *QTextFormat {
 	return _rp
 }	
 //QTextInlineObject::formatIndex()
-func (q *QTextInlineObject) FormatIndex() int {
-	var __rv int
+func (q *QTextInlineObject) FormatIndex() int32 {
+	var __rv int32
 	q.Drv(156000,156106,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -26965,8 +26965,8 @@ func (q *QTextInlineObject) TextDirection() Qt_LayoutDirection {
 	return __rv
 }	
 //QTextInlineObject::textPosition()
-func (q *QTextInlineObject) TextPosition() int {
-	var __rv int
+func (q *QTextInlineObject) TextPosition() int32 {
+	var __rv int32
 	q.Drv(156000,156114,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -27148,11 +27148,11 @@ func (q *QTextLayout) Draw(p *QPainter,pos *QPointF,selections []*QTextLayoutFor
 	q.Drv(158000,158113,Native(p),Native(pos),unsafe.Pointer(&selections),Native(clip),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextLayout::drawCursor(QPainter*,QPointF const&,int)
-func (q *QTextLayout) DrawCursorFWithPPosCursorposition(p *QPainter,pos *QPointF,cursorPosition int)  {
+func (q *QTextLayout) DrawCursorFWithPPosCursorposition(p *QPainter,pos *QPointF,cursorPosition int32)  {
 	q.Drv(158000,158114,Native(p),Native(pos),unsafe.Pointer(&cursorPosition),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextLayout::drawCursor(QPainter*,QPointF const&,int,int)
-func (q *QTextLayout) DrawCursorFWithPPosCursorpositionWidth(p *QPainter,pos *QPointF,cursorPosition int,width int)  {
+func (q *QTextLayout) DrawCursorFWithPPosCursorpositionWidth(p *QPainter,pos *QPointF,cursorPosition int32,width int32)  {
 	q.Drv(158000,158115,Native(p),Native(pos),unsafe.Pointer(&cursorPosition),unsafe.Pointer(&width),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextLayout::endLayout()
@@ -27171,13 +27171,13 @@ func (q *QTextLayout) Font() *QFont {
 	return _rp
 }	
 //QTextLayout::isValidCursorPosition(int)
-func (q *QTextLayout) IsValidCursorPosition(pos int) bool {
+func (q *QTextLayout) IsValidCursorPosition(pos int32) bool {
 	var __rv bool
 	q.Drv(158000,158118,unsafe.Pointer(&pos),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextLayout::lineAt(int)
-func (q *QTextLayout) LineAt(i int) *QTextLine {
+func (q *QTextLayout) LineAt(i int32) *QTextLine {
 	var __rv uintptr
 	q.Drv(158000,158119,unsafe.Pointer(&i),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -27188,13 +27188,13 @@ func (q *QTextLayout) LineAt(i int) *QTextLine {
 	return _rp
 }	
 //QTextLayout::lineCount()
-func (q *QTextLayout) LineCount() int {
-	var __rv int
+func (q *QTextLayout) LineCount() int32 {
+	var __rv int32
 	q.Drv(158000,158120,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextLayout::lineForTextPosition(int)
-func (q *QTextLayout) LineForTextPosition(pos int) *QTextLine {
+func (q *QTextLayout) LineForTextPosition(pos int32) *QTextLine {
 	var __rv uintptr
 	q.Drv(158000,158121,unsafe.Pointer(&pos),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -27217,14 +27217,14 @@ func (q *QTextLayout) MinimumWidth() float64 {
 	return __rv
 }	
 //QTextLayout::nextCursorPosition(int)
-func (q *QTextLayout) NextCursorPosition(oldPos int) int {
-	var __rv int
+func (q *QTextLayout) NextCursorPosition(oldPos int32) int32 {
+	var __rv int32
 	q.Drv(158000,158124,unsafe.Pointer(&oldPos),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextLayout::nextCursorPosition(int,QTextLayout::CursorMode)
-func (q *QTextLayout) NextCursorPositionWithOldposMode(oldPos int,mode QTextLayout_CursorMode) int {
-	var __rv int
+func (q *QTextLayout) NextCursorPositionWithOldposMode(oldPos int32,mode QTextLayout_CursorMode) int32 {
+	var __rv int32
 	q.Drv(158000,158125,unsafe.Pointer(&oldPos),unsafe.Pointer(&mode),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -27240,8 +27240,8 @@ func (q *QTextLayout) Position() *QPointF {
 	return _rp
 }	
 //QTextLayout::preeditAreaPosition()
-func (q *QTextLayout) PreeditAreaPosition() int {
-	var __rv int
+func (q *QTextLayout) PreeditAreaPosition() int32 {
+	var __rv int32
 	q.Drv(158000,158127,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -27252,14 +27252,14 @@ func (q *QTextLayout) PreeditAreaText() string {
 	return __rv
 }	
 //QTextLayout::previousCursorPosition(int)
-func (q *QTextLayout) PreviousCursorPosition(oldPos int) int {
-	var __rv int
+func (q *QTextLayout) PreviousCursorPosition(oldPos int32) int32 {
+	var __rv int32
 	q.Drv(158000,158129,unsafe.Pointer(&oldPos),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextLayout::previousCursorPosition(int,QTextLayout::CursorMode)
-func (q *QTextLayout) PreviousCursorPositionWithOldposMode(oldPos int,mode QTextLayout_CursorMode) int {
-	var __rv int
+func (q *QTextLayout) PreviousCursorPositionWithOldposMode(oldPos int32,mode QTextLayout_CursorMode) int32 {
+	var __rv int32
 	q.Drv(158000,158130,unsafe.Pointer(&oldPos),unsafe.Pointer(&mode),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -27272,7 +27272,7 @@ func (q *QTextLayout) SetCacheEnabled(enable bool)  {
 	q.Drv(158000,158132,unsafe.Pointer(&enable),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextLayout::setFlags(int)
-func (q *QTextLayout) SetFlags(flags int)  {
+func (q *QTextLayout) SetFlags(flags int32)  {
 	q.Drv(158000,158133,unsafe.Pointer(&flags),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextLayout::setFont(QFont const&)
@@ -27284,7 +27284,7 @@ func (q *QTextLayout) SetPosition(p *QPointF)  {
 	q.Drv(158000,158135,Native(p),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextLayout::setPreeditArea(int,QString const&)
-func (q *QTextLayout) SetPreeditArea(position int,text string)  {
+func (q *QTextLayout) SetPreeditArea(position int32,text string)  {
 	q.Drv(158000,158136,unsafe.Pointer(&position),unsafe.Pointer(&text),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextLayout::setText(QString const&)
@@ -27404,25 +27404,25 @@ func (q *QTextLine) Ascent() float64 {
 	return __rv
 }	
 //QTextLine::cursorToX(int)
-func (q *QTextLine) CursorToX(cursorPos int) float64 {
+func (q *QTextLine) CursorToX(cursorPos int32) float64 {
 	var __rv float64
 	q.Drv(161000,161104,unsafe.Pointer(&cursorPos),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextLine::cursorToX(int*)
-func (q *QTextLine) CursorToXWithCursorposp(cursorPos *int) float64 {
+func (q *QTextLine) CursorToXWithCursorposp(cursorPos *int32) float64 {
 	var __rv float64
 	q.Drv(161000,161105,unsafe.Pointer(&cursorPos),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextLine::cursorToX(int*,QTextLine::Edge)
-func (q *QTextLine) CursorToXWithCursorpospEdge(cursorPos *int,edge QTextLine_Edge) float64 {
+func (q *QTextLine) CursorToXWithCursorpospEdge(cursorPos *int32,edge QTextLine_Edge) float64 {
 	var __rv float64
 	q.Drv(161000,161106,unsafe.Pointer(&cursorPos),unsafe.Pointer(&edge),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextLine::cursorToX(int,QTextLine::Edge)
-func (q *QTextLine) CursorToXWithCursorposEdge(cursorPos int,edge QTextLine_Edge) float64 {
+func (q *QTextLine) CursorToXWithCursorposEdge(cursorPos int32,edge QTextLine_Edge) float64 {
 	var __rv float64
 	q.Drv(161000,161107,unsafe.Pointer(&cursorPos),unsafe.Pointer(&edge),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -27468,8 +27468,8 @@ func (q *QTextLine) LeadingIncluded() bool {
 	return __rv
 }	
 //QTextLine::lineNumber()
-func (q *QTextLine) LineNumber() int {
-	var __rv int
+func (q *QTextLine) LineNumber() int32 {
+	var __rv int32
 	q.Drv(161000,161115,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -27521,11 +27521,11 @@ func (q *QTextLine) SetLineWidth(width float64)  {
 	q.Drv(161000,161121,unsafe.Pointer(&width),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextLine::setNumColumns(int)
-func (q *QTextLine) SetNumColumns(columns int)  {
+func (q *QTextLine) SetNumColumns(columns int32)  {
 	q.Drv(161000,161122,unsafe.Pointer(&columns),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextLine::setNumColumns(int,double)
-func (q *QTextLine) SetNumColumnsFWithColumnsAlignmentwidth(columns int,alignmentWidth float64)  {
+func (q *QTextLine) SetNumColumnsFWithColumnsAlignmentwidth(columns int32,alignmentWidth float64)  {
 	q.Drv(161000,161123,unsafe.Pointer(&columns),unsafe.Pointer(&alignmentWidth),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextLine::setPosition(QPointF const&)
@@ -27533,14 +27533,14 @@ func (q *QTextLine) SetPosition(pos *QPointF)  {
 	q.Drv(161000,161124,Native(pos),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextLine::textLength()
-func (q *QTextLine) TextLength() int {
-	var __rv int
+func (q *QTextLine) TextLength() int32 {
+	var __rv int32
 	q.Drv(161000,161125,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextLine::textStart()
-func (q *QTextLine) TextStart() int {
-	var __rv int
+func (q *QTextLine) TextStart() int32 {
+	var __rv int32
 	q.Drv(161000,161126,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -27557,14 +27557,14 @@ func (q *QTextLine) X() float64 {
 	return __rv
 }	
 //QTextLine::xToCursor(double)
-func (q *QTextLine) XToCursor(x float64) int {
-	var __rv int
+func (q *QTextLine) XToCursor(x float64) int32 {
+	var __rv int32
 	q.Drv(161000,161129,unsafe.Pointer(&x),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextLine::xToCursor(double,QTextLine::CursorPosition)
-func (q *QTextLine) XToCursorFWithXCursorposition(x float64,value2 QTextLine_CursorPosition) int {
-	var __rv int
+func (q *QTextLine) XToCursorFWithXCursorposition(x float64,value2 QTextLine_CursorPosition) int32 {
+	var __rv int32
 	q.Drv(161000,161130,unsafe.Pointer(&x),unsafe.Pointer(&value2),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -27604,8 +27604,8 @@ func NewQTextListFormat() *QTextListFormat {
 	return _p
 } 
 //QTextListFormat::indent()
-func (q *QTextListFormat) Indent() int {
-	var __rv int
+func (q *QTextListFormat) Indent() int32 {
+	var __rv int32
 	q.Drv(162000,162103,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -27616,7 +27616,7 @@ func (q *QTextListFormat) IsValid() bool {
 	return __rv
 }	
 //QTextListFormat::setIndent(int)
-func (q *QTextListFormat) SetIndent(indent int)  {
+func (q *QTextListFormat) SetIndent(indent int32)  {
 	q.Drv(162000,162105,unsafe.Pointer(&indent),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextListFormat::setStyle(QTextListFormat::Style)
@@ -27635,11 +27635,11 @@ type QTextObjectInterface struct {
 	BaseDrv
 }
 //QTextObjectInterface::drawObject(QPainter*,QRectF const&,QTextDocument*,int,QTextFormat const&)
-func (q *QTextObjectInterface) DrawObject(painter *QPainter,rect *QRectF,doc *QTextDocument,posInDocument int,format *QTextFormat)  {
+func (q *QTextObjectInterface) DrawObject(painter *QPainter,rect *QRectF,doc *QTextDocument,posInDocument int32,format *QTextFormat)  {
 	q.Drv(163000,163102,Native(painter),Native(rect),Native(doc),unsafe.Pointer(&posInDocument),Native(format),nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextObjectInterface::intrinsicSize(QTextDocument*,int,QTextFormat const&)
-func (q *QTextObjectInterface) IntrinsicSize(doc *QTextDocument,posInDocument int,format *QTextFormat) *QSizeF {
+func (q *QTextObjectInterface) IntrinsicSize(doc *QTextDocument,posInDocument int32,format *QTextFormat) *QSizeF {
 	var __rv uintptr
 	q.Drv(163000,163103,Native(doc),unsafe.Pointer(&posInDocument),Native(format),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -27859,14 +27859,14 @@ func (q *QTextTableCell) Begin() *QTextFrameiterator {
 	return _rp
 }	
 //QTextTableCell::column()
-func (q *QTextTableCell) Column() int {
-	var __rv int
+func (q *QTextTableCell) Column() int32 {
+	var __rv int32
 	q.Drv(166000,166105,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextTableCell::columnSpan()
-func (q *QTextTableCell) ColumnSpan() int {
-	var __rv int
+func (q *QTextTableCell) ColumnSpan() int32 {
+	var __rv int32
 	q.Drv(166000,166106,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -27893,8 +27893,8 @@ func (q *QTextTableCell) FirstCursorPosition() *QTextCursor {
 	return _rp
 }	
 //QTextTableCell::firstPosition()
-func (q *QTextTableCell) FirstPosition() int {
-	var __rv int
+func (q *QTextTableCell) FirstPosition() int32 {
+	var __rv int32
 	q.Drv(166000,166109,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -27927,20 +27927,20 @@ func (q *QTextTableCell) LastCursorPosition() *QTextCursor {
 	return _rp
 }	
 //QTextTableCell::lastPosition()
-func (q *QTextTableCell) LastPosition() int {
-	var __rv int
+func (q *QTextTableCell) LastPosition() int32 {
+	var __rv int32
 	q.Drv(166000,166113,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextTableCell::row()
-func (q *QTextTableCell) Row() int {
-	var __rv int
+func (q *QTextTableCell) Row() int32 {
+	var __rv int32
 	q.Drv(166000,166114,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextTableCell::rowSpan()
-func (q *QTextTableCell) RowSpan() int {
-	var __rv int
+func (q *QTextTableCell) RowSpan() int32 {
+	var __rv int32
 	q.Drv(166000,166115,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -27949,8 +27949,8 @@ func (q *QTextTableCell) SetFormat(format *QTextCharFormat)  {
 	q.Drv(166000,166116,Native(format),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextTableCell::tableCellFormatIndex()
-func (q *QTextTableCell) TableCellFormatIndex() int {
-	var __rv int
+func (q *QTextTableCell) TableCellFormatIndex() int32 {
+	var __rv int32
 	q.Drv(166000,166117,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -28065,14 +28065,14 @@ func (q *QTextTableFormat) ColumnWidthConstraints() []*QTextLength {
 	return __rv
 }	
 //QTextTableFormat::columns()
-func (q *QTextTableFormat) Columns() int {
-	var __rv int
+func (q *QTextTableFormat) Columns() int32 {
+	var __rv int32
 	q.Drv(168000,168108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextTableFormat::headerRowCount()
-func (q *QTextTableFormat) HeaderRowCount() int {
-	var __rv int
+func (q *QTextTableFormat) HeaderRowCount() int32 {
+	var __rv int32
 	q.Drv(168000,168109,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -28099,11 +28099,11 @@ func (q *QTextTableFormat) SetColumnWidthConstraints(constraints []*QTextLength)
 	q.Drv(168000,168114,unsafe.Pointer(&constraints),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextTableFormat::setColumns(int)
-func (q *QTextTableFormat) SetColumns(columns int)  {
+func (q *QTextTableFormat) SetColumns(columns int32)  {
 	q.Drv(168000,168115,unsafe.Pointer(&columns),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextTableFormat::setHeaderRowCount(int)
-func (q *QTextTableFormat) SetHeaderRowCount(count int)  {
+func (q *QTextTableFormat) SetHeaderRowCount(count int32)  {
 	q.Drv(168000,168116,unsafe.Pointer(&count),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 
@@ -28177,7 +28177,7 @@ func NewQTimeCopy(other *QTime) *QTime {
 	return _p
 } 
 //QTime::QTime(int,int,int,int)	
-func NewQTimeWithHeightMSMs(h int,m int,s int,ms int) *QTime {
+func NewQTimeWithHeightInt32Int32Ms(h int32,m int32,s int32,ms int32) *QTime {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),170000,170104,unsafe.Pointer(&h),unsafe.Pointer(&m),unsafe.Pointer(&s),unsafe.Pointer(&ms),nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -28188,7 +28188,7 @@ func NewQTimeWithHeightMSMs(h int,m int,s int,ms int) *QTime {
 	return _p
 } 
 //QTime::addMSecs(int)
-func (q *QTime) AddMSecs(ms int) *QTime {
+func (q *QTime) AddMSecs(ms int32) *QTime {
 	var __rv uintptr
 	q.Drv(170000,170105,unsafe.Pointer(&ms),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -28199,7 +28199,7 @@ func (q *QTime) AddMSecs(ms int) *QTime {
 	return _rp
 }	
 //QTime::addSecs(int)
-func (q *QTime) AddSecs(secs int) *QTime {
+func (q *QTime) AddSecs(secs int32) *QTime {
 	var __rv uintptr
 	q.Drv(170000,170106,unsafe.Pointer(&secs),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -28232,8 +28232,8 @@ func (q *QTime) CurrentTime() *QTime {
 	return _rp
 }	
 //QTime::elapsed()
-func (q *QTime) Elapsed() int {
-	var __rv int
+func (q *QTime) Elapsed() int32 {
+	var __rv int32
 	q.Drv(170000,170108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -28304,8 +28304,8 @@ func (q *QTime) FromStringWithTextDateformat(s string,f Qt_DateFormat) *QTime {
 	return _rp
 }	
 //QTime::hour()
-func (q *QTime) Hour() int {
-	var __rv int
+func (q *QTime) Hour() int32 {
+	var __rv int32
 	q.Drv(170000,170112,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -28322,55 +28322,55 @@ func (q *QTime) IsValid() bool {
 	return __rv
 }	
 //QTime::isValid(int,int,int,int)	
-func QTimeIsValidWithHeightMSMs(h int,m int,s int,ms int) bool {
+func QTimeIsValidWithHeightInt32Int32Ms(h int32,m int32,s int32,ms int32) bool {
 	var __rv bool
 	DirectQtDrv(nil,170000,170115,unsafe.Pointer(&h),unsafe.Pointer(&m),unsafe.Pointer(&s),unsafe.Pointer(&ms),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTime::isValid(int,int,int,int)
-func (q *QTime) IsValidWithHeightMSMs(h int,m int,s int,ms int) bool {
+func (q *QTime) IsValidWithHeightInt32Int32Ms(h int32,m int32,s int32,ms int32) bool {
 	var __rv bool
 	q.Drv(170000,170115,unsafe.Pointer(&h),unsafe.Pointer(&m),unsafe.Pointer(&s),unsafe.Pointer(&ms),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTime::minute()
-func (q *QTime) Minute() int {
-	var __rv int
+func (q *QTime) Minute() int32 {
+	var __rv int32
 	q.Drv(170000,170116,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTime::msec()
-func (q *QTime) Msec() int {
-	var __rv int
+func (q *QTime) Msec() int32 {
+	var __rv int32
 	q.Drv(170000,170117,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTime::msecsTo(QTime const&)
-func (q *QTime) MsecsTo(value *QTime) int {
-	var __rv int
+func (q *QTime) MsecsTo(value *QTime) int32 {
+	var __rv int32
 	q.Drv(170000,170118,Native(value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTime::restart()
-func (q *QTime) Restart() int {
-	var __rv int
+func (q *QTime) Restart() int32 {
+	var __rv int32
 	q.Drv(170000,170119,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTime::second()
-func (q *QTime) Second() int {
-	var __rv int
+func (q *QTime) Second() int32 {
+	var __rv int32
 	q.Drv(170000,170120,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTime::secsTo(QTime const&)
-func (q *QTime) SecsTo(value *QTime) int {
-	var __rv int
+func (q *QTime) SecsTo(value *QTime) int32 {
+	var __rv int32
 	q.Drv(170000,170121,Native(value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTime::setHMS(int,int,int,int)
-func (q *QTime) SetHMS(h int,m int,s int,ms int) bool {
+func (q *QTime) SetHMS(h int32,m int32,s int32,ms int32) bool {
 	var __rv bool
 	q.Drv(170000,170122,unsafe.Pointer(&h),unsafe.Pointer(&m),unsafe.Pointer(&s),unsafe.Pointer(&ms),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -28403,7 +28403,7 @@ type QTimerEvent struct {
 	QEvent
 }
 //QTimerEvent::QTimerEvent(int)	
-func NewQTimerEvent(timerId int) *QTimerEvent {
+func NewQTimerEvent(timerId int32) *QTimerEvent {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),171000,171102,unsafe.Pointer(&timerId),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -28414,8 +28414,8 @@ func NewQTimerEvent(timerId int) *QTimerEvent {
 	return _p
 } 
 //QTimerEvent::timerId()
-func (q *QTimerEvent) TimerId() int {
-	var __rv int
+func (q *QTimerEvent) TimerId() int32 {
+	var __rv int32
 	q.Drv(171000,171103,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -28613,7 +28613,7 @@ func NewQTouchEventTouchPointCopy(other *QTouchEventTouchPoint) *QTouchEventTouc
 	return _p
 } 
 //QTouchEvent::TouchPoint::TouchPoint(int)	
-func NewQTouchEventTouchPointWithId(id int) *QTouchEventTouchPoint {
+func NewQTouchEventTouchPointWithId(id int32) *QTouchEventTouchPoint {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),175000,175104,unsafe.Pointer(&id),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -28624,8 +28624,8 @@ func NewQTouchEventTouchPointWithId(id int) *QTouchEventTouchPoint {
 	return _p
 } 
 //QTouchEvent::TouchPoint::id()
-func (q *QTouchEventTouchPoint) Id() int {
-	var __rv int
+func (q *QTouchEventTouchPoint) Id() int32 {
+	var __rv int32
 	q.Drv(175000,175105,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -28757,7 +28757,7 @@ func (q *QTouchEventTouchPoint) ScreenRect() *QRectF {
 	return _rp
 }	
 //QTouchEvent::TouchPoint::setId(int)
-func (q *QTouchEventTouchPoint) SetId(id int)  {
+func (q *QTouchEventTouchPoint) SetId(id int32)  {
 	q.Drv(175000,175118,unsafe.Pointer(&id),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTouchEvent::TouchPoint::setLastNormalizedPos(QPointF const&)
@@ -29215,7 +29215,7 @@ func (q *QTransform) MapFWithXYTxTy(x float64,y float64,tx *float64,ty *float64)
 	q.Drv(176000,176137,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&tx),unsafe.Pointer(&ty),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTransform::map(int,int,int*,int*)
-func (q *QTransform) MapWithXYTxTy(x int,y int,tx *int,ty *int)  {
+func (q *QTransform) MapWithXYTxTy(x int32,y int32,tx *int32,ty *int32)  {
 	q.Drv(176000,176138,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&tx),unsafe.Pointer(&ty),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTransform::mapRect(QRect const&)
@@ -29441,7 +29441,7 @@ func NewQTreeWidgetItemCopy(other *QTreeWidgetItem) *QTreeWidgetItem {
 	return _p
 } 
 //QTreeWidgetItem::QTreeWidgetItem(int)	
-func NewQTreeWidgetItemWithType(_type int) *QTreeWidgetItem {
+func NewQTreeWidgetItemWithType(_type int32) *QTreeWidgetItem {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),177000,177104,unsafe.Pointer(&_type),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -29452,7 +29452,7 @@ func NewQTreeWidgetItemWithType(_type int) *QTreeWidgetItem {
 	return _p
 } 
 //QTreeWidgetItem::QTreeWidgetItem(QStringList const&,int)	
-func NewQTreeWidgetItemWithStringsType(strings []string,_type int) *QTreeWidgetItem {
+func NewQTreeWidgetItemWithStringsType(strings []string,_type int32) *QTreeWidgetItem {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),177000,177105,unsafe.Pointer(&strings),unsafe.Pointer(&_type),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -29463,7 +29463,7 @@ func NewQTreeWidgetItemWithStringsType(strings []string,_type int) *QTreeWidgetI
 	return _p
 } 
 //QTreeWidgetItem::QTreeWidgetItem(QTreeWidget*,int)	
-func NewQTreeWidgetItemWithViewType(view *QTreeWidget,_type int) *QTreeWidgetItem {
+func NewQTreeWidgetItemWithViewType(view *QTreeWidget,_type int32) *QTreeWidgetItem {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),177000,177106,Native(view),unsafe.Pointer(&_type),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -29474,7 +29474,7 @@ func NewQTreeWidgetItemWithViewType(view *QTreeWidget,_type int) *QTreeWidgetIte
 	return _p
 } 
 //QTreeWidgetItem::QTreeWidgetItem(QTreeWidgetItem*,int)	
-func NewQTreeWidgetItemWithParentType(parent *QTreeWidgetItem,_type int) *QTreeWidgetItem {
+func NewQTreeWidgetItemWithParentType(parent *QTreeWidgetItem,_type int32) *QTreeWidgetItem {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),177000,177107,Native(parent),unsafe.Pointer(&_type),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -29485,7 +29485,7 @@ func NewQTreeWidgetItemWithParentType(parent *QTreeWidgetItem,_type int) *QTreeW
 	return _p
 } 
 //QTreeWidgetItem::QTreeWidgetItem(QTreeWidget*,QStringList const&,int)	
-func NewQTreeWidgetItemWithViewStringsType(view *QTreeWidget,strings []string,_type int) *QTreeWidgetItem {
+func NewQTreeWidgetItemWithViewStringsType(view *QTreeWidget,strings []string,_type int32) *QTreeWidgetItem {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),177000,177108,Native(view),unsafe.Pointer(&strings),unsafe.Pointer(&_type),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -29496,7 +29496,7 @@ func NewQTreeWidgetItemWithViewStringsType(view *QTreeWidget,strings []string,_t
 	return _p
 } 
 //QTreeWidgetItem::QTreeWidgetItem(QTreeWidget*,QTreeWidgetItem*,int)	
-func NewQTreeWidgetItemWithViewAfterType(view *QTreeWidget,after *QTreeWidgetItem,_type int) *QTreeWidgetItem {
+func NewQTreeWidgetItemWithViewAfterType(view *QTreeWidget,after *QTreeWidgetItem,_type int32) *QTreeWidgetItem {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),177000,177109,Native(view),Native(after),unsafe.Pointer(&_type),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -29507,7 +29507,7 @@ func NewQTreeWidgetItemWithViewAfterType(view *QTreeWidget,after *QTreeWidgetIte
 	return _p
 } 
 //QTreeWidgetItem::QTreeWidgetItem(QTreeWidgetItem*,QStringList const&,int)	
-func NewQTreeWidgetItemWithParentStringsType(parent *QTreeWidgetItem,strings []string,_type int) *QTreeWidgetItem {
+func NewQTreeWidgetItemWithParentStringsType(parent *QTreeWidgetItem,strings []string,_type int32) *QTreeWidgetItem {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),177000,177110,Native(parent),unsafe.Pointer(&strings),unsafe.Pointer(&_type),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -29518,7 +29518,7 @@ func NewQTreeWidgetItemWithParentStringsType(parent *QTreeWidgetItem,strings []s
 	return _p
 } 
 //QTreeWidgetItem::QTreeWidgetItem(QTreeWidgetItem*,QTreeWidgetItem*,int)	
-func NewQTreeWidgetItemWithParentAfterType(parent *QTreeWidgetItem,after *QTreeWidgetItem,_type int) *QTreeWidgetItem {
+func NewQTreeWidgetItemWithParentAfterType(parent *QTreeWidgetItem,after *QTreeWidgetItem,_type int32) *QTreeWidgetItem {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),177000,177111,Native(parent),Native(after),unsafe.Pointer(&_type),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -29537,7 +29537,7 @@ func (q *QTreeWidgetItem) AddChildren(children []*QTreeWidgetItem)  {
 	q.Drv(177000,177113,unsafe.Pointer(&children),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidgetItem::background(int)
-func (q *QTreeWidgetItem) Background(column int) *QBrush {
+func (q *QTreeWidgetItem) Background(column int32) *QBrush {
 	var __rv uintptr
 	q.Drv(177000,177114,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -29548,7 +29548,7 @@ func (q *QTreeWidgetItem) Background(column int) *QBrush {
 	return _rp
 }	
 //QTreeWidgetItem::backgroundColor(int)
-func (q *QTreeWidgetItem) BackgroundColor(column int) *QColor {
+func (q *QTreeWidgetItem) BackgroundColor(column int32) *QColor {
 	var __rv uintptr
 	q.Drv(177000,177115,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -29559,13 +29559,13 @@ func (q *QTreeWidgetItem) BackgroundColor(column int) *QColor {
 	return _rp
 }	
 //QTreeWidgetItem::checkState(int)
-func (q *QTreeWidgetItem) CheckState(column int) Qt_CheckState {
+func (q *QTreeWidgetItem) CheckState(column int32) Qt_CheckState {
 	var __rv Qt_CheckState
 	q.Drv(177000,177116,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTreeWidgetItem::child(int)
-func (q *QTreeWidgetItem) Child(index int) *QTreeWidgetItem {
+func (q *QTreeWidgetItem) Child(index int32) *QTreeWidgetItem {
 	var __rv uintptr
 	q.Drv(177000,177117,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -29576,8 +29576,8 @@ func (q *QTreeWidgetItem) Child(index int) *QTreeWidgetItem {
 	return _rp
 }	
 //QTreeWidgetItem::childCount()
-func (q *QTreeWidgetItem) ChildCount() int {
-	var __rv int
+func (q *QTreeWidgetItem) ChildCount() int32 {
+	var __rv int32
 	q.Drv(177000,177118,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -29599,13 +29599,13 @@ func (q *QTreeWidgetItem) Clone() *QTreeWidgetItem {
 	return _rp
 }	
 //QTreeWidgetItem::columnCount()
-func (q *QTreeWidgetItem) ColumnCount() int {
-	var __rv int
+func (q *QTreeWidgetItem) ColumnCount() int32 {
+	var __rv int32
 	q.Drv(177000,177121,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTreeWidgetItem::data(int,int)
-func (q *QTreeWidgetItem) Data(column int,role int) *QVariant {
+func (q *QTreeWidgetItem) Data(column int32,role int32) *QVariant {
 	var __rv uintptr
 	q.Drv(177000,177122,unsafe.Pointer(&column),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -29622,7 +29622,7 @@ func (q *QTreeWidgetItem) Flags() Qt_ItemFlag {
 	return __rv
 }	
 //QTreeWidgetItem::font(int)
-func (q *QTreeWidgetItem) Font(column int) *QFont {
+func (q *QTreeWidgetItem) Font(column int32) *QFont {
 	var __rv uintptr
 	q.Drv(177000,177124,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -29633,7 +29633,7 @@ func (q *QTreeWidgetItem) Font(column int) *QFont {
 	return _rp
 }	
 //QTreeWidgetItem::foreground(int)
-func (q *QTreeWidgetItem) Foreground(column int) *QBrush {
+func (q *QTreeWidgetItem) Foreground(column int32) *QBrush {
 	var __rv uintptr
 	q.Drv(177000,177125,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -29644,7 +29644,7 @@ func (q *QTreeWidgetItem) Foreground(column int) *QBrush {
 	return _rp
 }	
 //QTreeWidgetItem::icon(int)
-func (q *QTreeWidgetItem) Icon(column int) *QIcon {
+func (q *QTreeWidgetItem) Icon(column int32) *QIcon {
 	var __rv uintptr
 	q.Drv(177000,177126,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -29655,17 +29655,17 @@ func (q *QTreeWidgetItem) Icon(column int) *QIcon {
 	return _rp
 }	
 //QTreeWidgetItem::indexOfChild(QTreeWidgetItem*)
-func (q *QTreeWidgetItem) IndexOfChild(child *QTreeWidgetItem) int {
-	var __rv int
+func (q *QTreeWidgetItem) IndexOfChild(child *QTreeWidgetItem) int32 {
+	var __rv int32
 	q.Drv(177000,177127,Native(child),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTreeWidgetItem::insertChild(int,QTreeWidgetItem*)
-func (q *QTreeWidgetItem) InsertChild(index int,child *QTreeWidgetItem)  {
+func (q *QTreeWidgetItem) InsertChild(index int32,child *QTreeWidgetItem)  {
 	q.Drv(177000,177128,unsafe.Pointer(&index),Native(child),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidgetItem::insertChildren(int,QList<QTreeWidgetItem*> const&)
-func (q *QTreeWidgetItem) InsertChildren(index int,children []*QTreeWidgetItem)  {
+func (q *QTreeWidgetItem) InsertChildren(index int32,children []*QTreeWidgetItem)  {
 	q.Drv(177000,177129,unsafe.Pointer(&index),unsafe.Pointer(&children),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidgetItem::isDisabled()
@@ -29714,15 +29714,15 @@ func (q *QTreeWidgetItem) RemoveChild(child *QTreeWidgetItem)  {
 	q.Drv(177000,177136,Native(child),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidgetItem::setBackground(int,QBrush const&)
-func (q *QTreeWidgetItem) SetBackground(column int,brush *QBrush)  {
+func (q *QTreeWidgetItem) SetBackground(column int32,brush *QBrush)  {
 	q.Drv(177000,177137,unsafe.Pointer(&column),Native(brush),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidgetItem::setBackgroundColor(int,QColor const&)
-func (q *QTreeWidgetItem) SetBackgroundColor(column int,color *QColor)  {
+func (q *QTreeWidgetItem) SetBackgroundColor(column int32,color *QColor)  {
 	q.Drv(177000,177138,unsafe.Pointer(&column),Native(color),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidgetItem::setCheckState(int,Qt::CheckState)
-func (q *QTreeWidgetItem) SetCheckState(column int,state Qt_CheckState)  {
+func (q *QTreeWidgetItem) SetCheckState(column int32,state Qt_CheckState)  {
 	q.Drv(177000,177139,unsafe.Pointer(&column),unsafe.Pointer(&state),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidgetItem::setChildIndicatorPolicy(QTreeWidgetItem::ChildIndicatorPolicy)
@@ -29730,7 +29730,7 @@ func (q *QTreeWidgetItem) SetChildIndicatorPolicy(policy QTreeWidgetItem_ChildIn
 	q.Drv(177000,177140,unsafe.Pointer(&policy),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidgetItem::setData(int,int,QVariant const&)
-func (q *QTreeWidgetItem) SetData(column int,role int,value *QVariant)  {
+func (q *QTreeWidgetItem) SetData(column int32,role int32,value *QVariant)  {
 	q.Drv(177000,177141,unsafe.Pointer(&column),unsafe.Pointer(&role),Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidgetItem::setDisabled(bool)
@@ -29750,11 +29750,11 @@ func (q *QTreeWidgetItem) SetFlags(flags Qt_ItemFlag)  {
 	q.Drv(177000,177145,unsafe.Pointer(&flags),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidgetItem::setFont(int,QFont const&)
-func (q *QTreeWidgetItem) SetFont(column int,font *QFont)  {
+func (q *QTreeWidgetItem) SetFont(column int32,font *QFont)  {
 	q.Drv(177000,177146,unsafe.Pointer(&column),Native(font),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidgetItem::setForeground(int,QBrush const&)
-func (q *QTreeWidgetItem) SetForeground(column int,brush *QBrush)  {
+func (q *QTreeWidgetItem) SetForeground(column int32,brush *QBrush)  {
 	q.Drv(177000,177147,unsafe.Pointer(&column),Native(brush),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidgetItem::setHidden(bool)
@@ -29762,7 +29762,7 @@ func (q *QTreeWidgetItem) SetHidden(hide bool)  {
 	q.Drv(177000,177148,unsafe.Pointer(&hide),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidgetItem::setIcon(int,QIcon const&)
-func (q *QTreeWidgetItem) SetIcon(column int,icon *QIcon)  {
+func (q *QTreeWidgetItem) SetIcon(column int32,icon *QIcon)  {
 	q.Drv(177000,177149,unsafe.Pointer(&column),Native(icon),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidgetItem::setSelected(bool)
@@ -29770,35 +29770,35 @@ func (q *QTreeWidgetItem) SetSelected(_select bool)  {
 	q.Drv(177000,177150,unsafe.Pointer(&_select),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidgetItem::setSizeHint(int,QSize const&)
-func (q *QTreeWidgetItem) SetSizeHint(column int,size *QSize)  {
+func (q *QTreeWidgetItem) SetSizeHint(column int32,size *QSize)  {
 	q.Drv(177000,177151,unsafe.Pointer(&column),Native(size),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidgetItem::setStatusTip(int,QString const&)
-func (q *QTreeWidgetItem) SetStatusTip(column int,statusTip string)  {
+func (q *QTreeWidgetItem) SetStatusTip(column int32,statusTip string)  {
 	q.Drv(177000,177152,unsafe.Pointer(&column),unsafe.Pointer(&statusTip),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidgetItem::setText(int,QString const&)
-func (q *QTreeWidgetItem) SetText(column int,text string)  {
+func (q *QTreeWidgetItem) SetText(column int32,text string)  {
 	q.Drv(177000,177153,unsafe.Pointer(&column),unsafe.Pointer(&text),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidgetItem::setTextAlignment(int,int)
-func (q *QTreeWidgetItem) SetTextAlignment(column int,alignment int)  {
+func (q *QTreeWidgetItem) SetTextAlignment(column int32,alignment int32)  {
 	q.Drv(177000,177154,unsafe.Pointer(&column),unsafe.Pointer(&alignment),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidgetItem::setTextColor(int,QColor const&)
-func (q *QTreeWidgetItem) SetTextColor(column int,color *QColor)  {
+func (q *QTreeWidgetItem) SetTextColor(column int32,color *QColor)  {
 	q.Drv(177000,177155,unsafe.Pointer(&column),Native(color),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidgetItem::setToolTip(int,QString const&)
-func (q *QTreeWidgetItem) SetToolTip(column int,toolTip string)  {
+func (q *QTreeWidgetItem) SetToolTip(column int32,toolTip string)  {
 	q.Drv(177000,177156,unsafe.Pointer(&column),unsafe.Pointer(&toolTip),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidgetItem::setWhatsThis(int,QString const&)
-func (q *QTreeWidgetItem) SetWhatsThis(column int,whatsThis string)  {
+func (q *QTreeWidgetItem) SetWhatsThis(column int32,whatsThis string)  {
 	q.Drv(177000,177157,unsafe.Pointer(&column),unsafe.Pointer(&whatsThis),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidgetItem::sizeHint(int)
-func (q *QTreeWidgetItem) SizeHint(column int) *QSize {
+func (q *QTreeWidgetItem) SizeHint(column int32) *QSize {
 	var __rv uintptr
 	q.Drv(177000,177158,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -29809,17 +29809,17 @@ func (q *QTreeWidgetItem) SizeHint(column int) *QSize {
 	return _rp
 }	
 //QTreeWidgetItem::sortChildren(int,Qt::SortOrder)
-func (q *QTreeWidgetItem) SortChildren(column int,order Qt_SortOrder)  {
+func (q *QTreeWidgetItem) SortChildren(column int32,order Qt_SortOrder)  {
 	q.Drv(177000,177159,unsafe.Pointer(&column),unsafe.Pointer(&order),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidgetItem::statusTip(int)
-func (q *QTreeWidgetItem) StatusTip(column int) string {
+func (q *QTreeWidgetItem) StatusTip(column int32) string {
 	var __rv string
 	q.Drv(177000,177160,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTreeWidgetItem::takeChild(int)
-func (q *QTreeWidgetItem) TakeChild(index int) *QTreeWidgetItem {
+func (q *QTreeWidgetItem) TakeChild(index int32) *QTreeWidgetItem {
 	var __rv uintptr
 	q.Drv(177000,177161,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -29836,19 +29836,19 @@ func (q *QTreeWidgetItem) TakeChildren() []*QTreeWidgetItem {
 	return __rv
 }	
 //QTreeWidgetItem::text(int)
-func (q *QTreeWidgetItem) Text(column int) string {
+func (q *QTreeWidgetItem) Text(column int32) string {
 	var __rv string
 	q.Drv(177000,177163,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTreeWidgetItem::textAlignment(int)
-func (q *QTreeWidgetItem) TextAlignment(column int) int {
-	var __rv int
+func (q *QTreeWidgetItem) TextAlignment(column int32) int32 {
+	var __rv int32
 	q.Drv(177000,177164,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTreeWidgetItem::textColor(int)
-func (q *QTreeWidgetItem) TextColor(column int) *QColor {
+func (q *QTreeWidgetItem) TextColor(column int32) *QColor {
 	var __rv uintptr
 	q.Drv(177000,177165,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -29859,7 +29859,7 @@ func (q *QTreeWidgetItem) TextColor(column int) *QColor {
 	return _rp
 }	
 //QTreeWidgetItem::toolTip(int)
-func (q *QTreeWidgetItem) ToolTip(column int) string {
+func (q *QTreeWidgetItem) ToolTip(column int32) string {
 	var __rv string
 	q.Drv(177000,177166,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -29876,13 +29876,13 @@ func (q *QTreeWidgetItem) TreeWidget() *QTreeWidget {
 	return _rp
 }	
 //QTreeWidgetItem::type()
-func (q *QTreeWidgetItem) Type() int {
-	var __rv int
+func (q *QTreeWidgetItem) Type() int32 {
+	var __rv int32
 	q.Drv(177000,177168,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTreeWidgetItem::whatsThis(int)
-func (q *QTreeWidgetItem) WhatsThis(column int) string {
+func (q *QTreeWidgetItem) WhatsThis(column int32) string {
 	var __rv string
 	q.Drv(177000,177169,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -29988,7 +29988,7 @@ func NewQUndoCommandWithTextParent(text string,parent *QUndoCommand) *QUndoComma
 	return _p
 } 
 //QUndoCommand::child(int)
-func (q *QUndoCommand) Child(index int) *QUndoCommand {
+func (q *QUndoCommand) Child(index int32) *QUndoCommand {
 	var __rv uintptr
 	q.Drv(179000,179105,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -29999,14 +29999,14 @@ func (q *QUndoCommand) Child(index int) *QUndoCommand {
 	return _rp
 }	
 //QUndoCommand::childCount()
-func (q *QUndoCommand) ChildCount() int {
-	var __rv int
+func (q *QUndoCommand) ChildCount() int32 {
+	var __rv int32
 	q.Drv(179000,179106,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QUndoCommand::id()
-func (q *QUndoCommand) Id() int {
-	var __rv int
+func (q *QUndoCommand) Id() int32 {
+	var __rv int32
 	q.Drv(179000,179107,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -30327,14 +30327,14 @@ func (q *QUrl) Path() string {
 	return __rv
 }	
 //QUrl::port()
-func (q *QUrl) Port() int {
-	var __rv int
+func (q *QUrl) Port() int32 {
+	var __rv int32
 	q.Drv(180000,180128,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QUrl::port(int)
-func (q *QUrl) PortWithDefaultport(defaultPort int) int {
-	var __rv int
+func (q *QUrl) PortWithDefaultport(defaultPort int32) int32 {
+	var __rv int32
 	q.Drv(180000,180129,unsafe.Pointer(&defaultPort),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -30396,7 +30396,7 @@ func (q *QUrl) SetPath(path string)  {
 	q.Drv(180000,180139,unsafe.Pointer(&path),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QUrl::setPort(int)
-func (q *QUrl) SetPort(port int)  {
+func (q *QUrl) SetPort(port int32)  {
 	q.Drv(180000,180140,unsafe.Pointer(&port),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QUrl::setQuery(QString const&)
@@ -30555,7 +30555,7 @@ func NewQUuidWithString(value string) *QUuid {
 	return _p
 } 
 //QUuid::QUuid(unsigned int,unsigned short,unsigned short,unsigned char,unsigned char,unsigned char,unsigned char,unsigned char,unsigned char,unsigned char,unsigned char)	
-func NewQUuidWithLW1W2B1B2B3B4B5B6B7B8(l uint,w1 uint16,w2 uint16,b1 byte,b2 byte,b3 byte,b4 byte,b5 byte,b6 byte,b7 byte,b8 byte) *QUuid {
+func NewQUuidWithUint32W1W2B1B2B3B4B5B6B7B8(l uint32,w1 uint16,w2 uint16,b1 byte,b2 byte,b3 byte,b4 byte,b5 byte,b6 byte,b7 byte,b8 byte) *QUuid {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),181000,181104,unsafe.Pointer(&l),unsafe.Pointer(&w1),unsafe.Pointer(&w2),unsafe.Pointer(&b1),unsafe.Pointer(&b2),unsafe.Pointer(&b3),unsafe.Pointer(&b4),unsafe.Pointer(&b5),unsafe.Pointer(&b6),unsafe.Pointer(&b7),unsafe.Pointer(&b8),nil)
 	if err != nil || __rv == 0 {
@@ -30986,7 +30986,7 @@ func NewQVariantWithFloat32(f float32) *QVariant {
 	return _p
 } 
 //QVariant::QVariant(int)	
-func NewQVariantWithInt(i int) *QVariant {
+func NewQVariantWithInt32(i int32) *QVariant {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),182000,182130,unsafe.Pointer(&i),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -31008,7 +31008,7 @@ func NewQVariantWithInt64(ll int64) *QVariant {
 	return _p
 } 
 //QVariant::QVariant(unsigned int)	
-func NewQVariantWithUint(ui uint) *QVariant {
+func NewQVariantWithUint32(ui uint32) *QVariant {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),182000,182132,unsafe.Pointer(&ui),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -31019,7 +31019,7 @@ func NewQVariantWithUint(ui uint) *QVariant {
 	return _p
 } 
 //QVariant::QVariant(int,void const*)	
-func NewQVariantWithIntUintptr(typeOrUserType int,copy uintptr) *QVariant {
+func NewQVariantWithInt32Uintptr(typeOrUserType int32,copy uintptr) *QVariant {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),182000,182133,unsafe.Pointer(&typeOrUserType),unsafe.Pointer(&copy),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -31030,7 +31030,7 @@ func NewQVariantWithIntUintptr(typeOrUserType int,copy uintptr) *QVariant {
 	return _p
 } 
 //QVariant::QVariant(int,void const*,unsigned int)	
-func NewQVariantWithIntUintptrUint(typeOrUserType int,copy uintptr,flags uint) *QVariant {
+func NewQVariantWithInt32UintptrUint32(typeOrUserType int32,copy uintptr,flags uint32) *QVariant {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),182000,182134,unsafe.Pointer(&typeOrUserType),unsafe.Pointer(&copy),unsafe.Pointer(&flags),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -31172,8 +31172,8 @@ func (q *QVariant) ToFloat(ok *bool) float32 {
 	return __rv
 }	
 //QVariant::toInt(bool*)
-func (q *QVariant) ToInt(ok *bool) int {
-	var __rv int
+func (q *QVariant) ToInt(ok *bool) int32 {
+	var __rv int32
 	q.Drv(182000,182154,unsafe.Pointer(&ok),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -31335,8 +31335,8 @@ func (q *QVariant) ToTime() *QTime {
 	return _rp
 }	
 //QVariant::toUInt(bool*)
-func (q *QVariant) ToUInt(ok *bool) uint {
-	var __rv uint
+func (q *QVariant) ToUInt(ok *bool) uint32 {
+	var __rv uint32
 	q.Drv(182000,182172,unsafe.Pointer(&ok),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -31382,8 +31382,8 @@ func (q *QVariant) TypeToName(_type QVariant_Type) string {
 	return __rv
 }	
 //QVariant::userType()
-func (q *QVariant) UserType() int {
-	var __rv int
+func (q *QVariant) UserType() int32 {
+	var __rv int32
 	q.Drv(182000,182178,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -32233,7 +32233,7 @@ type QWheelEvent struct {
 	QInputEvent
 }
 //QWheelEvent::QWheelEvent(QPoint const&,int,QFlags<Qt::MouseButton>,QFlags<Qt::KeyboardModifier>,Qt::Orientation)	
-func NewQWheelEvent(pos *QPoint,delta int,buttons Qt_MouseButton,modifiers Qt_KeyboardModifier,orient Qt_Orientation) *QWheelEvent {
+func NewQWheelEvent(pos *QPoint,delta int32,buttons Qt_MouseButton,modifiers Qt_KeyboardModifier,orient Qt_Orientation) *QWheelEvent {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),189000,189102,Native(pos),unsafe.Pointer(&delta),unsafe.Pointer(&buttons),unsafe.Pointer(&modifiers),unsafe.Pointer(&orient),nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -32244,7 +32244,7 @@ func NewQWheelEvent(pos *QPoint,delta int,buttons Qt_MouseButton,modifiers Qt_Ke
 	return _p
 } 
 //QWheelEvent::QWheelEvent(QPoint const&,QPoint const&,int,QFlags<Qt::MouseButton>,QFlags<Qt::KeyboardModifier>,Qt::Orientation)	
-func NewQWheelEventWithPosGlobalposDeltaButtonsModifiersOrient(pos *QPoint,globalPos *QPoint,delta int,buttons Qt_MouseButton,modifiers Qt_KeyboardModifier,orient Qt_Orientation) *QWheelEvent {
+func NewQWheelEventWithPosGlobalposDeltaButtonsModifiersOrient(pos *QPoint,globalPos *QPoint,delta int32,buttons Qt_MouseButton,modifiers Qt_KeyboardModifier,orient Qt_Orientation) *QWheelEvent {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),189000,189103,Native(pos),Native(globalPos),unsafe.Pointer(&delta),unsafe.Pointer(&buttons),unsafe.Pointer(&modifiers),unsafe.Pointer(&orient),nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -32261,8 +32261,8 @@ func (q *QWheelEvent) Buttons() Qt_MouseButton {
 	return __rv
 }	
 //QWheelEvent::delta()
-func (q *QWheelEvent) Delta() int {
-	var __rv int
+func (q *QWheelEvent) Delta() int32 {
+	var __rv int32
 	q.Drv(189000,189105,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -32278,14 +32278,14 @@ func (q *QWheelEvent) GlobalPos() *QPoint {
 	return _rp
 }	
 //QWheelEvent::globalX()
-func (q *QWheelEvent) GlobalX() int {
-	var __rv int
+func (q *QWheelEvent) GlobalX() int32 {
+	var __rv int32
 	q.Drv(189000,189107,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QWheelEvent::globalY()
-func (q *QWheelEvent) GlobalY() int {
-	var __rv int
+func (q *QWheelEvent) GlobalY() int32 {
+	var __rv int32
 	q.Drv(189000,189108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -32307,14 +32307,14 @@ func (q *QWheelEvent) Pos() *QPoint {
 	return _rp
 }	
 //QWheelEvent::x()
-func (q *QWheelEvent) X() int {
-	var __rv int
+func (q *QWheelEvent) X() int32 {
+	var __rv int32
 	q.Drv(189000,189111,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QWheelEvent::y()
-func (q *QWheelEvent) Y() int {
-	var __rv int
+func (q *QWheelEvent) Y() int32 {
+	var __rv int32
 	q.Drv(189000,189112,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -32358,8 +32358,8 @@ func (q *QWidgetItem) HasHeightForWidth() bool {
 	return __rv
 }	
 //QWidgetItem::heightForWidth(int)
-func (q *QWidgetItem) HeightForWidth(value int) int {
-	var __rv int
+func (q *QWidgetItem) HeightForWidth(value int32) int32 {
+	var __rv int32
 	q.Drv(190000,190106,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -32486,7 +32486,7 @@ func (q *QAbstractAnimation) OnFinished(fn func()) uintptr {
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QAbstractAnimation) OnCurrentLoopChanged(fn func(int)) uintptr {
+func (q *QAbstractAnimation) OnCurrentLoopChanged(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(192000,192103,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -32505,20 +32505,20 @@ func (q *QAbstractAnimation) OnDirectionChanged(fn func(QAbstractAnimation_Direc
 	return __rv
 }
 //QAbstractAnimation::currentLoop()
-func (q *QAbstractAnimation) CurrentLoop() int {
-	var __rv int
+func (q *QAbstractAnimation) CurrentLoop() int32 {
+	var __rv int32
 	q.Drv(192000,192106,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractAnimation::currentLoopTime()
-func (q *QAbstractAnimation) CurrentLoopTime() int {
-	var __rv int
+func (q *QAbstractAnimation) CurrentLoopTime() int32 {
+	var __rv int32
 	q.Drv(192000,192107,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractAnimation::currentTime()
-func (q *QAbstractAnimation) CurrentTime() int {
-	var __rv int
+func (q *QAbstractAnimation) CurrentTime() int32 {
+	var __rv int32
 	q.Drv(192000,192108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -32529,8 +32529,8 @@ func (q *QAbstractAnimation) Direction() QAbstractAnimation_Direction {
 	return __rv
 }	
 //QAbstractAnimation::duration()
-func (q *QAbstractAnimation) Duration() int {
-	var __rv int
+func (q *QAbstractAnimation) Duration() int32 {
+	var __rv int32
 	q.Drv(192000,192110,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -32552,8 +32552,8 @@ func (q *QAbstractAnimation) Group() *QAnimationGroup {
 	return _rp
 }	
 //QAbstractAnimation::loopCount()
-func (q *QAbstractAnimation) LoopCount() int {
-	var __rv int
+func (q *QAbstractAnimation) LoopCount() int32 {
+	var __rv int32
 	q.Drv(192000,192113,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -32566,7 +32566,7 @@ func (q *QAbstractAnimation) Resume()  {
 	q.Drv(192000,192115,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractAnimation::setCurrentTime(int)
-func (q *QAbstractAnimation) SetCurrentTime(msecs int)  {
+func (q *QAbstractAnimation) SetCurrentTime(msecs int32)  {
 	q.Drv(192000,192116,unsafe.Pointer(&msecs),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractAnimation::setDirection(QAbstractAnimation::Direction)
@@ -32574,7 +32574,7 @@ func (q *QAbstractAnimation) SetDirection(direction QAbstractAnimation_Direction
 	q.Drv(192000,192117,unsafe.Pointer(&direction),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractAnimation::setLoopCount(int)
-func (q *QAbstractAnimation) SetLoopCount(loopCount int)  {
+func (q *QAbstractAnimation) SetLoopCount(loopCount int32)  {
 	q.Drv(192000,192118,unsafe.Pointer(&loopCount),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractAnimation::setPaused(bool)
@@ -32600,13 +32600,13 @@ func (q *QAbstractAnimation) Stop()  {
 	q.Drv(192000,192123,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractAnimation::totalDuration()
-func (q *QAbstractAnimation) TotalDuration() int {
-	var __rv int
+func (q *QAbstractAnimation) TotalDuration() int32 {
+	var __rv int32
 	q.Drv(192000,192124,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractAnimation::updateCurrentTime(int)
-func (q *QAbstractAnimation) UpdateCurrentTime(currentTime int)  {
+func (q *QAbstractAnimation) UpdateCurrentTime(currentTime int32)  {
 	q.Drv(192000,192125,unsafe.Pointer(&currentTime),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractAnimation::updateDirection(QAbstractAnimation::Direction)
@@ -32657,7 +32657,7 @@ func (q *QAbstractButton) AnimateClick()  {
 	q.Drv(193000,193107,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractButton::animateClick(int)
-func (q *QAbstractButton) AnimateClickWithMsec(msec int)  {
+func (q *QAbstractButton) AnimateClickWithMsec(msec int32)  {
 	q.Drv(193000,193108,unsafe.Pointer(&msec),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractButton::autoExclusive()
@@ -32673,14 +32673,14 @@ func (q *QAbstractButton) AutoRepeat() bool {
 	return __rv
 }	
 //QAbstractButton::autoRepeatDelay()
-func (q *QAbstractButton) AutoRepeatDelay() int {
-	var __rv int
+func (q *QAbstractButton) AutoRepeatDelay() int32 {
+	var __rv int32
 	q.Drv(193000,193111,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractButton::autoRepeatInterval()
-func (q *QAbstractButton) AutoRepeatInterval() int {
-	var __rv int
+func (q *QAbstractButton) AutoRepeatInterval() int32 {
+	var __rv int32
 	q.Drv(193000,193112,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -32804,11 +32804,11 @@ func (q *QAbstractButton) SetAutoRepeat(value bool)  {
 	q.Drv(193000,193134,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractButton::setAutoRepeatDelay(int)
-func (q *QAbstractButton) SetAutoRepeatDelay(value int)  {
+func (q *QAbstractButton) SetAutoRepeatDelay(value int32)  {
 	q.Drv(193000,193135,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractButton::setAutoRepeatInterval(int)
-func (q *QAbstractButton) SetAutoRepeatInterval(value int)  {
+func (q *QAbstractButton) SetAutoRepeatInterval(value int32)  {
 	q.Drv(193000,193136,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractButton::setCheckable(bool)
@@ -32897,13 +32897,13 @@ func (q *QAbstractItemDelegate) OnCloseEditor(fn func(*QWidget,QAbstractItemDele
 	return __rv
 }
 //QAbstractItemDelegate::elidedText(QFontMetrics const&,int,Qt::TextElideMode,QString const&)	
-func QAbstractItemDelegateElidedText(fontMetrics *QFontMetrics,width int,mode Qt_TextElideMode,text string) string {
+func QAbstractItemDelegateElidedText(fontMetrics *QFontMetrics,width int32,mode Qt_TextElideMode,text string) string {
 	var __rv string
 	DirectQtDrv(nil,194000,194105,Native(fontMetrics),unsafe.Pointer(&width),unsafe.Pointer(&mode),unsafe.Pointer(&text),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractItemDelegate::elidedText(QFontMetrics const&,int,Qt::TextElideMode,QString const&)
-func (q *QAbstractItemDelegate) ElidedText(fontMetrics *QFontMetrics,width int,mode Qt_TextElideMode,text string) string {
+func (q *QAbstractItemDelegate) ElidedText(fontMetrics *QFontMetrics,width int32,mode Qt_TextElideMode,text string) string {
 	var __rv string
 	q.Drv(194000,194105,Native(fontMetrics),unsafe.Pointer(&width),unsafe.Pointer(&mode),unsafe.Pointer(&text),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -32927,7 +32927,7 @@ func (q *QAbstractItemModel) OnLayoutChanged(fn func()) uintptr {
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QAbstractItemModel) OnHeaderDataChanged(fn func(Qt_Orientation,int,int)) uintptr {
+func (q *QAbstractItemModel) OnHeaderDataChanged(fn func(Qt_Orientation,int32,int32)) uintptr {
 	var __rv uintptr
 	q.Drv(195000,195103,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -32946,31 +32946,31 @@ func (q *QAbstractItemModel) OnLayoutAboutToBeChanged(fn func()) uintptr {
 	return __rv
 }
 //QAbstractItemModel::beginInsertColumns(QModelIndex const&,int,int)
-func (q *QAbstractItemModel) BeginInsertColumns(parent *QModelIndex,first int,last int)  {
+func (q *QAbstractItemModel) BeginInsertColumns(parent *QModelIndex,first int32,last int32)  {
 	q.Drv(195000,195106,Native(parent),unsafe.Pointer(&first),unsafe.Pointer(&last),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractItemModel::beginInsertRows(QModelIndex const&,int,int)
-func (q *QAbstractItemModel) BeginInsertRows(parent *QModelIndex,first int,last int)  {
+func (q *QAbstractItemModel) BeginInsertRows(parent *QModelIndex,first int32,last int32)  {
 	q.Drv(195000,195107,Native(parent),unsafe.Pointer(&first),unsafe.Pointer(&last),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractItemModel::beginMoveColumns(QModelIndex const&,int,int,QModelIndex const&,int)
-func (q *QAbstractItemModel) BeginMoveColumns(sourceParent *QModelIndex,sourceFirst int,sourceLast int,destinationParent *QModelIndex,destinationColumn int) bool {
+func (q *QAbstractItemModel) BeginMoveColumns(sourceParent *QModelIndex,sourceFirst int32,sourceLast int32,destinationParent *QModelIndex,destinationColumn int32) bool {
 	var __rv bool
 	q.Drv(195000,195108,Native(sourceParent),unsafe.Pointer(&sourceFirst),unsafe.Pointer(&sourceLast),Native(destinationParent),unsafe.Pointer(&destinationColumn),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractItemModel::beginMoveRows(QModelIndex const&,int,int,QModelIndex const&,int)
-func (q *QAbstractItemModel) BeginMoveRows(sourceParent *QModelIndex,sourceFirst int,sourceLast int,destinationParent *QModelIndex,destinationRow int) bool {
+func (q *QAbstractItemModel) BeginMoveRows(sourceParent *QModelIndex,sourceFirst int32,sourceLast int32,destinationParent *QModelIndex,destinationRow int32) bool {
 	var __rv bool
 	q.Drv(195000,195109,Native(sourceParent),unsafe.Pointer(&sourceFirst),unsafe.Pointer(&sourceLast),Native(destinationParent),unsafe.Pointer(&destinationRow),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractItemModel::beginRemoveColumns(QModelIndex const&,int,int)
-func (q *QAbstractItemModel) BeginRemoveColumns(parent *QModelIndex,first int,last int)  {
+func (q *QAbstractItemModel) BeginRemoveColumns(parent *QModelIndex,first int32,last int32)  {
 	q.Drv(195000,195110,Native(parent),unsafe.Pointer(&first),unsafe.Pointer(&last),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractItemModel::beginRemoveRows(QModelIndex const&,int,int)
-func (q *QAbstractItemModel) BeginRemoveRows(parent *QModelIndex,first int,last int)  {
+func (q *QAbstractItemModel) BeginRemoveRows(parent *QModelIndex,first int32,last int32)  {
 	q.Drv(195000,195111,Native(parent),unsafe.Pointer(&first),unsafe.Pointer(&last),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractItemModel::beginResetModel()
@@ -33003,19 +33003,19 @@ func (q *QAbstractItemModel) ChangePersistentIndexList(from []*QModelIndex,to []
 	q.Drv(195000,195116,unsafe.Pointer(&from),unsafe.Pointer(&to),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractItemModel::columnCount()
-func (q *QAbstractItemModel) ColumnCount() int {
-	var __rv int
+func (q *QAbstractItemModel) ColumnCount() int32 {
+	var __rv int32
 	q.Drv(195000,195117,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractItemModel::columnCount(QModelIndex const&)
-func (q *QAbstractItemModel) ColumnCountWithParent(parent *QModelIndex) int {
-	var __rv int
+func (q *QAbstractItemModel) ColumnCountWithParent(parent *QModelIndex) int32 {
+	var __rv int32
 	q.Drv(195000,195118,Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractItemModel::createIndex(int,int,int)
-func (q *QAbstractItemModel) CreateIndex(row int,column int,id int) *QModelIndex {
+func (q *QAbstractItemModel) CreateIndex(row int32,column int32,id int32) *QModelIndex {
 	var __rv uintptr
 	q.Drv(195000,195119,unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&id),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -33026,7 +33026,7 @@ func (q *QAbstractItemModel) CreateIndex(row int,column int,id int) *QModelIndex
 	return _rp
 }	
 //QAbstractItemModel::createIndex(int,int,unsigned int)
-func (q *QAbstractItemModel) CreateIndexWithRowColumnId(row int,column int,id uint) *QModelIndex {
+func (q *QAbstractItemModel) CreateIndexWithRowColumnId(row int32,column int32,id uint32) *QModelIndex {
 	var __rv uintptr
 	q.Drv(195000,195120,unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&id),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -33037,7 +33037,7 @@ func (q *QAbstractItemModel) CreateIndexWithRowColumnId(row int,column int,id ui
 	return _rp
 }	
 //QAbstractItemModel::createIndex(int,int,void*)
-func (q *QAbstractItemModel) CreateIndexWithRowColumnData(row int,column int,data uintptr) *QModelIndex {
+func (q *QAbstractItemModel) CreateIndexWithRowColumnData(row int32,column int32,data uintptr) *QModelIndex {
 	var __rv uintptr
 	q.Drv(195000,195121,unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&data),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -33059,7 +33059,7 @@ func (q *QAbstractItemModel) Data(index *QModelIndex) *QVariant {
 	return _rp
 }	
 //QAbstractItemModel::data(QModelIndex const&,int)
-func (q *QAbstractItemModel) DataWithIndexRole(index *QModelIndex,role int) *QVariant {
+func (q *QAbstractItemModel) DataWithIndexRole(index *QModelIndex,role int32) *QVariant {
 	var __rv uintptr
 	q.Drv(195000,195123,Native(index),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -33070,7 +33070,7 @@ func (q *QAbstractItemModel) DataWithIndexRole(index *QModelIndex,role int) *QVa
 	return _rp
 }	
 //QAbstractItemModel::dropMimeData(QMimeData const*,Qt::DropAction,int,int,QModelIndex const&)
-func (q *QAbstractItemModel) DropMimeData(data *QMimeData,action Qt_DropAction,row int,column int,parent *QModelIndex) bool {
+func (q *QAbstractItemModel) DropMimeData(data *QMimeData,action Qt_DropAction,row int32,column int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(195000,195124,Native(data),unsafe.Pointer(&action),unsafe.Pointer(&row),unsafe.Pointer(&column),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -33126,13 +33126,13 @@ func (q *QAbstractItemModel) HasChildrenWithParent(parent *QModelIndex) bool {
 	return __rv
 }	
 //QAbstractItemModel::hasIndex(int,int,QModelIndex const&)
-func (q *QAbstractItemModel) HasIndex(row int,column int,parent *QModelIndex) bool {
+func (q *QAbstractItemModel) HasIndex(row int32,column int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(195000,195136,unsafe.Pointer(&row),unsafe.Pointer(&column),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractItemModel::headerData(int,Qt::Orientation,int)
-func (q *QAbstractItemModel) HeaderData(section int,orientation Qt_Orientation,role int) *QVariant {
+func (q *QAbstractItemModel) HeaderData(section int32,orientation Qt_Orientation,role int32) *QVariant {
 	var __rv uintptr
 	q.Drv(195000,195137,unsafe.Pointer(&section),unsafe.Pointer(&orientation),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -33143,7 +33143,7 @@ func (q *QAbstractItemModel) HeaderData(section int,orientation Qt_Orientation,r
 	return _rp
 }	
 //QAbstractItemModel::index(int,int,QModelIndex const&)
-func (q *QAbstractItemModel) Index(row int,column int,parent *QModelIndex) *QModelIndex {
+func (q *QAbstractItemModel) Index(row int32,column int32,parent *QModelIndex) *QModelIndex {
 	var __rv uintptr
 	q.Drv(195000,195138,unsafe.Pointer(&row),unsafe.Pointer(&column),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -33154,37 +33154,37 @@ func (q *QAbstractItemModel) Index(row int,column int,parent *QModelIndex) *QMod
 	return _rp
 }	
 //QAbstractItemModel::insertColumn(int)
-func (q *QAbstractItemModel) InsertColumn(column int) bool {
+func (q *QAbstractItemModel) InsertColumn(column int32) bool {
 	var __rv bool
 	q.Drv(195000,195139,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractItemModel::insertColumn(int,QModelIndex const&)
-func (q *QAbstractItemModel) InsertColumnWithColumnParent(column int,parent *QModelIndex) bool {
+func (q *QAbstractItemModel) InsertColumnWithColumnParent(column int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(195000,195140,unsafe.Pointer(&column),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractItemModel::insertColumns(int,int,QModelIndex const&)
-func (q *QAbstractItemModel) InsertColumns(column int,count int,parent *QModelIndex) bool {
+func (q *QAbstractItemModel) InsertColumns(column int32,count int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(195000,195141,unsafe.Pointer(&column),unsafe.Pointer(&count),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractItemModel::insertRow(int)
-func (q *QAbstractItemModel) InsertRow(row int) bool {
+func (q *QAbstractItemModel) InsertRow(row int32) bool {
 	var __rv bool
 	q.Drv(195000,195142,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractItemModel::insertRow(int,QModelIndex const&)
-func (q *QAbstractItemModel) InsertRowWithRowParent(row int,parent *QModelIndex) bool {
+func (q *QAbstractItemModel) InsertRowWithRowParent(row int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(195000,195143,unsafe.Pointer(&row),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractItemModel::insertRows(int,int,QModelIndex const&)
-func (q *QAbstractItemModel) InsertRows(row int,count int,parent *QModelIndex) bool {
+func (q *QAbstractItemModel) InsertRows(row int32,count int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(195000,195144,unsafe.Pointer(&row),unsafe.Pointer(&count),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -33196,7 +33196,7 @@ func (q *QAbstractItemModel) ItemData(index *QModelIndex) map[int]*QVariant {
 	return __rv
 }	
 //QAbstractItemModel::match(QModelIndex const&,int,QVariant const&,int,QFlags<Qt::MatchFlag>)
-func (q *QAbstractItemModel) Match(start *QModelIndex,role int,value *QVariant,hits int,flags Qt_MatchFlag) []*QModelIndex {
+func (q *QAbstractItemModel) Match(start *QModelIndex,role int32,value *QVariant,hits int32,flags Qt_MatchFlag) []*QModelIndex {
 	var __rv []*QModelIndex
 	q.Drv(195000,195146,Native(start),unsafe.Pointer(&role),Native(value),unsafe.Pointer(&hits),unsafe.Pointer(&flags),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -33247,37 +33247,37 @@ func (q *QAbstractItemModel) PersistentIndexList() []*QModelIndex {
 	return __rv
 }	
 //QAbstractItemModel::removeColumn(int)
-func (q *QAbstractItemModel) RemoveColumn(column int) bool {
+func (q *QAbstractItemModel) RemoveColumn(column int32) bool {
 	var __rv bool
 	q.Drv(195000,195152,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractItemModel::removeColumn(int,QModelIndex const&)
-func (q *QAbstractItemModel) RemoveColumnWithColumnParent(column int,parent *QModelIndex) bool {
+func (q *QAbstractItemModel) RemoveColumnWithColumnParent(column int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(195000,195153,unsafe.Pointer(&column),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractItemModel::removeColumns(int,int,QModelIndex const&)
-func (q *QAbstractItemModel) RemoveColumns(column int,count int,parent *QModelIndex) bool {
+func (q *QAbstractItemModel) RemoveColumns(column int32,count int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(195000,195154,unsafe.Pointer(&column),unsafe.Pointer(&count),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractItemModel::removeRow(int)
-func (q *QAbstractItemModel) RemoveRow(row int) bool {
+func (q *QAbstractItemModel) RemoveRow(row int32) bool {
 	var __rv bool
 	q.Drv(195000,195155,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractItemModel::removeRow(int,QModelIndex const&)
-func (q *QAbstractItemModel) RemoveRowWithRowParent(row int,parent *QModelIndex) bool {
+func (q *QAbstractItemModel) RemoveRowWithRowParent(row int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(195000,195156,unsafe.Pointer(&row),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractItemModel::removeRows(int,int,QModelIndex const&)
-func (q *QAbstractItemModel) RemoveRows(row int,count int,parent *QModelIndex) bool {
+func (q *QAbstractItemModel) RemoveRows(row int32,count int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(195000,195157,unsafe.Pointer(&row),unsafe.Pointer(&count),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -33287,25 +33287,25 @@ func (q *QAbstractItemModel) Revert()  {
 	q.Drv(195000,195158,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractItemModel::rowCount()
-func (q *QAbstractItemModel) RowCount() int {
-	var __rv int
+func (q *QAbstractItemModel) RowCount() int32 {
+	var __rv int32
 	q.Drv(195000,195159,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractItemModel::rowCount(QModelIndex const&)
-func (q *QAbstractItemModel) RowCountWithParent(parent *QModelIndex) int {
-	var __rv int
+func (q *QAbstractItemModel) RowCountWithParent(parent *QModelIndex) int32 {
+	var __rv int32
 	q.Drv(195000,195160,Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractItemModel::setData(QModelIndex const&,QVariant const&,int)
-func (q *QAbstractItemModel) SetData(index *QModelIndex,value *QVariant,role int) bool {
+func (q *QAbstractItemModel) SetData(index *QModelIndex,value *QVariant,role int32) bool {
 	var __rv bool
 	q.Drv(195000,195161,Native(index),Native(value),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractItemModel::setHeaderData(int,Qt::Orientation,QVariant const&,int)
-func (q *QAbstractItemModel) SetHeaderData(section int,orientation Qt_Orientation,value *QVariant,role int) bool {
+func (q *QAbstractItemModel) SetHeaderData(section int32,orientation Qt_Orientation,value *QVariant,role int32) bool {
 	var __rv bool
 	q.Drv(195000,195162,unsafe.Pointer(&section),unsafe.Pointer(&orientation),Native(value),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -33317,7 +33317,7 @@ func (q *QAbstractItemModel) SetItemData(index *QModelIndex,roles map[int]*QVari
 	return __rv
 }	
 //QAbstractItemModel::sibling(int,int,QModelIndex const&)
-func (q *QAbstractItemModel) Sibling(row int,column int,idx *QModelIndex) *QModelIndex {
+func (q *QAbstractItemModel) Sibling(row int32,column int32,idx *QModelIndex) *QModelIndex {
 	var __rv uintptr
 	q.Drv(195000,195164,unsafe.Pointer(&row),unsafe.Pointer(&column),Native(idx),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -33328,11 +33328,11 @@ func (q *QAbstractItemModel) Sibling(row int,column int,idx *QModelIndex) *QMode
 	return _rp
 }	
 //QAbstractItemModel::sort(int)
-func (q *QAbstractItemModel) Sort(column int)  {
+func (q *QAbstractItemModel) Sort(column int32)  {
 	q.Drv(195000,195165,unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractItemModel::sort(int,Qt::SortOrder)
-func (q *QAbstractItemModel) SortWithColumnOrder(column int,order Qt_SortOrder)  {
+func (q *QAbstractItemModel) SortWithColumnOrder(column int32,order Qt_SortOrder)  {
 	q.Drv(195000,195166,unsafe.Pointer(&column),unsafe.Pointer(&order),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractItemModel::span(QModelIndex const&)
@@ -33495,8 +33495,8 @@ func (q *QAbstractItemView) AlternatingRowColors() bool {
 	return __rv
 }	
 //QAbstractItemView::autoScrollMargin()
-func (q *QAbstractItemView) AutoScrollMargin() int {
-	var __rv int
+func (q *QAbstractItemView) AutoScrollMargin() int32 {
+	var __rv int32
 	q.Drv(196000,196109,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -33651,8 +33651,8 @@ func (q *QAbstractItemView) HasAutoScroll() bool {
 	return __rv
 }	
 //QAbstractItemView::horizontalOffset()
-func (q *QAbstractItemView) HorizontalOffset() int {
-	var __rv int
+func (q *QAbstractItemView) HorizontalOffset() int32 {
+	var __rv int32
 	q.Drv(196000,196139,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -33663,16 +33663,16 @@ func (q *QAbstractItemView) HorizontalScrollMode() QAbstractItemView_ScrollMode 
 	return __rv
 }	
 //QAbstractItemView::horizontalScrollbarAction(int)
-func (q *QAbstractItemView) HorizontalScrollbarAction(action int)  {
+func (q *QAbstractItemView) HorizontalScrollbarAction(action int32)  {
 	q.Drv(196000,196141,unsafe.Pointer(&action),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractItemView::horizontalScrollbarValueChanged(int)
-func (q *QAbstractItemView) HorizontalScrollbarValueChanged(value int)  {
+func (q *QAbstractItemView) HorizontalScrollbarValueChanged(value int32)  {
 	q.Drv(196000,196142,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractItemView::horizontalStepsPerItem()
-func (q *QAbstractItemView) HorizontalStepsPerItem() int {
-	var __rv int
+func (q *QAbstractItemView) HorizontalStepsPerItem() int32 {
+	var __rv int32
 	q.Drv(196000,196143,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -33753,7 +33753,7 @@ func (q *QAbstractItemView) ItemDelegateWithIndex(index *QModelIndex) *QAbstract
 	return _rp
 }	
 //QAbstractItemView::itemDelegateForColumn(int)
-func (q *QAbstractItemView) ItemDelegateForColumn(column int) *QAbstractItemDelegate {
+func (q *QAbstractItemView) ItemDelegateForColumn(column int32) *QAbstractItemDelegate {
 	var __rv uintptr
 	q.Drv(196000,196152,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -33764,7 +33764,7 @@ func (q *QAbstractItemView) ItemDelegateForColumn(column int) *QAbstractItemDele
 	return _rp
 }	
 //QAbstractItemView::itemDelegateForRow(int)
-func (q *QAbstractItemView) ItemDelegateForRow(row int) *QAbstractItemDelegate {
+func (q *QAbstractItemView) ItemDelegateForRow(row int32) *QAbstractItemDelegate {
 	var __rv uintptr
 	q.Drv(196000,196153,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -33844,11 +33844,11 @@ func (q *QAbstractItemView) RootIndex() *QModelIndex {
 	return _rp
 }	
 //QAbstractItemView::rowsAboutToBeRemoved(QModelIndex const&,int,int)
-func (q *QAbstractItemView) RowsAboutToBeRemoved(parent *QModelIndex,start int,end int)  {
+func (q *QAbstractItemView) RowsAboutToBeRemoved(parent *QModelIndex,start int32,end int32)  {
 	q.Drv(196000,196166,Native(parent),unsafe.Pointer(&start),unsafe.Pointer(&end),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractItemView::rowsInserted(QModelIndex const&,int,int)
-func (q *QAbstractItemView) RowsInserted(parent *QModelIndex,start int,end int)  {
+func (q *QAbstractItemView) RowsInserted(parent *QModelIndex,start int32,end int32)  {
 	q.Drv(196000,196167,Native(parent),unsafe.Pointer(&start),unsafe.Pointer(&end),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractItemView::scheduleDelayedItemsLayout()
@@ -33856,7 +33856,7 @@ func (q *QAbstractItemView) ScheduleDelayedItemsLayout()  {
 	q.Drv(196000,196168,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractItemView::scrollDirtyRegion(int,int)
-func (q *QAbstractItemView) ScrollDirtyRegion(dx int,dy int)  {
+func (q *QAbstractItemView) ScrollDirtyRegion(dx int32,dy int32)  {
 	q.Drv(196000,196169,unsafe.Pointer(&dx),unsafe.Pointer(&dy),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractItemView::scrollTo(QModelIndex const&)
@@ -33927,7 +33927,7 @@ func (q *QAbstractItemView) SetAutoScroll(enable bool)  {
 	q.Drv(196000,196182,unsafe.Pointer(&enable),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractItemView::setAutoScrollMargin(int)
-func (q *QAbstractItemView) SetAutoScrollMargin(margin int)  {
+func (q *QAbstractItemView) SetAutoScrollMargin(margin int32)  {
 	q.Drv(196000,196183,unsafe.Pointer(&margin),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractItemView::setCurrentIndex(QModelIndex const&)
@@ -33967,7 +33967,7 @@ func (q *QAbstractItemView) SetHorizontalScrollMode(mode QAbstractItemView_Scrol
 	q.Drv(196000,196192,unsafe.Pointer(&mode),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractItemView::setHorizontalStepsPerItem(int)
-func (q *QAbstractItemView) SetHorizontalStepsPerItem(steps int)  {
+func (q *QAbstractItemView) SetHorizontalStepsPerItem(steps int32)  {
 	q.Drv(196000,196193,unsafe.Pointer(&steps),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractItemView::setIconSize(QSize const&)
@@ -33983,11 +33983,11 @@ func (q *QAbstractItemView) SetItemDelegate(delegate *QAbstractItemDelegate)  {
 	q.Drv(196000,196196,Native(delegate),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractItemView::setItemDelegateForColumn(int,QAbstractItemDelegate*)
-func (q *QAbstractItemView) SetItemDelegateForColumn(column int,delegate *QAbstractItemDelegate)  {
+func (q *QAbstractItemView) SetItemDelegateForColumn(column int32,delegate *QAbstractItemDelegate)  {
 	q.Drv(196000,196197,unsafe.Pointer(&column),Native(delegate),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractItemView::setItemDelegateForRow(int,QAbstractItemDelegate*)
-func (q *QAbstractItemView) SetItemDelegateForRow(row int,delegate *QAbstractItemDelegate)  {
+func (q *QAbstractItemView) SetItemDelegateForRow(row int32,delegate *QAbstractItemDelegate)  {
 	q.Drv(196000,196198,unsafe.Pointer(&row),Native(delegate),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractItemView::setModel(QAbstractItemModel*)
@@ -34031,7 +34031,7 @@ func (q *QAbstractItemView) SetVerticalScrollMode(mode QAbstractItemView_ScrollM
 	q.Drv(196000,196208,unsafe.Pointer(&mode),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractItemView::setVerticalStepsPerItem(int)
-func (q *QAbstractItemView) SetVerticalStepsPerItem(steps int)  {
+func (q *QAbstractItemView) SetVerticalStepsPerItem(steps int32)  {
 	q.Drv(196000,196209,unsafe.Pointer(&steps),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractItemView::showDropIndicator()
@@ -34041,8 +34041,8 @@ func (q *QAbstractItemView) ShowDropIndicator() bool {
 	return __rv
 }	
 //QAbstractItemView::sizeHintForColumn(int)
-func (q *QAbstractItemView) SizeHintForColumn(column int) int {
-	var __rv int
+func (q *QAbstractItemView) SizeHintForColumn(column int32) int32 {
+	var __rv int32
 	q.Drv(196000,196211,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -34058,8 +34058,8 @@ func (q *QAbstractItemView) SizeHintForIndex(index *QModelIndex) *QSize {
 	return _rp
 }	
 //QAbstractItemView::sizeHintForRow(int)
-func (q *QAbstractItemView) SizeHintForRow(row int) int {
-	var __rv int
+func (q *QAbstractItemView) SizeHintForRow(row int32) int32 {
+	var __rv int32
 	q.Drv(196000,196213,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -34118,8 +34118,8 @@ func (q *QAbstractItemView) UpdateGeometries()  {
 	q.Drv(196000,196225,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractItemView::verticalOffset()
-func (q *QAbstractItemView) VerticalOffset() int {
-	var __rv int
+func (q *QAbstractItemView) VerticalOffset() int32 {
+	var __rv int32
 	q.Drv(196000,196226,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -34130,16 +34130,16 @@ func (q *QAbstractItemView) VerticalScrollMode() QAbstractItemView_ScrollMode {
 	return __rv
 }	
 //QAbstractItemView::verticalScrollbarAction(int)
-func (q *QAbstractItemView) VerticalScrollbarAction(action int)  {
+func (q *QAbstractItemView) VerticalScrollbarAction(action int32)  {
 	q.Drv(196000,196228,unsafe.Pointer(&action),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractItemView::verticalScrollbarValueChanged(int)
-func (q *QAbstractItemView) VerticalScrollbarValueChanged(value int)  {
+func (q *QAbstractItemView) VerticalScrollbarValueChanged(value int32)  {
 	q.Drv(196000,196229,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractItemView::verticalStepsPerItem()
-func (q *QAbstractItemView) VerticalStepsPerItem() int {
-	var __rv int
+func (q *QAbstractItemView) VerticalStepsPerItem() int32 {
+	var __rv int32
 	q.Drv(196000,196230,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -34186,13 +34186,13 @@ func NewQAbstractListModelFromDriver(drv Driver) *QAbstractListModel {
 	return _p
 } 	
 //QAbstractListModel::dropMimeData(QMimeData const*,Qt::DropAction,int,int,QModelIndex const&)
-func (q *QAbstractListModel) DropMimeData(data *QMimeData,action Qt_DropAction,row int,column int,parent *QModelIndex) bool {
+func (q *QAbstractListModel) DropMimeData(data *QMimeData,action Qt_DropAction,row int32,column int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(197000,197102,Native(data),unsafe.Pointer(&action),unsafe.Pointer(&row),unsafe.Pointer(&column),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractListModel::index(int)
-func (q *QAbstractListModel) Index(row int) *QModelIndex {
+func (q *QAbstractListModel) Index(row int32) *QModelIndex {
 	var __rv uintptr
 	q.Drv(197000,197103,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -34203,7 +34203,7 @@ func (q *QAbstractListModel) Index(row int) *QModelIndex {
 	return _rp
 }	
 //QAbstractListModel::index(int,int,QModelIndex const&)
-func (q *QAbstractListModel) IndexWithRowColumnParent(row int,column int,parent *QModelIndex) *QModelIndex {
+func (q *QAbstractListModel) IndexWithRowColumnParent(row int32,column int32,parent *QModelIndex) *QModelIndex {
 	var __rv uintptr
 	q.Drv(197000,197104,unsafe.Pointer(&row),unsafe.Pointer(&column),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -34249,14 +34249,14 @@ func (q *QAbstractPrintDialog) EnabledOptions() QAbstractPrintDialog_PrintDialog
 	return __rv
 }	
 //QAbstractPrintDialog::exec()
-func (q *QAbstractPrintDialog) Exec() int {
-	var __rv int
+func (q *QAbstractPrintDialog) Exec() int32 {
+	var __rv int32
 	q.Drv(198000,198104,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractPrintDialog::fromPage()
-func (q *QAbstractPrintDialog) FromPage() int {
-	var __rv int
+func (q *QAbstractPrintDialog) FromPage() int32 {
+	var __rv int32
 	q.Drv(198000,198105,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -34267,14 +34267,14 @@ func (q *QAbstractPrintDialog) IsOptionEnabled(option QAbstractPrintDialog_Print
 	return __rv
 }	
 //QAbstractPrintDialog::maxPage()
-func (q *QAbstractPrintDialog) MaxPage() int {
-	var __rv int
+func (q *QAbstractPrintDialog) MaxPage() int32 {
+	var __rv int32
 	q.Drv(198000,198107,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractPrintDialog::minPage()
-func (q *QAbstractPrintDialog) MinPage() int {
-	var __rv int
+func (q *QAbstractPrintDialog) MinPage() int32 {
+	var __rv int32
 	q.Drv(198000,198108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -34300,11 +34300,11 @@ func (q *QAbstractPrintDialog) SetEnabledOptions(options QAbstractPrintDialog_Pr
 	q.Drv(198000,198111,unsafe.Pointer(&options),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractPrintDialog::setFromTo(int,int)
-func (q *QAbstractPrintDialog) SetFromTo(fromPage int,toPage int)  {
+func (q *QAbstractPrintDialog) SetFromTo(fromPage int32,toPage int32)  {
 	q.Drv(198000,198112,unsafe.Pointer(&fromPage),unsafe.Pointer(&toPage),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractPrintDialog::setMinMax(int,int)
-func (q *QAbstractPrintDialog) SetMinMax(min int,max int)  {
+func (q *QAbstractPrintDialog) SetMinMax(min int32,max int32)  {
 	q.Drv(198000,198113,unsafe.Pointer(&min),unsafe.Pointer(&max),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractPrintDialog::setOptionTabs(QList<QWidget*> const&)
@@ -34316,8 +34316,8 @@ func (q *QAbstractPrintDialog) SetPrintRange(_range QAbstractPrintDialog_PrintRa
 	q.Drv(198000,198115,unsafe.Pointer(&_range),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractPrintDialog::toPage()
-func (q *QAbstractPrintDialog) ToPage() int {
-	var __rv int
+func (q *QAbstractPrintDialog) ToPage() int32 {
+	var __rv int32
 	q.Drv(198000,198116,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -34338,7 +34338,7 @@ func (q *QAbstractProxyModel) Data(proxyIndex *QModelIndex) *QVariant {
 	return _rp
 }	
 //QAbstractProxyModel::data(QModelIndex const&,int)
-func (q *QAbstractProxyModel) DataWithProxyindexRole(proxyIndex *QModelIndex,role int) *QVariant {
+func (q *QAbstractProxyModel) DataWithProxyindexRole(proxyIndex *QModelIndex,role int32) *QVariant {
 	var __rv uintptr
 	q.Drv(199000,199103,Native(proxyIndex),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -34355,7 +34355,7 @@ func (q *QAbstractProxyModel) Flags(index *QModelIndex) Qt_ItemFlag {
 	return __rv
 }	
 //QAbstractProxyModel::headerData(int,Qt::Orientation,int)
-func (q *QAbstractProxyModel) HeaderData(section int,orientation Qt_Orientation,role int) *QVariant {
+func (q *QAbstractProxyModel) HeaderData(section int32,orientation Qt_Orientation,role int32) *QVariant {
 	var __rv uintptr
 	q.Drv(199000,199105,unsafe.Pointer(&section),unsafe.Pointer(&orientation),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -34420,13 +34420,13 @@ func (q *QAbstractProxyModel) Revert()  {
 	q.Drv(199000,199111,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractProxyModel::setData(QModelIndex const&,QVariant const&,int)
-func (q *QAbstractProxyModel) SetData(index *QModelIndex,value *QVariant,role int) bool {
+func (q *QAbstractProxyModel) SetData(index *QModelIndex,value *QVariant,role int32) bool {
 	var __rv bool
 	q.Drv(199000,199112,Native(index),Native(value),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractProxyModel::setHeaderData(int,Qt::Orientation,QVariant const&,int)
-func (q *QAbstractProxyModel) SetHeaderData(section int,orientation Qt_Orientation,value *QVariant,role int) bool {
+func (q *QAbstractProxyModel) SetHeaderData(section int32,orientation Qt_Orientation,value *QVariant,role int32) bool {
 	var __rv bool
 	q.Drv(199000,199113,unsafe.Pointer(&section),unsafe.Pointer(&orientation),Native(value),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -34603,7 +34603,7 @@ func (q *QAbstractScrollArea) ScrollBarWidgets(alignment Qt_AlignmentFlag) []*QW
 	return __rv
 }	
 //QAbstractScrollArea::scrollContentsBy(int,int)
-func (q *QAbstractScrollArea) ScrollContentsBy(dx int,dy int)  {
+func (q *QAbstractScrollArea) ScrollContentsBy(dx int32,dy int32)  {
 	q.Drv(200000,200124,unsafe.Pointer(&dx),unsafe.Pointer(&dy),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractScrollArea::setCornerWidget(QWidget*)
@@ -34635,7 +34635,7 @@ func (q *QAbstractScrollArea) SetViewportMargins(margins *QMargins)  {
 	q.Drv(200000,200131,Native(margins),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractScrollArea::setViewportMargins(int,int,int,int)
-func (q *QAbstractScrollArea) SetViewportMarginsWithLeftTopRightBottom(left int,top int,right int,bottom int)  {
+func (q *QAbstractScrollArea) SetViewportMarginsWithLeftTopRightBottom(left int32,top int32,right int32,bottom int32)  {
 	q.Drv(200000,200132,unsafe.Pointer(&left),unsafe.Pointer(&top),unsafe.Pointer(&right),unsafe.Pointer(&bottom),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractScrollArea::setupViewport(QWidget*)
@@ -34725,19 +34725,19 @@ func NewQAbstractSliderFromDriver(drv Driver) *QAbstractSlider {
 	}
 	return _p
 } 	
-func (q *QAbstractSlider) OnRangeChanged(fn func(int,int)) uintptr {
+func (q *QAbstractSlider) OnRangeChanged(fn func(int32,int32)) uintptr {
 	var __rv uintptr
 	q.Drv(201000,201102,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QAbstractSlider) OnSliderMoved(fn func(int)) uintptr {
+func (q *QAbstractSlider) OnSliderMoved(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(201000,201103,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QAbstractSlider) OnActionTriggered(fn func(int)) uintptr {
+func (q *QAbstractSlider) OnActionTriggered(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(201000,201104,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -34755,7 +34755,7 @@ func (q *QAbstractSlider) OnSliderPressed(fn func()) uintptr {
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QAbstractSlider) OnValueChanged(fn func(int)) uintptr {
+func (q *QAbstractSlider) OnValueChanged(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(201000,201107,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -34822,14 +34822,14 @@ func (q *QAbstractSlider) KeyPressEvent(ev *QKeyEvent)  {
 	q.Drv(201000,201116,Native(ev),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractSlider::maximum()
-func (q *QAbstractSlider) Maximum() int {
-	var __rv int
+func (q *QAbstractSlider) Maximum() int32 {
+	var __rv int32
 	q.Drv(201000,201117,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractSlider::minimum()
-func (q *QAbstractSlider) Minimum() int {
-	var __rv int
+func (q *QAbstractSlider) Minimum() int32 {
+	var __rv int32
 	q.Drv(201000,201118,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -34840,8 +34840,8 @@ func (q *QAbstractSlider) Orientation() Qt_Orientation {
 	return __rv
 }	
 //QAbstractSlider::pageStep()
-func (q *QAbstractSlider) PageStep() int {
-	var __rv int
+func (q *QAbstractSlider) PageStep() int32 {
+	var __rv int32
 	q.Drv(201000,201120,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -34860,11 +34860,11 @@ func (q *QAbstractSlider) SetInvertedControls(value bool)  {
 	q.Drv(201000,201123,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractSlider::setMaximum(int)
-func (q *QAbstractSlider) SetMaximum(value int)  {
+func (q *QAbstractSlider) SetMaximum(value int32)  {
 	q.Drv(201000,201124,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractSlider::setMinimum(int)
-func (q *QAbstractSlider) SetMinimum(value int)  {
+func (q *QAbstractSlider) SetMinimum(value int32)  {
 	q.Drv(201000,201125,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractSlider::setOrientation(Qt::Orientation)
@@ -34872,19 +34872,19 @@ func (q *QAbstractSlider) SetOrientation(value Qt_Orientation)  {
 	q.Drv(201000,201126,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractSlider::setPageStep(int)
-func (q *QAbstractSlider) SetPageStep(value int)  {
+func (q *QAbstractSlider) SetPageStep(value int32)  {
 	q.Drv(201000,201127,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractSlider::setRange(int,int)
-func (q *QAbstractSlider) SetRange(min int,max int)  {
+func (q *QAbstractSlider) SetRange(min int32,max int32)  {
 	q.Drv(201000,201128,unsafe.Pointer(&min),unsafe.Pointer(&max),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractSlider::setRepeatAction(QAbstractSlider::SliderAction,int,int)
-func (q *QAbstractSlider) SetRepeatAction(action QAbstractSlider_SliderAction,thresholdTime int,repeatTime int)  {
+func (q *QAbstractSlider) SetRepeatAction(action QAbstractSlider_SliderAction,thresholdTime int32,repeatTime int32)  {
 	q.Drv(201000,201129,unsafe.Pointer(&action),unsafe.Pointer(&thresholdTime),unsafe.Pointer(&repeatTime),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractSlider::setSingleStep(int)
-func (q *QAbstractSlider) SetSingleStep(value int)  {
+func (q *QAbstractSlider) SetSingleStep(value int32)  {
 	q.Drv(201000,201130,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractSlider::setSliderDown(bool)
@@ -34892,7 +34892,7 @@ func (q *QAbstractSlider) SetSliderDown(value bool)  {
 	q.Drv(201000,201131,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractSlider::setSliderPosition(int)
-func (q *QAbstractSlider) SetSliderPosition(value int)  {
+func (q *QAbstractSlider) SetSliderPosition(value int32)  {
 	q.Drv(201000,201132,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractSlider::setTracking(bool)
@@ -34900,12 +34900,12 @@ func (q *QAbstractSlider) SetTracking(enable bool)  {
 	q.Drv(201000,201133,unsafe.Pointer(&enable),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractSlider::setValue(int)
-func (q *QAbstractSlider) SetValue(value int)  {
+func (q *QAbstractSlider) SetValue(value int32)  {
 	q.Drv(201000,201134,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractSlider::singleStep()
-func (q *QAbstractSlider) SingleStep() int {
-	var __rv int
+func (q *QAbstractSlider) SingleStep() int32 {
+	var __rv int32
 	q.Drv(201000,201135,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -34914,8 +34914,8 @@ func (q *QAbstractSlider) SliderChange(change QAbstractSlider_SliderChange)  {
 	q.Drv(201000,201136,unsafe.Pointer(&change),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractSlider::sliderPosition()
-func (q *QAbstractSlider) SliderPosition() int {
-	var __rv int
+func (q *QAbstractSlider) SliderPosition() int32 {
+	var __rv int32
 	q.Drv(201000,201137,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -34928,8 +34928,8 @@ func (q *QAbstractSlider) TriggerAction(action QAbstractSlider_SliderAction)  {
 	q.Drv(201000,201139,unsafe.Pointer(&action),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractSlider::value()
-func (q *QAbstractSlider) Value() int {
-	var __rv int
+func (q *QAbstractSlider) Value() int32 {
+	var __rv int32
 	q.Drv(201000,201140,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -35216,7 +35216,7 @@ func (q *QAbstractSpinBox) SpecialValueText() string {
 	return __rv
 }	
 //QAbstractSpinBox::stepBy(int)
-func (q *QAbstractSpinBox) StepBy(steps int)  {
+func (q *QAbstractSpinBox) StepBy(steps int32)  {
 	q.Drv(202000,202147,unsafe.Pointer(&steps),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractSpinBox::stepDown()
@@ -35244,7 +35244,7 @@ func (q *QAbstractSpinBox) TimerEvent(event *QTimerEvent)  {
 	q.Drv(202000,202152,Native(event),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractSpinBox::validate(QString&,int&)
-func (q *QAbstractSpinBox) Validate(input *string,pos *int) QValidator_State {
+func (q *QAbstractSpinBox) Validate(input *string,pos *int32) QValidator_State {
 	var __rv QValidator_State
 	q.Drv(202000,202153,unsafe.Pointer(&input),unsafe.Pointer(&pos),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -35315,13 +35315,13 @@ func NewQAbstractTableModelFromDriver(drv Driver) *QAbstractTableModel {
 	return _p
 } 	
 //QAbstractTableModel::dropMimeData(QMimeData const*,Qt::DropAction,int,int,QModelIndex const&)
-func (q *QAbstractTableModel) DropMimeData(data *QMimeData,action Qt_DropAction,row int,column int,parent *QModelIndex) bool {
+func (q *QAbstractTableModel) DropMimeData(data *QMimeData,action Qt_DropAction,row int32,column int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(204000,204102,Native(data),unsafe.Pointer(&action),unsafe.Pointer(&row),unsafe.Pointer(&column),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractTableModel::index(int,int,QModelIndex const&)
-func (q *QAbstractTableModel) Index(row int,column int,parent *QModelIndex) *QModelIndex {
+func (q *QAbstractTableModel) Index(row int32,column int32,parent *QModelIndex) *QModelIndex {
 	var __rv uintptr
 	q.Drv(204000,204103,unsafe.Pointer(&row),unsafe.Pointer(&column),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -35336,7 +35336,7 @@ func (q *QAbstractTableModel) Index(row int,column int,parent *QModelIndex) *QMo
 type QAbstractTextDocumentLayout struct {
 	QObject
 }
-func (q *QAbstractTextDocumentLayout) OnPageCountChanged(fn func(int)) uintptr {
+func (q *QAbstractTextDocumentLayout) OnPageCountChanged(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(205000,205102,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -35395,7 +35395,7 @@ func (q *QAbstractTextDocumentLayout) Document() *QTextDocument {
 	return _rp
 }	
 //QAbstractTextDocumentLayout::documentChanged(int,int,int)
-func (q *QAbstractTextDocumentLayout) DocumentChanged(from int,charsRemoved int,charsAdded int)  {
+func (q *QAbstractTextDocumentLayout) DocumentChanged(from int32,charsRemoved int32,charsAdded int32)  {
 	q.Drv(205000,205110,unsafe.Pointer(&from),unsafe.Pointer(&charsRemoved),unsafe.Pointer(&charsAdded),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractTextDocumentLayout::documentSize()
@@ -35414,11 +35414,11 @@ func (q *QAbstractTextDocumentLayout) Draw(painter *QPainter,context *QAbstractT
 	q.Drv(205000,205112,Native(painter),Native(context),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractTextDocumentLayout::drawInlineObject(QPainter*,QRectF const&,QTextInlineObject,int,QTextFormat const&)
-func (q *QAbstractTextDocumentLayout) DrawInlineObject(painter *QPainter,rect *QRectF,object *QTextInlineObject,posInDocument int,format *QTextFormat)  {
+func (q *QAbstractTextDocumentLayout) DrawInlineObject(painter *QPainter,rect *QRectF,object *QTextInlineObject,posInDocument int32,format *QTextFormat)  {
 	q.Drv(205000,205113,Native(painter),Native(rect),Native(object),unsafe.Pointer(&posInDocument),Native(format),nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractTextDocumentLayout::format(int)
-func (q *QAbstractTextDocumentLayout) Format(pos int) *QTextCharFormat {
+func (q *QAbstractTextDocumentLayout) Format(pos int32) *QTextCharFormat {
 	var __rv uintptr
 	q.Drv(205000,205114,unsafe.Pointer(&pos),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -35429,8 +35429,8 @@ func (q *QAbstractTextDocumentLayout) Format(pos int) *QTextCharFormat {
 	return _rp
 }	
 //QAbstractTextDocumentLayout::formatIndex(int)
-func (q *QAbstractTextDocumentLayout) FormatIndex(pos int) int {
-	var __rv int
+func (q *QAbstractTextDocumentLayout) FormatIndex(pos int32) int32 {
+	var __rv int32
 	q.Drv(205000,205115,unsafe.Pointer(&pos),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -35446,7 +35446,7 @@ func (q *QAbstractTextDocumentLayout) FrameBoundingRect(frame *QTextFrame) *QRec
 	return _rp
 }	
 //QAbstractTextDocumentLayout::handlerForObject(int)
-func (q *QAbstractTextDocumentLayout) HandlerForObject(objectType int) *QTextObjectInterface {
+func (q *QAbstractTextDocumentLayout) HandlerForObject(objectType int32) *QTextObjectInterface {
 	var __rv uintptr
 	q.Drv(205000,205117,unsafe.Pointer(&objectType),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -35457,14 +35457,14 @@ func (q *QAbstractTextDocumentLayout) HandlerForObject(objectType int) *QTextObj
 	return _rp
 }	
 //QAbstractTextDocumentLayout::hitTest(QPointF const&,Qt::HitTestAccuracy)
-func (q *QAbstractTextDocumentLayout) HitTest(point *QPointF,accuracy Qt_HitTestAccuracy) int {
-	var __rv int
+func (q *QAbstractTextDocumentLayout) HitTest(point *QPointF,accuracy Qt_HitTestAccuracy) int32 {
+	var __rv int32
 	q.Drv(205000,205118,Native(point),unsafe.Pointer(&accuracy),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAbstractTextDocumentLayout::pageCount()
-func (q *QAbstractTextDocumentLayout) PageCount() int {
-	var __rv int
+func (q *QAbstractTextDocumentLayout) PageCount() int32 {
+	var __rv int32
 	q.Drv(205000,205119,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -35480,15 +35480,15 @@ func (q *QAbstractTextDocumentLayout) PaintDevice() *QPaintDevice {
 	return _rp
 }	
 //QAbstractTextDocumentLayout::positionInlineObject(QTextInlineObject,int,QTextFormat const&)
-func (q *QAbstractTextDocumentLayout) PositionInlineObject(item *QTextInlineObject,posInDocument int,format *QTextFormat)  {
+func (q *QAbstractTextDocumentLayout) PositionInlineObject(item *QTextInlineObject,posInDocument int32,format *QTextFormat)  {
 	q.Drv(205000,205121,Native(item),unsafe.Pointer(&posInDocument),Native(format),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractTextDocumentLayout::registerHandler(int,QObject*)
-func (q *QAbstractTextDocumentLayout) RegisterHandler(objectType int,component QObjectInterface)  {
+func (q *QAbstractTextDocumentLayout) RegisterHandler(objectType int32,component QObjectInterface)  {
 	q.Drv(205000,205122,unsafe.Pointer(&objectType),Native(component),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractTextDocumentLayout::resizeInlineObject(QTextInlineObject,int,QTextFormat const&)
-func (q *QAbstractTextDocumentLayout) ResizeInlineObject(item *QTextInlineObject,posInDocument int,format *QTextFormat)  {
+func (q *QAbstractTextDocumentLayout) ResizeInlineObject(item *QTextInlineObject,posInDocument int32,format *QTextFormat)  {
 	q.Drv(205000,205123,Native(item),unsafe.Pointer(&posInDocument),Native(format),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAbstractTextDocumentLayout::setPaintDevice(QPaintDevice*)
@@ -36151,7 +36151,7 @@ func (q *QAnimationGroup) AddAnimation(animation *QAbstractAnimation)  {
 	q.Drv(209000,209102,Native(animation),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAnimationGroup::animationAt(int)
-func (q *QAnimationGroup) AnimationAt(index int) *QAbstractAnimation {
+func (q *QAnimationGroup) AnimationAt(index int32) *QAbstractAnimation {
 	var __rv uintptr
 	q.Drv(209000,209103,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -36162,8 +36162,8 @@ func (q *QAnimationGroup) AnimationAt(index int) *QAbstractAnimation {
 	return _rp
 }	
 //QAnimationGroup::animationCount()
-func (q *QAnimationGroup) AnimationCount() int {
-	var __rv int
+func (q *QAnimationGroup) AnimationCount() int32 {
+	var __rv int32
 	q.Drv(209000,209104,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -36178,13 +36178,13 @@ func (q *QAnimationGroup) Event(event *QEvent) bool {
 	return __rv
 }	
 //QAnimationGroup::indexOfAnimation(QAbstractAnimation*)
-func (q *QAnimationGroup) IndexOfAnimation(animation *QAbstractAnimation) int {
-	var __rv int
+func (q *QAnimationGroup) IndexOfAnimation(animation *QAbstractAnimation) int32 {
+	var __rv int32
 	q.Drv(209000,209107,Native(animation),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QAnimationGroup::insertAnimation(int,QAbstractAnimation*)
-func (q *QAnimationGroup) InsertAnimation(index int,animation *QAbstractAnimation)  {
+func (q *QAnimationGroup) InsertAnimation(index int32,animation *QAbstractAnimation)  {
 	q.Drv(209000,209108,unsafe.Pointer(&index),Native(animation),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAnimationGroup::removeAnimation(QAbstractAnimation*)
@@ -36192,7 +36192,7 @@ func (q *QAnimationGroup) RemoveAnimation(animation *QAbstractAnimation)  {
 	q.Drv(209000,209109,Native(animation),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QAnimationGroup::takeAnimation(int)
-func (q *QAnimationGroup) TakeAnimation(index int) *QAbstractAnimation {
+func (q *QAnimationGroup) TakeAnimation(index int32) *QAbstractAnimation {
 	var __rv uintptr
 	q.Drv(209000,209110,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -36246,7 +36246,7 @@ func (q *QBoxLayout) AddLayout(layout QLayoutInterface)  {
 	q.Drv(210000,210104,Native(layout),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QBoxLayout::addLayout(QLayout*,int)
-func (q *QBoxLayout) AddLayoutWithLayoutStretch(layout QLayoutInterface,stretch int)  {
+func (q *QBoxLayout) AddLayoutWithLayoutStretch(layout QLayoutInterface,stretch int32)  {
 	q.Drv(210000,210105,Native(layout),unsafe.Pointer(&stretch),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QBoxLayout::addSpacerItem(QSpacerItem*)
@@ -36254,7 +36254,7 @@ func (q *QBoxLayout) AddSpacerItem(spacerItem *QSpacerItem)  {
 	q.Drv(210000,210106,Native(spacerItem),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QBoxLayout::addSpacing(int)
-func (q *QBoxLayout) AddSpacing(size int)  {
+func (q *QBoxLayout) AddSpacing(size int32)  {
 	q.Drv(210000,210107,unsafe.Pointer(&size),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QBoxLayout::addStretch()
@@ -36262,11 +36262,11 @@ func (q *QBoxLayout) AddStretch()  {
 	q.Drv(210000,210108,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QBoxLayout::addStretch(int)
-func (q *QBoxLayout) AddStretchWithStretch(stretch int)  {
+func (q *QBoxLayout) AddStretchWithStretch(stretch int32)  {
 	q.Drv(210000,210109,unsafe.Pointer(&stretch),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QBoxLayout::addStrut(int)
-func (q *QBoxLayout) AddStrut(value int)  {
+func (q *QBoxLayout) AddStrut(value int32)  {
 	q.Drv(210000,210110,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QBoxLayout::addWidget(QWidget*)
@@ -36274,12 +36274,12 @@ func (q *QBoxLayout) AddWidget(value QWidgetInterface)  {
 	q.Drv(210000,210111,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QBoxLayout::addWidget(QWidget*,int,QFlags<Qt::AlignmentFlag>)
-func (q *QBoxLayout) AddWidgetWithWidgetStretchAlignment(value2 QWidgetInterface,stretch int,alignment Qt_AlignmentFlag)  {
+func (q *QBoxLayout) AddWidgetWithWidgetStretchAlignment(value2 QWidgetInterface,stretch int32,alignment Qt_AlignmentFlag)  {
 	q.Drv(210000,210112,Native(value2),unsafe.Pointer(&stretch),unsafe.Pointer(&alignment),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QBoxLayout::count()
-func (q *QBoxLayout) Count() int {
-	var __rv int
+func (q *QBoxLayout) Count() int32 {
+	var __rv int32
 	q.Drv(210000,210113,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -36302,37 +36302,37 @@ func (q *QBoxLayout) HasHeightForWidth() bool {
 	return __rv
 }	
 //QBoxLayout::heightForWidth(int)
-func (q *QBoxLayout) HeightForWidth(value int) int {
-	var __rv int
+func (q *QBoxLayout) HeightForWidth(value int32) int32 {
+	var __rv int32
 	q.Drv(210000,210117,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QBoxLayout::insertItem(int,QLayoutItem*)
-func (q *QBoxLayout) InsertItem(index int,value2 *QLayoutItem)  {
+func (q *QBoxLayout) InsertItem(index int32,value2 *QLayoutItem)  {
 	q.Drv(210000,210118,unsafe.Pointer(&index),Native(value2),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QBoxLayout::insertLayout(int,QLayout*,int)
-func (q *QBoxLayout) InsertLayout(index int,layout QLayoutInterface,stretch int)  {
+func (q *QBoxLayout) InsertLayout(index int32,layout QLayoutInterface,stretch int32)  {
 	q.Drv(210000,210119,unsafe.Pointer(&index),Native(layout),unsafe.Pointer(&stretch),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QBoxLayout::insertSpacerItem(int,QSpacerItem*)
-func (q *QBoxLayout) InsertSpacerItem(index int,spacerItem *QSpacerItem)  {
+func (q *QBoxLayout) InsertSpacerItem(index int32,spacerItem *QSpacerItem)  {
 	q.Drv(210000,210120,unsafe.Pointer(&index),Native(spacerItem),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QBoxLayout::insertSpacing(int,int)
-func (q *QBoxLayout) InsertSpacing(index int,size int)  {
+func (q *QBoxLayout) InsertSpacing(index int32,size int32)  {
 	q.Drv(210000,210121,unsafe.Pointer(&index),unsafe.Pointer(&size),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QBoxLayout::insertStretch(int)
-func (q *QBoxLayout) InsertStretch(index int)  {
+func (q *QBoxLayout) InsertStretch(index int32)  {
 	q.Drv(210000,210122,unsafe.Pointer(&index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QBoxLayout::insertStretch(int,int)
-func (q *QBoxLayout) InsertStretchWithIndexStretch(index int,stretch int)  {
+func (q *QBoxLayout) InsertStretchWithIndexStretch(index int32,stretch int32)  {
 	q.Drv(210000,210123,unsafe.Pointer(&index),unsafe.Pointer(&stretch),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QBoxLayout::insertWidget(int,QWidget*,int,QFlags<Qt::AlignmentFlag>)
-func (q *QBoxLayout) InsertWidget(index int,widget QWidgetInterface,stretch int,alignment Qt_AlignmentFlag)  {
+func (q *QBoxLayout) InsertWidget(index int32,widget QWidgetInterface,stretch int32,alignment Qt_AlignmentFlag)  {
 	q.Drv(210000,210124,unsafe.Pointer(&index),Native(widget),unsafe.Pointer(&stretch),unsafe.Pointer(&alignment),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QBoxLayout::invalidate()
@@ -36340,7 +36340,7 @@ func (q *QBoxLayout) Invalidate()  {
 	q.Drv(210000,210125,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QBoxLayout::itemAt(int)
-func (q *QBoxLayout) ItemAt(value int) *QLayoutItem {
+func (q *QBoxLayout) ItemAt(value int32) *QLayoutItem {
 	var __rv uintptr
 	q.Drv(210000,210126,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -36362,8 +36362,8 @@ func (q *QBoxLayout) MaximumSize() *QSize {
 	return _rp
 }	
 //QBoxLayout::minimumHeightForWidth(int)
-func (q *QBoxLayout) MinimumHeightForWidth(value int) int {
-	var __rv int
+func (q *QBoxLayout) MinimumHeightForWidth(value int32) int32 {
+	var __rv int32
 	q.Drv(210000,210128,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -36387,21 +36387,21 @@ func (q *QBoxLayout) SetGeometry(value *QRect)  {
 	q.Drv(210000,210131,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QBoxLayout::setSpacing(int)
-func (q *QBoxLayout) SetSpacing(spacing int)  {
+func (q *QBoxLayout) SetSpacing(spacing int32)  {
 	q.Drv(210000,210132,unsafe.Pointer(&spacing),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QBoxLayout::setStretch(int,int)
-func (q *QBoxLayout) SetStretch(index int,stretch int)  {
+func (q *QBoxLayout) SetStretch(index int32,stretch int32)  {
 	q.Drv(210000,210133,unsafe.Pointer(&index),unsafe.Pointer(&stretch),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QBoxLayout::setStretchFactor(QLayout*,int)
-func (q *QBoxLayout) SetStretchFactorWithLayoutStretch(l QLayoutInterface,stretch int) bool {
+func (q *QBoxLayout) SetStretchFactorWithLayoutStretch(l QLayoutInterface,stretch int32) bool {
 	var __rv bool
 	q.Drv(210000,210134,Native(l),unsafe.Pointer(&stretch),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QBoxLayout::setStretchFactor(QWidget*,int)
-func (q *QBoxLayout) SetStretchFactorWithWidgetStretch(w QWidgetInterface,stretch int) bool {
+func (q *QBoxLayout) SetStretchFactorWithWidgetStretch(w QWidgetInterface,stretch int32) bool {
 	var __rv bool
 	q.Drv(210000,210135,Native(w),unsafe.Pointer(&stretch),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -36418,19 +36418,19 @@ func (q *QBoxLayout) SizeHint() *QSize {
 	return _rp
 }	
 //QBoxLayout::spacing()
-func (q *QBoxLayout) Spacing() int {
-	var __rv int
+func (q *QBoxLayout) Spacing() int32 {
+	var __rv int32
 	q.Drv(210000,210137,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QBoxLayout::stretch(int)
-func (q *QBoxLayout) Stretch(index int) int {
-	var __rv int
+func (q *QBoxLayout) Stretch(index int32) int32 {
+	var __rv int32
 	q.Drv(210000,210138,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QBoxLayout::takeAt(int)
-func (q *QBoxLayout) TakeAt(value int) *QLayoutItem {
+func (q *QBoxLayout) TakeAt(value int32) *QLayoutItem {
 	var __rv uintptr
 	q.Drv(210000,210139,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -36454,7 +36454,7 @@ func NewQButtonGroupFromDriver(drv Driver) *QButtonGroup {
 	}
 	return _p
 } 	
-func (q *QButtonGroup) OnButtonClicked(fn func(int)) uintptr {
+func (q *QButtonGroup) OnButtonClicked(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(211000,211102,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -36466,7 +36466,7 @@ func (q *QButtonGroup) OnButtonClickedWithAbstractbutton(fn func(*QAbstractButto
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QButtonGroup) OnButtonPressed(fn func(int)) uintptr {
+func (q *QButtonGroup) OnButtonPressed(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(211000,211104,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -36478,7 +36478,7 @@ func (q *QButtonGroup) OnButtonPressedWithAbstractbutton(fn func(*QAbstractButto
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QButtonGroup) OnButtonReleased(fn func(int)) uintptr {
+func (q *QButtonGroup) OnButtonReleased(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(211000,211106,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -36517,11 +36517,11 @@ func (q *QButtonGroup) AddButton(value *QAbstractButton)  {
 	q.Drv(211000,211110,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QButtonGroup::addButton(QAbstractButton*,int)
-func (q *QButtonGroup) AddButtonWithAbstractbuttonId(value2 *QAbstractButton,id int)  {
+func (q *QButtonGroup) AddButtonWithAbstractbuttonId(value2 *QAbstractButton,id int32)  {
 	q.Drv(211000,211111,Native(value2),unsafe.Pointer(&id),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QButtonGroup::button(int)
-func (q *QButtonGroup) Button(id int) *QAbstractButton {
+func (q *QButtonGroup) Button(id int32) *QAbstractButton {
 	var __rv uintptr
 	q.Drv(211000,211112,unsafe.Pointer(&id),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -36549,8 +36549,8 @@ func (q *QButtonGroup) CheckedButton() *QAbstractButton {
 	return _rp
 }	
 //QButtonGroup::checkedId()
-func (q *QButtonGroup) CheckedId() int {
-	var __rv int
+func (q *QButtonGroup) CheckedId() int32 {
+	var __rv int32
 	q.Drv(211000,211115,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -36561,8 +36561,8 @@ func (q *QButtonGroup) Exclusive() bool {
 	return __rv
 }	
 //QButtonGroup::id(QAbstractButton*)
-func (q *QButtonGroup) Id(button *QAbstractButton) int {
-	var __rv int
+func (q *QButtonGroup) Id(button *QAbstractButton) int32 {
+	var __rv int32
 	q.Drv(211000,211117,Native(button),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -36575,7 +36575,7 @@ func (q *QButtonGroup) SetExclusive(value bool)  {
 	q.Drv(211000,211119,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QButtonGroup::setId(QAbstractButton*,int)
-func (q *QButtonGroup) SetId(button *QAbstractButton,id int)  {
+func (q *QButtonGroup) SetId(button *QAbstractButton,id int32)  {
 	q.Drv(211000,211120,Native(button),unsafe.Pointer(&id),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 
@@ -36624,7 +36624,7 @@ func (q *QCalendarWidget) OnActivated(fn func(*QDate)) uintptr {
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QCalendarWidget) OnCurrentPageChanged(fn func(int,int)) uintptr {
+func (q *QCalendarWidget) OnCurrentPageChanged(fn func(int32,int32)) uintptr {
 	var __rv uintptr
 	q.Drv(212000,212104,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -36659,8 +36659,8 @@ func NewQCalendarWidgetWithParent(parent QWidgetInterface) *QCalendarWidget {
 	return _p
 } 
 //QCalendarWidget::dateEditAcceptDelay()
-func (q *QCalendarWidget) DateEditAcceptDelay() int {
-	var __rv int
+func (q *QCalendarWidget) DateEditAcceptDelay() int32 {
+	var __rv int32
 	q.Drv(212000,212108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -36772,8 +36772,8 @@ func (q *QCalendarWidget) MinimumSizeHint() *QSize {
 	return _rp
 }	
 //QCalendarWidget::monthShown()
-func (q *QCalendarWidget) MonthShown() int {
-	var __rv int
+func (q *QCalendarWidget) MonthShown() int32 {
+	var __rv int32
 	q.Drv(212000,212123,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -36807,11 +36807,11 @@ func (q *QCalendarWidget) SelectionMode() QCalendarWidget_SelectionMode {
 	return __rv
 }	
 //QCalendarWidget::setCurrentPage(int,int)
-func (q *QCalendarWidget) SetCurrentPage(year int,month int)  {
+func (q *QCalendarWidget) SetCurrentPage(year int32,month int32)  {
 	q.Drv(212000,212129,unsafe.Pointer(&year),unsafe.Pointer(&month),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QCalendarWidget::setDateEditAcceptDelay(int)
-func (q *QCalendarWidget) SetDateEditAcceptDelay(delay int)  {
+func (q *QCalendarWidget) SetDateEditAcceptDelay(delay int32)  {
 	q.Drv(212000,212130,unsafe.Pointer(&delay),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QCalendarWidget::setDateEditEnabled(bool)
@@ -36931,8 +36931,8 @@ func (q *QCalendarWidget) WeekdayTextFormat(dayOfWeek Qt_DayOfWeek) *QTextCharFo
 	return _rp
 }	
 //QCalendarWidget::yearShown()
-func (q *QCalendarWidget) YearShown() int {
-	var __rv int
+func (q *QCalendarWidget) YearShown() int32 {
+	var __rv int32
 	q.Drv(212000,212156,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -36950,7 +36950,7 @@ func NewQCheckBoxFromDriver(drv Driver) *QCheckBox {
 	}
 	return _p
 } 	
-func (q *QCheckBox) OnStateChanged(fn func(int)) uintptr {
+func (q *QCheckBox) OnStateChanged(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(213000,213102,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -37342,7 +37342,7 @@ func (q *QColorDialog) CurrentColor() *QColor {
 	return _rp
 }	
 //QColorDialog::customColor(int)	
-func QColorDialogCustomColor(index int) *QColor {
+func QColorDialogCustomColor(index int32) *QColor {
 	var __rv uintptr
 	DirectQtDrv(nil,215000,215109,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -37353,7 +37353,7 @@ func QColorDialogCustomColor(index int) *QColor {
 	return _rp
 }	
 //QColorDialog::customColor(int)
-func (q *QColorDialog) CustomColor(index int) *QColor {
+func (q *QColorDialog) CustomColor(index int32) *QColor {
 	var __rv uintptr
 	q.Drv(215000,215109,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -37364,19 +37364,19 @@ func (q *QColorDialog) CustomColor(index int) *QColor {
 	return _rp
 }	
 //QColorDialog::customCount()	
-func QColorDialogCustomCount() int {
-	var __rv int
+func QColorDialogCustomCount() int32 {
+	var __rv int32
 	DirectQtDrv(nil,215000,215110,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QColorDialog::customCount()
-func (q *QColorDialog) CustomCount() int {
-	var __rv int
+func (q *QColorDialog) CustomCount() int32 {
+	var __rv int32
 	q.Drv(215000,215110,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QColorDialog::done(int)
-func (q *QColorDialog) Done(result int)  {
+func (q *QColorDialog) Done(result int32)  {
 	q.Drv(215000,215111,unsafe.Pointer(&result),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColorDialog::getColor()	
@@ -37446,26 +37446,26 @@ func (q *QColorDialog) GetColorWithColorParentTitleOptions(initial *QColor,paren
 	return _rp
 }	
 //QColorDialog::getRgba()	
-func QColorDialogGetRgba() uint {
-	var __rv uint
+func QColorDialogGetRgba() uint32 {
+	var __rv uint32
 	DirectQtDrv(nil,215000,215115,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QColorDialog::getRgba()
-func (q *QColorDialog) GetRgba() uint {
-	var __rv uint
+func (q *QColorDialog) GetRgba() uint32 {
+	var __rv uint32
 	q.Drv(215000,215115,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QColorDialog::getRgba(unsigned int,bool*,QWidget*)	
-func QColorDialogGetRgbaWithRgbaOkParent(rgba uint,ok *bool,parent QWidgetInterface) uint {
-	var __rv uint
+func QColorDialogGetRgbaWithRgbaOkParent(rgba uint32,ok *bool,parent QWidgetInterface) uint32 {
+	var __rv uint32
 	DirectQtDrv(nil,215000,215116,unsafe.Pointer(&rgba),unsafe.Pointer(&ok),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QColorDialog::getRgba(unsigned int,bool*,QWidget*)
-func (q *QColorDialog) GetRgbaWithRgbaOkParent(rgba uint,ok *bool,parent QWidgetInterface) uint {
-	var __rv uint
+func (q *QColorDialog) GetRgbaWithRgbaOkParent(rgba uint32,ok *bool,parent QWidgetInterface) uint32 {
+	var __rv uint32
 	q.Drv(215000,215116,unsafe.Pointer(&rgba),unsafe.Pointer(&ok),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -37499,11 +37499,11 @@ func (q *QColorDialog) SetCurrentColor(color *QColor)  {
 	q.Drv(215000,215121,Native(color),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColorDialog::setCustomColor(int,QColor)	
-func QColorDialogSetCustomColor(index int,color *QColor)  {
+func QColorDialogSetCustomColor(index int32,color *QColor)  {
 	DirectQtDrv(nil,215000,215122,unsafe.Pointer(&index),Native(color),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColorDialog::setCustomColor(int,QColor)
-func (q *QColorDialog) SetCustomColor(index int,color *QColor)  {
+func (q *QColorDialog) SetCustomColor(index int32,color *QColor)  {
 	q.Drv(215000,215122,unsafe.Pointer(&index),Native(color),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColorDialog::setOption(QColorDialog::ColorDialogOption)
@@ -37519,11 +37519,11 @@ func (q *QColorDialog) SetOptions(options QColorDialog_ColorDialogOption)  {
 	q.Drv(215000,215125,unsafe.Pointer(&options),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColorDialog::setStandardColor(int,QColor)	
-func QColorDialogSetStandardColor(index int,color *QColor)  {
+func QColorDialogSetStandardColor(index int32,color *QColor)  {
 	DirectQtDrv(nil,215000,215126,unsafe.Pointer(&index),Native(color),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColorDialog::setStandardColor(int,QColor)
-func (q *QColorDialog) SetStandardColor(index int,color *QColor)  {
+func (q *QColorDialog) SetStandardColor(index int32,color *QColor)  {
 	q.Drv(215000,215126,unsafe.Pointer(&index),Native(color),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColorDialog::setVisible(bool)
@@ -37579,8 +37579,8 @@ func NewQColumnViewWithParent(parent QWidgetInterface) *QColumnView {
 	return _p
 } 
 //QColumnView::columnWidths()
-func (q *QColumnView) ColumnWidths() []int {
-	var __rv []int
+func (q *QColumnView) ColumnWidths() []int32 {
+	var __rv []int32
 	q.Drv(216000,216105,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -37600,8 +37600,8 @@ func (q *QColumnView) CurrentChanged(current *QModelIndex,previous *QModelIndex)
 	q.Drv(216000,216107,Native(current),Native(previous),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColumnView::horizontalOffset()
-func (q *QColumnView) HorizontalOffset() int {
-	var __rv int
+func (q *QColumnView) HorizontalOffset() int32 {
+	var __rv int32
 	q.Drv(216000,216108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -37659,11 +37659,11 @@ func (q *QColumnView) ResizeGripsVisible() bool {
 	return __rv
 }	
 //QColumnView::rowsInserted(QModelIndex const&,int,int)
-func (q *QColumnView) RowsInserted(parent *QModelIndex,start int,end int)  {
+func (q *QColumnView) RowsInserted(parent *QModelIndex,start int32,end int32)  {
 	q.Drv(216000,216116,Native(parent),unsafe.Pointer(&start),unsafe.Pointer(&end),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColumnView::scrollContentsBy(int,int)
-func (q *QColumnView) ScrollContentsBy(dx int,dy int)  {
+func (q *QColumnView) ScrollContentsBy(dx int32,dy int32)  {
 	q.Drv(216000,216117,unsafe.Pointer(&dx),unsafe.Pointer(&dy),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColumnView::scrollTo(QModelIndex const&)
@@ -37679,7 +37679,7 @@ func (q *QColumnView) SelectAll()  {
 	q.Drv(216000,216120,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColumnView::setColumnWidths(QList<int> const&)
-func (q *QColumnView) SetColumnWidths(list []int)  {
+func (q *QColumnView) SetColumnWidths(list []int32)  {
 	q.Drv(216000,216121,unsafe.Pointer(&list),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QColumnView::setModel(QAbstractItemModel*)
@@ -37718,8 +37718,8 @@ func (q *QColumnView) SizeHint() *QSize {
 	return _rp
 }	
 //QColumnView::verticalOffset()
-func (q *QColumnView) VerticalOffset() int {
-	var __rv int
+func (q *QColumnView) VerticalOffset() int32 {
+	var __rv int32
 	q.Drv(216000,216129,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -37784,7 +37784,7 @@ func (q *QComboBox) OnHighlighted(fn func(string)) uintptr {
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QComboBox) OnHighlightedWithIndex(fn func(int)) uintptr {
+func (q *QComboBox) OnHighlightedWithIndex(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(217000,217103,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -37802,7 +37802,7 @@ func (q *QComboBox) OnActivated(fn func(string)) uintptr {
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QComboBox) OnActivatedWithIndex(fn func(int)) uintptr {
+func (q *QComboBox) OnActivatedWithIndex(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(217000,217106,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -37814,7 +37814,7 @@ func (q *QComboBox) OnCurrentIndexChanged(fn func(string)) uintptr {
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QComboBox) OnCurrentIndexChangedWithIndex(fn func(int)) uintptr {
+func (q *QComboBox) OnCurrentIndexChangedWithIndex(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(217000,217108,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -37898,14 +37898,14 @@ func (q *QComboBox) ContextMenuEvent(e *QContextMenuEvent)  {
 	q.Drv(217000,217121,Native(e),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QComboBox::count()
-func (q *QComboBox) Count() int {
-	var __rv int
+func (q *QComboBox) Count() int32 {
+	var __rv int32
 	q.Drv(217000,217122,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QComboBox::currentIndex()
-func (q *QComboBox) CurrentIndex() int {
-	var __rv int
+func (q *QComboBox) CurrentIndex() int32 {
+	var __rv int32
 	q.Drv(217000,217123,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -37928,26 +37928,26 @@ func (q *QComboBox) Event(event *QEvent) bool {
 	return __rv
 }	
 //QComboBox::findData(QVariant const&)
-func (q *QComboBox) FindData(data *QVariant) int {
-	var __rv int
+func (q *QComboBox) FindData(data *QVariant) int32 {
+	var __rv int32
 	q.Drv(217000,217127,Native(data),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QComboBox::findData(QVariant const&,int,QFlags<Qt::MatchFlag>)
-func (q *QComboBox) FindDataWithDataRoleFlags(data *QVariant,role int,flags Qt_MatchFlag) int {
-	var __rv int
+func (q *QComboBox) FindDataWithDataRoleFlags(data *QVariant,role int32,flags Qt_MatchFlag) int32 {
+	var __rv int32
 	q.Drv(217000,217128,Native(data),unsafe.Pointer(&role),unsafe.Pointer(&flags),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QComboBox::findText(QString const&)
-func (q *QComboBox) FindText(text string) int {
-	var __rv int
+func (q *QComboBox) FindText(text string) int32 {
+	var __rv int32
 	q.Drv(217000,217129,unsafe.Pointer(&text),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QComboBox::findText(QString const&,QFlags<Qt::MatchFlag>)
-func (q *QComboBox) FindTextWithTextFlags(text string,flags Qt_MatchFlag) int {
-	var __rv int
+func (q *QComboBox) FindTextWithTextFlags(text string,flags Qt_MatchFlag) int32 {
+	var __rv int32
 	q.Drv(217000,217130,unsafe.Pointer(&text),unsafe.Pointer(&flags),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -38000,15 +38000,15 @@ func (q *QComboBox) InputMethodQuery(value Qt_InputMethodQuery) *QVariant {
 	return _rp
 }	
 //QComboBox::insertItem(int,QString const&,QVariant const&)
-func (q *QComboBox) InsertItemWithIndexTextUserdata(index int,text string,userData *QVariant)  {
+func (q *QComboBox) InsertItemWithIndexTextUserdata(index int32,text string,userData *QVariant)  {
 	q.Drv(217000,217139,unsafe.Pointer(&index),unsafe.Pointer(&text),Native(userData),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QComboBox::insertItem(int,QIcon const&,QString const&,QVariant const&)
-func (q *QComboBox) InsertItemWithIndexIconTextUserdata(index int,icon *QIcon,text string,userData *QVariant)  {
+func (q *QComboBox) InsertItemWithIndexIconTextUserdata(index int32,icon *QIcon,text string,userData *QVariant)  {
 	q.Drv(217000,217140,unsafe.Pointer(&index),Native(icon),unsafe.Pointer(&text),Native(userData),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QComboBox::insertItems(int,QStringList const&)
-func (q *QComboBox) InsertItems(index int,texts []string)  {
+func (q *QComboBox) InsertItems(index int32,texts []string)  {
 	q.Drv(217000,217141,unsafe.Pointer(&index),unsafe.Pointer(&texts),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QComboBox::insertPolicy()
@@ -38018,7 +38018,7 @@ func (q *QComboBox) InsertPolicy() QComboBox_InsertPolicy {
 	return __rv
 }	
 //QComboBox::insertSeparator(int)
-func (q *QComboBox) InsertSeparator(index int)  {
+func (q *QComboBox) InsertSeparator(index int32)  {
 	q.Drv(217000,217143,unsafe.Pointer(&index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QComboBox::isEditable()
@@ -38028,7 +38028,7 @@ func (q *QComboBox) IsEditable() bool {
 	return __rv
 }	
 //QComboBox::itemData(int)
-func (q *QComboBox) ItemData(index int) *QVariant {
+func (q *QComboBox) ItemData(index int32) *QVariant {
 	var __rv uintptr
 	q.Drv(217000,217145,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -38039,7 +38039,7 @@ func (q *QComboBox) ItemData(index int) *QVariant {
 	return _rp
 }	
 //QComboBox::itemData(int,int)
-func (q *QComboBox) ItemDataWithIndexRole(index int,role int) *QVariant {
+func (q *QComboBox) ItemDataWithIndexRole(index int32,role int32) *QVariant {
 	var __rv uintptr
 	q.Drv(217000,217146,unsafe.Pointer(&index),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -38061,7 +38061,7 @@ func (q *QComboBox) ItemDelegate() *QAbstractItemDelegate {
 	return _rp
 }	
 //QComboBox::itemIcon(int)
-func (q *QComboBox) ItemIcon(index int) *QIcon {
+func (q *QComboBox) ItemIcon(index int32) *QIcon {
 	var __rv uintptr
 	q.Drv(217000,217148,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -38072,7 +38072,7 @@ func (q *QComboBox) ItemIcon(index int) *QIcon {
 	return _rp
 }	
 //QComboBox::itemText(int)
-func (q *QComboBox) ItemText(index int) string {
+func (q *QComboBox) ItemText(index int32) string {
 	var __rv string
 	q.Drv(217000,217149,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -38097,20 +38097,20 @@ func (q *QComboBox) LineEdit() *QLineEdit {
 	return _rp
 }	
 //QComboBox::maxCount()
-func (q *QComboBox) MaxCount() int {
-	var __rv int
+func (q *QComboBox) MaxCount() int32 {
+	var __rv int32
 	q.Drv(217000,217153,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QComboBox::maxVisibleItems()
-func (q *QComboBox) MaxVisibleItems() int {
-	var __rv int
+func (q *QComboBox) MaxVisibleItems() int32 {
+	var __rv int32
 	q.Drv(217000,217154,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QComboBox::minimumContentsLength()
-func (q *QComboBox) MinimumContentsLength() int {
-	var __rv int
+func (q *QComboBox) MinimumContentsLength() int32 {
+	var __rv int32
 	q.Drv(217000,217155,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -38137,8 +38137,8 @@ func (q *QComboBox) Model() *QAbstractItemModel {
 	return _rp
 }	
 //QComboBox::modelColumn()
-func (q *QComboBox) ModelColumn() int {
-	var __rv int
+func (q *QComboBox) ModelColumn() int32 {
+	var __rv int32
 	q.Drv(217000,217158,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -38155,7 +38155,7 @@ func (q *QComboBox) PaintEvent(e *QPaintEvent)  {
 	q.Drv(217000,217161,Native(e),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QComboBox::removeItem(int)
-func (q *QComboBox) RemoveItem(index int)  {
+func (q *QComboBox) RemoveItem(index int32)  {
 	q.Drv(217000,217162,unsafe.Pointer(&index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QComboBox::resizeEvent(QResizeEvent*)
@@ -38186,7 +38186,7 @@ func (q *QComboBox) SetCompleter(c *QCompleter)  {
 	q.Drv(217000,217167,Native(c),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QComboBox::setCurrentIndex(int)
-func (q *QComboBox) SetCurrentIndex(index int)  {
+func (q *QComboBox) SetCurrentIndex(index int32)  {
 	q.Drv(217000,217168,unsafe.Pointer(&index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QComboBox::setDuplicatesEnabled(bool)
@@ -38214,7 +38214,7 @@ func (q *QComboBox) SetInsertPolicy(policy QComboBox_InsertPolicy)  {
 	q.Drv(217000,217174,unsafe.Pointer(&policy),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QComboBox::setItemData(int,QVariant const&,int)
-func (q *QComboBox) SetItemData(index int,value *QVariant,role int)  {
+func (q *QComboBox) SetItemData(index int32,value *QVariant,role int32)  {
 	q.Drv(217000,217175,unsafe.Pointer(&index),Native(value),unsafe.Pointer(&role),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QComboBox::setItemDelegate(QAbstractItemDelegate*)
@@ -38222,11 +38222,11 @@ func (q *QComboBox) SetItemDelegate(delegate *QAbstractItemDelegate)  {
 	q.Drv(217000,217176,Native(delegate),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QComboBox::setItemIcon(int,QIcon const&)
-func (q *QComboBox) SetItemIcon(index int,icon *QIcon)  {
+func (q *QComboBox) SetItemIcon(index int32,icon *QIcon)  {
 	q.Drv(217000,217177,unsafe.Pointer(&index),Native(icon),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QComboBox::setItemText(int,QString const&)
-func (q *QComboBox) SetItemText(index int,text string)  {
+func (q *QComboBox) SetItemText(index int32,text string)  {
 	q.Drv(217000,217178,unsafe.Pointer(&index),unsafe.Pointer(&text),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QComboBox::setLineEdit(QLineEdit*)
@@ -38234,15 +38234,15 @@ func (q *QComboBox) SetLineEdit(edit *QLineEdit)  {
 	q.Drv(217000,217179,Native(edit),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QComboBox::setMaxCount(int)
-func (q *QComboBox) SetMaxCount(max int)  {
+func (q *QComboBox) SetMaxCount(max int32)  {
 	q.Drv(217000,217180,unsafe.Pointer(&max),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QComboBox::setMaxVisibleItems(int)
-func (q *QComboBox) SetMaxVisibleItems(maxItems int)  {
+func (q *QComboBox) SetMaxVisibleItems(maxItems int32)  {
 	q.Drv(217000,217181,unsafe.Pointer(&maxItems),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QComboBox::setMinimumContentsLength(int)
-func (q *QComboBox) SetMinimumContentsLength(characters int)  {
+func (q *QComboBox) SetMinimumContentsLength(characters int32)  {
 	q.Drv(217000,217182,unsafe.Pointer(&characters),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QComboBox::setModel(QAbstractItemModel*)
@@ -38250,7 +38250,7 @@ func (q *QComboBox) SetModel(model QAbstractItemModelInterface)  {
 	q.Drv(217000,217183,Native(model),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QComboBox::setModelColumn(int)
-func (q *QComboBox) SetModelColumn(visibleColumn int)  {
+func (q *QComboBox) SetModelColumn(visibleColumn int32)  {
 	q.Drv(217000,217184,unsafe.Pointer(&visibleColumn),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QComboBox::setRootModelIndex(QModelIndex const&)
@@ -38391,8 +38391,8 @@ func (q *QCommandLinkButton) Event(e *QEvent) bool {
 	return __rv
 }	
 //QCommandLinkButton::heightForWidth(int)
-func (q *QCommandLinkButton) HeightForWidth(value int) int {
-	var __rv int
+func (q *QCommandLinkButton) HeightForWidth(value int32) int32 {
+	var __rv int32
 	q.Drv(218000,218108,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -38452,8 +38452,8 @@ func NewQCommonStyle() *QCommonStyle {
 	return _p
 } 
 //QCommonStyle::pixelMetric(QStyle::PixelMetric)
-func (q *QCommonStyle) PixelMetric(m QStyle_PixelMetric) int {
-	var __rv int
+func (q *QCommonStyle) PixelMetric(m QStyle_PixelMetric) int32 {
+	var __rv int32
 	q.Drv(219000,219103,unsafe.Pointer(&m),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -38481,8 +38481,8 @@ func (q *QCommonStyle) StandardPixmap(sp QStyle_StandardPixmap) *QPixmap {
 	return _rp
 }	
 //QCommonStyle::styleHint(QStyle::StyleHint)
-func (q *QCommonStyle) StyleHint(sh QStyle_StyleHint) int {
-	var __rv int
+func (q *QCommonStyle) StyleHint(sh QStyle_StyleHint) int32 {
+	var __rv int32
 	q.Drv(219000,219108,unsafe.Pointer(&sh),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -38605,14 +38605,14 @@ func (q *QCompleter) CompleteWithRect(rect *QRect)  {
 	q.Drv(220000,220112,Native(rect),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QCompleter::completionColumn()
-func (q *QCompleter) CompletionColumn() int {
-	var __rv int
+func (q *QCompleter) CompletionColumn() int32 {
+	var __rv int32
 	q.Drv(220000,220113,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QCompleter::completionCount()
-func (q *QCompleter) CompletionCount() int {
-	var __rv int
+func (q *QCompleter) CompletionCount() int32 {
+	var __rv int32
 	q.Drv(220000,220114,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -38640,8 +38640,8 @@ func (q *QCompleter) CompletionPrefix() string {
 	return __rv
 }	
 //QCompleter::completionRole()
-func (q *QCompleter) CompletionRole() int {
-	var __rv int
+func (q *QCompleter) CompletionRole() int32 {
+	var __rv int32
 	q.Drv(220000,220118,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -38663,8 +38663,8 @@ func (q *QCompleter) CurrentIndex() *QModelIndex {
 	return _rp
 }	
 //QCompleter::currentRow()
-func (q *QCompleter) CurrentRow() int {
-	var __rv int
+func (q *QCompleter) CurrentRow() int32 {
+	var __rv int32
 	q.Drv(220000,220121,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -38681,8 +38681,8 @@ func (q *QCompleter) EventFilter(o QObjectInterface,e *QEvent) bool {
 	return __rv
 }	
 //QCompleter::maxVisibleItems()
-func (q *QCompleter) MaxVisibleItems() int {
-	var __rv int
+func (q *QCompleter) MaxVisibleItems() int32 {
+	var __rv int32
 	q.Drv(220000,220124,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -38725,7 +38725,7 @@ func (q *QCompleter) SetCaseSensitivity(caseSensitivity Qt_CaseSensitivity)  {
 	q.Drv(220000,220129,unsafe.Pointer(&caseSensitivity),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QCompleter::setCompletionColumn(int)
-func (q *QCompleter) SetCompletionColumn(column int)  {
+func (q *QCompleter) SetCompletionColumn(column int32)  {
 	q.Drv(220000,220130,unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QCompleter::setCompletionMode(QCompleter::CompletionMode)
@@ -38737,17 +38737,17 @@ func (q *QCompleter) SetCompletionPrefix(prefix string)  {
 	q.Drv(220000,220132,unsafe.Pointer(&prefix),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QCompleter::setCompletionRole(int)
-func (q *QCompleter) SetCompletionRole(role int)  {
+func (q *QCompleter) SetCompletionRole(role int32)  {
 	q.Drv(220000,220133,unsafe.Pointer(&role),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QCompleter::setCurrentRow(int)
-func (q *QCompleter) SetCurrentRow(row int) bool {
+func (q *QCompleter) SetCurrentRow(row int32) bool {
 	var __rv bool
 	q.Drv(220000,220134,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QCompleter::setMaxVisibleItems(int)
-func (q *QCompleter) SetMaxVisibleItems(maxItems int)  {
+func (q *QCompleter) SetMaxVisibleItems(maxItems int32)  {
 	q.Drv(220000,220135,unsafe.Pointer(&maxItems),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QCompleter::setModel(QAbstractItemModel*)
@@ -38813,7 +38813,7 @@ func NewQDataWidgetMapperFromDriver(drv Driver) *QDataWidgetMapper {
 	}
 	return _p
 } 	
-func (q *QDataWidgetMapper) OnCurrentIndexChanged(fn func(int)) uintptr {
+func (q *QDataWidgetMapper) OnCurrentIndexChanged(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(221000,221102,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -38842,11 +38842,11 @@ func NewQDataWidgetMapperWithParent(parent QObjectInterface) *QDataWidgetMapper 
 	return _p
 } 
 //QDataWidgetMapper::addMapping(QWidget*,int)
-func (q *QDataWidgetMapper) AddMappingWithWidgetSection(widget QWidgetInterface,section int)  {
+func (q *QDataWidgetMapper) AddMappingWithWidgetSection(widget QWidgetInterface,section int32)  {
 	q.Drv(221000,221105,Native(widget),unsafe.Pointer(&section),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QDataWidgetMapper::addMapping(QWidget*,int,QByteArray const&)
-func (q *QDataWidgetMapper) AddMappingWithWidgetSectionPropertyname(widget QWidgetInterface,section int,propertyName []byte)  {
+func (q *QDataWidgetMapper) AddMappingWithWidgetSectionPropertyname(widget QWidgetInterface,section int32,propertyName []byte)  {
 	q.Drv(221000,221106,Native(widget),unsafe.Pointer(&section),unsafe.Pointer(&propertyName),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QDataWidgetMapper::clearMapping()
@@ -38854,8 +38854,8 @@ func (q *QDataWidgetMapper) ClearMapping()  {
 	q.Drv(221000,221107,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QDataWidgetMapper::currentIndex()
-func (q *QDataWidgetMapper) CurrentIndex() int {
-	var __rv int
+func (q *QDataWidgetMapper) CurrentIndex() int32 {
+	var __rv int32
 	q.Drv(221000,221108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -38877,13 +38877,13 @@ func (q *QDataWidgetMapper) MappedPropertyName(widget QWidgetInterface) []byte {
 	return __rv
 }	
 //QDataWidgetMapper::mappedSection(QWidget*)
-func (q *QDataWidgetMapper) MappedSection(widget QWidgetInterface) int {
-	var __rv int
+func (q *QDataWidgetMapper) MappedSection(widget QWidgetInterface) int32 {
+	var __rv int32
 	q.Drv(221000,221111,Native(widget),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDataWidgetMapper::mappedWidgetAt(int)
-func (q *QDataWidgetMapper) MappedWidgetAt(section int) *QWidget {
+func (q *QDataWidgetMapper) MappedWidgetAt(section int32) *QWidget {
 	var __rv uintptr
 	q.Drv(221000,221112,unsafe.Pointer(&section),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -38930,7 +38930,7 @@ func (q *QDataWidgetMapper) RootIndex() *QModelIndex {
 	return _rp
 }	
 //QDataWidgetMapper::setCurrentIndex(int)
-func (q *QDataWidgetMapper) SetCurrentIndex(index int)  {
+func (q *QDataWidgetMapper) SetCurrentIndex(index int32)  {
 	q.Drv(221000,221118,unsafe.Pointer(&index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QDataWidgetMapper::setCurrentModelIndex(QModelIndex const&)
@@ -39186,8 +39186,8 @@ func (q *QDateTimeEdit) CurrentSection() QDateTimeEdit_Section {
 	return __rv
 }	
 //QDateTimeEdit::currentSectionIndex()
-func (q *QDateTimeEdit) CurrentSectionIndex() int {
-	var __rv int
+func (q *QDateTimeEdit) CurrentSectionIndex() int32 {
+	var __rv int32
 	q.Drv(223000,223120,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -39335,14 +39335,14 @@ func (q *QDateTimeEdit) PaintEvent(event *QPaintEvent)  {
 	q.Drv(223000,223138,Native(event),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QDateTimeEdit::sectionAt(int)
-func (q *QDateTimeEdit) SectionAt(index int) QDateTimeEdit_Section {
+func (q *QDateTimeEdit) SectionAt(index int32) QDateTimeEdit_Section {
 	var __rv QDateTimeEdit_Section
 	q.Drv(223000,223139,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDateTimeEdit::sectionCount()
-func (q *QDateTimeEdit) SectionCount() int {
-	var __rv int
+func (q *QDateTimeEdit) SectionCount() int32 {
+	var __rv int32
 	q.Drv(223000,223140,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -39365,7 +39365,7 @@ func (q *QDateTimeEdit) SetCurrentSection(section QDateTimeEdit_Section)  {
 	q.Drv(223000,223144,unsafe.Pointer(&section),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QDateTimeEdit::setCurrentSectionIndex(int)
-func (q *QDateTimeEdit) SetCurrentSectionIndex(index int)  {
+func (q *QDateTimeEdit) SetCurrentSectionIndex(index int32)  {
 	q.Drv(223000,223145,unsafe.Pointer(&index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QDateTimeEdit::setDate(QDate const&)
@@ -39440,7 +39440,7 @@ func (q *QDateTimeEdit) SizeHint() *QSize {
 	return _rp
 }	
 //QDateTimeEdit::stepBy(int)
-func (q *QDateTimeEdit) StepBy(steps int)  {
+func (q *QDateTimeEdit) StepBy(steps int32)  {
 	q.Drv(223000,223162,unsafe.Pointer(&steps),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QDateTimeEdit::stepEnabled()
@@ -39473,7 +39473,7 @@ func (q *QDateTimeEdit) TimeSpec() Qt_TimeSpec {
 	return __rv
 }	
 //QDateTimeEdit::validate(QString&,int&)
-func (q *QDateTimeEdit) Validate(input *string,pos *int) QValidator_State {
+func (q *QDateTimeEdit) Validate(input *string,pos *int32) QValidator_State {
 	var __rv QValidator_State
 	q.Drv(223000,223167,unsafe.Pointer(&input),unsafe.Pointer(&pos),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -39496,19 +39496,19 @@ func NewQDesktopWidgetFromDriver(drv Driver) *QDesktopWidget {
 	}
 	return _p
 } 	
-func (q *QDesktopWidget) OnResized(fn func(int)) uintptr {
+func (q *QDesktopWidget) OnResized(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(224000,224102,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QDesktopWidget) OnWorkAreaResized(fn func(int)) uintptr {
+func (q *QDesktopWidget) OnWorkAreaResized(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(224000,224103,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QDesktopWidget) OnScreenCountChanged(fn func(int)) uintptr {
+func (q *QDesktopWidget) OnScreenCountChanged(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(224000,224104,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -39559,7 +39559,7 @@ func (q *QDesktopWidget) AvailableGeometryWithWidget(widget QWidgetInterface) *Q
 	return _rp
 }	
 //QDesktopWidget::availableGeometry(int)
-func (q *QDesktopWidget) AvailableGeometryWithScreen(screen int) *QRect {
+func (q *QDesktopWidget) AvailableGeometryWithScreen(screen int32) *QRect {
 	var __rv uintptr
 	q.Drv(224000,224109,unsafe.Pointer(&screen),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -39576,14 +39576,14 @@ func (q *QDesktopWidget) IsVirtualDesktop() bool {
 	return __rv
 }	
 //QDesktopWidget::numScreens()
-func (q *QDesktopWidget) NumScreens() int {
-	var __rv int
+func (q *QDesktopWidget) NumScreens() int32 {
+	var __rv int32
 	q.Drv(224000,224111,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDesktopWidget::primaryScreen()
-func (q *QDesktopWidget) PrimaryScreen() int {
-	var __rv int
+func (q *QDesktopWidget) PrimaryScreen() int32 {
+	var __rv int32
 	q.Drv(224000,224112,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -39603,7 +39603,7 @@ func (q *QDesktopWidget) Screen() *QWidget {
 	return _rp
 }	
 //QDesktopWidget::screen(int)
-func (q *QDesktopWidget) ScreenWithScreen(screen int) *QWidget {
+func (q *QDesktopWidget) ScreenWithScreen(screen int32) *QWidget {
 	var __rv uintptr
 	q.Drv(224000,224115,unsafe.Pointer(&screen),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -39614,8 +39614,8 @@ func (q *QDesktopWidget) ScreenWithScreen(screen int) *QWidget {
 	return _rp
 }	
 //QDesktopWidget::screenCount()
-func (q *QDesktopWidget) ScreenCount() int {
-	var __rv int
+func (q *QDesktopWidget) ScreenCount() int32 {
+	var __rv int32
 	q.Drv(224000,224116,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -39653,7 +39653,7 @@ func (q *QDesktopWidget) ScreenGeometryWithWidget(widget QWidgetInterface) *QRec
 	return _rp
 }	
 //QDesktopWidget::screenGeometry(int)
-func (q *QDesktopWidget) ScreenGeometryWithScreen(screen int) *QRect {
+func (q *QDesktopWidget) ScreenGeometryWithScreen(screen int32) *QRect {
 	var __rv uintptr
 	q.Drv(224000,224120,unsafe.Pointer(&screen),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -39664,20 +39664,20 @@ func (q *QDesktopWidget) ScreenGeometryWithScreen(screen int) *QRect {
 	return _rp
 }	
 //QDesktopWidget::screenNumber()
-func (q *QDesktopWidget) ScreenNumber() int {
-	var __rv int
+func (q *QDesktopWidget) ScreenNumber() int32 {
+	var __rv int32
 	q.Drv(224000,224121,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDesktopWidget::screenNumber(QPoint const&)
-func (q *QDesktopWidget) ScreenNumberWithPoint(value *QPoint) int {
-	var __rv int
+func (q *QDesktopWidget) ScreenNumberWithPoint(value *QPoint) int32 {
+	var __rv int32
 	q.Drv(224000,224122,Native(value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDesktopWidget::screenNumber(QWidget const*)
-func (q *QDesktopWidget) ScreenNumberWithWidget(widget QWidgetInterface) int {
-	var __rv int
+func (q *QDesktopWidget) ScreenNumberWithWidget(widget QWidgetInterface) int32 {
+	var __rv int32
 	q.Drv(224000,224123,Native(widget),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -39747,8 +39747,8 @@ func (q *QDial) MouseReleaseEvent(me *QMouseEvent)  {
 	q.Drv(225000,225108,Native(me),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QDial::notchSize()
-func (q *QDial) NotchSize() int {
-	var __rv int
+func (q *QDial) NotchSize() int32 {
+	var __rv int32
 	q.Drv(225000,225109,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -39825,7 +39825,7 @@ func NewQDialogFromDriver(drv Driver) *QDialog {
 	}
 	return _p
 } 	
-func (q *QDialog) OnFinished(fn func(int)) uintptr {
+func (q *QDialog) OnFinished(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(226000,226102,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -39882,7 +39882,7 @@ func (q *QDialog) ContextMenuEvent(value *QContextMenuEvent)  {
 	q.Drv(226000,226110,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QDialog::done(int)
-func (q *QDialog) Done(value int)  {
+func (q *QDialog) Done(value int32)  {
 	q.Drv(226000,226111,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QDialog::eventFilter(QObject*,QEvent*)
@@ -39892,8 +39892,8 @@ func (q *QDialog) EventFilter(value2 QObjectInterface,value3 *QEvent) bool {
 	return __rv
 }	
 //QDialog::exec()
-func (q *QDialog) Exec() int {
-	var __rv int
+func (q *QDialog) Exec() int32 {
+	var __rv int32
 	q.Drv(226000,226113,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -39948,8 +39948,8 @@ func (q *QDialog) ResizeEvent(value *QResizeEvent)  {
 	q.Drv(226000,226121,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QDialog::result()
-func (q *QDialog) Result() int {
-	var __rv int
+func (q *QDialog) Result() int32 {
+	var __rv int32
 	q.Drv(226000,226122,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -39966,7 +39966,7 @@ func (q *QDialog) SetOrientation(orientation Qt_Orientation)  {
 	q.Drv(226000,226125,unsafe.Pointer(&orientation),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QDialog::setResult(int)
-func (q *QDialog) SetResult(r int)  {
+func (q *QDialog) SetResult(r int32)  {
 	q.Drv(226000,226126,unsafe.Pointer(&r),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QDialog::setSizeGripEnabled(bool)
@@ -40284,14 +40284,14 @@ func NewQDirModelWithNamefiltersFiltersSortParent(nameFilters []string,filters Q
 	return _p
 } 
 //QDirModel::columnCount()
-func (q *QDirModel) ColumnCount() int {
-	var __rv int
+func (q *QDirModel) ColumnCount() int32 {
+	var __rv int32
 	q.Drv(228000,228105,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDirModel::columnCount(QModelIndex const&)
-func (q *QDirModel) ColumnCountWithParent(parent *QModelIndex) int {
-	var __rv int
+func (q *QDirModel) ColumnCountWithParent(parent *QModelIndex) int32 {
+	var __rv int32
 	q.Drv(228000,228106,Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -40307,7 +40307,7 @@ func (q *QDirModel) Data(index *QModelIndex) *QVariant {
 	return _rp
 }	
 //QDirModel::data(QModelIndex const&,int)
-func (q *QDirModel) DataWithIndexRole(index *QModelIndex,role int) *QVariant {
+func (q *QDirModel) DataWithIndexRole(index *QModelIndex,role int32) *QVariant {
 	var __rv uintptr
 	q.Drv(228000,228108,Native(index),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -40318,7 +40318,7 @@ func (q *QDirModel) DataWithIndexRole(index *QModelIndex,role int) *QVariant {
 	return _rp
 }	
 //QDirModel::dropMimeData(QMimeData const*,Qt::DropAction,int,int,QModelIndex const&)
-func (q *QDirModel) DropMimeData(data *QMimeData,action Qt_DropAction,row int,column int,parent *QModelIndex) bool {
+func (q *QDirModel) DropMimeData(data *QMimeData,action Qt_DropAction,row int32,column int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(228000,228109,Native(data),unsafe.Pointer(&action),unsafe.Pointer(&row),unsafe.Pointer(&column),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -40382,7 +40382,7 @@ func (q *QDirModel) HasChildrenWithIndex(index *QModelIndex) bool {
 	return __rv
 }	
 //QDirModel::headerData(int,Qt::Orientation,int)
-func (q *QDirModel) HeaderData(section int,orientation Qt_Orientation,role int) *QVariant {
+func (q *QDirModel) HeaderData(section int32,orientation Qt_Orientation,role int32) *QVariant {
 	var __rv uintptr
 	q.Drv(228000,228118,unsafe.Pointer(&section),unsafe.Pointer(&orientation),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -40415,7 +40415,7 @@ func (q *QDirModel) Index(path string) *QModelIndex {
 	return _rp
 }	
 //QDirModel::index(QString const&,int)
-func (q *QDirModel) IndexWithPathColumn(path string,column int) *QModelIndex {
+func (q *QDirModel) IndexWithPathColumn(path string,column int32) *QModelIndex {
 	var __rv uintptr
 	q.Drv(228000,228121,unsafe.Pointer(&path),unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -40426,7 +40426,7 @@ func (q *QDirModel) IndexWithPathColumn(path string,column int) *QModelIndex {
 	return _rp
 }	
 //QDirModel::index(int,int,QModelIndex const&)
-func (q *QDirModel) IndexWithRowColumnParent(row int,column int,parent *QModelIndex) *QModelIndex {
+func (q *QDirModel) IndexWithRowColumnParent(row int32,column int32,parent *QModelIndex) *QModelIndex {
 	var __rv uintptr
 	q.Drv(228000,228122,unsafe.Pointer(&row),unsafe.Pointer(&column),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -40537,19 +40537,19 @@ func (q *QDirModel) Rmdir(index *QModelIndex) bool {
 	return __rv
 }	
 //QDirModel::rowCount()
-func (q *QDirModel) RowCount() int {
-	var __rv int
+func (q *QDirModel) RowCount() int32 {
+	var __rv int32
 	q.Drv(228000,228137,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDirModel::rowCount(QModelIndex const&)
-func (q *QDirModel) RowCountWithParent(parent *QModelIndex) int {
-	var __rv int
+func (q *QDirModel) RowCountWithParent(parent *QModelIndex) int32 {
+	var __rv int32
 	q.Drv(228000,228138,Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QDirModel::setData(QModelIndex const&,QVariant const&,int)
-func (q *QDirModel) SetData(index *QModelIndex,value *QVariant,role int) bool {
+func (q *QDirModel) SetData(index *QModelIndex,value *QVariant,role int32) bool {
 	var __rv bool
 	q.Drv(228000,228139,Native(index),Native(value),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -40583,11 +40583,11 @@ func (q *QDirModel) SetSorting(sort QDir_SortFlag)  {
 	q.Drv(228000,228146,unsafe.Pointer(&sort),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QDirModel::sort(int)
-func (q *QDirModel) Sort(column int)  {
+func (q *QDirModel) Sort(column int32)  {
 	q.Drv(228000,228147,unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QDirModel::sort(int,Qt::SortOrder)
-func (q *QDirModel) SortWithColumnOrder(column int,order Qt_SortOrder)  {
+func (q *QDirModel) SortWithColumnOrder(column int32,order Qt_SortOrder)  {
 	q.Drv(228000,228148,unsafe.Pointer(&column),unsafe.Pointer(&order),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QDirModel::sorting()
@@ -40841,8 +40841,8 @@ func (q *QDoubleSpinBox) CleanText() string {
 	return __rv
 }	
 //QDoubleSpinBox::decimals()
-func (q *QDoubleSpinBox) Decimals() int {
-	var __rv int
+func (q *QDoubleSpinBox) Decimals() int32 {
+	var __rv int32
 	q.Drv(230000,230107,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -40869,7 +40869,7 @@ func (q *QDoubleSpinBox) Prefix() string {
 	return __rv
 }	
 //QDoubleSpinBox::setDecimals(int)
-func (q *QDoubleSpinBox) SetDecimals(prec int)  {
+func (q *QDoubleSpinBox) SetDecimals(prec int32)  {
 	q.Drv(230000,230112,unsafe.Pointer(&prec),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QDoubleSpinBox::setMaximum(double)
@@ -40919,7 +40919,7 @@ func (q *QDoubleSpinBox) TextFromValue(val float64) string {
 	return __rv
 }	
 //QDoubleSpinBox::validate(QString&,int&)
-func (q *QDoubleSpinBox) Validate(input *string,pos *int) QValidator_State {
+func (q *QDoubleSpinBox) Validate(input *string,pos *int32) QValidator_State {
 	var __rv QValidator_State
 	q.Drv(230000,230123,unsafe.Pointer(&input),unsafe.Pointer(&pos),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -40979,7 +40979,7 @@ func NewQDoubleValidatorWithParent(parent QObjectInterface) *QDoubleValidator {
 	return _p
 } 
 //QDoubleValidator::QDoubleValidator(double,double,int,QObject*)	
-func NewQDoubleValidatorWithBottomTopDecimalsParent(bottom float64,top float64,decimals int,parent QObjectInterface) *QDoubleValidator {
+func NewQDoubleValidatorWithBottomTopDecimalsParent(bottom float64,top float64,decimals int32,parent QObjectInterface) *QDoubleValidator {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),231000,231104,unsafe.Pointer(&bottom),unsafe.Pointer(&top),unsafe.Pointer(&decimals),Native(parent),nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -40996,8 +40996,8 @@ func (q *QDoubleValidator) Bottom() float64 {
 	return __rv
 }	
 //QDoubleValidator::decimals()
-func (q *QDoubleValidator) Decimals() int {
-	var __rv int
+func (q *QDoubleValidator) Decimals() int32 {
+	var __rv int32
 	q.Drv(231000,231106,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -41012,7 +41012,7 @@ func (q *QDoubleValidator) SetBottom(value float64)  {
 	q.Drv(231000,231108,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QDoubleValidator::setDecimals(int)
-func (q *QDoubleValidator) SetDecimals(value int)  {
+func (q *QDoubleValidator) SetDecimals(value int32)  {
 	q.Drv(231000,231109,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QDoubleValidator::setNotation(QDoubleValidator::Notation)
@@ -41020,7 +41020,7 @@ func (q *QDoubleValidator) SetNotation(value QDoubleValidator_Notation)  {
 	q.Drv(231000,231110,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QDoubleValidator::setRange(double,double,int)
-func (q *QDoubleValidator) SetRange(bottom float64,top float64,decimals int)  {
+func (q *QDoubleValidator) SetRange(bottom float64,top float64,decimals int32)  {
 	q.Drv(231000,231111,unsafe.Pointer(&bottom),unsafe.Pointer(&top),unsafe.Pointer(&decimals),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QDoubleValidator::setTop(double)
@@ -41034,7 +41034,7 @@ func (q *QDoubleValidator) Top() float64 {
 	return __rv
 }	
 //QDoubleValidator::validate(QString&,int&)
-func (q *QDoubleValidator) Validate(value2 *string,value3 *int) QValidator_State {
+func (q *QDoubleValidator) Validate(value2 *string,value3 *int32) QValidator_State {
 	var __rv QValidator_State
 	q.Drv(231000,231114,unsafe.Pointer(&value2),unsafe.Pointer(&value3),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -41218,7 +41218,7 @@ func (q *QErrorMessage) ChangeEvent(e *QEvent)  {
 	q.Drv(233000,233104,Native(e),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QErrorMessage::done(int)
-func (q *QErrorMessage) Done(value int)  {
+func (q *QErrorMessage) Done(value int32)  {
 	q.Drv(233000,233105,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QErrorMessage::qtHandler()	
@@ -41300,14 +41300,14 @@ func NewQEventLoopWithParent(parent QObjectInterface) *QEventLoop {
 	return _p
 } 
 //QEventLoop::exec()
-func (q *QEventLoop) Exec() int {
-	var __rv int
+func (q *QEventLoop) Exec() int32 {
+	var __rv int32
 	q.Drv(234000,234104,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>)
-func (q *QEventLoop) ExecWithFlags(flags QEventLoop_ProcessEventsFlag) int {
-	var __rv int
+func (q *QEventLoop) ExecWithFlags(flags QEventLoop_ProcessEventsFlag) int32 {
+	var __rv int32
 	q.Drv(234000,234105,unsafe.Pointer(&flags),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -41316,7 +41316,7 @@ func (q *QEventLoop) Exit()  {
 	q.Drv(234000,234106,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QEventLoop::exit(int)
-func (q *QEventLoop) ExitWithReturncode(returnCode int)  {
+func (q *QEventLoop) ExitWithReturncode(returnCode int32)  {
 	q.Drv(234000,234107,unsafe.Pointer(&returnCode),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QEventLoop::isRunning()
@@ -41338,7 +41338,7 @@ func (q *QEventLoop) ProcessEventsWithFlags(flags QEventLoop_ProcessEventsFlag) 
 	return __rv
 }	
 //QEventLoop::processEvents(QFlags<QEventLoop::ProcessEventsFlag>,int)
-func (q *QEventLoop) ProcessEventsWithFlagsMaximumtime(flags QEventLoop_ProcessEventsFlag,maximumTime int)  {
+func (q *QEventLoop) ProcessEventsWithFlagsMaximumtime(flags QEventLoop_ProcessEventsFlag,maximumTime int32)  {
 	q.Drv(234000,234111,unsafe.Pointer(&flags),unsafe.Pointer(&maximumTime),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QEventLoop::quit()
@@ -41624,8 +41624,8 @@ func (q *QFile) Flush() bool {
 	return __rv
 }	
 //QFile::handle()
-func (q *QFile) Handle() int {
-	var __rv int
+func (q *QFile) Handle() int32 {
+	var __rv int32
 	q.Drv(236000,236117,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -41672,7 +41672,7 @@ func (q *QFile) OpenWithFFlags(f uintptr,flags QIODevice_OpenModeFlag) bool {
 	return __rv
 }	
 //QFile::open(int,QFlags<QIODevice::OpenModeFlag>)
-func (q *QFile) OpenWithFdFlags(fd int,flags QIODevice_OpenModeFlag) bool {
+func (q *QFile) OpenWithFdFlags(fd int32,flags QIODevice_OpenModeFlag) bool {
 	var __rv bool
 	q.Drv(236000,236124,unsafe.Pointer(&fd),unsafe.Pointer(&flags),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -42009,7 +42009,7 @@ func (q *QFileDialog) Directory() *QDir {
 	return _rp
 }	
 //QFileDialog::done(int)
-func (q *QFileDialog) Done(result int)  {
+func (q *QFileDialog) Done(result int32)  {
 	q.Drv(237000,237116,unsafe.Pointer(&result),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFileDialog::fileMode()
@@ -42414,14 +42414,14 @@ func (q *QFileSystemModel) CanFetchMore(parent *QModelIndex) bool {
 	return __rv
 }	
 //QFileSystemModel::columnCount()
-func (q *QFileSystemModel) ColumnCount() int {
-	var __rv int
+func (q *QFileSystemModel) ColumnCount() int32 {
+	var __rv int32
 	q.Drv(238000,238108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFileSystemModel::columnCount(QModelIndex const&)
-func (q *QFileSystemModel) ColumnCountWithParent(parent *QModelIndex) int {
-	var __rv int
+func (q *QFileSystemModel) ColumnCountWithParent(parent *QModelIndex) int32 {
+	var __rv int32
 	q.Drv(238000,238109,Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -42437,7 +42437,7 @@ func (q *QFileSystemModel) Data(index *QModelIndex) *QVariant {
 	return _rp
 }	
 //QFileSystemModel::data(QModelIndex const&,int)
-func (q *QFileSystemModel) DataWithIndexRole(index *QModelIndex,role int) *QVariant {
+func (q *QFileSystemModel) DataWithIndexRole(index *QModelIndex,role int32) *QVariant {
 	var __rv uintptr
 	q.Drv(238000,238111,Native(index),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -42448,7 +42448,7 @@ func (q *QFileSystemModel) DataWithIndexRole(index *QModelIndex,role int) *QVari
 	return _rp
 }	
 //QFileSystemModel::dropMimeData(QMimeData const*,Qt::DropAction,int,int,QModelIndex const&)
-func (q *QFileSystemModel) DropMimeData(data *QMimeData,action Qt_DropAction,row int,column int,parent *QModelIndex) bool {
+func (q *QFileSystemModel) DropMimeData(data *QMimeData,action Qt_DropAction,row int32,column int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(238000,238112,Native(data),unsafe.Pointer(&action),unsafe.Pointer(&row),unsafe.Pointer(&column),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -42522,7 +42522,7 @@ func (q *QFileSystemModel) HasChildrenWithParent(parent *QModelIndex) bool {
 	return __rv
 }	
 //QFileSystemModel::headerData(int,Qt::Orientation,int)
-func (q *QFileSystemModel) HeaderData(section int,orientation Qt_Orientation,role int) *QVariant {
+func (q *QFileSystemModel) HeaderData(section int32,orientation Qt_Orientation,role int32) *QVariant {
 	var __rv uintptr
 	q.Drv(238000,238123,unsafe.Pointer(&section),unsafe.Pointer(&orientation),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -42555,7 +42555,7 @@ func (q *QFileSystemModel) Index(path string) *QModelIndex {
 	return _rp
 }	
 //QFileSystemModel::index(QString const&,int)
-func (q *QFileSystemModel) IndexWithPathColumn(path string,column int) *QModelIndex {
+func (q *QFileSystemModel) IndexWithPathColumn(path string,column int32) *QModelIndex {
 	var __rv uintptr
 	q.Drv(238000,238126,unsafe.Pointer(&path),unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -42566,7 +42566,7 @@ func (q *QFileSystemModel) IndexWithPathColumn(path string,column int) *QModelIn
 	return _rp
 }	
 //QFileSystemModel::index(int,int,QModelIndex const&)
-func (q *QFileSystemModel) IndexWithRowColumnParent(row int,column int,parent *QModelIndex) *QModelIndex {
+func (q *QFileSystemModel) IndexWithRowColumnParent(row int32,column int32,parent *QModelIndex) *QModelIndex {
 	var __rv uintptr
 	q.Drv(238000,238127,unsafe.Pointer(&row),unsafe.Pointer(&column),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -42639,7 +42639,7 @@ func (q *QFileSystemModel) MyComputer() *QVariant {
 	return _rp
 }	
 //QFileSystemModel::myComputer(int)
-func (q *QFileSystemModel) MyComputerWithRole(role int) *QVariant {
+func (q *QFileSystemModel) MyComputerWithRole(role int32) *QVariant {
 	var __rv uintptr
 	q.Drv(238000,238135,unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -42714,19 +42714,19 @@ func (q *QFileSystemModel) RootPath() string {
 	return __rv
 }	
 //QFileSystemModel::rowCount()
-func (q *QFileSystemModel) RowCount() int {
-	var __rv int
+func (q *QFileSystemModel) RowCount() int32 {
+	var __rv int32
 	q.Drv(238000,238145,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFileSystemModel::rowCount(QModelIndex const&)
-func (q *QFileSystemModel) RowCountWithParent(parent *QModelIndex) int {
-	var __rv int
+func (q *QFileSystemModel) RowCountWithParent(parent *QModelIndex) int32 {
+	var __rv int32
 	q.Drv(238000,238146,Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFileSystemModel::setData(QModelIndex const&,QVariant const&,int)
-func (q *QFileSystemModel) SetData(index *QModelIndex,value *QVariant,role int) bool {
+func (q *QFileSystemModel) SetData(index *QModelIndex,value *QVariant,role int32) bool {
 	var __rv bool
 	q.Drv(238000,238147,Native(index),Native(value),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -42773,11 +42773,11 @@ func (q *QFileSystemModel) Size(index *QModelIndex) int64 {
 	return __rv
 }	
 //QFileSystemModel::sort(int)
-func (q *QFileSystemModel) Sort(column int)  {
+func (q *QFileSystemModel) Sort(column int32)  {
 	q.Drv(238000,238156,unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFileSystemModel::sort(int,Qt::SortOrder)
-func (q *QFileSystemModel) SortWithColumnOrder(column int,order Qt_SortOrder)  {
+func (q *QFileSystemModel) SortWithColumnOrder(column int32,order Qt_SortOrder)  {
 	q.Drv(238000,238157,unsafe.Pointer(&column),unsafe.Pointer(&order),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFileSystemModel::supportedDropActions()
@@ -43184,7 +43184,7 @@ func (q *QFontDialog) CurrentFont() *QFont {
 	return _rp
 }	
 //QFontDialog::done(int)
-func (q *QFontDialog) Done(result int)  {
+func (q *QFontDialog) Done(result int32)  {
 	q.Drv(243000,243109,unsafe.Pointer(&result),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFontDialog::getFont(bool*)	
@@ -43434,8 +43434,8 @@ func (q *QFormLayout) AddRowWithWidgetWidget(label QWidgetInterface,field QWidge
 	q.Drv(244000,244110,Native(label),Native(field),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFormLayout::count()
-func (q *QFormLayout) Count() int {
-	var __rv int
+func (q *QFormLayout) Count() int32 {
+	var __rv int32
 	q.Drv(244000,244111,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -43458,15 +43458,15 @@ func (q *QFormLayout) FormAlignment() Qt_AlignmentFlag {
 	return __rv
 }	
 //QFormLayout::getItemPosition(int,int*,QFormLayout::ItemRole*)
-func (q *QFormLayout) GetItemPosition(index int,rowPtr *int,rolePtr *QFormLayout_ItemRole)  {
+func (q *QFormLayout) GetItemPosition(index int32,rowPtr *int32,rolePtr *QFormLayout_ItemRole)  {
 	q.Drv(244000,244115,unsafe.Pointer(&index),unsafe.Pointer(&rowPtr),unsafe.Pointer(&rolePtr),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFormLayout::getLayoutPosition(QLayout*,int*,QFormLayout::ItemRole*)
-func (q *QFormLayout) GetLayoutPosition(layout QLayoutInterface,rowPtr *int,rolePtr *QFormLayout_ItemRole)  {
+func (q *QFormLayout) GetLayoutPosition(layout QLayoutInterface,rowPtr *int32,rolePtr *QFormLayout_ItemRole)  {
 	q.Drv(244000,244116,Native(layout),unsafe.Pointer(&rowPtr),unsafe.Pointer(&rolePtr),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFormLayout::getWidgetPosition(QWidget*,int*,QFormLayout::ItemRole*)
-func (q *QFormLayout) GetWidgetPosition(widget QWidgetInterface,rowPtr *int,rolePtr *QFormLayout_ItemRole)  {
+func (q *QFormLayout) GetWidgetPosition(widget QWidgetInterface,rowPtr *int32,rolePtr *QFormLayout_ItemRole)  {
 	q.Drv(244000,244117,Native(widget),unsafe.Pointer(&rowPtr),unsafe.Pointer(&rolePtr),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFormLayout::hasHeightForWidth()
@@ -43476,39 +43476,39 @@ func (q *QFormLayout) HasHeightForWidth() bool {
 	return __rv
 }	
 //QFormLayout::heightForWidth(int)
-func (q *QFormLayout) HeightForWidth(width int) int {
-	var __rv int
+func (q *QFormLayout) HeightForWidth(width int32) int32 {
+	var __rv int32
 	q.Drv(244000,244119,unsafe.Pointer(&width),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFormLayout::horizontalSpacing()
-func (q *QFormLayout) HorizontalSpacing() int {
-	var __rv int
+func (q *QFormLayout) HorizontalSpacing() int32 {
+	var __rv int32
 	q.Drv(244000,244120,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFormLayout::insertRow(int,QLayout*)
-func (q *QFormLayout) InsertRowWithRowLayout(row int,layout QLayoutInterface)  {
+func (q *QFormLayout) InsertRowWithRowLayout(row int32,layout QLayoutInterface)  {
 	q.Drv(244000,244121,unsafe.Pointer(&row),Native(layout),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFormLayout::insertRow(int,QWidget*)
-func (q *QFormLayout) InsertRowWithRowWidget(row int,widget QWidgetInterface)  {
+func (q *QFormLayout) InsertRowWithRowWidget(row int32,widget QWidgetInterface)  {
 	q.Drv(244000,244122,unsafe.Pointer(&row),Native(widget),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFormLayout::insertRow(int,QString const&,QLayout*)
-func (q *QFormLayout) InsertRowWithRowLabeltextLayout(row int,labelText string,field QLayoutInterface)  {
+func (q *QFormLayout) InsertRowWithRowLabeltextLayout(row int32,labelText string,field QLayoutInterface)  {
 	q.Drv(244000,244123,unsafe.Pointer(&row),unsafe.Pointer(&labelText),Native(field),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFormLayout::insertRow(int,QString const&,QWidget*)
-func (q *QFormLayout) InsertRowWithRowLabeltextWidget(row int,labelText string,field QWidgetInterface)  {
+func (q *QFormLayout) InsertRowWithRowLabeltextWidget(row int32,labelText string,field QWidgetInterface)  {
 	q.Drv(244000,244124,unsafe.Pointer(&row),unsafe.Pointer(&labelText),Native(field),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFormLayout::insertRow(int,QWidget*,QLayout*)
-func (q *QFormLayout) InsertRowWithRowWidgetLayout(row int,label QWidgetInterface,field QLayoutInterface)  {
+func (q *QFormLayout) InsertRowWithRowWidgetLayout(row int32,label QWidgetInterface,field QLayoutInterface)  {
 	q.Drv(244000,244125,unsafe.Pointer(&row),Native(label),Native(field),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFormLayout::insertRow(int,QWidget*,QWidget*)
-func (q *QFormLayout) InsertRowWithRowWidgetWidget(row int,label QWidgetInterface,field QWidgetInterface)  {
+func (q *QFormLayout) InsertRowWithRowWidgetWidget(row int32,label QWidgetInterface,field QWidgetInterface)  {
 	q.Drv(244000,244126,unsafe.Pointer(&row),Native(label),Native(field),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFormLayout::invalidate()
@@ -43516,7 +43516,7 @@ func (q *QFormLayout) Invalidate()  {
 	q.Drv(244000,244127,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFormLayout::itemAt(int)
-func (q *QFormLayout) ItemAt(index int) *QLayoutItem {
+func (q *QFormLayout) ItemAt(index int32) *QLayoutItem {
 	var __rv uintptr
 	q.Drv(244000,244128,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -43527,7 +43527,7 @@ func (q *QFormLayout) ItemAt(index int) *QLayoutItem {
 	return _rp
 }	
 //QFormLayout::itemAt(int,QFormLayout::ItemRole)
-func (q *QFormLayout) ItemAtWithRowRole(row int,role QFormLayout_ItemRole) *QLayoutItem {
+func (q *QFormLayout) ItemAtWithRowRole(row int32,role QFormLayout_ItemRole) *QLayoutItem {
 	var __rv uintptr
 	q.Drv(244000,244129,unsafe.Pointer(&row),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -43577,8 +43577,8 @@ func (q *QFormLayout) MinimumSize() *QSize {
 	return _rp
 }	
 //QFormLayout::rowCount()
-func (q *QFormLayout) RowCount() int {
-	var __rv int
+func (q *QFormLayout) RowCount() int32 {
+	var __rv int32
 	q.Drv(244000,244134,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -43601,11 +43601,11 @@ func (q *QFormLayout) SetGeometry(rect *QRect)  {
 	q.Drv(244000,244138,Native(rect),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFormLayout::setHorizontalSpacing(int)
-func (q *QFormLayout) SetHorizontalSpacing(spacing int)  {
+func (q *QFormLayout) SetHorizontalSpacing(spacing int32)  {
 	q.Drv(244000,244139,unsafe.Pointer(&spacing),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFormLayout::setItem(int,QFormLayout::ItemRole,QLayoutItem*)
-func (q *QFormLayout) SetItem(row int,role QFormLayout_ItemRole,item *QLayoutItem)  {
+func (q *QFormLayout) SetItem(row int32,role QFormLayout_ItemRole,item *QLayoutItem)  {
 	q.Drv(244000,244140,unsafe.Pointer(&row),unsafe.Pointer(&role),Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFormLayout::setLabelAlignment(QFlags<Qt::AlignmentFlag>)
@@ -43613,7 +43613,7 @@ func (q *QFormLayout) SetLabelAlignment(alignment Qt_AlignmentFlag)  {
 	q.Drv(244000,244141,unsafe.Pointer(&alignment),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFormLayout::setLayout(int,QFormLayout::ItemRole,QLayout*)
-func (q *QFormLayout) SetLayout(row int,role QFormLayout_ItemRole,layout QLayoutInterface)  {
+func (q *QFormLayout) SetLayout(row int32,role QFormLayout_ItemRole,layout QLayoutInterface)  {
 	q.Drv(244000,244142,unsafe.Pointer(&row),unsafe.Pointer(&role),Native(layout),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFormLayout::setRowWrapPolicy(QFormLayout::RowWrapPolicy)
@@ -43621,15 +43621,15 @@ func (q *QFormLayout) SetRowWrapPolicy(policy QFormLayout_RowWrapPolicy)  {
 	q.Drv(244000,244143,unsafe.Pointer(&policy),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFormLayout::setSpacing(int)
-func (q *QFormLayout) SetSpacing(value int)  {
+func (q *QFormLayout) SetSpacing(value int32)  {
 	q.Drv(244000,244144,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFormLayout::setVerticalSpacing(int)
-func (q *QFormLayout) SetVerticalSpacing(spacing int)  {
+func (q *QFormLayout) SetVerticalSpacing(spacing int32)  {
 	q.Drv(244000,244145,unsafe.Pointer(&spacing),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFormLayout::setWidget(int,QFormLayout::ItemRole,QWidget*)
-func (q *QFormLayout) SetWidget(row int,role QFormLayout_ItemRole,widget QWidgetInterface)  {
+func (q *QFormLayout) SetWidget(row int32,role QFormLayout_ItemRole,widget QWidgetInterface)  {
 	q.Drv(244000,244146,unsafe.Pointer(&row),unsafe.Pointer(&role),Native(widget),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFormLayout::sizeHint()
@@ -43644,13 +43644,13 @@ func (q *QFormLayout) SizeHint() *QSize {
 	return _rp
 }	
 //QFormLayout::spacing()
-func (q *QFormLayout) Spacing() int {
-	var __rv int
+func (q *QFormLayout) Spacing() int32 {
+	var __rv int32
 	q.Drv(244000,244148,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFormLayout::takeAt(int)
-func (q *QFormLayout) TakeAt(index int) *QLayoutItem {
+func (q *QFormLayout) TakeAt(index int32) *QLayoutItem {
 	var __rv uintptr
 	q.Drv(244000,244149,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -43661,8 +43661,8 @@ func (q *QFormLayout) TakeAt(index int) *QLayoutItem {
 	return _rp
 }	
 //QFormLayout::verticalSpacing()
-func (q *QFormLayout) VerticalSpacing() int {
-	var __rv int
+func (q *QFormLayout) VerticalSpacing() int32 {
+	var __rv int32
 	q.Drv(244000,244150,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -43764,26 +43764,26 @@ func (q *QFrame) FrameShape() QFrame_Shape {
 	return __rv
 }	
 //QFrame::frameStyle()
-func (q *QFrame) FrameStyle() int {
-	var __rv int
+func (q *QFrame) FrameStyle() int32 {
+	var __rv int32
 	q.Drv(245000,245110,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFrame::frameWidth()
-func (q *QFrame) FrameWidth() int {
-	var __rv int
+func (q *QFrame) FrameWidth() int32 {
+	var __rv int32
 	q.Drv(245000,245111,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFrame::lineWidth()
-func (q *QFrame) LineWidth() int {
-	var __rv int
+func (q *QFrame) LineWidth() int32 {
+	var __rv int32
 	q.Drv(245000,245112,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFrame::midLineWidth()
-func (q *QFrame) MidLineWidth() int {
-	var __rv int
+func (q *QFrame) MidLineWidth() int32 {
+	var __rv int32
 	q.Drv(245000,245113,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -43804,15 +43804,15 @@ func (q *QFrame) SetFrameShape(value QFrame_Shape)  {
 	q.Drv(245000,245117,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFrame::setFrameStyle(int)
-func (q *QFrame) SetFrameStyle(value int)  {
+func (q *QFrame) SetFrameStyle(value int32)  {
 	q.Drv(245000,245118,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFrame::setLineWidth(int)
-func (q *QFrame) SetLineWidth(value int)  {
+func (q *QFrame) SetLineWidth(value int32)  {
 	q.Drv(245000,245119,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFrame::setMidLineWidth(int)
-func (q *QFrame) SetMidLineWidth(value int)  {
+func (q *QFrame) SetMidLineWidth(value int32)  {
 	q.Drv(245000,245120,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFrame::sizeHint()
@@ -43849,7 +43849,7 @@ func (q *QFutureWatcherBase) OnCanceled(fn func()) uintptr {
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QFutureWatcherBase) OnProgressValueChanged(fn func(int)) uintptr {
+func (q *QFutureWatcherBase) OnProgressValueChanged(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(246000,246105,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -43861,13 +43861,13 @@ func (q *QFutureWatcherBase) OnStarted(fn func()) uintptr {
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QFutureWatcherBase) OnProgressRangeChanged(fn func(int,int)) uintptr {
+func (q *QFutureWatcherBase) OnProgressRangeChanged(fn func(int32,int32)) uintptr {
 	var __rv uintptr
 	q.Drv(246000,246107,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QFutureWatcherBase) OnResultsReadyAt(fn func(int,int)) uintptr {
+func (q *QFutureWatcherBase) OnResultsReadyAt(fn func(int32,int32)) uintptr {
 	var __rv uintptr
 	q.Drv(246000,246108,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -43885,7 +43885,7 @@ func (q *QFutureWatcherBase) OnResumed(fn func()) uintptr {
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QFutureWatcherBase) OnResultReadyAt(fn func(int)) uintptr {
+func (q *QFutureWatcherBase) OnResultReadyAt(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(246000,246111,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -43944,14 +43944,14 @@ func (q *QFutureWatcherBase) Pause()  {
 	q.Drv(246000,246121,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFutureWatcherBase::progressMaximum()
-func (q *QFutureWatcherBase) ProgressMaximum() int {
-	var __rv int
+func (q *QFutureWatcherBase) ProgressMaximum() int32 {
+	var __rv int32
 	q.Drv(246000,246122,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QFutureWatcherBase::progressMinimum()
-func (q *QFutureWatcherBase) ProgressMinimum() int {
-	var __rv int
+func (q *QFutureWatcherBase) ProgressMinimum() int32 {
+	var __rv int32
 	q.Drv(246000,246123,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -43962,8 +43962,8 @@ func (q *QFutureWatcherBase) ProgressText() string {
 	return __rv
 }	
 //QFutureWatcherBase::progressValue()
-func (q *QFutureWatcherBase) ProgressValue() int {
-	var __rv int
+func (q *QFutureWatcherBase) ProgressValue() int32 {
+	var __rv int32
 	q.Drv(246000,246125,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -43976,7 +43976,7 @@ func (q *QFutureWatcherBase) SetPaused(paused bool)  {
 	q.Drv(246000,246127,unsafe.Pointer(&paused),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFutureWatcherBase::setPendingResultsLimit(int)
-func (q *QFutureWatcherBase) SetPendingResultsLimit(limit int)  {
+func (q *QFutureWatcherBase) SetPendingResultsLimit(limit int32)  {
 	q.Drv(246000,246128,unsafe.Pointer(&limit),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QFutureWatcherBase::togglePaused()
@@ -44172,8 +44172,8 @@ func (q *QGraphicsAnchorLayout) Anchor(firstItem *QGraphicsLayoutItem,firstEdge 
 	return _rp
 }	
 //QGraphicsAnchorLayout::count()
-func (q *QGraphicsAnchorLayout) Count() int {
-	var __rv int
+func (q *QGraphicsAnchorLayout) Count() int32 {
+	var __rv int32
 	q.Drv(249000,249108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -44188,7 +44188,7 @@ func (q *QGraphicsAnchorLayout) Invalidate()  {
 	q.Drv(249000,249110,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsAnchorLayout::itemAt(int)
-func (q *QGraphicsAnchorLayout) ItemAt(index int) *QGraphicsLayoutItem {
+func (q *QGraphicsAnchorLayout) ItemAt(index int32) *QGraphicsLayoutItem {
 	var __rv uintptr
 	q.Drv(249000,249111,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -44199,7 +44199,7 @@ func (q *QGraphicsAnchorLayout) ItemAt(index int) *QGraphicsLayoutItem {
 	return _rp
 }	
 //QGraphicsAnchorLayout::removeAt(int)
-func (q *QGraphicsAnchorLayout) RemoveAt(index int)  {
+func (q *QGraphicsAnchorLayout) RemoveAt(index int32)  {
 	q.Drv(249000,249112,unsafe.Pointer(&index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsAnchorLayout::setGeometry(QRectF const&)
@@ -44742,11 +44742,11 @@ func (q *QGraphicsEllipseItem) SetRectFWithXYWidthHeight(x float64,y float64,w f
 	q.Drv(254000,254112,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsEllipseItem::setSpanAngle(int)
-func (q *QGraphicsEllipseItem) SetSpanAngle(angle int)  {
+func (q *QGraphicsEllipseItem) SetSpanAngle(angle int32)  {
 	q.Drv(254000,254113,unsafe.Pointer(&angle),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsEllipseItem::setStartAngle(int)
-func (q *QGraphicsEllipseItem) SetStartAngle(angle int)  {
+func (q *QGraphicsEllipseItem) SetStartAngle(angle int32)  {
 	q.Drv(254000,254114,unsafe.Pointer(&angle),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsEllipseItem::shape()
@@ -44761,20 +44761,20 @@ func (q *QGraphicsEllipseItem) Shape() *QPainterPath {
 	return _rp
 }	
 //QGraphicsEllipseItem::spanAngle()
-func (q *QGraphicsEllipseItem) SpanAngle() int {
-	var __rv int
+func (q *QGraphicsEllipseItem) SpanAngle() int32 {
+	var __rv int32
 	q.Drv(254000,254116,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QGraphicsEllipseItem::startAngle()
-func (q *QGraphicsEllipseItem) StartAngle() int {
-	var __rv int
+func (q *QGraphicsEllipseItem) StartAngle() int32 {
+	var __rv int32
 	q.Drv(254000,254117,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QGraphicsEllipseItem::type()
-func (q *QGraphicsEllipseItem) Type() int {
-	var __rv int
+func (q *QGraphicsEllipseItem) Type() int32 {
+	var __rv int32
 	q.Drv(254000,254118,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -44806,11 +44806,11 @@ func NewQGraphicsGridLayoutWithParent(parent *QGraphicsLayoutItem) *QGraphicsGri
 	return _p
 } 
 //QGraphicsGridLayout::addItem(QGraphicsLayoutItem*,int,int,QFlags<Qt::AlignmentFlag>)
-func (q *QGraphicsGridLayout) AddItemWithItemRowColumnAlignment(item *QGraphicsLayoutItem,row int,column int,alignment Qt_AlignmentFlag)  {
+func (q *QGraphicsGridLayout) AddItemWithItemRowColumnAlignment(item *QGraphicsLayoutItem,row int32,column int32,alignment Qt_AlignmentFlag)  {
 	q.Drv(255000,255104,Native(item),unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&alignment),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsGridLayout::addItem(QGraphicsLayoutItem*,int,int,int,int,QFlags<Qt::AlignmentFlag>)
-func (q *QGraphicsGridLayout) AddItemWithItemRowColumnRowspanColumnspanAlignment(item *QGraphicsLayoutItem,row int,column int,rowSpan int,columnSpan int,alignment Qt_AlignmentFlag)  {
+func (q *QGraphicsGridLayout) AddItemWithItemRowColumnRowspanColumnspanAlignment(item *QGraphicsLayoutItem,row int32,column int32,rowSpan int32,columnSpan int32,alignment Qt_AlignmentFlag)  {
 	q.Drv(255000,255105,Native(item),unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&rowSpan),unsafe.Pointer(&columnSpan),unsafe.Pointer(&alignment),nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsGridLayout::alignment(QGraphicsLayoutItem*)
@@ -44820,50 +44820,50 @@ func (q *QGraphicsGridLayout) Alignment(item *QGraphicsLayoutItem) Qt_AlignmentF
 	return __rv
 }	
 //QGraphicsGridLayout::columnAlignment(int)
-func (q *QGraphicsGridLayout) ColumnAlignment(column int) Qt_AlignmentFlag {
+func (q *QGraphicsGridLayout) ColumnAlignment(column int32) Qt_AlignmentFlag {
 	var __rv Qt_AlignmentFlag
 	q.Drv(255000,255107,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QGraphicsGridLayout::columnCount()
-func (q *QGraphicsGridLayout) ColumnCount() int {
-	var __rv int
+func (q *QGraphicsGridLayout) ColumnCount() int32 {
+	var __rv int32
 	q.Drv(255000,255108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QGraphicsGridLayout::columnMaximumWidth(int)
-func (q *QGraphicsGridLayout) ColumnMaximumWidth(column int) float64 {
+func (q *QGraphicsGridLayout) ColumnMaximumWidth(column int32) float64 {
 	var __rv float64
 	q.Drv(255000,255109,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QGraphicsGridLayout::columnMinimumWidth(int)
-func (q *QGraphicsGridLayout) ColumnMinimumWidth(column int) float64 {
+func (q *QGraphicsGridLayout) ColumnMinimumWidth(column int32) float64 {
 	var __rv float64
 	q.Drv(255000,255110,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QGraphicsGridLayout::columnPreferredWidth(int)
-func (q *QGraphicsGridLayout) ColumnPreferredWidth(column int) float64 {
+func (q *QGraphicsGridLayout) ColumnPreferredWidth(column int32) float64 {
 	var __rv float64
 	q.Drv(255000,255111,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QGraphicsGridLayout::columnSpacing(int)
-func (q *QGraphicsGridLayout) ColumnSpacing(column int) float64 {
+func (q *QGraphicsGridLayout) ColumnSpacing(column int32) float64 {
 	var __rv float64
 	q.Drv(255000,255112,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QGraphicsGridLayout::columnStretchFactor(int)
-func (q *QGraphicsGridLayout) ColumnStretchFactor(column int) int {
-	var __rv int
+func (q *QGraphicsGridLayout) ColumnStretchFactor(column int32) int32 {
+	var __rv int32
 	q.Drv(255000,255113,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QGraphicsGridLayout::count()
-func (q *QGraphicsGridLayout) Count() int {
-	var __rv int
+func (q *QGraphicsGridLayout) Count() int32 {
+	var __rv int32
 	q.Drv(255000,255114,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -44878,7 +44878,7 @@ func (q *QGraphicsGridLayout) Invalidate()  {
 	q.Drv(255000,255116,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsGridLayout::itemAt(int)
-func (q *QGraphicsGridLayout) ItemAt(index int) *QGraphicsLayoutItem {
+func (q *QGraphicsGridLayout) ItemAt(index int32) *QGraphicsLayoutItem {
 	var __rv uintptr
 	q.Drv(255000,255117,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -44889,7 +44889,7 @@ func (q *QGraphicsGridLayout) ItemAt(index int) *QGraphicsLayoutItem {
 	return _rp
 }	
 //QGraphicsGridLayout::itemAt(int,int)
-func (q *QGraphicsGridLayout) ItemAtWithRowColumn(row int,column int) *QGraphicsLayoutItem {
+func (q *QGraphicsGridLayout) ItemAtWithRowColumn(row int32,column int32) *QGraphicsLayoutItem {
 	var __rv uintptr
 	q.Drv(255000,255118,unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -44900,48 +44900,48 @@ func (q *QGraphicsGridLayout) ItemAtWithRowColumn(row int,column int) *QGraphics
 	return _rp
 }	
 //QGraphicsGridLayout::removeAt(int)
-func (q *QGraphicsGridLayout) RemoveAt(index int)  {
+func (q *QGraphicsGridLayout) RemoveAt(index int32)  {
 	q.Drv(255000,255119,unsafe.Pointer(&index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsGridLayout::rowAlignment(int)
-func (q *QGraphicsGridLayout) RowAlignment(row int) Qt_AlignmentFlag {
+func (q *QGraphicsGridLayout) RowAlignment(row int32) Qt_AlignmentFlag {
 	var __rv Qt_AlignmentFlag
 	q.Drv(255000,255120,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QGraphicsGridLayout::rowCount()
-func (q *QGraphicsGridLayout) RowCount() int {
-	var __rv int
+func (q *QGraphicsGridLayout) RowCount() int32 {
+	var __rv int32
 	q.Drv(255000,255121,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QGraphicsGridLayout::rowMaximumHeight(int)
-func (q *QGraphicsGridLayout) RowMaximumHeight(row int) float64 {
+func (q *QGraphicsGridLayout) RowMaximumHeight(row int32) float64 {
 	var __rv float64
 	q.Drv(255000,255122,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QGraphicsGridLayout::rowMinimumHeight(int)
-func (q *QGraphicsGridLayout) RowMinimumHeight(row int) float64 {
+func (q *QGraphicsGridLayout) RowMinimumHeight(row int32) float64 {
 	var __rv float64
 	q.Drv(255000,255123,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QGraphicsGridLayout::rowPreferredHeight(int)
-func (q *QGraphicsGridLayout) RowPreferredHeight(row int) float64 {
+func (q *QGraphicsGridLayout) RowPreferredHeight(row int32) float64 {
 	var __rv float64
 	q.Drv(255000,255124,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QGraphicsGridLayout::rowSpacing(int)
-func (q *QGraphicsGridLayout) RowSpacing(row int) float64 {
+func (q *QGraphicsGridLayout) RowSpacing(row int32) float64 {
 	var __rv float64
 	q.Drv(255000,255125,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QGraphicsGridLayout::rowStretchFactor(int)
-func (q *QGraphicsGridLayout) RowStretchFactor(row int) int {
-	var __rv int
+func (q *QGraphicsGridLayout) RowStretchFactor(row int32) int32 {
+	var __rv int32
 	q.Drv(255000,255126,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -44950,31 +44950,31 @@ func (q *QGraphicsGridLayout) SetAlignment(item *QGraphicsLayoutItem,alignment Q
 	q.Drv(255000,255127,Native(item),unsafe.Pointer(&alignment),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsGridLayout::setColumnAlignment(int,QFlags<Qt::AlignmentFlag>)
-func (q *QGraphicsGridLayout) SetColumnAlignment(column int,alignment Qt_AlignmentFlag)  {
+func (q *QGraphicsGridLayout) SetColumnAlignment(column int32,alignment Qt_AlignmentFlag)  {
 	q.Drv(255000,255128,unsafe.Pointer(&column),unsafe.Pointer(&alignment),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsGridLayout::setColumnFixedWidth(int,double)
-func (q *QGraphicsGridLayout) SetColumnFixedWidth(column int,width float64)  {
+func (q *QGraphicsGridLayout) SetColumnFixedWidth(column int32,width float64)  {
 	q.Drv(255000,255129,unsafe.Pointer(&column),unsafe.Pointer(&width),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsGridLayout::setColumnMaximumWidth(int,double)
-func (q *QGraphicsGridLayout) SetColumnMaximumWidth(column int,width float64)  {
+func (q *QGraphicsGridLayout) SetColumnMaximumWidth(column int32,width float64)  {
 	q.Drv(255000,255130,unsafe.Pointer(&column),unsafe.Pointer(&width),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsGridLayout::setColumnMinimumWidth(int,double)
-func (q *QGraphicsGridLayout) SetColumnMinimumWidth(column int,width float64)  {
+func (q *QGraphicsGridLayout) SetColumnMinimumWidth(column int32,width float64)  {
 	q.Drv(255000,255131,unsafe.Pointer(&column),unsafe.Pointer(&width),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsGridLayout::setColumnPreferredWidth(int,double)
-func (q *QGraphicsGridLayout) SetColumnPreferredWidth(column int,width float64)  {
+func (q *QGraphicsGridLayout) SetColumnPreferredWidth(column int32,width float64)  {
 	q.Drv(255000,255132,unsafe.Pointer(&column),unsafe.Pointer(&width),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsGridLayout::setColumnSpacing(int,double)
-func (q *QGraphicsGridLayout) SetColumnSpacing(column int,spacing float64)  {
+func (q *QGraphicsGridLayout) SetColumnSpacing(column int32,spacing float64)  {
 	q.Drv(255000,255133,unsafe.Pointer(&column),unsafe.Pointer(&spacing),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsGridLayout::setColumnStretchFactor(int,int)
-func (q *QGraphicsGridLayout) SetColumnStretchFactor(column int,stretch int)  {
+func (q *QGraphicsGridLayout) SetColumnStretchFactor(column int32,stretch int32)  {
 	q.Drv(255000,255134,unsafe.Pointer(&column),unsafe.Pointer(&stretch),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsGridLayout::setGeometry(QRectF const&)
@@ -44986,31 +44986,31 @@ func (q *QGraphicsGridLayout) SetHorizontalSpacing(spacing float64)  {
 	q.Drv(255000,255136,unsafe.Pointer(&spacing),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsGridLayout::setRowAlignment(int,QFlags<Qt::AlignmentFlag>)
-func (q *QGraphicsGridLayout) SetRowAlignment(row int,alignment Qt_AlignmentFlag)  {
+func (q *QGraphicsGridLayout) SetRowAlignment(row int32,alignment Qt_AlignmentFlag)  {
 	q.Drv(255000,255137,unsafe.Pointer(&row),unsafe.Pointer(&alignment),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsGridLayout::setRowFixedHeight(int,double)
-func (q *QGraphicsGridLayout) SetRowFixedHeight(row int,height float64)  {
+func (q *QGraphicsGridLayout) SetRowFixedHeight(row int32,height float64)  {
 	q.Drv(255000,255138,unsafe.Pointer(&row),unsafe.Pointer(&height),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsGridLayout::setRowMaximumHeight(int,double)
-func (q *QGraphicsGridLayout) SetRowMaximumHeight(row int,height float64)  {
+func (q *QGraphicsGridLayout) SetRowMaximumHeight(row int32,height float64)  {
 	q.Drv(255000,255139,unsafe.Pointer(&row),unsafe.Pointer(&height),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsGridLayout::setRowMinimumHeight(int,double)
-func (q *QGraphicsGridLayout) SetRowMinimumHeight(row int,height float64)  {
+func (q *QGraphicsGridLayout) SetRowMinimumHeight(row int32,height float64)  {
 	q.Drv(255000,255140,unsafe.Pointer(&row),unsafe.Pointer(&height),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsGridLayout::setRowPreferredHeight(int,double)
-func (q *QGraphicsGridLayout) SetRowPreferredHeight(row int,height float64)  {
+func (q *QGraphicsGridLayout) SetRowPreferredHeight(row int32,height float64)  {
 	q.Drv(255000,255141,unsafe.Pointer(&row),unsafe.Pointer(&height),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsGridLayout::setRowSpacing(int,double)
-func (q *QGraphicsGridLayout) SetRowSpacing(row int,spacing float64)  {
+func (q *QGraphicsGridLayout) SetRowSpacing(row int32,spacing float64)  {
 	q.Drv(255000,255142,unsafe.Pointer(&row),unsafe.Pointer(&spacing),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsGridLayout::setRowStretchFactor(int,int)
-func (q *QGraphicsGridLayout) SetRowStretchFactor(row int,stretch int)  {
+func (q *QGraphicsGridLayout) SetRowStretchFactor(row int32,stretch int32)  {
 	q.Drv(255000,255143,unsafe.Pointer(&row),unsafe.Pointer(&stretch),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsGridLayout::setSpacing(double)
@@ -45165,7 +45165,7 @@ func (q *QGraphicsItem) AcceptedMouseButtons() Qt_MouseButton {
 	return __rv
 }	
 //QGraphicsItem::advance(int)
-func (q *QGraphicsItem) Advance(phase int)  {
+func (q *QGraphicsItem) Advance(phase int32)  {
 	q.Drv(256000,256106,unsafe.Pointer(&phase),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsItem::boundingRect()
@@ -45299,7 +45299,7 @@ func (q *QGraphicsItem) Cursor() *QCursor {
 	return _rp
 }	
 //QGraphicsItem::data(int)
-func (q *QGraphicsItem) Data(key int) *QVariant {
+func (q *QGraphicsItem) Data(key int32) *QVariant {
 	var __rv uintptr
 	q.Drv(256000,256124,unsafe.Pointer(&key),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -45331,11 +45331,11 @@ func (q *QGraphicsItem) EnsureVisible()  {
 	q.Drv(256000,256127,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsItem::ensureVisible(QRectF const&,int,int)
-func (q *QGraphicsItem) EnsureVisibleFWithRectXmarginYmargin(rect *QRectF,xmargin int,ymargin int)  {
+func (q *QGraphicsItem) EnsureVisibleFWithRectXmarginYmargin(rect *QRectF,xmargin int32,ymargin int32)  {
 	q.Drv(256000,256128,Native(rect),unsafe.Pointer(&xmargin),unsafe.Pointer(&ymargin),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsItem::ensureVisible(double,double,double,double,int,int)
-func (q *QGraphicsItem) EnsureVisibleFWithXYWidthHeightXmarginYmargin(x float64,y float64,w float64,h float64,xmargin int,ymargin int)  {
+func (q *QGraphicsItem) EnsureVisibleFWithXYWidthHeightXmarginYmargin(x float64,y float64,w float64,h float64,xmargin int32,ymargin int32)  {
 	q.Drv(256000,256129,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&xmargin),unsafe.Pointer(&ymargin),nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsItem::filtersChildEvents()
@@ -46292,7 +46292,7 @@ func (q *QGraphicsItem) SetCursor(cursor *QCursor)  {
 	q.Drv(256000,256238,Native(cursor),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsItem::setData(int,QVariant const&)
-func (q *QGraphicsItem) SetData(key int,value *QVariant)  {
+func (q *QGraphicsItem) SetData(key int32,value *QVariant)  {
 	q.Drv(256000,256239,unsafe.Pointer(&key),Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsItem::setEnabled(bool)
@@ -46510,8 +46510,8 @@ func (q *QGraphicsItem) Transformations() []*QGraphicsTransform {
 	return __rv
 }	
 //QGraphicsItem::type()
-func (q *QGraphicsItem) Type() int {
-	var __rv int
+func (q *QGraphicsItem) Type() int32 {
+	var __rv int32
 	q.Drv(256000,256282,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -46807,8 +46807,8 @@ func (q *QGraphicsItemGroup) RemoveFromGroup(item *QGraphicsItem)  {
 	q.Drv(258000,258108,Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsItemGroup::type()
-func (q *QGraphicsItemGroup) Type() int {
-	var __rv int
+func (q *QGraphicsItemGroup) Type() int32 {
+	var __rv int32
 	q.Drv(258000,258109,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -46822,8 +46822,8 @@ func (q *QGraphicsLayout) Activate()  {
 	q.Drv(259000,259102,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsLayout::count()
-func (q *QGraphicsLayout) Count() int {
-	var __rv int
+func (q *QGraphicsLayout) Count() int32 {
+	var __rv int32
 	q.Drv(259000,259103,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -46854,7 +46854,7 @@ func (q *QGraphicsLayout) IsActivated() bool {
 	return __rv
 }	
 //QGraphicsLayout::itemAt(int)
-func (q *QGraphicsLayout) ItemAt(i int) *QGraphicsLayoutItem {
+func (q *QGraphicsLayout) ItemAt(i int32) *QGraphicsLayoutItem {
 	var __rv uintptr
 	q.Drv(259000,259108,unsafe.Pointer(&i),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -46865,7 +46865,7 @@ func (q *QGraphicsLayout) ItemAt(i int) *QGraphicsLayoutItem {
 	return _rp
 }	
 //QGraphicsLayout::removeAt(int)
-func (q *QGraphicsLayout) RemoveAt(index int)  {
+func (q *QGraphicsLayout) RemoveAt(index int32)  {
 	q.Drv(259000,259109,unsafe.Pointer(&index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsLayout::setContentsMargins(double,double,double,double)
@@ -47257,8 +47257,8 @@ func (q *QGraphicsLineItem) Shape() *QPainterPath {
 	return _rp
 }	
 //QGraphicsLineItem::type()
-func (q *QGraphicsLineItem) Type() int {
-	var __rv int
+func (q *QGraphicsLineItem) Type() int32 {
+	var __rv int32
 	q.Drv(261000,261116,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -47309,7 +47309,7 @@ func (q *QGraphicsLinearLayout) AddStretch()  {
 	q.Drv(262000,262106,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsLinearLayout::addStretch(int)
-func (q *QGraphicsLinearLayout) AddStretchWithStretch(stretch int)  {
+func (q *QGraphicsLinearLayout) AddStretchWithStretch(stretch int32)  {
 	q.Drv(262000,262107,unsafe.Pointer(&stretch),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsLinearLayout::alignment(QGraphicsLayoutItem*)
@@ -47319,8 +47319,8 @@ func (q *QGraphicsLinearLayout) Alignment(item *QGraphicsLayoutItem) Qt_Alignmen
 	return __rv
 }	
 //QGraphicsLinearLayout::count()
-func (q *QGraphicsLinearLayout) Count() int {
-	var __rv int
+func (q *QGraphicsLinearLayout) Count() int32 {
+	var __rv int32
 	q.Drv(262000,262109,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -47329,19 +47329,19 @@ func (q *QGraphicsLinearLayout) Dump()  {
 	q.Drv(262000,262110,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsLinearLayout::dump(int)
-func (q *QGraphicsLinearLayout) DumpWithIndent(indent int)  {
+func (q *QGraphicsLinearLayout) DumpWithIndent(indent int32)  {
 	q.Drv(262000,262111,unsafe.Pointer(&indent),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsLinearLayout::insertItem(int,QGraphicsLayoutItem*)
-func (q *QGraphicsLinearLayout) InsertItem(index int,item *QGraphicsLayoutItem)  {
+func (q *QGraphicsLinearLayout) InsertItem(index int32,item *QGraphicsLayoutItem)  {
 	q.Drv(262000,262112,unsafe.Pointer(&index),Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsLinearLayout::insertStretch(int)
-func (q *QGraphicsLinearLayout) InsertStretch(index int)  {
+func (q *QGraphicsLinearLayout) InsertStretch(index int32)  {
 	q.Drv(262000,262113,unsafe.Pointer(&index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsLinearLayout::insertStretch(int,int)
-func (q *QGraphicsLinearLayout) InsertStretchWithIndexStretch(index int,stretch int)  {
+func (q *QGraphicsLinearLayout) InsertStretchWithIndexStretch(index int32,stretch int32)  {
 	q.Drv(262000,262114,unsafe.Pointer(&index),unsafe.Pointer(&stretch),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsLinearLayout::invalidate()
@@ -47349,7 +47349,7 @@ func (q *QGraphicsLinearLayout) Invalidate()  {
 	q.Drv(262000,262115,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsLinearLayout::itemAt(int)
-func (q *QGraphicsLinearLayout) ItemAt(index int) *QGraphicsLayoutItem {
+func (q *QGraphicsLinearLayout) ItemAt(index int32) *QGraphicsLayoutItem {
 	var __rv uintptr
 	q.Drv(262000,262116,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -47360,7 +47360,7 @@ func (q *QGraphicsLinearLayout) ItemAt(index int) *QGraphicsLayoutItem {
 	return _rp
 }	
 //QGraphicsLinearLayout::itemSpacing(int)
-func (q *QGraphicsLinearLayout) ItemSpacing(index int) float64 {
+func (q *QGraphicsLinearLayout) ItemSpacing(index int32) float64 {
 	var __rv float64
 	q.Drv(262000,262117,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -47372,7 +47372,7 @@ func (q *QGraphicsLinearLayout) Orientation() Qt_Orientation {
 	return __rv
 }	
 //QGraphicsLinearLayout::removeAt(int)
-func (q *QGraphicsLinearLayout) RemoveAt(index int)  {
+func (q *QGraphicsLinearLayout) RemoveAt(index int32)  {
 	q.Drv(262000,262119,unsafe.Pointer(&index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsLinearLayout::removeItem(QGraphicsLayoutItem*)
@@ -47388,7 +47388,7 @@ func (q *QGraphicsLinearLayout) SetGeometry(rect *QRectF)  {
 	q.Drv(262000,262122,Native(rect),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsLinearLayout::setItemSpacing(int,double)
-func (q *QGraphicsLinearLayout) SetItemSpacing(index int,spacing float64)  {
+func (q *QGraphicsLinearLayout) SetItemSpacing(index int32,spacing float64)  {
 	q.Drv(262000,262123,unsafe.Pointer(&index),unsafe.Pointer(&spacing),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsLinearLayout::setOrientation(Qt::Orientation)
@@ -47400,7 +47400,7 @@ func (q *QGraphicsLinearLayout) SetSpacing(spacing float64)  {
 	q.Drv(262000,262125,unsafe.Pointer(&spacing),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsLinearLayout::setStretchFactor(QGraphicsLayoutItem*,int)
-func (q *QGraphicsLinearLayout) SetStretchFactor(item *QGraphicsLayoutItem,stretch int)  {
+func (q *QGraphicsLinearLayout) SetStretchFactor(item *QGraphicsLayoutItem,stretch int32)  {
 	q.Drv(262000,262126,Native(item),unsafe.Pointer(&stretch),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsLinearLayout::sizeHint(Qt::SizeHint)
@@ -47432,8 +47432,8 @@ func (q *QGraphicsLinearLayout) Spacing() float64 {
 	return __rv
 }	
 //QGraphicsLinearLayout::stretchFactor(QGraphicsLayoutItem*)
-func (q *QGraphicsLinearLayout) StretchFactor(item *QGraphicsLayoutItem) int {
-	var __rv int
+func (q *QGraphicsLinearLayout) StretchFactor(item *QGraphicsLayoutItem) int32 {
+	var __rv int32
 	q.Drv(262000,262130,Native(item),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -47726,8 +47726,8 @@ func (q *QGraphicsPathItem) Shape() *QPainterPath {
 	return _rp
 }	
 //QGraphicsPathItem::type()
-func (q *QGraphicsPathItem) Type() int {
-	var __rv int
+func (q *QGraphicsPathItem) Type() int32 {
+	var __rv int32
 	q.Drv(265000,265112,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -47881,8 +47881,8 @@ func (q *QGraphicsPixmapItem) TransformationMode() Qt_TransformationMode {
 	return __rv
 }	
 //QGraphicsPixmapItem::type()
-func (q *QGraphicsPixmapItem) Type() int {
-	var __rv int
+func (q *QGraphicsPixmapItem) Type() int32 {
+	var __rv int32
 	q.Drv(266000,266119,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -48000,8 +48000,8 @@ func (q *QGraphicsPolygonItem) Shape() *QPainterPath {
 	return _rp
 }	
 //QGraphicsPolygonItem::type()
-func (q *QGraphicsPolygonItem) Type() int {
-	var __rv int
+func (q *QGraphicsPolygonItem) Type() int32 {
+	var __rv int32
 	q.Drv(267000,267114,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -48208,8 +48208,8 @@ func (q *QGraphicsProxyWidget) SubWidgetRect(widget QWidgetInterface) *QRectF {
 	return _rp
 }	
 //QGraphicsProxyWidget::type()
-func (q *QGraphicsProxyWidget) Type() int {
-	var __rv int
+func (q *QGraphicsProxyWidget) Type() int32 {
+	var __rv int32
 	q.Drv(268000,268134,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -48351,8 +48351,8 @@ func (q *QGraphicsRectItem) Shape() *QPainterPath {
 	return _rp
 }	
 //QGraphicsRectItem::type()
-func (q *QGraphicsRectItem) Type() int {
-	var __rv int
+func (q *QGraphicsRectItem) Type() int32 {
+	var __rv int32
 	q.Drv(269000,269114,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -48917,8 +48917,8 @@ func (q *QGraphicsScene) BackgroundBrush() *QBrush {
 	return _rp
 }	
 //QGraphicsScene::bspTreeDepth()
-func (q *QGraphicsScene) BspTreeDepth() int {
-	var __rv int
+func (q *QGraphicsScene) BspTreeDepth() int32 {
+	var __rv int32
 	q.Drv(272000,272134,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -49289,7 +49289,7 @@ func (q *QGraphicsScene) SetBackgroundBrush(brush *QBrush)  {
 	q.Drv(272000,272195,Native(brush),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsScene::setBspTreeDepth(int)
-func (q *QGraphicsScene) SetBspTreeDepth(depth int)  {
+func (q *QGraphicsScene) SetBspTreeDepth(depth int32)  {
 	q.Drv(272000,272196,unsafe.Pointer(&depth),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsScene::setFocus()
@@ -50193,8 +50193,8 @@ func (q *QGraphicsSceneWheelEvent) Buttons() Qt_MouseButton {
 	return __rv
 }	
 //QGraphicsSceneWheelEvent::delta()
-func (q *QGraphicsSceneWheelEvent) Delta() int {
-	var __rv int
+func (q *QGraphicsSceneWheelEvent) Delta() int32 {
+	var __rv int32
 	q.Drv(281000,281105,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -50248,7 +50248,7 @@ func (q *QGraphicsSceneWheelEvent) SetButtons(buttons Qt_MouseButton)  {
 	q.Drv(281000,281111,unsafe.Pointer(&buttons),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsSceneWheelEvent::setDelta(int)
-func (q *QGraphicsSceneWheelEvent) SetDelta(delta int)  {
+func (q *QGraphicsSceneWheelEvent) SetDelta(delta int32)  {
 	q.Drv(281000,281112,unsafe.Pointer(&delta),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsSceneWheelEvent::setModifiers(QFlags<Qt::KeyboardModifier>)
@@ -50385,8 +50385,8 @@ func (q *QGraphicsSimpleTextItem) Text() string {
 	return __rv
 }	
 //QGraphicsSimpleTextItem::type()
-func (q *QGraphicsSimpleTextItem) Type() int {
-	var __rv int
+func (q *QGraphicsSimpleTextItem) Type() int32 {
+	var __rv int32
 	q.Drv(282000,282114,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -50730,8 +50730,8 @@ func (q *QGraphicsTextItem) ToPlainText() string {
 	return __rv
 }	
 //QGraphicsTextItem::type()
-func (q *QGraphicsTextItem) Type() int {
-	var __rv int
+func (q *QGraphicsTextItem) Type() int32 {
+	var __rv int32
 	q.Drv(283000,283155,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -50895,15 +50895,15 @@ func (q *QGraphicsView) EnsureVisibleFWithRect(rect *QRectF)  {
 	q.Drv(285000,285119,Native(rect),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsView::ensureVisible(QGraphicsItem const*,int,int)
-func (q *QGraphicsView) EnsureVisibleWithItemXmarginYmargin(item *QGraphicsItem,xmargin int,ymargin int)  {
+func (q *QGraphicsView) EnsureVisibleWithItemXmarginYmargin(item *QGraphicsItem,xmargin int32,ymargin int32)  {
 	q.Drv(285000,285120,Native(item),unsafe.Pointer(&xmargin),unsafe.Pointer(&ymargin),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsView::ensureVisible(QRectF const&,int,int)
-func (q *QGraphicsView) EnsureVisibleFWithRectXmarginYmargin(rect *QRectF,xmargin int,ymargin int)  {
+func (q *QGraphicsView) EnsureVisibleFWithRectXmarginYmargin(rect *QRectF,xmargin int32,ymargin int32)  {
 	q.Drv(285000,285121,Native(rect),unsafe.Pointer(&xmargin),unsafe.Pointer(&ymargin),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsView::ensureVisible(double,double,double,double,int,int)
-func (q *QGraphicsView) EnsureVisibleFWithXYWidthHeightXmarginYmargin(x float64,y float64,w float64,h float64,xmargin int,ymargin int)  {
+func (q *QGraphicsView) EnsureVisibleFWithXYWidthHeightXmarginYmargin(x float64,y float64,w float64,h float64,xmargin int32,ymargin int32)  {
 	q.Drv(285000,285122,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&xmargin),unsafe.Pointer(&ymargin),nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsView::event(QEvent*)
@@ -51004,7 +51004,7 @@ func (q *QGraphicsView) ItemAt(pos *QPoint) *QGraphicsItem {
 	return _rp
 }	
 //QGraphicsView::itemAt(int,int)
-func (q *QGraphicsView) ItemAtWithXY(x int,y int) *QGraphicsItem {
+func (q *QGraphicsView) ItemAtWithXY(x int32,y int32) *QGraphicsItem {
 	var __rv uintptr
 	q.Drv(285000,285140,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -51063,13 +51063,13 @@ func (q *QGraphicsView) ItemsWithRectMode(rect *QRect,mode Qt_ItemSelectionMode)
 	return __rv
 }	
 //QGraphicsView::items(int,int)
-func (q *QGraphicsView) ItemsWithXY(x int,y int) []*QGraphicsItem {
+func (q *QGraphicsView) ItemsWithXY(x int32,y int32) []*QGraphicsItem {
 	var __rv []*QGraphicsItem
 	q.Drv(285000,285149,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QGraphicsView::items(int,int,int,int,Qt::ItemSelectionMode)
-func (q *QGraphicsView) ItemsWithXYWidthHeightMode(x int,y int,w int,h int,mode Qt_ItemSelectionMode) []*QGraphicsItem {
+func (q *QGraphicsView) ItemsWithXYWidthHeightMode(x int32,y int32,w int32,h int32,mode Qt_ItemSelectionMode) []*QGraphicsItem {
 	var __rv []*QGraphicsItem
 	q.Drv(285000,285150,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&mode),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -51193,7 +51193,7 @@ func (q *QGraphicsView) MapToSceneWithRect(rect *QRect) *QPolygonF {
 	return _rp
 }	
 //QGraphicsView::mapToScene(int,int)
-func (q *QGraphicsView) MapToSceneWithXY(x int,y int) *QPointF {
+func (q *QGraphicsView) MapToSceneWithXY(x int32,y int32) *QPointF {
 	var __rv uintptr
 	q.Drv(285000,285163,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -51204,7 +51204,7 @@ func (q *QGraphicsView) MapToSceneWithXY(x int,y int) *QPointF {
 	return _rp
 }	
 //QGraphicsView::mapToScene(int,int,int,int)
-func (q *QGraphicsView) MapToSceneWithXYWidthHeight(x int,y int,w int,h int) *QPolygonF {
+func (q *QGraphicsView) MapToSceneWithXYWidthHeight(x int32,y int32,w int32,h int32) *QPolygonF {
 	var __rv uintptr
 	q.Drv(285000,285164,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -51324,7 +51324,7 @@ func (q *QGraphicsView) SceneRect() *QRectF {
 	return _rp
 }	
 //QGraphicsView::scrollContentsBy(int,int)
-func (q *QGraphicsView) ScrollContentsBy(dx int,dy int)  {
+func (q *QGraphicsView) ScrollContentsBy(dx int32,dy int32)  {
 	q.Drv(285000,285185,unsafe.Pointer(&dx),unsafe.Pointer(&dy),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsView::setAlignment(QFlags<Qt::AlignmentFlag>)
@@ -51671,14 +51671,14 @@ func (q *QGraphicsWidget) GrabMouseEvent(event *QEvent)  {
 	q.Drv(286000,286126,Native(event),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsWidget::grabShortcut(QKeySequence const&)
-func (q *QGraphicsWidget) GrabShortcut(sequence *QKeySequence) int {
-	var __rv int
+func (q *QGraphicsWidget) GrabShortcut(sequence *QKeySequence) int32 {
+	var __rv int32
 	q.Drv(286000,286127,Native(sequence),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QGraphicsWidget::grabShortcut(QKeySequence const&,Qt::ShortcutContext)
-func (q *QGraphicsWidget) GrabShortcutWithSequenceContext(sequence *QKeySequence,context Qt_ShortcutContext) int {
-	var __rv int
+func (q *QGraphicsWidget) GrabShortcutWithSequenceContext(sequence *QKeySequence,context Qt_ShortcutContext) int32 {
+	var __rv int32
 	q.Drv(286000,286128,Native(sequence),unsafe.Pointer(&context),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -51778,7 +51778,7 @@ func (q *QGraphicsWidget) Rect() *QRectF {
 	return _rp
 }	
 //QGraphicsWidget::releaseShortcut(int)
-func (q *QGraphicsWidget) ReleaseShortcut(id int)  {
+func (q *QGraphicsWidget) ReleaseShortcut(id int32)  {
 	q.Drv(286000,286143,unsafe.Pointer(&id),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsWidget::removeAction(QAction*)
@@ -51848,19 +51848,19 @@ func (q *QGraphicsWidget) SetPalette(palette *QPalette)  {
 	q.Drv(286000,286159,Native(palette),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsWidget::setShortcutAutoRepeat(int)
-func (q *QGraphicsWidget) SetShortcutAutoRepeat(id int)  {
+func (q *QGraphicsWidget) SetShortcutAutoRepeat(id int32)  {
 	q.Drv(286000,286160,unsafe.Pointer(&id),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsWidget::setShortcutAutoRepeat(int,bool)
-func (q *QGraphicsWidget) SetShortcutAutoRepeatWithIdEnabled(id int,enabled bool)  {
+func (q *QGraphicsWidget) SetShortcutAutoRepeatWithIdEnabled(id int32,enabled bool)  {
 	q.Drv(286000,286161,unsafe.Pointer(&id),unsafe.Pointer(&enabled),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsWidget::setShortcutEnabled(int)
-func (q *QGraphicsWidget) SetShortcutEnabled(id int)  {
+func (q *QGraphicsWidget) SetShortcutEnabled(id int32)  {
 	q.Drv(286000,286162,unsafe.Pointer(&id),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsWidget::setShortcutEnabled(int,bool)
-func (q *QGraphicsWidget) SetShortcutEnabledWithIdEnabled(id int,enabled bool)  {
+func (q *QGraphicsWidget) SetShortcutEnabledWithIdEnabled(id int32,enabled bool)  {
 	q.Drv(286000,286163,unsafe.Pointer(&id),unsafe.Pointer(&enabled),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGraphicsWidget::setStyle(QStyle*)
@@ -51942,8 +51942,8 @@ func (q *QGraphicsWidget) TestAttribute(attribute Qt_WidgetAttribute) bool {
 	return __rv
 }	
 //QGraphicsWidget::type()
-func (q *QGraphicsWidget) Type() int {
-	var __rv int
+func (q *QGraphicsWidget) Type() int32 {
+	var __rv int32
 	q.Drv(286000,286175,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -52060,15 +52060,15 @@ func (q *QGridLayout) AddItem(value *QLayoutItem)  {
 	q.Drv(287000,287104,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGridLayout::addItem(QLayoutItem*,int,int,int,int,QFlags<Qt::AlignmentFlag>)
-func (q *QGridLayout) AddItemWithItemRowColumnRowspanColumnspanAlignmentflag(item *QLayoutItem,row int,column int,rowSpan int,columnSpan int,value2 Qt_AlignmentFlag)  {
+func (q *QGridLayout) AddItemWithItemRowColumnRowspanColumnspanAlignmentflag(item *QLayoutItem,row int32,column int32,rowSpan int32,columnSpan int32,value2 Qt_AlignmentFlag)  {
 	q.Drv(287000,287105,Native(item),unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&rowSpan),unsafe.Pointer(&columnSpan),unsafe.Pointer(&value2),nil,nil,nil,nil,nil,nil)
 }	
 //QGridLayout::addLayout(QLayout*,int,int,QFlags<Qt::AlignmentFlag>)
-func (q *QGridLayout) AddLayoutWithLayoutRowColumnAlignmentflag(value2 QLayoutInterface,row int,column int,value3 Qt_AlignmentFlag)  {
+func (q *QGridLayout) AddLayoutWithLayoutRowColumnAlignmentflag(value2 QLayoutInterface,row int32,column int32,value3 Qt_AlignmentFlag)  {
 	q.Drv(287000,287106,Native(value2),unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&value3),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGridLayout::addLayout(QLayout*,int,int,int,int,QFlags<Qt::AlignmentFlag>)
-func (q *QGridLayout) AddLayoutWithLayoutRowColumnRowspanColumnspanAlignmentflag(value2 QLayoutInterface,row int,column int,rowSpan int,columnSpan int,value3 Qt_AlignmentFlag)  {
+func (q *QGridLayout) AddLayoutWithLayoutRowColumnRowspanColumnspanAlignmentflag(value2 QLayoutInterface,row int32,column int32,rowSpan int32,columnSpan int32,value3 Qt_AlignmentFlag)  {
 	q.Drv(287000,287107,Native(value2),unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&rowSpan),unsafe.Pointer(&columnSpan),unsafe.Pointer(&value3),nil,nil,nil,nil,nil,nil)
 }	
 //QGridLayout::addWidget(QWidget*)
@@ -52076,15 +52076,15 @@ func (q *QGridLayout) AddWidget(w QWidgetInterface)  {
 	q.Drv(287000,287108,Native(w),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGridLayout::addWidget(QWidget*,int,int,QFlags<Qt::AlignmentFlag>)
-func (q *QGridLayout) AddWidgetWithWidgetRowColumnAlignmentflag(value2 QWidgetInterface,row int,column int,value3 Qt_AlignmentFlag)  {
+func (q *QGridLayout) AddWidgetWithWidgetRowColumnAlignmentflag(value2 QWidgetInterface,row int32,column int32,value3 Qt_AlignmentFlag)  {
 	q.Drv(287000,287109,Native(value2),unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&value3),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGridLayout::addWidget(QWidget*,int,int,int,int,QFlags<Qt::AlignmentFlag>)
-func (q *QGridLayout) AddWidgetWithWidgetRowColumnRowspanColumnspanAlignmentflag(value2 QWidgetInterface,row int,column int,rowSpan int,columnSpan int,value3 Qt_AlignmentFlag)  {
+func (q *QGridLayout) AddWidgetWithWidgetRowColumnRowspanColumnspanAlignmentflag(value2 QWidgetInterface,row int32,column int32,rowSpan int32,columnSpan int32,value3 Qt_AlignmentFlag)  {
 	q.Drv(287000,287110,Native(value2),unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&rowSpan),unsafe.Pointer(&columnSpan),unsafe.Pointer(&value3),nil,nil,nil,nil,nil,nil)
 }	
 //QGridLayout::cellRect(int,int)
-func (q *QGridLayout) CellRect(row int,column int) *QRect {
+func (q *QGridLayout) CellRect(row int32,column int32) *QRect {
 	var __rv uintptr
 	q.Drv(287000,287111,unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -52095,26 +52095,26 @@ func (q *QGridLayout) CellRect(row int,column int) *QRect {
 	return _rp
 }	
 //QGridLayout::columnCount()
-func (q *QGridLayout) ColumnCount() int {
-	var __rv int
+func (q *QGridLayout) ColumnCount() int32 {
+	var __rv int32
 	q.Drv(287000,287112,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QGridLayout::columnMinimumWidth(int)
-func (q *QGridLayout) ColumnMinimumWidth(column int) int {
-	var __rv int
+func (q *QGridLayout) ColumnMinimumWidth(column int32) int32 {
+	var __rv int32
 	q.Drv(287000,287113,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QGridLayout::columnStretch(int)
-func (q *QGridLayout) ColumnStretch(column int) int {
-	var __rv int
+func (q *QGridLayout) ColumnStretch(column int32) int32 {
+	var __rv int32
 	q.Drv(287000,287114,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QGridLayout::count()
-func (q *QGridLayout) Count() int {
-	var __rv int
+func (q *QGridLayout) Count() int32 {
+	var __rv int32
 	q.Drv(287000,287115,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -52125,7 +52125,7 @@ func (q *QGridLayout) ExpandingDirections() Qt_Orientation {
 	return __rv
 }	
 //QGridLayout::getItemPosition(int,int*,int*,int*,int*)
-func (q *QGridLayout) GetItemPosition(idx int,row *int,column *int,rowSpan *int,columnSpan *int)  {
+func (q *QGridLayout) GetItemPosition(idx int32,row *int32,column *int32,rowSpan *int32,columnSpan *int32)  {
 	q.Drv(287000,287117,unsafe.Pointer(&idx),unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&rowSpan),unsafe.Pointer(&columnSpan),nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGridLayout::hasHeightForWidth()
@@ -52135,14 +52135,14 @@ func (q *QGridLayout) HasHeightForWidth() bool {
 	return __rv
 }	
 //QGridLayout::heightForWidth(int)
-func (q *QGridLayout) HeightForWidth(value int) int {
-	var __rv int
+func (q *QGridLayout) HeightForWidth(value int32) int32 {
+	var __rv int32
 	q.Drv(287000,287119,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QGridLayout::horizontalSpacing()
-func (q *QGridLayout) HorizontalSpacing() int {
-	var __rv int
+func (q *QGridLayout) HorizontalSpacing() int32 {
+	var __rv int32
 	q.Drv(287000,287120,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -52151,7 +52151,7 @@ func (q *QGridLayout) Invalidate()  {
 	q.Drv(287000,287121,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGridLayout::itemAt(int)
-func (q *QGridLayout) ItemAt(index int) *QLayoutItem {
+func (q *QGridLayout) ItemAt(index int32) *QLayoutItem {
 	var __rv uintptr
 	q.Drv(287000,287122,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -52162,7 +52162,7 @@ func (q *QGridLayout) ItemAt(index int) *QLayoutItem {
 	return _rp
 }	
 //QGridLayout::itemAtPosition(int,int)
-func (q *QGridLayout) ItemAtPosition(row int,column int) *QLayoutItem {
+func (q *QGridLayout) ItemAtPosition(row int32,column int32) *QLayoutItem {
 	var __rv uintptr
 	q.Drv(287000,287123,unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -52184,8 +52184,8 @@ func (q *QGridLayout) MaximumSize() *QSize {
 	return _rp
 }	
 //QGridLayout::minimumHeightForWidth(int)
-func (q *QGridLayout) MinimumHeightForWidth(value int) int {
-	var __rv int
+func (q *QGridLayout) MinimumHeightForWidth(value int32) int32 {
+	var __rv int32
 	q.Drv(287000,287125,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -52207,33 +52207,33 @@ func (q *QGridLayout) OriginCorner() Qt_Corner {
 	return __rv
 }	
 //QGridLayout::rowCount()
-func (q *QGridLayout) RowCount() int {
-	var __rv int
+func (q *QGridLayout) RowCount() int32 {
+	var __rv int32
 	q.Drv(287000,287128,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QGridLayout::rowMinimumHeight(int)
-func (q *QGridLayout) RowMinimumHeight(row int) int {
-	var __rv int
+func (q *QGridLayout) RowMinimumHeight(row int32) int32 {
+	var __rv int32
 	q.Drv(287000,287129,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QGridLayout::rowStretch(int)
-func (q *QGridLayout) RowStretch(row int) int {
-	var __rv int
+func (q *QGridLayout) RowStretch(row int32) int32 {
+	var __rv int32
 	q.Drv(287000,287130,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QGridLayout::setColumnMinimumWidth(int,int)
-func (q *QGridLayout) SetColumnMinimumWidth(column int,minSize int)  {
+func (q *QGridLayout) SetColumnMinimumWidth(column int32,minSize int32)  {
 	q.Drv(287000,287131,unsafe.Pointer(&column),unsafe.Pointer(&minSize),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGridLayout::setColumnStretch(int,int)
-func (q *QGridLayout) SetColumnStretch(column int,stretch int)  {
+func (q *QGridLayout) SetColumnStretch(column int32,stretch int32)  {
 	q.Drv(287000,287132,unsafe.Pointer(&column),unsafe.Pointer(&stretch),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGridLayout::setDefaultPositioning(int,Qt::Orientation)
-func (q *QGridLayout) SetDefaultPositioning(n int,orient Qt_Orientation)  {
+func (q *QGridLayout) SetDefaultPositioning(n int32,orient Qt_Orientation)  {
 	q.Drv(287000,287133,unsafe.Pointer(&n),unsafe.Pointer(&orient),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGridLayout::setGeometry(QRect const&)
@@ -52241,7 +52241,7 @@ func (q *QGridLayout) SetGeometry(value *QRect)  {
 	q.Drv(287000,287134,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGridLayout::setHorizontalSpacing(int)
-func (q *QGridLayout) SetHorizontalSpacing(spacing int)  {
+func (q *QGridLayout) SetHorizontalSpacing(spacing int32)  {
 	q.Drv(287000,287135,unsafe.Pointer(&spacing),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGridLayout::setOriginCorner(Qt::Corner)
@@ -52249,19 +52249,19 @@ func (q *QGridLayout) SetOriginCorner(value Qt_Corner)  {
 	q.Drv(287000,287136,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGridLayout::setRowMinimumHeight(int,int)
-func (q *QGridLayout) SetRowMinimumHeight(row int,minSize int)  {
+func (q *QGridLayout) SetRowMinimumHeight(row int32,minSize int32)  {
 	q.Drv(287000,287137,unsafe.Pointer(&row),unsafe.Pointer(&minSize),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGridLayout::setRowStretch(int,int)
-func (q *QGridLayout) SetRowStretch(row int,stretch int)  {
+func (q *QGridLayout) SetRowStretch(row int32,stretch int32)  {
 	q.Drv(287000,287138,unsafe.Pointer(&row),unsafe.Pointer(&stretch),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGridLayout::setSpacing(int)
-func (q *QGridLayout) SetSpacing(spacing int)  {
+func (q *QGridLayout) SetSpacing(spacing int32)  {
 	q.Drv(287000,287139,unsafe.Pointer(&spacing),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGridLayout::setVerticalSpacing(int)
-func (q *QGridLayout) SetVerticalSpacing(spacing int)  {
+func (q *QGridLayout) SetVerticalSpacing(spacing int32)  {
 	q.Drv(287000,287140,unsafe.Pointer(&spacing),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGridLayout::sizeHint()
@@ -52276,13 +52276,13 @@ func (q *QGridLayout) SizeHint() *QSize {
 	return _rp
 }	
 //QGridLayout::spacing()
-func (q *QGridLayout) Spacing() int {
-	var __rv int
+func (q *QGridLayout) Spacing() int32 {
+	var __rv int32
 	q.Drv(287000,287142,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QGridLayout::takeAt(int)
-func (q *QGridLayout) TakeAt(index int) *QLayoutItem {
+func (q *QGridLayout) TakeAt(index int32) *QLayoutItem {
 	var __rv uintptr
 	q.Drv(287000,287143,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -52293,8 +52293,8 @@ func (q *QGridLayout) TakeAt(index int) *QLayoutItem {
 	return _rp
 }	
 //QGridLayout::verticalSpacing()
-func (q *QGridLayout) VerticalSpacing() int {
-	var __rv int
+func (q *QGridLayout) VerticalSpacing() int32 {
+	var __rv int32
 	q.Drv(287000,287144,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -52437,7 +52437,7 @@ func (q *QGroupBox) ResizeEvent(event *QResizeEvent)  {
 	q.Drv(288000,288121,Native(event),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGroupBox::setAlignment(int)
-func (q *QGroupBox) SetAlignment(alignment int)  {
+func (q *QGroupBox) SetAlignment(alignment int32)  {
 	q.Drv(288000,288122,unsafe.Pointer(&alignment),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QGroupBox::setCheckable(bool)
@@ -52521,19 +52521,19 @@ func NewQHeaderViewFromDriver(drv Driver) *QHeaderView {
 	}
 	return _p
 } 	
-func (q *QHeaderView) OnSectionEntered(fn func(int)) uintptr {
+func (q *QHeaderView) OnSectionEntered(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(290000,290102,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QHeaderView) OnSectionPressed(fn func(int)) uintptr {
+func (q *QHeaderView) OnSectionPressed(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(290000,290103,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QHeaderView) OnSectionHandleDoubleClicked(fn func(int)) uintptr {
+func (q *QHeaderView) OnSectionHandleDoubleClicked(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(290000,290104,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -52545,43 +52545,43 @@ func (q *QHeaderView) OnGeometriesChanged(fn func()) uintptr {
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QHeaderView) OnSectionResized(fn func(int,int,int)) uintptr {
+func (q *QHeaderView) OnSectionResized(fn func(int32,int32,int32)) uintptr {
 	var __rv uintptr
 	q.Drv(290000,290106,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QHeaderView) OnSortIndicatorChanged(fn func(int,Qt_SortOrder)) uintptr {
+func (q *QHeaderView) OnSortIndicatorChanged(fn func(int32,Qt_SortOrder)) uintptr {
 	var __rv uintptr
 	q.Drv(290000,290107,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QHeaderView) OnSectionMoved(fn func(int,int,int)) uintptr {
+func (q *QHeaderView) OnSectionMoved(fn func(int32,int32,int32)) uintptr {
 	var __rv uintptr
 	q.Drv(290000,290108,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QHeaderView) OnSectionAutoResize(fn func(int,QHeaderView_ResizeMode)) uintptr {
+func (q *QHeaderView) OnSectionAutoResize(fn func(int32,QHeaderView_ResizeMode)) uintptr {
 	var __rv uintptr
 	q.Drv(290000,290109,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QHeaderView) OnSectionDoubleClicked(fn func(int)) uintptr {
+func (q *QHeaderView) OnSectionDoubleClicked(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(290000,290110,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QHeaderView) OnSectionClicked(fn func(int)) uintptr {
+func (q *QHeaderView) OnSectionClicked(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(290000,290111,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QHeaderView) OnSectionCountChanged(fn func(int,int)) uintptr {
+func (q *QHeaderView) OnSectionCountChanged(fn func(int32,int32)) uintptr {
 	var __rv uintptr
 	q.Drv(290000,290112,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -52594,8 +52594,8 @@ func (q *QHeaderView) CascadingSectionResizes() bool {
 	return __rv
 }	
 //QHeaderView::count()
-func (q *QHeaderView) Count() int {
-	var __rv int
+func (q *QHeaderView) Count() int32 {
+	var __rv int32
 	q.Drv(290000,290114,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -52614,8 +52614,8 @@ func (q *QHeaderView) DefaultAlignment() Qt_AlignmentFlag {
 	return __rv
 }	
 //QHeaderView::defaultSectionSize()
-func (q *QHeaderView) DefaultSectionSize() int {
-	var __rv int
+func (q *QHeaderView) DefaultSectionSize() int32 {
+	var __rv int32
 	q.Drv(290000,290118,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -52630,17 +52630,17 @@ func (q *QHeaderView) Event(e *QEvent) bool {
 	return __rv
 }	
 //QHeaderView::headerDataChanged(Qt::Orientation,int,int)
-func (q *QHeaderView) HeaderDataChanged(orientation Qt_Orientation,logicalFirst int,logicalLast int)  {
+func (q *QHeaderView) HeaderDataChanged(orientation Qt_Orientation,logicalFirst int32,logicalLast int32)  {
 	q.Drv(290000,290121,unsafe.Pointer(&orientation),unsafe.Pointer(&logicalFirst),unsafe.Pointer(&logicalLast),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::hiddenSectionCount()
-func (q *QHeaderView) HiddenSectionCount() int {
-	var __rv int
+func (q *QHeaderView) HiddenSectionCount() int32 {
+	var __rv int32
 	q.Drv(290000,290122,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QHeaderView::hideSection(int)
-func (q *QHeaderView) HideSection(logicalIndex int)  {
+func (q *QHeaderView) HideSection(logicalIndex int32)  {
 	q.Drv(290000,290123,unsafe.Pointer(&logicalIndex),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::highlightSections()
@@ -52650,8 +52650,8 @@ func (q *QHeaderView) HighlightSections() bool {
 	return __rv
 }	
 //QHeaderView::horizontalOffset()
-func (q *QHeaderView) HorizontalOffset() int {
-	var __rv int
+func (q *QHeaderView) HorizontalOffset() int32 {
+	var __rv int32
 	q.Drv(290000,290125,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -52675,7 +52675,7 @@ func (q *QHeaderView) InitializeSections()  {
 	q.Drv(290000,290128,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::initializeSections(int,int)
-func (q *QHeaderView) InitializeSectionsWithStartEnd(start int,end int)  {
+func (q *QHeaderView) InitializeSectionsWithStartEnd(start int32,end int32)  {
 	q.Drv(290000,290129,unsafe.Pointer(&start),unsafe.Pointer(&end),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::isClickable()
@@ -52697,7 +52697,7 @@ func (q *QHeaderView) SectionsMovable() bool {
 	return __rv
 }	
 //QHeaderView::isSectionHidden(int)
-func (q *QHeaderView) IsSectionHidden(logicalIndex int) bool {
+func (q *QHeaderView) IsSectionHidden(logicalIndex int32) bool {
 	var __rv bool
 	q.Drv(290000,290133,unsafe.Pointer(&logicalIndex),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -52709,38 +52709,38 @@ func (q *QHeaderView) IsSortIndicatorShown() bool {
 	return __rv
 }	
 //QHeaderView::length()
-func (q *QHeaderView) Length() int {
-	var __rv int
+func (q *QHeaderView) Length() int32 {
+	var __rv int32
 	q.Drv(290000,290135,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QHeaderView::logicalIndex(int)
-func (q *QHeaderView) LogicalIndex(visualIndex int) int {
-	var __rv int
+func (q *QHeaderView) LogicalIndex(visualIndex int32) int32 {
+	var __rv int32
 	q.Drv(290000,290136,unsafe.Pointer(&visualIndex),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QHeaderView::logicalIndexAt(QPoint const&)
-func (q *QHeaderView) LogicalIndexAt(pos *QPoint) int {
-	var __rv int
+func (q *QHeaderView) LogicalIndexAt(pos *QPoint) int32 {
+	var __rv int32
 	q.Drv(290000,290137,Native(pos),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QHeaderView::logicalIndexAt(int)
-func (q *QHeaderView) LogicalIndexAtWithPosition(position int) int {
-	var __rv int
+func (q *QHeaderView) LogicalIndexAtWithPosition(position int32) int32 {
+	var __rv int32
 	q.Drv(290000,290138,unsafe.Pointer(&position),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QHeaderView::logicalIndexAt(int,int)
-func (q *QHeaderView) LogicalIndexAtWithXY(x int,y int) int {
-	var __rv int
+func (q *QHeaderView) LogicalIndexAtWithXY(x int32,y int32) int32 {
+	var __rv int32
 	q.Drv(290000,290139,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QHeaderView::minimumSectionSize()
-func (q *QHeaderView) MinimumSectionSize() int {
-	var __rv int
+func (q *QHeaderView) MinimumSectionSize() int32 {
+	var __rv int32
 	q.Drv(290000,290140,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -52772,12 +52772,12 @@ func (q *QHeaderView) MoveCursor(value2 QAbstractItemView_CursorAction,value3 Qt
 	return _rp
 }	
 //QHeaderView::moveSection(int,int)
-func (q *QHeaderView) MoveSection(from int,to int)  {
+func (q *QHeaderView) MoveSection(from int32,to int32)  {
 	q.Drv(290000,290146,unsafe.Pointer(&from),unsafe.Pointer(&to),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::offset()
-func (q *QHeaderView) Offset() int {
-	var __rv int
+func (q *QHeaderView) Offset() int32 {
+	var __rv int32
 	q.Drv(290000,290147,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -52792,7 +52792,7 @@ func (q *QHeaderView) PaintEvent(e *QPaintEvent)  {
 	q.Drv(290000,290149,Native(e),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::paintSection(QPainter*,QRect const&,int)
-func (q *QHeaderView) PaintSection(painter *QPainter,rect *QRect,logicalIndex int)  {
+func (q *QHeaderView) PaintSection(painter *QPainter,rect *QRect,logicalIndex int32)  {
 	q.Drv(290000,290150,Native(painter),Native(rect),unsafe.Pointer(&logicalIndex),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::reset()
@@ -52800,13 +52800,13 @@ func (q *QHeaderView) Reset()  {
 	q.Drv(290000,290151,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::resizeMode(int)
-func (q *QHeaderView) SectionResizeMode(logicalIndex int) QHeaderView_ResizeMode {
+func (q *QHeaderView) SectionResizeMode(logicalIndex int32) QHeaderView_ResizeMode {
 	var __rv QHeaderView_ResizeMode
 	q.Drv(290000,290152,unsafe.Pointer(&logicalIndex),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QHeaderView::resizeSection(int,int)
-func (q *QHeaderView) ResizeSection(logicalIndex int,size int)  {
+func (q *QHeaderView) ResizeSection(logicalIndex int32,size int32)  {
 	q.Drv(290000,290153,unsafe.Pointer(&logicalIndex),unsafe.Pointer(&size),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::resizeSections()
@@ -52824,7 +52824,7 @@ func (q *QHeaderView) RestoreState(state []byte) bool {
 	return __rv
 }	
 //QHeaderView::rowsInserted(QModelIndex const&,int,int)
-func (q *QHeaderView) RowsInserted(parent *QModelIndex,start int,end int)  {
+func (q *QHeaderView) RowsInserted(parent *QModelIndex,start int32,end int32)  {
 	q.Drv(290000,290157,Native(parent),unsafe.Pointer(&start),unsafe.Pointer(&end),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::saveState()
@@ -52834,7 +52834,7 @@ func (q *QHeaderView) SaveState() []byte {
 	return __rv
 }	
 //QHeaderView::scrollContentsBy(int,int)
-func (q *QHeaderView) ScrollContentsBy(dx int,dy int)  {
+func (q *QHeaderView) ScrollContentsBy(dx int32,dy int32)  {
 	q.Drv(290000,290159,unsafe.Pointer(&dx),unsafe.Pointer(&dy),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::scrollTo(QModelIndex const&,QAbstractItemView::ScrollHint)
@@ -52842,19 +52842,19 @@ func (q *QHeaderView) ScrollTo(index *QModelIndex,hint QAbstractItemView_ScrollH
 	q.Drv(290000,290160,Native(index),unsafe.Pointer(&hint),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::sectionPosition(int)
-func (q *QHeaderView) SectionPosition(logicalIndex int) int {
-	var __rv int
+func (q *QHeaderView) SectionPosition(logicalIndex int32) int32 {
+	var __rv int32
 	q.Drv(290000,290161,unsafe.Pointer(&logicalIndex),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QHeaderView::sectionSize(int)
-func (q *QHeaderView) SectionSize(logicalIndex int) int {
-	var __rv int
+func (q *QHeaderView) SectionSize(logicalIndex int32) int32 {
+	var __rv int32
 	q.Drv(290000,290162,unsafe.Pointer(&logicalIndex),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QHeaderView::sectionSizeFromContents(int)
-func (q *QHeaderView) SectionSizeFromContents(logicalIndex int) *QSize {
+func (q *QHeaderView) SectionSizeFromContents(logicalIndex int32) *QSize {
 	var __rv uintptr
 	q.Drv(290000,290163,unsafe.Pointer(&logicalIndex),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -52865,19 +52865,19 @@ func (q *QHeaderView) SectionSizeFromContents(logicalIndex int) *QSize {
 	return _rp
 }	
 //QHeaderView::sectionSizeHint(int)
-func (q *QHeaderView) SectionSizeHint(logicalIndex int) int {
-	var __rv int
+func (q *QHeaderView) SectionSizeHint(logicalIndex int32) int32 {
+	var __rv int32
 	q.Drv(290000,290164,unsafe.Pointer(&logicalIndex),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QHeaderView::sectionViewportPosition(int)
-func (q *QHeaderView) SectionViewportPosition(logicalIndex int) int {
-	var __rv int
+func (q *QHeaderView) SectionViewportPosition(logicalIndex int32) int32 {
+	var __rv int32
 	q.Drv(290000,290165,unsafe.Pointer(&logicalIndex),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QHeaderView::sectionsAboutToBeRemoved(QModelIndex const&,int,int)
-func (q *QHeaderView) SectionsAboutToBeRemoved(parent *QModelIndex,logicalFirst int,logicalLast int)  {
+func (q *QHeaderView) SectionsAboutToBeRemoved(parent *QModelIndex,logicalFirst int32,logicalLast int32)  {
 	q.Drv(290000,290166,Native(parent),unsafe.Pointer(&logicalFirst),unsafe.Pointer(&logicalLast),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::sectionsHidden()
@@ -52887,7 +52887,7 @@ func (q *QHeaderView) SectionsHidden() bool {
 	return __rv
 }	
 //QHeaderView::sectionsInserted(QModelIndex const&,int,int)
-func (q *QHeaderView) SectionsInserted(parent *QModelIndex,logicalFirst int,logicalLast int)  {
+func (q *QHeaderView) SectionsInserted(parent *QModelIndex,logicalFirst int32,logicalLast int32)  {
 	q.Drv(290000,290168,Native(parent),unsafe.Pointer(&logicalFirst),unsafe.Pointer(&logicalLast),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::sectionsMoved()
@@ -52909,7 +52909,7 @@ func (q *QHeaderView) SetDefaultAlignment(alignment Qt_AlignmentFlag)  {
 	q.Drv(290000,290172,unsafe.Pointer(&alignment),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::setDefaultSectionSize(int)
-func (q *QHeaderView) SetDefaultSectionSize(size int)  {
+func (q *QHeaderView) SetDefaultSectionSize(size int32)  {
 	q.Drv(290000,290173,unsafe.Pointer(&size),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::setHighlightSections(bool)
@@ -52917,7 +52917,7 @@ func (q *QHeaderView) SetHighlightSections(highlight bool)  {
 	q.Drv(290000,290174,unsafe.Pointer(&highlight),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::setMinimumSectionSize(int)
-func (q *QHeaderView) SetMinimumSectionSize(size int)  {
+func (q *QHeaderView) SetMinimumSectionSize(size int32)  {
 	q.Drv(290000,290175,unsafe.Pointer(&size),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::setModel(QAbstractItemModel*)
@@ -52929,7 +52929,7 @@ func (q *QHeaderView) SetSectionsMovable(movable bool)  {
 	q.Drv(290000,290177,unsafe.Pointer(&movable),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::setOffset(int)
-func (q *QHeaderView) SetOffset(offset int)  {
+func (q *QHeaderView) SetOffset(offset int32)  {
 	q.Drv(290000,290178,unsafe.Pointer(&offset),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::setOffsetToLastSection()
@@ -52937,7 +52937,7 @@ func (q *QHeaderView) SetOffsetToLastSection()  {
 	q.Drv(290000,290179,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::setOffsetToSectionPosition(int)
-func (q *QHeaderView) SetOffsetToSectionPosition(visualIndex int)  {
+func (q *QHeaderView) SetOffsetToSectionPosition(visualIndex int32)  {
 	q.Drv(290000,290180,unsafe.Pointer(&visualIndex),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::setResizeMode(QHeaderView::ResizeMode)
@@ -52945,11 +52945,11 @@ func (q *QHeaderView) SetSectionResizeMode(mode QHeaderView_ResizeMode)  {
 	q.Drv(290000,290181,unsafe.Pointer(&mode),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::setResizeMode(int,QHeaderView::ResizeMode)
-func (q *QHeaderView) SetSectionResizeModeWithLogicalindexMode(logicalIndex int,mode QHeaderView_ResizeMode)  {
+func (q *QHeaderView) SetSectionResizeModeWithLogicalindexMode(logicalIndex int32,mode QHeaderView_ResizeMode)  {
 	q.Drv(290000,290182,unsafe.Pointer(&logicalIndex),unsafe.Pointer(&mode),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::setSectionHidden(int,bool)
-func (q *QHeaderView) SetSectionHidden(logicalIndex int,hide bool)  {
+func (q *QHeaderView) SetSectionHidden(logicalIndex int32,hide bool)  {
 	q.Drv(290000,290183,unsafe.Pointer(&logicalIndex),unsafe.Pointer(&hide),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::setSelection(QRect const&,QFlags<QItemSelectionModel::SelectionFlag>)
@@ -52957,7 +52957,7 @@ func (q *QHeaderView) SetSelection(rect *QRect,flags QItemSelectionModel_Selecti
 	q.Drv(290000,290184,Native(rect),unsafe.Pointer(&flags),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::setSortIndicator(int,Qt::SortOrder)
-func (q *QHeaderView) SetSortIndicator(logicalIndex int,order Qt_SortOrder)  {
+func (q *QHeaderView) SetSortIndicator(logicalIndex int32,order Qt_SortOrder)  {
 	q.Drv(290000,290185,unsafe.Pointer(&logicalIndex),unsafe.Pointer(&order),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::setSortIndicatorShown(bool)
@@ -52969,7 +52969,7 @@ func (q *QHeaderView) SetStretchLastSection(stretch bool)  {
 	q.Drv(290000,290187,unsafe.Pointer(&stretch),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::showSection(int)
-func (q *QHeaderView) ShowSection(logicalIndex int)  {
+func (q *QHeaderView) ShowSection(logicalIndex int32)  {
 	q.Drv(290000,290188,unsafe.Pointer(&logicalIndex),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::sizeHint()
@@ -52990,8 +52990,8 @@ func (q *QHeaderView) SortIndicatorOrder() Qt_SortOrder {
 	return __rv
 }	
 //QHeaderView::sortIndicatorSection()
-func (q *QHeaderView) SortIndicatorSection() int {
-	var __rv int
+func (q *QHeaderView) SortIndicatorSection() int32 {
+	var __rv int32
 	q.Drv(290000,290191,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -53002,13 +53002,13 @@ func (q *QHeaderView) StretchLastSection() bool {
 	return __rv
 }	
 //QHeaderView::stretchSectionCount()
-func (q *QHeaderView) StretchSectionCount() int {
-	var __rv int
+func (q *QHeaderView) StretchSectionCount() int32 {
+	var __rv int32
 	q.Drv(290000,290193,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QHeaderView::swapSections(int,int)
-func (q *QHeaderView) SwapSections(first int,second int)  {
+func (q *QHeaderView) SwapSections(first int32,second int32)  {
 	q.Drv(290000,290194,unsafe.Pointer(&first),unsafe.Pointer(&second),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::updateGeometries()
@@ -53016,12 +53016,12 @@ func (q *QHeaderView) UpdateGeometries()  {
 	q.Drv(290000,290195,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::updateSection(int)
-func (q *QHeaderView) UpdateSection(logicalIndex int)  {
+func (q *QHeaderView) UpdateSection(logicalIndex int32)  {
 	q.Drv(290000,290196,unsafe.Pointer(&logicalIndex),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QHeaderView::verticalOffset()
-func (q *QHeaderView) VerticalOffset() int {
-	var __rv int
+func (q *QHeaderView) VerticalOffset() int32 {
+	var __rv int32
 	q.Drv(290000,290197,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -53032,14 +53032,14 @@ func (q *QHeaderView) ViewportEvent(e *QEvent) bool {
 	return __rv
 }	
 //QHeaderView::visualIndex(int)
-func (q *QHeaderView) VisualIndex(logicalIndex int) int {
-	var __rv int
+func (q *QHeaderView) VisualIndex(logicalIndex int32) int32 {
+	var __rv int32
 	q.Drv(290000,290199,unsafe.Pointer(&logicalIndex),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QHeaderView::visualIndexAt(int)
-func (q *QHeaderView) VisualIndexAt(position int) int {
-	var __rv int
+func (q *QHeaderView) VisualIndexAt(position int32) int32 {
+	var __rv int32
 	q.Drv(290000,290200,unsafe.Pointer(&position),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -53387,13 +53387,13 @@ func (q *QIODevice) UngetChar(c byte)  {
 	q.Drv(292000,292138,unsafe.Pointer(&c),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QIODevice::waitForBytesWritten(int)
-func (q *QIODevice) WaitForBytesWritten(msecs int) bool {
+func (q *QIODevice) WaitForBytesWritten(msecs int32) bool {
 	var __rv bool
 	q.Drv(292000,292139,unsafe.Pointer(&msecs),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QIODevice::waitForReadyRead(int)
-func (q *QIODevice) WaitForReadyRead(msecs int) bool {
+func (q *QIODevice) WaitForReadyRead(msecs int32) bool {
 	var __rv bool
 	q.Drv(292000,292140,unsafe.Pointer(&msecs),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -53461,13 +53461,13 @@ func (q *QInputDialog) OnTextValueChanged(fn func(string)) uintptr {
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QInputDialog) OnIntValueChanged(fn func(int)) uintptr {
+func (q *QInputDialog) OnIntValueChanged(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(293000,293105,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QInputDialog) OnIntValueSelected(fn func(int)) uintptr {
+func (q *QInputDialog) OnIntValueSelected(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(293000,293106,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -53514,12 +53514,12 @@ func (q *QInputDialog) ComboBoxItems() []string {
 	return __rv
 }	
 //QInputDialog::done(int)
-func (q *QInputDialog) Done(result int)  {
+func (q *QInputDialog) Done(result int32)  {
 	q.Drv(293000,293112,unsafe.Pointer(&result),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QInputDialog::doubleDecimals()
-func (q *QInputDialog) DoubleDecimals() int {
-	var __rv int
+func (q *QInputDialog) DoubleDecimals() int32 {
+	var __rv int32
 	q.Drv(293000,293113,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -53542,37 +53542,37 @@ func (q *QInputDialog) DoubleValue() float64 {
 	return __rv
 }	
 //QInputDialog::getDouble(QWidget*,QString const&,QString const&,double,double,double,int,bool*,QFlags<Qt::WindowType>)	
-func QInputDialogGetDouble(parent QWidgetInterface,title string,label string,value float64,minValue float64,maxValue float64,decimals int,ok *bool,flags Qt_WindowType) float64 {
+func QInputDialogGetDouble(parent QWidgetInterface,title string,label string,value float64,minValue float64,maxValue float64,decimals int32,ok *bool,flags Qt_WindowType) float64 {
 	var __rv float64
 	DirectQtDrv(nil,293000,293117,Native(parent),unsafe.Pointer(&title),unsafe.Pointer(&label),unsafe.Pointer(&value),unsafe.Pointer(&minValue),unsafe.Pointer(&maxValue),unsafe.Pointer(&decimals),unsafe.Pointer(&ok),unsafe.Pointer(&flags),unsafe.Pointer(&__rv),nil,nil)
 	return __rv
 }	
 //QInputDialog::getDouble(QWidget*,QString const&,QString const&,double,double,double,int,bool*,QFlags<Qt::WindowType>)
-func (q *QInputDialog) GetDouble(parent QWidgetInterface,title string,label string,value float64,minValue float64,maxValue float64,decimals int,ok *bool,flags Qt_WindowType) float64 {
+func (q *QInputDialog) GetDouble(parent QWidgetInterface,title string,label string,value float64,minValue float64,maxValue float64,decimals int32,ok *bool,flags Qt_WindowType) float64 {
 	var __rv float64
 	q.Drv(293000,293117,Native(parent),unsafe.Pointer(&title),unsafe.Pointer(&label),unsafe.Pointer(&value),unsafe.Pointer(&minValue),unsafe.Pointer(&maxValue),unsafe.Pointer(&decimals),unsafe.Pointer(&ok),unsafe.Pointer(&flags),unsafe.Pointer(&__rv),nil,nil)
 	return __rv
 }	
 //QInputDialog::getInt(QWidget*,QString const&,QString const&,int,int,int,int,bool*,QFlags<Qt::WindowType>)	
-func QInputDialogGetInt(parent QWidgetInterface,title string,label string,value int,minValue int,maxValue int,step int,ok *bool,flags Qt_WindowType) int {
-	var __rv int
+func QInputDialogGetInt(parent QWidgetInterface,title string,label string,value int32,minValue int32,maxValue int32,step int32,ok *bool,flags Qt_WindowType) int32 {
+	var __rv int32
 	DirectQtDrv(nil,293000,293118,Native(parent),unsafe.Pointer(&title),unsafe.Pointer(&label),unsafe.Pointer(&value),unsafe.Pointer(&minValue),unsafe.Pointer(&maxValue),unsafe.Pointer(&step),unsafe.Pointer(&ok),unsafe.Pointer(&flags),unsafe.Pointer(&__rv),nil,nil)
 	return __rv
 }	
 //QInputDialog::getInt(QWidget*,QString const&,QString const&,int,int,int,int,bool*,QFlags<Qt::WindowType>)
-func (q *QInputDialog) GetInt(parent QWidgetInterface,title string,label string,value int,minValue int,maxValue int,step int,ok *bool,flags Qt_WindowType) int {
-	var __rv int
+func (q *QInputDialog) GetInt(parent QWidgetInterface,title string,label string,value int32,minValue int32,maxValue int32,step int32,ok *bool,flags Qt_WindowType) int32 {
+	var __rv int32
 	q.Drv(293000,293118,Native(parent),unsafe.Pointer(&title),unsafe.Pointer(&label),unsafe.Pointer(&value),unsafe.Pointer(&minValue),unsafe.Pointer(&maxValue),unsafe.Pointer(&step),unsafe.Pointer(&ok),unsafe.Pointer(&flags),unsafe.Pointer(&__rv),nil,nil)
 	return __rv
 }	
 //QInputDialog::getItem(QWidget*,QString const&,QString const&,QStringList const&,int,bool,bool*,QFlags<Qt::WindowType>)	
-func QInputDialogGetItem(parent QWidgetInterface,title string,label string,items []string,current int,editable bool,ok *bool,flags Qt_WindowType) string {
+func QInputDialogGetItem(parent QWidgetInterface,title string,label string,items []string,current int32,editable bool,ok *bool,flags Qt_WindowType) string {
 	var __rv string
 	DirectQtDrv(nil,293000,293119,Native(parent),unsafe.Pointer(&title),unsafe.Pointer(&label),unsafe.Pointer(&items),unsafe.Pointer(&current),unsafe.Pointer(&editable),unsafe.Pointer(&ok),unsafe.Pointer(&flags),unsafe.Pointer(&__rv),nil,nil,nil)
 	return __rv
 }	
 //QInputDialog::getItem(QWidget*,QString const&,QString const&,QStringList const&,int,bool,bool*,QFlags<Qt::WindowType>)
-func (q *QInputDialog) GetItem(parent QWidgetInterface,title string,label string,items []string,current int,editable bool,ok *bool,flags Qt_WindowType) string {
+func (q *QInputDialog) GetItem(parent QWidgetInterface,title string,label string,items []string,current int32,editable bool,ok *bool,flags Qt_WindowType) string {
 	var __rv string
 	q.Drv(293000,293119,Native(parent),unsafe.Pointer(&title),unsafe.Pointer(&label),unsafe.Pointer(&items),unsafe.Pointer(&current),unsafe.Pointer(&editable),unsafe.Pointer(&ok),unsafe.Pointer(&flags),unsafe.Pointer(&__rv),nil,nil,nil)
 	return __rv
@@ -53596,26 +53596,26 @@ func (q *QInputDialog) InputMode() QInputDialog_InputMode {
 	return __rv
 }	
 //QInputDialog::intMaximum()
-func (q *QInputDialog) IntMaximum() int {
-	var __rv int
+func (q *QInputDialog) IntMaximum() int32 {
+	var __rv int32
 	q.Drv(293000,293122,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QInputDialog::intMinimum()
-func (q *QInputDialog) IntMinimum() int {
-	var __rv int
+func (q *QInputDialog) IntMinimum() int32 {
+	var __rv int32
 	q.Drv(293000,293123,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QInputDialog::intStep()
-func (q *QInputDialog) IntStep() int {
-	var __rv int
+func (q *QInputDialog) IntStep() int32 {
+	var __rv int32
 	q.Drv(293000,293124,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QInputDialog::intValue()
-func (q *QInputDialog) IntValue() int {
-	var __rv int
+func (q *QInputDialog) IntValue() int32 {
+	var __rv int32
 	q.Drv(293000,293125,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -53675,7 +53675,7 @@ func (q *QInputDialog) SetComboBoxItems(items []string)  {
 	q.Drv(293000,293135,unsafe.Pointer(&items),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QInputDialog::setDoubleDecimals(int)
-func (q *QInputDialog) SetDoubleDecimals(decimals int)  {
+func (q *QInputDialog) SetDoubleDecimals(decimals int32)  {
 	q.Drv(293000,293136,unsafe.Pointer(&decimals),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QInputDialog::setDoubleMaximum(double)
@@ -53699,23 +53699,23 @@ func (q *QInputDialog) SetInputMode(mode QInputDialog_InputMode)  {
 	q.Drv(293000,293141,unsafe.Pointer(&mode),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QInputDialog::setIntMaximum(int)
-func (q *QInputDialog) SetIntMaximum(max int)  {
+func (q *QInputDialog) SetIntMaximum(max int32)  {
 	q.Drv(293000,293142,unsafe.Pointer(&max),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QInputDialog::setIntMinimum(int)
-func (q *QInputDialog) SetIntMinimum(min int)  {
+func (q *QInputDialog) SetIntMinimum(min int32)  {
 	q.Drv(293000,293143,unsafe.Pointer(&min),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QInputDialog::setIntRange(int,int)
-func (q *QInputDialog) SetIntRange(min int,max int)  {
+func (q *QInputDialog) SetIntRange(min int32,max int32)  {
 	q.Drv(293000,293144,unsafe.Pointer(&min),unsafe.Pointer(&max),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QInputDialog::setIntStep(int)
-func (q *QInputDialog) SetIntStep(step int)  {
+func (q *QInputDialog) SetIntStep(step int32)  {
 	q.Drv(293000,293145,unsafe.Pointer(&step),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QInputDialog::setIntValue(int)
-func (q *QInputDialog) SetIntValue(value int)  {
+func (q *QInputDialog) SetIntValue(value int32)  {
 	q.Drv(293000,293146,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QInputDialog::setLabelText(QString const&)
@@ -53816,7 +53816,7 @@ func NewQIntValidatorWithParent(parent QObjectInterface) *QIntValidator {
 	return _p
 } 
 //QIntValidator::QIntValidator(int,int,QObject*)	
-func NewQIntValidatorWithBottomTopParent(bottom int,top int,parent QObjectInterface) *QIntValidator {
+func NewQIntValidatorWithBottomTopParent(bottom int32,top int32,parent QObjectInterface) *QIntValidator {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),294000,294104,unsafe.Pointer(&bottom),unsafe.Pointer(&top),Native(parent),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -53827,8 +53827,8 @@ func NewQIntValidatorWithBottomTopParent(bottom int,top int,parent QObjectInterf
 	return _p
 } 
 //QIntValidator::bottom()
-func (q *QIntValidator) Bottom() int {
-	var __rv int
+func (q *QIntValidator) Bottom() int32 {
+	var __rv int32
 	q.Drv(294000,294105,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -53837,25 +53837,25 @@ func (q *QIntValidator) Fixup(input *string)  {
 	q.Drv(294000,294106,unsafe.Pointer(&input),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QIntValidator::setBottom(int)
-func (q *QIntValidator) SetBottom(value int)  {
+func (q *QIntValidator) SetBottom(value int32)  {
 	q.Drv(294000,294107,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QIntValidator::setRange(int,int)
-func (q *QIntValidator) SetRange(bottom int,top int)  {
+func (q *QIntValidator) SetRange(bottom int32,top int32)  {
 	q.Drv(294000,294108,unsafe.Pointer(&bottom),unsafe.Pointer(&top),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QIntValidator::setTop(int)
-func (q *QIntValidator) SetTop(value int)  {
+func (q *QIntValidator) SetTop(value int32)  {
 	q.Drv(294000,294109,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QIntValidator::top()
-func (q *QIntValidator) Top() int {
-	var __rv int
+func (q *QIntValidator) Top() int32 {
+	var __rv int32
 	q.Drv(294000,294110,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QIntValidator::validate(QString&,int&)
-func (q *QIntValidator) Validate(value2 *string,value3 *int) QValidator_State {
+func (q *QIntValidator) Validate(value2 *string,value3 *int32) QValidator_State {
 	var __rv QValidator_State
 	q.Drv(294000,294111,unsafe.Pointer(&value2),unsafe.Pointer(&value3),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -54041,7 +54041,7 @@ func (q *QItemSelectionModel) ClearSelection()  {
 	q.Drv(296000,296109,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QItemSelectionModel::columnIntersectsSelection(int,QModelIndex const&)
-func (q *QItemSelectionModel) ColumnIntersectsSelection(column int,parent *QModelIndex) bool {
+func (q *QItemSelectionModel) ColumnIntersectsSelection(column int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(296000,296110,unsafe.Pointer(&column),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -54068,13 +54068,13 @@ func (q *QItemSelectionModel) HasSelection() bool {
 	return __rv
 }	
 //QItemSelectionModel::isColumnSelected(int,QModelIndex const&)
-func (q *QItemSelectionModel) IsColumnSelected(column int,parent *QModelIndex) bool {
+func (q *QItemSelectionModel) IsColumnSelected(column int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(296000,296114,unsafe.Pointer(&column),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QItemSelectionModel::isRowSelected(int,QModelIndex const&)
-func (q *QItemSelectionModel) IsRowSelected(row int,parent *QModelIndex) bool {
+func (q *QItemSelectionModel) IsRowSelected(row int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(296000,296115,unsafe.Pointer(&row),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -54101,7 +54101,7 @@ func (q *QItemSelectionModel) Reset()  {
 	q.Drv(296000,296118,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QItemSelectionModel::rowIntersectsSelection(int,QModelIndex const&)
-func (q *QItemSelectionModel) RowIntersectsSelection(row int,parent *QModelIndex) bool {
+func (q *QItemSelectionModel) RowIntersectsSelection(row int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(296000,296119,unsafe.Pointer(&row),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -54121,7 +54121,7 @@ func (q *QItemSelectionModel) SelectedColumns() []*QModelIndex {
 	return __rv
 }	
 //QItemSelectionModel::selectedColumns(int)
-func (q *QItemSelectionModel) SelectedColumnsWithRow(row int) []*QModelIndex {
+func (q *QItemSelectionModel) SelectedColumnsWithRow(row int32) []*QModelIndex {
 	var __rv []*QModelIndex
 	q.Drv(296000,296123,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -54139,7 +54139,7 @@ func (q *QItemSelectionModel) SelectedRows() []*QModelIndex {
 	return __rv
 }	
 //QItemSelectionModel::selectedRows(int)
-func (q *QItemSelectionModel) SelectedRowsWithColumn(column int) []*QModelIndex {
+func (q *QItemSelectionModel) SelectedRowsWithColumn(column int32) []*QModelIndex {
 	var __rv []*QModelIndex
 	q.Drv(296000,296126,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -54196,7 +54196,7 @@ func NewQKeyEventTransitionWithSourcestate(sourceState *QState) *QKeyEventTransi
 	return _p
 } 
 //QKeyEventTransition::QKeyEventTransition(QObject*,QEvent::Type,int,QState*)	
-func NewQKeyEventTransitionWithObjectTypeKeySourcestate(object QObjectInterface,_type QEvent_Type,key int,sourceState *QState) *QKeyEventTransition {
+func NewQKeyEventTransitionWithObjectTypeKeySourcestate(object QObjectInterface,_type QEvent_Type,key int32,sourceState *QState) *QKeyEventTransition {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),297000,297104,Native(object),unsafe.Pointer(&_type),unsafe.Pointer(&key),Native(sourceState),nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -54213,8 +54213,8 @@ func (q *QKeyEventTransition) EventTest(event *QEvent) bool {
 	return __rv
 }	
 //QKeyEventTransition::key()
-func (q *QKeyEventTransition) Key() int {
-	var __rv int
+func (q *QKeyEventTransition) Key() int32 {
+	var __rv int32
 	q.Drv(297000,297106,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -54229,7 +54229,7 @@ func (q *QKeyEventTransition) OnTransition(event *QEvent)  {
 	q.Drv(297000,297108,Native(event),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QKeyEventTransition::setKey(int)
-func (q *QKeyEventTransition) SetKey(key int)  {
+func (q *QKeyEventTransition) SetKey(key int32)  {
 	q.Drv(297000,297109,unsafe.Pointer(&key),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QKeyEventTransition::setModifierMask(QFlags<Qt::KeyboardModifier>)
@@ -54294,7 +54294,7 @@ func NewQLCDNumberWithParent(parent QWidgetInterface) *QLCDNumber {
 	return _p
 } 
 //QLCDNumber::QLCDNumber(unsigned int,QWidget*)	
-func NewQLCDNumberWithNumdigitsParent(numDigits uint,parent QWidgetInterface) *QLCDNumber {
+func NewQLCDNumberWithNumdigitsParent(numDigits uint32,parent QWidgetInterface) *QLCDNumber {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),298000,298105,unsafe.Pointer(&numDigits),Native(parent),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -54311,14 +54311,14 @@ func (q *QLCDNumber) CheckOverflow(num float64) bool {
 	return __rv
 }	
 //QLCDNumber::checkOverflow(int)
-func (q *QLCDNumber) CheckOverflowWithNum(num int) bool {
+func (q *QLCDNumber) CheckOverflowWithNum(num int32) bool {
 	var __rv bool
 	q.Drv(298000,298107,unsafe.Pointer(&num),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QLCDNumber::digitCount()
-func (q *QLCDNumber) DigitCount() int {
-	var __rv int
+func (q *QLCDNumber) DigitCount() int32 {
+	var __rv int32
 	q.Drv(298000,298108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -54331,7 +54331,7 @@ func (q *QLCDNumber) DisplayFWithNum(num float64)  {
 	q.Drv(298000,298110,unsafe.Pointer(&num),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLCDNumber::display(int)
-func (q *QLCDNumber) DisplayWithNum(num int)  {
+func (q *QLCDNumber) DisplayWithNum(num int32)  {
 	q.Drv(298000,298111,unsafe.Pointer(&num),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLCDNumber::event(QEvent*)
@@ -54341,8 +54341,8 @@ func (q *QLCDNumber) Event(e *QEvent) bool {
 	return __rv
 }	
 //QLCDNumber::intValue()
-func (q *QLCDNumber) IntValue() int {
-	var __rv int
+func (q *QLCDNumber) IntValue() int32 {
+	var __rv int32
 	q.Drv(298000,298113,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -54371,7 +54371,7 @@ func (q *QLCDNumber) SetDecMode()  {
 	q.Drv(298000,298118,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLCDNumber::setDigitCount(int)
-func (q *QLCDNumber) SetDigitCount(nDigits int)  {
+func (q *QLCDNumber) SetDigitCount(nDigits int32)  {
 	q.Drv(298000,298119,unsafe.Pointer(&nDigits),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLCDNumber::setHexMode()
@@ -54538,14 +54538,14 @@ func (q *QLabel) HasSelectedText() bool {
 	return __rv
 }	
 //QLabel::heightForWidth(int)
-func (q *QLabel) HeightForWidth(value int) int {
-	var __rv int
+func (q *QLabel) HeightForWidth(value int32) int32 {
+	var __rv int32
 	q.Drv(299000,299118,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QLabel::indent()
-func (q *QLabel) Indent() int {
-	var __rv int
+func (q *QLabel) Indent() int32 {
+	var __rv int32
 	q.Drv(299000,299119,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -54554,8 +54554,8 @@ func (q *QLabel) KeyPressEvent(ev *QKeyEvent)  {
 	q.Drv(299000,299120,Native(ev),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLabel::margin()
-func (q *QLabel) Margin() int {
-	var __rv int
+func (q *QLabel) Margin() int32 {
+	var __rv int32
 	q.Drv(299000,299121,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -54632,8 +54632,8 @@ func (q *QLabel) SelectedText() string {
 	return __rv
 }	
 //QLabel::selectionStart()
-func (q *QLabel) SelectionStart() int {
-	var __rv int
+func (q *QLabel) SelectionStart() int32 {
+	var __rv int32
 	q.Drv(299000,299132,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -54646,11 +54646,11 @@ func (q *QLabel) SetBuddy(value QWidgetInterface)  {
 	q.Drv(299000,299134,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLabel::setIndent(int)
-func (q *QLabel) SetIndent(value int)  {
+func (q *QLabel) SetIndent(value int32)  {
 	q.Drv(299000,299135,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLabel::setMargin(int)
-func (q *QLabel) SetMargin(value int)  {
+func (q *QLabel) SetMargin(value int32)  {
 	q.Drv(299000,299136,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLabel::setMovie(QMovie*)
@@ -54662,7 +54662,7 @@ func (q *QLabel) SetNum(value float64)  {
 	q.Drv(299000,299138,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLabel::setNum(int)
-func (q *QLabel) SetNumWithInt(value int)  {
+func (q *QLabel) SetNumWithInt32(value int32)  {
 	q.Drv(299000,299139,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLabel::setOpenExternalLinks(bool)
@@ -54682,7 +54682,7 @@ func (q *QLabel) SetScaledContents(value bool)  {
 	q.Drv(299000,299143,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLabel::setSelection(int,int)
-func (q *QLabel) SetSelection(value2 int,value3 int)  {
+func (q *QLabel) SetSelection(value2 int32,value3 int32)  {
 	q.Drv(299000,299144,unsafe.Pointer(&value2),unsafe.Pointer(&value3),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLabel::setText(QString const&)
@@ -54833,8 +54833,8 @@ func (q *QLayout) ContentsRect() *QRect {
 	return _rp
 }	
 //QLayout::count()
-func (q *QLayout) Count() int {
-	var __rv int
+func (q *QLayout) Count() int32 {
+	var __rv int32
 	q.Drv(300000,300112,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -54856,12 +54856,12 @@ func (q *QLayout) Geometry() *QRect {
 	return _rp
 }	
 //QLayout::getContentsMargins(int*,int*,int*,int*)
-func (q *QLayout) GetContentsMargins(left *int,top *int,right *int,bottom *int)  {
+func (q *QLayout) GetContentsMargins(left *int32,top *int32,right *int32,bottom *int32)  {
 	q.Drv(300000,300115,unsafe.Pointer(&left),unsafe.Pointer(&top),unsafe.Pointer(&right),unsafe.Pointer(&bottom),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLayout::indexOf(QWidget*)
-func (q *QLayout) IndexOf(value QWidgetInterface) int {
-	var __rv int
+func (q *QLayout) IndexOf(value QWidgetInterface) int32 {
+	var __rv int32
 	q.Drv(300000,300116,Native(value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -54882,7 +54882,7 @@ func (q *QLayout) IsEnabled() bool {
 	return __rv
 }	
 //QLayout::itemAt(int)
-func (q *QLayout) ItemAt(index int) *QLayoutItem {
+func (q *QLayout) ItemAt(index int32) *QLayoutItem {
 	var __rv uintptr
 	q.Drv(300000,300120,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -54904,8 +54904,8 @@ func (q *QLayout) Layout() *QLayout {
 	return _rp
 }	
 //QLayout::margin()
-func (q *QLayout) Margin() int {
-	var __rv int
+func (q *QLayout) Margin() int32 {
+	var __rv int32
 	q.Drv(300000,300122,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -54982,7 +54982,7 @@ func (q *QLayout) SetContentsMargins(margins *QMargins)  {
 	q.Drv(300000,300132,Native(margins),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLayout::setContentsMargins(int,int,int,int)
-func (q *QLayout) SetContentsMarginsWithLeftTopRightBottom(left int,top int,right int,bottom int)  {
+func (q *QLayout) SetContentsMarginsWithLeftTopRightBottom(left int32,top int32,right int32,bottom int32)  {
 	q.Drv(300000,300133,unsafe.Pointer(&left),unsafe.Pointer(&top),unsafe.Pointer(&right),unsafe.Pointer(&bottom),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLayout::setEnabled(bool)
@@ -54994,7 +54994,7 @@ func (q *QLayout) SetGeometry(value *QRect)  {
 	q.Drv(300000,300135,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLayout::setMargin(int)
-func (q *QLayout) SetMargin(value int)  {
+func (q *QLayout) SetMargin(value int32)  {
 	q.Drv(300000,300136,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLayout::setMenuBar(QWidget*)
@@ -55006,7 +55006,7 @@ func (q *QLayout) SetSizeConstraint(value QLayout_SizeConstraint)  {
 	q.Drv(300000,300138,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLayout::setSpacing(int)
-func (q *QLayout) SetSpacing(value int)  {
+func (q *QLayout) SetSpacing(value int32)  {
 	q.Drv(300000,300139,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLayout::sizeConstraint()
@@ -55016,13 +55016,13 @@ func (q *QLayout) SizeConstraint() QLayout_SizeConstraint {
 	return __rv
 }	
 //QLayout::spacing()
-func (q *QLayout) Spacing() int {
-	var __rv int
+func (q *QLayout) Spacing() int32 {
+	var __rv int32
 	q.Drv(300000,300141,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QLayout::takeAt(int)
-func (q *QLayout) TakeAt(index int) *QLayoutItem {
+func (q *QLayout) TakeAt(index int32) *QLayoutItem {
 	var __rv uintptr
 	q.Drv(300000,300142,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -55033,8 +55033,8 @@ func (q *QLayout) TakeAt(index int) *QLayoutItem {
 	return _rp
 }	
 //QLayout::totalHeightForWidth(int)
-func (q *QLayout) TotalHeightForWidth(w int) int {
-	var __rv int
+func (q *QLayout) TotalHeightForWidth(w int32) int32 {
+	var __rv int32
 	q.Drv(300000,300143,unsafe.Pointer(&w),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -55145,7 +55145,7 @@ func NewQLibraryWithFilenameVersionParent(fileName string,version string,parent 
 	return _p
 } 
 //QLibrary::QLibrary(QString const&,int,QObject*)	
-func NewQLibraryWithFilenameVernumParent(fileName string,verNum int,parent QObjectInterface) *QLibrary {
+func NewQLibraryWithFilenameVernumParent(fileName string,verNum int32,parent QObjectInterface) *QLibrary {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),301000,301106,unsafe.Pointer(&fileName),unsafe.Pointer(&verNum),Native(parent),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -55228,13 +55228,13 @@ func (q *QLibrary) ResolveWithFilenameVersionSymbol(fileName string,version stri
 	return __rv
 }	
 //QLibrary::resolve(QString const&,int,char const*)	
-func QLibraryResolveWithFilenameVernumSymbol(fileName string,verNum int,symbol string) uintptr {
+func QLibraryResolveWithFilenameVernumSymbol(fileName string,verNum int32,symbol string) uintptr {
 	var __rv uintptr
 	DirectQtDrv(nil,301000,301116,unsafe.Pointer(&fileName),unsafe.Pointer(&verNum),unsafe.Pointer(&symbol),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QLibrary::resolve(QString const&,int,char const*)
-func (q *QLibrary) ResolveWithFilenameVernumSymbol(fileName string,verNum int,symbol string) uintptr {
+func (q *QLibrary) ResolveWithFilenameVernumSymbol(fileName string,verNum int32,symbol string) uintptr {
 	var __rv uintptr
 	q.Drv(301000,301116,unsafe.Pointer(&fileName),unsafe.Pointer(&verNum),unsafe.Pointer(&symbol),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -55248,7 +55248,7 @@ func (q *QLibrary) SetFileNameAndVersionWithFilenameVersion(fileName string,vers
 	q.Drv(301000,301118,unsafe.Pointer(&fileName),unsafe.Pointer(&version),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLibrary::setFileNameAndVersion(QString const&,int)
-func (q *QLibrary) SetFileNameAndVersionWithFilenameVernum(fileName string,verNum int)  {
+func (q *QLibrary) SetFileNameAndVersionWithFilenameVernum(fileName string,verNum int32)  {
 	q.Drv(301000,301119,unsafe.Pointer(&fileName),unsafe.Pointer(&verNum),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLibrary::setLoadHints(QFlags<QLibrary::LoadHint>)
@@ -55295,7 +55295,7 @@ func (q *QLineEdit) OnReturnPressed(fn func()) uintptr {
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QLineEdit) OnCursorPositionChanged(fn func(int,int)) uintptr {
+func (q *QLineEdit) OnCursorPositionChanged(fn func(int32,int32)) uintptr {
 	var __rv uintptr
 	q.Drv(302000,302104,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -55405,7 +55405,7 @@ func (q *QLineEdit) CursorBackward(mark bool)  {
 	q.Drv(302000,302119,unsafe.Pointer(&mark),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLineEdit::cursorBackward(bool,int)
-func (q *QLineEdit) CursorBackwardWithMarkSteps(mark bool,steps int)  {
+func (q *QLineEdit) CursorBackwardWithMarkSteps(mark bool,steps int32)  {
 	q.Drv(302000,302120,unsafe.Pointer(&mark),unsafe.Pointer(&steps),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLineEdit::cursorForward(bool)
@@ -55413,18 +55413,18 @@ func (q *QLineEdit) CursorForward(mark bool)  {
 	q.Drv(302000,302121,unsafe.Pointer(&mark),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLineEdit::cursorForward(bool,int)
-func (q *QLineEdit) CursorForwardWithMarkSteps(mark bool,steps int)  {
+func (q *QLineEdit) CursorForwardWithMarkSteps(mark bool,steps int32)  {
 	q.Drv(302000,302122,unsafe.Pointer(&mark),unsafe.Pointer(&steps),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLineEdit::cursorPosition()
-func (q *QLineEdit) CursorPosition() int {
-	var __rv int
+func (q *QLineEdit) CursorPosition() int32 {
+	var __rv int32
 	q.Drv(302000,302123,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QLineEdit::cursorPositionAt(QPoint const&)
-func (q *QLineEdit) CursorPositionAt(pos *QPoint) int {
-	var __rv int
+func (q *QLineEdit) CursorPositionAt(pos *QPoint) int32 {
+	var __rv int32
 	q.Drv(302000,302124,Native(pos),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -55512,7 +55512,7 @@ func (q *QLineEdit) FocusOutEvent(value *QFocusEvent)  {
 	q.Drv(302000,302141,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLineEdit::getTextMargins(int*,int*,int*,int*)
-func (q *QLineEdit) GetTextMargins(left *int,top *int,right *int,bottom *int)  {
+func (q *QLineEdit) GetTextMargins(left *int32,top *int32,right *int32,bottom *int32)  {
 	q.Drv(302000,302142,unsafe.Pointer(&left),unsafe.Pointer(&top),unsafe.Pointer(&right),unsafe.Pointer(&bottom),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLineEdit::hasAcceptableInput()
@@ -55591,8 +55591,8 @@ func (q *QLineEdit) KeyPressEvent(value *QKeyEvent)  {
 	q.Drv(302000,302155,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLineEdit::maxLength()
-func (q *QLineEdit) MaxLength() int {
-	var __rv int
+func (q *QLineEdit) MaxLength() int32 {
+	var __rv int32
 	q.Drv(302000,302156,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -55652,8 +55652,8 @@ func (q *QLineEdit) SelectedText() string {
 	return __rv
 }	
 //QLineEdit::selectionStart()
-func (q *QLineEdit) SelectionStart() int {
-	var __rv int
+func (q *QLineEdit) SelectionStart() int32 {
+	var __rv int32
 	q.Drv(302000,302168,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -55666,7 +55666,7 @@ func (q *QLineEdit) SetCompleter(completer *QCompleter)  {
 	q.Drv(302000,302170,Native(completer),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLineEdit::setCursorPosition(int)
-func (q *QLineEdit) SetCursorPosition(value int)  {
+func (q *QLineEdit) SetCursorPosition(value int32)  {
 	q.Drv(302000,302171,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLineEdit::setDragEnabled(bool)
@@ -55686,7 +55686,7 @@ func (q *QLineEdit) SetInputMask(inputMask string)  {
 	q.Drv(302000,302175,unsafe.Pointer(&inputMask),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLineEdit::setMaxLength(int)
-func (q *QLineEdit) SetMaxLength(value int)  {
+func (q *QLineEdit) SetMaxLength(value int32)  {
 	q.Drv(302000,302176,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLineEdit::setModified(bool)
@@ -55702,7 +55702,7 @@ func (q *QLineEdit) SetReadOnly(value bool)  {
 	q.Drv(302000,302179,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLineEdit::setSelection(int,int)
-func (q *QLineEdit) SetSelection(value2 int,value3 int)  {
+func (q *QLineEdit) SetSelection(value2 int32,value3 int32)  {
 	q.Drv(302000,302180,unsafe.Pointer(&value2),unsafe.Pointer(&value3),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLineEdit::setText(QString const&)
@@ -55714,7 +55714,7 @@ func (q *QLineEdit) SetTextMargins(margins *QMargins)  {
 	q.Drv(302000,302182,Native(margins),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLineEdit::setTextMargins(int,int,int,int)
-func (q *QLineEdit) SetTextMarginsWithLeftTopRightBottom(left int,top int,right int,bottom int)  {
+func (q *QLineEdit) SetTextMarginsWithLeftTopRightBottom(left int32,top int32,right int32,bottom int32)  {
 	q.Drv(302000,302183,unsafe.Pointer(&left),unsafe.Pointer(&top),unsafe.Pointer(&right),unsafe.Pointer(&bottom),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QLineEdit::setValidator(QValidator const*)
@@ -55838,8 +55838,8 @@ func NewQListViewWithParent(parent QWidgetInterface) *QListView {
 	return _p
 } 
 //QListView::batchSize()
-func (q *QListView) BatchSize() int {
-	var __rv int
+func (q *QListView) BatchSize() int32 {
+	var __rv int32
 	q.Drv(303000,303105,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -55906,8 +55906,8 @@ func (q *QListView) GridSize() *QSize {
 	return _rp
 }	
 //QListView::horizontalOffset()
-func (q *QListView) HorizontalOffset() int {
-	var __rv int
+func (q *QListView) HorizontalOffset() int32 {
+	var __rv int32
 	q.Drv(303000,303117,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -55929,7 +55929,7 @@ func (q *QListView) IsIndexHidden(index *QModelIndex) bool {
 	return __rv
 }	
 //QListView::isRowHidden(int)
-func (q *QListView) IsRowHidden(row int) bool {
+func (q *QListView) IsRowHidden(row int32) bool {
 	var __rv bool
 	q.Drv(303000,303120,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -55953,8 +55953,8 @@ func (q *QListView) LayoutMode() QListView_LayoutMode {
 	return __rv
 }	
 //QListView::modelColumn()
-func (q *QListView) ModelColumn() int {
-	var __rv int
+func (q *QListView) ModelColumn() int32 {
+	var __rv int32
 	q.Drv(303000,303124,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -56003,7 +56003,7 @@ func (q *QListView) Reset()  {
 	q.Drv(303000,303131,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListView::resizeContents(int,int)
-func (q *QListView) ResizeContents(width int,height int)  {
+func (q *QListView) ResizeContents(width int32,height int32)  {
 	q.Drv(303000,303132,unsafe.Pointer(&width),unsafe.Pointer(&height),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListView::resizeEvent(QResizeEvent*)
@@ -56017,15 +56017,15 @@ func (q *QListView) ResizeMode() QListView_ResizeMode {
 	return __rv
 }	
 //QListView::rowsAboutToBeRemoved(QModelIndex const&,int,int)
-func (q *QListView) RowsAboutToBeRemoved(parent *QModelIndex,start int,end int)  {
+func (q *QListView) RowsAboutToBeRemoved(parent *QModelIndex,start int32,end int32)  {
 	q.Drv(303000,303135,Native(parent),unsafe.Pointer(&start),unsafe.Pointer(&end),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListView::rowsInserted(QModelIndex const&,int,int)
-func (q *QListView) RowsInserted(parent *QModelIndex,start int,end int)  {
+func (q *QListView) RowsInserted(parent *QModelIndex,start int32,end int32)  {
 	q.Drv(303000,303136,Native(parent),unsafe.Pointer(&start),unsafe.Pointer(&end),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListView::scrollContentsBy(int,int)
-func (q *QListView) ScrollContentsBy(dx int,dy int)  {
+func (q *QListView) ScrollContentsBy(dx int32,dy int32)  {
 	q.Drv(303000,303137,unsafe.Pointer(&dx),unsafe.Pointer(&dy),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListView::scrollTo(QModelIndex const&)
@@ -56047,7 +56047,7 @@ func (q *QListView) SelectionChanged(selected *QItemSelection,deselected *QItemS
 	q.Drv(303000,303141,Native(selected),Native(deselected),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListView::setBatchSize(int)
-func (q *QListView) SetBatchSize(batchSize int)  {
+func (q *QListView) SetBatchSize(batchSize int32)  {
 	q.Drv(303000,303142,unsafe.Pointer(&batchSize),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListView::setFlow(QListView::Flow)
@@ -56063,7 +56063,7 @@ func (q *QListView) SetLayoutMode(mode QListView_LayoutMode)  {
 	q.Drv(303000,303145,unsafe.Pointer(&mode),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListView::setModelColumn(int)
-func (q *QListView) SetModelColumn(column int)  {
+func (q *QListView) SetModelColumn(column int32)  {
 	q.Drv(303000,303146,unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListView::setMovement(QListView::Movement)
@@ -56083,7 +56083,7 @@ func (q *QListView) SetRootIndex(index *QModelIndex)  {
 	q.Drv(303000,303150,Native(index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListView::setRowHidden(int,bool)
-func (q *QListView) SetRowHidden(row int,hide bool)  {
+func (q *QListView) SetRowHidden(row int32,hide bool)  {
 	q.Drv(303000,303151,unsafe.Pointer(&row),unsafe.Pointer(&hide),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListView::setSelection(QRect const&,QFlags<QItemSelectionModel::SelectionFlag>)
@@ -56095,7 +56095,7 @@ func (q *QListView) SetSelectionRectVisible(show bool)  {
 	q.Drv(303000,303153,unsafe.Pointer(&show),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListView::setSpacing(int)
-func (q *QListView) SetSpacing(space int)  {
+func (q *QListView) SetSpacing(space int32)  {
 	q.Drv(303000,303154,unsafe.Pointer(&space),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListView::setUniformItemSizes(bool)
@@ -56115,8 +56115,8 @@ func (q *QListView) SetWrapping(enable bool)  {
 	q.Drv(303000,303158,unsafe.Pointer(&enable),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListView::spacing()
-func (q *QListView) Spacing() int {
-	var __rv int
+func (q *QListView) Spacing() int32 {
+	var __rv int32
 	q.Drv(303000,303159,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -56139,8 +56139,8 @@ func (q *QListView) UpdateGeometries()  {
 	q.Drv(303000,303163,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListView::verticalOffset()
-func (q *QListView) VerticalOffset() int {
-	var __rv int
+func (q *QListView) VerticalOffset() int32 {
+	var __rv int32
 	q.Drv(303000,303164,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -56204,7 +56204,7 @@ func (q *QListWidget) OnItemPressed(fn func(*QListWidgetItem)) uintptr {
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QListWidget) OnCurrentRowChanged(fn func(int)) uintptr {
+func (q *QListWidget) OnCurrentRowChanged(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(304000,304104,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -56295,8 +56295,8 @@ func (q *QListWidget) ClosePersistentEditor(item *QListWidgetItem)  {
 	q.Drv(304000,304118,Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListWidget::count()
-func (q *QListWidget) Count() int {
-	var __rv int
+func (q *QListWidget) Count() int32 {
+	var __rv int32
 	q.Drv(304000,304119,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -56312,8 +56312,8 @@ func (q *QListWidget) CurrentItem() *QListWidgetItem {
 	return _rp
 }	
 //QListWidget::currentRow()
-func (q *QListWidget) CurrentRow() int {
-	var __rv int
+func (q *QListWidget) CurrentRow() int32 {
+	var __rv int32
 	q.Drv(304000,304121,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -56322,7 +56322,7 @@ func (q *QListWidget) DropEvent(event *QDropEvent)  {
 	q.Drv(304000,304122,Native(event),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListWidget::dropMimeData(int,QMimeData const*,Qt::DropAction)
-func (q *QListWidget) DropMimeData(index int,data *QMimeData,action Qt_DropAction) bool {
+func (q *QListWidget) DropMimeData(index int32,data *QMimeData,action Qt_DropAction) bool {
 	var __rv bool
 	q.Drv(304000,304123,unsafe.Pointer(&index),Native(data),unsafe.Pointer(&action),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -56355,15 +56355,15 @@ func (q *QListWidget) IndexFromItem(item *QListWidgetItem) *QModelIndex {
 	return _rp
 }	
 //QListWidget::insertItem(int,QListWidgetItem*)
-func (q *QListWidget) InsertItemWithRowItem(row int,item *QListWidgetItem)  {
+func (q *QListWidget) InsertItemWithRowItem(row int32,item *QListWidgetItem)  {
 	q.Drv(304000,304128,unsafe.Pointer(&row),Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListWidget::insertItem(int,QString const&)
-func (q *QListWidget) InsertItemWithRowLabel(row int,label string)  {
+func (q *QListWidget) InsertItemWithRowLabel(row int32,label string)  {
 	q.Drv(304000,304129,unsafe.Pointer(&row),unsafe.Pointer(&label),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListWidget::insertItems(int,QStringList const&)
-func (q *QListWidget) InsertItems(row int,labels []string)  {
+func (q *QListWidget) InsertItems(row int32,labels []string)  {
 	q.Drv(304000,304130,unsafe.Pointer(&row),unsafe.Pointer(&labels),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListWidget::isItemHidden(QListWidgetItem const*)
@@ -56385,7 +56385,7 @@ func (q *QListWidget) IsSortingEnabled() bool {
 	return __rv
 }	
 //QListWidget::item(int)
-func (q *QListWidget) Item(row int) *QListWidgetItem {
+func (q *QListWidget) Item(row int32) *QListWidgetItem {
 	var __rv uintptr
 	q.Drv(304000,304134,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -56407,7 +56407,7 @@ func (q *QListWidget) ItemAt(p *QPoint) *QListWidgetItem {
 	return _rp
 }	
 //QListWidget::itemAt(int,int)
-func (q *QListWidget) ItemAtWithXY(x int,y int) *QListWidgetItem {
+func (q *QListWidget) ItemAtWithXY(x int32,y int32) *QListWidgetItem {
 	var __rv uintptr
 	q.Drv(304000,304136,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -56471,8 +56471,8 @@ func (q *QListWidget) RemoveItemWidget(item *QListWidgetItem)  {
 	q.Drv(304000,304143,Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListWidget::row(QListWidgetItem const*)
-func (q *QListWidget) Row(item *QListWidgetItem) int {
-	var __rv int
+func (q *QListWidget) Row(item *QListWidgetItem) int32 {
+	var __rv int32
 	q.Drv(304000,304144,Native(item),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -56499,11 +56499,11 @@ func (q *QListWidget) SetCurrentItemWithItemCommand(item *QListWidgetItem,comman
 	q.Drv(304000,304149,Native(item),unsafe.Pointer(&command),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListWidget::setCurrentRow(int)
-func (q *QListWidget) SetCurrentRow(row int)  {
+func (q *QListWidget) SetCurrentRow(row int32)  {
 	q.Drv(304000,304150,unsafe.Pointer(&row),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListWidget::setCurrentRow(int,QFlags<QItemSelectionModel::SelectionFlag>)
-func (q *QListWidget) SetCurrentRowWithRowCommand(row int,command QItemSelectionModel_SelectionFlag)  {
+func (q *QListWidget) SetCurrentRowWithRowCommand(row int32,command QItemSelectionModel_SelectionFlag)  {
 	q.Drv(304000,304151,unsafe.Pointer(&row),unsafe.Pointer(&command),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QListWidget::setItemHidden(QListWidgetItem const*,bool)
@@ -56537,7 +56537,7 @@ func (q *QListWidget) SupportedDropActions() Qt_DropAction {
 	return __rv
 }	
 //QListWidget::takeItem(int)
-func (q *QListWidget) TakeItem(row int) *QListWidgetItem {
+func (q *QListWidget) TakeItem(row int32) *QListWidgetItem {
 	var __rv uintptr
 	q.Drv(304000,304159,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -56790,7 +56790,7 @@ func (q *QMainWindow) RestoreState(state []byte) bool {
 	return __rv
 }	
 //QMainWindow::restoreState(QByteArray const&,int)
-func (q *QMainWindow) RestoreStateWithStateVersion(state []byte,version int) bool {
+func (q *QMainWindow) RestoreStateWithStateVersion(state []byte,version int32) bool {
 	var __rv bool
 	q.Drv(305000,305134,unsafe.Pointer(&state),unsafe.Pointer(&version),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -56802,7 +56802,7 @@ func (q *QMainWindow) SaveState() []byte {
 	return __rv
 }	
 //QMainWindow::saveState(int)
-func (q *QMainWindow) SaveStateWithVersion(version int) []byte {
+func (q *QMainWindow) SaveStateWithVersion(version int32) []byte {
 	var __rv []byte
 	q.Drv(305000,305136,unsafe.Pointer(&version),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -57111,7 +57111,7 @@ func (q *QMdiArea) ResizeEvent(resizeEvent *QResizeEvent)  {
 	q.Drv(306000,306123,Native(resizeEvent),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QMdiArea::scrollContentsBy(int,int)
-func (q *QMdiArea) ScrollContentsBy(dx int,dy int)  {
+func (q *QMdiArea) ScrollContentsBy(dx int32,dy int32)  {
 	q.Drv(306000,306124,unsafe.Pointer(&dx),unsafe.Pointer(&dy),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QMdiArea::setActivationOrder(QMdiArea::WindowOrder)
@@ -57326,14 +57326,14 @@ func (q *QMdiSubWindow) KeyPressEvent(keyEvent *QKeyEvent)  {
 	q.Drv(307000,307116,Native(keyEvent),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QMdiSubWindow::keyboardPageStep()
-func (q *QMdiSubWindow) KeyboardPageStep() int {
-	var __rv int
+func (q *QMdiSubWindow) KeyboardPageStep() int32 {
+	var __rv int32
 	q.Drv(307000,307117,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMdiSubWindow::keyboardSingleStep()
-func (q *QMdiSubWindow) KeyboardSingleStep() int {
-	var __rv int
+func (q *QMdiSubWindow) KeyboardSingleStep() int32 {
+	var __rv int32
 	q.Drv(307000,307118,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -57414,11 +57414,11 @@ func (q *QMdiSubWindow) ResizeEvent(resizeEvent *QResizeEvent)  {
 	q.Drv(307000,307130,Native(resizeEvent),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QMdiSubWindow::setKeyboardPageStep(int)
-func (q *QMdiSubWindow) SetKeyboardPageStep(step int)  {
+func (q *QMdiSubWindow) SetKeyboardPageStep(step int32)  {
 	q.Drv(307000,307131,unsafe.Pointer(&step),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QMdiSubWindow::setKeyboardSingleStep(int)
-func (q *QMdiSubWindow) SetKeyboardSingleStep(step int)  {
+func (q *QMdiSubWindow) SetKeyboardSingleStep(step int32)  {
 	q.Drv(307000,307132,unsafe.Pointer(&step),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QMdiSubWindow::setOption(QMdiSubWindow::SubWindowOption)
@@ -57701,8 +57701,8 @@ func (q *QMenu) Clear()  {
 	q.Drv(308000,308123,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QMenu::columnCount()
-func (q *QMenu) ColumnCount() int {
-	var __rv int
+func (q *QMenu) ColumnCount() int32 {
+	var __rv int32
 	q.Drv(308000,308124,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -58177,8 +58177,8 @@ func (q *QMenuBar) FocusOutEvent(value *QFocusEvent)  {
 	q.Drv(309000,309124,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QMenuBar::heightForWidth(int)
-func (q *QMenuBar) HeightForWidth(value int) int {
-	var __rv int
+func (q *QMenuBar) HeightForWidth(value int32) int32 {
+	var __rv int32
 	q.Drv(309000,309125,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -58434,7 +58434,7 @@ func NewQMessageBoxWithIconTitleTextButtonsParentFlags(icon QMessageBox_Icon,tit
 	return _p
 } 
 //QMessageBox::QMessageBox(QString const&,QString const&,QMessageBox::Icon,int,int,int,QWidget*,QFlags<Qt::WindowType>)	
-func NewQMessageBoxWithTitleTextIconButton0Button1Button2ParentFlags(title string,text string,icon QMessageBox_Icon,button0 int,button1 int,button2 int,parent QWidgetInterface,f Qt_WindowType) *QMessageBox {
+func NewQMessageBoxWithTitleTextIconButton0Button1Button2ParentFlags(title string,text string,icon QMessageBox_Icon,button0 int32,button1 int32,button2 int32,parent QWidgetInterface,f Qt_WindowType) *QMessageBox {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),310000,310106,unsafe.Pointer(&title),unsafe.Pointer(&text),unsafe.Pointer(&icon),unsafe.Pointer(&button0),unsafe.Pointer(&button1),unsafe.Pointer(&button2),Native(parent),unsafe.Pointer(&f),nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -58512,7 +58512,7 @@ func (q *QMessageBox) ButtonRole(button *QAbstractButton) QMessageBox_ButtonRole
 	return __rv
 }	
 //QMessageBox::buttonText(int)
-func (q *QMessageBox) ButtonText(button int) string {
+func (q *QMessageBox) ButtonText(button int32) string {
 	var __rv string
 	q.Drv(310000,310115,unsafe.Pointer(&button),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -58555,26 +58555,26 @@ func (q *QMessageBox) CriticalWithParentTitleTextButtonsStandardbutton(parent QW
 	return __rv
 }	
 //QMessageBox::critical(QWidget*,QString const&,QString const&,int,int,int)	
-func QMessageBoxCriticalWithParentTitleTextButton0Button1Button2(parent QWidgetInterface,title string,text string,button0 int,button1 int,button2 int) int {
-	var __rv int
+func QMessageBoxCriticalWithParentTitleTextButton0Button1Button2(parent QWidgetInterface,title string,text string,button0 int32,button1 int32,button2 int32) int32 {
+	var __rv int32
 	DirectQtDrv(nil,310000,310121,Native(parent),unsafe.Pointer(&title),unsafe.Pointer(&text),unsafe.Pointer(&button0),unsafe.Pointer(&button1),unsafe.Pointer(&button2),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMessageBox::critical(QWidget*,QString const&,QString const&,int,int,int)
-func (q *QMessageBox) CriticalWithParentTitleTextButton0Button1Button2(parent QWidgetInterface,title string,text string,button0 int,button1 int,button2 int) int {
-	var __rv int
+func (q *QMessageBox) CriticalWithParentTitleTextButton0Button1Button2(parent QWidgetInterface,title string,text string,button0 int32,button1 int32,button2 int32) int32 {
+	var __rv int32
 	q.Drv(310000,310121,Native(parent),unsafe.Pointer(&title),unsafe.Pointer(&text),unsafe.Pointer(&button0),unsafe.Pointer(&button1),unsafe.Pointer(&button2),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMessageBox::critical(QWidget*,QString const&,QString const&,QString const&,QString const&,QString const&,int,int)	
-func QMessageBoxCriticalWithParentTitleTextButton0textButton1textButton2textDefaultbuttonnumberEscapebuttonnumber(parent QWidgetInterface,title string,text string,button0Text string,button1Text string,button2Text string,defaultButtonNumber int,escapeButtonNumber int) int {
-	var __rv int
+func QMessageBoxCriticalWithParentTitleTextButton0textButton1textButton2textDefaultbuttonnumberEscapebuttonnumber(parent QWidgetInterface,title string,text string,button0Text string,button1Text string,button2Text string,defaultButtonNumber int32,escapeButtonNumber int32) int32 {
+	var __rv int32
 	DirectQtDrv(nil,310000,310122,Native(parent),unsafe.Pointer(&title),unsafe.Pointer(&text),unsafe.Pointer(&button0Text),unsafe.Pointer(&button1Text),unsafe.Pointer(&button2Text),unsafe.Pointer(&defaultButtonNumber),unsafe.Pointer(&escapeButtonNumber),unsafe.Pointer(&__rv),nil,nil,nil)
 	return __rv
 }	
 //QMessageBox::critical(QWidget*,QString const&,QString const&,QString const&,QString const&,QString const&,int,int)
-func (q *QMessageBox) CriticalWithParentTitleTextButton0textButton1textButton2textDefaultbuttonnumberEscapebuttonnumber(parent QWidgetInterface,title string,text string,button0Text string,button1Text string,button2Text string,defaultButtonNumber int,escapeButtonNumber int) int {
-	var __rv int
+func (q *QMessageBox) CriticalWithParentTitleTextButton0textButton1textButton2textDefaultbuttonnumberEscapebuttonnumber(parent QWidgetInterface,title string,text string,button0Text string,button1Text string,button2Text string,defaultButtonNumber int32,escapeButtonNumber int32) int32 {
+	var __rv int32
 	q.Drv(310000,310122,Native(parent),unsafe.Pointer(&title),unsafe.Pointer(&text),unsafe.Pointer(&button0Text),unsafe.Pointer(&button1Text),unsafe.Pointer(&button2Text),unsafe.Pointer(&defaultButtonNumber),unsafe.Pointer(&escapeButtonNumber),unsafe.Pointer(&__rv),nil,nil,nil)
 	return __rv
 }	
@@ -58642,26 +58642,26 @@ func (q *QMessageBox) InformationWithParentTitleTextButtonsStandardbutton(parent
 	return __rv
 }	
 //QMessageBox::information(QWidget*,QString const&,QString const&,int,int,int)	
-func QMessageBoxInformationWithParentTitleTextButton0Button1Button2(parent QWidgetInterface,title string,text string,button0 int,button1 int,button2 int) int {
-	var __rv int
+func QMessageBoxInformationWithParentTitleTextButton0Button1Button2(parent QWidgetInterface,title string,text string,button0 int32,button1 int32,button2 int32) int32 {
+	var __rv int32
 	DirectQtDrv(nil,310000,310130,Native(parent),unsafe.Pointer(&title),unsafe.Pointer(&text),unsafe.Pointer(&button0),unsafe.Pointer(&button1),unsafe.Pointer(&button2),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMessageBox::information(QWidget*,QString const&,QString const&,int,int,int)
-func (q *QMessageBox) InformationWithParentTitleTextButton0Button1Button2(parent QWidgetInterface,title string,text string,button0 int,button1 int,button2 int) int {
-	var __rv int
+func (q *QMessageBox) InformationWithParentTitleTextButton0Button1Button2(parent QWidgetInterface,title string,text string,button0 int32,button1 int32,button2 int32) int32 {
+	var __rv int32
 	q.Drv(310000,310130,Native(parent),unsafe.Pointer(&title),unsafe.Pointer(&text),unsafe.Pointer(&button0),unsafe.Pointer(&button1),unsafe.Pointer(&button2),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMessageBox::information(QWidget*,QString const&,QString const&,QString const&,QString const&,QString const&,int,int)	
-func QMessageBoxInformationWithParentTitleTextButton0textButton1textButton2textDefaultbuttonnumberEscapebuttonnumber(parent QWidgetInterface,title string,text string,button0Text string,button1Text string,button2Text string,defaultButtonNumber int,escapeButtonNumber int) int {
-	var __rv int
+func QMessageBoxInformationWithParentTitleTextButton0textButton1textButton2textDefaultbuttonnumberEscapebuttonnumber(parent QWidgetInterface,title string,text string,button0Text string,button1Text string,button2Text string,defaultButtonNumber int32,escapeButtonNumber int32) int32 {
+	var __rv int32
 	DirectQtDrv(nil,310000,310131,Native(parent),unsafe.Pointer(&title),unsafe.Pointer(&text),unsafe.Pointer(&button0Text),unsafe.Pointer(&button1Text),unsafe.Pointer(&button2Text),unsafe.Pointer(&defaultButtonNumber),unsafe.Pointer(&escapeButtonNumber),unsafe.Pointer(&__rv),nil,nil,nil)
 	return __rv
 }	
 //QMessageBox::information(QWidget*,QString const&,QString const&,QString const&,QString const&,QString const&,int,int)
-func (q *QMessageBox) InformationWithParentTitleTextButton0textButton1textButton2textDefaultbuttonnumberEscapebuttonnumber(parent QWidgetInterface,title string,text string,button0Text string,button1Text string,button2Text string,defaultButtonNumber int,escapeButtonNumber int) int {
-	var __rv int
+func (q *QMessageBox) InformationWithParentTitleTextButton0textButton1textButton2textDefaultbuttonnumberEscapebuttonnumber(parent QWidgetInterface,title string,text string,button0Text string,button1Text string,button2Text string,defaultButtonNumber int32,escapeButtonNumber int32) int32 {
+	var __rv int32
 	q.Drv(310000,310131,Native(parent),unsafe.Pointer(&title),unsafe.Pointer(&text),unsafe.Pointer(&button0Text),unsafe.Pointer(&button1Text),unsafe.Pointer(&button2Text),unsafe.Pointer(&defaultButtonNumber),unsafe.Pointer(&escapeButtonNumber),unsafe.Pointer(&__rv),nil,nil,nil)
 	return __rv
 }	
@@ -58696,26 +58696,26 @@ func (q *QMessageBox) QuestionWithParentTitleTextButtonsStandardbutton(parent QW
 	return __rv
 }	
 //QMessageBox::question(QWidget*,QString const&,QString const&,int,int,int)	
-func QMessageBoxQuestionWithParentTitleTextButton0Button1Button2(parent QWidgetInterface,title string,text string,button0 int,button1 int,button2 int) int {
-	var __rv int
+func QMessageBoxQuestionWithParentTitleTextButton0Button1Button2(parent QWidgetInterface,title string,text string,button0 int32,button1 int32,button2 int32) int32 {
+	var __rv int32
 	DirectQtDrv(nil,310000,310137,Native(parent),unsafe.Pointer(&title),unsafe.Pointer(&text),unsafe.Pointer(&button0),unsafe.Pointer(&button1),unsafe.Pointer(&button2),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMessageBox::question(QWidget*,QString const&,QString const&,int,int,int)
-func (q *QMessageBox) QuestionWithParentTitleTextButton0Button1Button2(parent QWidgetInterface,title string,text string,button0 int,button1 int,button2 int) int {
-	var __rv int
+func (q *QMessageBox) QuestionWithParentTitleTextButton0Button1Button2(parent QWidgetInterface,title string,text string,button0 int32,button1 int32,button2 int32) int32 {
+	var __rv int32
 	q.Drv(310000,310137,Native(parent),unsafe.Pointer(&title),unsafe.Pointer(&text),unsafe.Pointer(&button0),unsafe.Pointer(&button1),unsafe.Pointer(&button2),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMessageBox::question(QWidget*,QString const&,QString const&,QString const&,QString const&,QString const&,int,int)	
-func QMessageBoxQuestionWithParentTitleTextButton0textButton1textButton2textDefaultbuttonnumberEscapebuttonnumber(parent QWidgetInterface,title string,text string,button0Text string,button1Text string,button2Text string,defaultButtonNumber int,escapeButtonNumber int) int {
-	var __rv int
+func QMessageBoxQuestionWithParentTitleTextButton0textButton1textButton2textDefaultbuttonnumberEscapebuttonnumber(parent QWidgetInterface,title string,text string,button0Text string,button1Text string,button2Text string,defaultButtonNumber int32,escapeButtonNumber int32) int32 {
+	var __rv int32
 	DirectQtDrv(nil,310000,310138,Native(parent),unsafe.Pointer(&title),unsafe.Pointer(&text),unsafe.Pointer(&button0Text),unsafe.Pointer(&button1Text),unsafe.Pointer(&button2Text),unsafe.Pointer(&defaultButtonNumber),unsafe.Pointer(&escapeButtonNumber),unsafe.Pointer(&__rv),nil,nil,nil)
 	return __rv
 }	
 //QMessageBox::question(QWidget*,QString const&,QString const&,QString const&,QString const&,QString const&,int,int)
-func (q *QMessageBox) QuestionWithParentTitleTextButton0textButton1textButton2textDefaultbuttonnumberEscapebuttonnumber(parent QWidgetInterface,title string,text string,button0Text string,button1Text string,button2Text string,defaultButtonNumber int,escapeButtonNumber int) int {
-	var __rv int
+func (q *QMessageBox) QuestionWithParentTitleTextButton0textButton1textButton2textDefaultbuttonnumberEscapebuttonnumber(parent QWidgetInterface,title string,text string,button0Text string,button1Text string,button2Text string,defaultButtonNumber int32,escapeButtonNumber int32) int32 {
+	var __rv int32
 	q.Drv(310000,310138,Native(parent),unsafe.Pointer(&title),unsafe.Pointer(&text),unsafe.Pointer(&button0Text),unsafe.Pointer(&button1Text),unsafe.Pointer(&button2Text),unsafe.Pointer(&defaultButtonNumber),unsafe.Pointer(&escapeButtonNumber),unsafe.Pointer(&__rv),nil,nil,nil)
 	return __rv
 }	
@@ -58728,7 +58728,7 @@ func (q *QMessageBox) ResizeEvent(event *QResizeEvent)  {
 	q.Drv(310000,310140,Native(event),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QMessageBox::setButtonText(int,QString const&)
-func (q *QMessageBox) SetButtonText(button int,text string)  {
+func (q *QMessageBox) SetButtonText(button int32,text string)  {
 	q.Drv(310000,310141,unsafe.Pointer(&button),unsafe.Pointer(&text),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QMessageBox::setDefaultButton(QMessageBox::StandardButton)
@@ -58857,26 +58857,26 @@ func (q *QMessageBox) WarningWithParentTitleTextButtonsStandardbutton(parent QWi
 	return __rv
 }	
 //QMessageBox::warning(QWidget*,QString const&,QString const&,int,int,int)	
-func QMessageBoxWarningWithParentTitleTextButton0Button1Button2(parent QWidgetInterface,title string,text string,button0 int,button1 int,button2 int) int {
-	var __rv int
+func QMessageBoxWarningWithParentTitleTextButton0Button1Button2(parent QWidgetInterface,title string,text string,button0 int32,button1 int32,button2 int32) int32 {
+	var __rv int32
 	DirectQtDrv(nil,310000,310163,Native(parent),unsafe.Pointer(&title),unsafe.Pointer(&text),unsafe.Pointer(&button0),unsafe.Pointer(&button1),unsafe.Pointer(&button2),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMessageBox::warning(QWidget*,QString const&,QString const&,int,int,int)
-func (q *QMessageBox) WarningWithParentTitleTextButton0Button1Button2(parent QWidgetInterface,title string,text string,button0 int,button1 int,button2 int) int {
-	var __rv int
+func (q *QMessageBox) WarningWithParentTitleTextButton0Button1Button2(parent QWidgetInterface,title string,text string,button0 int32,button1 int32,button2 int32) int32 {
+	var __rv int32
 	q.Drv(310000,310163,Native(parent),unsafe.Pointer(&title),unsafe.Pointer(&text),unsafe.Pointer(&button0),unsafe.Pointer(&button1),unsafe.Pointer(&button2),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMessageBox::warning(QWidget*,QString const&,QString const&,QString const&,QString const&,QString const&,int,int)	
-func QMessageBoxWarningWithParentTitleTextButton0textButton1textButton2textDefaultbuttonnumberEscapebuttonnumber(parent QWidgetInterface,title string,text string,button0Text string,button1Text string,button2Text string,defaultButtonNumber int,escapeButtonNumber int) int {
-	var __rv int
+func QMessageBoxWarningWithParentTitleTextButton0textButton1textButton2textDefaultbuttonnumberEscapebuttonnumber(parent QWidgetInterface,title string,text string,button0Text string,button1Text string,button2Text string,defaultButtonNumber int32,escapeButtonNumber int32) int32 {
+	var __rv int32
 	DirectQtDrv(nil,310000,310164,Native(parent),unsafe.Pointer(&title),unsafe.Pointer(&text),unsafe.Pointer(&button0Text),unsafe.Pointer(&button1Text),unsafe.Pointer(&button2Text),unsafe.Pointer(&defaultButtonNumber),unsafe.Pointer(&escapeButtonNumber),unsafe.Pointer(&__rv),nil,nil,nil)
 	return __rv
 }	
 //QMessageBox::warning(QWidget*,QString const&,QString const&,QString const&,QString const&,QString const&,int,int)
-func (q *QMessageBox) WarningWithParentTitleTextButton0textButton1textButton2textDefaultbuttonnumberEscapebuttonnumber(parent QWidgetInterface,title string,text string,button0Text string,button1Text string,button2Text string,defaultButtonNumber int,escapeButtonNumber int) int {
-	var __rv int
+func (q *QMessageBox) WarningWithParentTitleTextButton0textButton1textButton2textDefaultbuttonnumberEscapebuttonnumber(parent QWidgetInterface,title string,text string,button0Text string,button1Text string,button2Text string,defaultButtonNumber int32,escapeButtonNumber int32) int32 {
+	var __rv int32
 	q.Drv(310000,310164,Native(parent),unsafe.Pointer(&title),unsafe.Pointer(&text),unsafe.Pointer(&button0Text),unsafe.Pointer(&button1Text),unsafe.Pointer(&button2Text),unsafe.Pointer(&defaultButtonNumber),unsafe.Pointer(&escapeButtonNumber),unsafe.Pointer(&__rv),nil,nil,nil)
 	return __rv
 }	
@@ -59155,7 +59155,7 @@ func NewQMovieFromDriver(drv Driver) *QMovie {
 	}
 	return _p
 } 	
-func (q *QMovie) OnFrameChanged(fn func(int)) uintptr {
+func (q *QMovie) OnFrameChanged(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(313000,313102,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -59259,8 +59259,8 @@ func (q *QMovie) CacheMode() QMovie_CacheMode {
 	return __rv
 }	
 //QMovie::currentFrameNumber()
-func (q *QMovie) CurrentFrameNumber() int {
-	var __rv int
+func (q *QMovie) CurrentFrameNumber() int32 {
+	var __rv int32
 	q.Drv(313000,313115,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -59310,8 +59310,8 @@ func (q *QMovie) Format() []byte {
 	return __rv
 }	
 //QMovie::frameCount()
-func (q *QMovie) FrameCount() int {
-	var __rv int
+func (q *QMovie) FrameCount() int32 {
+	var __rv int32
 	q.Drv(313000,313121,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -59333,7 +59333,7 @@ func (q *QMovie) IsValid() bool {
 	return __rv
 }	
 //QMovie::jumpToFrame(int)
-func (q *QMovie) JumpToFrame(frameNumber int) bool {
+func (q *QMovie) JumpToFrame(frameNumber int32) bool {
 	var __rv bool
 	q.Drv(313000,313124,unsafe.Pointer(&frameNumber),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -59345,14 +59345,14 @@ func (q *QMovie) JumpToNextFrame() bool {
 	return __rv
 }	
 //QMovie::loopCount()
-func (q *QMovie) LoopCount() int {
-	var __rv int
+func (q *QMovie) LoopCount() int32 {
+	var __rv int32
 	q.Drv(313000,313126,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QMovie::nextFrameDelay()
-func (q *QMovie) NextFrameDelay() int {
-	var __rv int
+func (q *QMovie) NextFrameDelay() int32 {
+	var __rv int32
 	q.Drv(313000,313127,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -59396,12 +59396,12 @@ func (q *QMovie) SetScaledSize(size *QSize)  {
 	q.Drv(313000,313135,Native(size),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QMovie::setSpeed(int)
-func (q *QMovie) SetSpeed(percentSpeed int)  {
+func (q *QMovie) SetSpeed(percentSpeed int32)  {
 	q.Drv(313000,313136,unsafe.Pointer(&percentSpeed),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QMovie::speed()
-func (q *QMovie) Speed() int {
-	var __rv int
+func (q *QMovie) Speed() int32 {
+	var __rv int32
 	q.Drv(313000,313137,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -59551,7 +59551,7 @@ func (q *QObject) IsWidgetType() bool {
 	return __rv
 }	
 //QObject::killTimer(int)
-func (q *QObject) KillTimer(id int)  {
+func (q *QObject) KillTimer(id int32)  {
 	q.Drv(314000,314118,unsafe.Pointer(&id),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QObject::metaObject()
@@ -59594,20 +59594,20 @@ func (q *QObject) Property(name string) *QVariant {
 	return _rp
 }	
 //QObject::receivers(char const*)
-func (q *QObject) Receivers(signal string) int {
-	var __rv int
+func (q *QObject) Receivers(signal string) int32 {
+	var __rv int32
 	q.Drv(314000,314123,unsafe.Pointer(&signal),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QObject::registerUserData()	
-func QObjectRegisterUserData() uint {
-	var __rv uint
+func QObjectRegisterUserData() uint32 {
+	var __rv uint32
 	DirectQtDrv(nil,314000,314124,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QObject::registerUserData()
-func (q *QObject) RegisterUserData() uint {
-	var __rv uint
+func (q *QObject) RegisterUserData() uint32 {
+	var __rv uint32
 	q.Drv(314000,314124,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -59643,8 +59643,8 @@ func (q *QObject) SignalsBlocked() bool {
 	return __rv
 }	
 //QObject::startTimer(int)
-func (q *QObject) StartTimer(interval int) int {
-	var __rv int
+func (q *QObject) StartTimer(interval int32) int32 {
+	var __rv int32
 	q.Drv(314000,314130,unsafe.Pointer(&interval),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -60467,8 +60467,8 @@ func NewQParallelAnimationGroupWithParent(parent QObjectInterface) *QParallelAni
 	return _p
 } 
 //QParallelAnimationGroup::duration()
-func (q *QParallelAnimationGroup) Duration() int {
-	var __rv int
+func (q *QParallelAnimationGroup) Duration() int32 {
+	var __rv int32
 	q.Drv(317000,317104,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -60479,7 +60479,7 @@ func (q *QParallelAnimationGroup) Event(event *QEvent) bool {
 	return __rv
 }	
 //QParallelAnimationGroup::updateCurrentTime(int)
-func (q *QParallelAnimationGroup) UpdateCurrentTime(currentTime int)  {
+func (q *QParallelAnimationGroup) UpdateCurrentTime(currentTime int32)  {
 	q.Drv(317000,317106,unsafe.Pointer(&currentTime),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QParallelAnimationGroup::updateDirection(QAbstractAnimation::Direction)
@@ -60527,7 +60527,7 @@ func NewQPauseAnimationWithParent(parent QObjectInterface) *QPauseAnimation {
 	return _p
 } 
 //QPauseAnimation::QPauseAnimation(int,QObject*)	
-func NewQPauseAnimationWithMsecsParent(msecs int,parent QObjectInterface) *QPauseAnimation {
+func NewQPauseAnimationWithMsecsParent(msecs int32,parent QObjectInterface) *QPauseAnimation {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),318000,318104,unsafe.Pointer(&msecs),Native(parent),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -60538,8 +60538,8 @@ func NewQPauseAnimationWithMsecsParent(msecs int,parent QObjectInterface) *QPaus
 	return _p
 } 
 //QPauseAnimation::duration()
-func (q *QPauseAnimation) Duration() int {
-	var __rv int
+func (q *QPauseAnimation) Duration() int32 {
+	var __rv int32
 	q.Drv(318000,318105,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -60550,11 +60550,11 @@ func (q *QPauseAnimation) Event(e *QEvent) bool {
 	return __rv
 }	
 //QPauseAnimation::setDuration(int)
-func (q *QPauseAnimation) SetDuration(msecs int)  {
+func (q *QPauseAnimation) SetDuration(msecs int32)  {
 	q.Drv(318000,318107,unsafe.Pointer(&msecs),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPauseAnimation::updateCurrentTime(int)
-func (q *QPauseAnimation) UpdateCurrentTime(value int)  {
+func (q *QPauseAnimation) UpdateCurrentTime(value int32)  {
 	q.Drv(318000,318108,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 
@@ -60762,13 +60762,13 @@ func (q *QPlainTextDocumentLayout) BlockBoundingRect(block *QTextBlock) *QRectF 
 	return _rp
 }	
 //QPlainTextDocumentLayout::cursorWidth()
-func (q *QPlainTextDocumentLayout) CursorWidth() int {
-	var __rv int
+func (q *QPlainTextDocumentLayout) CursorWidth() int32 {
+	var __rv int32
 	q.Drv(320000,320104,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QPlainTextDocumentLayout::documentChanged(int,int,int)
-func (q *QPlainTextDocumentLayout) DocumentChanged(from int,value2 int,charsAdded int)  {
+func (q *QPlainTextDocumentLayout) DocumentChanged(from int32,value2 int32,charsAdded int32)  {
 	q.Drv(320000,320105,unsafe.Pointer(&from),unsafe.Pointer(&value2),unsafe.Pointer(&charsAdded),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPlainTextDocumentLayout::documentSize()
@@ -60802,14 +60802,14 @@ func (q *QPlainTextDocumentLayout) FrameBoundingRect(value *QTextFrame) *QRectF 
 	return _rp
 }	
 //QPlainTextDocumentLayout::hitTest(QPointF const&,Qt::HitTestAccuracy)
-func (q *QPlainTextDocumentLayout) HitTest(value2 *QPointF,value3 Qt_HitTestAccuracy) int {
-	var __rv int
+func (q *QPlainTextDocumentLayout) HitTest(value2 *QPointF,value3 Qt_HitTestAccuracy) int32 {
+	var __rv int32
 	q.Drv(320000,320110,Native(value2),unsafe.Pointer(&value3),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QPlainTextDocumentLayout::pageCount()
-func (q *QPlainTextDocumentLayout) PageCount() int {
-	var __rv int
+func (q *QPlainTextDocumentLayout) PageCount() int32 {
+	var __rv int32
 	q.Drv(320000,320111,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -60818,7 +60818,7 @@ func (q *QPlainTextDocumentLayout) RequestUpdate()  {
 	q.Drv(320000,320112,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPlainTextDocumentLayout::setCursorWidth(int)
-func (q *QPlainTextDocumentLayout) SetCursorWidth(width int)  {
+func (q *QPlainTextDocumentLayout) SetCursorWidth(width int32)  {
 	q.Drv(320000,320113,unsafe.Pointer(&width),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 
@@ -60853,13 +60853,13 @@ func (q *QPlainTextEdit) OnUndoAvailable(fn func(bool)) uintptr {
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QPlainTextEdit) OnBlockCountChanged(fn func(int)) uintptr {
+func (q *QPlainTextEdit) OnBlockCountChanged(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(321000,321104,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QPlainTextEdit) OnUpdateRequest(fn func(*QRect,int)) uintptr {
+func (q *QPlainTextEdit) OnUpdateRequest(fn func(*QRect,int32)) uintptr {
 	var __rv uintptr
 	q.Drv(321000,321105,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -60971,8 +60971,8 @@ func (q *QPlainTextEdit) BlockBoundingRect(block *QTextBlock) *QRectF {
 	return _rp
 }	
 //QPlainTextEdit::blockCount()
-func (q *QPlainTextEdit) BlockCount() int {
-	var __rv int
+func (q *QPlainTextEdit) BlockCount() int32 {
+	var __rv int32
 	q.Drv(321000,321120,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -61092,8 +61092,8 @@ func (q *QPlainTextEdit) CursorRectWithCursor(cursor *QTextCursor) *QRect {
 	return _rp
 }	
 //QPlainTextEdit::cursorWidth()
-func (q *QPlainTextEdit) CursorWidth() int {
-	var __rv int
+func (q *QPlainTextEdit) CursorWidth() int32 {
+	var __rv int32
 	q.Drv(321000,321136,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -61248,7 +61248,7 @@ func (q *QPlainTextEdit) LineWrapMode() QPlainTextEdit_LineWrapMode {
 	return __rv
 }	
 //QPlainTextEdit::loadResource(int,QUrl const&)
-func (q *QPlainTextEdit) LoadResource(_type int,name *QUrl) *QVariant {
+func (q *QPlainTextEdit) LoadResource(_type int32,name *QUrl) *QVariant {
 	var __rv uintptr
 	q.Drv(321000,321163,unsafe.Pointer(&_type),Native(name),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -61259,8 +61259,8 @@ func (q *QPlainTextEdit) LoadResource(_type int,name *QUrl) *QVariant {
 	return _rp
 }	
 //QPlainTextEdit::maximumBlockCount()
-func (q *QPlainTextEdit) MaximumBlockCount() int {
-	var __rv int
+func (q *QPlainTextEdit) MaximumBlockCount() int32 {
+	var __rv int32
 	q.Drv(321000,321164,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -61319,7 +61319,7 @@ func (q *QPlainTextEdit) ResizeEvent(e *QResizeEvent)  {
 	q.Drv(321000,321177,Native(e),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPlainTextEdit::scrollContentsBy(int,int)
-func (q *QPlainTextEdit) ScrollContentsBy(dx int,dy int)  {
+func (q *QPlainTextEdit) ScrollContentsBy(dx int32,dy int32)  {
 	q.Drv(321000,321178,unsafe.Pointer(&dx),unsafe.Pointer(&dy),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPlainTextEdit::selectAll()
@@ -61339,7 +61339,7 @@ func (q *QPlainTextEdit) SetCurrentCharFormat(format *QTextCharFormat)  {
 	q.Drv(321000,321182,Native(format),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPlainTextEdit::setCursorWidth(int)
-func (q *QPlainTextEdit) SetCursorWidth(width int)  {
+func (q *QPlainTextEdit) SetCursorWidth(width int32)  {
 	q.Drv(321000,321183,unsafe.Pointer(&width),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPlainTextEdit::setDocument(QTextDocument*)
@@ -61359,7 +61359,7 @@ func (q *QPlainTextEdit) SetLineWrapMode(mode QPlainTextEdit_LineWrapMode)  {
 	q.Drv(321000,321187,unsafe.Pointer(&mode),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPlainTextEdit::setMaximumBlockCount(int)
-func (q *QPlainTextEdit) SetMaximumBlockCount(maximum int)  {
+func (q *QPlainTextEdit) SetMaximumBlockCount(maximum int32)  {
 	q.Drv(321000,321188,unsafe.Pointer(&maximum),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPlainTextEdit::setOverwriteMode(bool)
@@ -61379,7 +61379,7 @@ func (q *QPlainTextEdit) SetTabChangesFocus(b bool)  {
 	q.Drv(321000,321192,unsafe.Pointer(&b),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPlainTextEdit::setTabStopWidth(int)
-func (q *QPlainTextEdit) SetTabStopWidth(width int)  {
+func (q *QPlainTextEdit) SetTabStopWidth(width int32)  {
 	q.Drv(321000,321193,unsafe.Pointer(&width),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPlainTextEdit::setTextCursor(QTextCursor const&)
@@ -61409,8 +61409,8 @@ func (q *QPlainTextEdit) TabChangesFocus() bool {
 	return __rv
 }	
 //QPlainTextEdit::tabStopWidth()
-func (q *QPlainTextEdit) TabStopWidth() int {
-	var __rv int
+func (q *QPlainTextEdit) TabStopWidth() int32 {
+	var __rv int32
 	q.Drv(321000,321200,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -61627,12 +61627,12 @@ func (q *QPrintDialog) Accepted()  {
 	q.Drv(323000,323106,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPrintDialog::done(int)
-func (q *QPrintDialog) Done(result int)  {
+func (q *QPrintDialog) Done(result int32)  {
 	q.Drv(323000,323107,unsafe.Pointer(&result),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPrintDialog::exec()
-func (q *QPrintDialog) Exec() int {
-	var __rv int
+func (q *QPrintDialog) Exec() int32 {
+	var __rv int32
 	q.Drv(323000,323108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -61726,7 +61726,7 @@ func NewQPrintPreviewDialogWithPrinterParentFlags(printer *QPrinter,parent QWidg
 	return _p
 } 
 //QPrintPreviewDialog::done(int)
-func (q *QPrintPreviewDialog) Done(result int)  {
+func (q *QPrintPreviewDialog) Done(result int32)  {
 	q.Drv(324000,324106,unsafe.Pointer(&result),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPrintPreviewDialog::open()
@@ -61826,8 +61826,8 @@ func NewQPrintPreviewWidgetWithPrinterParentFlags(printer *QPrinter,parent QWidg
 	return _p
 } 
 //QPrintPreviewWidget::currentPage()
-func (q *QPrintPreviewWidget) CurrentPage() int {
-	var __rv int
+func (q *QPrintPreviewWidget) CurrentPage() int32 {
+	var __rv int32
 	q.Drv(325000,325107,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -61846,8 +61846,8 @@ func (q *QPrintPreviewWidget) Orientation() QPrinter_Orientation {
 	return __rv
 }	
 //QPrintPreviewWidget::pageCount()
-func (q *QPrintPreviewWidget) PageCount() int {
-	var __rv int
+func (q *QPrintPreviewWidget) PageCount() int32 {
+	var __rv int32
 	q.Drv(325000,325111,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -61860,7 +61860,7 @@ func (q *QPrintPreviewWidget) SetAllPagesViewMode()  {
 	q.Drv(325000,325113,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPrintPreviewWidget::setCurrentPage(int)
-func (q *QPrintPreviewWidget) SetCurrentPage(pageNumber int)  {
+func (q *QPrintPreviewWidget) SetCurrentPage(pageNumber int32)  {
 	q.Drv(325000,325114,unsafe.Pointer(&pageNumber),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPrintPreviewWidget::setFacingPagesViewMode()
@@ -62017,13 +62017,13 @@ func (q *QProcess) OnReadyReadStandardOutput(fn func()) uintptr {
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QProcess) OnFinished(fn func(int,QProcess_ExitStatus)) uintptr {
+func (q *QProcess) OnFinished(fn func(int32,QProcess_ExitStatus)) uintptr {
 	var __rv uintptr
 	q.Drv(326000,326107,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QProcess) OnFinishedWithExitcode(fn func(int)) uintptr {
+func (q *QProcess) OnFinishedWithExitcode(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(326000,326108,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -62100,32 +62100,32 @@ func (q *QProcess) Error() QProcess_ProcessError {
 	return __rv
 }	
 //QProcess::execute(QString const&)	
-func QProcessExecute(program string) int {
-	var __rv int
+func QProcessExecute(program string) int32 {
+	var __rv int32
 	DirectQtDrv(nil,326000,326120,unsafe.Pointer(&program),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QProcess::execute(QString const&)
-func (q *QProcess) Execute(program string) int {
-	var __rv int
+func (q *QProcess) Execute(program string) int32 {
+	var __rv int32
 	q.Drv(326000,326120,unsafe.Pointer(&program),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QProcess::execute(QString const&,QStringList const&)	
-func QProcessExecuteWithProgramArguments(program string,arguments []string) int {
-	var __rv int
+func QProcessExecuteWithProgramArguments(program string,arguments []string) int32 {
+	var __rv int32
 	DirectQtDrv(nil,326000,326121,unsafe.Pointer(&program),unsafe.Pointer(&arguments),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QProcess::execute(QString const&,QStringList const&)
-func (q *QProcess) ExecuteWithProgramArguments(program string,arguments []string) int {
-	var __rv int
+func (q *QProcess) ExecuteWithProgramArguments(program string,arguments []string) int32 {
+	var __rv int32
 	q.Drv(326000,326121,unsafe.Pointer(&program),unsafe.Pointer(&arguments),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QProcess::exitCode()
-func (q *QProcess) ExitCode() int {
-	var __rv int
+func (q *QProcess) ExitCode() int32 {
+	var __rv int32
 	q.Drv(326000,326122,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -62325,7 +62325,7 @@ func (q *QProcess) WaitForBytesWritten() bool {
 	return __rv
 }	
 //QProcess::waitForBytesWritten(int)
-func (q *QProcess) WaitForBytesWrittenWithMsecs(msecs int) bool {
+func (q *QProcess) WaitForBytesWrittenWithMsecs(msecs int32) bool {
 	var __rv bool
 	q.Drv(326000,326157,unsafe.Pointer(&msecs),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -62337,7 +62337,7 @@ func (q *QProcess) WaitForFinished() bool {
 	return __rv
 }	
 //QProcess::waitForFinished(int)
-func (q *QProcess) WaitForFinishedWithMsecs(msecs int) bool {
+func (q *QProcess) WaitForFinishedWithMsecs(msecs int32) bool {
 	var __rv bool
 	q.Drv(326000,326159,unsafe.Pointer(&msecs),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -62349,7 +62349,7 @@ func (q *QProcess) WaitForReadyRead() bool {
 	return __rv
 }	
 //QProcess::waitForReadyRead(int)
-func (q *QProcess) WaitForReadyReadWithMsecs(msecs int) bool {
+func (q *QProcess) WaitForReadyReadWithMsecs(msecs int32) bool {
 	var __rv bool
 	q.Drv(326000,326161,unsafe.Pointer(&msecs),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -62361,7 +62361,7 @@ func (q *QProcess) WaitForStarted() bool {
 	return __rv
 }	
 //QProcess::waitForStarted(int)
-func (q *QProcess) WaitForStartedWithMsecs(msecs int) bool {
+func (q *QProcess) WaitForStartedWithMsecs(msecs int32) bool {
 	var __rv bool
 	q.Drv(326000,326163,unsafe.Pointer(&msecs),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -62398,7 +62398,7 @@ func NewQProgressBarFromDriver(drv Driver) *QProgressBar {
 	}
 	return _p
 } 	
-func (q *QProgressBar) OnValueChanged(fn func(int)) uintptr {
+func (q *QProgressBar) OnValueChanged(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(327000,327102,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -62457,14 +62457,14 @@ func (q *QProgressBar) IsTextVisible() bool {
 	return __rv
 }	
 //QProgressBar::maximum()
-func (q *QProgressBar) Maximum() int {
-	var __rv int
+func (q *QProgressBar) Maximum() int32 {
+	var __rv int32
 	q.Drv(327000,327110,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QProgressBar::minimum()
-func (q *QProgressBar) Minimum() int {
-	var __rv int
+func (q *QProgressBar) Minimum() int32 {
+	var __rv int32
 	q.Drv(327000,327111,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -62506,11 +62506,11 @@ func (q *QProgressBar) SetInvertedAppearance(invert bool)  {
 	q.Drv(327000,327118,unsafe.Pointer(&invert),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QProgressBar::setMaximum(int)
-func (q *QProgressBar) SetMaximum(maximum int)  {
+func (q *QProgressBar) SetMaximum(maximum int32)  {
 	q.Drv(327000,327119,unsafe.Pointer(&maximum),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QProgressBar::setMinimum(int)
-func (q *QProgressBar) SetMinimum(minimum int)  {
+func (q *QProgressBar) SetMinimum(minimum int32)  {
 	q.Drv(327000,327120,unsafe.Pointer(&minimum),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QProgressBar::setOrientation(Qt::Orientation)
@@ -62518,7 +62518,7 @@ func (q *QProgressBar) SetOrientation(value Qt_Orientation)  {
 	q.Drv(327000,327121,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QProgressBar::setRange(int,int)
-func (q *QProgressBar) SetRange(minimum int,maximum int)  {
+func (q *QProgressBar) SetRange(minimum int32,maximum int32)  {
 	q.Drv(327000,327122,unsafe.Pointer(&minimum),unsafe.Pointer(&maximum),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QProgressBar::setTextDirection(QProgressBar::Direction)
@@ -62530,7 +62530,7 @@ func (q *QProgressBar) SetTextVisible(visible bool)  {
 	q.Drv(327000,327124,unsafe.Pointer(&visible),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QProgressBar::setValue(int)
-func (q *QProgressBar) SetValue(value int)  {
+func (q *QProgressBar) SetValue(value int32)  {
 	q.Drv(327000,327125,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QProgressBar::sizeHint()
@@ -62557,8 +62557,8 @@ func (q *QProgressBar) TextDirection() QProgressBar_Direction {
 	return __rv
 }	
 //QProgressBar::value()
-func (q *QProgressBar) Value() int {
-	var __rv int
+func (q *QProgressBar) Value() int32 {
+	var __rv int32
 	q.Drv(327000,327129,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -62605,7 +62605,7 @@ func NewQProgressDialogWithParentFlags(parent QWidgetInterface,flags Qt_WindowTy
 	return _p
 } 
 //QProgressDialog::QProgressDialog(QString const&,QString const&,int,int,QWidget*,QFlags<Qt::WindowType>)	
-func NewQProgressDialogWithLabeltextCancelbuttontextMinimumMaximumParentFlags(labelText string,cancelButtonText string,minimum int,maximum int,parent QWidgetInterface,flags Qt_WindowType) *QProgressDialog {
+func NewQProgressDialogWithLabeltextCancelbuttontextMinimumMaximumParentFlags(labelText string,cancelButtonText string,minimum int32,maximum int32,parent QWidgetInterface,flags Qt_WindowType) *QProgressDialog {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),328000,328105,unsafe.Pointer(&labelText),unsafe.Pointer(&cancelButtonText),unsafe.Pointer(&minimum),unsafe.Pointer(&maximum),Native(parent),unsafe.Pointer(&flags),nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -62650,20 +62650,20 @@ func (q *QProgressDialog) LabelText() string {
 	return __rv
 }	
 //QProgressDialog::maximum()
-func (q *QProgressDialog) Maximum() int {
-	var __rv int
+func (q *QProgressDialog) Maximum() int32 {
+	var __rv int32
 	q.Drv(328000,328113,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QProgressDialog::minimum()
-func (q *QProgressDialog) Minimum() int {
-	var __rv int
+func (q *QProgressDialog) Minimum() int32 {
+	var __rv int32
 	q.Drv(328000,328114,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QProgressDialog::minimumDuration()
-func (q *QProgressDialog) MinimumDuration() int {
-	var __rv int
+func (q *QProgressDialog) MinimumDuration() int32 {
+	var __rv int32
 	q.Drv(328000,328115,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -62712,23 +62712,23 @@ func (q *QProgressDialog) SetLabelText(text string)  {
 	q.Drv(328000,328126,unsafe.Pointer(&text),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QProgressDialog::setMaximum(int)
-func (q *QProgressDialog) SetMaximum(maximum int)  {
+func (q *QProgressDialog) SetMaximum(maximum int32)  {
 	q.Drv(328000,328127,unsafe.Pointer(&maximum),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QProgressDialog::setMinimum(int)
-func (q *QProgressDialog) SetMinimum(minimum int)  {
+func (q *QProgressDialog) SetMinimum(minimum int32)  {
 	q.Drv(328000,328128,unsafe.Pointer(&minimum),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QProgressDialog::setMinimumDuration(int)
-func (q *QProgressDialog) SetMinimumDuration(ms int)  {
+func (q *QProgressDialog) SetMinimumDuration(ms int32)  {
 	q.Drv(328000,328129,unsafe.Pointer(&ms),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QProgressDialog::setRange(int,int)
-func (q *QProgressDialog) SetRange(minimum int,maximum int)  {
+func (q *QProgressDialog) SetRange(minimum int32,maximum int32)  {
 	q.Drv(328000,328130,unsafe.Pointer(&minimum),unsafe.Pointer(&maximum),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QProgressDialog::setValue(int)
-func (q *QProgressDialog) SetValue(progress int)  {
+func (q *QProgressDialog) SetValue(progress int32)  {
 	q.Drv(328000,328131,unsafe.Pointer(&progress),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QProgressDialog::showEvent(QShowEvent*)
@@ -62747,8 +62747,8 @@ func (q *QProgressDialog) SizeHint() *QSize {
 	return _rp
 }	
 //QProgressDialog::value()
-func (q *QProgressDialog) Value() int {
-	var __rv int
+func (q *QProgressDialog) Value() int32 {
+	var __rv int32
 	q.Drv(328000,328134,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -62892,11 +62892,11 @@ func (q *QProxyStyle) BaseStyle() *QStyle {
 	return _rp
 }	
 //QProxyStyle::drawItemPixmap(QPainter*,QRect const&,int,QPixmap const&)
-func (q *QProxyStyle) DrawItemPixmap(painter *QPainter,rect *QRect,alignment int,pixmap *QPixmap)  {
+func (q *QProxyStyle) DrawItemPixmap(painter *QPainter,rect *QRect,alignment int32,pixmap *QPixmap)  {
 	q.Drv(330000,330105,Native(painter),Native(rect),unsafe.Pointer(&alignment),Native(pixmap),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QProxyStyle::drawItemText(QPainter*,QRect const&,int,QPalette const&,bool,QString const&,QPalette::ColorRole)
-func (q *QProxyStyle) DrawItemText(painter *QPainter,rect *QRect,flags int,pal *QPalette,enabled bool,text string,textRole QPalette_ColorRole)  {
+func (q *QProxyStyle) DrawItemText(painter *QPainter,rect *QRect,flags int32,pal *QPalette,enabled bool,text string,textRole QPalette_ColorRole)  {
 	q.Drv(330000,330106,Native(painter),Native(rect),unsafe.Pointer(&flags),Native(pal),unsafe.Pointer(&enabled),unsafe.Pointer(&text),unsafe.Pointer(&textRole),nil,nil,nil,nil,nil)
 }	
 //QProxyStyle::event(QEvent*)
@@ -62906,7 +62906,7 @@ func (q *QProxyStyle) Event(e *QEvent) bool {
 	return __rv
 }	
 //QProxyStyle::itemPixmapRect(QRect const&,int,QPixmap const&)
-func (q *QProxyStyle) ItemPixmapRect(r *QRect,flags int,pixmap *QPixmap) *QRect {
+func (q *QProxyStyle) ItemPixmapRect(r *QRect,flags int32,pixmap *QPixmap) *QRect {
 	var __rv uintptr
 	q.Drv(330000,330108,Native(r),unsafe.Pointer(&flags),Native(pixmap),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -62917,7 +62917,7 @@ func (q *QProxyStyle) ItemPixmapRect(r *QRect,flags int,pixmap *QPixmap) *QRect 
 	return _rp
 }	
 //QProxyStyle::itemTextRect(QFontMetrics const&,QRect const&,int,bool,QString const&)
-func (q *QProxyStyle) ItemTextRect(fm *QFontMetrics,r *QRect,flags int,enabled bool,text string) *QRect {
+func (q *QProxyStyle) ItemTextRect(fm *QFontMetrics,r *QRect,flags int32,enabled bool,text string) *QRect {
 	var __rv uintptr
 	q.Drv(330000,330109,Native(fm),Native(r),unsafe.Pointer(&flags),unsafe.Pointer(&enabled),unsafe.Pointer(&text),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -62928,8 +62928,8 @@ func (q *QProxyStyle) ItemTextRect(fm *QFontMetrics,r *QRect,flags int,enabled b
 	return _rp
 }	
 //QProxyStyle::pixelMetric(QStyle::PixelMetric)
-func (q *QProxyStyle) PixelMetric(metric QStyle_PixelMetric) int {
-	var __rv int
+func (q *QProxyStyle) PixelMetric(metric QStyle_PixelMetric) int32 {
+	var __rv int32
 	q.Drv(330000,330110,unsafe.Pointer(&metric),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -62961,8 +62961,8 @@ func (q *QProxyStyle) StandardPalette() *QPalette {
 	return _rp
 }	
 //QProxyStyle::styleHint(QStyle::StyleHint)
-func (q *QProxyStyle) StyleHint(hint QStyle_StyleHint) int {
-	var __rv int
+func (q *QProxyStyle) StyleHint(hint QStyle_StyleHint) int32 {
+	var __rv int32
 	q.Drv(330000,330116,unsafe.Pointer(&hint),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -63266,7 +63266,7 @@ func (q *QRegExpValidator) SetRegExp(rx *QRegExp)  {
 	q.Drv(333000,333106,Native(rx),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRegExpValidator::validate(QString&,int&)
-func (q *QRegExpValidator) Validate(input *string,pos *int) QValidator_State {
+func (q *QRegExpValidator) Validate(input *string,pos *int32) QValidator_State {
 	var __rv QValidator_State
 	q.Drv(333000,333107,unsafe.Pointer(&input),unsafe.Pointer(&pos),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -63317,7 +63317,7 @@ func (q *QRubberBand) Move(p *QPoint)  {
 	q.Drv(334000,334105,Native(p),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRubberBand::move(int,int)
-func (q *QRubberBand) MoveWithXY(x int,y int)  {
+func (q *QRubberBand) MoveWithXY(x int32,y int32)  {
 	q.Drv(334000,334106,unsafe.Pointer(&x),unsafe.Pointer(&y),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRubberBand::moveEvent(QMoveEvent*)
@@ -63333,7 +63333,7 @@ func (q *QRubberBand) Resize(s *QSize)  {
 	q.Drv(334000,334109,Native(s),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRubberBand::resize(int,int)
-func (q *QRubberBand) ResizeWithWidthHeight(w int,h int)  {
+func (q *QRubberBand) ResizeWithWidthHeight(w int32,h int32)  {
 	q.Drv(334000,334110,unsafe.Pointer(&w),unsafe.Pointer(&h),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRubberBand::resizeEvent(QResizeEvent*)
@@ -63345,7 +63345,7 @@ func (q *QRubberBand) SetGeometry(r *QRect)  {
 	q.Drv(334000,334112,Native(r),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRubberBand::setGeometry(int,int,int,int)
-func (q *QRubberBand) SetGeometryWithXYWidthHeight(x int,y int,w int,h int)  {
+func (q *QRubberBand) SetGeometryWithXYWidthHeight(x int32,y int32,w int32,h int32)  {
 	q.Drv(334000,334113,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QRubberBand::shape()
@@ -63401,7 +63401,7 @@ func (q *QScrollArea) Alignment() Qt_AlignmentFlag {
 	return __rv
 }	
 //QScrollArea::ensureVisible(int,int,int,int)
-func (q *QScrollArea) EnsureVisible(x int,y int,xmargin int,ymargin int)  {
+func (q *QScrollArea) EnsureVisible(x int32,y int32,xmargin int32,ymargin int32)  {
 	q.Drv(335000,335105,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&xmargin),unsafe.Pointer(&ymargin),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QScrollArea::ensureWidgetVisible(QWidget*)
@@ -63409,7 +63409,7 @@ func (q *QScrollArea) EnsureWidgetVisible(childWidget QWidgetInterface)  {
 	q.Drv(335000,335106,Native(childWidget),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QScrollArea::ensureWidgetVisible(QWidget*,int,int)
-func (q *QScrollArea) EnsureWidgetVisibleWithWidgetXmarginYmargin(childWidget QWidgetInterface,xmargin int,ymargin int)  {
+func (q *QScrollArea) EnsureWidgetVisibleWithWidgetXmarginYmargin(childWidget QWidgetInterface,xmargin int32,ymargin int32)  {
 	q.Drv(335000,335107,Native(childWidget),unsafe.Pointer(&xmargin),unsafe.Pointer(&ymargin),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QScrollArea::event(QEvent*)
@@ -63435,7 +63435,7 @@ func (q *QScrollArea) ResizeEvent(value *QResizeEvent)  {
 	q.Drv(335000,335111,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QScrollArea::scrollContentsBy(int,int)
-func (q *QScrollArea) ScrollContentsBy(dx int,dy int)  {
+func (q *QScrollArea) ScrollContentsBy(dx int32,dy int32)  {
 	q.Drv(335000,335112,unsafe.Pointer(&dx),unsafe.Pointer(&dy),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QScrollArea::setAlignment(QFlags<Qt::AlignmentFlag>)
@@ -63624,7 +63624,7 @@ func NewQSequentialAnimationGroupWithParent(parent QObjectInterface) *QSequentia
 	return _p
 } 
 //QSequentialAnimationGroup::addPause(int)
-func (q *QSequentialAnimationGroup) AddPause(msecs int) *QPauseAnimation {
+func (q *QSequentialAnimationGroup) AddPause(msecs int32) *QPauseAnimation {
 	var __rv uintptr
 	q.Drv(337000,337105,unsafe.Pointer(&msecs),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -63646,8 +63646,8 @@ func (q *QSequentialAnimationGroup) CurrentAnimation() *QAbstractAnimation {
 	return _rp
 }	
 //QSequentialAnimationGroup::duration()
-func (q *QSequentialAnimationGroup) Duration() int {
-	var __rv int
+func (q *QSequentialAnimationGroup) Duration() int32 {
+	var __rv int32
 	q.Drv(337000,337107,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -63658,7 +63658,7 @@ func (q *QSequentialAnimationGroup) Event(event *QEvent) bool {
 	return __rv
 }	
 //QSequentialAnimationGroup::insertPause(int,int)
-func (q *QSequentialAnimationGroup) InsertPause(index int,msecs int) *QPauseAnimation {
+func (q *QSequentialAnimationGroup) InsertPause(index int32,msecs int32) *QPauseAnimation {
 	var __rv uintptr
 	q.Drv(337000,337109,unsafe.Pointer(&index),unsafe.Pointer(&msecs),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -63669,7 +63669,7 @@ func (q *QSequentialAnimationGroup) InsertPause(index int,msecs int) *QPauseAnim
 	return _rp
 }	
 //QSequentialAnimationGroup::updateCurrentTime(int)
-func (q *QSequentialAnimationGroup) UpdateCurrentTime(value int)  {
+func (q *QSequentialAnimationGroup) UpdateCurrentTime(value int32)  {
 	q.Drv(337000,337110,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSequentialAnimationGroup::updateDirection(QAbstractAnimation::Direction)
@@ -63915,8 +63915,8 @@ func (q *QSettings) BeginGroup(prefix string)  {
 	q.Drv(339000,339110,unsafe.Pointer(&prefix),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSettings::beginReadArray(QString const&)
-func (q *QSettings) BeginReadArray(prefix string) int {
-	var __rv int
+func (q *QSettings) BeginReadArray(prefix string) int32 {
+	var __rv int32
 	q.Drv(339000,339111,unsafe.Pointer(&prefix),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -63925,7 +63925,7 @@ func (q *QSettings) BeginWriteArray(prefix string)  {
 	q.Drv(339000,339112,unsafe.Pointer(&prefix),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSettings::beginWriteArray(QString const&,int)
-func (q *QSettings) BeginWriteArrayWithPrefixSize(prefix string,size int)  {
+func (q *QSettings) BeginWriteArrayWithPrefixSize(prefix string,size int32)  {
 	q.Drv(339000,339113,unsafe.Pointer(&prefix),unsafe.Pointer(&size),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSettings::childGroups()
@@ -64034,7 +64034,7 @@ func (q *QSettings) Scope() QSettings_Scope {
 	return __rv
 }	
 //QSettings::setArrayIndex(int)
-func (q *QSettings) SetArrayIndex(i int)  {
+func (q *QSettings) SetArrayIndex(i int32)  {
 	q.Drv(339000,339131,unsafe.Pointer(&i),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSettings::setDefaultFormat(QSettings::Format)	
@@ -64202,13 +64202,13 @@ func (q *QSharedMemory) ConstData() uintptr {
 	return __rv
 }	
 //QSharedMemory::create(int)
-func (q *QSharedMemory) Create(size int) bool {
+func (q *QSharedMemory) Create(size int32) bool {
 	var __rv bool
 	q.Drv(340000,340108,unsafe.Pointer(&size),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QSharedMemory::create(int,QSharedMemory::AccessMode)
-func (q *QSharedMemory) CreateWithSizeMode(size int,mode QSharedMemory_AccessMode) bool {
+func (q *QSharedMemory) CreateWithSizeMode(size int32,mode QSharedMemory_AccessMode) bool {
 	var __rv bool
 	q.Drv(340000,340109,unsafe.Pointer(&size),unsafe.Pointer(&mode),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -64260,8 +64260,8 @@ func (q *QSharedMemory) SetKey(key string)  {
 	q.Drv(340000,340117,unsafe.Pointer(&key),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSharedMemory::size()
-func (q *QSharedMemory) Size() int {
-	var __rv int
+func (q *QSharedMemory) Size() int32 {
+	var __rv int32
 	q.Drv(340000,340118,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -64338,8 +64338,8 @@ func (q *QShortcut) Event(e *QEvent) bool {
 	return __rv
 }	
 //QShortcut::id()
-func (q *QShortcut) Id() int {
-	var __rv int
+func (q *QShortcut) Id() int32 {
+	var __rv int32
 	q.Drv(341000,341109,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -64429,7 +64429,7 @@ func (q *QSignalMapper) OnMappedWithString(fn func(string)) uintptr {
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QSignalMapper) OnMappedWithInt(fn func(int)) uintptr {
+func (q *QSignalMapper) OnMappedWithInt32(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(342000,342105,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -64499,7 +64499,7 @@ func (q *QSignalMapper) MappingWithWidget(widget QWidgetInterface) *QObject {
 	return _rp
 }	
 //QSignalMapper::mapping(int)
-func (q *QSignalMapper) MappingWithId(id int) *QObject {
+func (q *QSignalMapper) MappingWithId(id int32) *QObject {
 	var __rv uintptr
 	q.Drv(342000,342113,unsafe.Pointer(&id),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -64526,7 +64526,7 @@ func (q *QSignalMapper) SetMappingWithObjectWidget(sender QObjectInterface,widge
 	q.Drv(342000,342117,Native(sender),Native(widget),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSignalMapper::setMapping(QObject*,int)
-func (q *QSignalMapper) SetMappingWithObjectId(sender QObjectInterface,id int)  {
+func (q *QSignalMapper) SetMappingWithObjectId(sender QObjectInterface,id int32)  {
 	q.Drv(342000,342118,Native(sender),unsafe.Pointer(&id),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 
@@ -64700,7 +64700,7 @@ func (q *QSlider) PaintEvent(ev *QPaintEvent)  {
 	q.Drv(344000,344110,Native(ev),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSlider::setTickInterval(int)
-func (q *QSlider) SetTickInterval(ti int)  {
+func (q *QSlider) SetTickInterval(ti int32)  {
 	q.Drv(344000,344111,unsafe.Pointer(&ti),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSlider::setTickPosition(QSlider::TickPosition)
@@ -64719,8 +64719,8 @@ func (q *QSlider) SizeHint() *QSize {
 	return _rp
 }	
 //QSlider::tickInterval()
-func (q *QSlider) TickInterval() int {
-	var __rv int
+func (q *QSlider) TickInterval() int32 {
+	var __rv int32
 	q.Drv(344000,344114,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -64788,14 +64788,14 @@ func (q *QSortFilterProxyModel) Clear()  {
 	q.Drv(345000,345106,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSortFilterProxyModel::columnCount()
-func (q *QSortFilterProxyModel) ColumnCount() int {
-	var __rv int
+func (q *QSortFilterProxyModel) ColumnCount() int32 {
+	var __rv int32
 	q.Drv(345000,345107,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QSortFilterProxyModel::columnCount(QModelIndex const&)
-func (q *QSortFilterProxyModel) ColumnCountWithParent(parent *QModelIndex) int {
-	var __rv int
+func (q *QSortFilterProxyModel) ColumnCountWithParent(parent *QModelIndex) int32 {
+	var __rv int32
 	q.Drv(345000,345108,Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -64811,7 +64811,7 @@ func (q *QSortFilterProxyModel) Data(index *QModelIndex) *QVariant {
 	return _rp
 }	
 //QSortFilterProxyModel::data(QModelIndex const&,int)
-func (q *QSortFilterProxyModel) DataWithIndexRole(index *QModelIndex,role int) *QVariant {
+func (q *QSortFilterProxyModel) DataWithIndexRole(index *QModelIndex,role int32) *QVariant {
 	var __rv uintptr
 	q.Drv(345000,345110,Native(index),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -64822,7 +64822,7 @@ func (q *QSortFilterProxyModel) DataWithIndexRole(index *QModelIndex,role int) *
 	return _rp
 }	
 //QSortFilterProxyModel::dropMimeData(QMimeData const*,Qt::DropAction,int,int,QModelIndex const&)
-func (q *QSortFilterProxyModel) DropMimeData(data *QMimeData,action Qt_DropAction,row int,column int,parent *QModelIndex) bool {
+func (q *QSortFilterProxyModel) DropMimeData(data *QMimeData,action Qt_DropAction,row int32,column int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(345000,345111,Native(data),unsafe.Pointer(&action),unsafe.Pointer(&row),unsafe.Pointer(&column),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -64838,13 +64838,13 @@ func (q *QSortFilterProxyModel) FetchMore(parent *QModelIndex)  {
 	q.Drv(345000,345113,Native(parent),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSortFilterProxyModel::filterAcceptsColumn(int,QModelIndex const&)
-func (q *QSortFilterProxyModel) FilterAcceptsColumn(source_column int,source_parent *QModelIndex) bool {
+func (q *QSortFilterProxyModel) FilterAcceptsColumn(source_column int32,source_parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(345000,345114,unsafe.Pointer(&source_column),Native(source_parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QSortFilterProxyModel::filterAcceptsRow(int,QModelIndex const&)
-func (q *QSortFilterProxyModel) FilterAcceptsRow(source_row int,source_parent *QModelIndex) bool {
+func (q *QSortFilterProxyModel) FilterAcceptsRow(source_row int32,source_parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(345000,345115,unsafe.Pointer(&source_row),Native(source_parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -64860,8 +64860,8 @@ func (q *QSortFilterProxyModel) FilterChanged()  {
 	q.Drv(345000,345117,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSortFilterProxyModel::filterKeyColumn()
-func (q *QSortFilterProxyModel) FilterKeyColumn() int {
-	var __rv int
+func (q *QSortFilterProxyModel) FilterKeyColumn() int32 {
+	var __rv int32
 	q.Drv(345000,345118,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -64877,8 +64877,8 @@ func (q *QSortFilterProxyModel) FilterRegExp() *QRegExp {
 	return _rp
 }	
 //QSortFilterProxyModel::filterRole()
-func (q *QSortFilterProxyModel) FilterRole() int {
-	var __rv int
+func (q *QSortFilterProxyModel) FilterRole() int32 {
+	var __rv int32
 	q.Drv(345000,345120,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -64901,7 +64901,7 @@ func (q *QSortFilterProxyModel) HasChildrenWithParent(parent *QModelIndex) bool 
 	return __rv
 }	
 //QSortFilterProxyModel::headerData(int,Qt::Orientation,int)
-func (q *QSortFilterProxyModel) HeaderData(section int,orientation Qt_Orientation,role int) *QVariant {
+func (q *QSortFilterProxyModel) HeaderData(section int32,orientation Qt_Orientation,role int32) *QVariant {
 	var __rv uintptr
 	q.Drv(345000,345124,unsafe.Pointer(&section),unsafe.Pointer(&orientation),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -64912,7 +64912,7 @@ func (q *QSortFilterProxyModel) HeaderData(section int,orientation Qt_Orientatio
 	return _rp
 }	
 //QSortFilterProxyModel::index(int,int,QModelIndex const&)
-func (q *QSortFilterProxyModel) Index(row int,column int,parent *QModelIndex) *QModelIndex {
+func (q *QSortFilterProxyModel) Index(row int32,column int32,parent *QModelIndex) *QModelIndex {
 	var __rv uintptr
 	q.Drv(345000,345125,unsafe.Pointer(&row),unsafe.Pointer(&column),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -64923,13 +64923,13 @@ func (q *QSortFilterProxyModel) Index(row int,column int,parent *QModelIndex) *Q
 	return _rp
 }	
 //QSortFilterProxyModel::insertColumns(int,int,QModelIndex const&)
-func (q *QSortFilterProxyModel) InsertColumns(column int,count int,parent *QModelIndex) bool {
+func (q *QSortFilterProxyModel) InsertColumns(column int32,count int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(345000,345126,unsafe.Pointer(&column),unsafe.Pointer(&count),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QSortFilterProxyModel::insertRows(int,int,QModelIndex const&)
-func (q *QSortFilterProxyModel) InsertRows(row int,count int,parent *QModelIndex) bool {
+func (q *QSortFilterProxyModel) InsertRows(row int32,count int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(345000,345127,unsafe.Pointer(&row),unsafe.Pointer(&count),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -64999,7 +64999,7 @@ func (q *QSortFilterProxyModel) MapToSource(proxyIndex *QModelIndex) *QModelInde
 	return _rp
 }	
 //QSortFilterProxyModel::match(QModelIndex const&,int,QVariant const&,int,QFlags<Qt::MatchFlag>)
-func (q *QSortFilterProxyModel) Match(start *QModelIndex,role int,value *QVariant,hits int,flags Qt_MatchFlag) []*QModelIndex {
+func (q *QSortFilterProxyModel) Match(start *QModelIndex,role int32,value *QVariant,hits int32,flags Qt_MatchFlag) []*QModelIndex {
 	var __rv []*QModelIndex
 	q.Drv(345000,345136,Native(start),unsafe.Pointer(&role),Native(value),unsafe.Pointer(&hits),unsafe.Pointer(&flags),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -65044,31 +65044,31 @@ func (q *QSortFilterProxyModel) ParentWithChild(child *QModelIndex) *QModelIndex
 	return _rp
 }	
 //QSortFilterProxyModel::removeColumns(int,int,QModelIndex const&)
-func (q *QSortFilterProxyModel) RemoveColumns(column int,count int,parent *QModelIndex) bool {
+func (q *QSortFilterProxyModel) RemoveColumns(column int32,count int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(345000,345141,unsafe.Pointer(&column),unsafe.Pointer(&count),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QSortFilterProxyModel::removeRows(int,int,QModelIndex const&)
-func (q *QSortFilterProxyModel) RemoveRows(row int,count int,parent *QModelIndex) bool {
+func (q *QSortFilterProxyModel) RemoveRows(row int32,count int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(345000,345142,unsafe.Pointer(&row),unsafe.Pointer(&count),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QSortFilterProxyModel::rowCount()
-func (q *QSortFilterProxyModel) RowCount() int {
-	var __rv int
+func (q *QSortFilterProxyModel) RowCount() int32 {
+	var __rv int32
 	q.Drv(345000,345143,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QSortFilterProxyModel::rowCount(QModelIndex const&)
-func (q *QSortFilterProxyModel) RowCountWithParent(parent *QModelIndex) int {
-	var __rv int
+func (q *QSortFilterProxyModel) RowCountWithParent(parent *QModelIndex) int32 {
+	var __rv int32
 	q.Drv(345000,345144,Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QSortFilterProxyModel::setData(QModelIndex const&,QVariant const&,int)
-func (q *QSortFilterProxyModel) SetData(index *QModelIndex,value *QVariant,role int) bool {
+func (q *QSortFilterProxyModel) SetData(index *QModelIndex,value *QVariant,role int32) bool {
 	var __rv bool
 	q.Drv(345000,345145,Native(index),Native(value),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -65086,7 +65086,7 @@ func (q *QSortFilterProxyModel) SetFilterFixedString(pattern string)  {
 	q.Drv(345000,345148,unsafe.Pointer(&pattern),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSortFilterProxyModel::setFilterKeyColumn(int)
-func (q *QSortFilterProxyModel) SetFilterKeyColumn(column int)  {
+func (q *QSortFilterProxyModel) SetFilterKeyColumn(column int32)  {
 	q.Drv(345000,345149,unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSortFilterProxyModel::setFilterRegExp(QRegExp const&)
@@ -65098,7 +65098,7 @@ func (q *QSortFilterProxyModel) SetFilterRegExpWithPattern(pattern string)  {
 	q.Drv(345000,345151,unsafe.Pointer(&pattern),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSortFilterProxyModel::setFilterRole(int)
-func (q *QSortFilterProxyModel) SetFilterRole(role int)  {
+func (q *QSortFilterProxyModel) SetFilterRole(role int32)  {
 	q.Drv(345000,345152,unsafe.Pointer(&role),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSortFilterProxyModel::setFilterWildcard(QString const&)
@@ -65106,7 +65106,7 @@ func (q *QSortFilterProxyModel) SetFilterWildcard(pattern string)  {
 	q.Drv(345000,345153,unsafe.Pointer(&pattern),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSortFilterProxyModel::setHeaderData(int,Qt::Orientation,QVariant const&,int)
-func (q *QSortFilterProxyModel) SetHeaderData(section int,orientation Qt_Orientation,value *QVariant,role int) bool {
+func (q *QSortFilterProxyModel) SetHeaderData(section int32,orientation Qt_Orientation,value *QVariant,role int32) bool {
 	var __rv bool
 	q.Drv(345000,345154,unsafe.Pointer(&section),unsafe.Pointer(&orientation),Native(value),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -65120,7 +65120,7 @@ func (q *QSortFilterProxyModel) SetSortLocaleAware(on bool)  {
 	q.Drv(345000,345156,unsafe.Pointer(&on),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSortFilterProxyModel::setSortRole(int)
-func (q *QSortFilterProxyModel) SetSortRole(role int)  {
+func (q *QSortFilterProxyModel) SetSortRole(role int32)  {
 	q.Drv(345000,345157,unsafe.Pointer(&role),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSortFilterProxyModel::setSourceModel(QAbstractItemModel*)
@@ -65128,11 +65128,11 @@ func (q *QSortFilterProxyModel) SetSourceModel(sourceModel QAbstractItemModelInt
 	q.Drv(345000,345158,Native(sourceModel),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSortFilterProxyModel::sort(int)
-func (q *QSortFilterProxyModel) Sort(column int)  {
+func (q *QSortFilterProxyModel) Sort(column int32)  {
 	q.Drv(345000,345159,unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSortFilterProxyModel::sort(int,Qt::SortOrder)
-func (q *QSortFilterProxyModel) SortWithColumnOrder(column int,order Qt_SortOrder)  {
+func (q *QSortFilterProxyModel) SortWithColumnOrder(column int32,order Qt_SortOrder)  {
 	q.Drv(345000,345160,unsafe.Pointer(&column),unsafe.Pointer(&order),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSortFilterProxyModel::sortCaseSensitivity()
@@ -65142,8 +65142,8 @@ func (q *QSortFilterProxyModel) SortCaseSensitivity() Qt_CaseSensitivity {
 	return __rv
 }	
 //QSortFilterProxyModel::sortColumn()
-func (q *QSortFilterProxyModel) SortColumn() int {
-	var __rv int
+func (q *QSortFilterProxyModel) SortColumn() int32 {
+	var __rv int32
 	q.Drv(345000,345162,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -65154,8 +65154,8 @@ func (q *QSortFilterProxyModel) SortOrder() Qt_SortOrder {
 	return __rv
 }	
 //QSortFilterProxyModel::sortRole()
-func (q *QSortFilterProxyModel) SortRole() int {
-	var __rv int
+func (q *QSortFilterProxyModel) SortRole() int32 {
+	var __rv int32
 	q.Drv(345000,345164,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -65196,7 +65196,7 @@ func (q *QSpinBox) OnValueChanged(fn func(string)) uintptr {
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QSpinBox) OnValueChangedWithInt(fn func(int)) uintptr {
+func (q *QSpinBox) OnValueChangedWithInt32(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(346000,346103,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -65241,14 +65241,14 @@ func (q *QSpinBox) Fixup(str *string)  {
 	q.Drv(346000,346108,unsafe.Pointer(&str),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSpinBox::maximum()
-func (q *QSpinBox) Maximum() int {
-	var __rv int
+func (q *QSpinBox) Maximum() int32 {
+	var __rv int32
 	q.Drv(346000,346109,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QSpinBox::minimum()
-func (q *QSpinBox) Minimum() int {
-	var __rv int
+func (q *QSpinBox) Minimum() int32 {
+	var __rv int32
 	q.Drv(346000,346110,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -65259,11 +65259,11 @@ func (q *QSpinBox) Prefix() string {
 	return __rv
 }	
 //QSpinBox::setMaximum(int)
-func (q *QSpinBox) SetMaximum(max int)  {
+func (q *QSpinBox) SetMaximum(max int32)  {
 	q.Drv(346000,346112,unsafe.Pointer(&max),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSpinBox::setMinimum(int)
-func (q *QSpinBox) SetMinimum(min int)  {
+func (q *QSpinBox) SetMinimum(min int32)  {
 	q.Drv(346000,346113,unsafe.Pointer(&min),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSpinBox::setPrefix(QString const&)
@@ -65271,11 +65271,11 @@ func (q *QSpinBox) SetPrefix(prefix string)  {
 	q.Drv(346000,346114,unsafe.Pointer(&prefix),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSpinBox::setRange(int,int)
-func (q *QSpinBox) SetRange(min int,max int)  {
+func (q *QSpinBox) SetRange(min int32,max int32)  {
 	q.Drv(346000,346115,unsafe.Pointer(&min),unsafe.Pointer(&max),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSpinBox::setSingleStep(int)
-func (q *QSpinBox) SetSingleStep(val int)  {
+func (q *QSpinBox) SetSingleStep(val int32)  {
 	q.Drv(346000,346116,unsafe.Pointer(&val),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSpinBox::setSuffix(QString const&)
@@ -65283,12 +65283,12 @@ func (q *QSpinBox) SetSuffix(suffix string)  {
 	q.Drv(346000,346117,unsafe.Pointer(&suffix),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSpinBox::setValue(int)
-func (q *QSpinBox) SetValue(val int)  {
+func (q *QSpinBox) SetValue(val int32)  {
 	q.Drv(346000,346118,unsafe.Pointer(&val),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSpinBox::singleStep()
-func (q *QSpinBox) SingleStep() int {
-	var __rv int
+func (q *QSpinBox) SingleStep() int32 {
+	var __rv int32
 	q.Drv(346000,346119,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -65299,26 +65299,26 @@ func (q *QSpinBox) Suffix() string {
 	return __rv
 }	
 //QSpinBox::textFromValue(int)
-func (q *QSpinBox) TextFromValue(val int) string {
+func (q *QSpinBox) TextFromValue(val int32) string {
 	var __rv string
 	q.Drv(346000,346121,unsafe.Pointer(&val),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QSpinBox::validate(QString&,int&)
-func (q *QSpinBox) Validate(input *string,pos *int) QValidator_State {
+func (q *QSpinBox) Validate(input *string,pos *int32) QValidator_State {
 	var __rv QValidator_State
 	q.Drv(346000,346122,unsafe.Pointer(&input),unsafe.Pointer(&pos),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QSpinBox::value()
-func (q *QSpinBox) Value() int {
-	var __rv int
+func (q *QSpinBox) Value() int32 {
+	var __rv int32
 	q.Drv(346000,346123,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QSpinBox::valueFromText(QString const&)
-func (q *QSpinBox) ValueFromText(text string) int {
-	var __rv int
+func (q *QSpinBox) ValueFromText(text string) int32 {
+	var __rv int32
 	q.Drv(346000,346124,unsafe.Pointer(&text),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -65421,7 +65421,7 @@ func (q *QSplashScreen) ShowMessage(message string)  {
 	q.Drv(347000,347114,unsafe.Pointer(&message),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSplashScreen::showMessage(QString const&,int,QColor const&)
-func (q *QSplashScreen) ShowMessageWithMessageAlignmentColor(message string,alignment int,color *QColor)  {
+func (q *QSplashScreen) ShowMessageWithMessageAlignmentColor(message string,alignment int32,color *QColor)  {
 	q.Drv(347000,347115,unsafe.Pointer(&message),unsafe.Pointer(&alignment),Native(color),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 
@@ -65438,7 +65438,7 @@ func NewQSplitterFromDriver(drv Driver) *QSplitter {
 	}
 	return _p
 } 	
-func (q *QSplitter) OnSplitterMoved(fn func(int,int)) uintptr {
+func (q *QSplitter) OnSplitterMoved(fn func(int32,int32)) uintptr {
 	var __rv uintptr
 	q.Drv(348000,348102,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -65496,14 +65496,14 @@ func (q *QSplitter) ChildrenCollapsible() bool {
 	return __rv
 }	
 //QSplitter::closestLegalPosition(int,int)
-func (q *QSplitter) ClosestLegalPosition(value2 int,value3 int) int {
-	var __rv int
+func (q *QSplitter) ClosestLegalPosition(value2 int32,value3 int32) int32 {
+	var __rv int32
 	q.Drv(348000,348110,unsafe.Pointer(&value2),unsafe.Pointer(&value3),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QSplitter::count()
-func (q *QSplitter) Count() int {
-	var __rv int
+func (q *QSplitter) Count() int32 {
+	var __rv int32
 	q.Drv(348000,348111,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -65525,11 +65525,11 @@ func (q *QSplitter) Event(value *QEvent) bool {
 	return __rv
 }	
 //QSplitter::getRange(int,int*,int*)
-func (q *QSplitter) GetRange(index int,value2 *int,value3 *int)  {
+func (q *QSplitter) GetRange(index int32,value2 *int32,value3 *int32)  {
 	q.Drv(348000,348114,unsafe.Pointer(&index),unsafe.Pointer(&value2),unsafe.Pointer(&value3),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSplitter::handle(int)
-func (q *QSplitter) Handle(index int) *QSplitterHandle {
+func (q *QSplitter) Handle(index int32) *QSplitterHandle {
 	var __rv uintptr
 	q.Drv(348000,348115,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -65540,23 +65540,23 @@ func (q *QSplitter) Handle(index int) *QSplitterHandle {
 	return _rp
 }	
 //QSplitter::handleWidth()
-func (q *QSplitter) HandleWidth() int {
-	var __rv int
+func (q *QSplitter) HandleWidth() int32 {
+	var __rv int32
 	q.Drv(348000,348116,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QSplitter::indexOf(QWidget*)
-func (q *QSplitter) IndexOf(w QWidgetInterface) int {
-	var __rv int
+func (q *QSplitter) IndexOf(w QWidgetInterface) int32 {
+	var __rv int32
 	q.Drv(348000,348117,Native(w),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QSplitter::insertWidget(int,QWidget*)
-func (q *QSplitter) InsertWidget(index int,widget QWidgetInterface)  {
+func (q *QSplitter) InsertWidget(index int32,widget QWidgetInterface)  {
 	q.Drv(348000,348118,unsafe.Pointer(&index),Native(widget),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSplitter::isCollapsible(int)
-func (q *QSplitter) IsCollapsible(index int) bool {
+func (q *QSplitter) IsCollapsible(index int32) bool {
 	var __rv bool
 	q.Drv(348000,348119,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -65573,7 +65573,7 @@ func (q *QSplitter) MinimumSizeHint() *QSize {
 	return _rp
 }	
 //QSplitter::moveSplitter(int,int)
-func (q *QSplitter) MoveSplitter(pos int,index int)  {
+func (q *QSplitter) MoveSplitter(pos int32,index int32)  {
 	q.Drv(348000,348121,unsafe.Pointer(&pos),unsafe.Pointer(&index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSplitter::opaqueResize()
@@ -65613,11 +65613,11 @@ func (q *QSplitter) SetChildrenCollapsible(value bool)  {
 	q.Drv(348000,348128,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSplitter::setCollapsible(int,bool)
-func (q *QSplitter) SetCollapsible(index int,value2 bool)  {
+func (q *QSplitter) SetCollapsible(index int32,value2 bool)  {
 	q.Drv(348000,348129,unsafe.Pointer(&index),unsafe.Pointer(&value2),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSplitter::setHandleWidth(int)
-func (q *QSplitter) SetHandleWidth(value int)  {
+func (q *QSplitter) SetHandleWidth(value int32)  {
 	q.Drv(348000,348130,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSplitter::setOpaqueResize(bool)
@@ -65629,15 +65629,15 @@ func (q *QSplitter) SetOrientation(value Qt_Orientation)  {
 	q.Drv(348000,348132,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSplitter::setRubberBand(int)
-func (q *QSplitter) SetRubberBand(position int)  {
+func (q *QSplitter) SetRubberBand(position int32)  {
 	q.Drv(348000,348133,unsafe.Pointer(&position),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSplitter::setSizes(QList<int> const&)
-func (q *QSplitter) SetSizes(list []int)  {
+func (q *QSplitter) SetSizes(list []int32)  {
 	q.Drv(348000,348134,unsafe.Pointer(&list),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSplitter::setStretchFactor(int,int)
-func (q *QSplitter) SetStretchFactor(index int,stretch int)  {
+func (q *QSplitter) SetStretchFactor(index int32,stretch int32)  {
 	q.Drv(348000,348135,unsafe.Pointer(&index),unsafe.Pointer(&stretch),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSplitter::sizeHint()
@@ -65652,13 +65652,13 @@ func (q *QSplitter) SizeHint() *QSize {
 	return _rp
 }	
 //QSplitter::sizes()
-func (q *QSplitter) Sizes() []int {
-	var __rv []int
+func (q *QSplitter) Sizes() []int32 {
+	var __rv []int32
 	q.Drv(348000,348137,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QSplitter::widget(int)
-func (q *QSplitter) Widget(index int) *QWidget {
+func (q *QSplitter) Widget(index int32) *QWidget {
 	var __rv uintptr
 	q.Drv(348000,348138,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -65694,8 +65694,8 @@ func NewQSplitterHandle(o Qt_Orientation,parent *QSplitter) *QSplitterHandle {
 	return _p
 } 
 //QSplitterHandle::closestLegalPosition(int)
-func (q *QSplitterHandle) ClosestLegalPosition(p int) int {
-	var __rv int
+func (q *QSplitterHandle) ClosestLegalPosition(p int32) int32 {
+	var __rv int32
 	q.Drv(349000,349103,unsafe.Pointer(&p),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -65718,7 +65718,7 @@ func (q *QSplitterHandle) MouseReleaseEvent(value *QMouseEvent)  {
 	q.Drv(349000,349107,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSplitterHandle::moveSplitter(int)
-func (q *QSplitterHandle) MoveSplitter(p int)  {
+func (q *QSplitterHandle) MoveSplitter(p int32)  {
 	q.Drv(349000,349108,unsafe.Pointer(&p),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSplitterHandle::opaqueResize()
@@ -65787,13 +65787,13 @@ func NewQStackedLayoutFromDriver(drv Driver) *QStackedLayout {
 	}
 	return _p
 } 	
-func (q *QStackedLayout) OnWidgetRemoved(fn func(int)) uintptr {
+func (q *QStackedLayout) OnWidgetRemoved(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(350000,350102,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QStackedLayout) OnCurrentChanged(fn func(int)) uintptr {
+func (q *QStackedLayout) OnCurrentChanged(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(350000,350103,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -65837,20 +65837,20 @@ func (q *QStackedLayout) AddItem(item *QLayoutItem)  {
 	q.Drv(350000,350107,Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStackedLayout::addWidget(QWidget*)
-func (q *QStackedLayout) AddWidget(w QWidgetInterface) int {
-	var __rv int
+func (q *QStackedLayout) AddWidget(w QWidgetInterface) int32 {
+	var __rv int32
 	q.Drv(350000,350108,Native(w),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStackedLayout::count()
-func (q *QStackedLayout) Count() int {
-	var __rv int
+func (q *QStackedLayout) Count() int32 {
+	var __rv int32
 	q.Drv(350000,350109,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStackedLayout::currentIndex()
-func (q *QStackedLayout) CurrentIndex() int {
-	var __rv int
+func (q *QStackedLayout) CurrentIndex() int32 {
+	var __rv int32
 	q.Drv(350000,350110,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -65866,13 +65866,13 @@ func (q *QStackedLayout) CurrentWidget() *QWidget {
 	return _rp
 }	
 //QStackedLayout::insertWidget(int,QWidget*)
-func (q *QStackedLayout) InsertWidget(index int,w QWidgetInterface) int {
-	var __rv int
+func (q *QStackedLayout) InsertWidget(index int32,w QWidgetInterface) int32 {
+	var __rv int32
 	q.Drv(350000,350112,unsafe.Pointer(&index),Native(w),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStackedLayout::itemAt(int)
-func (q *QStackedLayout) ItemAt(value int) *QLayoutItem {
+func (q *QStackedLayout) ItemAt(value int32) *QLayoutItem {
 	var __rv uintptr
 	q.Drv(350000,350113,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -65894,7 +65894,7 @@ func (q *QStackedLayout) MinimumSize() *QSize {
 	return _rp
 }	
 //QStackedLayout::setCurrentIndex(int)
-func (q *QStackedLayout) SetCurrentIndex(index int)  {
+func (q *QStackedLayout) SetCurrentIndex(index int32)  {
 	q.Drv(350000,350115,unsafe.Pointer(&index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStackedLayout::setCurrentWidget(QWidget*)
@@ -65927,7 +65927,7 @@ func (q *QStackedLayout) StackingMode() QStackedLayout_StackingMode {
 	return __rv
 }	
 //QStackedLayout::takeAt(int)
-func (q *QStackedLayout) TakeAt(value int) *QLayoutItem {
+func (q *QStackedLayout) TakeAt(value int32) *QLayoutItem {
 	var __rv uintptr
 	q.Drv(350000,350121,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -65949,7 +65949,7 @@ func (q *QStackedLayout) Widget() *QWidget {
 	return _rp
 }	
 //QStackedLayout::widget(int)
-func (q *QStackedLayout) WidgetWithInt(value int) *QWidget {
+func (q *QStackedLayout) WidgetWithInt32(value int32) *QWidget {
 	var __rv uintptr
 	q.Drv(350000,350123,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -65973,13 +65973,13 @@ func NewQStackedWidgetFromDriver(drv Driver) *QStackedWidget {
 	}
 	return _p
 } 	
-func (q *QStackedWidget) OnWidgetRemoved(fn func(int)) uintptr {
+func (q *QStackedWidget) OnWidgetRemoved(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(351000,351102,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QStackedWidget) OnCurrentChanged(fn func(int)) uintptr {
+func (q *QStackedWidget) OnCurrentChanged(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(351000,351103,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -66008,20 +66008,20 @@ func NewQStackedWidgetWithParent(parent QWidgetInterface) *QStackedWidget {
 	return _p
 } 
 //QStackedWidget::addWidget(QWidget*)
-func (q *QStackedWidget) AddWidget(w QWidgetInterface) int {
-	var __rv int
+func (q *QStackedWidget) AddWidget(w QWidgetInterface) int32 {
+	var __rv int32
 	q.Drv(351000,351106,Native(w),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStackedWidget::count()
-func (q *QStackedWidget) Count() int {
-	var __rv int
+func (q *QStackedWidget) Count() int32 {
+	var __rv int32
 	q.Drv(351000,351107,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStackedWidget::currentIndex()
-func (q *QStackedWidget) CurrentIndex() int {
-	var __rv int
+func (q *QStackedWidget) CurrentIndex() int32 {
+	var __rv int32
 	q.Drv(351000,351108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -66043,14 +66043,14 @@ func (q *QStackedWidget) Event(e *QEvent) bool {
 	return __rv
 }	
 //QStackedWidget::indexOf(QWidget*)
-func (q *QStackedWidget) IndexOf(value QWidgetInterface) int {
-	var __rv int
+func (q *QStackedWidget) IndexOf(value QWidgetInterface) int32 {
+	var __rv int32
 	q.Drv(351000,351111,Native(value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStackedWidget::insertWidget(int,QWidget*)
-func (q *QStackedWidget) InsertWidget(index int,w QWidgetInterface) int {
-	var __rv int
+func (q *QStackedWidget) InsertWidget(index int32,w QWidgetInterface) int32 {
+	var __rv int32
 	q.Drv(351000,351112,unsafe.Pointer(&index),Native(w),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -66059,7 +66059,7 @@ func (q *QStackedWidget) RemoveWidget(w QWidgetInterface)  {
 	q.Drv(351000,351113,Native(w),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStackedWidget::setCurrentIndex(int)
-func (q *QStackedWidget) SetCurrentIndex(index int)  {
+func (q *QStackedWidget) SetCurrentIndex(index int32)  {
 	q.Drv(351000,351114,unsafe.Pointer(&index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStackedWidget::setCurrentWidget(QWidget*)
@@ -66067,7 +66067,7 @@ func (q *QStackedWidget) SetCurrentWidget(w QWidgetInterface)  {
 	q.Drv(351000,351115,Native(w),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStackedWidget::widget(int)
-func (q *QStackedWidget) Widget(value int) *QWidget {
+func (q *QStackedWidget) Widget(value int32) *QWidget {
 	var __rv uintptr
 	q.Drv(351000,351116,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -66120,7 +66120,7 @@ func NewQStandardItemModelWithParent(parent QObjectInterface) *QStandardItemMode
 	return _p
 } 
 //QStandardItemModel::QStandardItemModel(int,int,QObject*)	
-func NewQStandardItemModelWithRowsColumnsParent(rows int,columns int,parent QObjectInterface) *QStandardItemModel {
+func NewQStandardItemModelWithRowsColumnsParent(rows int32,columns int32,parent QObjectInterface) *QStandardItemModel {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),352000,352105,unsafe.Pointer(&rows),unsafe.Pointer(&columns),Native(parent),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -66147,14 +66147,14 @@ func (q *QStandardItemModel) Clear()  {
 	q.Drv(352000,352109,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItemModel::columnCount()
-func (q *QStandardItemModel) ColumnCount() int {
-	var __rv int
+func (q *QStandardItemModel) ColumnCount() int32 {
+	var __rv int32
 	q.Drv(352000,352110,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStandardItemModel::columnCount(QModelIndex const&)
-func (q *QStandardItemModel) ColumnCountWithParent(parent *QModelIndex) int {
-	var __rv int
+func (q *QStandardItemModel) ColumnCountWithParent(parent *QModelIndex) int32 {
+	var __rv int32
 	q.Drv(352000,352111,Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -66170,7 +66170,7 @@ func (q *QStandardItemModel) Data(index *QModelIndex) *QVariant {
 	return _rp
 }	
 //QStandardItemModel::data(QModelIndex const&,int)
-func (q *QStandardItemModel) DataWithIndexRole(index *QModelIndex,role int) *QVariant {
+func (q *QStandardItemModel) DataWithIndexRole(index *QModelIndex,role int32) *QVariant {
 	var __rv uintptr
 	q.Drv(352000,352113,Native(index),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -66181,7 +66181,7 @@ func (q *QStandardItemModel) DataWithIndexRole(index *QModelIndex,role int) *QVa
 	return _rp
 }	
 //QStandardItemModel::dropMimeData(QMimeData const*,Qt::DropAction,int,int,QModelIndex const&)
-func (q *QStandardItemModel) DropMimeData(data *QMimeData,action Qt_DropAction,row int,column int,parent *QModelIndex) bool {
+func (q *QStandardItemModel) DropMimeData(data *QMimeData,action Qt_DropAction,row int32,column int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(352000,352114,Native(data),unsafe.Pointer(&action),unsafe.Pointer(&row),unsafe.Pointer(&column),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -66193,7 +66193,7 @@ func (q *QStandardItemModel) FindItems(text string) []*QStandardItem {
 	return __rv
 }	
 //QStandardItemModel::findItems(QString const&,QFlags<Qt::MatchFlag>,int)
-func (q *QStandardItemModel) FindItemsWithTextFlagsColumn(text string,flags Qt_MatchFlag,column int) []*QStandardItem {
+func (q *QStandardItemModel) FindItemsWithTextFlagsColumn(text string,flags Qt_MatchFlag,column int32) []*QStandardItem {
 	var __rv []*QStandardItem
 	q.Drv(352000,352116,unsafe.Pointer(&text),unsafe.Pointer(&flags),unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -66217,7 +66217,7 @@ func (q *QStandardItemModel) HasChildrenWithParent(parent *QModelIndex) bool {
 	return __rv
 }	
 //QStandardItemModel::headerData(int,Qt::Orientation,int)
-func (q *QStandardItemModel) HeaderData(section int,orientation Qt_Orientation,role int) *QVariant {
+func (q *QStandardItemModel) HeaderData(section int32,orientation Qt_Orientation,role int32) *QVariant {
 	var __rv uintptr
 	q.Drv(352000,352120,unsafe.Pointer(&section),unsafe.Pointer(&orientation),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -66228,7 +66228,7 @@ func (q *QStandardItemModel) HeaderData(section int,orientation Qt_Orientation,r
 	return _rp
 }	
 //QStandardItemModel::horizontalHeaderItem(int)
-func (q *QStandardItemModel) HorizontalHeaderItem(column int) *QStandardItem {
+func (q *QStandardItemModel) HorizontalHeaderItem(column int32) *QStandardItem {
 	var __rv uintptr
 	q.Drv(352000,352121,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -66239,7 +66239,7 @@ func (q *QStandardItemModel) HorizontalHeaderItem(column int) *QStandardItem {
 	return _rp
 }	
 //QStandardItemModel::index(int,int,QModelIndex const&)
-func (q *QStandardItemModel) Index(row int,column int,parent *QModelIndex) *QModelIndex {
+func (q *QStandardItemModel) Index(row int32,column int32,parent *QModelIndex) *QModelIndex {
 	var __rv uintptr
 	q.Drv(352000,352122,unsafe.Pointer(&row),unsafe.Pointer(&column),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -66261,49 +66261,49 @@ func (q *QStandardItemModel) IndexFromItem(item *QStandardItem) *QModelIndex {
 	return _rp
 }	
 //QStandardItemModel::insertColumn(int)
-func (q *QStandardItemModel) InsertColumn(column int) bool {
+func (q *QStandardItemModel) InsertColumn(column int32) bool {
 	var __rv bool
 	q.Drv(352000,352124,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStandardItemModel::insertColumn(int,QList<QStandardItem*> const&)
-func (q *QStandardItemModel) InsertColumnWithColumnItems(column int,items []*QStandardItem)  {
+func (q *QStandardItemModel) InsertColumnWithColumnItems(column int32,items []*QStandardItem)  {
 	q.Drv(352000,352125,unsafe.Pointer(&column),unsafe.Pointer(&items),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItemModel::insertColumn(int,QModelIndex const&)
-func (q *QStandardItemModel) InsertColumnWithColumnParent(column int,parent *QModelIndex) bool {
+func (q *QStandardItemModel) InsertColumnWithColumnParent(column int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(352000,352126,unsafe.Pointer(&column),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStandardItemModel::insertColumns(int,int,QModelIndex const&)
-func (q *QStandardItemModel) InsertColumns(column int,count int,parent *QModelIndex) bool {
+func (q *QStandardItemModel) InsertColumns(column int32,count int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(352000,352127,unsafe.Pointer(&column),unsafe.Pointer(&count),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStandardItemModel::insertRow(int)
-func (q *QStandardItemModel) InsertRow(row int) bool {
+func (q *QStandardItemModel) InsertRow(row int32) bool {
 	var __rv bool
 	q.Drv(352000,352128,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStandardItemModel::insertRow(int,QList<QStandardItem*> const&)
-func (q *QStandardItemModel) InsertRowWithRowItems(row int,items []*QStandardItem)  {
+func (q *QStandardItemModel) InsertRowWithRowItems(row int32,items []*QStandardItem)  {
 	q.Drv(352000,352129,unsafe.Pointer(&row),unsafe.Pointer(&items),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItemModel::insertRow(int,QModelIndex const&)
-func (q *QStandardItemModel) InsertRowWithRowParent(row int,parent *QModelIndex) bool {
+func (q *QStandardItemModel) InsertRowWithRowParent(row int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(352000,352130,unsafe.Pointer(&row),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStandardItemModel::insertRow(int,QStandardItem*)
-func (q *QStandardItemModel) InsertRowWithRowItem(row int,item *QStandardItem)  {
+func (q *QStandardItemModel) InsertRowWithRowItem(row int32,item *QStandardItem)  {
 	q.Drv(352000,352131,unsafe.Pointer(&row),Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItemModel::insertRows(int,int,QModelIndex const&)
-func (q *QStandardItemModel) InsertRows(row int,count int,parent *QModelIndex) bool {
+func (q *QStandardItemModel) InsertRows(row int32,count int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(352000,352132,unsafe.Pointer(&row),unsafe.Pointer(&count),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -66320,7 +66320,7 @@ func (q *QStandardItemModel) InvisibleRootItem() *QStandardItem {
 	return _rp
 }	
 //QStandardItemModel::item(int)
-func (q *QStandardItemModel) Item(row int) *QStandardItem {
+func (q *QStandardItemModel) Item(row int32) *QStandardItem {
 	var __rv uintptr
 	q.Drv(352000,352134,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -66331,7 +66331,7 @@ func (q *QStandardItemModel) Item(row int) *QStandardItem {
 	return _rp
 }	
 //QStandardItemModel::item(int,int)
-func (q *QStandardItemModel) ItemWithRowColumn(row int,column int) *QStandardItem {
+func (q *QStandardItemModel) ItemWithRowColumn(row int32,column int32) *QStandardItem {
 	var __rv uintptr
 	q.Drv(352000,352135,unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -66409,47 +66409,47 @@ func (q *QStandardItemModel) ParentWithChild(child *QModelIndex) *QModelIndex {
 	return _rp
 }	
 //QStandardItemModel::removeColumns(int,int,QModelIndex const&)
-func (q *QStandardItemModel) RemoveColumns(column int,count int,parent *QModelIndex) bool {
+func (q *QStandardItemModel) RemoveColumns(column int32,count int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(352000,352143,unsafe.Pointer(&column),unsafe.Pointer(&count),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStandardItemModel::removeRows(int,int,QModelIndex const&)
-func (q *QStandardItemModel) RemoveRows(row int,count int,parent *QModelIndex) bool {
+func (q *QStandardItemModel) RemoveRows(row int32,count int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(352000,352144,unsafe.Pointer(&row),unsafe.Pointer(&count),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStandardItemModel::rowCount()
-func (q *QStandardItemModel) RowCount() int {
-	var __rv int
+func (q *QStandardItemModel) RowCount() int32 {
+	var __rv int32
 	q.Drv(352000,352145,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStandardItemModel::rowCount(QModelIndex const&)
-func (q *QStandardItemModel) RowCountWithParent(parent *QModelIndex) int {
-	var __rv int
+func (q *QStandardItemModel) RowCountWithParent(parent *QModelIndex) int32 {
+	var __rv int32
 	q.Drv(352000,352146,Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStandardItemModel::setColumnCount(int)
-func (q *QStandardItemModel) SetColumnCount(columns int)  {
+func (q *QStandardItemModel) SetColumnCount(columns int32)  {
 	q.Drv(352000,352147,unsafe.Pointer(&columns),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItemModel::setData(QModelIndex const&,QVariant const&,int)
-func (q *QStandardItemModel) SetData(index *QModelIndex,value *QVariant,role int) bool {
+func (q *QStandardItemModel) SetData(index *QModelIndex,value *QVariant,role int32) bool {
 	var __rv bool
 	q.Drv(352000,352148,Native(index),Native(value),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStandardItemModel::setHeaderData(int,Qt::Orientation,QVariant const&,int)
-func (q *QStandardItemModel) SetHeaderData(section int,orientation Qt_Orientation,value *QVariant,role int) bool {
+func (q *QStandardItemModel) SetHeaderData(section int32,orientation Qt_Orientation,value *QVariant,role int32) bool {
 	var __rv bool
 	q.Drv(352000,352149,unsafe.Pointer(&section),unsafe.Pointer(&orientation),Native(value),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStandardItemModel::setHorizontalHeaderItem(int,QStandardItem*)
-func (q *QStandardItemModel) SetHorizontalHeaderItem(column int,item *QStandardItem)  {
+func (q *QStandardItemModel) SetHorizontalHeaderItem(column int32,item *QStandardItem)  {
 	q.Drv(352000,352150,unsafe.Pointer(&column),Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItemModel::setHorizontalHeaderLabels(QStringList const&)
@@ -66457,11 +66457,11 @@ func (q *QStandardItemModel) SetHorizontalHeaderLabels(labels []string)  {
 	q.Drv(352000,352151,unsafe.Pointer(&labels),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItemModel::setItem(int,QStandardItem*)
-func (q *QStandardItemModel) SetItemWithRowItem(row int,item *QStandardItem)  {
+func (q *QStandardItemModel) SetItemWithRowItem(row int32,item *QStandardItem)  {
 	q.Drv(352000,352152,unsafe.Pointer(&row),Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItemModel::setItem(int,int,QStandardItem*)
-func (q *QStandardItemModel) SetItemWithRowColumnItem(row int,column int,item *QStandardItem)  {
+func (q *QStandardItemModel) SetItemWithRowColumnItem(row int32,column int32,item *QStandardItem)  {
 	q.Drv(352000,352153,unsafe.Pointer(&row),unsafe.Pointer(&column),Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItemModel::setItemData(QModelIndex const&,QMap<int,QVariant> const&)
@@ -66475,15 +66475,15 @@ func (q *QStandardItemModel) SetItemPrototype(item *QStandardItem)  {
 	q.Drv(352000,352155,Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItemModel::setRowCount(int)
-func (q *QStandardItemModel) SetRowCount(rows int)  {
+func (q *QStandardItemModel) SetRowCount(rows int32)  {
 	q.Drv(352000,352156,unsafe.Pointer(&rows),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItemModel::setSortRole(int)
-func (q *QStandardItemModel) SetSortRole(role int)  {
+func (q *QStandardItemModel) SetSortRole(role int32)  {
 	q.Drv(352000,352157,unsafe.Pointer(&role),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItemModel::setVerticalHeaderItem(int,QStandardItem*)
-func (q *QStandardItemModel) SetVerticalHeaderItem(row int,item *QStandardItem)  {
+func (q *QStandardItemModel) SetVerticalHeaderItem(row int32,item *QStandardItem)  {
 	q.Drv(352000,352158,unsafe.Pointer(&row),Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItemModel::setVerticalHeaderLabels(QStringList const&)
@@ -66491,16 +66491,16 @@ func (q *QStandardItemModel) SetVerticalHeaderLabels(labels []string)  {
 	q.Drv(352000,352159,unsafe.Pointer(&labels),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItemModel::sort(int)
-func (q *QStandardItemModel) Sort(column int)  {
+func (q *QStandardItemModel) Sort(column int32)  {
 	q.Drv(352000,352160,unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItemModel::sort(int,Qt::SortOrder)
-func (q *QStandardItemModel) SortWithColumnOrder(column int,order Qt_SortOrder)  {
+func (q *QStandardItemModel) SortWithColumnOrder(column int32,order Qt_SortOrder)  {
 	q.Drv(352000,352161,unsafe.Pointer(&column),unsafe.Pointer(&order),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStandardItemModel::sortRole()
-func (q *QStandardItemModel) SortRole() int {
-	var __rv int
+func (q *QStandardItemModel) SortRole() int32 {
+	var __rv int32
 	q.Drv(352000,352162,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -66511,13 +66511,13 @@ func (q *QStandardItemModel) SupportedDropActions() Qt_DropAction {
 	return __rv
 }	
 //QStandardItemModel::takeColumn(int)
-func (q *QStandardItemModel) TakeColumn(column int) []*QStandardItem {
+func (q *QStandardItemModel) TakeColumn(column int32) []*QStandardItem {
 	var __rv []*QStandardItem
 	q.Drv(352000,352164,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStandardItemModel::takeHorizontalHeaderItem(int)
-func (q *QStandardItemModel) TakeHorizontalHeaderItem(column int) *QStandardItem {
+func (q *QStandardItemModel) TakeHorizontalHeaderItem(column int32) *QStandardItem {
 	var __rv uintptr
 	q.Drv(352000,352165,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -66528,7 +66528,7 @@ func (q *QStandardItemModel) TakeHorizontalHeaderItem(column int) *QStandardItem
 	return _rp
 }	
 //QStandardItemModel::takeItem(int)
-func (q *QStandardItemModel) TakeItem(row int) *QStandardItem {
+func (q *QStandardItemModel) TakeItem(row int32) *QStandardItem {
 	var __rv uintptr
 	q.Drv(352000,352166,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -66539,7 +66539,7 @@ func (q *QStandardItemModel) TakeItem(row int) *QStandardItem {
 	return _rp
 }	
 //QStandardItemModel::takeItem(int,int)
-func (q *QStandardItemModel) TakeItemWithRowColumn(row int,column int) *QStandardItem {
+func (q *QStandardItemModel) TakeItemWithRowColumn(row int32,column int32) *QStandardItem {
 	var __rv uintptr
 	q.Drv(352000,352167,unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -66550,13 +66550,13 @@ func (q *QStandardItemModel) TakeItemWithRowColumn(row int,column int) *QStandar
 	return _rp
 }	
 //QStandardItemModel::takeRow(int)
-func (q *QStandardItemModel) TakeRow(row int) []*QStandardItem {
+func (q *QStandardItemModel) TakeRow(row int32) []*QStandardItem {
 	var __rv []*QStandardItem
 	q.Drv(352000,352168,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStandardItemModel::takeVerticalHeaderItem(int)
-func (q *QStandardItemModel) TakeVerticalHeaderItem(row int) *QStandardItem {
+func (q *QStandardItemModel) TakeVerticalHeaderItem(row int32) *QStandardItem {
 	var __rv uintptr
 	q.Drv(352000,352169,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -66567,7 +66567,7 @@ func (q *QStandardItemModel) TakeVerticalHeaderItem(row int) *QStandardItem {
 	return _rp
 }	
 //QStandardItemModel::verticalHeaderItem(int)
-func (q *QStandardItemModel) VerticalHeaderItem(row int) *QStandardItem {
+func (q *QStandardItemModel) VerticalHeaderItem(row int32) *QStandardItem {
 	var __rv uintptr
 	q.Drv(352000,352170,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -66810,7 +66810,7 @@ func (q *QStateMachine) BeginSelectTransitions(event *QEvent)  {
 	q.Drv(354000,354109,Native(event),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStateMachine::cancelDelayedEvent(int)
-func (q *QStateMachine) CancelDelayedEvent(id int) bool {
+func (q *QStateMachine) CancelDelayedEvent(id int32) bool {
 	var __rv bool
 	q.Drv(354000,354110,unsafe.Pointer(&id),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -66884,8 +66884,8 @@ func (q *QStateMachine) OnExit(event *QEvent)  {
 	q.Drv(354000,354123,Native(event),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStateMachine::postDelayedEvent(QEvent*,int)
-func (q *QStateMachine) PostDelayedEvent(event *QEvent,delay int) int {
-	var __rv int
+func (q *QStateMachine) PostDelayedEvent(event *QEvent,delay int32) int32 {
+	var __rv int32
 	q.Drv(354000,354124,Native(event),unsafe.Pointer(&delay),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -66968,7 +66968,7 @@ func (q *QStatusBar) AddPermanentWidget(widget QWidgetInterface)  {
 	q.Drv(355000,355105,Native(widget),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStatusBar::addPermanentWidget(QWidget*,int)
-func (q *QStatusBar) AddPermanentWidgetWithWidgetStretch(widget QWidgetInterface,stretch int)  {
+func (q *QStatusBar) AddPermanentWidgetWithWidgetStretch(widget QWidgetInterface,stretch int32)  {
 	q.Drv(355000,355106,Native(widget),unsafe.Pointer(&stretch),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStatusBar::addWidget(QWidget*)
@@ -66976,7 +66976,7 @@ func (q *QStatusBar) AddWidget(widget QWidgetInterface)  {
 	q.Drv(355000,355107,Native(widget),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStatusBar::addWidget(QWidget*,int)
-func (q *QStatusBar) AddWidgetWithWidgetStretch(widget QWidgetInterface,stretch int)  {
+func (q *QStatusBar) AddWidgetWithWidgetStretch(widget QWidgetInterface,stretch int32)  {
 	q.Drv(355000,355108,Native(widget),unsafe.Pointer(&stretch),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStatusBar::clearMessage()
@@ -67000,14 +67000,14 @@ func (q *QStatusBar) HideOrShow()  {
 	q.Drv(355000,355112,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStatusBar::insertPermanentWidget(int,QWidget*,int)
-func (q *QStatusBar) InsertPermanentWidget(index int,widget QWidgetInterface,stretch int) int {
-	var __rv int
+func (q *QStatusBar) InsertPermanentWidget(index int32,widget QWidgetInterface,stretch int32) int32 {
+	var __rv int32
 	q.Drv(355000,355113,unsafe.Pointer(&index),Native(widget),unsafe.Pointer(&stretch),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStatusBar::insertWidget(int,QWidget*,int)
-func (q *QStatusBar) InsertWidget(index int,widget QWidgetInterface,stretch int) int {
-	var __rv int
+func (q *QStatusBar) InsertWidget(index int32,widget QWidgetInterface,stretch int32) int32 {
+	var __rv int32
 	q.Drv(355000,355114,unsafe.Pointer(&index),Native(widget),unsafe.Pointer(&stretch),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -67046,7 +67046,7 @@ func (q *QStatusBar) ShowMessage(text string)  {
 	q.Drv(355000,355122,unsafe.Pointer(&text),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStatusBar::showMessage(QString const&,int)
-func (q *QStatusBar) ShowMessageWithTextTimeout(text string,timeout int)  {
+func (q *QStatusBar) ShowMessageWithTextTimeout(text string,timeout int32)  {
 	q.Drv(355000,355123,unsafe.Pointer(&text),unsafe.Pointer(&timeout),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 
@@ -67064,7 +67064,7 @@ func NewQStringListModelFromDriver(drv Driver) *QStringListModel {
 	return _p
 } 	
 //QStringListModel::data(QModelIndex const&,int)
-func (q *QStringListModel) Data(index *QModelIndex,role int) *QVariant {
+func (q *QStringListModel) Data(index *QModelIndex,role int32) *QVariant {
 	var __rv uintptr
 	q.Drv(356000,356102,Native(index),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -67081,31 +67081,31 @@ func (q *QStringListModel) Flags(index *QModelIndex) Qt_ItemFlag {
 	return __rv
 }	
 //QStringListModel::insertRows(int,int,QModelIndex const&)
-func (q *QStringListModel) InsertRows(row int,count int,parent *QModelIndex) bool {
+func (q *QStringListModel) InsertRows(row int32,count int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(356000,356104,unsafe.Pointer(&row),unsafe.Pointer(&count),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStringListModel::removeRows(int,int,QModelIndex const&)
-func (q *QStringListModel) RemoveRows(row int,count int,parent *QModelIndex) bool {
+func (q *QStringListModel) RemoveRows(row int32,count int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(356000,356105,unsafe.Pointer(&row),unsafe.Pointer(&count),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStringListModel::rowCount()
-func (q *QStringListModel) RowCount() int {
-	var __rv int
+func (q *QStringListModel) RowCount() int32 {
+	var __rv int32
 	q.Drv(356000,356106,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStringListModel::rowCount(QModelIndex const&)
-func (q *QStringListModel) RowCountWithParent(parent *QModelIndex) int {
-	var __rv int
+func (q *QStringListModel) RowCountWithParent(parent *QModelIndex) int32 {
+	var __rv int32
 	q.Drv(356000,356107,Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStringListModel::setData(QModelIndex const&,QVariant const&,int)
-func (q *QStringListModel) SetData(index *QModelIndex,value *QVariant,role int) bool {
+func (q *QStringListModel) SetData(index *QModelIndex,value *QVariant,role int32) bool {
 	var __rv bool
 	q.Drv(356000,356108,Native(index),Native(value),unsafe.Pointer(&role),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -67115,11 +67115,11 @@ func (q *QStringListModel) SetStringList(strings []string)  {
 	q.Drv(356000,356109,unsafe.Pointer(&strings),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStringListModel::sort(int)
-func (q *QStringListModel) Sort(column int)  {
+func (q *QStringListModel) Sort(column int32)  {
 	q.Drv(356000,356110,unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStringListModel::sort(int,Qt::SortOrder)
-func (q *QStringListModel) SortWithColumnOrder(column int,order Qt_SortOrder)  {
+func (q *QStringListModel) SortWithColumnOrder(column int32,order Qt_SortOrder)  {
 	q.Drv(356000,356111,unsafe.Pointer(&column),unsafe.Pointer(&order),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStringListModel::stringList()
@@ -67756,15 +67756,15 @@ func (q *QStyle) AlignedRect(direction Qt_LayoutDirection,alignment Qt_Alignment
 	return _rp
 }	
 //QStyle::drawItemPixmap(QPainter*,QRect const&,int,QPixmap const&)
-func (q *QStyle) DrawItemPixmap(painter *QPainter,rect *QRect,alignment int,pixmap *QPixmap)  {
+func (q *QStyle) DrawItemPixmap(painter *QPainter,rect *QRect,alignment int32,pixmap *QPixmap)  {
 	q.Drv(357000,357103,Native(painter),Native(rect),unsafe.Pointer(&alignment),Native(pixmap),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QStyle::drawItemText(QPainter*,QRect const&,int,QPalette const&,bool,QString const&,QPalette::ColorRole)
-func (q *QStyle) DrawItemText(painter *QPainter,rect *QRect,flags int,pal *QPalette,enabled bool,text string,textRole QPalette_ColorRole)  {
+func (q *QStyle) DrawItemText(painter *QPainter,rect *QRect,flags int32,pal *QPalette,enabled bool,text string,textRole QPalette_ColorRole)  {
 	q.Drv(357000,357104,Native(painter),Native(rect),unsafe.Pointer(&flags),Native(pal),unsafe.Pointer(&enabled),unsafe.Pointer(&text),unsafe.Pointer(&textRole),nil,nil,nil,nil,nil)
 }	
 //QStyle::itemPixmapRect(QRect const&,int,QPixmap const&)
-func (q *QStyle) ItemPixmapRect(r *QRect,flags int,pixmap *QPixmap) *QRect {
+func (q *QStyle) ItemPixmapRect(r *QRect,flags int32,pixmap *QPixmap) *QRect {
 	var __rv uintptr
 	q.Drv(357000,357105,Native(r),unsafe.Pointer(&flags),Native(pixmap),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -67775,7 +67775,7 @@ func (q *QStyle) ItemPixmapRect(r *QRect,flags int,pixmap *QPixmap) *QRect {
 	return _rp
 }	
 //QStyle::itemTextRect(QFontMetrics const&,QRect const&,int,bool,QString const&)
-func (q *QStyle) ItemTextRect(fm *QFontMetrics,r *QRect,flags int,enabled bool,text string) *QRect {
+func (q *QStyle) ItemTextRect(fm *QFontMetrics,r *QRect,flags int32,enabled bool,text string) *QRect {
 	var __rv uintptr
 	q.Drv(357000,357106,Native(fm),Native(r),unsafe.Pointer(&flags),unsafe.Pointer(&enabled),unsafe.Pointer(&text),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -67786,8 +67786,8 @@ func (q *QStyle) ItemTextRect(fm *QFontMetrics,r *QRect,flags int,enabled bool,t
 	return _rp
 }	
 //QStyle::pixelMetric(QStyle::PixelMetric)
-func (q *QStyle) PixelMetric(metric QStyle_PixelMetric) int {
-	var __rv int
+func (q *QStyle) PixelMetric(metric QStyle_PixelMetric) int32 {
+	var __rv int32
 	q.Drv(357000,357107,unsafe.Pointer(&metric),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -67815,26 +67815,26 @@ func (q *QStyle) Proxy() *QStyle {
 	return _rp
 }	
 //QStyle::sliderPositionFromValue(int,int,int,int,bool)	
-func QStyleSliderPositionFromValue(min int,max int,val int,space int,upsideDown bool) int {
-	var __rv int
+func QStyleSliderPositionFromValue(min int32,max int32,val int32,space int32,upsideDown bool) int32 {
+	var __rv int32
 	DirectQtDrv(nil,357000,357112,unsafe.Pointer(&min),unsafe.Pointer(&max),unsafe.Pointer(&val),unsafe.Pointer(&space),unsafe.Pointer(&upsideDown),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStyle::sliderPositionFromValue(int,int,int,int,bool)
-func (q *QStyle) SliderPositionFromValue(min int,max int,val int,space int,upsideDown bool) int {
-	var __rv int
+func (q *QStyle) SliderPositionFromValue(min int32,max int32,val int32,space int32,upsideDown bool) int32 {
+	var __rv int32
 	q.Drv(357000,357112,unsafe.Pointer(&min),unsafe.Pointer(&max),unsafe.Pointer(&val),unsafe.Pointer(&space),unsafe.Pointer(&upsideDown),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStyle::sliderValueFromPosition(int,int,int,int,bool)	
-func QStyleSliderValueFromPosition(min int,max int,pos int,space int,upsideDown bool) int {
-	var __rv int
+func QStyleSliderValueFromPosition(min int32,max int32,pos int32,space int32,upsideDown bool) int32 {
+	var __rv int32
 	DirectQtDrv(nil,357000,357113,unsafe.Pointer(&min),unsafe.Pointer(&max),unsafe.Pointer(&pos),unsafe.Pointer(&space),unsafe.Pointer(&upsideDown),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QStyle::sliderValueFromPosition(int,int,int,int,bool)
-func (q *QStyle) SliderValueFromPosition(min int,max int,pos int,space int,upsideDown bool) int {
-	var __rv int
+func (q *QStyle) SliderValueFromPosition(min int32,max int32,pos int32,space int32,upsideDown bool) int32 {
+	var __rv int32
 	q.Drv(357000,357113,unsafe.Pointer(&min),unsafe.Pointer(&max),unsafe.Pointer(&pos),unsafe.Pointer(&space),unsafe.Pointer(&upsideDown),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -67872,8 +67872,8 @@ func (q *QStyle) StandardPixmap(standardPixmap QStyle_StandardPixmap) *QPixmap {
 	return _rp
 }	
 //QStyle::styleHint(QStyle::StyleHint)
-func (q *QStyle) StyleHint(stylehint QStyle_StyleHint) int {
-	var __rv int
+func (q *QStyle) StyleHint(stylehint QStyle_StyleHint) int32 {
+	var __rv int32
 	q.Drv(357000,357117,unsafe.Pointer(&stylehint),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -68096,8 +68096,8 @@ func (q *QSyntaxHighlighter) CurrentBlock() *QTextBlock {
 	return _rp
 }	
 //QSyntaxHighlighter::currentBlockState()
-func (q *QSyntaxHighlighter) CurrentBlockState() int {
-	var __rv int
+func (q *QSyntaxHighlighter) CurrentBlockState() int32 {
+	var __rv int32
 	q.Drv(360000,360103,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -68124,7 +68124,7 @@ func (q *QSyntaxHighlighter) Document() *QTextDocument {
 	return _rp
 }	
 //QSyntaxHighlighter::format(int)
-func (q *QSyntaxHighlighter) Format(pos int) *QTextCharFormat {
+func (q *QSyntaxHighlighter) Format(pos int32) *QTextCharFormat {
 	var __rv uintptr
 	q.Drv(360000,360106,unsafe.Pointer(&pos),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -68139,8 +68139,8 @@ func (q *QSyntaxHighlighter) HighlightBlock(text string)  {
 	q.Drv(360000,360107,unsafe.Pointer(&text),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSyntaxHighlighter::previousBlockState()
-func (q *QSyntaxHighlighter) PreviousBlockState() int {
-	var __rv int
+func (q *QSyntaxHighlighter) PreviousBlockState() int32 {
+	var __rv int32
 	q.Drv(360000,360108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -68153,7 +68153,7 @@ func (q *QSyntaxHighlighter) RehighlightBlock(block *QTextBlock)  {
 	q.Drv(360000,360110,Native(block),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSyntaxHighlighter::setCurrentBlockState(int)
-func (q *QSyntaxHighlighter) SetCurrentBlockState(newState int)  {
+func (q *QSyntaxHighlighter) SetCurrentBlockState(newState int32)  {
 	q.Drv(360000,360111,unsafe.Pointer(&newState),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSyntaxHighlighter::setCurrentBlockUserData(QTextBlockUserData*)
@@ -68165,15 +68165,15 @@ func (q *QSyntaxHighlighter) SetDocument(doc *QTextDocument)  {
 	q.Drv(360000,360113,Native(doc),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSyntaxHighlighter::setFormat(int,int,QColor const&)
-func (q *QSyntaxHighlighter) SetFormat(start int,count int,color *QColor)  {
+func (q *QSyntaxHighlighter) SetFormat(start int32,count int32,color *QColor)  {
 	q.Drv(360000,360114,unsafe.Pointer(&start),unsafe.Pointer(&count),Native(color),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSyntaxHighlighter::setFormat(int,int,QFont const&)
-func (q *QSyntaxHighlighter) SetFormatWithStartCountFont(start int,count int,font *QFont)  {
+func (q *QSyntaxHighlighter) SetFormatWithStartCountFont(start int32,count int32,font *QFont)  {
 	q.Drv(360000,360115,unsafe.Pointer(&start),unsafe.Pointer(&count),Native(font),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSyntaxHighlighter::setFormat(int,int,QTextCharFormat const&)
-func (q *QSyntaxHighlighter) SetFormatWithStartCountFormat(start int,count int,format *QTextCharFormat)  {
+func (q *QSyntaxHighlighter) SetFormatWithStartCountFormat(start int32,count int32,format *QTextCharFormat)  {
 	q.Drv(360000,360116,unsafe.Pointer(&start),unsafe.Pointer(&count),Native(format),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 
@@ -68391,7 +68391,7 @@ func (q *QSystemTrayIcon) Show()  {
 	q.Drv(362000,362118,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSystemTrayIcon::showMessage(QString const&,QString const&,QSystemTrayIcon::MessageIcon,int)
-func (q *QSystemTrayIcon) ShowMessage(title string,msg string,icon QSystemTrayIcon_MessageIcon,msecs int)  {
+func (q *QSystemTrayIcon) ShowMessage(title string,msg string,icon QSystemTrayIcon_MessageIcon,msecs int32)  {
 	q.Drv(362000,362119,unsafe.Pointer(&title),unsafe.Pointer(&msg),unsafe.Pointer(&icon),unsafe.Pointer(&msecs),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QSystemTrayIcon::supportsMessages()	
@@ -68451,19 +68451,19 @@ func NewQTabBarFromDriver(drv Driver) *QTabBar {
 	}
 	return _p
 } 	
-func (q *QTabBar) OnTabMoved(fn func(int,int)) uintptr {
+func (q *QTabBar) OnTabMoved(fn func(int32,int32)) uintptr {
 	var __rv uintptr
 	q.Drv(363000,363102,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QTabBar) OnCurrentChanged(fn func(int)) uintptr {
+func (q *QTabBar) OnCurrentChanged(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(363000,363103,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QTabBar) OnTabCloseRequested(fn func(int)) uintptr {
+func (q *QTabBar) OnTabCloseRequested(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(363000,363104,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -68492,14 +68492,14 @@ func NewQTabBarWithParent(parent QWidgetInterface) *QTabBar {
 	return _p
 } 
 //QTabBar::addTab(QString const&)
-func (q *QTabBar) AddTab(text string) int {
-	var __rv int
+func (q *QTabBar) AddTab(text string) int32 {
+	var __rv int32
 	q.Drv(363000,363107,unsafe.Pointer(&text),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTabBar::addTab(QIcon const&,QString const&)
-func (q *QTabBar) AddTabWithIconText(icon *QIcon,text string) int {
-	var __rv int
+func (q *QTabBar) AddTabWithIconText(icon *QIcon,text string) int32 {
+	var __rv int32
 	q.Drv(363000,363108,Native(icon),unsafe.Pointer(&text),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -68508,14 +68508,14 @@ func (q *QTabBar) ChangeEvent(value *QEvent)  {
 	q.Drv(363000,363109,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabBar::count()
-func (q *QTabBar) Count() int {
-	var __rv int
+func (q *QTabBar) Count() int32 {
+	var __rv int32
 	q.Drv(363000,363110,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTabBar::currentIndex()
-func (q *QTabBar) CurrentIndex() int {
-	var __rv int
+func (q *QTabBar) CurrentIndex() int32 {
+	var __rv int32
 	q.Drv(363000,363111,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -68565,14 +68565,14 @@ func (q *QTabBar) IconSize() *QSize {
 	return _rp
 }	
 //QTabBar::insertTab(int,QString const&)
-func (q *QTabBar) InsertTabWithIndexText(index int,text string) int {
-	var __rv int
+func (q *QTabBar) InsertTabWithIndexText(index int32,text string) int32 {
+	var __rv int32
 	q.Drv(363000,363119,unsafe.Pointer(&index),unsafe.Pointer(&text),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTabBar::insertTab(int,QIcon const&,QString const&)
-func (q *QTabBar) InsertTabWithIndexIconText(index int,icon *QIcon,text string) int {
-	var __rv int
+func (q *QTabBar) InsertTabWithIndexIconText(index int32,icon *QIcon,text string) int32 {
+	var __rv int32
 	q.Drv(363000,363120,unsafe.Pointer(&index),Native(icon),unsafe.Pointer(&text),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -68583,7 +68583,7 @@ func (q *QTabBar) IsMovable() bool {
 	return __rv
 }	
 //QTabBar::isTabEnabled(int)
-func (q *QTabBar) IsTabEnabled(index int) bool {
+func (q *QTabBar) IsTabEnabled(index int32) bool {
 	var __rv bool
 	q.Drv(363000,363122,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -68616,7 +68616,7 @@ func (q *QTabBar) MouseReleaseEvent(value *QMouseEvent)  {
 	q.Drv(363000,363127,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabBar::moveTab(int,int)
-func (q *QTabBar) MoveTab(from int,to int)  {
+func (q *QTabBar) MoveTab(from int32,to int32)  {
 	q.Drv(363000,363128,unsafe.Pointer(&from),unsafe.Pointer(&to),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabBar::paintEvent(QPaintEvent*)
@@ -68624,7 +68624,7 @@ func (q *QTabBar) PaintEvent(value *QPaintEvent)  {
 	q.Drv(363000,363129,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabBar::removeTab(int)
-func (q *QTabBar) RemoveTab(index int)  {
+func (q *QTabBar) RemoveTab(index int32)  {
 	q.Drv(363000,363130,unsafe.Pointer(&index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabBar::resizeEvent(QResizeEvent*)
@@ -68638,7 +68638,7 @@ func (q *QTabBar) SelectionBehaviorOnRemove() QTabBar_SelectionBehavior {
 	return __rv
 }	
 //QTabBar::setCurrentIndex(int)
-func (q *QTabBar) SetCurrentIndex(index int)  {
+func (q *QTabBar) SetCurrentIndex(index int32)  {
 	q.Drv(363000,363133,unsafe.Pointer(&index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabBar::setDocumentMode(bool)
@@ -68674,35 +68674,35 @@ func (q *QTabBar) SetShape(shape QTabBar_Shape)  {
 	q.Drv(363000,363141,unsafe.Pointer(&shape),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabBar::setTabButton(int,QTabBar::ButtonPosition,QWidget*)
-func (q *QTabBar) SetTabButton(index int,position QTabBar_ButtonPosition,widget QWidgetInterface)  {
+func (q *QTabBar) SetTabButton(index int32,position QTabBar_ButtonPosition,widget QWidgetInterface)  {
 	q.Drv(363000,363142,unsafe.Pointer(&index),unsafe.Pointer(&position),Native(widget),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabBar::setTabData(int,QVariant const&)
-func (q *QTabBar) SetTabData(index int,data *QVariant)  {
+func (q *QTabBar) SetTabData(index int32,data *QVariant)  {
 	q.Drv(363000,363143,unsafe.Pointer(&index),Native(data),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabBar::setTabEnabled(int,bool)
-func (q *QTabBar) SetTabEnabled(index int,value2 bool)  {
+func (q *QTabBar) SetTabEnabled(index int32,value2 bool)  {
 	q.Drv(363000,363144,unsafe.Pointer(&index),unsafe.Pointer(&value2),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabBar::setTabIcon(int,QIcon const&)
-func (q *QTabBar) SetTabIcon(index int,icon *QIcon)  {
+func (q *QTabBar) SetTabIcon(index int32,icon *QIcon)  {
 	q.Drv(363000,363145,unsafe.Pointer(&index),Native(icon),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabBar::setTabText(int,QString const&)
-func (q *QTabBar) SetTabText(index int,text string)  {
+func (q *QTabBar) SetTabText(index int32,text string)  {
 	q.Drv(363000,363146,unsafe.Pointer(&index),unsafe.Pointer(&text),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabBar::setTabTextColor(int,QColor const&)
-func (q *QTabBar) SetTabTextColor(index int,color *QColor)  {
+func (q *QTabBar) SetTabTextColor(index int32,color *QColor)  {
 	q.Drv(363000,363147,unsafe.Pointer(&index),Native(color),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabBar::setTabToolTip(int,QString const&)
-func (q *QTabBar) SetTabToolTip(index int,tip string)  {
+func (q *QTabBar) SetTabToolTip(index int32,tip string)  {
 	q.Drv(363000,363148,unsafe.Pointer(&index),unsafe.Pointer(&tip),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabBar::setTabWhatsThis(int,QString const&)
-func (q *QTabBar) SetTabWhatsThis(index int,text string)  {
+func (q *QTabBar) SetTabWhatsThis(index int32,text string)  {
 	q.Drv(363000,363149,unsafe.Pointer(&index),unsafe.Pointer(&text),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabBar::setTabsClosable(bool)
@@ -68735,13 +68735,13 @@ func (q *QTabBar) SizeHint() *QSize {
 	return _rp
 }	
 //QTabBar::tabAt(QPoint const&)
-func (q *QTabBar) TabAt(pos *QPoint) int {
-	var __rv int
+func (q *QTabBar) TabAt(pos *QPoint) int32 {
+	var __rv int32
 	q.Drv(363000,363155,Native(pos),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTabBar::tabButton(int,QTabBar::ButtonPosition)
-func (q *QTabBar) TabButton(index int,position QTabBar_ButtonPosition) *QWidget {
+func (q *QTabBar) TabButton(index int32,position QTabBar_ButtonPosition) *QWidget {
 	var __rv uintptr
 	q.Drv(363000,363156,unsafe.Pointer(&index),unsafe.Pointer(&position),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -68752,7 +68752,7 @@ func (q *QTabBar) TabButton(index int,position QTabBar_ButtonPosition) *QWidget 
 	return _rp
 }	
 //QTabBar::tabData(int)
-func (q *QTabBar) TabData(index int) *QVariant {
+func (q *QTabBar) TabData(index int32) *QVariant {
 	var __rv uintptr
 	q.Drv(363000,363157,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -68763,7 +68763,7 @@ func (q *QTabBar) TabData(index int) *QVariant {
 	return _rp
 }	
 //QTabBar::tabIcon(int)
-func (q *QTabBar) TabIcon(index int) *QIcon {
+func (q *QTabBar) TabIcon(index int32) *QIcon {
 	var __rv uintptr
 	q.Drv(363000,363158,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -68774,7 +68774,7 @@ func (q *QTabBar) TabIcon(index int) *QIcon {
 	return _rp
 }	
 //QTabBar::tabInserted(int)
-func (q *QTabBar) TabInserted(index int)  {
+func (q *QTabBar) TabInserted(index int32)  {
 	q.Drv(363000,363159,unsafe.Pointer(&index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabBar::tabLayoutChange()
@@ -68782,7 +68782,7 @@ func (q *QTabBar) TabLayoutChange()  {
 	q.Drv(363000,363160,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabBar::tabRect(int)
-func (q *QTabBar) TabRect(index int) *QRect {
+func (q *QTabBar) TabRect(index int32) *QRect {
 	var __rv uintptr
 	q.Drv(363000,363161,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -68793,11 +68793,11 @@ func (q *QTabBar) TabRect(index int) *QRect {
 	return _rp
 }	
 //QTabBar::tabRemoved(int)
-func (q *QTabBar) TabRemoved(index int)  {
+func (q *QTabBar) TabRemoved(index int32)  {
 	q.Drv(363000,363162,unsafe.Pointer(&index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabBar::tabSizeHint(int)
-func (q *QTabBar) TabSizeHint(index int) *QSize {
+func (q *QTabBar) TabSizeHint(index int32) *QSize {
 	var __rv uintptr
 	q.Drv(363000,363163,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -68808,13 +68808,13 @@ func (q *QTabBar) TabSizeHint(index int) *QSize {
 	return _rp
 }	
 //QTabBar::tabText(int)
-func (q *QTabBar) TabText(index int) string {
+func (q *QTabBar) TabText(index int32) string {
 	var __rv string
 	q.Drv(363000,363164,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTabBar::tabTextColor(int)
-func (q *QTabBar) TabTextColor(index int) *QColor {
+func (q *QTabBar) TabTextColor(index int32) *QColor {
 	var __rv uintptr
 	q.Drv(363000,363165,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -68825,13 +68825,13 @@ func (q *QTabBar) TabTextColor(index int) *QColor {
 	return _rp
 }	
 //QTabBar::tabToolTip(int)
-func (q *QTabBar) TabToolTip(index int) string {
+func (q *QTabBar) TabToolTip(index int32) string {
 	var __rv string
 	q.Drv(363000,363166,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTabBar::tabWhatsThis(int)
-func (q *QTabBar) TabWhatsThis(index int) string {
+func (q *QTabBar) TabWhatsThis(index int32) string {
 	var __rv string
 	q.Drv(363000,363167,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -68880,13 +68880,13 @@ func NewQTabWidgetFromDriver(drv Driver) *QTabWidget {
 	}
 	return _p
 } 	
-func (q *QTabWidget) OnCurrentChanged(fn func(int)) uintptr {
+func (q *QTabWidget) OnCurrentChanged(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(364000,364102,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QTabWidget) OnTabCloseRequested(fn func(int)) uintptr {
+func (q *QTabWidget) OnTabCloseRequested(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(364000,364103,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -68915,14 +68915,14 @@ func NewQTabWidgetWithParent(parent QWidgetInterface) *QTabWidget {
 	return _p
 } 
 //QTabWidget::addTab(QWidget*,QString const&)
-func (q *QTabWidget) AddTabWithWidgetString(widget QWidgetInterface,value2 string) int {
-	var __rv int
+func (q *QTabWidget) AddTabWithWidgetString(widget QWidgetInterface,value2 string) int32 {
+	var __rv int32
 	q.Drv(364000,364106,Native(widget),unsafe.Pointer(&value2),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTabWidget::addTab(QWidget*,QIcon const&,QString const&)
-func (q *QTabWidget) AddTabWithWidgetIconLabel(widget QWidgetInterface,icon *QIcon,label string) int {
-	var __rv int
+func (q *QTabWidget) AddTabWithWidgetIconLabel(widget QWidgetInterface,icon *QIcon,label string) int32 {
+	var __rv int32
 	q.Drv(364000,364107,Native(widget),Native(icon),unsafe.Pointer(&label),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -68957,14 +68957,14 @@ func (q *QTabWidget) CornerWidgetWithCorner(corner Qt_Corner) *QWidget {
 	return _rp
 }	
 //QTabWidget::count()
-func (q *QTabWidget) Count() int {
-	var __rv int
+func (q *QTabWidget) Count() int32 {
+	var __rv int32
 	q.Drv(364000,364112,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTabWidget::currentIndex()
-func (q *QTabWidget) CurrentIndex() int {
-	var __rv int
+func (q *QTabWidget) CurrentIndex() int32 {
+	var __rv int32
 	q.Drv(364000,364113,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -69009,20 +69009,20 @@ func (q *QTabWidget) IconSize() *QSize {
 	return _rp
 }	
 //QTabWidget::indexOf(QWidget*)
-func (q *QTabWidget) IndexOf(widget QWidgetInterface) int {
-	var __rv int
+func (q *QTabWidget) IndexOf(widget QWidgetInterface) int32 {
+	var __rv int32
 	q.Drv(364000,364119,Native(widget),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTabWidget::insertTab(int,QWidget*,QString const&)
-func (q *QTabWidget) InsertTabWithIndexWidgetString(index int,widget QWidgetInterface,value2 string) int {
-	var __rv int
+func (q *QTabWidget) InsertTabWithIndexWidgetString(index int32,widget QWidgetInterface,value2 string) int32 {
+	var __rv int32
 	q.Drv(364000,364120,unsafe.Pointer(&index),Native(widget),unsafe.Pointer(&value2),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTabWidget::insertTab(int,QWidget*,QIcon const&,QString const&)
-func (q *QTabWidget) InsertTabWithIndexWidgetIconLabel(index int,widget QWidgetInterface,icon *QIcon,label string) int {
-	var __rv int
+func (q *QTabWidget) InsertTabWithIndexWidgetIconLabel(index int32,widget QWidgetInterface,icon *QIcon,label string) int32 {
+	var __rv int32
 	q.Drv(364000,364121,unsafe.Pointer(&index),Native(widget),Native(icon),unsafe.Pointer(&label),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -69033,7 +69033,7 @@ func (q *QTabWidget) IsMovable() bool {
 	return __rv
 }	
 //QTabWidget::isTabEnabled(int)
-func (q *QTabWidget) IsTabEnabled(index int) bool {
+func (q *QTabWidget) IsTabEnabled(index int32) bool {
 	var __rv bool
 	q.Drv(364000,364123,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -69058,7 +69058,7 @@ func (q *QTabWidget) PaintEvent(value *QPaintEvent)  {
 	q.Drv(364000,364126,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabWidget::removeTab(int)
-func (q *QTabWidget) RemoveTab(index int)  {
+func (q *QTabWidget) RemoveTab(index int32)  {
 	q.Drv(364000,364127,unsafe.Pointer(&index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabWidget::resizeEvent(QResizeEvent*)
@@ -69074,7 +69074,7 @@ func (q *QTabWidget) SetCornerWidgetWithWidgetCorner(w QWidgetInterface,corner Q
 	q.Drv(364000,364130,Native(w),unsafe.Pointer(&corner),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabWidget::setCurrentIndex(int)
-func (q *QTabWidget) SetCurrentIndex(index int)  {
+func (q *QTabWidget) SetCurrentIndex(index int32)  {
 	q.Drv(364000,364131,unsafe.Pointer(&index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabWidget::setCurrentWidget(QWidget*)
@@ -69102,11 +69102,11 @@ func (q *QTabWidget) SetTabBar(value *QTabBar)  {
 	q.Drv(364000,364137,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabWidget::setTabEnabled(int,bool)
-func (q *QTabWidget) SetTabEnabled(index int,value2 bool)  {
+func (q *QTabWidget) SetTabEnabled(index int32,value2 bool)  {
 	q.Drv(364000,364138,unsafe.Pointer(&index),unsafe.Pointer(&value2),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabWidget::setTabIcon(int,QIcon const&)
-func (q *QTabWidget) SetTabIcon(index int,icon *QIcon)  {
+func (q *QTabWidget) SetTabIcon(index int32,icon *QIcon)  {
 	q.Drv(364000,364139,unsafe.Pointer(&index),Native(icon),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabWidget::setTabPosition(QTabWidget::TabPosition)
@@ -69118,15 +69118,15 @@ func (q *QTabWidget) SetTabShape(s QTabWidget_TabShape)  {
 	q.Drv(364000,364141,unsafe.Pointer(&s),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabWidget::setTabText(int,QString const&)
-func (q *QTabWidget) SetTabText(index int,value2 string)  {
+func (q *QTabWidget) SetTabText(index int32,value2 string)  {
 	q.Drv(364000,364142,unsafe.Pointer(&index),unsafe.Pointer(&value2),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabWidget::setTabToolTip(int,QString const&)
-func (q *QTabWidget) SetTabToolTip(index int,tip string)  {
+func (q *QTabWidget) SetTabToolTip(index int32,tip string)  {
 	q.Drv(364000,364143,unsafe.Pointer(&index),unsafe.Pointer(&tip),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabWidget::setTabWhatsThis(int,QString const&)
-func (q *QTabWidget) SetTabWhatsThis(index int,text string)  {
+func (q *QTabWidget) SetTabWhatsThis(index int32,text string)  {
 	q.Drv(364000,364144,unsafe.Pointer(&index),unsafe.Pointer(&text),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabWidget::setTabsClosable(bool)
@@ -69164,7 +69164,7 @@ func (q *QTabWidget) TabBar() *QTabBar {
 	return _rp
 }	
 //QTabWidget::tabIcon(int)
-func (q *QTabWidget) TabIcon(index int) *QIcon {
+func (q *QTabWidget) TabIcon(index int32) *QIcon {
 	var __rv uintptr
 	q.Drv(364000,364150,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -69175,7 +69175,7 @@ func (q *QTabWidget) TabIcon(index int) *QIcon {
 	return _rp
 }	
 //QTabWidget::tabInserted(int)
-func (q *QTabWidget) TabInserted(index int)  {
+func (q *QTabWidget) TabInserted(index int32)  {
 	q.Drv(364000,364151,unsafe.Pointer(&index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabWidget::tabPosition()
@@ -69185,7 +69185,7 @@ func (q *QTabWidget) TabPosition() QTabWidget_TabPosition {
 	return __rv
 }	
 //QTabWidget::tabRemoved(int)
-func (q *QTabWidget) TabRemoved(index int)  {
+func (q *QTabWidget) TabRemoved(index int32)  {
 	q.Drv(364000,364153,unsafe.Pointer(&index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTabWidget::tabShape()
@@ -69195,19 +69195,19 @@ func (q *QTabWidget) TabShape() QTabWidget_TabShape {
 	return __rv
 }	
 //QTabWidget::tabText(int)
-func (q *QTabWidget) TabText(index int) string {
+func (q *QTabWidget) TabText(index int32) string {
 	var __rv string
 	q.Drv(364000,364155,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTabWidget::tabToolTip(int)
-func (q *QTabWidget) TabToolTip(index int) string {
+func (q *QTabWidget) TabToolTip(index int32) string {
 	var __rv string
 	q.Drv(364000,364156,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTabWidget::tabWhatsThis(int)
-func (q *QTabWidget) TabWhatsThis(index int) string {
+func (q *QTabWidget) TabWhatsThis(index int32) string {
 	var __rv string
 	q.Drv(364000,364157,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -69225,7 +69225,7 @@ func (q *QTabWidget) UsesScrollButtons() bool {
 	return __rv
 }	
 //QTabWidget::widget(int)
-func (q *QTabWidget) Widget(index int) *QWidget {
+func (q *QTabWidget) Widget(index int32) *QWidget {
 	var __rv uintptr
 	q.Drv(364000,364160,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -69276,38 +69276,38 @@ func (q *QTableView) ClearSpans()  {
 	q.Drv(365000,365104,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::columnAt(int)
-func (q *QTableView) ColumnAt(x int) int {
-	var __rv int
+func (q *QTableView) ColumnAt(x int32) int32 {
+	var __rv int32
 	q.Drv(365000,365105,unsafe.Pointer(&x),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTableView::columnCountChanged(int,int)
-func (q *QTableView) ColumnCountChanged(oldCount int,newCount int)  {
+func (q *QTableView) ColumnCountChanged(oldCount int32,newCount int32)  {
 	q.Drv(365000,365106,unsafe.Pointer(&oldCount),unsafe.Pointer(&newCount),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::columnMoved(int,int,int)
-func (q *QTableView) ColumnMoved(column int,oldIndex int,newIndex int)  {
+func (q *QTableView) ColumnMoved(column int32,oldIndex int32,newIndex int32)  {
 	q.Drv(365000,365107,unsafe.Pointer(&column),unsafe.Pointer(&oldIndex),unsafe.Pointer(&newIndex),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::columnResized(int,int,int)
-func (q *QTableView) ColumnResized(column int,oldWidth int,newWidth int)  {
+func (q *QTableView) ColumnResized(column int32,oldWidth int32,newWidth int32)  {
 	q.Drv(365000,365108,unsafe.Pointer(&column),unsafe.Pointer(&oldWidth),unsafe.Pointer(&newWidth),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::columnSpan(int,int)
-func (q *QTableView) ColumnSpan(row int,column int) int {
-	var __rv int
+func (q *QTableView) ColumnSpan(row int32,column int32) int32 {
+	var __rv int32
 	q.Drv(365000,365109,unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTableView::columnViewportPosition(int)
-func (q *QTableView) ColumnViewportPosition(column int) int {
-	var __rv int
+func (q *QTableView) ColumnViewportPosition(column int32) int32 {
+	var __rv int32
 	q.Drv(365000,365110,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTableView::columnWidth(int)
-func (q *QTableView) ColumnWidth(column int) int {
-	var __rv int
+func (q *QTableView) ColumnWidth(column int32) int32 {
+	var __rv int32
 	q.Drv(365000,365111,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -69322,11 +69322,11 @@ func (q *QTableView) GridStyle() Qt_PenStyle {
 	return __rv
 }	
 //QTableView::hideColumn(int)
-func (q *QTableView) HideColumn(column int)  {
+func (q *QTableView) HideColumn(column int32)  {
 	q.Drv(365000,365114,unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::hideRow(int)
-func (q *QTableView) HideRow(row int)  {
+func (q *QTableView) HideRow(row int32)  {
 	q.Drv(365000,365115,unsafe.Pointer(&row),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::horizontalHeader()
@@ -69341,13 +69341,13 @@ func (q *QTableView) HorizontalHeader() *QHeaderView {
 	return _rp
 }	
 //QTableView::horizontalOffset()
-func (q *QTableView) HorizontalOffset() int {
-	var __rv int
+func (q *QTableView) HorizontalOffset() int32 {
+	var __rv int32
 	q.Drv(365000,365117,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTableView::horizontalScrollbarAction(int)
-func (q *QTableView) HorizontalScrollbarAction(action int)  {
+func (q *QTableView) HorizontalScrollbarAction(action int32)  {
 	q.Drv(365000,365118,unsafe.Pointer(&action),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::indexAt(QPoint const&)
@@ -69362,7 +69362,7 @@ func (q *QTableView) IndexAt(p *QPoint) *QModelIndex {
 	return _rp
 }	
 //QTableView::isColumnHidden(int)
-func (q *QTableView) IsColumnHidden(column int) bool {
+func (q *QTableView) IsColumnHidden(column int32) bool {
 	var __rv bool
 	q.Drv(365000,365120,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -69380,7 +69380,7 @@ func (q *QTableView) IsIndexHidden(index *QModelIndex) bool {
 	return __rv
 }	
 //QTableView::isRowHidden(int)
-func (q *QTableView) IsRowHidden(row int) bool {
+func (q *QTableView) IsRowHidden(row int32) bool {
 	var __rv bool
 	q.Drv(365000,365123,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -69407,7 +69407,7 @@ func (q *QTableView) PaintEvent(e *QPaintEvent)  {
 	q.Drv(365000,365126,Native(e),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::resizeColumnToContents(int)
-func (q *QTableView) ResizeColumnToContents(column int)  {
+func (q *QTableView) ResizeColumnToContents(column int32)  {
 	q.Drv(365000,365127,unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::resizeColumnsToContents()
@@ -69415,7 +69415,7 @@ func (q *QTableView) ResizeColumnsToContents()  {
 	q.Drv(365000,365128,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::resizeRowToContents(int)
-func (q *QTableView) ResizeRowToContents(row int)  {
+func (q *QTableView) ResizeRowToContents(row int32)  {
 	q.Drv(365000,365129,unsafe.Pointer(&row),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::resizeRowsToContents()
@@ -69423,43 +69423,43 @@ func (q *QTableView) ResizeRowsToContents()  {
 	q.Drv(365000,365130,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::rowAt(int)
-func (q *QTableView) RowAt(y int) int {
-	var __rv int
+func (q *QTableView) RowAt(y int32) int32 {
+	var __rv int32
 	q.Drv(365000,365131,unsafe.Pointer(&y),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTableView::rowCountChanged(int,int)
-func (q *QTableView) RowCountChanged(oldCount int,newCount int)  {
+func (q *QTableView) RowCountChanged(oldCount int32,newCount int32)  {
 	q.Drv(365000,365132,unsafe.Pointer(&oldCount),unsafe.Pointer(&newCount),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::rowHeight(int)
-func (q *QTableView) RowHeight(row int) int {
-	var __rv int
+func (q *QTableView) RowHeight(row int32) int32 {
+	var __rv int32
 	q.Drv(365000,365133,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTableView::rowMoved(int,int,int)
-func (q *QTableView) RowMoved(row int,oldIndex int,newIndex int)  {
+func (q *QTableView) RowMoved(row int32,oldIndex int32,newIndex int32)  {
 	q.Drv(365000,365134,unsafe.Pointer(&row),unsafe.Pointer(&oldIndex),unsafe.Pointer(&newIndex),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::rowResized(int,int,int)
-func (q *QTableView) RowResized(row int,oldHeight int,newHeight int)  {
+func (q *QTableView) RowResized(row int32,oldHeight int32,newHeight int32)  {
 	q.Drv(365000,365135,unsafe.Pointer(&row),unsafe.Pointer(&oldHeight),unsafe.Pointer(&newHeight),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::rowSpan(int,int)
-func (q *QTableView) RowSpan(row int,column int) int {
-	var __rv int
+func (q *QTableView) RowSpan(row int32,column int32) int32 {
+	var __rv int32
 	q.Drv(365000,365136,unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTableView::rowViewportPosition(int)
-func (q *QTableView) RowViewportPosition(row int) int {
-	var __rv int
+func (q *QTableView) RowViewportPosition(row int32) int32 {
+	var __rv int32
 	q.Drv(365000,365137,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTableView::scrollContentsBy(int,int)
-func (q *QTableView) ScrollContentsBy(dx int,dy int)  {
+func (q *QTableView) ScrollContentsBy(dx int32,dy int32)  {
 	q.Drv(365000,365138,unsafe.Pointer(&dx),unsafe.Pointer(&dy),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::scrollTo(QModelIndex const&)
@@ -69471,11 +69471,11 @@ func (q *QTableView) ScrollToWithIndexHint(index *QModelIndex,hint QAbstractItem
 	q.Drv(365000,365140,Native(index),unsafe.Pointer(&hint),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::selectColumn(int)
-func (q *QTableView) SelectColumn(column int)  {
+func (q *QTableView) SelectColumn(column int32)  {
 	q.Drv(365000,365141,unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::selectRow(int)
-func (q *QTableView) SelectRow(row int)  {
+func (q *QTableView) SelectRow(row int32)  {
 	q.Drv(365000,365142,unsafe.Pointer(&row),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::selectedIndexes()
@@ -69489,11 +69489,11 @@ func (q *QTableView) SelectionChanged(selected *QItemSelection,deselected *QItem
 	q.Drv(365000,365144,Native(selected),Native(deselected),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::setColumnHidden(int,bool)
-func (q *QTableView) SetColumnHidden(column int,hide bool)  {
+func (q *QTableView) SetColumnHidden(column int32,hide bool)  {
 	q.Drv(365000,365145,unsafe.Pointer(&column),unsafe.Pointer(&hide),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::setColumnWidth(int,int)
-func (q *QTableView) SetColumnWidth(column int,width int)  {
+func (q *QTableView) SetColumnWidth(column int32,width int32)  {
 	q.Drv(365000,365146,unsafe.Pointer(&column),unsafe.Pointer(&width),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::setCornerButtonEnabled(bool)
@@ -69517,11 +69517,11 @@ func (q *QTableView) SetRootIndex(index *QModelIndex)  {
 	q.Drv(365000,365151,Native(index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::setRowHeight(int,int)
-func (q *QTableView) SetRowHeight(row int,height int)  {
+func (q *QTableView) SetRowHeight(row int32,height int32)  {
 	q.Drv(365000,365152,unsafe.Pointer(&row),unsafe.Pointer(&height),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::setRowHidden(int,bool)
-func (q *QTableView) SetRowHidden(row int,hide bool)  {
+func (q *QTableView) SetRowHidden(row int32,hide bool)  {
 	q.Drv(365000,365153,unsafe.Pointer(&row),unsafe.Pointer(&hide),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::setSelection(QRect const&,QFlags<QItemSelectionModel::SelectionFlag>)
@@ -69541,7 +69541,7 @@ func (q *QTableView) SetSortingEnabled(enable bool)  {
 	q.Drv(365000,365157,unsafe.Pointer(&enable),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::setSpan(int,int,int,int)
-func (q *QTableView) SetSpan(row int,column int,rowSpan int,columnSpan int)  {
+func (q *QTableView) SetSpan(row int32,column int32,rowSpan int32,columnSpan int32)  {
 	q.Drv(365000,365158,unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&rowSpan),unsafe.Pointer(&columnSpan),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::setVerticalHeader(QHeaderView*)
@@ -69553,7 +69553,7 @@ func (q *QTableView) SetWordWrap(on bool)  {
 	q.Drv(365000,365160,unsafe.Pointer(&on),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::showColumn(int)
-func (q *QTableView) ShowColumn(column int)  {
+func (q *QTableView) ShowColumn(column int32)  {
 	q.Drv(365000,365161,unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::showGrid()
@@ -69563,27 +69563,27 @@ func (q *QTableView) ShowGrid() bool {
 	return __rv
 }	
 //QTableView::showRow(int)
-func (q *QTableView) ShowRow(row int)  {
+func (q *QTableView) ShowRow(row int32)  {
 	q.Drv(365000,365163,unsafe.Pointer(&row),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::sizeHintForColumn(int)
-func (q *QTableView) SizeHintForColumn(column int) int {
-	var __rv int
+func (q *QTableView) SizeHintForColumn(column int32) int32 {
+	var __rv int32
 	q.Drv(365000,365164,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTableView::sizeHintForRow(int)
-func (q *QTableView) SizeHintForRow(row int) int {
-	var __rv int
+func (q *QTableView) SizeHintForRow(row int32) int32 {
+	var __rv int32
 	q.Drv(365000,365165,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTableView::sortByColumn(int)
-func (q *QTableView) SortByColumn(column int)  {
+func (q *QTableView) SortByColumn(column int32)  {
 	q.Drv(365000,365166,unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::sortByColumn(int,Qt::SortOrder)
-func (q *QTableView) SortByColumnWithColumnOrder(column int,order Qt_SortOrder)  {
+func (q *QTableView) SortByColumnWithColumnOrder(column int32,order Qt_SortOrder)  {
 	q.Drv(365000,365167,unsafe.Pointer(&column),unsafe.Pointer(&order),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::timerEvent(QTimerEvent*)
@@ -69606,13 +69606,13 @@ func (q *QTableView) VerticalHeader() *QHeaderView {
 	return _rp
 }	
 //QTableView::verticalOffset()
-func (q *QTableView) VerticalOffset() int {
-	var __rv int
+func (q *QTableView) VerticalOffset() int32 {
+	var __rv int32
 	q.Drv(365000,365171,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTableView::verticalScrollbarAction(int)
-func (q *QTableView) VerticalScrollbarAction(action int)  {
+func (q *QTableView) VerticalScrollbarAction(action int32)  {
 	q.Drv(365000,365172,unsafe.Pointer(&action),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableView::visualRect(QModelIndex const&)
@@ -69663,7 +69663,7 @@ func (q *QTableWidget) OnItemEntered(fn func(*QTableWidgetItem)) uintptr {
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QTableWidget) OnCurrentCellChanged(fn func(int,int,int,int)) uintptr {
+func (q *QTableWidget) OnCurrentCellChanged(fn func(int32,int32,int32,int32)) uintptr {
 	var __rv uintptr
 	q.Drv(366000,366103,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -69681,25 +69681,25 @@ func (q *QTableWidget) OnItemSelectionChanged(fn func()) uintptr {
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QTableWidget) OnCellActivated(fn func(int,int)) uintptr {
+func (q *QTableWidget) OnCellActivated(fn func(int32,int32)) uintptr {
 	var __rv uintptr
 	q.Drv(366000,366106,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QTableWidget) OnCellClicked(fn func(int,int)) uintptr {
+func (q *QTableWidget) OnCellClicked(fn func(int32,int32)) uintptr {
 	var __rv uintptr
 	q.Drv(366000,366107,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QTableWidget) OnCellChanged(fn func(int,int)) uintptr {
+func (q *QTableWidget) OnCellChanged(fn func(int32,int32)) uintptr {
 	var __rv uintptr
 	q.Drv(366000,366108,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QTableWidget) OnCellDoubleClicked(fn func(int,int)) uintptr {
+func (q *QTableWidget) OnCellDoubleClicked(fn func(int32,int32)) uintptr {
 	var __rv uintptr
 	q.Drv(366000,366109,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -69723,13 +69723,13 @@ func (q *QTableWidget) OnItemDoubleClicked(fn func(*QTableWidgetItem)) uintptr {
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QTableWidget) OnCellPressed(fn func(int,int)) uintptr {
+func (q *QTableWidget) OnCellPressed(fn func(int32,int32)) uintptr {
 	var __rv uintptr
 	q.Drv(366000,366113,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QTableWidget) OnCellEntered(fn func(int,int)) uintptr {
+func (q *QTableWidget) OnCellEntered(fn func(int32,int32)) uintptr {
 	var __rv uintptr
 	q.Drv(366000,366114,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -69770,7 +69770,7 @@ func NewQTableWidgetWithParent(parent QWidgetInterface) *QTableWidget {
 	return _p
 } 
 //QTableWidget::QTableWidget(int,int,QWidget*)	
-func NewQTableWidgetWithRowsColumnsParent(rows int,columns int,parent QWidgetInterface) *QTableWidget {
+func NewQTableWidgetWithRowsColumnsParent(rows int32,columns int32,parent QWidgetInterface) *QTableWidget {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),366000,366119,unsafe.Pointer(&rows),unsafe.Pointer(&columns),Native(parent),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -69781,7 +69781,7 @@ func NewQTableWidgetWithRowsColumnsParent(rows int,columns int,parent QWidgetInt
 	return _p
 } 
 //QTableWidget::cellWidget(int,int)
-func (q *QTableWidget) CellWidget(row int,column int) *QWidget {
+func (q *QTableWidget) CellWidget(row int32,column int32) *QWidget {
 	var __rv uintptr
 	q.Drv(366000,366120,unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -69804,20 +69804,20 @@ func (q *QTableWidget) ClosePersistentEditor(item *QTableWidgetItem)  {
 	q.Drv(366000,366123,Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidget::column(QTableWidgetItem const*)
-func (q *QTableWidget) Column(item *QTableWidgetItem) int {
-	var __rv int
+func (q *QTableWidget) Column(item *QTableWidgetItem) int32 {
+	var __rv int32
 	q.Drv(366000,366124,Native(item),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTableWidget::columnCount()
-func (q *QTableWidget) ColumnCount() int {
-	var __rv int
+func (q *QTableWidget) ColumnCount() int32 {
+	var __rv int32
 	q.Drv(366000,366125,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTableWidget::currentColumn()
-func (q *QTableWidget) CurrentColumn() int {
-	var __rv int
+func (q *QTableWidget) CurrentColumn() int32 {
+	var __rv int32
 	q.Drv(366000,366126,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -69833,8 +69833,8 @@ func (q *QTableWidget) CurrentItem() *QTableWidgetItem {
 	return _rp
 }	
 //QTableWidget::currentRow()
-func (q *QTableWidget) CurrentRow() int {
-	var __rv int
+func (q *QTableWidget) CurrentRow() int32 {
+	var __rv int32
 	q.Drv(366000,366128,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -69843,7 +69843,7 @@ func (q *QTableWidget) DropEvent(event *QDropEvent)  {
 	q.Drv(366000,366129,Native(event),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidget::dropMimeData(int,int,QMimeData const*,Qt::DropAction)
-func (q *QTableWidget) DropMimeData(row int,column int,data *QMimeData,action Qt_DropAction) bool {
+func (q *QTableWidget) DropMimeData(row int32,column int32,data *QMimeData,action Qt_DropAction) bool {
 	var __rv bool
 	q.Drv(366000,366130,unsafe.Pointer(&row),unsafe.Pointer(&column),Native(data),unsafe.Pointer(&action),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -69865,7 +69865,7 @@ func (q *QTableWidget) FindItems(text string,flags Qt_MatchFlag) []*QTableWidget
 	return __rv
 }	
 //QTableWidget::horizontalHeaderItem(int)
-func (q *QTableWidget) HorizontalHeaderItem(column int) *QTableWidgetItem {
+func (q *QTableWidget) HorizontalHeaderItem(column int32) *QTableWidgetItem {
 	var __rv uintptr
 	q.Drv(366000,366134,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -69887,11 +69887,11 @@ func (q *QTableWidget) IndexFromItem(item *QTableWidgetItem) *QModelIndex {
 	return _rp
 }	
 //QTableWidget::insertColumn(int)
-func (q *QTableWidget) InsertColumn(column int)  {
+func (q *QTableWidget) InsertColumn(column int32)  {
 	q.Drv(366000,366136,unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidget::insertRow(int)
-func (q *QTableWidget) InsertRow(row int)  {
+func (q *QTableWidget) InsertRow(row int32)  {
 	q.Drv(366000,366137,unsafe.Pointer(&row),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidget::isItemSelected(QTableWidgetItem const*)
@@ -69907,7 +69907,7 @@ func (q *QTableWidget) IsSortingEnabled() bool {
 	return __rv
 }	
 //QTableWidget::item(int,int)
-func (q *QTableWidget) Item(row int,column int) *QTableWidgetItem {
+func (q *QTableWidget) Item(row int32,column int32) *QTableWidgetItem {
 	var __rv uintptr
 	q.Drv(366000,366140,unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -69929,7 +69929,7 @@ func (q *QTableWidget) ItemAt(p *QPoint) *QTableWidgetItem {
 	return _rp
 }	
 //QTableWidget::itemAt(int,int)
-func (q *QTableWidget) ItemAtWithXY(x int,y int) *QTableWidgetItem {
+func (q *QTableWidget) ItemAtWithXY(x int32,y int32) *QTableWidgetItem {
 	var __rv uintptr
 	q.Drv(366000,366142,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -69989,26 +69989,26 @@ func (q *QTableWidget) OpenPersistentEditor(item *QTableWidgetItem)  {
 	q.Drv(366000,366148,Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidget::removeCellWidget(int,int)
-func (q *QTableWidget) RemoveCellWidget(row int,column int)  {
+func (q *QTableWidget) RemoveCellWidget(row int32,column int32)  {
 	q.Drv(366000,366149,unsafe.Pointer(&row),unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidget::removeColumn(int)
-func (q *QTableWidget) RemoveColumn(column int)  {
+func (q *QTableWidget) RemoveColumn(column int32)  {
 	q.Drv(366000,366150,unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidget::removeRow(int)
-func (q *QTableWidget) RemoveRow(row int)  {
+func (q *QTableWidget) RemoveRow(row int32)  {
 	q.Drv(366000,366151,unsafe.Pointer(&row),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidget::row(QTableWidgetItem const*)
-func (q *QTableWidget) Row(item *QTableWidgetItem) int {
-	var __rv int
+func (q *QTableWidget) Row(item *QTableWidgetItem) int32 {
+	var __rv int32
 	q.Drv(366000,366152,Native(item),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTableWidget::rowCount()
-func (q *QTableWidget) RowCount() int {
-	var __rv int
+func (q *QTableWidget) RowCount() int32 {
+	var __rv int32
 	q.Drv(366000,366153,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -70033,19 +70033,19 @@ func (q *QTableWidget) SelectedRanges() []*QTableWidgetSelectionRange {
 	return __rv
 }	
 //QTableWidget::setCellWidget(int,int,QWidget*)
-func (q *QTableWidget) SetCellWidget(row int,column int,widget QWidgetInterface)  {
+func (q *QTableWidget) SetCellWidget(row int32,column int32,widget QWidgetInterface)  {
 	q.Drv(366000,366158,unsafe.Pointer(&row),unsafe.Pointer(&column),Native(widget),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidget::setColumnCount(int)
-func (q *QTableWidget) SetColumnCount(columns int)  {
+func (q *QTableWidget) SetColumnCount(columns int32)  {
 	q.Drv(366000,366159,unsafe.Pointer(&columns),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidget::setCurrentCell(int,int)
-func (q *QTableWidget) SetCurrentCellWithRowColumn(row int,column int)  {
+func (q *QTableWidget) SetCurrentCellWithRowColumn(row int32,column int32)  {
 	q.Drv(366000,366160,unsafe.Pointer(&row),unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidget::setCurrentCell(int,int,QFlags<QItemSelectionModel::SelectionFlag>)
-func (q *QTableWidget) SetCurrentCellWithRowColumnCommand(row int,column int,command QItemSelectionModel_SelectionFlag)  {
+func (q *QTableWidget) SetCurrentCellWithRowColumnCommand(row int32,column int32,command QItemSelectionModel_SelectionFlag)  {
 	q.Drv(366000,366161,unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&command),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidget::setCurrentItem(QTableWidgetItem*)
@@ -70057,7 +70057,7 @@ func (q *QTableWidget) SetCurrentItemWithItemCommand(item *QTableWidgetItem,comm
 	q.Drv(366000,366163,Native(item),unsafe.Pointer(&command),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidget::setHorizontalHeaderItem(int,QTableWidgetItem*)
-func (q *QTableWidget) SetHorizontalHeaderItem(column int,item *QTableWidgetItem)  {
+func (q *QTableWidget) SetHorizontalHeaderItem(column int32,item *QTableWidgetItem)  {
 	q.Drv(366000,366164,unsafe.Pointer(&column),Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidget::setHorizontalHeaderLabels(QStringList const&)
@@ -70065,7 +70065,7 @@ func (q *QTableWidget) SetHorizontalHeaderLabels(labels []string)  {
 	q.Drv(366000,366165,unsafe.Pointer(&labels),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidget::setItem(int,int,QTableWidgetItem*)
-func (q *QTableWidget) SetItem(row int,column int,item *QTableWidgetItem)  {
+func (q *QTableWidget) SetItem(row int32,column int32,item *QTableWidgetItem)  {
 	q.Drv(366000,366166,unsafe.Pointer(&row),unsafe.Pointer(&column),Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidget::setItemPrototype(QTableWidgetItem const*)
@@ -70081,7 +70081,7 @@ func (q *QTableWidget) SetRangeSelected(_range *QTableWidgetSelectionRange,_sele
 	q.Drv(366000,366169,Native(_range),unsafe.Pointer(&_select),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidget::setRowCount(int)
-func (q *QTableWidget) SetRowCount(rows int)  {
+func (q *QTableWidget) SetRowCount(rows int32)  {
 	q.Drv(366000,366170,unsafe.Pointer(&rows),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidget::setSortingEnabled(bool)
@@ -70089,7 +70089,7 @@ func (q *QTableWidget) SetSortingEnabled(enable bool)  {
 	q.Drv(366000,366171,unsafe.Pointer(&enable),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidget::setVerticalHeaderItem(int,QTableWidgetItem*)
-func (q *QTableWidget) SetVerticalHeaderItem(row int,item *QTableWidgetItem)  {
+func (q *QTableWidget) SetVerticalHeaderItem(row int32,item *QTableWidgetItem)  {
 	q.Drv(366000,366172,unsafe.Pointer(&row),Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidget::setVerticalHeaderLabels(QStringList const&)
@@ -70097,11 +70097,11 @@ func (q *QTableWidget) SetVerticalHeaderLabels(labels []string)  {
 	q.Drv(366000,366173,unsafe.Pointer(&labels),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidget::sortItems(int)
-func (q *QTableWidget) SortItems(column int)  {
+func (q *QTableWidget) SortItems(column int32)  {
 	q.Drv(366000,366174,unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidget::sortItems(int,Qt::SortOrder)
-func (q *QTableWidget) SortItemsWithColumnOrder(column int,order Qt_SortOrder)  {
+func (q *QTableWidget) SortItemsWithColumnOrder(column int32,order Qt_SortOrder)  {
 	q.Drv(366000,366175,unsafe.Pointer(&column),unsafe.Pointer(&order),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTableWidget::supportedDropActions()
@@ -70111,7 +70111,7 @@ func (q *QTableWidget) SupportedDropActions() Qt_DropAction {
 	return __rv
 }	
 //QTableWidget::takeHorizontalHeaderItem(int)
-func (q *QTableWidget) TakeHorizontalHeaderItem(column int) *QTableWidgetItem {
+func (q *QTableWidget) TakeHorizontalHeaderItem(column int32) *QTableWidgetItem {
 	var __rv uintptr
 	q.Drv(366000,366177,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -70122,7 +70122,7 @@ func (q *QTableWidget) TakeHorizontalHeaderItem(column int) *QTableWidgetItem {
 	return _rp
 }	
 //QTableWidget::takeItem(int,int)
-func (q *QTableWidget) TakeItem(row int,column int) *QTableWidgetItem {
+func (q *QTableWidget) TakeItem(row int32,column int32) *QTableWidgetItem {
 	var __rv uintptr
 	q.Drv(366000,366178,unsafe.Pointer(&row),unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -70133,7 +70133,7 @@ func (q *QTableWidget) TakeItem(row int,column int) *QTableWidgetItem {
 	return _rp
 }	
 //QTableWidget::takeVerticalHeaderItem(int)
-func (q *QTableWidget) TakeVerticalHeaderItem(row int) *QTableWidgetItem {
+func (q *QTableWidget) TakeVerticalHeaderItem(row int32) *QTableWidgetItem {
 	var __rv uintptr
 	q.Drv(366000,366179,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -70144,7 +70144,7 @@ func (q *QTableWidget) TakeVerticalHeaderItem(row int) *QTableWidgetItem {
 	return _rp
 }	
 //QTableWidget::verticalHeaderItem(int)
-func (q *QTableWidget) VerticalHeaderItem(row int) *QTableWidgetItem {
+func (q *QTableWidget) VerticalHeaderItem(row int32) *QTableWidgetItem {
 	var __rv uintptr
 	q.Drv(366000,366180,unsafe.Pointer(&row),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -70155,8 +70155,8 @@ func (q *QTableWidget) VerticalHeaderItem(row int) *QTableWidgetItem {
 	return _rp
 }	
 //QTableWidget::visualColumn(int)
-func (q *QTableWidget) VisualColumn(logicalColumn int) int {
-	var __rv int
+func (q *QTableWidget) VisualColumn(logicalColumn int32) int32 {
+	var __rv int32
 	q.Drv(366000,366181,unsafe.Pointer(&logicalColumn),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -70172,8 +70172,8 @@ func (q *QTableWidget) VisualItemRect(item *QTableWidgetItem) *QRect {
 	return _rp
 }	
 //QTableWidget::visualRow(int)
-func (q *QTableWidget) VisualRow(logicalRow int) int {
-	var __rv int
+func (q *QTableWidget) VisualRow(logicalRow int32) int32 {
+	var __rv int32
 	q.Drv(366000,366183,unsafe.Pointer(&logicalRow),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -70229,22 +70229,22 @@ func (q *QTapAndHoldGesture) SetPosition(pos *QPointF)  {
 	q.Drv(367000,367105,Native(pos),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTapAndHoldGesture::setTimeout(int)	
-func QTapAndHoldGestureSetTimeout(msecs int)  {
+func QTapAndHoldGestureSetTimeout(msecs int32)  {
 	DirectQtDrv(nil,367000,367106,unsafe.Pointer(&msecs),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTapAndHoldGesture::setTimeout(int)
-func (q *QTapAndHoldGesture) SetTimeout(msecs int)  {
+func (q *QTapAndHoldGesture) SetTimeout(msecs int32)  {
 	q.Drv(367000,367106,unsafe.Pointer(&msecs),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTapAndHoldGesture::timeout()	
-func QTapAndHoldGestureTimeout() int {
-	var __rv int
+func QTapAndHoldGestureTimeout() int32 {
+	var __rv int32
 	DirectQtDrv(nil,367000,367107,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTapAndHoldGesture::timeout()
-func (q *QTapAndHoldGesture) Timeout() int {
-	var __rv int
+func (q *QTapAndHoldGesture) Timeout() int32 {
+	var __rv int32
 	q.Drv(367000,367107,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -70554,8 +70554,8 @@ func (q *QTextBrowser) Backward()  {
 	q.Drv(371000,371111,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextBrowser::backwardHistoryCount()
-func (q *QTextBrowser) BackwardHistoryCount() int {
-	var __rv int
+func (q *QTextBrowser) BackwardHistoryCount() int32 {
+	var __rv int32
 	q.Drv(371000,371112,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -70584,19 +70584,19 @@ func (q *QTextBrowser) Forward()  {
 	q.Drv(371000,371117,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextBrowser::forwardHistoryCount()
-func (q *QTextBrowser) ForwardHistoryCount() int {
-	var __rv int
+func (q *QTextBrowser) ForwardHistoryCount() int32 {
+	var __rv int32
 	q.Drv(371000,371118,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextBrowser::historyTitle(int)
-func (q *QTextBrowser) HistoryTitle(value int) string {
+func (q *QTextBrowser) HistoryTitle(value int32) string {
 	var __rv string
 	q.Drv(371000,371119,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextBrowser::historyUrl(int)
-func (q *QTextBrowser) HistoryUrl(value int) *QUrl {
+func (q *QTextBrowser) HistoryUrl(value int32) *QUrl {
 	var __rv uintptr
 	q.Drv(371000,371120,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -70627,7 +70627,7 @@ func (q *QTextBrowser) KeyPressEvent(ev *QKeyEvent)  {
 	q.Drv(371000,371124,Native(ev),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextBrowser::loadResource(int,QUrl const&)
-func (q *QTextBrowser) LoadResource(_type int,name *QUrl) *QVariant {
+func (q *QTextBrowser) LoadResource(_type int32,name *QUrl) *QVariant {
 	var __rv uintptr
 	q.Drv(371000,371125,unsafe.Pointer(&_type),Native(name),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -70750,7 +70750,7 @@ func (q *QTextDocument) OnUndoAvailable(fn func(bool)) uintptr {
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QTextDocument) OnBlockCountChanged(fn func(int)) uintptr {
+func (q *QTextDocument) OnBlockCountChanged(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(372000,372103,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -70768,7 +70768,7 @@ func (q *QTextDocument) OnCursorPositionChanged(fn func(*QTextCursor)) uintptr {
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QTextDocument) OnContentsChange(fn func(int,int,int)) uintptr {
+func (q *QTextDocument) OnContentsChange(fn func(int32,int32,int32)) uintptr {
 	var __rv uintptr
 	q.Drv(372000,372106,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -70832,7 +70832,7 @@ func NewQTextDocumentWithTextParent(text string,parent QObjectInterface) *QTextD
 	return _p
 } 
 //QTextDocument::addResource(int,QUrl const&,QVariant const&)
-func (q *QTextDocument) AddResource(_type int,name *QUrl,resource *QVariant)  {
+func (q *QTextDocument) AddResource(_type int32,name *QUrl,resource *QVariant)  {
 	q.Drv(372000,372114,unsafe.Pointer(&_type),Native(name),Native(resource),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextDocument::adjustSize()
@@ -70850,14 +70850,14 @@ func (q *QTextDocument) AppendUndoItem(value *QAbstractUndoItem)  {
 	q.Drv(372000,372117,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextDocument::availableRedoSteps()
-func (q *QTextDocument) AvailableRedoSteps() int {
-	var __rv int
+func (q *QTextDocument) AvailableRedoSteps() int32 {
+	var __rv int32
 	q.Drv(372000,372118,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextDocument::availableUndoSteps()
-func (q *QTextDocument) AvailableUndoSteps() int {
-	var __rv int
+func (q *QTextDocument) AvailableUndoSteps() int32 {
+	var __rv int32
 	q.Drv(372000,372119,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -70873,20 +70873,20 @@ func (q *QTextDocument) Begin() *QTextBlock {
 	return _rp
 }	
 //QTextDocument::blockCount()
-func (q *QTextDocument) BlockCount() int {
-	var __rv int
+func (q *QTextDocument) BlockCount() int32 {
+	var __rv int32
 	q.Drv(372000,372121,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextDocument::characterAt(int)
-func (q *QTextDocument) CharacterAt(pos int) rune {
+func (q *QTextDocument) CharacterAt(pos int32) rune {
 	var __rv rune
 	q.Drv(372000,372122,unsafe.Pointer(&pos),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextDocument::characterCount()
-func (q *QTextDocument) CharacterCount() int {
-	var __rv int
+func (q *QTextDocument) CharacterCount() int32 {
+	var __rv int32
 	q.Drv(372000,372123,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -71033,7 +71033,7 @@ func (q *QTextDocument) FindWithExprFromOptions(expr *QRegExp,from *QTextCursor,
 	return _rp
 }	
 //QTextDocument::find(QRegExp const&,int,QFlags<QTextDocument::FindFlag>)
-func (q *QTextDocument) FindWithExprIfromOptions(expr *QRegExp,from int,options QTextDocument_FindFlag) *QTextCursor {
+func (q *QTextDocument) FindWithExprIfromOptions(expr *QRegExp,from int32,options QTextDocument_FindFlag) *QTextCursor {
 	var __rv uintptr
 	q.Drv(372000,372141,Native(expr),unsafe.Pointer(&from),unsafe.Pointer(&options),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -71055,7 +71055,7 @@ func (q *QTextDocument) FindWithSubstringFromOptions(subString string,from *QTex
 	return _rp
 }	
 //QTextDocument::find(QString const&,int,QFlags<QTextDocument::FindFlag>)
-func (q *QTextDocument) FindWithSubstringIfromOptions(subString string,from int,options QTextDocument_FindFlag) *QTextCursor {
+func (q *QTextDocument) FindWithSubstringIfromOptions(subString string,from int32,options QTextDocument_FindFlag) *QTextCursor {
 	var __rv uintptr
 	q.Drv(372000,372143,unsafe.Pointer(&subString),unsafe.Pointer(&from),unsafe.Pointer(&options),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -71066,7 +71066,7 @@ func (q *QTextDocument) FindWithSubstringIfromOptions(subString string,from int,
 	return _rp
 }	
 //QTextDocument::findBlock(int)
-func (q *QTextDocument) FindBlock(pos int) *QTextBlock {
+func (q *QTextDocument) FindBlock(pos int32) *QTextBlock {
 	var __rv uintptr
 	q.Drv(372000,372144,unsafe.Pointer(&pos),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -71077,7 +71077,7 @@ func (q *QTextDocument) FindBlock(pos int) *QTextBlock {
 	return _rp
 }	
 //QTextDocument::findBlockByLineNumber(int)
-func (q *QTextDocument) FindBlockByLineNumber(blockNumber int) *QTextBlock {
+func (q *QTextDocument) FindBlockByLineNumber(blockNumber int32) *QTextBlock {
 	var __rv uintptr
 	q.Drv(372000,372145,unsafe.Pointer(&blockNumber),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -71088,7 +71088,7 @@ func (q *QTextDocument) FindBlockByLineNumber(blockNumber int) *QTextBlock {
 	return _rp
 }	
 //QTextDocument::findBlockByNumber(int)
-func (q *QTextDocument) FindBlockByNumber(blockNumber int) *QTextBlock {
+func (q *QTextDocument) FindBlockByNumber(blockNumber int32) *QTextBlock {
 	var __rv uintptr
 	q.Drv(372000,372146,unsafe.Pointer(&blockNumber),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -71110,7 +71110,7 @@ func (q *QTextDocument) FirstBlock() *QTextBlock {
 	return _rp
 }	
 //QTextDocument::frameAt(int)
-func (q *QTextDocument) FrameAt(pos int) *QTextFrame {
+func (q *QTextDocument) FrameAt(pos int32) *QTextFrame {
 	var __rv uintptr
 	q.Drv(372000,372148,unsafe.Pointer(&pos),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -71174,13 +71174,13 @@ func (q *QTextDocument) LastBlock() *QTextBlock {
 	return _rp
 }	
 //QTextDocument::lineCount()
-func (q *QTextDocument) LineCount() int {
-	var __rv int
+func (q *QTextDocument) LineCount() int32 {
+	var __rv int32
 	q.Drv(372000,372157,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextDocument::loadResource(int,QUrl const&)
-func (q *QTextDocument) LoadResource(_type int,name *QUrl) *QVariant {
+func (q *QTextDocument) LoadResource(_type int32,name *QUrl) *QVariant {
 	var __rv uintptr
 	q.Drv(372000,372158,unsafe.Pointer(&_type),Native(name),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -71191,12 +71191,12 @@ func (q *QTextDocument) LoadResource(_type int,name *QUrl) *QVariant {
 	return _rp
 }	
 //QTextDocument::markContentsDirty(int,int)
-func (q *QTextDocument) MarkContentsDirty(from int,length int)  {
+func (q *QTextDocument) MarkContentsDirty(from int32,length int32)  {
 	q.Drv(372000,372159,unsafe.Pointer(&from),unsafe.Pointer(&length),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextDocument::maximumBlockCount()
-func (q *QTextDocument) MaximumBlockCount() int {
-	var __rv int
+func (q *QTextDocument) MaximumBlockCount() int32 {
+	var __rv int32
 	q.Drv(372000,372160,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -71207,7 +71207,7 @@ func (q *QTextDocument) MetaInformation(info QTextDocument_MetaInformation) stri
 	return __rv
 }	
 //QTextDocument::object(int)
-func (q *QTextDocument) Object(objectIndex int) *QTextObject {
+func (q *QTextDocument) Object(objectIndex int32) *QTextObject {
 	var __rv uintptr
 	q.Drv(372000,372162,unsafe.Pointer(&objectIndex),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -71229,8 +71229,8 @@ func (q *QTextDocument) ObjectForFormat(value *QTextFormat) *QTextObject {
 	return _rp
 }	
 //QTextDocument::pageCount()
-func (q *QTextDocument) PageCount() int {
-	var __rv int
+func (q *QTextDocument) PageCount() int32 {
+	var __rv int32
 	q.Drv(372000,372164,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -71258,7 +71258,7 @@ func (q *QTextDocument) RedoWithCursor(cursor *QTextCursor)  {
 	q.Drv(372000,372168,Native(cursor),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextDocument::resource(int,QUrl const&)
-func (q *QTextDocument) Resource(_type int,name *QUrl) *QVariant {
+func (q *QTextDocument) Resource(_type int32,name *QUrl) *QVariant {
 	var __rv uintptr
 	q.Drv(372000,372169,unsafe.Pointer(&_type),Native(name),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -71269,8 +71269,8 @@ func (q *QTextDocument) Resource(_type int,name *QUrl) *QVariant {
 	return _rp
 }	
 //QTextDocument::revision()
-func (q *QTextDocument) Revision() int {
-	var __rv int
+func (q *QTextDocument) Revision() int32 {
+	var __rv int32
 	q.Drv(372000,372170,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -71314,7 +71314,7 @@ func (q *QTextDocument) SetIndentWidth(width float64)  {
 	q.Drv(372000,372178,unsafe.Pointer(&width),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextDocument::setMaximumBlockCount(int)
-func (q *QTextDocument) SetMaximumBlockCount(maximum int)  {
+func (q *QTextDocument) SetMaximumBlockCount(maximum int32)  {
 	q.Drv(372000,372179,unsafe.Pointer(&maximum),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextDocument::setMetaInformation(QTextDocument::MetaInformation,QString const&)
@@ -71643,8 +71643,8 @@ func (q *QTextEdit) CursorRectWithCursor(cursor *QTextCursor) *QRect {
 	return _rp
 }	
 //QTextEdit::cursorWidth()
-func (q *QTextEdit) CursorWidth() int {
-	var __rv int
+func (q *QTextEdit) CursorWidth() int32 {
+	var __rv int32
 	q.Drv(373000,373131,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -71752,8 +71752,8 @@ func (q *QTextEdit) FontUnderline() bool {
 	return __rv
 }	
 //QTextEdit::fontWeight()
-func (q *QTextEdit) FontWeight() int {
-	var __rv int
+func (q *QTextEdit) FontWeight() int32 {
+	var __rv int32
 	q.Drv(373000,373151,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -71805,8 +71805,8 @@ func (q *QTextEdit) KeyReleaseEvent(e *QKeyEvent)  {
 	q.Drv(373000,373160,Native(e),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextEdit::lineWrapColumnOrWidth()
-func (q *QTextEdit) LineWrapColumnOrWidth() int {
-	var __rv int
+func (q *QTextEdit) LineWrapColumnOrWidth() int32 {
+	var __rv int32
 	q.Drv(373000,373161,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -71817,7 +71817,7 @@ func (q *QTextEdit) LineWrapMode() QTextEdit_LineWrapMode {
 	return __rv
 }	
 //QTextEdit::loadResource(int,QUrl const&)
-func (q *QTextEdit) LoadResource(_type int,name *QUrl) *QVariant {
+func (q *QTextEdit) LoadResource(_type int32,name *QUrl) *QVariant {
 	var __rv uintptr
 	q.Drv(373000,373163,unsafe.Pointer(&_type),Native(name),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -71882,7 +71882,7 @@ func (q *QTextEdit) ResizeEvent(e *QResizeEvent)  {
 	q.Drv(373000,373176,Native(e),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextEdit::scrollContentsBy(int,int)
-func (q *QTextEdit) ScrollContentsBy(dx int,dy int)  {
+func (q *QTextEdit) ScrollContentsBy(dx int32,dy int32)  {
 	q.Drv(373000,373177,unsafe.Pointer(&dx),unsafe.Pointer(&dy),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextEdit::scrollToAnchor(QString const&)
@@ -71914,7 +71914,7 @@ func (q *QTextEdit) SetCurrentFont(f *QFont)  {
 	q.Drv(373000,373184,Native(f),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextEdit::setCursorWidth(int)
-func (q *QTextEdit) SetCursorWidth(width int)  {
+func (q *QTextEdit) SetCursorWidth(width int32)  {
 	q.Drv(373000,373185,unsafe.Pointer(&width),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextEdit::setDocument(QTextDocument*)
@@ -71946,7 +71946,7 @@ func (q *QTextEdit) SetFontUnderline(b bool)  {
 	q.Drv(373000,373192,unsafe.Pointer(&b),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextEdit::setFontWeight(int)
-func (q *QTextEdit) SetFontWeight(w int)  {
+func (q *QTextEdit) SetFontWeight(w int32)  {
 	q.Drv(373000,373193,unsafe.Pointer(&w),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextEdit::setHtml(QString const&)
@@ -71954,7 +71954,7 @@ func (q *QTextEdit) SetHtml(text string)  {
 	q.Drv(373000,373194,unsafe.Pointer(&text),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextEdit::setLineWrapColumnOrWidth(int)
-func (q *QTextEdit) SetLineWrapColumnOrWidth(w int)  {
+func (q *QTextEdit) SetLineWrapColumnOrWidth(w int32)  {
 	q.Drv(373000,373195,unsafe.Pointer(&w),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextEdit::setLineWrapMode(QTextEdit::LineWrapMode)
@@ -71978,7 +71978,7 @@ func (q *QTextEdit) SetTabChangesFocus(b bool)  {
 	q.Drv(373000,373200,unsafe.Pointer(&b),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextEdit::setTabStopWidth(int)
-func (q *QTextEdit) SetTabStopWidth(width int)  {
+func (q *QTextEdit) SetTabStopWidth(width int32)  {
 	q.Drv(373000,373201,unsafe.Pointer(&width),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextEdit::setText(QString const&)
@@ -72020,8 +72020,8 @@ func (q *QTextEdit) TabChangesFocus() bool {
 	return __rv
 }	
 //QTextEdit::tabStopWidth()
-func (q *QTextEdit) TabStopWidth() int {
-	var __rv int
+func (q *QTextEdit) TabStopWidth() int32 {
+	var __rv int32
 	q.Drv(373000,373211,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -72099,7 +72099,7 @@ func (q *QTextEdit) ZoomIn()  {
 	q.Drv(373000,373222,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextEdit::zoomIn(int)
-func (q *QTextEdit) ZoomInWithRange(_range int)  {
+func (q *QTextEdit) ZoomInWithRange(_range int32)  {
 	q.Drv(373000,373223,unsafe.Pointer(&_range),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextEdit::zoomOut()
@@ -72107,7 +72107,7 @@ func (q *QTextEdit) ZoomOut()  {
 	q.Drv(373000,373224,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextEdit::zoomOut(int)
-func (q *QTextEdit) ZoomOutWithRange(_range int)  {
+func (q *QTextEdit) ZoomOutWithRange(_range int32)  {
 	q.Drv(373000,373225,unsafe.Pointer(&_range),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 
@@ -72175,8 +72175,8 @@ func (q *QTextFrame) FirstCursorPosition() *QTextCursor {
 	return _rp
 }	
 //QTextFrame::firstPosition()
-func (q *QTextFrame) FirstPosition() int {
-	var __rv int
+func (q *QTextFrame) FirstPosition() int32 {
+	var __rv int32
 	q.Drv(374000,374107,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -72203,8 +72203,8 @@ func (q *QTextFrame) LastCursorPosition() *QTextCursor {
 	return _rp
 }	
 //QTextFrame::lastPosition()
-func (q *QTextFrame) LastPosition() int {
-	var __rv int
+func (q *QTextFrame) LastPosition() int32 {
+	var __rv int32
 	q.Drv(374000,374110,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -72253,8 +72253,8 @@ func (q *QTextList) Add(block *QTextBlock)  {
 	q.Drv(375000,375103,Native(block),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextList::count()
-func (q *QTextList) Count() int {
-	var __rv int
+func (q *QTextList) Count() int32 {
+	var __rv int32
 	q.Drv(375000,375104,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -72276,7 +72276,7 @@ func (q *QTextList) IsEmpty() bool {
 	return __rv
 }	
 //QTextList::item(int)
-func (q *QTextList) Item(i int) *QTextBlock {
+func (q *QTextList) Item(i int32) *QTextBlock {
 	var __rv uintptr
 	q.Drv(375000,375107,unsafe.Pointer(&i),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -72287,8 +72287,8 @@ func (q *QTextList) Item(i int) *QTextBlock {
 	return _rp
 }	
 //QTextList::itemNumber(QTextBlock const&)
-func (q *QTextList) ItemNumber(value *QTextBlock) int {
-	var __rv int
+func (q *QTextList) ItemNumber(value *QTextBlock) int32 {
+	var __rv int32
 	q.Drv(375000,375108,Native(value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -72303,7 +72303,7 @@ func (q *QTextList) Remove(value *QTextBlock)  {
 	q.Drv(375000,375110,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextList::removeItem(int)
-func (q *QTextList) RemoveItem(i int)  {
+func (q *QTextList) RemoveItem(i int32)  {
 	q.Drv(375000,375111,unsafe.Pointer(&i),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextList::setFormat(QTextListFormat const&)
@@ -72347,14 +72347,14 @@ func (q *QTextObject) Format() *QTextFormat {
 	return _rp
 }	
 //QTextObject::formatIndex()
-func (q *QTextObject) FormatIndex() int {
-	var __rv int
+func (q *QTextObject) FormatIndex() int32 {
+	var __rv int32
 	q.Drv(376000,376104,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTextObject::objectIndex()
-func (q *QTextObject) ObjectIndex() int {
-	var __rv int
+func (q *QTextObject) ObjectIndex() int32 {
+	var __rv int32
 	q.Drv(376000,376105,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -72388,11 +72388,11 @@ func NewQTextTable(doc *QTextDocument) *QTextTable {
 	return _p
 } 
 //QTextTable::appendColumns(int)
-func (q *QTextTable) AppendColumns(count int)  {
+func (q *QTextTable) AppendColumns(count int32)  {
 	q.Drv(377000,377103,unsafe.Pointer(&count),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextTable::appendRows(int)
-func (q *QTextTable) AppendRows(count int)  {
+func (q *QTextTable) AppendRows(count int32)  {
 	q.Drv(377000,377104,unsafe.Pointer(&count),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextTable::cellAt(QTextCursor const&)
@@ -72407,7 +72407,7 @@ func (q *QTextTable) CellAt(c *QTextCursor) *QTextTableCell {
 	return _rp
 }	
 //QTextTable::cellAt(int)
-func (q *QTextTable) CellAtWithPosition(position int) *QTextTableCell {
+func (q *QTextTable) CellAtWithPosition(position int32) *QTextTableCell {
 	var __rv uintptr
 	q.Drv(377000,377106,unsafe.Pointer(&position),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -72418,7 +72418,7 @@ func (q *QTextTable) CellAtWithPosition(position int) *QTextTableCell {
 	return _rp
 }	
 //QTextTable::cellAt(int,int)
-func (q *QTextTable) CellAtWithRowCol(row int,col int) *QTextTableCell {
+func (q *QTextTable) CellAtWithRowCol(row int32,col int32) *QTextTableCell {
 	var __rv uintptr
 	q.Drv(377000,377107,unsafe.Pointer(&row),unsafe.Pointer(&col),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -72429,8 +72429,8 @@ func (q *QTextTable) CellAtWithRowCol(row int,col int) *QTextTableCell {
 	return _rp
 }	
 //QTextTable::columns()
-func (q *QTextTable) Columns() int {
-	var __rv int
+func (q *QTextTable) Columns() int32 {
+	var __rv int32
 	q.Drv(377000,377108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -72446,11 +72446,11 @@ func (q *QTextTable) Format() *QTextTableFormat {
 	return _rp
 }	
 //QTextTable::insertColumns(int,int)
-func (q *QTextTable) InsertColumns(pos int,num int)  {
+func (q *QTextTable) InsertColumns(pos int32,num int32)  {
 	q.Drv(377000,377110,unsafe.Pointer(&pos),unsafe.Pointer(&num),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextTable::insertRows(int,int)
-func (q *QTextTable) InsertRows(pos int,num int)  {
+func (q *QTextTable) InsertRows(pos int32,num int32)  {
 	q.Drv(377000,377111,unsafe.Pointer(&pos),unsafe.Pointer(&num),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextTable::mergeCells(QTextCursor const&)
@@ -72458,19 +72458,19 @@ func (q *QTextTable) MergeCells(cursor *QTextCursor)  {
 	q.Drv(377000,377112,Native(cursor),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextTable::mergeCells(int,int,int,int)
-func (q *QTextTable) MergeCellsWithRowColNumrowsNumcols(row int,col int,numRows int,numCols int)  {
+func (q *QTextTable) MergeCellsWithRowColNumrowsNumcols(row int32,col int32,numRows int32,numCols int32)  {
 	q.Drv(377000,377113,unsafe.Pointer(&row),unsafe.Pointer(&col),unsafe.Pointer(&numRows),unsafe.Pointer(&numCols),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextTable::removeColumns(int,int)
-func (q *QTextTable) RemoveColumns(pos int,num int)  {
+func (q *QTextTable) RemoveColumns(pos int32,num int32)  {
 	q.Drv(377000,377114,unsafe.Pointer(&pos),unsafe.Pointer(&num),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextTable::removeRows(int,int)
-func (q *QTextTable) RemoveRows(pos int,num int)  {
+func (q *QTextTable) RemoveRows(pos int32,num int32)  {
 	q.Drv(377000,377115,unsafe.Pointer(&pos),unsafe.Pointer(&num),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextTable::resize(int,int)
-func (q *QTextTable) Resize(rows int,cols int)  {
+func (q *QTextTable) Resize(rows int32,cols int32)  {
 	q.Drv(377000,377116,unsafe.Pointer(&rows),unsafe.Pointer(&cols),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextTable::rowEnd(QTextCursor const&)
@@ -72496,8 +72496,8 @@ func (q *QTextTable) RowStart(c *QTextCursor) *QTextCursor {
 	return _rp
 }	
 //QTextTable::rows()
-func (q *QTextTable) Rows() int {
-	var __rv int
+func (q *QTextTable) Rows() int32 {
+	var __rv int32
 	q.Drv(377000,377119,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -72506,7 +72506,7 @@ func (q *QTextTable) SetFormat(format *QTextTableFormat)  {
 	q.Drv(377000,377120,Native(format),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTextTable::splitCell(int,int,int,int)
-func (q *QTextTable) SplitCell(row int,col int,numRows int,numCols int)  {
+func (q *QTextTable) SplitCell(row int32,col int32,numRows int32,numCols int32)  {
 	q.Drv(377000,377121,unsafe.Pointer(&row),unsafe.Pointer(&col),unsafe.Pointer(&numRows),unsafe.Pointer(&numCols),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 
@@ -72593,7 +72593,7 @@ func NewQTimeLineFromDriver(drv Driver) *QTimeLine {
 	}
 	return _p
 } 	
-func (q *QTimeLine) OnFrameChanged(fn func(int)) uintptr {
+func (q *QTimeLine) OnFrameChanged(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(379000,379102,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -72629,7 +72629,7 @@ func NewQTimeLine() *QTimeLine {
 	return _p
 } 
 //QTimeLine::QTimeLine(int,QObject*)	
-func NewQTimeLineWithDurationParent(duration int,parent QObjectInterface) *QTimeLine {
+func NewQTimeLineWithDurationParent(duration int32,parent QObjectInterface) *QTimeLine {
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv),379000,379107,unsafe.Pointer(&duration),Native(parent),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if err != nil || __rv == 0 {
@@ -72640,14 +72640,14 @@ func NewQTimeLineWithDurationParent(duration int,parent QObjectInterface) *QTime
 	return _p
 } 
 //QTimeLine::currentFrame()
-func (q *QTimeLine) CurrentFrame() int {
-	var __rv int
+func (q *QTimeLine) CurrentFrame() int32 {
+	var __rv int32
 	q.Drv(379000,379108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTimeLine::currentTime()
-func (q *QTimeLine) CurrentTime() int {
-	var __rv int
+func (q *QTimeLine) CurrentTime() int32 {
+	var __rv int32
 	q.Drv(379000,379109,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -72670,8 +72670,8 @@ func (q *QTimeLine) Direction() QTimeLine_Direction {
 	return __rv
 }	
 //QTimeLine::duration()
-func (q *QTimeLine) Duration() int {
-	var __rv int
+func (q *QTimeLine) Duration() int32 {
+	var __rv int32
 	q.Drv(379000,379113,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -72687,20 +72687,20 @@ func (q *QTimeLine) EasingCurve() *QEasingCurve {
 	return _rp
 }	
 //QTimeLine::endFrame()
-func (q *QTimeLine) EndFrame() int {
-	var __rv int
+func (q *QTimeLine) EndFrame() int32 {
+	var __rv int32
 	q.Drv(379000,379115,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTimeLine::frameForTime(int)
-func (q *QTimeLine) FrameForTime(msec int) int {
-	var __rv int
+func (q *QTimeLine) FrameForTime(msec int32) int32 {
+	var __rv int32
 	q.Drv(379000,379116,unsafe.Pointer(&msec),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTimeLine::loopCount()
-func (q *QTimeLine) LoopCount() int {
-	var __rv int
+func (q *QTimeLine) LoopCount() int32 {
+	var __rv int32
 	q.Drv(379000,379117,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -72709,7 +72709,7 @@ func (q *QTimeLine) Resume()  {
 	q.Drv(379000,379118,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTimeLine::setCurrentTime(int)
-func (q *QTimeLine) SetCurrentTime(msec int)  {
+func (q *QTimeLine) SetCurrentTime(msec int32)  {
 	q.Drv(379000,379119,unsafe.Pointer(&msec),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTimeLine::setCurveShape(QTimeLine::CurveShape)
@@ -72721,7 +72721,7 @@ func (q *QTimeLine) SetDirection(direction QTimeLine_Direction)  {
 	q.Drv(379000,379121,unsafe.Pointer(&direction),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTimeLine::setDuration(int)
-func (q *QTimeLine) SetDuration(duration int)  {
+func (q *QTimeLine) SetDuration(duration int32)  {
 	q.Drv(379000,379122,unsafe.Pointer(&duration),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTimeLine::setEasingCurve(QEasingCurve const&)
@@ -72729,15 +72729,15 @@ func (q *QTimeLine) SetEasingCurve(curve *QEasingCurve)  {
 	q.Drv(379000,379123,Native(curve),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTimeLine::setEndFrame(int)
-func (q *QTimeLine) SetEndFrame(frame int)  {
+func (q *QTimeLine) SetEndFrame(frame int32)  {
 	q.Drv(379000,379124,unsafe.Pointer(&frame),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTimeLine::setFrameRange(int,int)
-func (q *QTimeLine) SetFrameRange(startFrame int,endFrame int)  {
+func (q *QTimeLine) SetFrameRange(startFrame int32,endFrame int32)  {
 	q.Drv(379000,379125,unsafe.Pointer(&startFrame),unsafe.Pointer(&endFrame),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTimeLine::setLoopCount(int)
-func (q *QTimeLine) SetLoopCount(count int)  {
+func (q *QTimeLine) SetLoopCount(count int32)  {
 	q.Drv(379000,379126,unsafe.Pointer(&count),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTimeLine::setPaused(bool)
@@ -72745,11 +72745,11 @@ func (q *QTimeLine) SetPaused(paused bool)  {
 	q.Drv(379000,379127,unsafe.Pointer(&paused),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTimeLine::setStartFrame(int)
-func (q *QTimeLine) SetStartFrame(frame int)  {
+func (q *QTimeLine) SetStartFrame(frame int32)  {
 	q.Drv(379000,379128,unsafe.Pointer(&frame),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTimeLine::setUpdateInterval(int)
-func (q *QTimeLine) SetUpdateInterval(interval int)  {
+func (q *QTimeLine) SetUpdateInterval(interval int32)  {
 	q.Drv(379000,379129,unsafe.Pointer(&interval),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTimeLine::start()
@@ -72757,8 +72757,8 @@ func (q *QTimeLine) Start()  {
 	q.Drv(379000,379130,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTimeLine::startFrame()
-func (q *QTimeLine) StartFrame() int {
-	var __rv int
+func (q *QTimeLine) StartFrame() int32 {
+	var __rv int32
 	q.Drv(379000,379131,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -72781,13 +72781,13 @@ func (q *QTimeLine) ToggleDirection()  {
 	q.Drv(379000,379135,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTimeLine::updateInterval()
-func (q *QTimeLine) UpdateInterval() int {
-	var __rv int
+func (q *QTimeLine) UpdateInterval() int32 {
+	var __rv int32
 	q.Drv(379000,379136,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTimeLine::valueForTime(int)
-func (q *QTimeLine) ValueForTime(msec int) float64 {
+func (q *QTimeLine) ValueForTime(msec int32) float64 {
 	var __rv float64
 	q.Drv(379000,379137,unsafe.Pointer(&msec),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -72835,8 +72835,8 @@ func NewQTimerWithParent(parent QObjectInterface) *QTimer {
 	return _p
 } 
 //QTimer::interval()
-func (q *QTimer) Interval() int {
-	var __rv int
+func (q *QTimer) Interval() int32 {
+	var __rv int32
 	q.Drv(380000,380105,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -72853,7 +72853,7 @@ func (q *QTimer) IsSingleShot() bool {
 	return __rv
 }	
 //QTimer::setInterval(int)
-func (q *QTimer) SetInterval(msec int)  {
+func (q *QTimer) SetInterval(msec int32)  {
 	q.Drv(380000,380108,unsafe.Pointer(&msec),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTimer::setSingleShot(bool)
@@ -72861,11 +72861,11 @@ func (q *QTimer) SetSingleShot(singleShot bool)  {
 	q.Drv(380000,380109,unsafe.Pointer(&singleShot),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTimer::singleShot(int,QObject*,char const*)	
-func QTimerSingleShot(msec int,receiver QObjectInterface,member string)  {
+func QTimerSingleShot(msec int32,receiver QObjectInterface,member string)  {
 	DirectQtDrv(nil,380000,380110,unsafe.Pointer(&msec),Native(receiver),unsafe.Pointer(&member),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTimer::singleShot(int,QObject*,char const*)
-func (q *QTimer) SingleShot(msec int,receiver QObjectInterface,member string)  {
+func (q *QTimer) SingleShot(msec int32,receiver QObjectInterface,member string)  {
 	q.Drv(380000,380110,unsafe.Pointer(&msec),Native(receiver),unsafe.Pointer(&member),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTimer::start()
@@ -72873,7 +72873,7 @@ func (q *QTimer) Start()  {
 	q.Drv(380000,380111,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTimer::start(int)
-func (q *QTimer) StartWithMsec(msec int)  {
+func (q *QTimer) StartWithMsec(msec int32)  {
 	q.Drv(380000,380112,unsafe.Pointer(&msec),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTimer::stop()
@@ -72885,8 +72885,8 @@ func (q *QTimer) TimerEvent(value *QTimerEvent)  {
 	q.Drv(380000,380114,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTimer::timerId()
-func (q *QTimer) TimerId() int {
-	var __rv int
+func (q *QTimer) TimerId() int32 {
+	var __rv int32
 	q.Drv(380000,380115,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -72997,7 +72997,7 @@ func (q *QToolBar) ActionAt(p *QPoint) *QAction {
 	return _rp
 }	
 //QToolBar::actionAt(int,int)
-func (q *QToolBar) ActionAtWithXY(x int,y int) *QAction {
+func (q *QToolBar) ActionAtWithXY(x int32,y int32) *QAction {
 	var __rv uintptr
 	q.Drv(381000,381114,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -73253,7 +73253,7 @@ func NewQToolBoxFromDriver(drv Driver) *QToolBox {
 	}
 	return _p
 } 	
-func (q *QToolBox) OnCurrentChanged(fn func(int)) uintptr {
+func (q *QToolBox) OnCurrentChanged(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(382000,382102,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -73282,14 +73282,14 @@ func NewQToolBoxWithParentFlags(parent QWidgetInterface,f Qt_WindowType) *QToolB
 	return _p
 } 
 //QToolBox::addItem(QWidget*,QString const&)
-func (q *QToolBox) AddItemWithWidgetText(widget QWidgetInterface,text string) int {
-	var __rv int
+func (q *QToolBox) AddItemWithWidgetText(widget QWidgetInterface,text string) int32 {
+	var __rv int32
 	q.Drv(382000,382105,Native(widget),unsafe.Pointer(&text),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QToolBox::addItem(QWidget*,QIcon const&,QString const&)
-func (q *QToolBox) AddItemWithWidgetIconText(widget QWidgetInterface,icon *QIcon,text string) int {
-	var __rv int
+func (q *QToolBox) AddItemWithWidgetIconText(widget QWidgetInterface,icon *QIcon,text string) int32 {
+	var __rv int32
 	q.Drv(382000,382106,Native(widget),Native(icon),unsafe.Pointer(&text),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -73298,14 +73298,14 @@ func (q *QToolBox) ChangeEvent(value *QEvent)  {
 	q.Drv(382000,382107,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QToolBox::count()
-func (q *QToolBox) Count() int {
-	var __rv int
+func (q *QToolBox) Count() int32 {
+	var __rv int32
 	q.Drv(382000,382108,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QToolBox::currentIndex()
-func (q *QToolBox) CurrentIndex() int {
-	var __rv int
+func (q *QToolBox) CurrentIndex() int32 {
+	var __rv int32
 	q.Drv(382000,382109,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -73327,31 +73327,31 @@ func (q *QToolBox) Event(e *QEvent) bool {
 	return __rv
 }	
 //QToolBox::indexOf(QWidget*)
-func (q *QToolBox) IndexOf(widget QWidgetInterface) int {
-	var __rv int
+func (q *QToolBox) IndexOf(widget QWidgetInterface) int32 {
+	var __rv int32
 	q.Drv(382000,382112,Native(widget),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QToolBox::insertItem(int,QWidget*,QString const&)
-func (q *QToolBox) InsertItemWithIndexWidgetText(index int,widget QWidgetInterface,text string) int {
-	var __rv int
+func (q *QToolBox) InsertItemWithIndexWidgetText(index int32,widget QWidgetInterface,text string) int32 {
+	var __rv int32
 	q.Drv(382000,382113,unsafe.Pointer(&index),Native(widget),unsafe.Pointer(&text),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QToolBox::insertItem(int,QWidget*,QIcon const&,QString const&)
-func (q *QToolBox) InsertItemWithIndexWidgetIconText(index int,widget QWidgetInterface,icon *QIcon,text string) int {
-	var __rv int
+func (q *QToolBox) InsertItemWithIndexWidgetIconText(index int32,widget QWidgetInterface,icon *QIcon,text string) int32 {
+	var __rv int32
 	q.Drv(382000,382114,unsafe.Pointer(&index),Native(widget),Native(icon),unsafe.Pointer(&text),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QToolBox::isItemEnabled(int)
-func (q *QToolBox) IsItemEnabled(index int) bool {
+func (q *QToolBox) IsItemEnabled(index int32) bool {
 	var __rv bool
 	q.Drv(382000,382115,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QToolBox::itemIcon(int)
-func (q *QToolBox) ItemIcon(index int) *QIcon {
+func (q *QToolBox) ItemIcon(index int32) *QIcon {
 	var __rv uintptr
 	q.Drv(382000,382116,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -73362,31 +73362,31 @@ func (q *QToolBox) ItemIcon(index int) *QIcon {
 	return _rp
 }	
 //QToolBox::itemInserted(int)
-func (q *QToolBox) ItemInserted(index int)  {
+func (q *QToolBox) ItemInserted(index int32)  {
 	q.Drv(382000,382117,unsafe.Pointer(&index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QToolBox::itemRemoved(int)
-func (q *QToolBox) ItemRemoved(index int)  {
+func (q *QToolBox) ItemRemoved(index int32)  {
 	q.Drv(382000,382118,unsafe.Pointer(&index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QToolBox::itemText(int)
-func (q *QToolBox) ItemText(index int) string {
+func (q *QToolBox) ItemText(index int32) string {
 	var __rv string
 	q.Drv(382000,382119,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QToolBox::itemToolTip(int)
-func (q *QToolBox) ItemToolTip(index int) string {
+func (q *QToolBox) ItemToolTip(index int32) string {
 	var __rv string
 	q.Drv(382000,382120,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QToolBox::removeItem(int)
-func (q *QToolBox) RemoveItem(index int)  {
+func (q *QToolBox) RemoveItem(index int32)  {
 	q.Drv(382000,382121,unsafe.Pointer(&index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QToolBox::setCurrentIndex(int)
-func (q *QToolBox) SetCurrentIndex(index int)  {
+func (q *QToolBox) SetCurrentIndex(index int32)  {
 	q.Drv(382000,382122,unsafe.Pointer(&index),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QToolBox::setCurrentWidget(QWidget*)
@@ -73394,19 +73394,19 @@ func (q *QToolBox) SetCurrentWidget(widget QWidgetInterface)  {
 	q.Drv(382000,382123,Native(widget),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QToolBox::setItemEnabled(int,bool)
-func (q *QToolBox) SetItemEnabled(index int,enabled bool)  {
+func (q *QToolBox) SetItemEnabled(index int32,enabled bool)  {
 	q.Drv(382000,382124,unsafe.Pointer(&index),unsafe.Pointer(&enabled),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QToolBox::setItemIcon(int,QIcon const&)
-func (q *QToolBox) SetItemIcon(index int,icon *QIcon)  {
+func (q *QToolBox) SetItemIcon(index int32,icon *QIcon)  {
 	q.Drv(382000,382125,unsafe.Pointer(&index),Native(icon),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QToolBox::setItemText(int,QString const&)
-func (q *QToolBox) SetItemText(index int,text string)  {
+func (q *QToolBox) SetItemText(index int32,text string)  {
 	q.Drv(382000,382126,unsafe.Pointer(&index),unsafe.Pointer(&text),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QToolBox::setItemToolTip(int,QString const&)
-func (q *QToolBox) SetItemToolTip(index int,toolTip string)  {
+func (q *QToolBox) SetItemToolTip(index int32,toolTip string)  {
 	q.Drv(382000,382127,unsafe.Pointer(&index),unsafe.Pointer(&toolTip),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QToolBox::showEvent(QShowEvent*)
@@ -73414,7 +73414,7 @@ func (q *QToolBox) ShowEvent(e *QShowEvent)  {
 	q.Drv(382000,382128,Native(e),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QToolBox::widget(int)
-func (q *QToolBox) Widget(index int) *QWidget {
+func (q *QToolBox) Widget(index int32) *QWidget {
 	var __rv uintptr
 	q.Drv(382000,382129,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -73666,7 +73666,7 @@ func (q *QTranslator) Load(filename string) bool {
 	return __rv
 }	
 //QTranslator::load(unsigned char const*,int)
-func (q *QTranslator) LoadWithDataLen(data *byte,len int) bool {
+func (q *QTranslator) LoadWithDataLen(data *byte,len int32) bool {
 	var __rv bool
 	q.Drv(384000,384106,unsafe.Pointer(&data),unsafe.Pointer(&len),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -73684,7 +73684,7 @@ func (q *QTranslator) TranslateWithContextSourcetextDisambiguation(context strin
 	return __rv
 }	
 //QTranslator::translate(char const*,char const*,char const*,int)
-func (q *QTranslator) TranslateWithContextSourcetextDisambiguationN(context string,sourceText string,disambiguation string,n int) string {
+func (q *QTranslator) TranslateWithContextSourcetextDisambiguationInt32(context string,sourceText string,disambiguation string,n int32) string {
 	var __rv string
 	q.Drv(384000,384109,unsafe.Pointer(&context),unsafe.Pointer(&sourceText),unsafe.Pointer(&disambiguation),unsafe.Pointer(&n),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -73744,8 +73744,8 @@ func (q *QTreeView) AllColumnsShowFocus() bool {
 	return __rv
 }	
 //QTreeView::autoExpandDelay()
-func (q *QTreeView) AutoExpandDelay() int {
-	var __rv int
+func (q *QTreeView) AutoExpandDelay() int32 {
+	var __rv int32
 	q.Drv(385000,385107,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -73758,13 +73758,13 @@ func (q *QTreeView) CollapseAll()  {
 	q.Drv(385000,385109,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::columnAt(int)
-func (q *QTreeView) ColumnAt(x int) int {
-	var __rv int
+func (q *QTreeView) ColumnAt(x int32) int32 {
+	var __rv int32
 	q.Drv(385000,385110,unsafe.Pointer(&x),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTreeView::columnCountChanged(int,int)
-func (q *QTreeView) ColumnCountChanged(oldCount int,newCount int)  {
+func (q *QTreeView) ColumnCountChanged(oldCount int32,newCount int32)  {
 	q.Drv(385000,385111,unsafe.Pointer(&oldCount),unsafe.Pointer(&newCount),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::columnMoved()
@@ -73772,18 +73772,18 @@ func (q *QTreeView) ColumnMoved()  {
 	q.Drv(385000,385112,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::columnResized(int,int,int)
-func (q *QTreeView) ColumnResized(column int,oldSize int,newSize int)  {
+func (q *QTreeView) ColumnResized(column int32,oldSize int32,newSize int32)  {
 	q.Drv(385000,385113,unsafe.Pointer(&column),unsafe.Pointer(&oldSize),unsafe.Pointer(&newSize),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::columnViewportPosition(int)
-func (q *QTreeView) ColumnViewportPosition(column int) int {
-	var __rv int
+func (q *QTreeView) ColumnViewportPosition(column int32) int32 {
+	var __rv int32
 	q.Drv(385000,385114,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTreeView::columnWidth(int)
-func (q *QTreeView) ColumnWidth(column int) int {
-	var __rv int
+func (q *QTreeView) ColumnWidth(column int32) int32 {
+	var __rv int32
 	q.Drv(385000,385115,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -73820,7 +73820,7 @@ func (q *QTreeView) ExpandAll()  {
 	q.Drv(385000,385123,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::expandToDepth(int)
-func (q *QTreeView) ExpandToDepth(depth int)  {
+func (q *QTreeView) ExpandToDepth(depth int32)  {
 	q.Drv(385000,385124,unsafe.Pointer(&depth),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::expandsOnDoubleClick()
@@ -73841,22 +73841,22 @@ func (q *QTreeView) Header() *QHeaderView {
 	return _rp
 }	
 //QTreeView::hideColumn(int)
-func (q *QTreeView) HideColumn(column int)  {
+func (q *QTreeView) HideColumn(column int32)  {
 	q.Drv(385000,385127,unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::horizontalOffset()
-func (q *QTreeView) HorizontalOffset() int {
-	var __rv int
+func (q *QTreeView) HorizontalOffset() int32 {
+	var __rv int32
 	q.Drv(385000,385128,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTreeView::horizontalScrollbarAction(int)
-func (q *QTreeView) HorizontalScrollbarAction(action int)  {
+func (q *QTreeView) HorizontalScrollbarAction(action int32)  {
 	q.Drv(385000,385129,unsafe.Pointer(&action),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::indentation()
-func (q *QTreeView) Indentation() int {
-	var __rv int
+func (q *QTreeView) Indentation() int32 {
+	var __rv int32
 	q.Drv(385000,385130,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -73894,8 +73894,8 @@ func (q *QTreeView) IndexBelow(index *QModelIndex) *QModelIndex {
 	return _rp
 }	
 //QTreeView::indexRowSizeHint(QModelIndex const&)
-func (q *QTreeView) IndexRowSizeHint(index *QModelIndex) int {
-	var __rv int
+func (q *QTreeView) IndexRowSizeHint(index *QModelIndex) int32 {
+	var __rv int32
 	q.Drv(385000,385134,Native(index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -73906,7 +73906,7 @@ func (q *QTreeView) IsAnimated() bool {
 	return __rv
 }	
 //QTreeView::isColumnHidden(int)
-func (q *QTreeView) IsColumnHidden(column int) bool {
+func (q *QTreeView) IsColumnHidden(column int32) bool {
 	var __rv bool
 	q.Drv(385000,385136,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -73918,7 +73918,7 @@ func (q *QTreeView) IsExpanded(index *QModelIndex) bool {
 	return __rv
 }	
 //QTreeView::isFirstColumnSpanned(int,QModelIndex const&)
-func (q *QTreeView) IsFirstColumnSpanned(row int,parent *QModelIndex) bool {
+func (q *QTreeView) IsFirstColumnSpanned(row int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(385000,385138,unsafe.Pointer(&row),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -73936,7 +73936,7 @@ func (q *QTreeView) IsIndexHidden(index *QModelIndex) bool {
 	return __rv
 }	
 //QTreeView::isRowHidden(int,QModelIndex const&)
-func (q *QTreeView) IsRowHidden(row int,parent *QModelIndex) bool {
+func (q *QTreeView) IsRowHidden(row int32,parent *QModelIndex) bool {
 	var __rv bool
 	q.Drv(385000,385141,unsafe.Pointer(&row),Native(parent),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -74001,7 +74001,7 @@ func (q *QTreeView) Reset()  {
 	q.Drv(385000,385153,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::resizeColumnToContents(int)
-func (q *QTreeView) ResizeColumnToContents(column int)  {
+func (q *QTreeView) ResizeColumnToContents(column int32)  {
 	q.Drv(385000,385154,unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::rootIsDecorated()
@@ -74011,25 +74011,25 @@ func (q *QTreeView) RootIsDecorated() bool {
 	return __rv
 }	
 //QTreeView::rowHeight(QModelIndex const&)
-func (q *QTreeView) RowHeight(index *QModelIndex) int {
-	var __rv int
+func (q *QTreeView) RowHeight(index *QModelIndex) int32 {
+	var __rv int32
 	q.Drv(385000,385156,Native(index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTreeView::rowsAboutToBeRemoved(QModelIndex const&,int,int)
-func (q *QTreeView) RowsAboutToBeRemoved(parent *QModelIndex,start int,end int)  {
+func (q *QTreeView) RowsAboutToBeRemoved(parent *QModelIndex,start int32,end int32)  {
 	q.Drv(385000,385157,Native(parent),unsafe.Pointer(&start),unsafe.Pointer(&end),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::rowsInserted(QModelIndex const&,int,int)
-func (q *QTreeView) RowsInserted(parent *QModelIndex,start int,end int)  {
+func (q *QTreeView) RowsInserted(parent *QModelIndex,start int32,end int32)  {
 	q.Drv(385000,385158,Native(parent),unsafe.Pointer(&start),unsafe.Pointer(&end),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::rowsRemoved(QModelIndex const&,int,int)
-func (q *QTreeView) RowsRemoved(parent *QModelIndex,first int,last int)  {
+func (q *QTreeView) RowsRemoved(parent *QModelIndex,first int32,last int32)  {
 	q.Drv(385000,385159,Native(parent),unsafe.Pointer(&first),unsafe.Pointer(&last),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::scrollContentsBy(int,int)
-func (q *QTreeView) ScrollContentsBy(dx int,dy int)  {
+func (q *QTreeView) ScrollContentsBy(dx int32,dy int32)  {
 	q.Drv(385000,385160,unsafe.Pointer(&dx),unsafe.Pointer(&dy),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::scrollTo(QModelIndex const&)
@@ -74063,15 +74063,15 @@ func (q *QTreeView) SetAnimated(enable bool)  {
 	q.Drv(385000,385167,unsafe.Pointer(&enable),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::setAutoExpandDelay(int)
-func (q *QTreeView) SetAutoExpandDelay(delay int)  {
+func (q *QTreeView) SetAutoExpandDelay(delay int32)  {
 	q.Drv(385000,385168,unsafe.Pointer(&delay),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::setColumnHidden(int,bool)
-func (q *QTreeView) SetColumnHidden(column int,hide bool)  {
+func (q *QTreeView) SetColumnHidden(column int32,hide bool)  {
 	q.Drv(385000,385169,unsafe.Pointer(&column),unsafe.Pointer(&hide),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::setColumnWidth(int,int)
-func (q *QTreeView) SetColumnWidth(column int,width int)  {
+func (q *QTreeView) SetColumnWidth(column int32,width int32)  {
 	q.Drv(385000,385170,unsafe.Pointer(&column),unsafe.Pointer(&width),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::setExpanded(QModelIndex const&,bool)
@@ -74083,7 +74083,7 @@ func (q *QTreeView) SetExpandsOnDoubleClick(enable bool)  {
 	q.Drv(385000,385172,unsafe.Pointer(&enable),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::setFirstColumnSpanned(int,QModelIndex const&,bool)
-func (q *QTreeView) SetFirstColumnSpanned(row int,parent *QModelIndex,span bool)  {
+func (q *QTreeView) SetFirstColumnSpanned(row int32,parent *QModelIndex,span bool)  {
 	q.Drv(385000,385173,unsafe.Pointer(&row),Native(parent),unsafe.Pointer(&span),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::setHeader(QHeaderView*)
@@ -74095,7 +74095,7 @@ func (q *QTreeView) SetHeaderHidden(hide bool)  {
 	q.Drv(385000,385175,unsafe.Pointer(&hide),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::setIndentation(int)
-func (q *QTreeView) SetIndentation(i int)  {
+func (q *QTreeView) SetIndentation(i int32)  {
 	q.Drv(385000,385176,unsafe.Pointer(&i),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::setItemsExpandable(bool)
@@ -74115,7 +74115,7 @@ func (q *QTreeView) SetRootIsDecorated(show bool)  {
 	q.Drv(385000,385180,unsafe.Pointer(&show),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::setRowHidden(int,QModelIndex const&,bool)
-func (q *QTreeView) SetRowHidden(row int,parent *QModelIndex,hide bool)  {
+func (q *QTreeView) SetRowHidden(row int32,parent *QModelIndex,hide bool)  {
 	q.Drv(385000,385181,unsafe.Pointer(&row),Native(parent),unsafe.Pointer(&hide),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::setSelection(QRect const&,QFlags<QItemSelectionModel::SelectionFlag>)
@@ -74139,21 +74139,21 @@ func (q *QTreeView) SetWordWrap(on bool)  {
 	q.Drv(385000,385186,unsafe.Pointer(&on),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::showColumn(int)
-func (q *QTreeView) ShowColumn(column int)  {
+func (q *QTreeView) ShowColumn(column int32)  {
 	q.Drv(385000,385187,unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::sizeHintForColumn(int)
-func (q *QTreeView) SizeHintForColumn(column int) int {
-	var __rv int
+func (q *QTreeView) SizeHintForColumn(column int32) int32 {
+	var __rv int32
 	q.Drv(385000,385188,unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTreeView::sortByColumn(int)
-func (q *QTreeView) SortByColumn(column int)  {
+func (q *QTreeView) SortByColumn(column int32)  {
 	q.Drv(385000,385189,unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::sortByColumn(int,Qt::SortOrder)
-func (q *QTreeView) SortByColumnWithColumnOrder(column int,order Qt_SortOrder)  {
+func (q *QTreeView) SortByColumnWithColumnOrder(column int32,order Qt_SortOrder)  {
 	q.Drv(385000,385190,unsafe.Pointer(&column),unsafe.Pointer(&order),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::timerEvent(QTimerEvent*)
@@ -74171,8 +74171,8 @@ func (q *QTreeView) UpdateGeometries()  {
 	q.Drv(385000,385193,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeView::verticalOffset()
-func (q *QTreeView) VerticalOffset() int {
-	var __rv int
+func (q *QTreeView) VerticalOffset() int32 {
+	var __rv int32
 	q.Drv(385000,385194,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -74224,13 +74224,13 @@ func NewQTreeWidgetFromDriver(drv Driver) *QTreeWidget {
 	}
 	return _p
 } 	
-func (q *QTreeWidget) OnItemEntered(fn func(*QTreeWidgetItem,int)) uintptr {
+func (q *QTreeWidget) OnItemEntered(fn func(*QTreeWidgetItem,int32)) uintptr {
 	var __rv uintptr
 	q.Drv(386000,386102,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QTreeWidget) OnItemPressed(fn func(*QTreeWidgetItem,int)) uintptr {
+func (q *QTreeWidget) OnItemPressed(fn func(*QTreeWidgetItem,int32)) uintptr {
 	var __rv uintptr
 	q.Drv(386000,386103,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -74248,7 +74248,7 @@ func (q *QTreeWidget) OnItemCollapsed(fn func(*QTreeWidgetItem)) uintptr {
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QTreeWidget) OnItemActivated(fn func(*QTreeWidgetItem,int)) uintptr {
+func (q *QTreeWidget) OnItemActivated(fn func(*QTreeWidgetItem,int32)) uintptr {
 	var __rv uintptr
 	q.Drv(386000,386106,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -74260,7 +74260,7 @@ func (q *QTreeWidget) OnCurrentItemChanged(fn func(*QTreeWidgetItem,*QTreeWidget
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QTreeWidget) OnItemDoubleClicked(fn func(*QTreeWidgetItem,int)) uintptr {
+func (q *QTreeWidget) OnItemDoubleClicked(fn func(*QTreeWidgetItem,int32)) uintptr {
 	var __rv uintptr
 	q.Drv(386000,386108,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -74272,13 +74272,13 @@ func (q *QTreeWidget) OnItemExpanded(fn func(*QTreeWidgetItem)) uintptr {
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QTreeWidget) OnItemChanged(fn func(*QTreeWidgetItem,int)) uintptr {
+func (q *QTreeWidget) OnItemChanged(fn func(*QTreeWidgetItem,int32)) uintptr {
 	var __rv uintptr
 	q.Drv(386000,386110,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QTreeWidget) OnItemClicked(fn func(*QTreeWidgetItem,int)) uintptr {
+func (q *QTreeWidget) OnItemClicked(fn func(*QTreeWidgetItem,int32)) uintptr {
 	var __rv uintptr
 	q.Drv(386000,386111,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -74323,7 +74323,7 @@ func (q *QTreeWidget) ClosePersistentEditor(item *QTreeWidgetItem)  {
 	q.Drv(386000,386117,Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidget::closePersistentEditor(QTreeWidgetItem*,int)
-func (q *QTreeWidget) ClosePersistentEditorWithItemColumn(item *QTreeWidgetItem,column int)  {
+func (q *QTreeWidget) ClosePersistentEditorWithItemColumn(item *QTreeWidgetItem,column int32)  {
 	q.Drv(386000,386118,Native(item),unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidget::collapseItem(QTreeWidgetItem const*)
@@ -74331,14 +74331,14 @@ func (q *QTreeWidget) CollapseItem(item *QTreeWidgetItem)  {
 	q.Drv(386000,386119,Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidget::columnCount()
-func (q *QTreeWidget) ColumnCount() int {
-	var __rv int
+func (q *QTreeWidget) ColumnCount() int32 {
+	var __rv int32
 	q.Drv(386000,386120,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTreeWidget::currentColumn()
-func (q *QTreeWidget) CurrentColumn() int {
-	var __rv int
+func (q *QTreeWidget) CurrentColumn() int32 {
+	var __rv int32
 	q.Drv(386000,386121,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -74358,7 +74358,7 @@ func (q *QTreeWidget) DropEvent(event *QDropEvent)  {
 	q.Drv(386000,386123,Native(event),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidget::dropMimeData(QTreeWidgetItem*,int,QMimeData const*,Qt::DropAction)
-func (q *QTreeWidget) DropMimeData(parent *QTreeWidgetItem,index int,data *QMimeData,action Qt_DropAction) bool {
+func (q *QTreeWidget) DropMimeData(parent *QTreeWidgetItem,index int32,data *QMimeData,action Qt_DropAction) bool {
 	var __rv bool
 	q.Drv(386000,386124,Native(parent),unsafe.Pointer(&index),Native(data),unsafe.Pointer(&action),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -74368,7 +74368,7 @@ func (q *QTreeWidget) EditItem(item *QTreeWidgetItem)  {
 	q.Drv(386000,386125,Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidget::editItem(QTreeWidgetItem*,int)
-func (q *QTreeWidget) EditItemWithItemColumn(item *QTreeWidgetItem,column int)  {
+func (q *QTreeWidget) EditItemWithItemColumn(item *QTreeWidgetItem,column int32)  {
 	q.Drv(386000,386126,Native(item),unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidget::event(QEvent*)
@@ -74382,7 +74382,7 @@ func (q *QTreeWidget) ExpandItem(item *QTreeWidgetItem)  {
 	q.Drv(386000,386128,Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidget::findItems(QString const&,QFlags<Qt::MatchFlag>,int)
-func (q *QTreeWidget) FindItems(text string,flags Qt_MatchFlag,column int) []*QTreeWidgetItem {
+func (q *QTreeWidget) FindItems(text string,flags Qt_MatchFlag,column int32) []*QTreeWidgetItem {
 	var __rv []*QTreeWidgetItem
 	q.Drv(386000,386129,unsafe.Pointer(&text),unsafe.Pointer(&flags),unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -74399,7 +74399,7 @@ func (q *QTreeWidget) HeaderItem() *QTreeWidgetItem {
 	return _rp
 }	
 //QTreeWidget::indexFromItem(QTreeWidgetItem*,int)
-func (q *QTreeWidget) IndexFromItem(item *QTreeWidgetItem,column int) *QModelIndex {
+func (q *QTreeWidget) IndexFromItem(item *QTreeWidgetItem,column int32) *QModelIndex {
 	var __rv uintptr
 	q.Drv(386000,386131,Native(item),unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -74410,17 +74410,17 @@ func (q *QTreeWidget) IndexFromItem(item *QTreeWidgetItem,column int) *QModelInd
 	return _rp
 }	
 //QTreeWidget::indexOfTopLevelItem(QTreeWidgetItem*)
-func (q *QTreeWidget) IndexOfTopLevelItem(item *QTreeWidgetItem) int {
-	var __rv int
+func (q *QTreeWidget) IndexOfTopLevelItem(item *QTreeWidgetItem) int32 {
+	var __rv int32
 	q.Drv(386000,386132,Native(item),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTreeWidget::insertTopLevelItem(int,QTreeWidgetItem*)
-func (q *QTreeWidget) InsertTopLevelItem(index int,item *QTreeWidgetItem)  {
+func (q *QTreeWidget) InsertTopLevelItem(index int32,item *QTreeWidgetItem)  {
 	q.Drv(386000,386133,unsafe.Pointer(&index),Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidget::insertTopLevelItems(int,QList<QTreeWidgetItem*> const&)
-func (q *QTreeWidget) InsertTopLevelItems(index int,items []*QTreeWidgetItem)  {
+func (q *QTreeWidget) InsertTopLevelItems(index int32,items []*QTreeWidgetItem)  {
 	q.Drv(386000,386134,unsafe.Pointer(&index),unsafe.Pointer(&items),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidget::invisibleRootItem()
@@ -74487,7 +74487,7 @@ func (q *QTreeWidget) ItemAt(p *QPoint) *QTreeWidgetItem {
 	return _rp
 }	
 //QTreeWidget::itemAt(int,int)
-func (q *QTreeWidget) ItemAtWithXY(x int,y int) *QTreeWidgetItem {
+func (q *QTreeWidget) ItemAtWithXY(x int32,y int32) *QTreeWidgetItem {
 	var __rv uintptr
 	q.Drv(386000,386143,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -74520,7 +74520,7 @@ func (q *QTreeWidget) ItemFromIndex(index *QModelIndex) *QTreeWidgetItem {
 	return _rp
 }	
 //QTreeWidget::itemWidget(QTreeWidgetItem*,int)
-func (q *QTreeWidget) ItemWidget(item *QTreeWidgetItem,column int) *QWidget {
+func (q *QTreeWidget) ItemWidget(item *QTreeWidgetItem,column int32) *QWidget {
 	var __rv uintptr
 	q.Drv(386000,386146,Native(item),unsafe.Pointer(&column),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -74558,11 +74558,11 @@ func (q *QTreeWidget) OpenPersistentEditor(item *QTreeWidgetItem)  {
 	q.Drv(386000,386150,Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidget::openPersistentEditor(QTreeWidgetItem*,int)
-func (q *QTreeWidget) OpenPersistentEditorWithItemColumn(item *QTreeWidgetItem,column int)  {
+func (q *QTreeWidget) OpenPersistentEditorWithItemColumn(item *QTreeWidgetItem,column int32)  {
 	q.Drv(386000,386151,Native(item),unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidget::removeItemWidget(QTreeWidgetItem*,int)
-func (q *QTreeWidget) RemoveItemWidget(item *QTreeWidgetItem,column int)  {
+func (q *QTreeWidget) RemoveItemWidget(item *QTreeWidgetItem,column int32)  {
 	q.Drv(386000,386152,Native(item),unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidget::scrollToItem(QTreeWidgetItem const*)
@@ -74580,7 +74580,7 @@ func (q *QTreeWidget) SelectedItems() []*QTreeWidgetItem {
 	return __rv
 }	
 //QTreeWidget::setColumnCount(int)
-func (q *QTreeWidget) SetColumnCount(columns int)  {
+func (q *QTreeWidget) SetColumnCount(columns int32)  {
 	q.Drv(386000,386156,unsafe.Pointer(&columns),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidget::setCurrentItem(QTreeWidgetItem*)
@@ -74588,11 +74588,11 @@ func (q *QTreeWidget) SetCurrentItem(item *QTreeWidgetItem)  {
 	q.Drv(386000,386157,Native(item),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidget::setCurrentItem(QTreeWidgetItem*,int)
-func (q *QTreeWidget) SetCurrentItemWithItemColumn(item *QTreeWidgetItem,column int)  {
+func (q *QTreeWidget) SetCurrentItemWithItemColumn(item *QTreeWidgetItem,column int32)  {
 	q.Drv(386000,386158,Native(item),unsafe.Pointer(&column),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidget::setCurrentItem(QTreeWidgetItem*,int,QFlags<QItemSelectionModel::SelectionFlag>)
-func (q *QTreeWidget) SetCurrentItemWithItemColumnCommand(item *QTreeWidgetItem,column int,command QItemSelectionModel_SelectionFlag)  {
+func (q *QTreeWidget) SetCurrentItemWithItemColumnCommand(item *QTreeWidgetItem,column int32,command QItemSelectionModel_SelectionFlag)  {
 	q.Drv(386000,386159,Native(item),unsafe.Pointer(&column),unsafe.Pointer(&command),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidget::setFirstItemColumnSpanned(QTreeWidgetItem const*,bool)
@@ -74624,7 +74624,7 @@ func (q *QTreeWidget) SetItemSelected(item *QTreeWidgetItem,_select bool)  {
 	q.Drv(386000,386166,Native(item),unsafe.Pointer(&_select),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidget::setItemWidget(QTreeWidgetItem*,int,QWidget*)
-func (q *QTreeWidget) SetItemWidget(item *QTreeWidgetItem,column int,widget QWidgetInterface)  {
+func (q *QTreeWidget) SetItemWidget(item *QTreeWidgetItem,column int32,widget QWidgetInterface)  {
 	q.Drv(386000,386167,Native(item),unsafe.Pointer(&column),Native(widget),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidget::setSelectionModel(QItemSelectionModel*)
@@ -74636,13 +74636,13 @@ func (q *QTreeWidget) SetSortingEnabled(enable bool)  {
 	q.Drv(386000,386169,unsafe.Pointer(&enable),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidget::sortColumn()
-func (q *QTreeWidget) SortColumn() int {
-	var __rv int
+func (q *QTreeWidget) SortColumn() int32 {
+	var __rv int32
 	q.Drv(386000,386170,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QTreeWidget::sortItems(int,Qt::SortOrder)
-func (q *QTreeWidget) SortItems(column int,order Qt_SortOrder)  {
+func (q *QTreeWidget) SortItems(column int32,order Qt_SortOrder)  {
 	q.Drv(386000,386171,unsafe.Pointer(&column),unsafe.Pointer(&order),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QTreeWidget::supportedDropActions()
@@ -74652,7 +74652,7 @@ func (q *QTreeWidget) SupportedDropActions() Qt_DropAction {
 	return __rv
 }	
 //QTreeWidget::takeTopLevelItem(int)
-func (q *QTreeWidget) TakeTopLevelItem(index int) *QTreeWidgetItem {
+func (q *QTreeWidget) TakeTopLevelItem(index int32) *QTreeWidgetItem {
 	var __rv uintptr
 	q.Drv(386000,386173,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -74663,7 +74663,7 @@ func (q *QTreeWidget) TakeTopLevelItem(index int) *QTreeWidgetItem {
 	return _rp
 }	
 //QTreeWidget::topLevelItem(int)
-func (q *QTreeWidget) TopLevelItem(index int) *QTreeWidgetItem {
+func (q *QTreeWidget) TopLevelItem(index int32) *QTreeWidgetItem {
 	var __rv uintptr
 	q.Drv(386000,386174,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -74674,8 +74674,8 @@ func (q *QTreeWidget) TopLevelItem(index int) *QTreeWidgetItem {
 	return _rp
 }	
 //QTreeWidget::topLevelItemCount()
-func (q *QTreeWidget) TopLevelItemCount() int {
-	var __rv int
+func (q *QTreeWidget) TopLevelItemCount() int32 {
+	var __rv int32
 	q.Drv(386000,386175,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -74901,7 +74901,7 @@ func NewQUndoGroupFromDriver(drv Driver) *QUndoGroup {
 	}
 	return _p
 } 	
-func (q *QUndoGroup) OnIndexChanged(fn func(int)) uintptr {
+func (q *QUndoGroup) OnIndexChanged(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(388000,388102,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -75090,7 +75090,7 @@ func NewQUndoStackFromDriver(drv Driver) *QUndoStack {
 	}
 	return _p
 } 	
-func (q *QUndoStack) OnIndexChanged(fn func(int)) uintptr {
+func (q *QUndoStack) OnIndexChanged(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(389000,389102,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -75165,8 +75165,8 @@ func (q *QUndoStack) CanUndo() bool {
 	return __rv
 }	
 //QUndoStack::cleanIndex()
-func (q *QUndoStack) CleanIndex() int {
-	var __rv int
+func (q *QUndoStack) CleanIndex() int32 {
+	var __rv int32
 	q.Drv(389000,389113,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -75175,7 +75175,7 @@ func (q *QUndoStack) Clear()  {
 	q.Drv(389000,389114,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QUndoStack::command(int)
-func (q *QUndoStack) Command(index int) *QUndoCommand {
+func (q *QUndoStack) Command(index int32) *QUndoCommand {
 	var __rv uintptr
 	q.Drv(389000,389115,unsafe.Pointer(&index),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -75186,8 +75186,8 @@ func (q *QUndoStack) Command(index int) *QUndoCommand {
 	return _rp
 }	
 //QUndoStack::count()
-func (q *QUndoStack) Count() int {
-	var __rv int
+func (q *QUndoStack) Count() int32 {
+	var __rv int32
 	q.Drv(389000,389116,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -75240,8 +75240,8 @@ func (q *QUndoStack) EndMacro()  {
 	q.Drv(389000,389121,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QUndoStack::index()
-func (q *QUndoStack) Index() int {
-	var __rv int
+func (q *QUndoStack) Index() int32 {
+	var __rv int32
 	q.Drv(389000,389122,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -75280,15 +75280,15 @@ func (q *QUndoStack) SetClean()  {
 	q.Drv(389000,389129,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QUndoStack::setIndex(int)
-func (q *QUndoStack) SetIndex(idx int)  {
+func (q *QUndoStack) SetIndex(idx int32)  {
 	q.Drv(389000,389130,unsafe.Pointer(&idx),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QUndoStack::setUndoLimit(int)
-func (q *QUndoStack) SetUndoLimit(limit int)  {
+func (q *QUndoStack) SetUndoLimit(limit int32)  {
 	q.Drv(389000,389131,unsafe.Pointer(&limit),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QUndoStack::text(int)
-func (q *QUndoStack) Text(idx int) string {
+func (q *QUndoStack) Text(idx int32) string {
 	var __rv string
 	q.Drv(389000,389132,unsafe.Pointer(&idx),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -75298,8 +75298,8 @@ func (q *QUndoStack) Undo()  {
 	q.Drv(389000,389133,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QUndoStack::undoLimit()
-func (q *QUndoStack) UndoLimit() int {
-	var __rv int
+func (q *QUndoStack) UndoLimit() int32 {
+	var __rv int32
 	q.Drv(389000,389134,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -75654,7 +75654,7 @@ func (q *QValidator) SetLocale(locale *QLocale)  {
 	q.Drv(393000,393104,Native(locale),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QValidator::validate(QString&,int&)
-func (q *QValidator) Validate(value2 *string,value3 *int) QValidator_State {
+func (q *QValidator) Validate(value2 *string,value3 *int32) QValidator_State {
 	var __rv QValidator_State
 	q.Drv(393000,393105,unsafe.Pointer(&value2),unsafe.Pointer(&value3),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
@@ -75682,8 +75682,8 @@ func (q *QVariantAnimation) CurrentValue() *QVariant {
 	return _rp
 }	
 //QVariantAnimation::duration()
-func (q *QVariantAnimation) Duration() int {
-	var __rv int
+func (q *QVariantAnimation) Duration() int32 {
+	var __rv int32
 	q.Drv(394000,394104,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -75738,7 +75738,7 @@ func (q *QVariantAnimation) KeyValueAt(step float64) *QVariant {
 	return _rp
 }	
 //QVariantAnimation::setDuration(int)
-func (q *QVariantAnimation) SetDuration(msecs int)  {
+func (q *QVariantAnimation) SetDuration(msecs int32)  {
 	q.Drv(394000,394110,unsafe.Pointer(&msecs),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QVariantAnimation::setEasingCurve(QEasingCurve const&)
@@ -75769,7 +75769,7 @@ func (q *QVariantAnimation) StartValue() *QVariant {
 	return _rp
 }	
 //QVariantAnimation::updateCurrentTime(int)
-func (q *QVariantAnimation) UpdateCurrentTime(value int)  {
+func (q *QVariantAnimation) UpdateCurrentTime(value int32)  {
 	q.Drv(394000,394116,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QVariantAnimation::updateCurrentValue(QVariant const&)
@@ -75912,7 +75912,7 @@ func (q *QWidget) ChildAt(p *QPoint) *QWidget {
 	return _rp
 }	
 //QWidget::childAt(int,int)
-func (q *QWidget) ChildAtWithXY(x int,y int) *QWidget {
+func (q *QWidget) ChildAtWithXY(x int32,y int32) *QWidget {
 	var __rv uintptr
 	q.Drv(395000,395119,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -75963,8 +75963,8 @@ func (q *QWidget) CloseEvent(value *QCloseEvent)  {
 	q.Drv(395000,395125,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QPaintDevice::colorCount()
-func (q *QWidget) ColorCount() int {
-	var __rv int
+func (q *QWidget) ColorCount() int32 {
+	var __rv int32
 	q.Drv(395000,395126,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -76016,8 +76016,8 @@ func (q *QWidget) Cursor() *QCursor {
 	return _rp
 }	
 //QPaintDevice::depth()
-func (q *QWidget) Depth() int {
-	var __rv int
+func (q *QWidget) Depth() int32 {
+	var __rv int32
 	q.Drv(395000,395133,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -76026,8 +76026,8 @@ func (q *QWidget) Destroy(destroyWindow bool,destroySubWindows bool)  {
 	q.Drv(395000,395134,unsafe.Pointer(&destroyWindow),unsafe.Pointer(&destroySubWindows),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::devType()
-func (q *QWidget) DevType() int {
-	var __rv int
+func (q *QWidget) DevType() int32 {
+	var __rv int32
 	q.Drv(395000,395135,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -76188,7 +76188,7 @@ func (q *QWidget) Geometry() *QRect {
 	return _rp
 }	
 //QWidget::getContentsMargins(int*,int*,int*,int*)
-func (q *QWidget) GetContentsMargins(left *int,top *int,right *int,bottom *int)  {
+func (q *QWidget) GetContentsMargins(left *int32,top *int32,right *int32,bottom *int32)  {
 	q.Drv(395000,395158,unsafe.Pointer(&left),unsafe.Pointer(&top),unsafe.Pointer(&right),unsafe.Pointer(&bottom),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::grabGesture(Qt::GestureType)
@@ -76212,14 +76212,14 @@ func (q *QWidget) GrabMouseWithCursor(value *QCursor)  {
 	q.Drv(395000,395163,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::grabShortcut(QKeySequence const&)
-func (q *QWidget) GrabShortcut(key *QKeySequence) int {
-	var __rv int
+func (q *QWidget) GrabShortcut(key *QKeySequence) int32 {
+	var __rv int32
 	q.Drv(395000,395164,Native(key),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QWidget::grabShortcut(QKeySequence const&,Qt::ShortcutContext)
-func (q *QWidget) GrabShortcutWithKeyContext(key *QKeySequence,context Qt_ShortcutContext) int {
-	var __rv int
+func (q *QWidget) GrabShortcutWithKeyContext(key *QKeySequence,context Qt_ShortcutContext) int32 {
+	var __rv int32
 	q.Drv(395000,395165,Native(key),unsafe.Pointer(&context),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -76258,20 +76258,20 @@ func (q *QWidget) HasMouseTracking() bool {
 	return __rv
 }	
 //QWidget::height()
-func (q *QWidget) Height() int {
-	var __rv int
+func (q *QWidget) Height() int32 {
+	var __rv int32
 	q.Drv(395000,395170,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QWidget::heightForWidth(int)
-func (q *QWidget) HeightForWidth(value int) int {
-	var __rv int
+func (q *QWidget) HeightForWidth(value int32) int32 {
+	var __rv int32
 	q.Drv(395000,395171,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QPaintDevice::heightMM()
-func (q *QWidget) HeightMM() int {
-	var __rv int
+func (q *QWidget) HeightMM() int32 {
+	var __rv int32
 	q.Drv(395000,395172,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -76477,14 +76477,14 @@ func (q *QWidget) Locale() *QLocale {
 	return _rp
 }	
 //QPaintDevice::logicalDpiX()
-func (q *QWidget) LogicalDpiX() int {
-	var __rv int
+func (q *QWidget) LogicalDpiX() int32 {
+	var __rv int32
 	q.Drv(395000,395204,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QPaintDevice::logicalDpiY()
-func (q *QWidget) LogicalDpiY() int {
-	var __rv int
+func (q *QWidget) LogicalDpiY() int32 {
+	var __rv int32
 	q.Drv(395000,395205,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -76570,8 +76570,8 @@ func (q *QWidget) Mask() *QRegion {
 	return _rp
 }	
 //QWidget::maximumHeight()
-func (q *QWidget) MaximumHeight() int {
-	var __rv int
+func (q *QWidget) MaximumHeight() int32 {
+	var __rv int32
 	q.Drv(395000,395214,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -76587,20 +76587,20 @@ func (q *QWidget) MaximumSize() *QSize {
 	return _rp
 }	
 //QWidget::maximumWidth()
-func (q *QWidget) MaximumWidth() int {
-	var __rv int
+func (q *QWidget) MaximumWidth() int32 {
+	var __rv int32
 	q.Drv(395000,395216,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QWidget::metric(QPaintDevice::PaintDeviceMetric)
-func (q *QWidget) Metric(value QPaintDevice_PaintDeviceMetric) int {
-	var __rv int
+func (q *QWidget) Metric(value QPaintDevice_PaintDeviceMetric) int32 {
+	var __rv int32
 	q.Drv(395000,395217,unsafe.Pointer(&value),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QWidget::minimumHeight()
-func (q *QWidget) MinimumHeight() int {
-	var __rv int
+func (q *QWidget) MinimumHeight() int32 {
+	var __rv int32
 	q.Drv(395000,395218,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -76627,8 +76627,8 @@ func (q *QWidget) MinimumSizeHint() *QSize {
 	return _rp
 }	
 //QWidget::minimumWidth()
-func (q *QWidget) MinimumWidth() int {
-	var __rv int
+func (q *QWidget) MinimumWidth() int32 {
+	var __rv int32
 	q.Drv(395000,395221,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -76675,7 +76675,7 @@ func (q *QWidget) Move(value *QPoint)  {
 	q.Drv(395000,395227,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::move(int,int)
-func (q *QWidget) MoveWithXY(x int,y int)  {
+func (q *QWidget) MoveWithXY(x int32,y int32)  {
 	q.Drv(395000,395228,unsafe.Pointer(&x),unsafe.Pointer(&y),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::moveEvent(QMoveEvent*)
@@ -76767,14 +76767,14 @@ func (q *QWidget) ParentWidget() *QWidget {
 	return _rp
 }	
 //QPaintDevice::physicalDpiX()
-func (q *QWidget) PhysicalDpiX() int {
-	var __rv int
+func (q *QWidget) PhysicalDpiX() int32 {
+	var __rv int32
 	q.Drv(395000,395240,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QPaintDevice::physicalDpiY()
-func (q *QWidget) PhysicalDpiY() int {
-	var __rv int
+func (q *QWidget) PhysicalDpiY() int32 {
+	var __rv int32
 	q.Drv(395000,395241,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -76824,7 +76824,7 @@ func (q *QWidget) ReleaseMouse()  {
 	q.Drv(395000,395247,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::releaseShortcut(int)
-func (q *QWidget) ReleaseShortcut(id int)  {
+func (q *QWidget) ReleaseShortcut(id int32)  {
 	q.Drv(395000,395248,unsafe.Pointer(&id),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::removeAction(QAction*)
@@ -76860,7 +76860,7 @@ func (q *QWidget) RepaintWithRegion(value *QRegion)  {
 	q.Drv(395000,395256,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::repaint(int,int,int,int)
-func (q *QWidget) RepaintWithXYWidthHeight(x int,y int,w int,h int)  {
+func (q *QWidget) RepaintWithXYWidthHeight(x int32,y int32,w int32,h int32)  {
 	q.Drv(395000,395257,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::resize(QSize const&)
@@ -76868,7 +76868,7 @@ func (q *QWidget) Resize(value *QSize)  {
 	q.Drv(395000,395258,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::resize(int,int)
-func (q *QWidget) ResizeWithWidthHeight(w int,h int)  {
+func (q *QWidget) ResizeWithWidthHeight(w int32,h int32)  {
 	q.Drv(395000,395259,unsafe.Pointer(&w),unsafe.Pointer(&h),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::resizeEvent(QResizeEvent*)
@@ -76888,11 +76888,11 @@ func (q *QWidget) SaveGeometry() []byte {
 	return __rv
 }	
 //QWidget::scroll(int,int)
-func (q *QWidget) ScrollWithDxDy(dx int,dy int)  {
+func (q *QWidget) ScrollWithDxDy(dx int32,dy int32)  {
 	q.Drv(395000,395263,unsafe.Pointer(&dx),unsafe.Pointer(&dy),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::scroll(int,int,QRect const&)
-func (q *QWidget) ScrollWithDxDyRect(dx int,dy int,value2 *QRect)  {
+func (q *QWidget) ScrollWithDxDyRect(dx int32,dy int32,value2 *QRect)  {
 	q.Drv(395000,395264,unsafe.Pointer(&dx),unsafe.Pointer(&dy),Native(value2),nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setAcceptDrops(bool)
@@ -76928,7 +76928,7 @@ func (q *QWidget) SetBaseSize(value *QSize)  {
 	q.Drv(395000,395272,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setBaseSize(int,int)
-func (q *QWidget) SetBaseSizeWithBasewBaseh(basew int,baseh int)  {
+func (q *QWidget) SetBaseSizeWithBasewBaseh(basew int32,baseh int32)  {
 	q.Drv(395000,395273,unsafe.Pointer(&basew),unsafe.Pointer(&baseh),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setContentsMargins(QMargins const&)
@@ -76936,7 +76936,7 @@ func (q *QWidget) SetContentsMargins(margins *QMargins)  {
 	q.Drv(395000,395274,Native(margins),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setContentsMargins(int,int,int,int)
-func (q *QWidget) SetContentsMarginsWithLeftTopRightBottom(left int,top int,right int,bottom int)  {
+func (q *QWidget) SetContentsMarginsWithLeftTopRightBottom(left int32,top int32,right int32,bottom int32)  {
 	q.Drv(395000,395275,unsafe.Pointer(&left),unsafe.Pointer(&top),unsafe.Pointer(&right),unsafe.Pointer(&bottom),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setContextMenuPolicy(Qt::ContextMenuPolicy)
@@ -76956,7 +76956,7 @@ func (q *QWidget) SetEnabled(value bool)  {
 	q.Drv(395000,395279,unsafe.Pointer(&value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setFixedHeight(int)
-func (q *QWidget) SetFixedHeight(h int)  {
+func (q *QWidget) SetFixedHeight(h int32)  {
 	q.Drv(395000,395280,unsafe.Pointer(&h),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setFixedSize(QSize const&)
@@ -76964,11 +76964,11 @@ func (q *QWidget) SetFixedSize(value *QSize)  {
 	q.Drv(395000,395281,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setFixedSize(int,int)
-func (q *QWidget) SetFixedSizeWithWidthHeight(w int,h int)  {
+func (q *QWidget) SetFixedSizeWithWidthHeight(w int32,h int32)  {
 	q.Drv(395000,395282,unsafe.Pointer(&w),unsafe.Pointer(&h),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setFixedWidth(int)
-func (q *QWidget) SetFixedWidth(w int)  {
+func (q *QWidget) SetFixedWidth(w int32)  {
 	q.Drv(395000,395283,unsafe.Pointer(&w),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setFocus()
@@ -77000,7 +77000,7 @@ func (q *QWidget) SetGeometry(value *QRect)  {
 	q.Drv(395000,395290,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setGeometry(int,int,int,int)
-func (q *QWidget) SetGeometryWithXYWidthHeight(x int,y int,w int,h int)  {
+func (q *QWidget) SetGeometryWithXYWidthHeight(x int32,y int32,w int32,h int32)  {
 	q.Drv(395000,395291,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setGraphicsEffect(QGraphicsEffect*)
@@ -77036,7 +77036,7 @@ func (q *QWidget) SetMaskWithRegion(value *QRegion)  {
 	q.Drv(395000,395299,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setMaximumHeight(int)
-func (q *QWidget) SetMaximumHeight(maxh int)  {
+func (q *QWidget) SetMaximumHeight(maxh int32)  {
 	q.Drv(395000,395300,unsafe.Pointer(&maxh),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setMaximumSize(QSize const&)
@@ -77044,15 +77044,15 @@ func (q *QWidget) SetMaximumSize(value *QSize)  {
 	q.Drv(395000,395301,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setMaximumSize(int,int)
-func (q *QWidget) SetMaximumSizeWithMaxwMaxh(maxw int,maxh int)  {
+func (q *QWidget) SetMaximumSizeWithMaxwMaxh(maxw int32,maxh int32)  {
 	q.Drv(395000,395302,unsafe.Pointer(&maxw),unsafe.Pointer(&maxh),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setMaximumWidth(int)
-func (q *QWidget) SetMaximumWidth(maxw int)  {
+func (q *QWidget) SetMaximumWidth(maxw int32)  {
 	q.Drv(395000,395303,unsafe.Pointer(&maxw),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setMinimumHeight(int)
-func (q *QWidget) SetMinimumHeight(minh int)  {
+func (q *QWidget) SetMinimumHeight(minh int32)  {
 	q.Drv(395000,395304,unsafe.Pointer(&minh),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setMinimumSize(QSize const&)
@@ -77060,11 +77060,11 @@ func (q *QWidget) SetMinimumSize(value *QSize)  {
 	q.Drv(395000,395305,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setMinimumSize(int,int)
-func (q *QWidget) SetMinimumSizeWithMinwMinh(minw int,minh int)  {
+func (q *QWidget) SetMinimumSizeWithMinwMinh(minw int32,minh int32)  {
 	q.Drv(395000,395306,unsafe.Pointer(&minw),unsafe.Pointer(&minh),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setMinimumWidth(int)
-func (q *QWidget) SetMinimumWidth(minw int)  {
+func (q *QWidget) SetMinimumWidth(minw int32)  {
 	q.Drv(395000,395307,unsafe.Pointer(&minw),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setMouseTracking(bool)
@@ -77084,19 +77084,19 @@ func (q *QWidget) SetParentWidgetWithParentFlags(parent QWidgetInterface,f Qt_Wi
 	q.Drv(395000,395311,Native(parent),unsafe.Pointer(&f),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setShortcutAutoRepeat(int)
-func (q *QWidget) SetShortcutAutoRepeat(id int)  {
+func (q *QWidget) SetShortcutAutoRepeat(id int32)  {
 	q.Drv(395000,395312,unsafe.Pointer(&id),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setShortcutAutoRepeat(int,bool)
-func (q *QWidget) SetShortcutAutoRepeatWithIdEnable(id int,enable bool)  {
+func (q *QWidget) SetShortcutAutoRepeatWithIdEnable(id int32,enable bool)  {
 	q.Drv(395000,395313,unsafe.Pointer(&id),unsafe.Pointer(&enable),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setShortcutEnabled(int)
-func (q *QWidget) SetShortcutEnabled(id int)  {
+func (q *QWidget) SetShortcutEnabled(id int32)  {
 	q.Drv(395000,395314,unsafe.Pointer(&id),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setShortcutEnabled(int,bool)
-func (q *QWidget) SetShortcutEnabledWithIdEnable(id int,enable bool)  {
+func (q *QWidget) SetShortcutEnabledWithIdEnable(id int32,enable bool)  {
 	q.Drv(395000,395315,unsafe.Pointer(&id),unsafe.Pointer(&enable),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setSizeIncrement(QSize const&)
@@ -77104,7 +77104,7 @@ func (q *QWidget) SetSizeIncrement(value *QSize)  {
 	q.Drv(395000,395316,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setSizeIncrement(int,int)
-func (q *QWidget) SetSizeIncrementWithWidthHeight(w int,h int)  {
+func (q *QWidget) SetSizeIncrementWithWidthHeight(w int32,h int32)  {
 	q.Drv(395000,395317,unsafe.Pointer(&w),unsafe.Pointer(&h),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::setSizePolicy(QSizePolicy)
@@ -77348,7 +77348,7 @@ func (q *QWidget) UpdateWithRegion(value *QRegion)  {
 	q.Drv(395000,395363,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::update(int,int,int,int)
-func (q *QWidget) UpdateWithXYWidthHeight(x int,y int,w int,h int)  {
+func (q *QWidget) UpdateWithXYWidthHeight(x int32,y int32,w int32,h int32)  {
 	q.Drv(395000,395364,unsafe.Pointer(&x),unsafe.Pointer(&y),unsafe.Pointer(&w),unsafe.Pointer(&h),nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::updateGeometry()
@@ -77387,14 +77387,14 @@ func (q *QWidget) WheelEvent(value *QWheelEvent)  {
 	q.Drv(395000,395370,Native(value),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWidget::width()
-func (q *QWidget) Width() int {
-	var __rv int
+func (q *QWidget) Width() int32 {
+	var __rv int32
 	q.Drv(395000,395371,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QPaintDevice::widthMM()
-func (q *QWidget) WidthMM() int {
-	var __rv int
+func (q *QWidget) WidthMM() int32 {
+	var __rv int32
 	q.Drv(395000,395372,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -77475,14 +77475,14 @@ func (q *QWidget) WindowType() Qt_WindowType {
 	return __rv
 }	
 //QWidget::x()
-func (q *QWidget) X() int {
-	var __rv int
+func (q *QWidget) X() int32 {
+	var __rv int32
 	q.Drv(395000,395384,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QWidget::y()
-func (q *QWidget) Y() int {
-	var __rv int
+func (q *QWidget) Y() int32 {
+	var __rv int32
 	q.Drv(395000,395385,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -77649,25 +77649,25 @@ func (q *QWizard) OnHelpRequested(fn func()) uintptr {
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QWizard) OnCurrentIdChanged(fn func(int)) uintptr {
+func (q *QWizard) OnCurrentIdChanged(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(397000,397103,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QWizard) OnCustomButtonClicked(fn func(int)) uintptr {
+func (q *QWizard) OnCustomButtonClicked(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(397000,397104,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QWizard) OnPageAdded(fn func(int)) uintptr {
+func (q *QWizard) OnPageAdded(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(397000,397105,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
 	return __rv
 }
-func (q *QWizard) OnPageRemoved(fn func(int)) uintptr {
+func (q *QWizard) OnPageRemoved(fn func(int32)) uintptr {
 	var __rv uintptr
 	q.Drv(397000,397106,unsafe.Pointer(drvNewIfaceRef(fn)),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)	
 	signalMap[__rv] = fn
@@ -77696,8 +77696,8 @@ func NewQWizardWithParentFlags(parent QWidgetInterface,flags Qt_WindowType) *QWi
 	return _p
 } 
 //QWizard::addPage(QWizardPage*)
-func (q *QWizard) AddPage(page *QWizardPage) int {
-	var __rv int
+func (q *QWizard) AddPage(page *QWizardPage) int32 {
+	var __rv int32
 	q.Drv(397000,397109,Native(page),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -77723,12 +77723,12 @@ func (q *QWizard) ButtonText(which QWizard_WizardButton) string {
 	return __rv
 }	
 //QWizard::cleanupPage(int)
-func (q *QWizard) CleanupPage(id int)  {
+func (q *QWizard) CleanupPage(id int32)  {
 	q.Drv(397000,397113,unsafe.Pointer(&id),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWizard::currentId()
-func (q *QWizard) CurrentId() int {
-	var __rv int
+func (q *QWizard) CurrentId() int32 {
+	var __rv int32
 	q.Drv(397000,397114,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -77744,7 +77744,7 @@ func (q *QWizard) CurrentPage() *QWizardPage {
 	return _rp
 }	
 //QWizard::done(int)
-func (q *QWizard) Done(result int)  {
+func (q *QWizard) Done(result int32)  {
 	q.Drv(397000,397116,unsafe.Pointer(&result),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWizard::event(QEvent*)
@@ -77765,13 +77765,13 @@ func (q *QWizard) Field(name string) *QVariant {
 	return _rp
 }	
 //QWizard::hasVisitedPage(int)
-func (q *QWizard) HasVisitedPage(id int) bool {
+func (q *QWizard) HasVisitedPage(id int32) bool {
 	var __rv bool
 	q.Drv(397000,397119,unsafe.Pointer(&id),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
 //QWizard::initializePage(int)
-func (q *QWizard) InitializePage(id int)  {
+func (q *QWizard) InitializePage(id int32)  {
 	q.Drv(397000,397120,unsafe.Pointer(&id),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWizard::next()
@@ -77779,8 +77779,8 @@ func (q *QWizard) Next()  {
 	q.Drv(397000,397121,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWizard::nextId()
-func (q *QWizard) NextId() int {
-	var __rv int
+func (q *QWizard) NextId() int32 {
+	var __rv int32
 	q.Drv(397000,397122,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -77791,7 +77791,7 @@ func (q *QWizard) Options() QWizard_WizardOption {
 	return __rv
 }	
 //QWizard::page(int)
-func (q *QWizard) Page(id int) *QWizardPage {
+func (q *QWizard) Page(id int32) *QWizardPage {
 	var __rv uintptr
 	q.Drv(397000,397124,unsafe.Pointer(&id),unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	if __rv == 0 {
@@ -77802,8 +77802,8 @@ func (q *QWizard) Page(id int) *QWizardPage {
 	return _rp
 }	
 //QWizard::pageIds()
-func (q *QWizard) PageIds() []int {
-	var __rv []int
+func (q *QWizard) PageIds() []int32 {
+	var __rv []int32
 	q.Drv(397000,397125,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -77823,7 +77823,7 @@ func (q *QWizard) Pixmap(which QWizard_WizardPixmap) *QPixmap {
 	return _rp
 }	
 //QWizard::removePage(int)
-func (q *QWizard) RemovePage(id int)  {
+func (q *QWizard) RemovePage(id int32)  {
 	q.Drv(397000,397128,unsafe.Pointer(&id),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWizard::resizeEvent(QResizeEvent*)
@@ -77867,7 +77867,7 @@ func (q *QWizard) SetOptions(options QWizard_WizardOption)  {
 	q.Drv(397000,397138,unsafe.Pointer(&options),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWizard::setPage(int,QWizardPage*)
-func (q *QWizard) SetPage(id int,page *QWizardPage)  {
+func (q *QWizard) SetPage(id int32,page *QWizardPage)  {
 	q.Drv(397000,397139,unsafe.Pointer(&id),Native(page),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWizard::setPixmap(QWizard::WizardPixmap,QPixmap const&)
@@ -77879,7 +77879,7 @@ func (q *QWizard) SetSideWidget(widget QWidgetInterface)  {
 	q.Drv(397000,397141,Native(widget),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWizard::setStartId(int)
-func (q *QWizard) SetStartId(id int)  {
+func (q *QWizard) SetStartId(id int32)  {
 	q.Drv(397000,397142,unsafe.Pointer(&id),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 }	
 //QWizard::setSubTitleFormat(Qt::TextFormat)
@@ -77921,8 +77921,8 @@ func (q *QWizard) SizeHint() *QSize {
 	return _rp
 }	
 //QWizard::startId()
-func (q *QWizard) StartId() int {
-	var __rv int
+func (q *QWizard) StartId() int32 {
+	var __rv int32
 	q.Drv(397000,397149,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -77951,8 +77951,8 @@ func (q *QWizard) ValidateCurrentPage() bool {
 	return __rv
 }	
 //QWizard::visitedPages()
-func (q *QWizard) VisitedPages() []int {
-	var __rv []int
+func (q *QWizard) VisitedPages() []int32 {
+	var __rv []int32
 	q.Drv(397000,397154,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	
@@ -78048,8 +78048,8 @@ func (q *QWizardPage) IsFinalPage() bool {
 	return __rv
 }	
 //QWizardPage::nextId()
-func (q *QWizardPage) NextId() int {
-	var __rv int
+func (q *QWizardPage) NextId() int32 {
+	var __rv int32
 	q.Drv(398000,398112,unsafe.Pointer(&__rv),nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil)
 	return __rv
 }	

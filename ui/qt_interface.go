@@ -11,17 +11,17 @@ type QLayoutInterface interface {
 	AddWidget(QWidgetInterface) 
 	ContentsMargins() *QMargins
 	ContentsRect() *QRect
-	Count() int
+	Count() int32
 	ExpandingDirections() Qt_Orientation
 	Geometry() *QRect
-	GetContentsMargins(*int,*int,*int,*int) 
-	IndexOf(QWidgetInterface) int
+	GetContentsMargins(*int32,*int32,*int32,*int32) 
+	IndexOf(QWidgetInterface) int32
 	Invalidate() 
 	IsEmpty() bool
 	IsEnabled() bool
-	ItemAt(int) *QLayoutItem
+	ItemAt(int32) *QLayoutItem
 	Layout() *QLayout
-	Margin() int
+	Margin() int32
 	MaximumSize() *QSize
 	MenuBar() *QWidget
 	MinimumSize() *QSize
@@ -32,17 +32,17 @@ type QLayoutInterface interface {
 	SetAlignmentWithLayoutAlignment(QLayoutInterface,Qt_AlignmentFlag) bool
 	SetAlignmentWithWidgetAlignment(QWidgetInterface,Qt_AlignmentFlag) bool
 	SetContentsMargins(*QMargins) 
-	SetContentsMarginsWithLeftTopRightBottom(int,int,int,int) 
+	SetContentsMarginsWithLeftTopRightBottom(int32,int32,int32,int32) 
 	SetEnabled(bool) 
 	SetGeometry(*QRect) 
-	SetMargin(int) 
+	SetMargin(int32) 
 	SetMenuBar(QWidgetInterface) 
 	SetSizeConstraint(QLayout_SizeConstraint) 
-	SetSpacing(int) 
+	SetSpacing(int32) 
 	SizeConstraint() QLayout_SizeConstraint
-	Spacing() int
-	TakeAt(int) *QLayoutItem
-	TotalHeightForWidth(int) int
+	Spacing() int32
+	TakeAt(int32) *QLayoutItem
+	TotalHeightForWidth(int32) int32
 	TotalMaximumSize() *QSize
 	TotalMinimumSize() *QSize
 	TotalSizeHint() *QSize
@@ -63,20 +63,20 @@ type QWidgetInterface interface {
 	BackgroundRole() QPalette_ColorRole
 	BaseSize() *QSize
 	ChildAt(*QPoint) *QWidget
-	ChildAtWithXY(int,int) *QWidget
+	ChildAtWithXY(int32,int32) *QWidget
 	ChildrenRect() *QRect
 	ChildrenRegion() *QRegion
 	ClearFocus() 
 	ClearMask() 
 	Close() bool
-	ColorCount() int
+	ColorCount() int32
 	ContentsMargins() *QMargins
 	ContentsRect() *QRect
 	ContextMenuPolicy() Qt_ContextMenuPolicy
 	CreateWinId() 
 	Cursor() *QCursor
-	Depth() int
-	DevType() int
+	Depth() int32
+	DevType() int32
 	EnsurePolished() 
 	FocusPolicy() Qt_FocusPolicy
 	FocusProxy() *QWidget
@@ -88,21 +88,21 @@ type QWidgetInterface interface {
 	FrameGeometry() *QRect
 	FrameSize() *QSize
 	Geometry() *QRect
-	GetContentsMargins(*int,*int,*int,*int) 
+	GetContentsMargins(*int32,*int32,*int32,*int32) 
 	GrabGesture(Qt_GestureType) 
 	GrabGestureWithTypeFlags(Qt_GestureType,Qt_GestureFlag) 
 	GrabKeyboard() 
 	GrabMouse() 
 	GrabMouseWithCursor(*QCursor) 
-	GrabShortcut(*QKeySequence) int
-	GrabShortcutWithKeyContext(*QKeySequence,Qt_ShortcutContext) int
+	GrabShortcut(*QKeySequence) int32
+	GrabShortcutWithKeyContext(*QKeySequence,Qt_ShortcutContext) int32
 	GraphicsEffect() *QGraphicsEffect
 	GraphicsProxyWidget() *QGraphicsProxyWidget
 	HasFocus() bool
 	HasMouseTracking() bool
-	Height() int
-	HeightForWidth(int) int
-	HeightMM() int
+	Height() int32
+	HeightForWidth(int32) int32
+	HeightMM() int32
 	Hide() 
 	InputMethodHints() Qt_InputMethodHint
 	InputMethodQuery(Qt_InputMethodQuery) *QVariant
@@ -128,8 +128,8 @@ type QWidgetInterface interface {
 	Layout() *QLayout
 	LayoutDirection() Qt_LayoutDirection
 	Locale() *QLocale
-	LogicalDpiX() int
-	LogicalDpiY() int
+	LogicalDpiX() int32
+	LogicalDpiY() int32
 	Lower() 
 	MapFrom(QWidgetInterface,*QPoint) *QPoint
 	MapFromGlobal(*QPoint) *QPoint
@@ -138,15 +138,15 @@ type QWidgetInterface interface {
 	MapToGlobal(*QPoint) *QPoint
 	MapToParent(*QPoint) *QPoint
 	Mask() *QRegion
-	MaximumHeight() int
+	MaximumHeight() int32
 	MaximumSize() *QSize
-	MaximumWidth() int
-	MinimumHeight() int
+	MaximumWidth() int32
+	MinimumHeight() int32
 	MinimumSize() *QSize
 	MinimumSizeHint() *QSize
-	MinimumWidth() int
+	MinimumWidth() int32
 	Move(*QPoint) 
-	MoveWithXY(int,int) 
+	MoveWithXY(int32,int32) 
 	NativeParentWidget() *QWidget
 	NextInFocusChain() *QWidget
 	NormalGeometry() *QRect
@@ -156,15 +156,15 @@ type QWidgetInterface interface {
 	PaintingActive() bool
 	Palette() *QPalette
 	ParentWidget() *QWidget
-	PhysicalDpiX() int
-	PhysicalDpiY() int
+	PhysicalDpiX() int32
+	PhysicalDpiY() int32
 	Pos() *QPoint
 	PreviousInFocusChain() *QWidget
 	Raise() 
 	Rect() *QRect
 	ReleaseKeyboard() 
 	ReleaseMouse() 
-	ReleaseShortcut(int) 
+	ReleaseShortcut(int32) 
 	RemoveAction(*QAction) 
 	Render(QPaintDeviceInterface) 
 	RenderWithPaintDeviceTargetoffsetSourceregionRenderflags(QPaintDeviceInterface,*QPoint,*QRegion,QWidget_RenderFlag) 
@@ -173,13 +173,13 @@ type QWidgetInterface interface {
 	Repaint() 
 	RepaintWithRect(*QRect) 
 	RepaintWithRegion(*QRegion) 
-	RepaintWithXYWidthHeight(int,int,int,int) 
+	RepaintWithXYWidthHeight(int32,int32,int32,int32) 
 	Resize(*QSize) 
-	ResizeWithWidthHeight(int,int) 
+	ResizeWithWidthHeight(int32,int32) 
 	RestoreGeometry([]byte) bool
 	SaveGeometry() []byte
-	ScrollWithDxDy(int,int) 
-	ScrollWithDxDyRect(int,int,*QRect) 
+	ScrollWithDxDy(int32,int32) 
+	ScrollWithDxDyRect(int32,int32,*QRect) 
 	SetAcceptDrops(bool) 
 	SetAccessibleDescription(string) 
 	SetAccessibleName(string) 
@@ -188,17 +188,17 @@ type QWidgetInterface interface {
 	SetAutoFillBackground(bool) 
 	SetBackgroundRole(QPalette_ColorRole) 
 	SetBaseSize(*QSize) 
-	SetBaseSizeWithBasewBaseh(int,int) 
+	SetBaseSizeWithBasewBaseh(int32,int32) 
 	SetContentsMargins(*QMargins) 
-	SetContentsMarginsWithLeftTopRightBottom(int,int,int,int) 
+	SetContentsMarginsWithLeftTopRightBottom(int32,int32,int32,int32) 
 	SetContextMenuPolicy(Qt_ContextMenuPolicy) 
 	SetCursor(*QCursor) 
 	SetDisabled(bool) 
 	SetEnabled(bool) 
-	SetFixedHeight(int) 
+	SetFixedHeight(int32) 
 	SetFixedSize(*QSize) 
-	SetFixedSizeWithWidthHeight(int,int) 
-	SetFixedWidth(int) 
+	SetFixedSizeWithWidthHeight(int32,int32) 
+	SetFixedWidth(int32) 
 	SetFocus() 
 	SetFocusPolicy(Qt_FocusPolicy) 
 	SetFocusProxy(QWidgetInterface) 
@@ -206,7 +206,7 @@ type QWidgetInterface interface {
 	SetFont(*QFont) 
 	SetForegroundRole(QPalette_ColorRole) 
 	SetGeometry(*QRect) 
-	SetGeometryWithXYWidthHeight(int,int,int,int) 
+	SetGeometryWithXYWidthHeight(int32,int32,int32,int32) 
 	SetGraphicsEffect(*QGraphicsEffect) 
 	SetHidden(bool) 
 	SetInputMethodHints(Qt_InputMethodHint) 
@@ -215,24 +215,24 @@ type QWidgetInterface interface {
 	SetLocale(*QLocale) 
 	SetMask(*QBitmap) 
 	SetMaskWithRegion(*QRegion) 
-	SetMaximumHeight(int) 
+	SetMaximumHeight(int32) 
 	SetMaximumSize(*QSize) 
-	SetMaximumSizeWithMaxwMaxh(int,int) 
-	SetMaximumWidth(int) 
-	SetMinimumHeight(int) 
+	SetMaximumSizeWithMaxwMaxh(int32,int32) 
+	SetMaximumWidth(int32) 
+	SetMinimumHeight(int32) 
 	SetMinimumSize(*QSize) 
-	SetMinimumSizeWithMinwMinh(int,int) 
-	SetMinimumWidth(int) 
+	SetMinimumSizeWithMinwMinh(int32,int32) 
+	SetMinimumWidth(int32) 
 	SetMouseTracking(bool) 
 	SetPalette(*QPalette) 
 	SetParentWidget(QWidgetInterface) 
 	SetParentWidgetWithParentFlags(QWidgetInterface,Qt_WindowType) 
-	SetShortcutAutoRepeat(int) 
-	SetShortcutAutoRepeatWithIdEnable(int,bool) 
-	SetShortcutEnabled(int) 
-	SetShortcutEnabledWithIdEnable(int,bool) 
+	SetShortcutAutoRepeat(int32) 
+	SetShortcutAutoRepeatWithIdEnable(int32,bool) 
+	SetShortcutEnabled(int32) 
+	SetShortcutEnabledWithIdEnable(int32,bool) 
 	SetSizeIncrement(*QSize) 
-	SetSizeIncrementWithWidthHeight(int,int) 
+	SetSizeIncrementWithWidthHeight(int32,int32) 
 	SetSizePolicy(*QSizePolicy) 
 	SetSizePolicyWithHorizontalVertical(QSizePolicy_Policy,QSizePolicy_Policy) 
 	SetStatusTip(string) 
@@ -277,12 +277,12 @@ type QWidgetInterface interface {
 	UpdateGeometry() 
 	UpdateWithRect(*QRect) 
 	UpdateWithRegion(*QRegion) 
-	UpdateWithXYWidthHeight(int,int,int,int) 
+	UpdateWithXYWidthHeight(int32,int32,int32,int32) 
 	UpdatesEnabled() bool
 	VisibleRegion() *QRegion
 	WhatsThis() string
-	Width() int
-	WidthMM() int
+	Width() int32
+	WidthMM() int32
 	Window() *QWidget
 	WindowFilePath() string
 	WindowFlags() Qt_WindowType
@@ -294,8 +294,8 @@ type QWidgetInterface interface {
 	WindowState() Qt_WindowState
 	WindowTitle() string
 	WindowType() Qt_WindowType
-	X() int
-	Y() int
+	X() int32
+	Y() int32
 }
 
 type QObjectInterface interface {
@@ -310,7 +310,7 @@ type QObjectInterface interface {
 	FindChildrenWithRegexp(*QRegExp) []*QObject
 	Inherits(string) bool
 	IsWidgetType() bool
-	KillTimer(int) 
+	KillTimer(int32) 
 	MetaObject() *QMetaObject
 	ObjectName() string
 	Parent() *QObject
@@ -319,7 +319,7 @@ type QObjectInterface interface {
 	SetParent(QObjectInterface) 
 	SetProperty(string,*QVariant) bool
 	SignalsBlocked() bool
-	StartTimer(int) int
+	StartTimer(int32) int32
 	Tr(string) string
 	TrWithSourcetextDisambiguation(string,string) string
 }
@@ -355,70 +355,70 @@ type QIODeviceInterface interface {
 	SetTextModeEnabled(bool) 
 	Size() int64
 	UngetChar(byte) 
-	WaitForBytesWritten(int) bool
-	WaitForReadyRead(int) bool
+	WaitForBytesWritten(int32) bool
+	WaitForReadyRead(int32) bool
 	Write([]byte) int64
 	WriteWithDataLen(*byte,int64) int64
 }
 
 type QPaintDeviceInterface interface {
 	Driver
-	ColorCount() int
-	Depth() int
-	DevType() int
-	Height() int
-	HeightMM() int
-	LogicalDpiX() int
-	LogicalDpiY() int
+	ColorCount() int32
+	Depth() int32
+	DevType() int32
+	Height() int32
+	HeightMM() int32
+	LogicalDpiX() int32
+	LogicalDpiY() int32
 	PaintEngine() *QPaintEngine
 	PaintingActive() bool
-	PhysicalDpiX() int
-	PhysicalDpiY() int
-	Width() int
-	WidthMM() int
+	PhysicalDpiX() int32
+	PhysicalDpiY() int32
+	Width() int32
+	WidthMM() int32
 }
 
 type QAbstractItemModelInterface interface {
 	QObjectInterface
 	Buddy(*QModelIndex) *QModelIndex
 	CanFetchMore(*QModelIndex) bool
-	ColumnCount() int
-	ColumnCountWithParent(*QModelIndex) int
+	ColumnCount() int32
+	ColumnCountWithParent(*QModelIndex) int32
 	Data(*QModelIndex) *QVariant
-	DataWithIndexRole(*QModelIndex,int) *QVariant
-	DropMimeData(*QMimeData,Qt_DropAction,int,int,*QModelIndex) bool
+	DataWithIndexRole(*QModelIndex,int32) *QVariant
+	DropMimeData(*QMimeData,Qt_DropAction,int32,int32,*QModelIndex) bool
 	FetchMore(*QModelIndex) 
 	Flags(*QModelIndex) Qt_ItemFlag
 	HasChildren() bool
 	HasChildrenWithParent(*QModelIndex) bool
-	HasIndex(int,int,*QModelIndex) bool
-	HeaderData(int,Qt_Orientation,int) *QVariant
-	Index(int,int,*QModelIndex) *QModelIndex
-	InsertColumn(int) bool
-	InsertColumnWithColumnParent(int,*QModelIndex) bool
-	InsertColumns(int,int,*QModelIndex) bool
-	InsertRow(int) bool
-	InsertRowWithRowParent(int,*QModelIndex) bool
-	InsertRows(int,int,*QModelIndex) bool
+	HasIndex(int32,int32,*QModelIndex) bool
+	HeaderData(int32,Qt_Orientation,int32) *QVariant
+	Index(int32,int32,*QModelIndex) *QModelIndex
+	InsertColumn(int32) bool
+	InsertColumnWithColumnParent(int32,*QModelIndex) bool
+	InsertColumns(int32,int32,*QModelIndex) bool
+	InsertRow(int32) bool
+	InsertRowWithRowParent(int32,*QModelIndex) bool
+	InsertRows(int32,int32,*QModelIndex) bool
 	ItemData(*QModelIndex) map[int]*QVariant
-	Match(*QModelIndex,int,*QVariant,int,Qt_MatchFlag) []*QModelIndex
+	Match(*QModelIndex,int32,*QVariant,int32,Qt_MatchFlag) []*QModelIndex
 	MimeData([]*QModelIndex) *QMimeData
 	MimeTypes() []string
-	RemoveColumn(int) bool
-	RemoveColumnWithColumnParent(int,*QModelIndex) bool
-	RemoveColumns(int,int,*QModelIndex) bool
-	RemoveRow(int) bool
-	RemoveRowWithRowParent(int,*QModelIndex) bool
-	RemoveRows(int,int,*QModelIndex) bool
+	RemoveColumn(int32) bool
+	RemoveColumnWithColumnParent(int32,*QModelIndex) bool
+	RemoveColumns(int32,int32,*QModelIndex) bool
+	RemoveRow(int32) bool
+	RemoveRowWithRowParent(int32,*QModelIndex) bool
+	RemoveRows(int32,int32,*QModelIndex) bool
 	Revert() 
-	RowCount() int
-	RowCountWithParent(*QModelIndex) int
-	SetData(*QModelIndex,*QVariant,int) bool
-	SetHeaderData(int,Qt_Orientation,*QVariant,int) bool
+	RowCount() int32
+	RowCountWithParent(*QModelIndex) int32
+	SetData(*QModelIndex,*QVariant,int32) bool
+	SetHeaderData(int32,Qt_Orientation,*QVariant,int32) bool
 	SetItemData(*QModelIndex,map[int]*QVariant) bool
-	Sibling(int,int,*QModelIndex) *QModelIndex
-	Sort(int) 
-	SortWithColumnOrder(int,Qt_SortOrder) 
+	Sibling(int32,int32,*QModelIndex) *QModelIndex
+	Sort(int32) 
+	SortWithColumnOrder(int32,Qt_SortOrder) 
 	Span(*QModelIndex) *QSize
 	Submit() bool
 	SupportedDragActions() Qt_DropAction

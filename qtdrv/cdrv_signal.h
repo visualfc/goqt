@@ -696,7 +696,7 @@ public slots:
 public:
 	Iface face;	
 };
-//go func(*QRect,int)
+//go func(*QRect,int32)
 class UISignal35 : public QObject
 {
 	Q_OBJECT
@@ -1076,7 +1076,7 @@ public slots:
 public:
 	Iface face;	
 };
-//go func(*QTreeWidgetItem,int)
+//go func(*QTreeWidgetItem,int32)
 class UISignal54 : public QObject
 {
 	Q_OBJECT
@@ -1276,7 +1276,7 @@ public slots:
 public:
 	Iface face;	
 };
-//go func(Qt_Orientation,int,int)
+//go func(Qt_Orientation,int32,int32)
 class UISignal64 : public QObject
 {
 	Q_OBJECT
@@ -1356,7 +1356,7 @@ public slots:
 public:
 	Iface face;	
 };
-//go func(int)
+//go func(int32)
 class UISignal68 : public QObject
 {
 	Q_OBJECT
@@ -1376,7 +1376,7 @@ public slots:
 public:
 	Iface face;	
 };
-//go func(int,QHeaderView_ResizeMode)
+//go func(int32,QHeaderView_ResizeMode)
 class UISignal69 : public QObject
 {
 	Q_OBJECT
@@ -1396,7 +1396,7 @@ public slots:
 public:
 	Iface face;	
 };
-//go func(int,QProcess_ExitStatus)
+//go func(int32,QProcess_ExitStatus)
 class UISignal70 : public QObject
 {
 	Q_OBJECT
@@ -1416,7 +1416,7 @@ public slots:
 public:
 	Iface face;	
 };
-//go func(int,Qt_SortOrder)
+//go func(int32,Qt_SortOrder)
 class UISignal71 : public QObject
 {
 	Q_OBJECT
@@ -1436,7 +1436,7 @@ public slots:
 public:
 	Iface face;	
 };
-//go func(int,int)
+//go func(int32,int32)
 class UISignal72 : public QObject
 {
 	Q_OBJECT
@@ -1456,7 +1456,7 @@ public slots:
 public:
 	Iface face;	
 };
-//go func(int,int,int)
+//go func(int32,int32,int32)
 class UISignal73 : public QObject
 {
 	Q_OBJECT
@@ -1476,7 +1476,7 @@ public slots:
 public:
 	Iface face;	
 };
-//go func(int,int,int,int)
+//go func(int32,int32,int32,int32)
 class UISignal74 : public QObject
 {
 	Q_OBJECT

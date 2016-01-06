@@ -5,7 +5,7 @@ GoQt
 
 _GoQt is golang bindings to the Qt cross-platform application framework._
 
-* Version: 0.1.1
+* Version: 0.1.2
 * Author: [visualfc](mailto:visualfc@gmail.com)
 
 

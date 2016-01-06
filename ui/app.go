@@ -17,7 +17,7 @@ func Async(fn func()) {
 	_DirectQtDrv(nil, 1, 200, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
-func Run(fn func()) int {
+func Run(fn func()) int32 {
 	if qtdrv_init_error != nil {
 		log.Println(qtdrv_init_error)
 		return -2
@@ -29,7 +29,7 @@ func Run(fn func()) int {
 	return app.Exec()
 }
 
-func RunEx(args []string, fn func()) int {
+func RunEx(args []string, fn func()) int32 {
 	if qtdrv_init_error != nil {
 		log.Println(qtdrv_init_error)
 		return -2
