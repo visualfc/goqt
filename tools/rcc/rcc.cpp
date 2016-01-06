@@ -737,7 +737,7 @@ bool RCCResourceLibrary::writeHeader()
         writeString("** Resource object code\n");
         writeString("**\n");
         writeString("** Created: ");
-        writeByteArray(QDateTime::currentDateTime().toString().toLatin1());
+        writeByteArray(QDateTime::currentDateTime().toString().toUtf8());
         writeString("\n**      by: The Resource Compiler for Qt version ");
         writeByteArray(QT_VERSION_STR);
         writeString("\n**\n");
@@ -749,7 +749,7 @@ bool RCCResourceLibrary::writeHeader()
         writeString("** Resource object code\n");
         writeString("**\n");
         writeString("** Created: ");
-        writeByteArray(QDateTime::currentDateTime().toString().toLatin1());
+        writeByteArray(QDateTime::currentDateTime().toString().toUtf8());
         writeString("\n**      by: The Resource Compiler for Qt version ");
         writeByteArray(QT_VERSION_STR);
         writeString("\n**\n");
