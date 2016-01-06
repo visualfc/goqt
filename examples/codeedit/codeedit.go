@@ -33,11 +33,11 @@ func NewCodeEdit() *CodeEdit {
 
 	w.lineArea.InstallEventFilter(w)
 
-	w.edit.OnBlockCountChanged(func(int) {
+	w.edit.OnBlockCountChanged(func(int32) {
 		w.UpdateLineNumberAreaWidth()
 		w.lineArea.Update()
 	})
-	w.edit.OnUpdateRequest(func(*ui.QRect, int) {
+	w.edit.OnUpdateRequest(func(*ui.QRect, int32) {
 		w.lineArea.Update()
 	})
 
@@ -70,7 +70,7 @@ func (w *CodeEdit) MakeRules() {
 	b.SetStyle(ui.Qt_SolidPattern)
 	b.SetColorWithGlobalcolor(ui.Qt_darkBlue)
 	keyword.SetForeground(b)
-	keyword.SetFontWeight(int(ui.QFont_Bold))
+	keyword.SetFontWeight(int32(ui.QFont_Bold))
 	for _, line := range strings.Split(keywords, "\n") {
 		for _, v := range strings.Split(line, " ") {
 			if len(v) == 0 {
@@ -95,8 +95,8 @@ func (w *CodeEdit) OnHighlightBlock(text string) {
 }
 
 func (w *CodeEdit) UpdateLineNumberAreaWidth() {
-	digits := 1
-	max := 1
+	var digits int32 = 1
+	var max int32 = 1
 	count := w.edit.BlockCount()
 	if count > max {
 		max = count
@@ -123,17 +123,17 @@ func (w *CodeEdit) paintLineArea(event *ui.QPaintEvent) {
 
 	block := w.edit.FirstVisibleBlock()
 	blockNumber := block.BlockNumber() + 1
-	top := int(w.edit.BlockBoundingGeometry(block).Translated(w.edit.ContentOffset()).Top())
-	bottom := top + int(w.edit.BlockBoundingRect(block).Height())
+	top := w.edit.BlockBoundingGeometry(block).Translated(w.edit.ContentOffset()).Top()
+	bottom := top + w.edit.BlockBoundingRect(block).Height()
 	height := w.lineArea.FontMetrics().Height()
-	for block.IsValid() && top < event.Rect().Bottom() {
-		if block.IsVisible() && bottom >= event.Rect().Top() {
+	for block.IsValid() && int32(top) < event.Rect().Bottom() {
+		if block.IsVisible() && int32(bottom) >= event.Rect().Top() {
 			painter.SetPen(ui.NewQColorWithGlobalcolor(ui.Qt_black))
-			painter.DrawTextWithXYWidthHeightFlagsTextRect(0, top, w.lineArea.Width(), height, int(ui.Qt_AlignRight), strconv.Itoa(blockNumber), ui.NewQRect())
+			painter.DrawTextWithXYWidthHeightFlagsTextRect(0, int32(top), w.lineArea.Width(), int32(height), int32(ui.Qt_AlignRight), strconv.Itoa(int(blockNumber)), ui.NewQRect())
 		}
 		block = block.Next()
 		top = bottom
-		bottom = top + int(w.edit.BlockBoundingRect(block).Height())
+		bottom = top + w.edit.BlockBoundingRect(block).Height()
 		blockNumber++
 	}
 }

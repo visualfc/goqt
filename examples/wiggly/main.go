@@ -39,7 +39,7 @@ func (w *WigglyWidget) SetText(text string) {
 	w.text = text
 }
 
-var sineTablep = [16]int{0, 38, 71, 92, 100, 92, 71, 38, 0, -38, -71, -92, -100, -92, -71, -38}
+var sineTablep = [16]int32{0, 38, 71, 92, 100, 92, 71, 38, 0, -38, -71, -92, -100, -92, -71, -38}
 
 func (w *WigglyWidget) OnPaintEvent(e *ui.QPaintEvent) bool {
 	w.PaintEvent(e)
@@ -57,7 +57,7 @@ func (w *WigglyWidget) OnPaintEvent(e *ui.QPaintEvent) bool {
 
 	for i, s := range w.text {
 		index := (w.step + i) % 16
-		color.SetHsv((15-index)*16, 255, 191, 255)
+		color.SetHsv(int32(15-index)*16, 255, 191, 255)
 		painter.SetPen(color)
 		painter.DrawTextWithXYText(x, y-((sineTablep[index]*merics.Height())/400), string(s))
 		x += merics.Width(s)
