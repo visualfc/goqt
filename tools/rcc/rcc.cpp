@@ -747,10 +747,10 @@ bool RCCResourceLibrary::writeHeader()
     } else if (m_format == Go_Code) {
         writeString("/****************************************************************************\n");
         writeString("** Resource object code\n");
-        //writeString("**\n");
+        writeString("**\n");
         //writeString("** Created: ");
         //writeByteArray(QDateTime::currentDateTime().toString().toUtf8());
-        writeString("\n** Created by: The Resource Compiler for Qt version ");
+        writeString("** Created by: The Resource Compiler for Qt version ");
         writeByteArray(QT_VERSION_STR);
         writeString("\n**\n");
         writeString("** WARNING! All changes made in this file will be lost!\n");
