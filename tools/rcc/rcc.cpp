@@ -175,7 +175,7 @@ void RCCFileInfo::writeDataInfo(RCCResourceLibrary &lib)
             lib.writeString("[\n  ");
         } else {
             lib.writeString("  // ");
-            lib.writeByteArray(resourceName().toLocal8Bit());
+            lib.writeByteArray(resourceName().toUtf8());
             lib.writeString("\n  ");
         }
     }
@@ -246,7 +246,7 @@ qint64 RCCFileInfo::writeDataBlob(RCCResourceLibrary &lib, qint64 offset,
     // some info
     if (text) {
         lib.writeString("  // ");
-        lib.writeByteArray(m_fileInfo.absoluteFilePath().toLocal8Bit());
+        lib.writeByteArray(m_fileInfo.absoluteFilePath().toUtf8());
         lib.writeString("\n  ");
     }
 
@@ -291,7 +291,7 @@ qint64 RCCFileInfo::writeDataName(RCCResourceLibrary &lib, qint64 offset)
     // some info
     if (text) {
         lib.writeString("  // ");
-        lib.writeByteArray(m_name.toLocal8Bit());
+        lib.writeByteArray(m_name.toUtf8());
         lib.writeString("\n  ");
     }
 
@@ -747,16 +747,16 @@ bool RCCResourceLibrary::writeHeader()
     } else if (m_format == Go_Code) {
         writeString("/****************************************************************************\n");
         writeString("** Resource object code\n");
-        writeString("**\n");
-        writeString("** Created: ");
-        writeByteArray(QDateTime::currentDateTime().toString().toUtf8());
-        writeString("\n**      by: The Resource Compiler for Qt version ");
+        //writeString("**\n");
+        //writeString("** Created: ");
+        //writeByteArray(QDateTime::currentDateTime().toString().toUtf8());
+        writeString("\n** Created by: The Resource Compiler for Qt version ");
         writeByteArray(QT_VERSION_STR);
         writeString("\n**\n");
         writeString("** WARNING! All changes made in this file will be lost!\n");
         writeString( "*****************************************************************************/\n\n");
         writeString("package ");
-        writeByteArray(m_goPkg.toLatin1());
+        writeByteArray(m_goPkg.toUtf8());
         writeString("\n\n");
         writeString("import \"github.com/visualfc/goqt/ui\"\n\n");
     } else if (m_format == Binary) {
