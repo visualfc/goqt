@@ -995,7 +995,9 @@ bool RCCResourceLibrary::writeInitializer()
         writeString(")\n\n");
     } else if (m_format == Go_Code) {
         writeString("func init() {\n");
-        writeString("\tui.QResHelpRegisterResourceData(0x01, &qt_resource_struct[0], &qt_resource_name[0], &qt_resource_data[0])\n");
+        writeString("\tif ui.IsLoaded() {\n");
+        writeString("\t\tui.QResHelpRegisterResourceData(0x01, &qt_resource_struct[0], &qt_resource_name[0], &qt_resource_data[0])\n");
+        writeString("\t}\n");
         writeString("}\n");
     } else if (m_format == Binary) {
         int i = 4;
