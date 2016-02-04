@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"strconv"
 	"strings"
 
@@ -52,14 +51,6 @@ func NewCodeEdit() *CodeEdit {
 	font.SetPointSize(12)
 	w.edit.SetFont(font)
 	w.lineArea.SetFont(font)
-
-	fmt.Println("init")
-	timer := ui.NewTimer()
-	timer.SetInterval(100)
-	timer.Start()
-	timer.OnTimeout(func() {
-		fmt.Println(len(w.edit.ToPlainText()))
-	})
 
 	return w
 }

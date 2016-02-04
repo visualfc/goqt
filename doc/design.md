@@ -27,7 +27,7 @@
 
 * go
 	
-		widget := ui.NewQWidget()
+		widget := ui.NewWidget()
 		widget.Show()
 
 ###  Plain class
@@ -42,7 +42,7 @@
 
 * go
 	
-		pt := ui.NewQPoint()
+		pt := ui.NewPoint()
 		pt.SetX(100)
 		pt.SetY(100)
 		
@@ -89,14 +89,14 @@
 		
 		func NewMyWidget() *MyWidget {
 			w := &MyWidget{}
-			w.QWidget = ui.NewQWidget()
+			w.QWidget = ui.NewWidget()
 			w.InstallEventFilter(w)
 		}	
 		
 		func (w *MyWidget) OnPaintEvent(e *ui.QPaintEvent) bool {
 			w.PaintEvent() //w.QWidget.PaintEvent()
 			
-			painter := ui.NewQPainterWithPaintDevice(w)
+			painter := ui.NewPainterWithPaintDevice(w)
 			defer painter.Delete()
 			
 			//painter.Draw ...	
@@ -107,9 +107,9 @@
 ## Rename
 
 ### New
-	QAction::QAction(QObject*) => func NewQAction(parent QObjectInterface) *QAction
-	QAction::QAction(QString const&,QObject*) => func NewQActionWithTextParent(text string,parent QObjectInterface) *QAction
-	QAction::QAction(QIcon const&,QString const&,QObject*) => func NewQActionWithIconTextParent(icon *QIcon,text string,parent QObjectInterface) *QAction
+	QAction::QAction(QObject*) => func NewAction(parent QObjectInterface) *QAction
+	QAction::QAction(QString const&,QObject*) => func NewActionWithTextParent(text string,parent QObjectInterface) *QAction
+	QAction::QAction(QIcon const&,QString const&,QObject*) => func NewActionWithIconTextParent(icon *QIcon,text string,parent QObjectInterface) *QAction
 
 ### Function
 
