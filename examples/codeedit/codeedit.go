@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"strconv"
 	"strings"
 
@@ -17,14 +18,14 @@ type CodeEdit struct {
 
 func NewCodeEdit() *CodeEdit {
 	w := &CodeEdit{}
-	w.QWidget = ui.NewQWidget()
-	w.edit = ui.NewQPlainTextEdit()
+	w.QWidget = ui.NewWidget()
+	w.edit = ui.NewPlainTextEdit()
 	w.edit.SetLineWrapMode(ui.QPlainTextEdit_NoWrap)
-	w.syntax = ui.NewQSyntaxHighlighterHookWithDoc(w.edit.Document())
-	w.lineArea = ui.NewQWidget()
+	w.syntax = ui.NewSyntaxHighlighterHookWithDoc(w.edit.Document())
+	w.lineArea = ui.NewWidget()
 	w.lineArea.SetFixedWidth(0)
 
-	hbox := ui.NewQHBoxLayout()
+	hbox := ui.NewHBoxLayout()
 	hbox.SetMargin(0)
 	hbox.SetSpacing(0)
 	hbox.AddWidget(w.lineArea)
@@ -52,6 +53,14 @@ func NewCodeEdit() *CodeEdit {
 	w.edit.SetFont(font)
 	w.lineArea.SetFont(font)
 
+	fmt.Println("init")
+	timer := ui.NewTimer()
+	timer.SetInterval(100)
+	timer.Start()
+	timer.OnTimeout(func() {
+		fmt.Println(len(w.edit.ToPlainText()))
+	})
+
 	return w
 }
 
@@ -65,8 +74,8 @@ continue     for          import       return       var
 
 func (w *CodeEdit) MakeRules() {
 	w.rules = make(map[*ui.QRegExp]*ui.QTextCharFormat)
-	keyword := ui.NewQTextCharFormat()
-	b := ui.NewQBrush()
+	keyword := ui.NewTextCharFormat()
+	b := ui.NewBrush()
 	b.SetStyle(ui.Qt_SolidPattern)
 	b.SetColorWithGlobalcolor(ui.Qt_darkBlue)
 	keyword.SetForeground(b)
@@ -76,7 +85,7 @@ func (w *CodeEdit) MakeRules() {
 			if len(v) == 0 {
 				continue
 			}
-			r := ui.NewQRegExp()
+			r := ui.NewRegExp()
 			r.SetPattern("\\b" + v + "\\b")
 			w.rules[r] = keyword
 		}
@@ -117,9 +126,9 @@ func (w *CodeEdit) OnPaintEvent(obj *ui.QObject, e *ui.QPaintEvent) bool {
 }
 
 func (w *CodeEdit) paintLineArea(event *ui.QPaintEvent) {
-	painter := ui.NewQPainterWithPaintDevice(w.lineArea)
+	painter := ui.NewPainterWithPaintDevice(w.lineArea)
 	defer painter.Delete()
-	painter.FillRectWithRectColor(w.lineArea.Rect(), ui.NewQColorWithGlobalcolor(ui.Qt_lightGray))
+	painter.FillRectWithRectColor(w.lineArea.Rect(), ui.NewColorWithGlobalcolor(ui.Qt_lightGray))
 
 	block := w.edit.FirstVisibleBlock()
 	blockNumber := block.BlockNumber() + 1
@@ -128,8 +137,8 @@ func (w *CodeEdit) paintLineArea(event *ui.QPaintEvent) {
 	height := w.lineArea.FontMetrics().Height()
 	for block.IsValid() && int32(top) < event.Rect().Bottom() {
 		if block.IsVisible() && int32(bottom) >= event.Rect().Top() {
-			painter.SetPen(ui.NewQColorWithGlobalcolor(ui.Qt_black))
-			painter.DrawTextWithXYWidthHeightFlagsTextRect(0, int32(top), w.lineArea.Width(), int32(height), int32(ui.Qt_AlignRight), strconv.Itoa(int(blockNumber)), ui.NewQRect())
+			painter.SetPen(ui.NewColorWithGlobalcolor(ui.Qt_black))
+			painter.DrawTextWithXYWidthHeightFlagsTextRect(0, int32(top), w.lineArea.Width(), int32(height), int32(ui.Qt_AlignRight), strconv.Itoa(int(blockNumber)), ui.NewRect())
 		}
 		block = block.Next()
 		top = bottom

@@ -13,13 +13,13 @@ func main() {
 }
 
 func main_ui() {
-	btn := ui.NewQPushButton()
+	btn := ui.NewPushButton()
 	btn.SetText("Async")
 
-	clear := ui.NewQPushButton()
+	clear := ui.NewPushButton()
 	clear.SetText("Clear")
 
-	edit := ui.NewQPlainTextEdit()
+	edit := ui.NewPlainTextEdit()
 	edit.SetReadOnly(true)
 
 	btn.OnClicked(func() {
@@ -39,15 +39,15 @@ func main_ui() {
 		edit.Clear()
 	})
 
-	hbox := ui.NewQHBoxLayout()
+	hbox := ui.NewHBoxLayout()
 	hbox.AddWidget(btn)
 	hbox.AddWidget(clear)
 
-	vbox := ui.NewQVBoxLayout()
+	vbox := ui.NewVBoxLayout()
 	vbox.AddLayout(hbox)
 	vbox.AddWidget(edit)
 
-	widget := ui.NewQWidget()
+	widget := ui.NewWidget()
 	widget.SetLayout(vbox)
 	widget.Show()
 }

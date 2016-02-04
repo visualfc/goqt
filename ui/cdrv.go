@@ -5,6 +5,9 @@
 package ui
 
 /*
+#include <stdlib.h>
+#include "cdrv.h"
+
 extern int qtdrv(void *p, int typeid,int funcid, void *p1,void *p2,void *p3,void *p4,void *p5, void *p6,void *p7,void *p8, void *p9, void *p10, void *p11, void *p12);
 static void init()
 {
@@ -284,6 +287,32 @@ func (d *_qt_drv) Delete() error {
 	return err
 }
 
+func NewCS(s string) *C.string_head {
+	return &C.string_head{C.CString(s), C.int(len(s))}
+}
+
+func FreeCS(s *C.string_head) {
+	C.free(unsafe.Pointer(s.data))
+}
+
+func NewCSArray(sa []string) ([]*C.char, int) {
+	max := len(sa)
+	csa := make([]*C.char, max+1)
+	for i := 0; i < max; i++ {
+		csa[i] = C.CString(sa[i])
+	}
+	csa[max] = nil
+	return csa, max
+}
+
+func FreeCSArray(csa []*C.char, max int) {
+	for i := 0; i < max; i++ {
+		if csa[i] != nil {
+			C.free(unsafe.Pointer(csa[i]))
+		}
+	}
+}
+
 //func NewQtDriver(dd uintptr, id int32, gc bool) Driver {
 //	d := &qtdrv{dd, id, gc}
 //	if gc {
@@ -335,10 +364,10 @@ var (
 
 //export drv_signal_call
 func drv_signal_call(p unsafe.Pointer, face unsafe.Pointer, id int32, p1, p2, p3, p4 unsafe.Pointer) {
-	fn := (*(*Iface)(face)).Interface()
-	//if fn, ok := signalMap[uintptr(p)]; ok {
-	drvSignalCall(fn, id, p1, p2, p3, p4)
-	//}
+	//fn := (*(*Iface)(face)).Interface()
+	if fn, ok := signalMap[uintptr(p)]; ok {
+		drvSignalCall(fn, id, p1, p2, p3, p4)
+	}
 }
 
 //export drv_remove_signal_call
@@ -501,7 +530,7 @@ func drvInstallEventFilter(obj QObjectInterface, filter interface{}) uintptr {
 		return 0
 	}
 	var __rv uintptr
-	DirectQtDrv(Native(obj), 1, 105, unsafe.Pointer(drvNewIfaceRef(filter)), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	DirectQtDrv(Native(obj), 1, 105, nil, unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 	if __rv != 0 {
 		eventMap[__rv] = filter
 	}

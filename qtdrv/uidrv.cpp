@@ -18,6 +18,7 @@
 #include <QApplication>
 
 UIDrv uidrv;
+QByteArray utf8_cache;
 
 UIDrv::UIDrv(QObject *parent) :
     QObject(parent), drv_index(0)

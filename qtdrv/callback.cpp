@@ -218,7 +218,7 @@ int init_callback(void *p, int id, void *p1, void *p2, void *p3)
         (CALLBACK_INSERT_MAP(p3))(p,p1,p2);
         break;
     case 105:
-        *(void**)p2 = drvNewFilter(p,(Iface*)p1);
+        *(void**)p2 = drvNewFilter(p);
         break;
     case 106:
         drvSetString(p1,qVersion());

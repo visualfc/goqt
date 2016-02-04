@@ -11,10 +11,10 @@ type MainWindow struct {
 
 func NewMainWindow() *MainWindow {
 	w := &MainWindow{}
-	w.QMainWindow = ui.NewQMainWindow()
+	w.QMainWindow = ui.NewMainWindow()
 	w.InstallEventFilter(w)
 
-	w.edit = ui.NewQPlainTextEdit()
+	w.edit = ui.NewPlainTextEdit()
 	w.SetCentralWidget(w.edit)
 
 	w.createActions()
@@ -28,18 +28,18 @@ func NewMainWindow() *MainWindow {
 }
 
 func (w *MainWindow) readSettings() {
-	setting := ui.NewQSettingsWithOrganizationApplicationParent("GoQt", "Application Example", w)
+	setting := ui.NewSettingsWithOrganizationApplicationParent("GoQt", "Application Example", w)
 	defer setting.Delete()
-	pos := setting.ValueWithKeyDefaultvalue("pos", ui.NewQVariantWithPoint(ui.NewQPointWithXposYpos(200, 200))).ToPoint()
-	size := setting.ValueWithKeyDefaultvalue("size", ui.NewQVariantWithSize(ui.NewQSizeWithWidthHeight(400, 400))).ToSize()
+	pos := setting.ValueWithKeyDefaultvalue("pos", ui.NewVariantWithPoint(ui.NewPointWithXposYpos(200, 200))).ToPoint()
+	size := setting.ValueWithKeyDefaultvalue("size", ui.NewVariantWithSize(ui.NewSizeWithWidthHeight(400, 400))).ToSize()
 	w.Move(pos)
 	w.Resize(size)
 }
 
 func (w *MainWindow) writeSettings() {
-	setting := ui.NewQSettingsWithOrganizationApplicationParent("GoQt", "Application Example", nil)
-	setting.SetValue("pos", ui.NewQVariantWithPoint(w.Pos()))
-	setting.SetValue("size", ui.NewQVariantWithSize(w.Size()))
+	setting := ui.NewSettingsWithOrganizationApplicationParent("GoQt", "Application Example", nil)
+	setting.SetValue("pos", ui.NewVariantWithPoint(w.Pos()))
+	setting.SetValue("size", ui.NewVariantWithSize(w.Size()))
 }
 
 func (w *MainWindow) maybeSave() bool {
@@ -73,7 +73,7 @@ func (w *MainWindow) saveAs() bool {
 }
 
 func (w *MainWindow) saveFile(fileName string) bool {
-	file := ui.NewQFileWithName(fileName)
+	file := ui.NewFileWithName(fileName)
 	defer file.Delete()
 	if !file.Open(ui.QIODevice_WriteOnly | ui.QIODevice_Text) {
 		return false
@@ -95,55 +95,55 @@ func (w *MainWindow) OnCloseEvent(ev *ui.QCloseEvent) bool {
 }
 
 func (w *MainWindow) createActions() {
-	newAct := ui.NewQActionWithTextParent(w.Tr("&New"), w)
-	newAct.SetIcon(ui.NewQIconWithFilename(":/images/new.png"))
+	newAct := ui.NewActionWithTextParent(w.Tr("&New"), w)
+	newAct.SetIcon(ui.NewIconWithFilename(":/images/new.png"))
 	newAct.SetShortcuts(ui.QKeySequence_New)
 	newAct.SetStatusTip("Create a new file")
 	newAct.OnTriggered(func() { w.newFile() })
 
-	openAct := ui.NewQActionWithTextParent("&Open...", w)
-	openAct.SetIcon(ui.NewQIconWithFilename(":/images/open.png"))
+	openAct := ui.NewActionWithTextParent("&Open...", w)
+	openAct.SetIcon(ui.NewIconWithFilename(":/images/open.png"))
 	openAct.SetShortcuts(ui.QKeySequence_Open)
 	openAct.SetStatusTip("Open an existing file")
 	openAct.OnTriggered(func() { w.open() })
 
-	saveAct := ui.NewQActionWithTextParent("&Save", w)
-	saveAct.SetIcon(ui.NewQIconWithFilename(":/images/save.png"))
+	saveAct := ui.NewActionWithTextParent("&Save", w)
+	saveAct.SetIcon(ui.NewIconWithFilename(":/images/save.png"))
 	saveAct.SetShortcuts(ui.QKeySequence_Save)
 	saveAct.SetStatusTip("Save the document to disk")
 	saveAct.OnTriggered(func() { w.save() })
 
-	saveAsAct := ui.NewQActionWithTextParent("&SaveAs...", w)
+	saveAsAct := ui.NewActionWithTextParent("&SaveAs...", w)
 	saveAsAct.SetShortcuts(ui.QKeySequence_SaveAs)
 	saveAsAct.SetStatusTip("Save the document under a new name")
 	saveAsAct.OnTriggered(func() { w.saveAs() })
 
-	exitAct := ui.NewQActionWithTextParent("&Exit", w)
+	exitAct := ui.NewActionWithTextParent("&Exit", w)
 	exitAct.SetShortcuts(ui.QKeySequence_Quit)
 	exitAct.SetStatusTip("Exit the application")
 	exitAct.OnTriggered(func() { w.Close() })
 
-	copyAct := ui.NewQActionWithTextParent("&Copy", w)
-	copyAct.SetIcon(ui.NewQIconWithFilename(":/images/copy.png"))
+	copyAct := ui.NewActionWithTextParent("&Copy", w)
+	copyAct.SetIcon(ui.NewIconWithFilename(":/images/copy.png"))
 	copyAct.SetShortcuts(ui.QKeySequence_Copy)
 	copyAct.SetStatusTip("Copy the current selection's contents to the clipboard")
 	copyAct.OnTriggered(func() { w.edit.Copy() })
 	w.edit.OnCopyAvailable(func(b bool) { copyAct.SetEnabled(b) })
 
-	cutAct := ui.NewQActionWithTextParent("&Cut", w)
-	cutAct.SetIcon(ui.NewQIconWithFilename(":/images/cut.png"))
+	cutAct := ui.NewActionWithTextParent("&Cut", w)
+	cutAct.SetIcon(ui.NewIconWithFilename(":/images/cut.png"))
 	cutAct.SetShortcuts(ui.QKeySequence_Cut)
 	cutAct.SetStatusTip("Cut the current selection's contents to the clipboard")
 	cutAct.OnTriggered(func() { w.edit.Cut() })
 	w.edit.OnCopyAvailable(func(b bool) { cutAct.SetEnabled(b) })
 
-	pasteAct := ui.NewQActionWithTextParent("&Paste", w)
-	pasteAct.SetIcon(ui.NewQIconWithFilename(":/images/paste.png"))
+	pasteAct := ui.NewActionWithTextParent("&Paste", w)
+	pasteAct.SetIcon(ui.NewIconWithFilename(":/images/paste.png"))
 	pasteAct.SetShortcuts(ui.QKeySequence_Paste)
 	pasteAct.SetStatusTip("Paste the clipboard's contents into the current selection")
 	pasteAct.OnTriggered(func() { w.edit.Paste() })
 
-	aboutAct := ui.NewQActionWithTextParent("&About", w)
+	aboutAct := ui.NewActionWithTextParent("&About", w)
 	aboutAct.SetStatusTip("Show the application's About box")
 	aboutAct.OnTriggered(func() {
 		ui.QMessageBoxAbout(w, "About Application",
@@ -151,7 +151,7 @@ func (w *MainWindow) createActions() {
 				"write modern GUI applications using Qt, with a menu bar, "+
 				"toolbars, and a status bar."))
 	})
-	aboutQtAct := ui.NewQActionWithTextParent("About &Qt", w)
+	aboutQtAct := ui.NewActionWithTextParent("About &Qt", w)
 	aboutQtAct.SetStatusTip("Show the Qt library's About box")
 	aboutQtAct.OnTriggered(func() { ui.QApplicationAboutQt() })
 
@@ -206,7 +206,7 @@ func (w *MainWindow) open() {
 }
 
 func (w *MainWindow) loadFile(filename string) {
-	file := ui.NewQFileWithName(filename)
+	file := ui.NewFileWithName(filename)
 	defer file.Delete()
 
 	if !file.Open(ui.QIODevice_ReadOnly) {

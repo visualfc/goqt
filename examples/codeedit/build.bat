@@ -1,1 +1,1 @@
-go build -ldflags "-H windowsgui" -o ..\..\bin\codeedit.exe
+go build -o ..\..\bin\codeedit.exe

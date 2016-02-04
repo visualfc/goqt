@@ -16,6 +16,7 @@
 #define UIDRV_H
 
 #include <QObject>
+#include <QByteArray>
 
 class UIDrv : public QObject
 {
@@ -39,5 +40,6 @@ protected:
 };
 
 extern UIDrv uidrv;
+extern QByteArray utf8_cache;
 
 #endif // UIDRV_H

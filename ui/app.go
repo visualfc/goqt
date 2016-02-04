@@ -22,7 +22,7 @@ func Run(fn func()) int32 {
 		log.Println(qtdrv_init_error)
 		return -2
 	}
-	app := NewQApplication(nil)
+	app := NewApplication(nil)
 	Async(func() {
 		fn()
 	})
@@ -34,7 +34,7 @@ func RunEx(args []string, fn func()) int32 {
 		log.Println(qtdrv_init_error)
 		return -2
 	}
-	app := NewQApplication(args)
+	app := NewApplication(args)
 	Async(func() {
 		fn()
 	})

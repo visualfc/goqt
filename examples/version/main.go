@@ -14,13 +14,13 @@ func main() {
 			ui.QtVersion(),
 			runtime.Version(), runtime.GOOS, runtime.GOARCH)
 
-		lable := ui.NewQLabel()
+		lable := ui.NewLabel()
 		lable.SetText(info)
 
-		hbox := ui.NewQHBoxLayout()
+		hbox := ui.NewHBoxLayout()
 		hbox.AddWidget(lable)
 
-		widget := ui.NewQWidget()
+		widget := ui.NewWidget()
 		widget.SetLayout(hbox)
 		widget.Show()
 	})

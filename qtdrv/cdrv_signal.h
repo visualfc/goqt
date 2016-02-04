@@ -21,7 +21,7 @@ class UISignal1 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal1(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal1(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -31,17 +31,15 @@ public:
 	}
 public slots:
 	void call() {
-		drv_signal_call(this,&face,1,0,0,0,0);
+		drv_signal_call(this,0,1,0,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QAbstractAnimation)
 class UISignal2 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal2(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal2(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -51,17 +49,15 @@ public:
 	}
 public slots:
 	void call(QAbstractAnimation* v1) {
-		drv_signal_call(this,&face,2,v1,0,0,0);
+		drv_signal_call(this,0,2,v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(QAbstractAnimation_Direction)
 class UISignal3 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal3(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal3(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -71,17 +67,15 @@ public:
 	}
 public slots:
 	void call(QAbstractAnimation::Direction v1) {
-		drv_signal_call(this,&face,3,&v1,0,0,0);
+		drv_signal_call(this,0,3,&v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(QAbstractAnimation_State,QAbstractAnimation_State)
 class UISignal4 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal4(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal4(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -91,17 +85,15 @@ public:
 	}
 public slots:
 	void call(QAbstractAnimation::State v1,QAbstractAnimation::State v2) {
-		drv_signal_call(this,&face,4,&v1,&v2,0,0);
+		drv_signal_call(this,0,4,&v1,&v2,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QAbstractButton)
 class UISignal5 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal5(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal5(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -111,17 +103,15 @@ public:
 	}
 public slots:
 	void call(QAbstractButton* v1) {
-		drv_signal_call(this,&face,5,v1,0,0,0);
+		drv_signal_call(this,0,5,v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QAction)
 class UISignal6 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal6(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal6(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -131,17 +121,15 @@ public:
 	}
 public slots:
 	void call(QAction* v1) {
-		drv_signal_call(this,&face,6,v1,0,0,0);
+		drv_signal_call(this,0,6,v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QBrush)
 class UISignal7 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal7(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal7(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -151,17 +139,15 @@ public:
 	}
 public slots:
 	void call(QBrush const& v1) {
-		drv_signal_call(this,&face,7,new QBrush(v1),0,0,0);
+		drv_signal_call(this,0,7,new QBrush(v1),0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(QClipboard_Mode)
 class UISignal8 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal8(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal8(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -171,17 +157,15 @@ public:
 	}
 public slots:
 	void call(QClipboard::Mode v1) {
-		drv_signal_call(this,&face,8,&v1,0,0,0);
+		drv_signal_call(this,0,8,&v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QColor)
 class UISignal9 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal9(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal9(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -191,17 +175,15 @@ public:
 	}
 public slots:
 	void call(QColor const& v1) {
-		drv_signal_call(this,&face,9,new QColor(v1),0,0,0);
+		drv_signal_call(this,0,9,new QColor(v1),0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QDate)
 class UISignal10 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal10(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal10(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -211,17 +193,15 @@ public:
 	}
 public slots:
 	void call(QDate const& v1) {
-		drv_signal_call(this,&face,10,new QDate(v1),0,0,0);
+		drv_signal_call(this,0,10,new QDate(v1),0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QDateTime)
 class UISignal11 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal11(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal11(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -231,17 +211,15 @@ public:
 	}
 public slots:
 	void call(QDateTime const& v1) {
-		drv_signal_call(this,&face,11,new QDateTime(v1),0,0,0);
+		drv_signal_call(this,0,11,new QDateTime(v1),0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(QDockWidget_DockWidgetFeature)
 class UISignal12 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal12(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal12(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -251,17 +229,15 @@ public:
 	}
 public slots:
 	void call(QFlags<QDockWidget::DockWidgetFeature> v1) {
-		drv_signal_call(this,&face,12,&v1,0,0,0);
+		drv_signal_call(this,0,12,&v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(QGraphicsBlurEffect_BlurHint)
 class UISignal13 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal13(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal13(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -271,17 +247,15 @@ public:
 	}
 public slots:
 	void call(QFlags<QGraphicsBlurEffect::BlurHint> v1) {
-		drv_signal_call(this,&face,13,&v1,0,0,0);
+		drv_signal_call(this,0,13,&v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(Qt_DockWidgetArea)
 class UISignal14 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal14(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal14(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -291,17 +265,15 @@ public:
 	}
 public slots:
 	void call(QFlags<Qt::DockWidgetArea> v1) {
-		drv_signal_call(this,&face,14,&v1,0,0,0);
+		drv_signal_call(this,0,14,&v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(Qt_ToolBarArea)
 class UISignal15 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal15(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal15(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -311,17 +283,15 @@ public:
 	}
 public slots:
 	void call(QFlags<Qt::ToolBarArea> v1) {
-		drv_signal_call(this,&face,15,&v1,0,0,0);
+		drv_signal_call(this,0,15,&v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(Qt_WindowState,Qt_WindowState)
 class UISignal16 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal16(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal16(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -331,17 +301,15 @@ public:
 	}
 public slots:
 	void call(QFlags<Qt::WindowState> v1,QFlags<Qt::WindowState> v2) {
-		drv_signal_call(this,&face,16,&v1,&v2,0,0);
+		drv_signal_call(this,0,16,&v1,&v2,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QFont)
 class UISignal17 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal17(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal17(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -351,17 +319,15 @@ public:
 	}
 public slots:
 	void call(QFont const& v1) {
-		drv_signal_call(this,&face,17,new QFont(v1),0,0,0);
+		drv_signal_call(this,0,17,new QFont(v1),0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(QImageReader_ImageReaderError)
 class UISignal18 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal18(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal18(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -371,17 +337,15 @@ public:
 	}
 public slots:
 	void call(QImageReader::ImageReaderError v1) {
-		drv_signal_call(this,&face,18,&v1,0,0,0);
+		drv_signal_call(this,0,18,&v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QItemSelection,*QItemSelection)
 class UISignal19 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal19(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal19(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -391,17 +355,15 @@ public:
 	}
 public slots:
 	void call(QItemSelection const& v1,QItemSelection const& v2) {
-		drv_signal_call(this,&face,19,new QItemSelection(v1),new QItemSelection(v2),0,0);
+		drv_signal_call(this,0,19,new QItemSelection(v1),new QItemSelection(v2),0,0);
 	}
-public:
-	Iface face;	
 };
 //go func([]*QModelIndex)
 class UISignal20 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal20(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal20(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -411,17 +373,15 @@ public:
 	}
 public slots:
 	void call(QList<QModelIndex> const& v1) {
-		drv_signal_call(this,&face,20,new QList<QModelIndex>(v1),0,0,0);
+		drv_signal_call(this,0,20,new QList<QModelIndex>(v1),0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func([]*QRectF)
 class UISignal21 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal21(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal21(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -431,17 +391,15 @@ public:
 	}
 public slots:
 	void call(QList<QRectF> const& v1) {
-		drv_signal_call(this,&face,21,new QList<QRectF>(v1),0,0,0);
+		drv_signal_call(this,0,21,new QList<QRectF>(v1),0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QListWidgetItem)
 class UISignal22 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal22(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal22(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -451,17 +409,15 @@ public:
 	}
 public slots:
 	void call(QListWidgetItem* v1) {
-		drv_signal_call(this,&face,22,v1,0,0,0);
+		drv_signal_call(this,0,22,v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QListWidgetItem,*QListWidgetItem)
 class UISignal23 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal23(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal23(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -471,17 +427,15 @@ public:
 	}
 public slots:
 	void call(QListWidgetItem* v1,QListWidgetItem* v2) {
-		drv_signal_call(this,&face,23,v1,v2,0,0);
+		drv_signal_call(this,0,23,v1,v2,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QMdiSubWindow)
 class UISignal24 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal24(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal24(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -491,17 +445,15 @@ public:
 	}
 public slots:
 	void call(QMdiSubWindow* v1) {
-		drv_signal_call(this,&face,24,v1,0,0,0);
+		drv_signal_call(this,0,24,v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QModelIndex)
 class UISignal25 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal25(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal25(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -511,17 +463,15 @@ public:
 	}
 public slots:
 	void call(QModelIndex const& v1) {
-		drv_signal_call(this,&face,25,new QModelIndex(v1),0,0,0);
+		drv_signal_call(this,0,25,new QModelIndex(v1),0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QModelIndex,*QModelIndex)
 class UISignal26 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal26(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal26(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -531,17 +481,15 @@ public:
 	}
 public slots:
 	void call(QModelIndex const& v1,QModelIndex const& v2) {
-		drv_signal_call(this,&face,26,new QModelIndex(v1),new QModelIndex(v2),0,0);
+		drv_signal_call(this,0,26,new QModelIndex(v1),new QModelIndex(v2),0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(QMovie_MovieState)
 class UISignal27 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal27(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal27(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -551,17 +499,15 @@ public:
 	}
 public slots:
 	void call(QMovie::MovieState v1) {
-		drv_signal_call(this,&face,27,&v1,0,0,0);
+		drv_signal_call(this,0,27,&v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QObject)
 class UISignal28 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal28(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal28(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -571,17 +517,15 @@ public:
 	}
 public slots:
 	void call(QObject* v1) {
-		drv_signal_call(this,&face,28,v1,0,0,0);
+		drv_signal_call(this,0,28,v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QPoint)
 class UISignal29 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal29(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal29(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -591,17 +535,15 @@ public:
 	}
 public slots:
 	void call(QPoint const& v1) {
-		drv_signal_call(this,&face,29,new QPoint(v1),0,0,0);
+		drv_signal_call(this,0,29,new QPoint(v1),0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QPointF)
 class UISignal30 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal30(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal30(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -611,17 +553,15 @@ public:
 	}
 public slots:
 	void call(QPointF const& v1) {
-		drv_signal_call(this,&face,30,new QPointF(v1),0,0,0);
+		drv_signal_call(this,0,30,new QPointF(v1),0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QPrinter)
 class UISignal31 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal31(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal31(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -631,17 +571,15 @@ public:
 	}
 public slots:
 	void call(QPrinter* v1) {
-		drv_signal_call(this,&face,31,v1,0,0,0);
+		drv_signal_call(this,0,31,v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(QProcess_ProcessError)
 class UISignal32 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal32(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal32(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -651,17 +589,15 @@ public:
 	}
 public slots:
 	void call(QProcess::ProcessError v1) {
-		drv_signal_call(this,&face,32,&v1,0,0,0);
+		drv_signal_call(this,0,32,&v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(QProcess_ProcessState)
 class UISignal33 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal33(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal33(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -671,17 +607,15 @@ public:
 	}
 public slots:
 	void call(QProcess::ProcessState v1) {
-		drv_signal_call(this,&face,33,&v1,0,0,0);
+		drv_signal_call(this,0,33,&v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QRect)
 class UISignal34 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal34(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal34(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -691,17 +625,15 @@ public:
 	}
 public slots:
 	void call(QRect const& v1) {
-		drv_signal_call(this,&face,34,new QRect(v1),0,0,0);
+		drv_signal_call(this,0,34,new QRect(v1),0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QRect,int32)
 class UISignal35 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal35(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal35(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -711,17 +643,15 @@ public:
 	}
 public slots:
 	void call(QRect const& v1,int v2) {
-		drv_signal_call(this,&face,35,new QRect(v1),&v2,0,0);
+		drv_signal_call(this,0,35,new QRect(v1),&v2,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QRectF)
 class UISignal36 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal36(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal36(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -731,17 +661,15 @@ public:
 	}
 public slots:
 	void call(QRectF const& v1) {
-		drv_signal_call(this,&face,36,new QRectF(v1),0,0,0);
+		drv_signal_call(this,0,36,new QRectF(v1),0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QSessionManager)
 class UISignal37 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal37(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal37(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -751,17 +679,15 @@ public:
 	}
 public slots:
 	void call(QSessionManager& v1) {
-		drv_signal_call(this,&face,37,&v1,0,0,0);
+		drv_signal_call(this,0,37,&v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QSize)
 class UISignal38 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal38(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal38(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -771,17 +697,15 @@ public:
 	}
 public slots:
 	void call(QSize const& v1) {
-		drv_signal_call(this,&face,38,new QSize(v1),0,0,0);
+		drv_signal_call(this,0,38,new QSize(v1),0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QSizeF)
 class UISignal39 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal39(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal39(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -791,17 +715,15 @@ public:
 	}
 public slots:
 	void call(QSizeF const& v1) {
-		drv_signal_call(this,&face,39,new QSizeF(v1),0,0,0);
+		drv_signal_call(this,0,39,new QSizeF(v1),0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QStandardItem)
 class UISignal40 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal40(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal40(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -811,17 +733,15 @@ public:
 	}
 public slots:
 	void call(QStandardItem* v1) {
-		drv_signal_call(this,&face,40,v1,0,0,0);
+		drv_signal_call(this,0,40,v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(string)
 class UISignal41 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal41(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal41(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -831,17 +751,15 @@ public:
 	}
 public slots:
 	void call(QString const& v1) {
-		drv_signal_call(this,&face,41,new QString(v1),0,0,0);
+		drv_signal_call(this,0,41,new QString(v1),0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(string,string,string)
 class UISignal42 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal42(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal42(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -851,17 +769,15 @@ public:
 	}
 public slots:
 	void call(QString const& v1,QString const& v2,QString const& v3) {
-		drv_signal_call(this,&face,42,new QString(v1),new QString(v2),new QString(v3),0);
+		drv_signal_call(this,0,42,new QString(v1),new QString(v2),new QString(v3),0);
 	}
-public:
-	Iface face;	
 };
 //go func([]string)
 class UISignal43 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal43(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal43(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -871,17 +787,15 @@ public:
 	}
 public slots:
 	void call(QStringList const& v1) {
-		drv_signal_call(this,&face,43,new QStringList(v1),0,0,0);
+		drv_signal_call(this,0,43,new QStringList(v1),0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(QSystemTrayIcon_ActivationReason)
 class UISignal44 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal44(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal44(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -891,17 +805,15 @@ public:
 	}
 public slots:
 	void call(QSystemTrayIcon::ActivationReason v1) {
-		drv_signal_call(this,&face,44,&v1,0,0,0);
+		drv_signal_call(this,0,44,&v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QTableWidgetItem)
 class UISignal45 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal45(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal45(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -911,17 +823,15 @@ public:
 	}
 public slots:
 	void call(QTableWidgetItem* v1) {
-		drv_signal_call(this,&face,45,v1,0,0,0);
+		drv_signal_call(this,0,45,v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QTableWidgetItem,*QTableWidgetItem)
 class UISignal46 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal46(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal46(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -931,17 +841,15 @@ public:
 	}
 public slots:
 	void call(QTableWidgetItem* v1,QTableWidgetItem* v2) {
-		drv_signal_call(this,&face,46,v1,v2,0,0);
+		drv_signal_call(this,0,46,v1,v2,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QTextBlock)
 class UISignal47 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal47(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal47(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -951,17 +859,15 @@ public:
 	}
 public slots:
 	void call(QTextBlock const& v1) {
-		drv_signal_call(this,&face,47,new QTextBlock(v1),0,0,0);
+		drv_signal_call(this,0,47,new QTextBlock(v1),0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QTextCharFormat)
 class UISignal48 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal48(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal48(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -971,17 +877,15 @@ public:
 	}
 public slots:
 	void call(QTextCharFormat const& v1) {
-		drv_signal_call(this,&face,48,new QTextCharFormat(v1),0,0,0);
+		drv_signal_call(this,0,48,new QTextCharFormat(v1),0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QTextCursor)
 class UISignal49 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal49(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal49(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -991,17 +895,15 @@ public:
 	}
 public slots:
 	void call(QTextCursor const& v1) {
-		drv_signal_call(this,&face,49,new QTextCursor(v1),0,0,0);
+		drv_signal_call(this,0,49,new QTextCursor(v1),0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QTime)
 class UISignal50 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal50(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal50(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -1011,17 +913,15 @@ public:
 	}
 public slots:
 	void call(QTime const& v1) {
-		drv_signal_call(this,&face,50,new QTime(v1),0,0,0);
+		drv_signal_call(this,0,50,new QTime(v1),0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(QTimeLine_State)
 class UISignal51 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal51(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal51(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -1031,17 +931,15 @@ public:
 	}
 public slots:
 	void call(QTimeLine::State v1) {
-		drv_signal_call(this,&face,51,&v1,0,0,0);
+		drv_signal_call(this,0,51,&v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QTreeWidgetItem)
 class UISignal52 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal52(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal52(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -1051,17 +949,15 @@ public:
 	}
 public slots:
 	void call(QTreeWidgetItem* v1) {
-		drv_signal_call(this,&face,52,v1,0,0,0);
+		drv_signal_call(this,0,52,v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QTreeWidgetItem,*QTreeWidgetItem)
 class UISignal53 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal53(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal53(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -1071,17 +967,15 @@ public:
 	}
 public slots:
 	void call(QTreeWidgetItem* v1,QTreeWidgetItem* v2) {
-		drv_signal_call(this,&face,53,v1,v2,0,0);
+		drv_signal_call(this,0,53,v1,v2,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QTreeWidgetItem,int32)
 class UISignal54 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal54(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal54(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -1091,17 +985,15 @@ public:
 	}
 public slots:
 	void call(QTreeWidgetItem* v1,int v2) {
-		drv_signal_call(this,&face,54,v1,&v2,0,0);
+		drv_signal_call(this,0,54,v1,&v2,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QUndoStack)
 class UISignal55 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal55(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal55(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -1111,17 +1003,15 @@ public:
 	}
 public slots:
 	void call(QUndoStack* v1) {
-		drv_signal_call(this,&face,55,v1,0,0,0);
+		drv_signal_call(this,0,55,v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QUrl)
 class UISignal56 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal56(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal56(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -1131,17 +1021,15 @@ public:
 	}
 public slots:
 	void call(QUrl const& v1) {
-		drv_signal_call(this,&face,56,new QUrl(v1),0,0,0);
+		drv_signal_call(this,0,56,new QUrl(v1),0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QVariant)
 class UISignal57 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal57(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal57(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -1151,17 +1039,15 @@ public:
 	}
 public slots:
 	void call(QVariant const& v1) {
-		drv_signal_call(this,&face,57,new QVariant(v1),0,0,0);
+		drv_signal_call(this,0,57,new QVariant(v1),0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QWidget)
 class UISignal58 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal58(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal58(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -1171,17 +1057,15 @@ public:
 	}
 public slots:
 	void call(QWidget* v1) {
-		drv_signal_call(this,&face,58,v1,0,0,0);
+		drv_signal_call(this,0,58,v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QWidget,QAbstractItemDelegate_EndEditHint)
 class UISignal59 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal59(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal59(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -1191,17 +1075,15 @@ public:
 	}
 public slots:
 	void call(QWidget* v1,QAbstractItemDelegate::EndEditHint v2) {
-		drv_signal_call(this,&face,59,v1,&v2,0,0);
+		drv_signal_call(this,0,59,v1,&v2,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(*QWidget,*QWidget)
 class UISignal60 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal60(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal60(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -1211,17 +1093,15 @@ public:
 	}
 public slots:
 	void call(QWidget* v1,QWidget* v2) {
-		drv_signal_call(this,&face,60,v1,v2,0,0);
+		drv_signal_call(this,0,60,v1,v2,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(Qt_DockWidgetArea)
 class UISignal61 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal61(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal61(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -1231,17 +1111,15 @@ public:
 	}
 public slots:
 	void call(Qt::DockWidgetArea v1) {
-		drv_signal_call(this,&face,61,&v1,0,0,0);
+		drv_signal_call(this,0,61,&v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(Qt_DropAction)
 class UISignal62 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal62(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal62(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -1251,17 +1129,15 @@ public:
 	}
 public slots:
 	void call(Qt::DropAction v1) {
-		drv_signal_call(this,&face,62,&v1,0,0,0);
+		drv_signal_call(this,0,62,&v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(Qt_Orientation)
 class UISignal63 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal63(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal63(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -1271,17 +1147,15 @@ public:
 	}
 public slots:
 	void call(Qt::Orientation v1) {
-		drv_signal_call(this,&face,63,&v1,0,0,0);
+		drv_signal_call(this,0,63,&v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(Qt_Orientation,int32,int32)
 class UISignal64 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal64(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal64(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -1291,17 +1165,15 @@ public:
 	}
 public slots:
 	void call(Qt::Orientation v1,int v2,int v3) {
-		drv_signal_call(this,&face,64,&v1,&v2,&v3,0);
+		drv_signal_call(this,0,64,&v1,&v2,&v3,0);
 	}
-public:
-	Iface face;	
 };
 //go func(Qt_ToolButtonStyle)
 class UISignal65 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal65(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal65(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -1311,17 +1183,15 @@ public:
 	}
 public slots:
 	void call(Qt::ToolButtonStyle v1) {
-		drv_signal_call(this,&face,65,&v1,0,0,0);
+		drv_signal_call(this,0,65,&v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(bool)
 class UISignal66 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal66(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal66(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -1331,17 +1201,15 @@ public:
 	}
 public slots:
 	void call(bool v1) {
-		drv_signal_call(this,&face,66,&v1,0,0,0);
+		drv_signal_call(this,0,66,&v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(float64)
 class UISignal67 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal67(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal67(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -1351,17 +1219,15 @@ public:
 	}
 public slots:
 	void call(double v1) {
-		drv_signal_call(this,&face,67,&v1,0,0,0);
+		drv_signal_call(this,0,67,&v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(int32)
 class UISignal68 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal68(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal68(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -1371,17 +1237,15 @@ public:
 	}
 public slots:
 	void call(int v1) {
-		drv_signal_call(this,&face,68,&v1,0,0,0);
+		drv_signal_call(this,0,68,&v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(int32,QHeaderView_ResizeMode)
 class UISignal69 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal69(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal69(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -1391,17 +1255,15 @@ public:
 	}
 public slots:
 	void call(int v1,QHeaderView::ResizeMode v2) {
-		drv_signal_call(this,&face,69,&v1,&v2,0,0);
+		drv_signal_call(this,0,69,&v1,&v2,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(int32,QProcess_ExitStatus)
 class UISignal70 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal70(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal70(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -1411,17 +1273,15 @@ public:
 	}
 public slots:
 	void call(int v1,QProcess::ExitStatus v2) {
-		drv_signal_call(this,&face,70,&v1,&v2,0,0);
+		drv_signal_call(this,0,70,&v1,&v2,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(int32,Qt_SortOrder)
 class UISignal71 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal71(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal71(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -1431,17 +1291,15 @@ public:
 	}
 public slots:
 	void call(int v1,Qt::SortOrder v2) {
-		drv_signal_call(this,&face,71,&v1,&v2,0,0);
+		drv_signal_call(this,0,71,&v1,&v2,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(int32,int32)
 class UISignal72 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal72(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal72(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -1451,17 +1309,15 @@ public:
 	}
 public slots:
 	void call(int v1,int v2) {
-		drv_signal_call(this,&face,72,&v1,&v2,0,0);
+		drv_signal_call(this,0,72,&v1,&v2,0,0);
 	}
-public:
-	Iface face;	
 };
 //go func(int32,int32,int32)
 class UISignal73 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal73(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal73(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -1471,17 +1327,15 @@ public:
 	}
 public slots:
 	void call(int v1,int v2,int v3) {
-		drv_signal_call(this,&face,73,&v1,&v2,&v3,0);
+		drv_signal_call(this,0,73,&v1,&v2,&v3,0);
 	}
-public:
-	Iface face;	
 };
 //go func(int32,int32,int32,int32)
 class UISignal74 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal74(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal74(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -1491,17 +1345,15 @@ public:
 	}
 public slots:
 	void call(int v1,int v2,int v3,int v4) {
-		drv_signal_call(this,&face,74,&v1,&v2,&v3,&v4);
+		drv_signal_call(this,0,74,&v1,&v2,&v3,&v4);
 	}
-public:
-	Iface face;	
 };
 //go func(int64)
 class UISignal75 : public QObject
 {
 	Q_OBJECT
 public:
-    explicit UISignal75(QObject *sender, Iface *_face) : face(*_face)
+    explicit UISignal75(QObject *sender)
 	{
 		QObject::connect(sender,SIGNAL(destroyed()),this,SLOT(deleteLater()));
 	}
@@ -1511,9 +1363,7 @@ public:
 	}
 public slots:
 	void call(qint64 v1) {
-		drv_signal_call(this,&face,75,&v1,0,0,0);
+		drv_signal_call(this,0,75,&v1,0,0,0);
 	}
-public:
-	Iface face;	
 };
 #endif //CDRV_SIGNAL_H	

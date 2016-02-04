@@ -28,16 +28,14 @@ public:
     }
     bool eventFilter(QObject *obj, QEvent *event)
     {
-        return drv_event_filter(this,&face,obj,event->type(),event);
+        return drv_event_filter(this,0,obj,event->type(),event);
     }
-    Iface face;
 };
 
-inline void* drvNewFilter(void *obj, Iface *face)
+inline void* drvNewFilter(void *obj)
 {
     QObject *object = (QObject*)obj;
     UIEventFilter *filter = new UIEventFilter;
-    filter->face = *face;
     filter->moveToThread(object->thread());
     filter->setParent(object);
     object->installEventFilter(filter);

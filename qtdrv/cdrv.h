@@ -39,12 +39,17 @@ typedef	unsigned int uint32;
 
 struct string_head {
     const char *data;
-    uint32 len;
+    int size;
 };
 
+typedef struct {
+    const char **data;
+    int size;
+} string_array_head;
+
 struct string_head_cache {
-    char *data;
-    uint32 len;
+    const char *data;
+    int         len;
 };
 
 
@@ -74,8 +79,14 @@ inline void drvSetString(void *p, const QString &v)
     if (p == 0) {
         return;
     }
+    /*
     const QByteArray & ar = v.toUtf8();
     utf8_to_string(p,ar.constData(),ar.length());
+    */
+    utf8_cache = v.toUtf8();
+    string_head_cache *sh = (string_head_cache*)(p);
+    sh->data = utf8_cache.constData();
+    sh->len = utf8_cache.length();
 }
 
 inline void drvSetByteArray(void *p, QByteArray v)
@@ -112,24 +123,38 @@ inline void drvSetBitArray(void *p, QBitArray v)
 #endif
 }
 
-inline QString drvGetString(void *p)
+inline QString drvGetStringHead(void *p)
 {
     if (p == 0) {
         return QString();
     }
-    string_head *h = (string_head*)p;
-
-    return QString::fromUtf8(h->data,h->len);
+    string_head *sh = (string_head*)p;
+    return QString::fromUtf8(sh->data,sh->size);
 }
+
+inline QStringList drvGetStringArray(void *p)
+{
+    if (p == 0) {
+        return QStringList();
+    }
+    QStringList list;
+    char **sh = (char**)p;
+    while (*sh) {
+        list.append(QString::fromUtf8(*sh));
+        sh++;
+    }
+    return list;
+}
+
 
 inline QString drvGetStringRef(void *p)
 {
     if (p == 0) {
         return QString();
     }
-    string_head *h = *(string_head**)p;
+    string_head *h = (string_head*)p;
 
-    return QString::fromUtf8(h->data,h->len);
+    return QString::fromUtf8(h->data,h->size);
 }
 
 inline void drvSetStringRef(void *p, const QString &v)
@@ -138,7 +163,7 @@ inline void drvSetStringRef(void *p, const QString &v)
         return;
     }
     const QByteArray & ar = v.toUtf8();
-    utf8_to_string(*(void**)p,ar.constData(),ar.length());
+    utf8_to_string(p,ar.constData(),ar.length());
 }
 
 inline void drvSetStringArray(void *p, const QStringList &list)
@@ -182,20 +207,6 @@ inline void drvSetObjectArray(void *p, int id, const QList<QObject*> &list)
     foreach (QObject *v, list) {
         append_object_to_slice(p,v,id,false);
     }
-}
-
-inline QStringList drvGetStringArray(void *p)
-{
-    if (p == 0) {
-        return QStringList();
-    }
-    QStringList list;
-    slice_head *sh = (slice_head*)p;
-    for (uint32 i = 0; i < sh->len; i++) {
-        string_head *s = (string_head*) string_slice_index(sh,i);
-        list.append(QString::fromUtf8(s->data,s->len));
-    }
-    return list;
 }
 
 inline void drvSetRgbArray(void *p, QVector<QRgb> ar)
@@ -444,7 +455,7 @@ inline const char *drvGet_const_char(void *p) {
     }
     string_head *sh = (string_head*)p;
 
-    if (sh->len == 0) {
+    if (sh->size == 0) {
         return "";
     }
     return sh->data;
@@ -484,7 +495,7 @@ template <typename T>
 inline void drvInsertString2Object(void *p, void *p1, void *p2)
 {
     string_head *sh = (string_head*)p1;
-    (*((QMap<QString,T>*)p)).insert(QString::fromUtf8(sh->data,sh->len),*(T*)p2);
+    (*((QMap<QString,T>*)p)).insert(QString::fromUtf8(sh->data,sh->size),*(T*)p2);
 }
 
 template <typename T>

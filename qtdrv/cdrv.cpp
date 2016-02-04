@@ -552,42 +552,42 @@ int drv_QApplication(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	} 
 	case 6102: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(lastWindowClosed()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 6103: {
-		UISignal60 *uis = new UISignal60(pThis,(Iface*)p1);
+		UISignal60 *uis = new UISignal60(pThis);
 		if (QObject::connect(pThis,SIGNAL(focusChanged(QWidget*,QWidget*)),uis,SLOT(call(QWidget*,QWidget*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 6104: {
-		UISignal37 *uis = new UISignal37(pThis,(Iface*)p1);
+		UISignal37 *uis = new UISignal37(pThis);
 		if (QObject::connect(pThis,SIGNAL(saveStateRequest(QSessionManager&)),uis,SLOT(call(QSessionManager&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 6105: {
-		UISignal37 *uis = new UISignal37(pThis,(Iface*)p1);
+		UISignal37 *uis = new UISignal37(pThis);
 		if (QObject::connect(pThis,SIGNAL(commitDataRequest(QSessionManager&)),uis,SLOT(call(QSessionManager&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 6106: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(fontDatabaseChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 6107: {
-		*(void**)_p = new QApplication(*(int*)p1,drvGetBytesArray(p2));
+		*(void**)_p = new QApplication(*(int*)p1,(char **)(p2));
 		break;
 	}
 	case 6108: {
@@ -607,7 +607,7 @@ int drv_QApplication(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 6112: {
-		QCoreApplication::addLibraryPath(drvGetString(p1));
+		QCoreApplication::addLibraryPath(drvGetStringHead(p1));
 		break;
 	}
 	case 6113: {
@@ -824,7 +824,7 @@ int drv_QApplication(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 6166: {
-		QCoreApplication::removeLibraryPath(drvGetString(p1));
+		QCoreApplication::removeLibraryPath(drvGetStringHead(p1));
 		break;
 	}
 	case 6167: {
@@ -860,11 +860,11 @@ int drv_QApplication(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 6175: {
-		QCoreApplication::setApplicationName(drvGetString(p1));
+		QCoreApplication::setApplicationName(drvGetStringHead(p1));
 		break;
 	}
 	case 6176: {
-		QCoreApplication::setApplicationVersion(drvGetString(p1));
+		QCoreApplication::setApplicationVersion(drvGetStringHead(p1));
 		break;
 	}
 	case 6177: {
@@ -931,11 +931,11 @@ int drv_QApplication(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 6192: {
-		QCoreApplication::setOrganizationDomain(drvGetString(p1));
+		QCoreApplication::setOrganizationDomain(drvGetStringHead(p1));
 		break;
 	}
 	case 6193: {
-		QCoreApplication::setOrganizationName(drvGetString(p1));
+		QCoreApplication::setOrganizationName(drvGetStringHead(p1));
 		break;
 	}
 	case 6194: {
@@ -966,7 +966,7 @@ int drv_QApplication(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 6200: {
-		*(void**)p2 = QApplication::setStyle(drvGetString(p1));
+		*(void**)p2 = QApplication::setStyle(drvGetStringHead(p1));
 		break;
 	}
 	case 6201: {
@@ -974,7 +974,7 @@ int drv_QApplication(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 6202: {
-		pThis->setStyleSheet(drvGetString(p1));
+		pThis->setStyleSheet(drvGetStringHead(p1));
 		break;
 	}
 	case 6203: {
@@ -1121,7 +1121,7 @@ int drv_QBitmap(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 8105: {
-		*(void**)_p = new QBitmap(drvGetString(p1),drvGet_const_char(p2));
+		*(void**)_p = new QBitmap(drvGetStringHead(p1),drvGet_const_char(p2));
 		break;
 	}
 	case 8106: {
@@ -1416,7 +1416,7 @@ int drv_QColor(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 		break;
 	}
 	case 13105: {
-		*(void**)_p = new QColor(drvGetString(p1));
+		*(void**)_p = new QColor(drvGetStringHead(p1));
 		break;
 	}
 	case 13106: {
@@ -1612,7 +1612,7 @@ int drv_QColor(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 		break;
 	}
 	case 13154: {
-		*(bool*)p2 = QColor::isValidColor(drvGetString(p1));
+		*(bool*)p2 = QColor::isValidColor(drvGetStringHead(p1));
 		break;
 	}
 	case 13155: {
@@ -1724,7 +1724,7 @@ int drv_QColor(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 		break;
 	}
 	case 13182: {
-		pThis->setNamedColor(drvGetString(p1));
+		pThis->setNamedColor(drvGetStringHead(p1));
 		break;
 	}
 	case 13183: {
@@ -2142,15 +2142,15 @@ int drv_QDate(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,vo
 		break;
 	}
 	case 19116: {
-		*(void**)p2 = new QDate(QDate::fromString(drvGetString(p1)));
+		*(void**)p2 = new QDate(QDate::fromString(drvGetStringHead(p1)));
 		break;
 	}
 	case 19117: {
-		*(void**)p3 = new QDate(QDate::fromString(drvGetString(p1),drvGetString(p2)));
+		*(void**)p3 = new QDate(QDate::fromString(drvGetStringHead(p1),drvGetStringHead(p2)));
 		break;
 	}
 	case 19118: {
-		*(void**)p3 = new QDate(QDate::fromString(drvGetString(p1),*(Qt::DateFormat*)p2));
+		*(void**)p3 = new QDate(QDate::fromString(drvGetStringHead(p1),*(Qt::DateFormat*)p2));
 		break;
 	}
 	case 19119: {
@@ -2222,7 +2222,7 @@ int drv_QDate(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,vo
 		break;
 	}
 	case 19136: {
-		drvSetString(p2,pThis->toString(drvGetString(p1)));
+		drvSetString(p2,pThis->toString(drvGetStringHead(p1)));
 		break;
 	}
 	case 19137: {
@@ -2322,15 +2322,15 @@ int drv_QDateTime(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,v
 		break;
 	}
 	case 20117: {
-		*(void**)p2 = new QDateTime(QDateTime::fromString(drvGetString(p1)));
+		*(void**)p2 = new QDateTime(QDateTime::fromString(drvGetStringHead(p1)));
 		break;
 	}
 	case 20118: {
-		*(void**)p3 = new QDateTime(QDateTime::fromString(drvGetString(p1),drvGetString(p2)));
+		*(void**)p3 = new QDateTime(QDateTime::fromString(drvGetStringHead(p1),drvGetStringHead(p2)));
 		break;
 	}
 	case 20119: {
-		*(void**)p3 = new QDateTime(QDateTime::fromString(drvGetString(p1),*(Qt::DateFormat*)p2));
+		*(void**)p3 = new QDateTime(QDateTime::fromString(drvGetStringHead(p1),*(Qt::DateFormat*)p2));
 		break;
 	}
 	case 20120: {
@@ -2402,7 +2402,7 @@ int drv_QDateTime(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,v
 		break;
 	}
 	case 20136: {
-		drvSetString(p2,pThis->toString(drvGetString(p1)));
+		drvSetString(p2,pThis->toString(drvGetStringHead(p1)));
 		break;
 	}
 	case 20137: {
@@ -2458,7 +2458,7 @@ int drv_QDesktopServices(void *_p, int funcid, void* p1,void* p2,void* p3,void*,
 		break;
 	}
 	case 21105: {
-		QDesktopServices::setUrlHandler(drvGetString(p1),(QObject*)(p2),drvGet_const_char(p3));
+		QDesktopServices::setUrlHandler(drvGetStringHead(p1),(QObject*)(p2),drvGet_const_char(p3));
 		break;
 	}
 	case 21106: {
@@ -2470,7 +2470,7 @@ int drv_QDesktopServices(void *_p, int funcid, void* p1,void* p2,void* p3,void*,
 		break;
 	}
 	case 21107: {
-		QDesktopServices::unsetUrlHandler(drvGetString(p1));
+		QDesktopServices::unsetUrlHandler(drvGetStringHead(p1));
 		break;
 	}
 	default:
@@ -2498,15 +2498,15 @@ int drv_QDir(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		break;
 	}
 	case 22104: {
-		*(void**)_p = new QDir(drvGetString(p1));
+		*(void**)_p = new QDir(drvGetStringHead(p1));
 		break;
 	}
 	case 22105: {
-		*(void**)_p = new QDir(drvGetString(p1),drvGetString(p2),*(QFlags<QDir::SortFlag>*)p3,*(QFlags<QDir::Filter>*)p4);
+		*(void**)_p = new QDir(drvGetStringHead(p1),drvGetStringHead(p2),*(QFlags<QDir::SortFlag>*)p3,*(QFlags<QDir::Filter>*)p4);
 		break;
 	}
 	case 22106: {
-		drvSetString(p2,pThis->absoluteFilePath(drvGetString(p1)));
+		drvSetString(p2,pThis->absoluteFilePath(drvGetStringHead(p1)));
 		break;
 	}
 	case 22107: {
@@ -2514,11 +2514,11 @@ int drv_QDir(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		break;
 	}
 	case 22108: {
-		QDir::addResourceSearchPath(drvGetString(p1));
+		QDir::addResourceSearchPath(drvGetStringHead(p1));
 		break;
 	}
 	case 22109: {
-		QDir::addSearchPath(drvGetString(p1),drvGetString(p2));
+		QDir::addSearchPath(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 22110: {
@@ -2526,7 +2526,7 @@ int drv_QDir(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		break;
 	}
 	case 22111: {
-		*(bool*)p2 = pThis->cd(drvGetString(p1));
+		*(bool*)p2 = pThis->cd(drvGetStringHead(p1));
 		break;
 	}
 	case 22112: {
@@ -2534,7 +2534,7 @@ int drv_QDir(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		break;
 	}
 	case 22113: {
-		drvSetString(p2,QDir::cleanPath(drvGetString(p1)));
+		drvSetString(p2,QDir::cleanPath(drvGetStringHead(p1)));
 		break;
 	}
 	case 22114: {
@@ -2594,11 +2594,11 @@ int drv_QDir(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		break;
 	}
 	case 22128: {
-		*(bool*)p2 = pThis->exists(drvGetString(p1));
+		*(bool*)p2 = pThis->exists(drvGetStringHead(p1));
 		break;
 	}
 	case 22129: {
-		drvSetString(p2,pThis->filePath(drvGetString(p1)));
+		drvSetString(p2,pThis->filePath(drvGetStringHead(p1)));
 		break;
 	}
 	case 22130: {
@@ -2606,7 +2606,7 @@ int drv_QDir(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		break;
 	}
 	case 22131: {
-		drvSetString(p2,QDir::fromNativeSeparators(drvGetString(p1)));
+		drvSetString(p2,QDir::fromNativeSeparators(drvGetStringHead(p1)));
 		break;
 	}
 	case 22132: {
@@ -2622,7 +2622,7 @@ int drv_QDir(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		break;
 	}
 	case 22135: {
-		*(bool*)p2 = QDir::isAbsolutePath(drvGetString(p1));
+		*(bool*)p2 = QDir::isAbsolutePath(drvGetStringHead(p1));
 		break;
 	}
 	case 22136: {
@@ -2634,7 +2634,7 @@ int drv_QDir(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		break;
 	}
 	case 22138: {
-		*(bool*)p2 = QDir::isRelativePath(drvGetString(p1));
+		*(bool*)p2 = QDir::isRelativePath(drvGetStringHead(p1));
 		break;
 	}
 	case 22139: {
@@ -2646,19 +2646,19 @@ int drv_QDir(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		break;
 	}
 	case 22141: {
-		*(bool*)p3 = QDir::match(drvGetString(p1),drvGetString(p2));
+		*(bool*)p3 = QDir::match(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 22142: {
-		*(bool*)p3 = QDir::match(drvGetStringArray(p1),drvGetString(p2));
+		*(bool*)p3 = QDir::match(drvGetStringArray(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 22143: {
-		*(bool*)p2 = pThis->mkdir(drvGetString(p1));
+		*(bool*)p2 = pThis->mkdir(drvGetStringHead(p1));
 		break;
 	}
 	case 22144: {
-		*(bool*)p2 = pThis->mkpath(drvGetString(p1));
+		*(bool*)p2 = pThis->mkpath(drvGetStringHead(p1));
 		break;
 	}
 	case 22145: {
@@ -2666,7 +2666,7 @@ int drv_QDir(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		break;
 	}
 	case 22146: {
-		drvSetStringArray(p2,QDir::nameFiltersFromString(drvGetString(p1)));
+		drvSetStringArray(p2,QDir::nameFiltersFromString(drvGetStringHead(p1)));
 		break;
 	}
 	case 22147: {
@@ -2678,23 +2678,23 @@ int drv_QDir(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		break;
 	}
 	case 22149: {
-		drvSetString(p2,pThis->relativeFilePath(drvGetString(p1)));
+		drvSetString(p2,pThis->relativeFilePath(drvGetStringHead(p1)));
 		break;
 	}
 	case 22150: {
-		*(bool*)p2 = pThis->remove(drvGetString(p1));
+		*(bool*)p2 = pThis->remove(drvGetStringHead(p1));
 		break;
 	}
 	case 22151: {
-		*(bool*)p3 = pThis->rename(drvGetString(p1),drvGetString(p2));
+		*(bool*)p3 = pThis->rename(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 22152: {
-		*(bool*)p2 = pThis->rmdir(drvGetString(p1));
+		*(bool*)p2 = pThis->rmdir(drvGetStringHead(p1));
 		break;
 	}
 	case 22153: {
-		*(bool*)p2 = pThis->rmpath(drvGetString(p1));
+		*(bool*)p2 = pThis->rmpath(drvGetStringHead(p1));
 		break;
 	}
 	case 22154: {
@@ -2706,7 +2706,7 @@ int drv_QDir(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		break;
 	}
 	case 22156: {
-		drvSetStringArray(p2,QDir::searchPaths(drvGetString(p1)));
+		drvSetStringArray(p2,QDir::searchPaths(drvGetStringHead(p1)));
 		break;
 	}
 	case 22157: {
@@ -2714,7 +2714,7 @@ int drv_QDir(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		break;
 	}
 	case 22158: {
-		*(bool*)p2 = QDir::setCurrent(drvGetString(p1));
+		*(bool*)p2 = QDir::setCurrent(drvGetStringHead(p1));
 		break;
 	}
 	case 22159: {
@@ -2726,11 +2726,11 @@ int drv_QDir(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		break;
 	}
 	case 22161: {
-		pThis->setPath(drvGetString(p1));
+		pThis->setPath(drvGetStringHead(p1));
 		break;
 	}
 	case 22162: {
-		QDir::setSearchPaths(drvGetString(p1),drvGetStringArray(p2));
+		QDir::setSearchPaths(drvGetStringHead(p1),drvGetStringArray(p2));
 		break;
 	}
 	case 22163: {
@@ -2750,7 +2750,7 @@ int drv_QDir(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		break;
 	}
 	case 22167: {
-		drvSetString(p2,QDir::toNativeSeparators(drvGetString(p1)));
+		drvSetString(p2,QDir::toNativeSeparators(drvGetStringHead(p1)));
 		break;
 	}
 	default:
@@ -2774,15 +2774,15 @@ int drv_QDirIterator(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 23103: {
-		*(void**)_p = new QDirIterator(drvGetString(p1),*(QFlags<QDirIterator::IteratorFlag>*)p2);
+		*(void**)_p = new QDirIterator(drvGetStringHead(p1),*(QFlags<QDirIterator::IteratorFlag>*)p2);
 		break;
 	}
 	case 23104: {
-		*(void**)_p = new QDirIterator(drvGetString(p1),*(QFlags<QDir::Filter>*)p2,*(QFlags<QDirIterator::IteratorFlag>*)p3);
+		*(void**)_p = new QDirIterator(drvGetStringHead(p1),*(QFlags<QDir::Filter>*)p2,*(QFlags<QDirIterator::IteratorFlag>*)p3);
 		break;
 	}
 	case 23105: {
-		*(void**)_p = new QDirIterator(drvGetString(p1),drvGetStringArray(p2),*(QFlags<QDir::Filter>*)p3,*(QFlags<QDirIterator::IteratorFlag>*)p4);
+		*(void**)_p = new QDirIterator(drvGetStringHead(p1),drvGetStringArray(p2),*(QFlags<QDir::Filter>*)p3,*(QFlags<QDirIterator::IteratorFlag>*)p4);
 		break;
 	}
 	case 23106: {
@@ -3220,12 +3220,12 @@ int drv_QFileInfo(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void
 		break;
 	}
 	case 34105: {
-		*(void**)_p = new QFileInfo(drvGetString(p1));
+		*(void**)_p = new QFileInfo(drvGetStringHead(p1));
 		break;
 	}
 	case 34106: {
 		if(p1==0)return -2;
-		*(void**)_p = new QFileInfo(*(QDir*)(p1),drvGetString(p2));
+		*(void**)_p = new QFileInfo(*(QDir*)(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 34107: {
@@ -3390,12 +3390,12 @@ int drv_QFileInfo(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void
 		break;
 	}
 	case 34147: {
-		pThis->setFile(drvGetString(p1));
+		pThis->setFile(drvGetStringHead(p1));
 		break;
 	}
 	case 34148: {
 		if(p1==0)return -2;
-		pThis->setFile(*(QDir*)(p1),drvGetString(p2));
+		pThis->setFile(*(QDir*)(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 34149: {
@@ -3426,7 +3426,7 @@ int drv_QFileOpenEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	} 
 	case 35102: {
-		*(void**)_p = new QFileOpenEvent(drvGetString(p1));
+		*(void**)_p = new QFileOpenEvent(drvGetStringHead(p1));
 		break;
 	}
 	case 35103: {
@@ -3503,7 +3503,7 @@ int drv_QFont(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,vo
 		break;
 	}
 	case 37105: {
-		*(void**)_p = new QFont(drvGetString(p1),*(int*)p2,*(int*)p3,*(bool*)p4);
+		*(void**)_p = new QFont(drvGetStringHead(p1),*(int*)p2,*(int*)p3,*(bool*)p4);
 		break;
 	}
 	case 37106: {
@@ -3539,7 +3539,7 @@ int drv_QFont(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,vo
 		break;
 	}
 	case 37114: {
-		*(bool*)p2 = pThis->fromString(drvGetString(p1));
+		*(bool*)p2 = pThis->fromString(drvGetStringHead(p1));
 		break;
 	}
 	case 37115: {
@@ -3547,11 +3547,11 @@ int drv_QFont(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,vo
 		break;
 	}
 	case 37116: {
-		QFont::insertSubstitution(drvGetString(p1),drvGetString(p2));
+		QFont::insertSubstitution(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 37117: {
-		QFont::insertSubstitutions(drvGetString(p1),drvGetStringArray(p2));
+		QFont::insertSubstitutions(drvGetStringHead(p1),drvGetStringArray(p2));
 		break;
 	}
 	case 37118: {
@@ -3613,9 +3613,9 @@ int drv_QFont(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,vo
 	}
 	case 37132: {
 #ifdef QTDRV_QT5
-		QFont::removeSubstitutions(drvGetString(p1));
+		QFont::removeSubstitutions(drvGetStringHead(p1));
 #else
-		QFont::removeSubstitution(drvGetString(p1));
+		QFont::removeSubstitution(drvGetStringHead(p1));
 #endif		
 		break;
 	}
@@ -3641,7 +3641,7 @@ int drv_QFont(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,vo
 		break;
 	}
 	case 37138: {
-		pThis->setFamily(drvGetString(p1));
+		pThis->setFamily(drvGetStringHead(p1));
 		break;
 	}
 	case 37139: {
@@ -3681,7 +3681,7 @@ int drv_QFont(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,vo
 		break;
 	}
 	case 37148: {
-		pThis->setRawName(drvGetString(p1));
+		pThis->setRawName(drvGetStringHead(p1));
 		break;
 	}
 	case 37149: {
@@ -3741,11 +3741,11 @@ int drv_QFont(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,vo
 		break;
 	}
 	case 37163: {
-		drvSetString(p2,QFont::substitute(drvGetString(p1)));
+		drvSetString(p2,QFont::substitute(drvGetStringHead(p1)));
 		break;
 	}
 	case 37164: {
-		drvSetStringArray(p2,QFont::substitutes(drvGetString(p1)));
+		drvSetStringArray(p2,QFont::substitutes(drvGetStringHead(p1)));
 		break;
 	}
 	case 37165: {
@@ -3788,7 +3788,7 @@ int drv_QFontDatabase(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 38103: {
-		*(int*)p2 = QFontDatabase::addApplicationFont(drvGetString(p1));
+		*(int*)p2 = QFontDatabase::addApplicationFont(drvGetStringHead(p1));
 		break;
 	}
 	case 38104: {
@@ -3800,7 +3800,7 @@ int drv_QFontDatabase(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 38106: {
-		*(bool*)p3 = pThis->bold(drvGetString(p1),drvGetString(p2));
+		*(bool*)p3 = pThis->bold(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 38107: {
@@ -3812,51 +3812,51 @@ int drv_QFontDatabase(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 38109: {
-		*(void**)p4 = new QFont(pThis->font(drvGetString(p1),drvGetString(p2),*(int*)p3));
+		*(void**)p4 = new QFont(pThis->font(drvGetStringHead(p1),drvGetStringHead(p2),*(int*)p3));
 		break;
 	}
 	case 38110: {
-		*(bool*)p2 = pThis->isBitmapScalable(drvGetString(p1));
+		*(bool*)p2 = pThis->isBitmapScalable(drvGetStringHead(p1));
 		break;
 	}
 	case 38111: {
-		*(bool*)p3 = pThis->isBitmapScalable(drvGetString(p1),drvGetString(p2));
+		*(bool*)p3 = pThis->isBitmapScalable(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 38112: {
-		*(bool*)p2 = pThis->isFixedPitch(drvGetString(p1));
+		*(bool*)p2 = pThis->isFixedPitch(drvGetStringHead(p1));
 		break;
 	}
 	case 38113: {
-		*(bool*)p3 = pThis->isFixedPitch(drvGetString(p1),drvGetString(p2));
+		*(bool*)p3 = pThis->isFixedPitch(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 38114: {
-		*(bool*)p2 = pThis->isScalable(drvGetString(p1));
+		*(bool*)p2 = pThis->isScalable(drvGetStringHead(p1));
 		break;
 	}
 	case 38115: {
-		*(bool*)p3 = pThis->isScalable(drvGetString(p1),drvGetString(p2));
+		*(bool*)p3 = pThis->isScalable(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 38116: {
-		*(bool*)p2 = pThis->isSmoothlyScalable(drvGetString(p1));
+		*(bool*)p2 = pThis->isSmoothlyScalable(drvGetStringHead(p1));
 		break;
 	}
 	case 38117: {
-		*(bool*)p3 = pThis->isSmoothlyScalable(drvGetString(p1),drvGetString(p2));
+		*(bool*)p3 = pThis->isSmoothlyScalable(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 38118: {
-		*(bool*)p3 = pThis->italic(drvGetString(p1),drvGetString(p2));
+		*(bool*)p3 = pThis->italic(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 38119: {
-		drvSetList<int>(p2,pThis->pointSizes(drvGetString(p1)));
+		drvSetList<int>(p2,pThis->pointSizes(drvGetStringHead(p1)));
 		break;
 	}
 	case 38120: {
-		drvSetList<int>(p3,pThis->pointSizes(drvGetString(p1),drvGetString(p2)));
+		drvSetList<int>(p3,pThis->pointSizes(drvGetStringHead(p1),drvGetStringHead(p2)));
 		break;
 	}
 	case 38121: {
@@ -3868,7 +3868,7 @@ int drv_QFontDatabase(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 38123: {
-		drvSetList<int>(p3,pThis->smoothSizes(drvGetString(p1),drvGetString(p2)));
+		drvSetList<int>(p3,pThis->smoothSizes(drvGetStringHead(p1),drvGetStringHead(p2)));
 		break;
 	}
 	case 38124: {
@@ -3886,7 +3886,7 @@ int drv_QFontDatabase(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 38127: {
-		drvSetStringArray(p2,pThis->styles(drvGetString(p1)));
+		drvSetStringArray(p2,pThis->styles(drvGetStringHead(p1)));
 		break;
 	}
 	case 38128: {
@@ -3894,7 +3894,7 @@ int drv_QFontDatabase(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 38129: {
-		*(int*)p3 = pThis->weight(drvGetString(p1),drvGetString(p2));
+		*(int*)p3 = pThis->weight(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 38130: {
@@ -3910,7 +3910,7 @@ int drv_QFontDatabase(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 38133: {
-		drvSetList<QFontDatabase::WritingSystem>(p2,pThis->writingSystems(drvGetString(p1)));
+		drvSetList<QFontDatabase::WritingSystem>(p2,pThis->writingSystems(drvGetStringHead(p1)));
 		break;
 	}
 	default:
@@ -4041,20 +4041,20 @@ int drv_QFontMetrics(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 40108: {
-		*(void**)p2 = new QRect(pThis->boundingRect(drvGetString(p1)));
+		*(void**)p2 = new QRect(pThis->boundingRect(drvGetStringHead(p1)));
 		break;
 	}
 	case 40109: {
 		if(p1==0)return -2;
-		*(void**)p6 = new QRect(pThis->boundingRect(*(QRect*)(p1),*(int*)p2,drvGetString(p3),*(int*)p4,*(int**)p5));
+		*(void**)p6 = new QRect(pThis->boundingRect(*(QRect*)(p1),*(int*)p2,drvGetStringHead(p3),*(int*)p4,*(int**)p5));
 		break;
 	}
 	case 40110: {
-		*(void**)p9 = new QRect(pThis->boundingRect(*(int*)p1,*(int*)p2,*(int*)p3,*(int*)p4,*(int*)p5,drvGetString(p6),*(int*)p7,*(int**)p8));
+		*(void**)p9 = new QRect(pThis->boundingRect(*(int*)p1,*(int*)p2,*(int*)p3,*(int*)p4,*(int*)p5,drvGetStringHead(p6),*(int*)p7,*(int**)p8));
 		break;
 	}
 	case 40111: {
-		*(int*)p3 = pThis->charWidth(drvGetString(p1),*(int*)p2);
+		*(int*)p3 = pThis->charWidth(drvGetStringHead(p1),*(int*)p2);
 		break;
 	}
 	case 40112: {
@@ -4062,7 +4062,7 @@ int drv_QFontMetrics(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 40113: {
-		drvSetString(p5,pThis->elidedText(drvGetString(p1),*(Qt::TextElideMode*)p2,*(int*)p3,*(int*)p4));
+		drvSetString(p5,pThis->elidedText(drvGetStringHead(p1),*(Qt::TextElideMode*)p2,*(int*)p3,*(int*)p4));
 		break;
 	}
 	case 40114: {
@@ -4110,7 +4110,7 @@ int drv_QFontMetrics(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 40125: {
-		*(void**)p5 = new QSize(pThis->size(*(int*)p1,drvGetString(p2),*(int*)p3,*(int**)p4));
+		*(void**)p5 = new QSize(pThis->size(*(int*)p1,drvGetStringHead(p2),*(int*)p3,*(int**)p4));
 		break;
 	}
 	case 40126: {
@@ -4118,7 +4118,7 @@ int drv_QFontMetrics(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 40127: {
-		*(void**)p2 = new QRect(pThis->tightBoundingRect(drvGetString(p1)));
+		*(void**)p2 = new QRect(pThis->tightBoundingRect(drvGetStringHead(p1)));
 		break;
 	}
 	case 40128: {
@@ -4130,15 +4130,15 @@ int drv_QFontMetrics(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 40130: {
-		*(int*)p2 = pThis->width(drvGetString(p1));
+		*(int*)p2 = pThis->width(drvGetStringHead(p1));
 		break;
 	}
 	case 40131: {
-		*(int*)p3 = pThis->width(drvGetString(p1),*(int*)p2);
+		*(int*)p3 = pThis->width(drvGetStringHead(p1),*(int*)p2);
 		break;
 	}
 	case 40132: {
-		*(int*)p4 = pThis->width(drvGetString(p1),*(int*)p2,*(int*)p3);
+		*(int*)p4 = pThis->width(drvGetStringHead(p1),*(int*)p2,*(int*)p3);
 		break;
 	}
 	case 40133: {
@@ -4193,12 +4193,12 @@ int drv_QFontMetricsF(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 41109: {
-		*(void**)p2 = new QRectF(pThis->boundingRect(drvGetString(p1)));
+		*(void**)p2 = new QRectF(pThis->boundingRect(drvGetStringHead(p1)));
 		break;
 	}
 	case 41110: {
 		if(p1==0)return -2;
-		*(void**)p6 = new QRectF(pThis->boundingRect(*(QRectF*)(p1),*(int*)p2,drvGetString(p3),*(int*)p4,*(int**)p5));
+		*(void**)p6 = new QRectF(pThis->boundingRect(*(QRectF*)(p1),*(int*)p2,drvGetStringHead(p3),*(int*)p4,*(int**)p5));
 		break;
 	}
 	case 41111: {
@@ -4206,7 +4206,7 @@ int drv_QFontMetricsF(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 41112: {
-		drvSetString(p5,pThis->elidedText(drvGetString(p1),*(Qt::TextElideMode*)p2,*(double*)p3,*(int*)p4));
+		drvSetString(p5,pThis->elidedText(drvGetStringHead(p1),*(Qt::TextElideMode*)p2,*(double*)p3,*(int*)p4));
 		break;
 	}
 	case 41113: {
@@ -4254,7 +4254,7 @@ int drv_QFontMetricsF(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 41124: {
-		*(void**)p5 = new QSizeF(pThis->size(*(int*)p1,drvGetString(p2),*(int*)p3,*(int**)p4));
+		*(void**)p5 = new QSizeF(pThis->size(*(int*)p1,drvGetStringHead(p2),*(int*)p3,*(int**)p4));
 		break;
 	}
 	case 41125: {
@@ -4262,7 +4262,7 @@ int drv_QFontMetricsF(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 41126: {
-		*(void**)p2 = new QRectF(pThis->tightBoundingRect(drvGetString(p1)));
+		*(void**)p2 = new QRectF(pThis->tightBoundingRect(drvGetStringHead(p1)));
 		break;
 	}
 	case 41127: {
@@ -4274,7 +4274,7 @@ int drv_QFontMetricsF(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 41129: {
-		*(double*)p2 = pThis->width(drvGetString(p1));
+		*(double*)p2 = pThis->width(drvGetStringHead(p1));
 		break;
 	}
 	case 41130: {
@@ -4656,7 +4656,7 @@ int drv_QIcon(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	}
 	case 51105: {
-		*(void**)_p = new QIcon(drvGetString(p1));
+		*(void**)_p = new QIcon(drvGetStringHead(p1));
 		break;
 	}
 	case 51106: {
@@ -4670,11 +4670,11 @@ int drv_QIcon(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	}
 	case 51108: {
-		pThis->addFile(drvGetString(p1));
+		pThis->addFile(drvGetStringHead(p1));
 		break;
 	}
 	case 51109: {
-		pThis->addFile(drvGetString(p1),p2==0?QSize():*(QSize*)(p2),*(QIcon::Mode*)p3,*(QIcon::State*)p4);
+		pThis->addFile(drvGetStringHead(p1),p2==0?QSize():*(QSize*)(p2),*(QIcon::Mode*)p3,*(QIcon::State*)p4);
 		break;
 	}
 	case 51110: {
@@ -4704,15 +4704,15 @@ int drv_QIcon(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	}
 	case 51116: {
-		*(void**)p2 = new QIcon(QIcon::fromTheme(drvGetString(p1)));
+		*(void**)p2 = new QIcon(QIcon::fromTheme(drvGetStringHead(p1)));
 		break;
 	}
 	case 51117: {
-		*(void**)p3 = new QIcon(QIcon::fromTheme(drvGetString(p1),p2==0?QIcon():*(QIcon*)(p2)));
+		*(void**)p3 = new QIcon(QIcon::fromTheme(drvGetStringHead(p1),p2==0?QIcon():*(QIcon*)(p2)));
 		break;
 	}
 	case 51118: {
-		*(bool*)p2 = QIcon::hasThemeIcon(drvGetString(p1));
+		*(bool*)p2 = QIcon::hasThemeIcon(drvGetStringHead(p1));
 		break;
 	}
 	case 51119: {
@@ -4759,7 +4759,7 @@ int drv_QIcon(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	}
 	case 51129: {
-		QIcon::setThemeName(drvGetString(p1));
+		QIcon::setThemeName(drvGetStringHead(p1));
 		break;
 	}
 	case 51130: {
@@ -4827,7 +4827,7 @@ int drv_QImage(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 		break;
 	}
 	case 53106: {
-		*(void**)_p = new QImage(drvGetString(p1),drvGet_const_char(p2));
+		*(void**)_p = new QImage(drvGetStringHead(p1),drvGet_const_char(p2));
 		break;
 	}
 	case 53107: {
@@ -4999,7 +4999,7 @@ int drv_QImage(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 		break;
 	}
 	case 53149: {
-		*(bool*)p2 = pThis->load(drvGetString(p1));
+		*(bool*)p2 = pThis->load(drvGetStringHead(p1));
 		break;
 	}
 	case 53150: {
@@ -5007,7 +5007,7 @@ int drv_QImage(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 		break;
 	}
 	case 53151: {
-		*(bool*)p3 = pThis->load(drvGetString(p1),drvGet_const_char(p2));
+		*(bool*)p3 = pThis->load(drvGetStringHead(p1),drvGet_const_char(p2));
 		break;
 	}
 	case 53152: {
@@ -5069,7 +5069,7 @@ int drv_QImage(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 		break;
 	}
 	case 53166: {
-		*(bool*)p2 = pThis->save(drvGetString(p1));
+		*(bool*)p2 = pThis->save(drvGetStringHead(p1));
 		break;
 	}
 	case 53167: {
@@ -5077,7 +5077,7 @@ int drv_QImage(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 		break;
 	}
 	case 53168: {
-		*(bool*)p4 = pThis->save(drvGetString(p1),drvGet_const_char(p2),*(int*)p3);
+		*(bool*)p4 = pThis->save(drvGetStringHead(p1),drvGet_const_char(p2),*(int*)p3);
 		break;
 	}
 	case 53169: {
@@ -5149,7 +5149,7 @@ int drv_QImage(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 		break;
 	}
 	case 53185: {
-		pThis->setText(drvGetString(p1),drvGetString(p2));
+		pThis->setText(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 53186: {
@@ -5161,7 +5161,7 @@ int drv_QImage(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 		break;
 	}
 	case 53188: {
-		drvSetString(p2,pThis->text(drvGetString(p1)));
+		drvSetString(p2,pThis->text(drvGetStringHead(p1)));
 		break;
 	}
 	case 53189: {
@@ -5324,7 +5324,7 @@ int drv_QImageReader(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,v
 		break;
 	}
 	case 55104: {
-		*(void**)_p = new QImageReader(drvGetString(p1),drvGetByteArray(p2));
+		*(void**)_p = new QImageReader(drvGetStringHead(p1),drvGetByteArray(p2));
 		break;
 	}
 	case 55105: {
@@ -5388,7 +5388,7 @@ int drv_QImageReader(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,v
 		break;
 	}
 	case 55120: {
-		drvSetByteArray(p2,QImageReader::imageFormat(drvGetString(p1)));
+		drvSetByteArray(p2,QImageReader::imageFormat(drvGetStringHead(p1)));
 		break;
 	}
 	case 55121: {
@@ -5450,7 +5450,7 @@ int drv_QImageReader(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,v
 		break;
 	}
 	case 55135: {
-		pThis->setFileName(drvGetString(p1));
+		pThis->setFileName(drvGetStringHead(p1));
 		break;
 	}
 	case 55136: {
@@ -5488,7 +5488,7 @@ int drv_QImageReader(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,v
 		break;
 	}
 	case 55144: {
-		drvSetString(p2,pThis->text(drvGetString(p1)));
+		drvSetString(p2,pThis->text(drvGetStringHead(p1)));
 		break;
 	}
 	case 55145: {
@@ -5519,7 +5519,7 @@ int drv_QImageWriter(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,v
 		break;
 	}
 	case 56104: {
-		*(void**)_p = new QImageWriter(drvGetString(p1),drvGetByteArray(p2));
+		*(void**)_p = new QImageWriter(drvGetStringHead(p1),drvGetByteArray(p2));
 		break;
 	}
 	case 56105: {
@@ -5567,7 +5567,7 @@ int drv_QImageWriter(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,v
 		break;
 	}
 	case 56116: {
-		pThis->setDescription(drvGetString(p1));
+		pThis->setDescription(drvGetStringHead(p1));
 		break;
 	}
 	case 56117: {
@@ -5575,7 +5575,7 @@ int drv_QImageWriter(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,v
 		break;
 	}
 	case 56118: {
-		pThis->setFileName(drvGetString(p1));
+		pThis->setFileName(drvGetStringHead(p1));
 		break;
 	}
 	case 56119: {
@@ -5591,7 +5591,7 @@ int drv_QImageWriter(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,v
 		break;
 	}
 	case 56122: {
-		pThis->setText(drvGetString(p1),drvGetString(p2));
+		pThis->setText(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 56123: {
@@ -5659,7 +5659,7 @@ int drv_QInputMethodEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 		break;
 	}
 	case 58104: {
-		*(void**)_p = new QInputMethodEvent(drvGetString(p1),drvGetListPtr<QInputMethodEvent::Attribute>(p2));
+		*(void**)_p = new QInputMethodEvent(drvGetStringHead(p1),drvGetListPtr<QInputMethodEvent::Attribute>(p2));
 		break;
 	}
 	case 58105: {
@@ -5683,11 +5683,11 @@ int drv_QInputMethodEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 		break;
 	}
 	case 58110: {
-		pThis->setCommitString(drvGetString(p1));
+		pThis->setCommitString(drvGetStringHead(p1));
 		break;
 	}
 	case 58111: {
-		pThis->setCommitString(drvGetString(p1),*(int*)p2,*(int*)p3);
+		pThis->setCommitString(drvGetStringHead(p1),*(int*)p2,*(int*)p3);
 		break;
 	}
 	default:
@@ -5946,7 +5946,7 @@ int drv_QKeyEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	} 
 	case 64102: {
-		*(void**)_p = new QKeyEvent(*(QEvent::Type*)p1,*(int*)p2,*(QFlags<Qt::KeyboardModifier>*)p3,drvGetString(p4),*(bool*)p5,*(unsigned short*)p6);
+		*(void**)_p = new QKeyEvent(*(QEvent::Type*)p1,*(int*)p2,*(QFlags<Qt::KeyboardModifier>*)p3,drvGetStringHead(p4),*(bool*)p5,*(unsigned short*)p6);
 		break;
 	}
 	case 64103: {
@@ -6014,11 +6014,11 @@ int drv_QKeySequence(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 65105: {
-		*(void**)_p = new QKeySequence(drvGetString(p1));
+		*(void**)_p = new QKeySequence(drvGetStringHead(p1));
 		break;
 	}
 	case 65106: {
-		*(void**)_p = new QKeySequence(drvGetString(p1),*(QKeySequence::SequenceFormat*)p2);
+		*(void**)_p = new QKeySequence(drvGetStringHead(p1),*(QKeySequence::SequenceFormat*)p2);
 		break;
 	}
 	case 65107: {
@@ -6030,11 +6030,11 @@ int drv_QKeySequence(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 65109: {
-		*(void**)p2 = new QKeySequence(QKeySequence::fromString(drvGetString(p1)));
+		*(void**)p2 = new QKeySequence(QKeySequence::fromString(drvGetStringHead(p1)));
 		break;
 	}
 	case 65110: {
-		*(void**)p3 = new QKeySequence(QKeySequence::fromString(drvGetString(p1),*(QKeySequence::SequenceFormat*)p2));
+		*(void**)p3 = new QKeySequence(QKeySequence::fromString(drvGetStringHead(p1),*(QKeySequence::SequenceFormat*)p2));
 		break;
 	}
 	case 65111: {
@@ -6055,7 +6055,7 @@ int drv_QKeySequence(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 65115: {
-		*(void**)p2 = new QKeySequence(QKeySequence::mnemonic(drvGetString(p1)));
+		*(void**)p2 = new QKeySequence(QKeySequence::mnemonic(drvGetStringHead(p1)));
 		break;
 	}
 	case 65116: {
@@ -6532,12 +6532,12 @@ int drv_QListWidgetItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	}
 	case 71105: {
-		*(void**)_p = new QListWidgetItem(drvGetString(p1),(QListWidget*)(p2),*(int*)p3);
+		*(void**)_p = new QListWidgetItem(drvGetStringHead(p1),(QListWidget*)(p2),*(int*)p3);
 		break;
 	}
 	case 71106: {
 		if(p1==0)return -2;
-		*(void**)_p = new QListWidgetItem(*(QIcon*)(p1),drvGetString(p2),(QListWidget*)(p3),*(int*)p4);
+		*(void**)_p = new QListWidgetItem(*(QIcon*)(p1),drvGetStringHead(p2),(QListWidget*)(p3),*(int*)p4);
 		break;
 	}
 	case 71107: {
@@ -6640,11 +6640,11 @@ int drv_QListWidgetItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	}
 	case 71130: {
-		pThis->setStatusTip(drvGetString(p1));
+		pThis->setStatusTip(drvGetStringHead(p1));
 		break;
 	}
 	case 71131: {
-		pThis->setText(drvGetString(p1));
+		pThis->setText(drvGetStringHead(p1));
 		break;
 	}
 	case 71132: {
@@ -6657,11 +6657,11 @@ int drv_QListWidgetItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	}
 	case 71134: {
-		pThis->setToolTip(drvGetString(p1));
+		pThis->setToolTip(drvGetStringHead(p1));
 		break;
 	}
 	case 71135: {
-		pThis->setWhatsThis(drvGetString(p1));
+		pThis->setWhatsThis(drvGetStringHead(p1));
 		break;
 	}
 	case 71136: {
@@ -6721,7 +6721,7 @@ int drv_QLocale(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,
 		break;
 	}
 	case 72104: {
-		*(void**)_p = new QLocale(drvGetString(p1));
+		*(void**)_p = new QLocale(drvGetStringHead(p1));
 		break;
 	}
 	case 72105: {
@@ -6870,67 +6870,67 @@ int drv_QLocale(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,
 		break;
 	}
 	case 72141: {
-		*(void**)p2 = new QDate(pThis->toDate(drvGetString(p1)));
+		*(void**)p2 = new QDate(pThis->toDate(drvGetStringHead(p1)));
 		break;
 	}
 	case 72142: {
-		*(void**)p3 = new QDate(pThis->toDate(drvGetString(p1),*(QLocale::FormatType*)p2));
+		*(void**)p3 = new QDate(pThis->toDate(drvGetStringHead(p1),*(QLocale::FormatType*)p2));
 		break;
 	}
 	case 72143: {
-		*(void**)p3 = new QDate(pThis->toDate(drvGetString(p1),drvGetString(p2)));
+		*(void**)p3 = new QDate(pThis->toDate(drvGetStringHead(p1),drvGetStringHead(p2)));
 		break;
 	}
 	case 72144: {
-		*(void**)p2 = new QDateTime(pThis->toDateTime(drvGetString(p1)));
+		*(void**)p2 = new QDateTime(pThis->toDateTime(drvGetStringHead(p1)));
 		break;
 	}
 	case 72145: {
-		*(void**)p3 = new QDateTime(pThis->toDateTime(drvGetString(p1),*(QLocale::FormatType*)p2));
+		*(void**)p3 = new QDateTime(pThis->toDateTime(drvGetStringHead(p1),*(QLocale::FormatType*)p2));
 		break;
 	}
 	case 72146: {
-		*(void**)p3 = new QDateTime(pThis->toDateTime(drvGetString(p1),drvGetString(p2)));
+		*(void**)p3 = new QDateTime(pThis->toDateTime(drvGetStringHead(p1),drvGetStringHead(p2)));
 		break;
 	}
 	case 72147: {
-		*(double*)p2 = pThis->toDouble(drvGetString(p1));
+		*(double*)p2 = pThis->toDouble(drvGetStringHead(p1));
 		break;
 	}
 	case 72148: {
-		*(double*)p3 = pThis->toDouble(drvGetString(p1),*(bool**)p2);
+		*(double*)p3 = pThis->toDouble(drvGetStringHead(p1),*(bool**)p2);
 		break;
 	}
 	case 72149: {
-		*(float*)p2 = pThis->toFloat(drvGetString(p1));
+		*(float*)p2 = pThis->toFloat(drvGetStringHead(p1));
 		break;
 	}
 	case 72150: {
-		*(float*)p3 = pThis->toFloat(drvGetString(p1),*(bool**)p2);
+		*(float*)p3 = pThis->toFloat(drvGetStringHead(p1),*(bool**)p2);
 		break;
 	}
 	case 72151: {
-		*(int*)p2 = pThis->toInt(drvGetString(p1));
+		*(int*)p2 = pThis->toInt(drvGetStringHead(p1));
 		break;
 	}
 	case 72152: {
-		*(int*)p4 = pThis->toInt(drvGetString(p1),*(bool**)p2);
+		*(int*)p4 = pThis->toInt(drvGetStringHead(p1),*(bool**)p2);
 		break;
 	}
 	case 72153: {
-		*(qint64*)p2 = pThis->toLongLong(drvGetString(p1));
+		*(qint64*)p2 = pThis->toLongLong(drvGetStringHead(p1));
 		break;
 	}
 	case 72154: {
-		*(qint64*)p4 = pThis->toLongLong(drvGetString(p1),*(bool**)p2);
+		*(qint64*)p4 = pThis->toLongLong(drvGetStringHead(p1),*(bool**)p2);
 		break;
 	}
 	case 72155: {
-		*(short*)p2 = pThis->toShort(drvGetString(p1));
+		*(short*)p2 = pThis->toShort(drvGetStringHead(p1));
 		break;
 	}
 	case 72156: {
-		*(short*)p4 = pThis->toShort(drvGetString(p1),*(bool**)p2);
+		*(short*)p4 = pThis->toShort(drvGetStringHead(p1),*(bool**)p2);
 		break;
 	}
 	case 72157: {
@@ -6983,7 +6983,7 @@ int drv_QLocale(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,
 	}
 	case 72168: {
 		if(p1==0)return -2;
-		drvSetString(p3,pThis->toString(*(QDate*)(p1),drvGetString(p2)));
+		drvSetString(p3,pThis->toString(*(QDate*)(p1),drvGetStringHead(p2)));
 		break;
 	}
 	case 72169: {
@@ -6993,7 +6993,7 @@ int drv_QLocale(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,
 	}
 	case 72170: {
 		if(p1==0)return -2;
-		drvSetString(p3,pThis->toString(*(QDateTime*)(p1),drvGetString(p2)));
+		drvSetString(p3,pThis->toString(*(QDateTime*)(p1),drvGetStringHead(p2)));
 		break;
 	}
 	case 72171: {
@@ -7003,7 +7003,7 @@ int drv_QLocale(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,
 	}
 	case 72172: {
 		if(p1==0)return -2;
-		drvSetString(p3,pThis->toString(*(QTime*)(p1),drvGetString(p2)));
+		drvSetString(p3,pThis->toString(*(QTime*)(p1),drvGetStringHead(p2)));
 		break;
 	}
 	case 72173: {
@@ -7015,39 +7015,39 @@ int drv_QLocale(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,
 		break;
 	}
 	case 72175: {
-		*(void**)p2 = new QTime(pThis->toTime(drvGetString(p1)));
+		*(void**)p2 = new QTime(pThis->toTime(drvGetStringHead(p1)));
 		break;
 	}
 	case 72176: {
-		*(void**)p3 = new QTime(pThis->toTime(drvGetString(p1),*(QLocale::FormatType*)p2));
+		*(void**)p3 = new QTime(pThis->toTime(drvGetStringHead(p1),*(QLocale::FormatType*)p2));
 		break;
 	}
 	case 72177: {
-		*(void**)p3 = new QTime(pThis->toTime(drvGetString(p1),drvGetString(p2)));
+		*(void**)p3 = new QTime(pThis->toTime(drvGetStringHead(p1),drvGetStringHead(p2)));
 		break;
 	}
 	case 72178: {
-		*(unsigned int*)p2 = pThis->toUInt(drvGetString(p1));
+		*(unsigned int*)p2 = pThis->toUInt(drvGetStringHead(p1));
 		break;
 	}
 	case 72179: {
-		*(unsigned int*)p4 = pThis->toUInt(drvGetString(p1),*(bool**)p2);
+		*(unsigned int*)p4 = pThis->toUInt(drvGetStringHead(p1),*(bool**)p2);
 		break;
 	}
 	case 72180: {
-		*(qint64*)p2 = pThis->toULongLong(drvGetString(p1));
+		*(qint64*)p2 = pThis->toULongLong(drvGetStringHead(p1));
 		break;
 	}
 	case 72181: {
-		*(qint64*)p4 = pThis->toULongLong(drvGetString(p1),*(bool**)p2);
+		*(qint64*)p4 = pThis->toULongLong(drvGetStringHead(p1),*(bool**)p2);
 		break;
 	}
 	case 72182: {
-		*(unsigned short*)p2 = pThis->toUShort(drvGetString(p1));
+		*(unsigned short*)p2 = pThis->toUShort(drvGetStringHead(p1));
 		break;
 	}
 	case 72183: {
-		*(unsigned short*)p4 = pThis->toUShort(drvGetString(p1),*(bool**)p2);
+		*(unsigned short*)p4 = pThis->toUShort(drvGetStringHead(p1),*(bool**)p2);
 		break;
 	}
 	case 72184: {
@@ -8240,21 +8240,21 @@ int drv_QPainter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 	}
 	case 86108: {
 		if(p1==0)return -2;
-		*(void**)p4 = new QRect(pThis->boundingRect(*(QRect*)(p1),*(int*)p2,drvGetString(p3)));
+		*(void**)p4 = new QRect(pThis->boundingRect(*(QRect*)(p1),*(int*)p2,drvGetStringHead(p3)));
 		break;
 	}
 	case 86109: {
 		if(p1==0)return -2;
-		*(void**)p4 = new QRectF(pThis->boundingRect(*(QRectF*)(p1),drvGetString(p2),p3==0?QTextOption():*(QTextOption*)(p3)));
+		*(void**)p4 = new QRectF(pThis->boundingRect(*(QRectF*)(p1),drvGetStringHead(p2),p3==0?QTextOption():*(QTextOption*)(p3)));
 		break;
 	}
 	case 86110: {
 		if(p1==0)return -2;
-		*(void**)p4 = new QRectF(pThis->boundingRect(*(QRectF*)(p1),*(int*)p2,drvGetString(p3)));
+		*(void**)p4 = new QRectF(pThis->boundingRect(*(QRectF*)(p1),*(int*)p2,drvGetStringHead(p3)));
 		break;
 	}
 	case 86111: {
-		*(void**)p7 = new QRect(pThis->boundingRect(*(int*)p1,*(int*)p2,*(int*)p3,*(int*)p4,*(int*)p5,drvGetString(p6)));
+		*(void**)p7 = new QRect(pThis->boundingRect(*(int*)p1,*(int*)p2,*(int*)p3,*(int*)p4,*(int*)p5,drvGetStringHead(p6)));
 		break;
 	}
 	case 86112: {
@@ -8754,40 +8754,40 @@ int drv_QPainter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 	}
 	case 86213: {
 		if(p1==0)return -2;
-		pThis->drawText(*(QPoint*)(p1),drvGetString(p2));
+		pThis->drawText(*(QPoint*)(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 86214: {
 		if(p1==0)return -2;
-		pThis->drawText(*(QPointF*)(p1),drvGetString(p2));
+		pThis->drawText(*(QPointF*)(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 86215: {
 		if(p1==0)return -2;
-		pThis->drawText(*(QRectF*)(p1),drvGetString(p2),p3==0?QTextOption():*(QTextOption*)(p3));
+		pThis->drawText(*(QRectF*)(p1),drvGetStringHead(p2),p3==0?QTextOption():*(QTextOption*)(p3));
 		break;
 	}
 	case 86216: {
-		pThis->drawText(*(int*)p1,*(int*)p2,drvGetString(p3));
+		pThis->drawText(*(int*)p1,*(int*)p2,drvGetStringHead(p3));
 		break;
 	}
 	case 86217: {
 		if(p1==0)return -2;
-		pThis->drawText(*(QPointF*)(p1),drvGetString(p2),*(int*)p3,*(int*)p4);
+		pThis->drawText(*(QPointF*)(p1),drvGetStringHead(p2),*(int*)p3,*(int*)p4);
 		break;
 	}
 	case 86218: {
 		if(p1==0)return -2;
-		pThis->drawText(*(QRect*)(p1),*(int*)p2,drvGetString(p3),(QRect*)(p4));
+		pThis->drawText(*(QRect*)(p1),*(int*)p2,drvGetStringHead(p3),(QRect*)(p4));
 		break;
 	}
 	case 86219: {
 		if(p1==0)return -2;
-		pThis->drawText(*(QRectF*)(p1),*(int*)p2,drvGetString(p3),(QRectF*)(p4));
+		pThis->drawText(*(QRectF*)(p1),*(int*)p2,drvGetStringHead(p3),(QRectF*)(p4));
 		break;
 	}
 	case 86220: {
-		pThis->drawText(*(int*)p1,*(int*)p2,*(int*)p3,*(int*)p4,*(int*)p5,drvGetString(p6),(QRect*)(p7));
+		pThis->drawText(*(int*)p1,*(int*)p2,*(int*)p3,*(int*)p4,*(int*)p5,drvGetStringHead(p6),(QRect*)(p7));
 		break;
 	}
 	case 86221: {
@@ -9381,12 +9381,12 @@ int drv_QPainterPath(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 	case 88119: {
 		if(p1==0)return -2;
 	if(p2==0)return -2;
-		pThis->addText(*(QPointF*)(p1),*(QFont*)(p2),drvGetString(p3));
+		pThis->addText(*(QPointF*)(p1),*(QFont*)(p2),drvGetStringHead(p3));
 		break;
 	}
 	case 88120: {
 		if(p3==0)return -2;
-		pThis->addText(*(double*)p1,*(double*)p2,*(QFont*)(p3),drvGetString(p4));
+		pThis->addText(*(double*)p1,*(double*)p2,*(QFont*)(p3),drvGetStringHead(p4));
 		break;
 	}
 	case 88121: {
@@ -10248,7 +10248,7 @@ int drv_QPicture(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 94114: {
-		*(bool*)p2 = pThis->load(drvGetString(p1));
+		*(bool*)p2 = pThis->load(drvGetStringHead(p1));
 		break;
 	}
 	case 94115: {
@@ -10256,7 +10256,7 @@ int drv_QPicture(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 94116: {
-		*(bool*)p3 = pThis->load(drvGetString(p1),drvGet_const_char(p2));
+		*(bool*)p3 = pThis->load(drvGetStringHead(p1),drvGet_const_char(p2));
 		break;
 	}
 	case 94117: {
@@ -10272,7 +10272,7 @@ int drv_QPicture(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 94120: {
-		drvSetString(p2,QPicture::pictureFormat(drvGetString(p1)));
+		drvSetString(p2,QPicture::pictureFormat(drvGetStringHead(p1)));
 		break;
 	}
 	case 94121: {
@@ -10284,7 +10284,7 @@ int drv_QPicture(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 94123: {
-		*(bool*)p2 = pThis->save(drvGetString(p1));
+		*(bool*)p2 = pThis->save(drvGetStringHead(p1));
 		break;
 	}
 	case 94124: {
@@ -10292,7 +10292,7 @@ int drv_QPicture(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 94125: {
-		*(bool*)p3 = pThis->save(drvGetString(p1),drvGet_const_char(p2));
+		*(bool*)p3 = pThis->save(drvGetStringHead(p1),drvGet_const_char(p2));
 		break;
 	}
 	case 94126: {
@@ -10332,7 +10332,7 @@ int drv_QPictureIO(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,voi
 		break;
 	}
 	case 95104: {
-		*(void**)_p = new QPictureIO(drvGetString(p1),drvGet_const_char(p2));
+		*(void**)_p = new QPictureIO(drvGetStringHead(p1),drvGet_const_char(p2));
 		break;
 	}
 	case 95105: {
@@ -10376,7 +10376,7 @@ int drv_QPictureIO(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,voi
 		break;
 	}
 	case 95115: {
-		drvSetByteArray(p2,QPictureIO::pictureFormat(drvGetString(p1)));
+		drvSetByteArray(p2,QPictureIO::pictureFormat(drvGetStringHead(p1)));
 		break;
 	}
 	case 95116: {
@@ -10388,11 +10388,11 @@ int drv_QPictureIO(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,voi
 		break;
 	}
 	case 95118: {
-		pThis->setDescription(drvGetString(p1));
+		pThis->setDescription(drvGetStringHead(p1));
 		break;
 	}
 	case 95119: {
-		pThis->setFileName(drvGetString(p1));
+		pThis->setFileName(drvGetStringHead(p1));
 		break;
 	}
 	case 95120: {
@@ -10470,7 +10470,7 @@ int drv_QPixmap(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 96107: {
-		*(void**)_p = new QPixmap(drvGetString(p1),drvGet_const_char(p2),*(QFlags<Qt::ImageConversionFlag>*)p3);
+		*(void**)_p = new QPixmap(drvGetStringHead(p1),drvGet_const_char(p2),*(QFlags<Qt::ImageConversionFlag>*)p3);
 		break;
 	}
 	case 96108: {
@@ -10602,11 +10602,11 @@ int drv_QPixmap(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 96138: {
-		*(bool*)p2 = pThis->load(drvGetString(p1));
+		*(bool*)p2 = pThis->load(drvGetStringHead(p1));
 		break;
 	}
 	case 96139: {
-		*(bool*)p4 = pThis->load(drvGetString(p1),drvGet_const_char(p2),*(QFlags<Qt::ImageConversionFlag>*)p3);
+		*(bool*)p4 = pThis->load(drvGetStringHead(p1),drvGet_const_char(p2),*(QFlags<Qt::ImageConversionFlag>*)p3);
 		break;
 	}
 	case 96140: {
@@ -10638,7 +10638,7 @@ int drv_QPixmap(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 96147: {
-		*(bool*)p2 = pThis->save(drvGetString(p1));
+		*(bool*)p2 = pThis->save(drvGetStringHead(p1));
 		break;
 	}
 	case 96148: {
@@ -10646,7 +10646,7 @@ int drv_QPixmap(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 96149: {
-		*(bool*)p4 = pThis->save(drvGetString(p1),drvGet_const_char(p2),*(int*)p3);
+		*(bool*)p4 = pThis->save(drvGetStringHead(p1),drvGet_const_char(p2),*(int*)p3);
 		break;
 	}
 	case 96150: {
@@ -10763,7 +10763,7 @@ int drv_QPixmapCache(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void
 		break;
 	}
 	case 97105: {
-		*(void**)p2 = QPixmapCache::find(drvGetString(p1));
+		*(void**)p2 = QPixmapCache::find(drvGetStringHead(p1));
 		break;
 	}
 	case 97106: {
@@ -10773,7 +10773,7 @@ int drv_QPixmapCache(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void
 	}
 	case 97107: {
 		if(p2==0)return -2;
-		*(bool*)p3 = QPixmapCache::find(drvGetString(p1),*(QPixmap*)(p2));
+		*(bool*)p3 = QPixmapCache::find(drvGetStringHead(p1),*(QPixmap*)(p2));
 		break;
 	}
 	case 97108: {
@@ -10783,7 +10783,7 @@ int drv_QPixmapCache(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void
 	}
 	case 97109: {
 		if(p2==0)return -2;
-		*(bool*)p3 = QPixmapCache::insert(drvGetString(p1),*(QPixmap*)(p2));
+		*(bool*)p3 = QPixmapCache::insert(drvGetStringHead(p1),*(QPixmap*)(p2));
 		break;
 	}
 	case 97110: {
@@ -10792,7 +10792,7 @@ int drv_QPixmapCache(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void
 		break;
 	}
 	case 97111: {
-		QPixmapCache::remove(drvGetString(p1));
+		QPixmapCache::remove(drvGetStringHead(p1));
 		break;
 	}
 	case 97112: {
@@ -11365,11 +11365,11 @@ int drv_QPrinter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 104144: {
-		pThis->setCreator(drvGetString(p1));
+		pThis->setCreator(drvGetStringHead(p1));
 		break;
 	}
 	case 104145: {
-		pThis->setDocName(drvGetString(p1));
+		pThis->setDocName(drvGetStringHead(p1));
 		break;
 	}
 	case 104146: {
@@ -11401,7 +11401,7 @@ int drv_QPrinter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 104153: {
-		pThis->setOutputFileName(drvGetString(p1));
+		pThis->setOutputFileName(drvGetStringHead(p1));
 		break;
 	}
 	case 104154: {
@@ -11434,7 +11434,7 @@ int drv_QPrinter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 104161: {
-		pThis->setPrintProgram(drvGetString(p1));
+		pThis->setPrintProgram(drvGetStringHead(p1));
 		break;
 	}
 	case 104162: {
@@ -11442,7 +11442,7 @@ int drv_QPrinter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 104163: {
-		pThis->setPrinterName(drvGetString(p1));
+		pThis->setPrinterName(drvGetStringHead(p1));
 		break;
 	}
 	case 104164: {
@@ -11543,11 +11543,11 @@ int drv_QProcessEnvironment(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 		break;
 	}
 	case 106105: {
-		*(bool*)p2 = pThis->contains(drvGetString(p1));
+		*(bool*)p2 = pThis->contains(drvGetStringHead(p1));
 		break;
 	}
 	case 106106: {
-		pThis->insert(drvGetString(p1),drvGetString(p2));
+		pThis->insert(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 106107: {
@@ -11555,7 +11555,7 @@ int drv_QProcessEnvironment(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 		break;
 	}
 	case 106108: {
-		pThis->remove(drvGetString(p1));
+		pThis->remove(drvGetStringHead(p1));
 		break;
 	}
 	case 106109: {
@@ -11567,11 +11567,11 @@ int drv_QProcessEnvironment(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 		break;
 	}
 	case 106111: {
-		drvSetString(p2,pThis->value(drvGetString(p1)));
+		drvSetString(p2,pThis->value(drvGetStringHead(p1)));
 		break;
 	}
 	case 106112: {
-		drvSetString(p3,pThis->value(drvGetString(p1),drvGetString(p2)));
+		drvSetString(p3,pThis->value(drvGetStringHead(p1),drvGetStringHead(p2)));
 		break;
 	}
 	default:
@@ -12437,7 +12437,7 @@ int drv_QRegExp(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,
 		break;
 	}
 	case 112104: {
-		*(void**)_p = new QRegExp(drvGetString(p1),*(Qt::CaseSensitivity*)p2,*(QRegExp::PatternSyntax*)p3);
+		*(void**)_p = new QRegExp(drvGetStringHead(p1),*(Qt::CaseSensitivity*)p2,*(QRegExp::PatternSyntax*)p3);
 		break;
 	}
 	case 112105: {
@@ -12465,19 +12465,19 @@ int drv_QRegExp(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,
 		break;
 	}
 	case 112111: {
-		drvSetString(p2,QRegExp::escape(drvGetString(p1)));
+		drvSetString(p2,QRegExp::escape(drvGetStringHead(p1)));
 		break;
 	}
 	case 112112: {
-		*(bool*)p2 = pThis->exactMatch(drvGetString(p1));
+		*(bool*)p2 = pThis->exactMatch(drvGetStringHead(p1));
 		break;
 	}
 	case 112113: {
-		*(int*)p2 = pThis->indexIn(drvGetString(p1));
+		*(int*)p2 = pThis->indexIn(drvGetStringHead(p1));
 		break;
 	}
 	case 112114: {
-		*(int*)p4 = pThis->indexIn(drvGetString(p1),*(int*)p2,*(QRegExp::CaretMode*)p3);
+		*(int*)p4 = pThis->indexIn(drvGetStringHead(p1),*(int*)p2,*(QRegExp::CaretMode*)p3);
 		break;
 	}
 	case 112115: {
@@ -12493,11 +12493,11 @@ int drv_QRegExp(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,
 		break;
 	}
 	case 112118: {
-		*(int*)p2 = pThis->lastIndexIn(drvGetString(p1));
+		*(int*)p2 = pThis->lastIndexIn(drvGetStringHead(p1));
 		break;
 	}
 	case 112119: {
-		*(int*)p4 = pThis->lastIndexIn(drvGetString(p1),*(int*)p2,*(QRegExp::CaretMode*)p3);
+		*(int*)p4 = pThis->lastIndexIn(drvGetStringHead(p1),*(int*)p2,*(QRegExp::CaretMode*)p3);
 		break;
 	}
 	case 112120: {
@@ -12529,7 +12529,7 @@ int drv_QRegExp(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,
 		break;
 	}
 	case 112127: {
-		pThis->setPattern(drvGetString(p1));
+		pThis->setPattern(drvGetStringHead(p1));
 		break;
 	}
 	case 112128: {
@@ -12736,7 +12736,7 @@ int drv_QResource(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,v
 		break;
 	}
 	case 116103: {
-		*(void**)_p = new QResource(drvGetString(p1),p2==0?QLocale():*(QLocale*)(p2));
+		*(void**)_p = new QResource(drvGetStringHead(p1),p2==0?QLocale():*(QLocale*)(p2));
 		break;
 	}
 	case 116104: {
@@ -12744,7 +12744,7 @@ int drv_QResource(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,v
 		break;
 	}
 	case 116105: {
-		QResource::addSearchPath(drvGetString(p1));
+		QResource::addSearchPath(drvGetStringHead(p1));
 		break;
 	}
 	case 116106: {
@@ -12768,7 +12768,7 @@ int drv_QResource(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,v
 		break;
 	}
 	case 116111: {
-		*(bool*)p2 = QResource::registerResource(drvGetString(p1));
+		*(bool*)p2 = QResource::registerResource(drvGetStringHead(p1));
 		break;
 	}
 	case 116112: {
@@ -12776,11 +12776,11 @@ int drv_QResource(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,v
 		break;
 	}
 	case 116113: {
-		*(bool*)p3 = QResource::registerResource(drvGetString(p1),drvGetString(p2));
+		*(bool*)p3 = QResource::registerResource(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 116114: {
-		*(bool*)p3 = QResource::registerResource(*(unsigned char const**)p1,drvGetString(p2));
+		*(bool*)p3 = QResource::registerResource(*(unsigned char const**)p1,drvGetStringHead(p2));
 		break;
 	}
 	case 116115: {
@@ -12788,7 +12788,7 @@ int drv_QResource(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,v
 		break;
 	}
 	case 116116: {
-		pThis->setFileName(drvGetString(p1));
+		pThis->setFileName(drvGetStringHead(p1));
 		break;
 	}
 	case 116117: {
@@ -12801,7 +12801,7 @@ int drv_QResource(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,v
 		break;
 	}
 	case 116119: {
-		*(bool*)p2 = QResource::unregisterResource(drvGetString(p1));
+		*(bool*)p2 = QResource::unregisterResource(drvGetStringHead(p1));
 		break;
 	}
 	case 116120: {
@@ -12809,11 +12809,11 @@ int drv_QResource(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,v
 		break;
 	}
 	case 116121: {
-		*(bool*)p3 = QResource::unregisterResource(drvGetString(p1),drvGetString(p2));
+		*(bool*)p3 = QResource::unregisterResource(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 116122: {
-		*(bool*)p3 = QResource::unregisterResource(*(unsigned char const**)p1,drvGetString(p2));
+		*(bool*)p3 = QResource::unregisterResource(*(unsigned char const**)p1,drvGetStringHead(p2));
 		break;
 	}
 	default:
@@ -13214,12 +13214,12 @@ int drv_QStandardItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*,voi
 		break;
 	}
 	case 123103: {
-		*(void**)_p = new QStandardItem(drvGetString(p1));
+		*(void**)_p = new QStandardItem(drvGetStringHead(p1));
 		break;
 	}
 	case 123104: {
 		if(p1==0)return -2;
-		*(void**)_p = new QStandardItem(*(QIcon*)(p1),drvGetString(p2));
+		*(void**)_p = new QStandardItem(*(QIcon*)(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 123105: {
@@ -13395,11 +13395,11 @@ int drv_QStandardItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*,voi
 		break;
 	}
 	case 123148: {
-		pThis->setAccessibleDescription(drvGetString(p1));
+		pThis->setAccessibleDescription(drvGetStringHead(p1));
 		break;
 	}
 	case 123149: {
-		pThis->setAccessibleText(drvGetString(p1));
+		pThis->setAccessibleText(drvGetStringHead(p1));
 		break;
 	}
 	case 123150: {
@@ -13486,11 +13486,11 @@ int drv_QStandardItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*,voi
 		break;
 	}
 	case 123169: {
-		pThis->setStatusTip(drvGetString(p1));
+		pThis->setStatusTip(drvGetStringHead(p1));
 		break;
 	}
 	case 123170: {
-		pThis->setText(drvGetString(p1));
+		pThis->setText(drvGetStringHead(p1));
 		break;
 	}
 	case 123171: {
@@ -13498,7 +13498,7 @@ int drv_QStandardItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*,voi
 		break;
 	}
 	case 123172: {
-		pThis->setToolTip(drvGetString(p1));
+		pThis->setToolTip(drvGetStringHead(p1));
 		break;
 	}
 	case 123173: {
@@ -13506,7 +13506,7 @@ int drv_QStandardItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*,voi
 		break;
 	}
 	case 123174: {
-		pThis->setWhatsThis(drvGetString(p1));
+		pThis->setWhatsThis(drvGetStringHead(p1));
 		break;
 	}
 	case 123175: {
@@ -13644,7 +13644,7 @@ int drv_QStaticText(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,vo
 		break;
 	}
 	case 126104: {
-		*(void**)_p = new QStaticText(drvGetString(p1));
+		*(void**)_p = new QStaticText(drvGetStringHead(p1));
 		break;
 	}
 	case 126105: {
@@ -13664,7 +13664,7 @@ int drv_QStaticText(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,vo
 		break;
 	}
 	case 126109: {
-		pThis->setText(drvGetString(p1));
+		pThis->setText(drvGetStringHead(p1));
 		break;
 	}
 	case 126110: {
@@ -13716,7 +13716,7 @@ int drv_QStatusTipEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	} 
 	case 127102: {
-		*(void**)_p = new QStatusTipEvent(drvGetString(p1));
+		*(void**)_p = new QStatusTipEvent(drvGetStringHead(p1));
 		break;
 	}
 	case 127103: {
@@ -13748,7 +13748,7 @@ int drv_QStringMatcher(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	}
 	case 128104: {
-		*(void**)_p = new QStringMatcher(drvGetString(p1),*(Qt::CaseSensitivity*)p2);
+		*(void**)_p = new QStringMatcher(drvGetStringHead(p1),*(Qt::CaseSensitivity*)p2);
 		break;
 	}
 	case 128105: {
@@ -13760,11 +13760,11 @@ int drv_QStringMatcher(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	}
 	case 128107: {
-		*(int*)p2 = pThis->indexIn(drvGetString(p1));
+		*(int*)p2 = pThis->indexIn(drvGetStringHead(p1));
 		break;
 	}
 	case 128108: {
-		*(int*)p3 = pThis->indexIn(drvGetString(p1),*(int*)p2);
+		*(int*)p3 = pThis->indexIn(drvGetStringHead(p1),*(int*)p2);
 		break;
 	}
 	case 128109: {
@@ -13780,7 +13780,7 @@ int drv_QStringMatcher(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	}
 	case 128112: {
-		pThis->setPattern(drvGetString(p1));
+		pThis->setPattern(drvGetStringHead(p1));
 		break;
 	}
 	default:
@@ -13803,7 +13803,7 @@ int drv_QStyleFactory(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,
 		break;
 	}
 	case 129103: {
-		*(void**)p2 = QStyleFactory::create(drvGetString(p1));
+		*(void**)p2 = QStyleFactory::create(drvGetStringHead(p1));
 		break;
 	}
 	case 129104: {
@@ -13915,7 +13915,7 @@ int drv_QStylePainter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 	case 133108: {
 		if(p1==0)return -2;
 	if(p3==0)return -2;
-		pThis->drawItemText(*(QRect*)(p1),*(int*)p2,*(QPalette*)(p3),*(bool*)p4,drvGetString(p5),*(QPalette::ColorRole*)p6);
+		pThis->drawItemText(*(QRect*)(p1),*(int*)p2,*(QPalette*)(p3),*(bool*)p4,drvGetStringHead(p5),*(QPalette::ColorRole*)p6);
 		break;
 	}
 	case 133109: {
@@ -13951,12 +13951,12 @@ int drv_QTableWidgetItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*,
 		break;
 	}
 	case 134105: {
-		*(void**)_p = new QTableWidgetItem(drvGetString(p1),*(int*)p2);
+		*(void**)_p = new QTableWidgetItem(drvGetStringHead(p1),*(int*)p2);
 		break;
 	}
 	case 134106: {
 		if(p1==0)return -2;
-		*(void**)_p = new QTableWidgetItem(*(QIcon*)(p1),drvGetString(p2),*(int*)p3);
+		*(void**)_p = new QTableWidgetItem(*(QIcon*)(p1),drvGetStringHead(p2),*(int*)p3);
 		break;
 	}
 	case 134107: {
@@ -14055,11 +14055,11 @@ int drv_QTableWidgetItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*,
 		break;
 	}
 	case 134129: {
-		pThis->setStatusTip(drvGetString(p1));
+		pThis->setStatusTip(drvGetStringHead(p1));
 		break;
 	}
 	case 134130: {
-		pThis->setText(drvGetString(p1));
+		pThis->setText(drvGetStringHead(p1));
 		break;
 	}
 	case 134131: {
@@ -14072,11 +14072,11 @@ int drv_QTableWidgetItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*,
 		break;
 	}
 	case 134133: {
-		pThis->setToolTip(drvGetString(p1));
+		pThis->setToolTip(drvGetStringHead(p1));
 		break;
 	}
 	case 134134: {
-		pThis->setWhatsThis(drvGetString(p1));
+		pThis->setWhatsThis(drvGetStringHead(p1));
 		break;
 	}
 	case 134135: {
@@ -14577,7 +14577,7 @@ int drv_QTextBoundaryFinder(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 		break;
 	}
 	case 141104: {
-		*(void**)_p = new QTextBoundaryFinder(*(QTextBoundaryFinder::BoundaryType*)p1,drvGetString(p2));
+		*(void**)_p = new QTextBoundaryFinder(*(QTextBoundaryFinder::BoundaryType*)p1,drvGetStringHead(p2));
 		break;
 	}
 	case 141105: {
@@ -14732,11 +14732,11 @@ int drv_QTextCharFormat(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	}
 	case 142124: {
-		pThis->setAnchorHref(drvGetString(p1));
+		pThis->setAnchorHref(drvGetStringHead(p1));
 		break;
 	}
 	case 142125: {
-		pThis->setAnchorName(drvGetString(p1));
+		pThis->setAnchorName(drvGetStringHead(p1));
 		break;
 	}
 	case 142126: {
@@ -14753,7 +14753,7 @@ int drv_QTextCharFormat(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	}
 	case 142129: {
-		pThis->setFontFamily(drvGetString(p1));
+		pThis->setFontFamily(drvGetStringHead(p1));
 		break;
 	}
 	case 142130: {
@@ -14822,7 +14822,7 @@ int drv_QTextCharFormat(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	}
 	case 142146: {
-		pThis->setToolTip(drvGetString(p1));
+		pThis->setToolTip(drvGetStringHead(p1));
 		break;
 	}
 	case 142147: {
@@ -14894,7 +14894,7 @@ int drv_QTextCodec(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	}
 	case 143106: {
-		*(bool*)p2 = pThis->canEncode(drvGetString(p1));
+		*(bool*)p2 = pThis->canEncode(drvGetStringHead(p1));
 		break;
 	}
 	case 143107: {
@@ -14930,7 +14930,7 @@ int drv_QTextCodec(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	}
 	case 143115: {
-		drvSetByteArray(p2,pThis->fromUnicode(drvGetString(p1)));
+		drvSetByteArray(p2,pThis->fromUnicode(drvGetStringHead(p1)));
 		break;
 	}
 	case 143116: {
@@ -15156,7 +15156,7 @@ int drv_QTextCursor(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 145136: {
-		pThis->insertHtml(drvGetString(p1));
+		pThis->insertHtml(drvGetStringHead(p1));
 		break;
 	}
 	case 145137: {
@@ -15165,7 +15165,7 @@ int drv_QTextCursor(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 145138: {
-		pThis->insertImage(drvGetString(p1));
+		pThis->insertImage(drvGetStringHead(p1));
 		break;
 	}
 	case 145139: {
@@ -15175,7 +15175,7 @@ int drv_QTextCursor(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 	}
 	case 145140: {
 		if(p1==0)return -2;
-		pThis->insertImage(*(QImage*)(p1),drvGetString(p2));
+		pThis->insertImage(*(QImage*)(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 145141: {
@@ -15202,12 +15202,12 @@ int drv_QTextCursor(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 145146: {
-		pThis->insertText(drvGetString(p1));
+		pThis->insertText(drvGetStringHead(p1));
 		break;
 	}
 	case 145147: {
 		if(p2==0)return -2;
-		pThis->insertText(drvGetString(p1),*(QTextCharFormat*)(p2));
+		pThis->insertText(drvGetStringHead(p1),*(QTextCharFormat*)(p2));
 		break;
 	}
 	case 145148: {
@@ -15394,15 +15394,15 @@ int drv_QTextDocumentFragment(void *_p, int funcid, void* p1,void* p2,void* p3,v
 		break;
 	}
 	case 147106: {
-		*(void**)p2 = new QTextDocumentFragment(QTextDocumentFragment::fromHtml(drvGetString(p1)));
+		*(void**)p2 = new QTextDocumentFragment(QTextDocumentFragment::fromHtml(drvGetStringHead(p1)));
 		break;
 	}
 	case 147107: {
-		*(void**)p3 = new QTextDocumentFragment(QTextDocumentFragment::fromHtml(drvGetString(p1),(QTextDocument*)(p2)));
+		*(void**)p3 = new QTextDocumentFragment(QTextDocumentFragment::fromHtml(drvGetStringHead(p1),(QTextDocument*)(p2)));
 		break;
 	}
 	case 147108: {
-		*(void**)p2 = new QTextDocumentFragment(QTextDocumentFragment::fromPlainText(drvGetString(p1)));
+		*(void**)p2 = new QTextDocumentFragment(QTextDocumentFragment::fromPlainText(drvGetStringHead(p1)));
 		break;
 	}
 	case 147109: {
@@ -15445,7 +15445,7 @@ int drv_QTextDocumentWriter(void *_p, int funcid, void* p1,void* p2,void*,void*,
 		break;
 	}
 	case 148104: {
-		*(void**)_p = new QTextDocumentWriter(drvGetString(p1),drvGetByteArray(p2));
+		*(void**)_p = new QTextDocumentWriter(drvGetStringHead(p1),drvGetByteArray(p2));
 		break;
 	}
 	case 148105: {
@@ -15473,7 +15473,7 @@ int drv_QTextDocumentWriter(void *_p, int funcid, void* p1,void* p2,void*,void*,
 		break;
 	}
 	case 148111: {
-		pThis->setFileName(drvGetString(p1));
+		pThis->setFileName(drvGetStringHead(p1));
 		break;
 	}
 	case 148112: {
@@ -15532,7 +15532,7 @@ int drv_QTextEncoder(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void
 		break;
 	}
 	case 150104: {
-		drvSetByteArray(p2,pThis->fromUnicode(drvGetString(p1)));
+		drvSetByteArray(p2,pThis->fromUnicode(drvGetStringHead(p1)));
 		break;
 	}
 	case 150105: {
@@ -16021,7 +16021,7 @@ int drv_QTextImageFormat(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 		break;
 	}
 	case 155107: {
-		pThis->setName(drvGetString(p1));
+		pThis->setName(drvGetStringHead(p1));
 		break;
 	}
 	case 155108: {
@@ -16166,7 +16166,7 @@ int drv_QTextLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 158103: {
-		*(void**)_p = new QTextLayout(drvGetString(p1));
+		*(void**)_p = new QTextLayout(drvGetStringHead(p1));
 		break;
 	}
 	case 158104: {
@@ -16176,7 +16176,7 @@ int drv_QTextLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 	}
 	case 158105: {
 		if(p2==0)return -2;
-		*(void**)_p = new QTextLayout(drvGetString(p1),*(QFont*)(p2),drvGetPaintDevice(p3));
+		*(void**)_p = new QTextLayout(drvGetStringHead(p1),*(QFont*)(p2),drvGetPaintDevice(p3));
 		break;
 	}
 	case 158106: {
@@ -16305,11 +16305,11 @@ int drv_QTextLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 158136: {
-		pThis->setPreeditArea(*(int*)p1,drvGetString(p2));
+		pThis->setPreeditArea(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
 	case 158137: {
-		pThis->setText(drvGetString(p1));
+		pThis->setText(drvGetStringHead(p1));
 		break;
 	}
 	case 158138: {
@@ -16979,15 +16979,15 @@ int drv_QTime(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	}
 	case 170109: {
-		*(void**)p2 = new QTime(QTime::fromString(drvGetString(p1)));
+		*(void**)p2 = new QTime(QTime::fromString(drvGetStringHead(p1)));
 		break;
 	}
 	case 170110: {
-		*(void**)p3 = new QTime(QTime::fromString(drvGetString(p1),drvGetString(p2)));
+		*(void**)p3 = new QTime(QTime::fromString(drvGetStringHead(p1),drvGetStringHead(p2)));
 		break;
 	}
 	case 170111: {
-		*(void**)p3 = new QTime(QTime::fromString(drvGetString(p1),*(Qt::DateFormat*)p2));
+		*(void**)p3 = new QTime(QTime::fromString(drvGetStringHead(p1),*(Qt::DateFormat*)p2));
 		break;
 	}
 	case 170112: {
@@ -17045,7 +17045,7 @@ int drv_QTime(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	}
 	case 170125: {
-		drvSetString(p2,pThis->toString(drvGetString(p1)));
+		drvSetString(p2,pThis->toString(drvGetStringHead(p1)));
 		break;
 	}
 	case 170126: {
@@ -17141,13 +17141,13 @@ int drv_QToolTip(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 	}
 	case 173108: {
 		if(p1==0)return -2;
-		QToolTip::showText(*(QPoint*)(p1),drvGetString(p2),(QWidget*)(p3));
+		QToolTip::showText(*(QPoint*)(p1),drvGetStringHead(p2),(QWidget*)(p3));
 		break;
 	}
 	case 173109: {
 		if(p1==0)return -2;
 	if(p4==0)return -2;
-		QToolTip::showText(*(QPoint*)(p1),drvGetString(p2),(QWidget*)(p3),*(QRect*)(p4));
+		QToolTip::showText(*(QPoint*)(p1),drvGetStringHead(p2),(QWidget*)(p3),*(QRect*)(p4));
 		break;
 	}
 	case 173110: {
@@ -17850,11 +17850,11 @@ int drv_QTreeWidgetItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*,v
 		break;
 	}
 	case 177152: {
-		pThis->setStatusTip(*(int*)p1,drvGetString(p2));
+		pThis->setStatusTip(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
 	case 177153: {
-		pThis->setText(*(int*)p1,drvGetString(p2));
+		pThis->setText(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
 	case 177154: {
@@ -17867,11 +17867,11 @@ int drv_QTreeWidgetItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*,v
 		break;
 	}
 	case 177156: {
-		pThis->setToolTip(*(int*)p1,drvGetString(p2));
+		pThis->setToolTip(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
 	case 177157: {
-		pThis->setWhatsThis(*(int*)p1,drvGetString(p2));
+		pThis->setWhatsThis(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
 	case 177158: {
@@ -17974,7 +17974,7 @@ int drv_QUndoCommand(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,v
 		break;
 	}
 	case 179104: {
-		*(void**)_p = new QUndoCommand(drvGetString(p1),(QUndoCommand*)(p2));
+		*(void**)_p = new QUndoCommand(drvGetStringHead(p1),(QUndoCommand*)(p2));
 		break;
 	}
 	case 179105: {
@@ -17998,7 +17998,7 @@ int drv_QUndoCommand(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,v
 		break;
 	}
 	case 179110: {
-		pThis->setText(drvGetString(p1));
+		pThis->setText(drvGetStringHead(p1));
 		break;
 	}
 	case 179111: {
@@ -18029,7 +18029,7 @@ int drv_QUrl(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		break;
 	}
 	case 180103: {
-		*(void**)_p = new QUrl(drvGetString(p1));
+		*(void**)_p = new QUrl(drvGetStringHead(p1));
 		break;
 	}
 	case 180104: {
@@ -18038,7 +18038,7 @@ int drv_QUrl(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		break;
 	}
 	case 180105: {
-		*(void**)_p = new QUrl(drvGetString(p1),*(QUrl::ParsingMode*)p2);
+		*(void**)_p = new QUrl(drvGetStringHead(p1),*(QUrl::ParsingMode*)p2);
 		break;
 	}
 	case 180106: {
@@ -18074,7 +18074,7 @@ int drv_QUrl(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		break;
 	}
 	case 180114: {
-		*(void**)p2 = new QUrl(QUrl::fromLocalFile(drvGetString(p1)));
+		*(void**)p2 = new QUrl(QUrl::fromLocalFile(drvGetStringHead(p1)));
 		break;
 	}
 	case 180115: {
@@ -18082,7 +18082,7 @@ int drv_QUrl(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		break;
 	}
 	case 180116: {
-		*(void**)p2 = new QUrl(QUrl::fromUserInput(drvGetString(p1)));
+		*(void**)p2 = new QUrl(QUrl::fromUserInput(drvGetStringHead(p1)));
 		break;
 	}
 	case 180117: {
@@ -18164,15 +18164,15 @@ int drv_QUrl(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		break;
 	}
 	case 180134: {
-		pThis->setAuthority(drvGetString(p1));
+		pThis->setAuthority(drvGetStringHead(p1));
 		break;
 	}
 	case 180135: {
-		pThis->setFragment(drvGetString(p1));
+		pThis->setFragment(drvGetStringHead(p1));
 		break;
 	}
 	case 180136: {
-		pThis->setHost(drvGetString(p1));
+		pThis->setHost(drvGetStringHead(p1));
 		break;
 	}
 	case 180137: {
@@ -18180,11 +18180,11 @@ int drv_QUrl(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		break;
 	}
 	case 180138: {
-		pThis->setPassword(drvGetString(p1));
+		pThis->setPassword(drvGetStringHead(p1));
 		break;
 	}
 	case 180139: {
-		pThis->setPath(drvGetString(p1));
+		pThis->setPath(drvGetStringHead(p1));
 		break;
 	}
 	case 180140: {
@@ -18193,9 +18193,9 @@ int drv_QUrl(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 	}
 	case 180141: {
 #ifdef QTDRV_QT5
-		pThis->setQuery(drvGetString(p1));
+		pThis->setQuery(drvGetStringHead(p1));
 #else
-		pThis->setEncodedQuery(toLatin1_helper(drvGetString(p1)));
+		pThis->setEncodedQuery(toLatin1_helper(drvGetStringHead(p1)));
 #endif		
 		break;
 	}
@@ -18210,34 +18210,34 @@ int drv_QUrl(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 	}
 	case 180143: {
 #ifdef QTDRV_QT5
-		pThis->setQuery(drvGetString(p1),*(QUrl::ParsingMode*)p2);
+		pThis->setQuery(drvGetStringHead(p1),*(QUrl::ParsingMode*)p2);
 #else
-		pThis->setEncodedQuery(toLatin1_helper(drvGetString(p1)));
+		pThis->setEncodedQuery(toLatin1_helper(drvGetStringHead(p1)));
 #endif		
 		break;
 	}
 	case 180144: {
-		pThis->setScheme(drvGetString(p1));
+		pThis->setScheme(drvGetStringHead(p1));
 		break;
 	}
 	case 180145: {
-		pThis->setUrl(drvGetString(p1));
+		pThis->setUrl(drvGetStringHead(p1));
 		break;
 	}
 	case 180146: {
-		pThis->setUrl(drvGetString(p1),*(QUrl::ParsingMode*)p2);
+		pThis->setUrl(drvGetStringHead(p1),*(QUrl::ParsingMode*)p2);
 		break;
 	}
 	case 180147: {
-		pThis->setUserInfo(drvGetString(p1));
+		pThis->setUserInfo(drvGetStringHead(p1));
 		break;
 	}
 	case 180148: {
-		pThis->setUserName(drvGetString(p1));
+		pThis->setUserName(drvGetStringHead(p1));
 		break;
 	}
 	case 180149: {
-		drvSetByteArray(p2,QUrl::toAce(drvGetString(p1)));
+		drvSetByteArray(p2,QUrl::toAce(drvGetStringHead(p1)));
 		break;
 	}
 	case 180150: {
@@ -18261,11 +18261,11 @@ int drv_QUrl(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		break;
 	}
 	case 180153: {
-		drvSetByteArray(p2,QUrl::toPercentEncoding(drvGetString(p1)));
+		drvSetByteArray(p2,QUrl::toPercentEncoding(drvGetStringHead(p1)));
 		break;
 	}
 	case 180154: {
-		drvSetByteArray(p4,QUrl::toPercentEncoding(drvGetString(p1),drvGetByteArray(p2),drvGetByteArray(p3)));
+		drvSetByteArray(p4,QUrl::toPercentEncoding(drvGetStringHead(p1),drvGetByteArray(p2),drvGetByteArray(p3)));
 		break;
 	}
 	case 180155: {
@@ -18312,7 +18312,7 @@ int drv_QUuid(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	}
 	case 181103: {
-		*(void**)_p = new QUuid(drvGetString(p1));
+		*(void**)_p = new QUuid(drvGetStringHead(p1));
 		break;
 	}
 	case 181104: {
@@ -18444,7 +18444,7 @@ int drv_QVariant(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,vo
 		break;
 	}
 	case 182121: {
-		*(void**)_p = new QVariant(drvGetString(p1));
+		*(void**)_p = new QVariant(drvGetStringHead(p1));
 		break;
 	}
 	case 182122: {
@@ -19127,7 +19127,7 @@ int drv_QWhatsThis(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,
 	}
 	case 187108: {
 		if(p1==0)return -2;
-		QWhatsThis::showText(*(QPoint*)(p1),drvGetString(p2),(QWidget*)(p3));
+		QWhatsThis::showText(*(QPoint*)(p1),drvGetStringHead(p2),(QWidget*)(p3));
 		break;
 	}
 	default:
@@ -19146,7 +19146,7 @@ int drv_QWhatsThisClickedEvent(void *_p, int funcid, void* p1,void* p2,void* p3,
 		break;
 	} 
 	case 188102: {
-		*(void**)_p = new QWhatsThisClickedEvent(drvGetString(p1));
+		*(void**)_p = new QWhatsThisClickedEvent(drvGetStringHead(p1));
 		break;
 	}
 	case 188103: {
@@ -19322,28 +19322,28 @@ int drv_QAbstractAnimation(void *_p, int funcid, void* p1,void* p2,void* p3,void
 		break;
 	} 
 	case 192102: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(finished()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 192103: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentLoopChanged(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 192104: {
-		UISignal4 *uis = new UISignal4(pThis,(Iface*)p1);
+		UISignal4 *uis = new UISignal4(pThis);
 		if (QObject::connect(pThis,SIGNAL(stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)),uis,SLOT(call(QAbstractAnimation::State,QAbstractAnimation::State)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 192105: {
-		UISignal3 *uis = new UISignal3(pThis,(Iface*)p1);
+		UISignal3 *uis = new UISignal3(pThis);
 		if (QObject::connect(pThis,SIGNAL(directionChanged(QAbstractAnimation::Direction)),uis,SLOT(call(QAbstractAnimation::Direction)))) {
 			*(void**)p2 = uis;
 		}
@@ -19453,35 +19453,35 @@ int drv_QAbstractButton(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	} 
 	case 193102: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(clicked()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 193103: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(clicked(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 193104: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(pressed()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 193105: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(released()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 193106: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(toggled(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
@@ -19636,7 +19636,7 @@ int drv_QAbstractButton(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	}
 	case 193143: {
-		pThis->setText(drvGetString(p1));
+		pThis->setText(drvGetStringHead(p1));
 		break;
 	}
 	case 193144: {
@@ -19671,21 +19671,21 @@ int drv_QAbstractItemDelegate(void *_p, int funcid, void* p1,void* p2,void* p3,v
 		break;
 	} 
 	case 194102: {
-		UISignal25 *uis = new UISignal25(pThis,(Iface*)p1);
+		UISignal25 *uis = new UISignal25(pThis);
 		if (QObject::connect(pThis,SIGNAL(sizeHintChanged(QModelIndex const&)),uis,SLOT(call(QModelIndex const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 194103: {
-		UISignal58 *uis = new UISignal58(pThis,(Iface*)p1);
+		UISignal58 *uis = new UISignal58(pThis);
 		if (QObject::connect(pThis,SIGNAL(commitData(QWidget*)),uis,SLOT(call(QWidget*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 194104: {
-		UISignal59 *uis = new UISignal59(pThis,(Iface*)p1);
+		UISignal59 *uis = new UISignal59(pThis);
 		if (QObject::connect(pThis,SIGNAL(closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)),uis,SLOT(call(QWidget*,QAbstractItemDelegate::EndEditHint)))) {
 			*(void**)p2 = uis;
 		}
@@ -19693,7 +19693,7 @@ int drv_QAbstractItemDelegate(void *_p, int funcid, void* p1,void* p2,void* p3,v
 	}
 	case 194105: {
 		if(p1==0)return -2;
-		drvSetString(p5,QAbstractItemDelegate::elidedText(*(QFontMetrics*)(p1),*(int*)p2,*(Qt::TextElideMode*)p3,drvGetString(p4)));
+		drvSetString(p5,QAbstractItemDelegate::elidedText(*(QFontMetrics*)(p1),*(int*)p2,*(Qt::TextElideMode*)p3,drvGetStringHead(p4)));
 		break;
 	}
 	case 194106: {
@@ -19722,28 +19722,28 @@ int drv_QAbstractItemModel(void *_p, int funcid, void* p1,void* p2,void* p3,void
 		break;
 	} 
 	case 195102: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(layoutChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 195103: {
-		UISignal64 *uis = new UISignal64(pThis,(Iface*)p1);
+		UISignal64 *uis = new UISignal64(pThis);
 		if (QObject::connect(pThis,SIGNAL(headerDataChanged(Qt::Orientation,int,int)),uis,SLOT(call(Qt::Orientation,int,int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 195104: {
-		UISignal26 *uis = new UISignal26(pThis,(Iface*)p1);
+		UISignal26 *uis = new UISignal26(pThis);
 		if (QObject::connect(pThis,SIGNAL(dataChanged(QModelIndex const&,QModelIndex const&)),uis,SLOT(call(QModelIndex const&,QModelIndex const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 195105: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(layoutAboutToBeChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
@@ -20052,42 +20052,42 @@ int drv_QAbstractItemView(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 		break;
 	} 
 	case 196102: {
-		UISignal25 *uis = new UISignal25(pThis,(Iface*)p1);
+		UISignal25 *uis = new UISignal25(pThis);
 		if (QObject::connect(pThis,SIGNAL(pressed(QModelIndex const&)),uis,SLOT(call(QModelIndex const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 196103: {
-		UISignal25 *uis = new UISignal25(pThis,(Iface*)p1);
+		UISignal25 *uis = new UISignal25(pThis);
 		if (QObject::connect(pThis,SIGNAL(doubleClicked(QModelIndex const&)),uis,SLOT(call(QModelIndex const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 196104: {
-		UISignal25 *uis = new UISignal25(pThis,(Iface*)p1);
+		UISignal25 *uis = new UISignal25(pThis);
 		if (QObject::connect(pThis,SIGNAL(activated(QModelIndex const&)),uis,SLOT(call(QModelIndex const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 196105: {
-		UISignal25 *uis = new UISignal25(pThis,(Iface*)p1);
+		UISignal25 *uis = new UISignal25(pThis);
 		if (QObject::connect(pThis,SIGNAL(clicked(QModelIndex const&)),uis,SLOT(call(QModelIndex const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 196106: {
-		UISignal25 *uis = new UISignal25(pThis,(Iface*)p1);
+		UISignal25 *uis = new UISignal25(pThis);
 		if (QObject::connect(pThis,SIGNAL(entered(QModelIndex const&)),uis,SLOT(call(QModelIndex const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 196107: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(viewportEntered()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
@@ -20293,7 +20293,7 @@ int drv_QAbstractItemView(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 		break;
 	}
 	case 196155: {
-		pThis->keyboardSearch(drvGetString(p1));
+		pThis->keyboardSearch(drvGetStringHead(p1));
 		break;
 	}
 	case 196156: {
@@ -20999,42 +20999,42 @@ int drv_QAbstractSlider(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	} 
 	case 201102: {
-		UISignal72 *uis = new UISignal72(pThis,(Iface*)p1);
+		UISignal72 *uis = new UISignal72(pThis);
 		if (QObject::connect(pThis,SIGNAL(rangeChanged(int,int)),uis,SLOT(call(int,int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 201103: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(sliderMoved(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 201104: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(actionTriggered(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 201105: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(sliderReleased()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 201106: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(sliderPressed()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 201107: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(valueChanged(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
@@ -21192,7 +21192,7 @@ int drv_QAbstractSpinBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 		break;
 	} 
 	case 202102: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(editingFinished()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
@@ -21357,7 +21357,7 @@ int drv_QAbstractSpinBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 		break;
 	}
 	case 202142: {
-		pThis->setSpecialValueText(drvGetString(p1));
+		pThis->setSpecialValueText(drvGetStringHead(p1));
 		break;
 	}
 	case 202143: {
@@ -21489,35 +21489,35 @@ int drv_QAbstractTextDocumentLayout(void *_p, int funcid, void* p1,void* p2,void
 		break;
 	} 
 	case 205102: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(pageCountChanged(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 205103: {
-		UISignal47 *uis = new UISignal47(pThis,(Iface*)p1);
+		UISignal47 *uis = new UISignal47(pThis);
 		if (QObject::connect(pThis,SIGNAL(updateBlock(QTextBlock const&)),uis,SLOT(call(QTextBlock const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 205104: {
-		UISignal39 *uis = new UISignal39(pThis,(Iface*)p1);
+		UISignal39 *uis = new UISignal39(pThis);
 		if (QObject::connect(pThis,SIGNAL(documentSizeChanged(QSizeF const&)),uis,SLOT(call(QSizeF const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 205105: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(update()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 205106: {
-		UISignal36 *uis = new UISignal36(pThis,(Iface*)p1);
+		UISignal36 *uis = new UISignal36(pThis);
 		if (QObject::connect(pThis,SIGNAL(update(QRectF const&)),uis,SLOT(call(QRectF const&)))) {
 			*(void**)p2 = uis;
 		}
@@ -21685,35 +21685,35 @@ int drv_QAction(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	} 
 	case 207102: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(changed()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 207103: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(triggered()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 207104: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(triggered(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 207105: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(hovered()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 207106: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(toggled(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
@@ -21724,12 +21724,12 @@ int drv_QAction(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 207108: {
-		*(void**)_p = new QAction(drvGetString(p1),(QObject*)(p2));
+		*(void**)_p = new QAction(drvGetStringHead(p1),(QObject*)(p2));
 		break;
 	}
 	case 207109: {
 		if(p1==0)return -2;
-		*(void**)_p = new QAction(*(QIcon*)(p1),drvGetString(p2),(QObject*)(p3));
+		*(void**)_p = new QAction(*(QIcon*)(p1),drvGetStringHead(p2),(QObject*)(p3));
 		break;
 	}
 	case 207110: {
@@ -21856,7 +21856,7 @@ int drv_QAction(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 207140: {
-		pThis->setIconText(drvGetString(p1));
+		pThis->setIconText(drvGetStringHead(p1));
 		break;
 	}
 	case 207141: {
@@ -21897,15 +21897,15 @@ int drv_QAction(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 207150: {
-		pThis->setStatusTip(drvGetString(p1));
+		pThis->setStatusTip(drvGetStringHead(p1));
 		break;
 	}
 	case 207151: {
-		pThis->setText(drvGetString(p1));
+		pThis->setText(drvGetStringHead(p1));
 		break;
 	}
 	case 207152: {
-		pThis->setToolTip(drvGetString(p1));
+		pThis->setToolTip(drvGetStringHead(p1));
 		break;
 	}
 	case 207153: {
@@ -21913,7 +21913,7 @@ int drv_QAction(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 207154: {
-		pThis->setWhatsThis(drvGetString(p1));
+		pThis->setWhatsThis(drvGetStringHead(p1));
 		break;
 	}
 	case 207155: {
@@ -21976,21 +21976,21 @@ int drv_QActionGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	} 
 	case 208102: {
-		UISignal6 *uis = new UISignal6(pThis,(Iface*)p1);
+		UISignal6 *uis = new UISignal6(pThis);
 		if (QObject::connect(pThis,SIGNAL(hovered(QAction*)),uis,SLOT(call(QAction*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 208103: {
-		UISignal6 *uis = new UISignal6(pThis,(Iface*)p1);
+		UISignal6 *uis = new UISignal6(pThis);
 		if (QObject::connect(pThis,SIGNAL(selected(QAction*)),uis,SLOT(call(QAction*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 208104: {
-		UISignal6 *uis = new UISignal6(pThis,(Iface*)p1);
+		UISignal6 *uis = new UISignal6(pThis);
 		if (QObject::connect(pThis,SIGNAL(triggered(QAction*)),uis,SLOT(call(QAction*)))) {
 			*(void**)p2 = uis;
 		}
@@ -22009,12 +22009,12 @@ int drv_QActionGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 208108: {
-		*(void**)p2 = pThis->addAction(drvGetString(p1));
+		*(void**)p2 = pThis->addAction(drvGetStringHead(p1));
 		break;
 	}
 	case 208109: {
 		if(p1==0)return -2;
-		*(void**)p3 = pThis->addAction(*(QIcon*)(p1),drvGetString(p2));
+		*(void**)p3 = pThis->addAction(*(QIcon*)(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 208110: {
@@ -22288,42 +22288,42 @@ int drv_QButtonGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	} 
 	case 211102: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(buttonClicked(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 211103: {
-		UISignal5 *uis = new UISignal5(pThis,(Iface*)p1);
+		UISignal5 *uis = new UISignal5(pThis);
 		if (QObject::connect(pThis,SIGNAL(buttonClicked(QAbstractButton*)),uis,SLOT(call(QAbstractButton*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 211104: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(buttonPressed(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 211105: {
-		UISignal5 *uis = new UISignal5(pThis,(Iface*)p1);
+		UISignal5 *uis = new UISignal5(pThis);
 		if (QObject::connect(pThis,SIGNAL(buttonPressed(QAbstractButton*)),uis,SLOT(call(QAbstractButton*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 211106: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(buttonReleased(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 211107: {
-		UISignal5 *uis = new UISignal5(pThis,(Iface*)p1);
+		UISignal5 *uis = new UISignal5(pThis);
 		if (QObject::connect(pThis,SIGNAL(buttonReleased(QAbstractButton*)),uis,SLOT(call(QAbstractButton*)))) {
 			*(void**)p2 = uis;
 		}
@@ -22397,28 +22397,28 @@ int drv_QCalendarWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	} 
 	case 212102: {
-		UISignal10 *uis = new UISignal10(pThis,(Iface*)p1);
+		UISignal10 *uis = new UISignal10(pThis);
 		if (QObject::connect(pThis,SIGNAL(clicked(QDate const&)),uis,SLOT(call(QDate const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 212103: {
-		UISignal10 *uis = new UISignal10(pThis,(Iface*)p1);
+		UISignal10 *uis = new UISignal10(pThis);
 		if (QObject::connect(pThis,SIGNAL(activated(QDate const&)),uis,SLOT(call(QDate const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 212104: {
-		UISignal72 *uis = new UISignal72(pThis,(Iface*)p1);
+		UISignal72 *uis = new UISignal72(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentPageChanged(int,int)),uis,SLOT(call(int,int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 212105: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(selectionChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
@@ -22657,7 +22657,7 @@ int drv_QCheckBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	} 
 	case 213102: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(stateChanged(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
@@ -22672,7 +22672,7 @@ int drv_QCheckBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 213105: {
-		*(void**)_p = new QCheckBox(drvGetString(p1),(QWidget*)(p2));
+		*(void**)_p = new QCheckBox(drvGetStringHead(p1),(QWidget*)(p2));
 		break;
 	}
 	case 213106: {
@@ -22732,28 +22732,28 @@ int drv_QClipboard(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 	QClipboard *pThis = (QClipboard*)_p;
 	switch (funcid) {
 	case 214102: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(findBufferChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 214103: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(selectionChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 214104: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(dataChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 214105: {
-		UISignal8 *uis = new UISignal8(pThis,(Iface*)p1);
+		UISignal8 *uis = new UISignal8(pThis);
 		if (QObject::connect(pThis,SIGNAL(changed(QClipboard::Mode)),uis,SLOT(call(QClipboard::Mode)))) {
 			*(void**)p2 = uis;
 		}
@@ -22836,11 +22836,11 @@ int drv_QClipboard(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	}
 	case 214124: {
-		pThis->setText(drvGetString(p1));
+		pThis->setText(drvGetStringHead(p1));
 		break;
 	}
 	case 214125: {
-		pThis->setText(drvGetString(p1),*(QClipboard::Mode*)p2);
+		pThis->setText(drvGetStringHead(p1),*(QClipboard::Mode*)p2);
 		break;
 	}
 	case 214126: {
@@ -22887,14 +22887,14 @@ int drv_QColorDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	} 
 	case 215102: {
-		UISignal9 *uis = new UISignal9(pThis,(Iface*)p1);
+		UISignal9 *uis = new UISignal9(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentColorChanged(QColor const&)),uis,SLOT(call(QColor const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 215103: {
-		UISignal9 *uis = new UISignal9(pThis,(Iface*)p1);
+		UISignal9 *uis = new UISignal9(pThis);
 		if (QObject::connect(pThis,SIGNAL(colorSelected(QColor const&)),uis,SLOT(call(QColor const&)))) {
 			*(void**)p2 = uis;
 		}
@@ -22943,7 +22943,7 @@ int drv_QColorDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 	}
 	case 215114: {
 		if(p1==0)return -2;
-		*(void**)p5 = new QColor(QColorDialog::getColor(*(QColor*)(p1),(QWidget*)(p2),drvGetString(p3),*(QFlags<QColorDialog::ColorDialogOption>*)p4));
+		*(void**)p5 = new QColor(QColorDialog::getColor(*(QColor*)(p1),(QWidget*)(p2),drvGetStringHead(p3),*(QFlags<QColorDialog::ColorDialogOption>*)p4));
 		break;
 	}
 	case 215115: {
@@ -23029,7 +23029,7 @@ int drv_QColumnView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	} 
 	case 216102: {
-		UISignal25 *uis = new UISignal25(pThis,(Iface*)p1);
+		UISignal25 *uis = new UISignal25(pThis);
 		if (QObject::connect(pThis,SIGNAL(updatePreviewWidget(QModelIndex const&)),uis,SLOT(call(QModelIndex const&)))) {
 			*(void**)p2 = uis;
 		}
@@ -23179,49 +23179,49 @@ int drv_QComboBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	} 
 	case 217102: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(highlighted(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 217103: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(highlighted(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 217104: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(editTextChanged(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 217105: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(activated(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 217106: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(activated(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 217107: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentIndexChanged(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 217108: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentIndexChanged(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
@@ -23236,16 +23236,16 @@ int drv_QComboBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 217111: {
-		pThis->addItem(drvGetString(p1));
+		pThis->addItem(drvGetStringHead(p1));
 		break;
 	}
 	case 217112: {
-		pThis->addItem(drvGetString(p1),p2==0?QVariant():*(QVariant*)(p2));
+		pThis->addItem(drvGetStringHead(p1),p2==0?QVariant():*(QVariant*)(p2));
 		break;
 	}
 	case 217113: {
 		if(p1==0)return -2;
-		pThis->addItem(*(QIcon*)(p1),drvGetString(p2),p3==0?QVariant():*(QVariant*)(p3));
+		pThis->addItem(*(QIcon*)(p1),drvGetStringHead(p2),p3==0?QVariant():*(QVariant*)(p3));
 		break;
 	}
 	case 217114: {
@@ -23311,11 +23311,11 @@ int drv_QComboBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 217129: {
-		*(int*)p2 = pThis->findText(drvGetString(p1));
+		*(int*)p2 = pThis->findText(drvGetStringHead(p1));
 		break;
 	}
 	case 217130: {
-		*(int*)p3 = pThis->findText(drvGetString(p1),*(QFlags<Qt::MatchFlag>*)p2);
+		*(int*)p3 = pThis->findText(drvGetStringHead(p1),*(QFlags<Qt::MatchFlag>*)p2);
 		break;
 	}
 	case 217131: {
@@ -23351,12 +23351,12 @@ int drv_QComboBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 217139: {
-		pThis->insertItem(*(int*)p1,drvGetString(p2),p3==0?QVariant():*(QVariant*)(p3));
+		pThis->insertItem(*(int*)p1,drvGetStringHead(p2),p3==0?QVariant():*(QVariant*)(p3));
 		break;
 	}
 	case 217140: {
 		if(p2==0)return -2;
-		pThis->insertItem(*(int*)p1,*(QIcon*)(p2),drvGetString(p3),p4==0?QVariant():*(QVariant*)(p4));
+		pThis->insertItem(*(int*)p1,*(QIcon*)(p2),drvGetStringHead(p3),p4==0?QVariant():*(QVariant*)(p4));
 		break;
 	}
 	case 217141: {
@@ -23476,7 +23476,7 @@ int drv_QComboBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 217170: {
-		pThis->setEditText(drvGetString(p1));
+		pThis->setEditText(drvGetStringHead(p1));
 		break;
 	}
 	case 217171: {
@@ -23511,7 +23511,7 @@ int drv_QComboBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 217178: {
-		pThis->setItemText(*(int*)p1,drvGetString(p2));
+		pThis->setItemText(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
 	case 217179: {
@@ -23607,11 +23607,11 @@ int drv_QCommandLinkButton(void *_p, int funcid, void* p1,void* p2,void* p3,void
 		break;
 	}
 	case 218104: {
-		*(void**)_p = new QCommandLinkButton(drvGetString(p1),(QWidget*)(p2));
+		*(void**)_p = new QCommandLinkButton(drvGetStringHead(p1),(QWidget*)(p2));
 		break;
 	}
 	case 218105: {
-		*(void**)_p = new QCommandLinkButton(drvGetString(p1),drvGetString(p2),(QWidget*)(p3));
+		*(void**)_p = new QCommandLinkButton(drvGetStringHead(p1),drvGetStringHead(p2),(QWidget*)(p3));
 		break;
 	}
 	case 218106: {
@@ -23635,7 +23635,7 @@ int drv_QCommandLinkButton(void *_p, int funcid, void* p1,void* p2,void* p3,void
 		break;
 	}
 	case 218111: {
-		pThis->setDescription(drvGetString(p1));
+		pThis->setDescription(drvGetStringHead(p1));
 		break;
 	}
 	case 218112: {
@@ -23710,28 +23710,28 @@ int drv_QCompleter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	} 
 	case 220102: {
-		UISignal25 *uis = new UISignal25(pThis,(Iface*)p1);
+		UISignal25 *uis = new UISignal25(pThis);
 		if (QObject::connect(pThis,SIGNAL(highlighted(QModelIndex const&)),uis,SLOT(call(QModelIndex const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 220103: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(highlighted(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 220104: {
-		UISignal25 *uis = new UISignal25(pThis,(Iface*)p1);
+		UISignal25 *uis = new UISignal25(pThis);
 		if (QObject::connect(pThis,SIGNAL(activated(QModelIndex const&)),uis,SLOT(call(QModelIndex const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 220105: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(activated(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
@@ -23843,7 +23843,7 @@ int drv_QCompleter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	}
 	case 220132: {
-		pThis->setCompletionPrefix(drvGetString(p1));
+		pThis->setCompletionPrefix(drvGetStringHead(p1));
 		break;
 	}
 	case 220133: {
@@ -23879,7 +23879,7 @@ int drv_QCompleter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	}
 	case 220141: {
-		drvSetStringArray(p2,pThis->splitPath(drvGetString(p1)));
+		drvSetStringArray(p2,pThis->splitPath(drvGetStringHead(p1)));
 		break;
 	}
 	case 220142: {
@@ -23906,7 +23906,7 @@ int drv_QDataWidgetMapper(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 		break;
 	} 
 	case 221102: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentIndexChanged(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
@@ -24070,21 +24070,21 @@ int drv_QDateTimeEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	} 
 	case 223102: {
-		UISignal11 *uis = new UISignal11(pThis,(Iface*)p1);
+		UISignal11 *uis = new UISignal11(pThis);
 		if (QObject::connect(pThis,SIGNAL(dateTimeChanged(QDateTime const&)),uis,SLOT(call(QDateTime const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 223103: {
-		UISignal10 *uis = new UISignal10(pThis,(Iface*)p1);
+		UISignal10 *uis = new UISignal10(pThis);
 		if (QObject::connect(pThis,SIGNAL(dateChanged(QDate const&)),uis,SLOT(call(QDate const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 223104: {
-		UISignal50 *uis = new UISignal50(pThis,(Iface*)p1);
+		UISignal50 *uis = new UISignal50(pThis);
 		if (QObject::connect(pThis,SIGNAL(timeChanged(QTime const&)),uis,SLOT(call(QTime const&)))) {
 			*(void**)p2 = uis;
 		}
@@ -24166,7 +24166,7 @@ int drv_QDateTimeEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 223123: {
-		*(void**)p2 = new QDateTime(pThis->dateTimeFromText(drvGetString(p1)));
+		*(void**)p2 = new QDateTime(pThis->dateTimeFromText(drvGetStringHead(p1)));
 		break;
 	}
 	case 223124: {
@@ -24282,7 +24282,7 @@ int drv_QDateTimeEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 223150: {
-		pThis->setDisplayFormat(drvGetString(p1));
+		pThis->setDisplayFormat(drvGetStringHead(p1));
 		break;
 	}
 	case 223151: {
@@ -24385,21 +24385,21 @@ int drv_QDesktopWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	} 
 	case 224102: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(resized(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 224103: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(workAreaResized(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 224104: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(screenCountChanged(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
@@ -24587,21 +24587,21 @@ int drv_QDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	} 
 	case 226102: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(finished(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 226103: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(accepted()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 226104: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(rejected()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
@@ -24731,28 +24731,28 @@ int drv_QDialogButtonBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 		break;
 	} 
 	case 227102: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(accepted()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 227103: {
-		UISignal5 *uis = new UISignal5(pThis,(Iface*)p1);
+		UISignal5 *uis = new UISignal5(pThis);
 		if (QObject::connect(pThis,SIGNAL(clicked(QAbstractButton*)),uis,SLOT(call(QAbstractButton*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 227104: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(helpRequested()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 227105: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(rejected()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
@@ -24783,7 +24783,7 @@ int drv_QDialogButtonBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 		break;
 	}
 	case 227112: {
-		*(void**)p3 = pThis->addButton(drvGetString(p1),*(QDialogButtonBox::ButtonRole*)p2);
+		*(void**)p3 = pThis->addButton(drvGetStringHead(p1),*(QDialogButtonBox::ButtonRole*)p2);
 		break;
 	}
 	case 227113: {
@@ -24938,11 +24938,11 @@ int drv_QDirModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 228120: {
-		*(void**)p2 = new QModelIndex(pThis->index(drvGetString(p1)));
+		*(void**)p2 = new QModelIndex(pThis->index(drvGetStringHead(p1)));
 		break;
 	}
 	case 228121: {
-		*(void**)p3 = new QModelIndex(pThis->index(drvGetString(p1),*(int*)p2));
+		*(void**)p3 = new QModelIndex(pThis->index(drvGetStringHead(p1),*(int*)p2));
 		break;
 	}
 	case 228122: {
@@ -24972,7 +24972,7 @@ int drv_QDirModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 	}
 	case 228128: {
 		if(p1==0)return -2;
-		*(void**)p3 = new QModelIndex(pThis->mkdir(*(QModelIndex*)(p1),drvGetString(p2)));
+		*(void**)p3 = new QModelIndex(pThis->mkdir(*(QModelIndex*)(p1),drvGetStringHead(p2)));
 		break;
 	}
 	case 228129: {
@@ -25084,35 +25084,35 @@ int drv_QDockWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	} 
 	case 229102: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(topLevelChanged(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 229103: {
-		UISignal12 *uis = new UISignal12(pThis,(Iface*)p1);
+		UISignal12 *uis = new UISignal12(pThis);
 		if (QObject::connect(pThis,SIGNAL(featuresChanged(QFlags<QDockWidget::DockWidgetFeature>)),uis,SLOT(call(QFlags<QDockWidget::DockWidgetFeature>)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 229104: {
-		UISignal14 *uis = new UISignal14(pThis,(Iface*)p1);
+		UISignal14 *uis = new UISignal14(pThis);
 		if (QObject::connect(pThis,SIGNAL(allowedAreasChanged(QFlags<Qt::DockWidgetArea>)),uis,SLOT(call(QFlags<Qt::DockWidgetArea>)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 229105: {
-		UISignal61 *uis = new UISignal61(pThis,(Iface*)p1);
+		UISignal61 *uis = new UISignal61(pThis);
 		if (QObject::connect(pThis,SIGNAL(dockLocationChanged(Qt::DockWidgetArea)),uis,SLOT(call(Qt::DockWidgetArea)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 229106: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(visibilityChanged(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
@@ -25127,7 +25127,7 @@ int drv_QDockWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 229109: {
-		*(void**)_p = new QDockWidget(drvGetString(p1),(QWidget*)(p2),*(QFlags<Qt::WindowType>*)p3);
+		*(void**)_p = new QDockWidget(drvGetStringHead(p1),(QWidget*)(p2),*(QFlags<Qt::WindowType>*)p3);
 		break;
 	}
 	case 229110: {
@@ -25210,14 +25210,14 @@ int drv_QDoubleSpinBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	} 
 	case 230102: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(valueChanged(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 230103: {
-		UISignal67 *uis = new UISignal67(pThis,(Iface*)p1);
+		UISignal67 *uis = new UISignal67(pThis);
 		if (QObject::connect(pThis,SIGNAL(valueChanged(double)),uis,SLOT(call(double)))) {
 			*(void**)p2 = uis;
 		}
@@ -25270,7 +25270,7 @@ int drv_QDoubleSpinBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	}
 	case 230115: {
-		pThis->setPrefix(drvGetString(p1));
+		pThis->setPrefix(drvGetStringHead(p1));
 		break;
 	}
 	case 230116: {
@@ -25282,7 +25282,7 @@ int drv_QDoubleSpinBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	}
 	case 230118: {
-		pThis->setSuffix(drvGetString(p1));
+		pThis->setSuffix(drvGetStringHead(p1));
 		break;
 	}
 	case 230119: {
@@ -25312,7 +25312,7 @@ int drv_QDoubleSpinBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	}
 	case 230125: {
-		*(double*)p2 = pThis->valueFromText(drvGetString(p1));
+		*(double*)p2 = pThis->valueFromText(drvGetStringHead(p1));
 		break;
 	}
 	default:
@@ -25400,14 +25400,14 @@ int drv_QDrag(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	} 
 	case 232102: {
-		UISignal58 *uis = new UISignal58(pThis,(Iface*)p1);
+		UISignal58 *uis = new UISignal58(pThis);
 		if (QObject::connect(pThis,SIGNAL(targetChanged(QWidget*)),uis,SLOT(call(QWidget*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 232103: {
-		UISignal62 *uis = new UISignal62(pThis,(Iface*)p1);
+		UISignal62 *uis = new UISignal62(pThis);
 		if (QObject::connect(pThis,SIGNAL(actionChanged(Qt::DropAction)),uis,SLOT(call(Qt::DropAction)))) {
 			*(void**)p2 = uis;
 		}
@@ -25512,11 +25512,11 @@ int drv_QErrorMessage(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 233107: {
-		pThis->showMessage(drvGetString(p1));
+		pThis->showMessage(drvGetStringHead(p1));
 		break;
 	}
 	case 233108: {
-		pThis->showMessage(drvGetString(p1),drvGetString(p2));
+		pThis->showMessage(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
 	default:
@@ -25661,11 +25661,11 @@ int drv_QFile(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	}
 	case 236104: {
-		*(void**)_p = new QFile(drvGetString(p1));
+		*(void**)_p = new QFile(drvGetStringHead(p1));
 		break;
 	}
 	case 236105: {
-		*(void**)_p = new QFile(drvGetString(p1),(QObject*)(p2));
+		*(void**)_p = new QFile(drvGetStringHead(p1),(QObject*)(p2));
 		break;
 	}
 	case 236106: {
@@ -25677,11 +25677,11 @@ int drv_QFile(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	}
 	case 236108: {
-		*(bool*)p2 = pThis->copy(drvGetString(p1));
+		*(bool*)p2 = pThis->copy(drvGetStringHead(p1));
 		break;
 	}
 	case 236109: {
-		*(bool*)p3 = QFile::copy(drvGetString(p1),drvGetString(p2));
+		*(bool*)p3 = QFile::copy(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 236110: {
@@ -25689,7 +25689,7 @@ int drv_QFile(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	}
 	case 236111: {
-		drvSetByteArray(p2,QFile::encodeName(drvGetString(p1)));
+		drvSetByteArray(p2,QFile::encodeName(drvGetStringHead(p1)));
 		break;
 	}
 	case 236112: {
@@ -25701,7 +25701,7 @@ int drv_QFile(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	}
 	case 236114: {
-		*(bool*)p2 = QFile::exists(drvGetString(p1));
+		*(bool*)p2 = QFile::exists(drvGetStringHead(p1));
 		break;
 	}
 	case 236115: {
@@ -25721,11 +25721,11 @@ int drv_QFile(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	}
 	case 236119: {
-		*(bool*)p2 = pThis->link(drvGetString(p1));
+		*(bool*)p2 = pThis->link(drvGetStringHead(p1));
 		break;
 	}
 	case 236120: {
-		*(bool*)p3 = QFile::link(drvGetString(p1),drvGetString(p2));
+		*(bool*)p3 = QFile::link(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 236121: {
@@ -25749,7 +25749,7 @@ int drv_QFile(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	}
 	case 236126: {
-		*(QFlags<QFile::Permission>*)p2 = QFile::permissions(drvGetString(p1));
+		*(QFlags<QFile::Permission>*)p2 = QFile::permissions(drvGetStringHead(p1));
 		break;
 	}
 	case 236127: {
@@ -25769,7 +25769,7 @@ int drv_QFile(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	}
 	case 236131: {
-		drvSetString(p2,QFile::readLink(drvGetString(p1)));
+		drvSetString(p2,QFile::readLink(drvGetStringHead(p1)));
 		break;
 	}
 	case 236132: {
@@ -25777,15 +25777,15 @@ int drv_QFile(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	}
 	case 236133: {
-		*(bool*)p2 = QFile::remove(drvGetString(p1));
+		*(bool*)p2 = QFile::remove(drvGetStringHead(p1));
 		break;
 	}
 	case 236134: {
-		*(bool*)p2 = pThis->rename(drvGetString(p1));
+		*(bool*)p2 = pThis->rename(drvGetStringHead(p1));
 		break;
 	}
 	case 236135: {
-		*(bool*)p3 = QFile::rename(drvGetString(p1),drvGetString(p2));
+		*(bool*)p3 = QFile::rename(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 236136: {
@@ -25793,7 +25793,7 @@ int drv_QFile(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	}
 	case 236137: {
-		*(bool*)p3 = QFile::resize(drvGetString(p1),*(qint64*)p2);
+		*(bool*)p3 = QFile::resize(drvGetStringHead(p1),*(qint64*)p2);
 		break;
 	}
 	case 236138: {
@@ -25801,7 +25801,7 @@ int drv_QFile(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	}
 	case 236139: {
-		pThis->setFileName(drvGetString(p1));
+		pThis->setFileName(drvGetStringHead(p1));
 		break;
 	}
 	case 236140: {
@@ -25809,7 +25809,7 @@ int drv_QFile(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	}
 	case 236141: {
-		*(bool*)p3 = QFile::setPermissions(drvGetString(p1),*(QFlags<QFile::Permission>*)p2);
+		*(bool*)p3 = QFile::setPermissions(drvGetStringHead(p1),*(QFlags<QFile::Permission>*)p2);
 		break;
 	}
 	case 236142: {
@@ -25821,7 +25821,7 @@ int drv_QFile(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	}
 	case 236144: {
-		drvSetString(p2,QFile::symLinkTarget(drvGetString(p1)));
+		drvSetString(p2,QFile::symLinkTarget(drvGetStringHead(p1)));
 		break;
 	}
 	case 236145: {
@@ -25852,35 +25852,35 @@ int drv_QFileDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	} 
 	case 237102: {
-		UISignal43 *uis = new UISignal43(pThis,(Iface*)p1);
+		UISignal43 *uis = new UISignal43(pThis);
 		if (QObject::connect(pThis,SIGNAL(filesSelected(QStringList const&)),uis,SLOT(call(QStringList const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 237103: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentChanged(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 237104: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(directoryEntered(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 237105: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(fileSelected(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 237106: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(filterSelected(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
@@ -25895,7 +25895,7 @@ int drv_QFileDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 237109: {
-		*(void**)_p = new QFileDialog((QWidget*)(p1),drvGetString(p2),drvGetString(p3),drvGetString(p4));
+		*(void**)_p = new QFileDialog((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),drvGetStringHead(p4));
 		break;
 	}
 	case 237110: {
@@ -25939,7 +25939,7 @@ int drv_QFileDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 237120: {
-		drvSetString(p5,QFileDialog::getExistingDirectory((QWidget*)(p1),drvGetString(p2),drvGetString(p3),*(QFlags<QFileDialog::Option>*)p4));
+		drvSetString(p5,QFileDialog::getExistingDirectory((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),*(QFlags<QFileDialog::Option>*)p4));
 		break;
 	}
 	case 237121: {
@@ -25948,7 +25948,7 @@ int drv_QFileDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 	}
 	case 237122: {
 		QString _p5=drvGetStringRef(p5);
-		drvSetString(p7,QFileDialog::getOpenFileName((QWidget*)(p1),drvGetString(p2),drvGetString(p3),drvGetString(p4),&_p5,*(QFlags<QFileDialog::Option>*)p6));
+		drvSetString(p7,QFileDialog::getOpenFileName((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),drvGetStringHead(p4),&_p5,*(QFlags<QFileDialog::Option>*)p6));
 		drvSetStringRef(p5,_p5);
 		break;
 	}
@@ -25958,7 +25958,7 @@ int drv_QFileDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 	}
 	case 237124: {
 		QString _p5=drvGetStringRef(p5);
-		drvSetStringArray(p7,QFileDialog::getOpenFileNames((QWidget*)(p1),drvGetString(p2),drvGetString(p3),drvGetString(p4),&_p5,*(QFlags<QFileDialog::Option>*)p6));
+		drvSetStringArray(p7,QFileDialog::getOpenFileNames((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),drvGetStringHead(p4),&_p5,*(QFlags<QFileDialog::Option>*)p6));
 		drvSetStringRef(p5,_p5);
 		break;
 	}
@@ -25968,7 +25968,7 @@ int drv_QFileDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 	}
 	case 237126: {
 		QString _p5=drvGetStringRef(p5);
-		drvSetString(p7,QFileDialog::getSaveFileName((QWidget*)(p1),drvGetString(p2),drvGetString(p3),drvGetString(p4),&_p5,*(QFlags<QFileDialog::Option>*)p6));
+		drvSetString(p7,QFileDialog::getSaveFileName((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),drvGetStringHead(p4),&_p5,*(QFlags<QFileDialog::Option>*)p6));
 		drvSetStringRef(p5,_p5);
 		break;
 	}
@@ -26029,11 +26029,11 @@ int drv_QFileDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 237141: {
-		pThis->selectFile(drvGetString(p1));
+		pThis->selectFile(drvGetStringHead(p1));
 		break;
 	}
 	case 237142: {
-		pThis->selectNameFilter(drvGetString(p1));
+		pThis->selectNameFilter(drvGetStringHead(p1));
 		break;
 	}
 	case 237143: {
@@ -26053,7 +26053,7 @@ int drv_QFileDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 237147: {
-		pThis->setDefaultSuffix(drvGetString(p1));
+		pThis->setDefaultSuffix(drvGetStringHead(p1));
 		break;
 	}
 	case 237148: {
@@ -26062,7 +26062,7 @@ int drv_QFileDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 237149: {
-		pThis->setDirectory(drvGetString(p1));
+		pThis->setDirectory(drvGetStringHead(p1));
 		break;
 	}
 	case 237150: {
@@ -26086,11 +26086,11 @@ int drv_QFileDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 237155: {
-		pThis->setLabelText(*(QFileDialog::DialogLabel*)p1,drvGetString(p2));
+		pThis->setLabelText(*(QFileDialog::DialogLabel*)p1,drvGetStringHead(p2));
 		break;
 	}
 	case 237156: {
-		pThis->setNameFilter(drvGetString(p1));
+		pThis->setNameFilter(drvGetStringHead(p1));
 		break;
 	}
 	case 237157: {
@@ -26165,21 +26165,21 @@ int drv_QFileSystemModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 		break;
 	} 
 	case 238102: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(directoryLoaded(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 238103: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(rootPathChanged(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 238104: {
-		UISignal42 *uis = new UISignal42(pThis,(Iface*)p1);
+		UISignal42 *uis = new UISignal42(pThis);
 		if (QObject::connect(pThis,SIGNAL(fileRenamed(QString const&,QString const&,QString const&)),uis,SLOT(call(QString const&,QString const&,QString const&)))) {
 			*(void**)p2 = uis;
 		}
@@ -26276,11 +26276,11 @@ int drv_QFileSystemModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 		break;
 	}
 	case 238125: {
-		*(void**)p2 = new QModelIndex(pThis->index(drvGetString(p1)));
+		*(void**)p2 = new QModelIndex(pThis->index(drvGetStringHead(p1)));
 		break;
 	}
 	case 238126: {
-		*(void**)p3 = new QModelIndex(pThis->index(drvGetString(p1),*(int*)p2));
+		*(void**)p3 = new QModelIndex(pThis->index(drvGetStringHead(p1),*(int*)p2));
 		break;
 	}
 	case 238127: {
@@ -26311,7 +26311,7 @@ int drv_QFileSystemModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 	}
 	case 238133: {
 		if(p1==0)return -2;
-		*(void**)p3 = new QModelIndex(pThis->mkdir(*(QModelIndex*)(p1),drvGetString(p2)));
+		*(void**)p3 = new QModelIndex(pThis->mkdir(*(QModelIndex*)(p1),drvGetStringHead(p2)));
 		break;
 	}
 	case 238134: {
@@ -26401,7 +26401,7 @@ int drv_QFileSystemModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 		break;
 	}
 	case 238154: {
-		*(void**)p2 = new QModelIndex(pThis->setRootPath(drvGetString(p1)));
+		*(void**)p2 = new QModelIndex(pThis->setRootPath(drvGetStringHead(p1)));
 		break;
 	}
 	case 238155: {
@@ -26446,14 +26446,14 @@ int drv_QFileSystemWatcher(void *_p, int funcid, void* p1,void* p2,void* p3,void
 		break;
 	} 
 	case 239102: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(fileChanged(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 239103: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(directoryChanged(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
@@ -26472,7 +26472,7 @@ int drv_QFileSystemWatcher(void *_p, int funcid, void* p1,void* p2,void* p3,void
 		break;
 	}
 	case 239107: {
-		pThis->addPath(drvGetString(p1));
+		pThis->addPath(drvGetStringHead(p1));
 		break;
 	}
 	case 239108: {
@@ -26488,7 +26488,7 @@ int drv_QFileSystemWatcher(void *_p, int funcid, void* p1,void* p2,void* p3,void
 		break;
 	}
 	case 239111: {
-		pThis->removePath(drvGetString(p1));
+		pThis->removePath(drvGetStringHead(p1));
 		break;
 	}
 	case 239112: {
@@ -26589,7 +26589,7 @@ int drv_QFontComboBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	} 
 	case 242102: {
-		UISignal17 *uis = new UISignal17(pThis,(Iface*)p1);
+		UISignal17 *uis = new UISignal17(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentFontChanged(QFont const&)),uis,SLOT(call(QFont const&)))) {
 			*(void**)p2 = uis;
 		}
@@ -26652,14 +26652,14 @@ int drv_QFontDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	} 
 	case 243102: {
-		UISignal17 *uis = new UISignal17(pThis,(Iface*)p1);
+		UISignal17 *uis = new UISignal17(pThis);
 		if (QObject::connect(pThis,SIGNAL(fontSelected(QFont const&)),uis,SLOT(call(QFont const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 243103: {
-		UISignal17 *uis = new UISignal17(pThis,(Iface*)p1);
+		UISignal17 *uis = new UISignal17(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentFontChanged(QFont const&)),uis,SLOT(call(QFont const&)))) {
 			*(void**)p2 = uis;
 		}
@@ -26705,12 +26705,12 @@ int drv_QFontDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 	}
 	case 243113: {
 		if(p2==0)return -2;
-		*(void**)p5 = new QFont(QFontDialog::getFont(*(bool**)p1,*(QFont*)(p2),(QWidget*)(p3),drvGetString(p4)));
+		*(void**)p5 = new QFont(QFontDialog::getFont(*(bool**)p1,*(QFont*)(p2),(QWidget*)(p3),drvGetStringHead(p4)));
 		break;
 	}
 	case 243114: {
 		if(p2==0)return -2;
-		*(void**)p6 = new QFont(QFontDialog::getFont(*(bool**)p1,*(QFont*)(p2),(QWidget*)(p3),drvGetString(p4),*(QFlags<QFontDialog::FontDialogOption>*)p5));
+		*(void**)p6 = new QFont(QFontDialog::getFont(*(bool**)p1,*(QFont*)(p2),(QWidget*)(p3),drvGetStringHead(p4),*(QFlags<QFontDialog::FontDialogOption>*)p5));
 		break;
 	}
 	case 243115: {
@@ -26790,11 +26790,11 @@ int drv_QFormLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 244107: {
-		pThis->addRow(drvGetString(p1),(QLayout*)(p2));
+		pThis->addRow(drvGetStringHead(p1),(QLayout*)(p2));
 		break;
 	}
 	case 244108: {
-		pThis->addRow(drvGetString(p1),(QWidget*)(p2));
+		pThis->addRow(drvGetStringHead(p1),(QWidget*)(p2));
 		break;
 	}
 	case 244109: {
@@ -26854,11 +26854,11 @@ int drv_QFormLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 244123: {
-		pThis->insertRow(*(int*)p1,drvGetString(p2),(QLayout*)(p3));
+		pThis->insertRow(*(int*)p1,drvGetStringHead(p2),(QLayout*)(p3));
 		break;
 	}
 	case 244124: {
-		pThis->insertRow(*(int*)p1,drvGetString(p2),(QWidget*)(p3));
+		pThis->insertRow(*(int*)p1,drvGetStringHead(p2),(QWidget*)(p3));
 		break;
 	}
 	case 244125: {
@@ -27078,70 +27078,70 @@ int drv_QFutureWatcherBase(void *_p, int funcid, void* p1,void* p2,void* p3,void
 		break;
 	} 
 	case 246102: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(finished()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 246103: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(progressTextChanged(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 246104: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(canceled()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 246105: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(progressValueChanged(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 246106: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(started()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 246107: {
-		UISignal72 *uis = new UISignal72(pThis,(Iface*)p1);
+		UISignal72 *uis = new UISignal72(pThis);
 		if (QObject::connect(pThis,SIGNAL(progressRangeChanged(int,int)),uis,SLOT(call(int,int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 246108: {
-		UISignal72 *uis = new UISignal72(pThis,(Iface*)p1);
+		UISignal72 *uis = new UISignal72(pThis);
 		if (QObject::connect(pThis,SIGNAL(resultsReadyAt(int,int)),uis,SLOT(call(int,int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 246109: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(paused()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 246110: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(resumed()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 246111: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(resultReadyAt(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
@@ -27410,14 +27410,14 @@ int drv_QGraphicsBlurEffect(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 		break;
 	} 
 	case 250102: {
-		UISignal67 *uis = new UISignal67(pThis,(Iface*)p1);
+		UISignal67 *uis = new UISignal67(pThis);
 		if (QObject::connect(pThis,SIGNAL(blurRadiusChanged(double)),uis,SLOT(call(double)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 250103: {
-		UISignal13 *uis = new UISignal13(pThis,(Iface*)p1);
+		UISignal13 *uis = new UISignal13(pThis);
 		if (QObject::connect(pThis,SIGNAL(blurHintsChanged(QFlags<QGraphicsBlurEffect::BlurHint>)),uis,SLOT(call(QFlags<QGraphicsBlurEffect::BlurHint>)))) {
 			*(void**)p2 = uis;
 		}
@@ -27472,14 +27472,14 @@ int drv_QGraphicsColorizeEffect(void *_p, int funcid, void* p1,void* p2,void* p3
 		break;
 	} 
 	case 251102: {
-		UISignal9 *uis = new UISignal9(pThis,(Iface*)p1);
+		UISignal9 *uis = new UISignal9(pThis);
 		if (QObject::connect(pThis,SIGNAL(colorChanged(QColor const&)),uis,SLOT(call(QColor const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 251103: {
-		UISignal67 *uis = new UISignal67(pThis,(Iface*)p1);
+		UISignal67 *uis = new UISignal67(pThis);
 		if (QObject::connect(pThis,SIGNAL(strengthChanged(double)),uis,SLOT(call(double)))) {
 			*(void**)p2 = uis;
 		}
@@ -27530,21 +27530,21 @@ int drv_QGraphicsDropShadowEffect(void *_p, int funcid, void* p1,void* p2,void* 
 		break;
 	} 
 	case 252102: {
-		UISignal67 *uis = new UISignal67(pThis,(Iface*)p1);
+		UISignal67 *uis = new UISignal67(pThis);
 		if (QObject::connect(pThis,SIGNAL(blurRadiusChanged(double)),uis,SLOT(call(double)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 252103: {
-		UISignal30 *uis = new UISignal30(pThis,(Iface*)p1);
+		UISignal30 *uis = new UISignal30(pThis);
 		if (QObject::connect(pThis,SIGNAL(offsetChanged(QPointF const&)),uis,SLOT(call(QPointF const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 252104: {
-		UISignal9 *uis = new UISignal9(pThis,(Iface*)p1);
+		UISignal9 *uis = new UISignal9(pThis);
 		if (QObject::connect(pThis,SIGNAL(colorChanged(QColor const&)),uis,SLOT(call(QColor const&)))) {
 			*(void**)p2 = uis;
 		}
@@ -27633,7 +27633,7 @@ int drv_QGraphicsEffect(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	} 
 	case 253102: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(enabledChanged(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
@@ -28675,7 +28675,7 @@ int drv_QGraphicsItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 256262: {
-		pThis->setToolTip(drvGetString(p1));
+		pThis->setToolTip(drvGetStringHead(p1));
 		break;
 	}
 	case 256263: {
@@ -29418,84 +29418,84 @@ int drv_QGraphicsObject(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	} 
 	case 263102: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(rotationChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 263103: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(yChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 263104: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(scaleChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 263105: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(enabledChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 263106: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(opacityChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 263107: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(visibleChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 263108: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(widthChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 263109: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(heightChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 263110: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(parentChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 263111: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(zChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 263112: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(childrenChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 263113: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(xChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
@@ -29537,14 +29537,14 @@ int drv_QGraphicsOpacityEffect(void *_p, int funcid, void* p1,void* p2,void* p3,
 		break;
 	} 
 	case 264102: {
-		UISignal67 *uis = new UISignal67(pThis,(Iface*)p1);
+		UISignal67 *uis = new UISignal67(pThis);
 		if (QObject::connect(pThis,SIGNAL(opacityChanged(double)),uis,SLOT(call(double)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 264103: {
-		UISignal7 *uis = new UISignal7(pThis,(Iface*)p1);
+		UISignal7 *uis = new UISignal7(pThis);
 		if (QObject::connect(pThis,SIGNAL(opacityMaskChanged(QBrush const&)),uis,SLOT(call(QBrush const&)))) {
 			*(void**)p2 = uis;
 		}
@@ -30049,21 +30049,21 @@ int drv_QGraphicsRotation(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 		break;
 	} 
 	case 270102: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(axisChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 270103: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(angleChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 270104: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(originChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
@@ -30123,35 +30123,35 @@ int drv_QGraphicsScale(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	} 
 	case 271102: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(xScaleChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 271103: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(scaleChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 271104: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(zScaleChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 271105: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(originChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 271106: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(yScaleChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
@@ -30214,21 +30214,21 @@ int drv_QGraphicsScene(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	} 
 	case 272102: {
-		UISignal36 *uis = new UISignal36(pThis,(Iface*)p1);
+		UISignal36 *uis = new UISignal36(pThis);
 		if (QObject::connect(pThis,SIGNAL(sceneRectChanged(QRectF const&)),uis,SLOT(call(QRectF const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 272103: {
-		UISignal21 *uis = new UISignal21(pThis,(Iface*)p1);
+		UISignal21 *uis = new UISignal21(pThis);
 		if (QObject::connect(pThis,SIGNAL(changed(QList<QRectF> const&)),uis,SLOT(call(QList<QRectF> const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 272104: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(selectionChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
@@ -30331,19 +30331,19 @@ int drv_QGraphicsScene(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	}
 	case 272126: {
-		*(void**)p2 = pThis->addSimpleText(drvGetString(p1));
+		*(void**)p2 = pThis->addSimpleText(drvGetStringHead(p1));
 		break;
 	}
 	case 272127: {
-		*(void**)p3 = pThis->addSimpleText(drvGetString(p1),p2==0?QFont():*(QFont*)(p2));
+		*(void**)p3 = pThis->addSimpleText(drvGetStringHead(p1),p2==0?QFont():*(QFont*)(p2));
 		break;
 	}
 	case 272128: {
-		*(void**)p2 = pThis->addText(drvGetString(p1));
+		*(void**)p2 = pThis->addText(drvGetStringHead(p1));
 		break;
 	}
 	case 272129: {
-		*(void**)p3 = pThis->addText(drvGetString(p1),p2==0?QFont():*(QFont*)(p2));
+		*(void**)p3 = pThis->addText(drvGetStringHead(p1),p2==0?QFont():*(QFont*)(p2));
 		break;
 	}
 	case 272130: {
@@ -31371,7 +31371,7 @@ int drv_QGraphicsSimpleTextItem(void *_p, int funcid, void* p1,void* p2,void* p3
 		break;
 	}
 	case 282104: {
-		*(void**)_p = new QGraphicsSimpleTextItem(drvGetString(p1),(QGraphicsItem*)(p2));
+		*(void**)_p = new QGraphicsSimpleTextItem(drvGetStringHead(p1),(QGraphicsItem*)(p2));
 		break;
 	}
 	case 282105: {
@@ -31401,7 +31401,7 @@ int drv_QGraphicsSimpleTextItem(void *_p, int funcid, void* p1,void* p2,void* p3
 		break;
 	}
 	case 282111: {
-		pThis->setText(drvGetString(p1));
+		pThis->setText(drvGetStringHead(p1));
 		break;
 	}
 	case 282112: {
@@ -31432,14 +31432,14 @@ int drv_QGraphicsTextItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 		break;
 	} 
 	case 283102: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(linkActivated(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 283103: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(linkHovered(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
@@ -31454,7 +31454,7 @@ int drv_QGraphicsTextItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 		break;
 	}
 	case 283106: {
-		*(void**)_p = new QGraphicsTextItem(drvGetString(p1),(QGraphicsItem*)(p2));
+		*(void**)_p = new QGraphicsTextItem(drvGetStringHead(p1),(QGraphicsItem*)(p2));
 		break;
 	}
 	case 283107: {
@@ -31595,7 +31595,7 @@ int drv_QGraphicsTextItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 		break;
 	}
 	case 283140: {
-		pThis->setHtml(drvGetString(p1));
+		pThis->setHtml(drvGetStringHead(p1));
 		break;
 	}
 	case 283141: {
@@ -31603,7 +31603,7 @@ int drv_QGraphicsTextItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 		break;
 	}
 	case 283142: {
-		pThis->setPlainText(drvGetString(p1));
+		pThis->setPlainText(drvGetStringHead(p1));
 		break;
 	}
 	case 283143: {
@@ -32220,14 +32220,14 @@ int drv_QGraphicsWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	} 
 	case 286102: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(layoutChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 286103: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(geometryChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
@@ -32386,7 +32386,7 @@ int drv_QGraphicsWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 	}
 	case 286141: {
 		if(p2==0)return -2;
-		*(void**)p3 = new QVariant(pThis->propertyChange(drvGetString(p1),*(QVariant*)(p2)));
+		*(void**)p3 = new QVariant(pThis->propertyChange(drvGetStringHead(p1),*(QVariant*)(p2)));
 		break;
 	}
 	case 286142: {
@@ -32498,7 +32498,7 @@ int drv_QGraphicsWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	}
 	case 286168: {
-		pThis->setWindowTitle(drvGetString(p1));
+		pThis->setWindowTitle(drvGetStringHead(p1));
 		break;
 	}
 	case 286169: {
@@ -32782,21 +32782,21 @@ int drv_QGroupBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	} 
 	case 288102: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(clicked()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 288103: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(clicked(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 288104: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(toggled(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
@@ -32811,7 +32811,7 @@ int drv_QGroupBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 288107: {
-		*(void**)_p = new QGroupBox(drvGetString(p1),(QWidget*)(p2));
+		*(void**)_p = new QGroupBox(drvGetStringHead(p1),(QWidget*)(p2));
 		break;
 	}
 	case 288108: {
@@ -32887,7 +32887,7 @@ int drv_QGroupBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 288126: {
-		pThis->setTitle(drvGetString(p1));
+		pThis->setTitle(drvGetStringHead(p1));
 		break;
 	}
 	case 288127: {
@@ -32933,77 +32933,77 @@ int drv_QHeaderView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	} 
 	case 290102: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(sectionEntered(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 290103: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(sectionPressed(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 290104: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(sectionHandleDoubleClicked(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 290105: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(geometriesChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 290106: {
-		UISignal73 *uis = new UISignal73(pThis,(Iface*)p1);
+		UISignal73 *uis = new UISignal73(pThis);
 		if (QObject::connect(pThis,SIGNAL(sectionResized(int,int,int)),uis,SLOT(call(int,int,int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 290107: {
-		UISignal71 *uis = new UISignal71(pThis,(Iface*)p1);
+		UISignal71 *uis = new UISignal71(pThis);
 		if (QObject::connect(pThis,SIGNAL(sortIndicatorChanged(int,Qt::SortOrder)),uis,SLOT(call(int,Qt::SortOrder)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 290108: {
-		UISignal73 *uis = new UISignal73(pThis,(Iface*)p1);
+		UISignal73 *uis = new UISignal73(pThis);
 		if (QObject::connect(pThis,SIGNAL(sectionMoved(int,int,int)),uis,SLOT(call(int,int,int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 290109: {
-		UISignal69 *uis = new UISignal69(pThis,(Iface*)p1);
+		UISignal69 *uis = new UISignal69(pThis);
 		if (QObject::connect(pThis,SIGNAL(sectionAutoResize(int,QHeaderView::ResizeMode)),uis,SLOT(call(int,QHeaderView::ResizeMode)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 290110: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(sectionDoubleClicked(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 290111: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(sectionClicked(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 290112: {
-		UISignal72 *uis = new UISignal72(pThis,(Iface*)p1);
+		UISignal72 *uis = new UISignal72(pThis);
 		if (QObject::connect(pThis,SIGNAL(sectionCountChanged(int,int)),uis,SLOT(call(int,int)))) {
 			*(void**)p2 = uis;
 		}
@@ -33483,28 +33483,28 @@ int drv_QIODevice(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	} 
 	case 292102: {
-		UISignal75 *uis = new UISignal75(pThis,(Iface*)p1);
+		UISignal75 *uis = new UISignal75(pThis);
 		if (QObject::connect(pThis,SIGNAL(bytesWritten(qint64)),uis,SLOT(call(qint64)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 292103: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(readyRead()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 292104: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(readChannelFinished()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 292105: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(aboutToClose()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
@@ -33623,7 +33623,7 @@ int drv_QIODevice(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 292134: {
-		pThis->setErrorString(drvGetString(p1));
+		pThis->setErrorString(drvGetStringHead(p1));
 		break;
 	}
 	case 292135: {
@@ -33678,42 +33678,42 @@ int drv_QInputDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	} 
 	case 293102: {
-		UISignal67 *uis = new UISignal67(pThis,(Iface*)p1);
+		UISignal67 *uis = new UISignal67(pThis);
 		if (QObject::connect(pThis,SIGNAL(doubleValueSelected(double)),uis,SLOT(call(double)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 293103: {
-		UISignal67 *uis = new UISignal67(pThis,(Iface*)p1);
+		UISignal67 *uis = new UISignal67(pThis);
 		if (QObject::connect(pThis,SIGNAL(doubleValueChanged(double)),uis,SLOT(call(double)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 293104: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(textValueChanged(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 293105: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(intValueChanged(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 293106: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(intValueSelected(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 293107: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(textValueSelected(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
@@ -33756,19 +33756,19 @@ int drv_QInputDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 293117: {
-		*(double*)p10 = QInputDialog::getDouble((QWidget*)(p1),drvGetString(p2),drvGetString(p3),*(double*)p4,*(double*)p5,*(double*)p6,*(int*)p7,*(bool**)p8,*(QFlags<Qt::WindowType>*)p9);
+		*(double*)p10 = QInputDialog::getDouble((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),*(double*)p4,*(double*)p5,*(double*)p6,*(int*)p7,*(bool**)p8,*(QFlags<Qt::WindowType>*)p9);
 		break;
 	}
 	case 293118: {
-		*(int*)p10 = QInputDialog::getInt((QWidget*)(p1),drvGetString(p2),drvGetString(p3),*(int*)p4,*(int*)p5,*(int*)p6,*(int*)p7,*(bool**)p8,*(QFlags<Qt::WindowType>*)p9);
+		*(int*)p10 = QInputDialog::getInt((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),*(int*)p4,*(int*)p5,*(int*)p6,*(int*)p7,*(bool**)p8,*(QFlags<Qt::WindowType>*)p9);
 		break;
 	}
 	case 293119: {
-		drvSetString(p9,QInputDialog::getItem((QWidget*)(p1),drvGetString(p2),drvGetString(p3),drvGetStringArray(p4),*(int*)p5,*(bool*)p6,*(bool**)p7,*(QFlags<Qt::WindowType>*)p8));
+		drvSetString(p9,QInputDialog::getItem((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),drvGetStringArray(p4),*(int*)p5,*(bool*)p6,*(bool**)p7,*(QFlags<Qt::WindowType>*)p8));
 		break;
 	}
 	case 293120: {
-		drvSetString(p8,QInputDialog::getText((QWidget*)(p1),drvGetString(p2),drvGetString(p3),*(QLineEdit::EchoMode*)p4,drvGetString(p5),*(bool**)p6,*(QFlags<Qt::WindowType>*)p7));
+		drvSetString(p8,QInputDialog::getText((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),*(QLineEdit::EchoMode*)p4,drvGetStringHead(p5),*(bool**)p6,*(QFlags<Qt::WindowType>*)p7));
 		break;
 	}
 	case 293121: {
@@ -33820,7 +33820,7 @@ int drv_QInputDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 293133: {
-		pThis->setCancelButtonText(drvGetString(p1));
+		pThis->setCancelButtonText(drvGetStringHead(p1));
 		break;
 	}
 	case 293134: {
@@ -33876,11 +33876,11 @@ int drv_QInputDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 293147: {
-		pThis->setLabelText(drvGetString(p1));
+		pThis->setLabelText(drvGetStringHead(p1));
 		break;
 	}
 	case 293148: {
-		pThis->setOkButtonText(drvGetString(p1));
+		pThis->setOkButtonText(drvGetStringHead(p1));
 		break;
 	}
 	case 293149: {
@@ -33900,7 +33900,7 @@ int drv_QInputDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 293153: {
-		pThis->setTextValue(drvGetString(p1));
+		pThis->setTextValue(drvGetStringHead(p1));
 		break;
 	}
 	case 293154: {
@@ -34044,7 +34044,7 @@ int drv_QItemDelegate(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 	case 295112: {
 		if(p2==0)return -2;
 	if(p3==0)return -2;
-		*(void**)p5 = new QRect(pThis->textRectangle((QPainter*)(p1),*(QRect*)(p2),*(QFont*)(p3),drvGetString(p4)));
+		*(void**)p5 = new QRect(pThis->textRectangle((QPainter*)(p1),*(QRect*)(p2),*(QFont*)(p3),drvGetStringHead(p4)));
 		break;
 	}
 	default:
@@ -34063,28 +34063,28 @@ int drv_QItemSelectionModel(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 		break;
 	} 
 	case 296102: {
-		UISignal26 *uis = new UISignal26(pThis,(Iface*)p1);
+		UISignal26 *uis = new UISignal26(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentRowChanged(QModelIndex const&,QModelIndex const&)),uis,SLOT(call(QModelIndex const&,QModelIndex const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 296103: {
-		UISignal19 *uis = new UISignal19(pThis,(Iface*)p1);
+		UISignal19 *uis = new UISignal19(pThis);
 		if (QObject::connect(pThis,SIGNAL(selectionChanged(QItemSelection const&,QItemSelection const&)),uis,SLOT(call(QItemSelection const&,QItemSelection const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 296104: {
-		UISignal26 *uis = new UISignal26(pThis,(Iface*)p1);
+		UISignal26 *uis = new UISignal26(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentChanged(QModelIndex const&,QModelIndex const&)),uis,SLOT(call(QModelIndex const&,QModelIndex const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 296105: {
-		UISignal26 *uis = new UISignal26(pThis,(Iface*)p1);
+		UISignal26 *uis = new UISignal26(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentColumnChanged(QModelIndex const&,QModelIndex const&)),uis,SLOT(call(QModelIndex const&,QModelIndex const&)))) {
 			*(void**)p2 = uis;
 		}
@@ -34259,7 +34259,7 @@ int drv_QLCDNumber(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	} 
 	case 298102: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(overflow()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
@@ -34290,7 +34290,7 @@ int drv_QLCDNumber(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	}
 	case 298109: {
-		pThis->display(drvGetString(p1));
+		pThis->display(drvGetStringHead(p1));
 		break;
 	}
 	case 298110: {
@@ -34381,14 +34381,14 @@ int drv_QLabel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 		break;
 	} 
 	case 299102: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(linkActivated(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 299103: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(linkHovered(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
@@ -34403,7 +34403,7 @@ int drv_QLabel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 		break;
 	}
 	case 299106: {
-		*(void**)_p = new QLabel(drvGetString(p1),(QWidget*)(p2),*(QFlags<Qt::WindowType>*)p3);
+		*(void**)_p = new QLabel(drvGetStringHead(p1),(QWidget*)(p2),*(QFlags<Qt::WindowType>*)p3);
 		break;
 	}
 	case 299107: {
@@ -34561,7 +34561,7 @@ int drv_QLabel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 		break;
 	}
 	case 299145: {
-		pThis->setText(drvGetString(p1));
+		pThis->setText(drvGetStringHead(p1));
 		break;
 	}
 	case 299146: {
@@ -34827,15 +34827,15 @@ int drv_QLibrary(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 301104: {
-		*(void**)_p = new QLibrary(drvGetString(p1),(QObject*)(p2));
+		*(void**)_p = new QLibrary(drvGetStringHead(p1),(QObject*)(p2));
 		break;
 	}
 	case 301105: {
-		*(void**)_p = new QLibrary(drvGetString(p1),drvGetString(p2),(QObject*)(p3));
+		*(void**)_p = new QLibrary(drvGetStringHead(p1),drvGetStringHead(p2),(QObject*)(p3));
 		break;
 	}
 	case 301106: {
-		*(void**)_p = new QLibrary(drvGetString(p1),*(int*)p2,(QObject*)(p3));
+		*(void**)_p = new QLibrary(drvGetStringHead(p1),*(int*)p2,(QObject*)(p3));
 		break;
 	}
 	case 301107: {
@@ -34847,7 +34847,7 @@ int drv_QLibrary(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 301109: {
-		*(bool*)p2 = QLibrary::isLibrary(drvGetString(p1));
+		*(bool*)p2 = QLibrary::isLibrary(drvGetStringHead(p1));
 		break;
 	}
 	case 301110: {
@@ -34872,38 +34872,38 @@ int drv_QLibrary(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 	}
 	case 301114: {
 #ifdef QTDRV_QT5
-		*(QFunctionPointer*)p3 = QLibrary::resolve(drvGetString(p1),drvGet_const_char(p2));
+		*(QFunctionPointer*)p3 = QLibrary::resolve(drvGetStringHead(p1),drvGet_const_char(p2));
 #else
-		*(void**)p3 = QLibrary::resolve(drvGetString(p1),drvGet_const_char(p2));
+		*(void**)p3 = QLibrary::resolve(drvGetStringHead(p1),drvGet_const_char(p2));
 #endif		
 		break;
 	}
 	case 301115: {
 #ifdef QTDRV_QT5
-		*(QFunctionPointer*)p4 = QLibrary::resolve(drvGetString(p1),drvGetString(p2),drvGet_const_char(p3));
+		*(QFunctionPointer*)p4 = QLibrary::resolve(drvGetStringHead(p1),drvGetStringHead(p2),drvGet_const_char(p3));
 #else
-		*(void**)p4 = QLibrary::resolve(drvGetString(p1),drvGetString(p2),drvGet_const_char(p3));
+		*(void**)p4 = QLibrary::resolve(drvGetStringHead(p1),drvGetStringHead(p2),drvGet_const_char(p3));
 #endif		
 		break;
 	}
 	case 301116: {
 #ifdef QTDRV_QT5
-		*(QFunctionPointer*)p4 = QLibrary::resolve(drvGetString(p1),*(int*)p2,drvGet_const_char(p3));
+		*(QFunctionPointer*)p4 = QLibrary::resolve(drvGetStringHead(p1),*(int*)p2,drvGet_const_char(p3));
 #else
-		*(void**)p4 = QLibrary::resolve(drvGetString(p1),*(int*)p2,drvGet_const_char(p3));
+		*(void**)p4 = QLibrary::resolve(drvGetStringHead(p1),*(int*)p2,drvGet_const_char(p3));
 #endif		
 		break;
 	}
 	case 301117: {
-		pThis->setFileName(drvGetString(p1));
+		pThis->setFileName(drvGetStringHead(p1));
 		break;
 	}
 	case 301118: {
-		pThis->setFileNameAndVersion(drvGetString(p1),drvGetString(p2));
+		pThis->setFileNameAndVersion(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 301119: {
-		pThis->setFileNameAndVersion(drvGetString(p1),*(int*)p2);
+		pThis->setFileNameAndVersion(drvGetStringHead(p1),*(int*)p2);
 		break;
 	}
 	case 301120: {
@@ -34930,42 +34930,42 @@ int drv_QLineEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	} 
 	case 302102: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(textEdited(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 302103: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(returnPressed()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 302104: {
-		UISignal72 *uis = new UISignal72(pThis,(Iface*)p1);
+		UISignal72 *uis = new UISignal72(pThis);
 		if (QObject::connect(pThis,SIGNAL(cursorPositionChanged(int,int)),uis,SLOT(call(int,int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 302105: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(selectionChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 302106: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(textChanged(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 302107: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(editingFinished()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
@@ -34980,7 +34980,7 @@ int drv_QLineEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 302110: {
-		*(void**)_p = new QLineEdit(drvGetString(p1),(QWidget*)(p2));
+		*(void**)_p = new QLineEdit(drvGetStringHead(p1),(QWidget*)(p2));
 		break;
 	}
 	case 302111: {
@@ -35141,7 +35141,7 @@ int drv_QLineEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 302150: {
-		pThis->insert(drvGetString(p1));
+		pThis->insert(drvGetStringHead(p1));
 		break;
 	}
 	case 302151: {
@@ -35241,7 +35241,7 @@ int drv_QLineEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 302175: {
-		pThis->setInputMask(drvGetString(p1));
+		pThis->setInputMask(drvGetStringHead(p1));
 		break;
 	}
 	case 302176: {
@@ -35253,7 +35253,7 @@ int drv_QLineEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 302178: {
-		pThis->setPlaceholderText(drvGetString(p1));
+		pThis->setPlaceholderText(drvGetStringHead(p1));
 		break;
 	}
 	case 302179: {
@@ -35265,7 +35265,7 @@ int drv_QLineEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 302181: {
-		pThis->setText(drvGetString(p1));
+		pThis->setText(drvGetStringHead(p1));
 		break;
 	}
 	case 302182: {
@@ -35317,7 +35317,7 @@ int drv_QListView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	} 
 	case 303102: {
-		UISignal20 *uis = new UISignal20(pThis,(Iface*)p1);
+		UISignal20 *uis = new UISignal20(pThis);
 		if (QObject::connect(pThis,SIGNAL(indexesMoved(QList<QModelIndex> const&)),uis,SLOT(call(QList<QModelIndex> const&)))) {
 			*(void**)p2 = uis;
 		}
@@ -35623,70 +35623,70 @@ int drv_QListWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	} 
 	case 304102: {
-		UISignal22 *uis = new UISignal22(pThis,(Iface*)p1);
+		UISignal22 *uis = new UISignal22(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemActivated(QListWidgetItem*)),uis,SLOT(call(QListWidgetItem*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 304103: {
-		UISignal22 *uis = new UISignal22(pThis,(Iface*)p1);
+		UISignal22 *uis = new UISignal22(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemPressed(QListWidgetItem*)),uis,SLOT(call(QListWidgetItem*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 304104: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentRowChanged(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 304105: {
-		UISignal22 *uis = new UISignal22(pThis,(Iface*)p1);
+		UISignal22 *uis = new UISignal22(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemClicked(QListWidgetItem*)),uis,SLOT(call(QListWidgetItem*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 304106: {
-		UISignal22 *uis = new UISignal22(pThis,(Iface*)p1);
+		UISignal22 *uis = new UISignal22(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemChanged(QListWidgetItem*)),uis,SLOT(call(QListWidgetItem*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 304107: {
-		UISignal22 *uis = new UISignal22(pThis,(Iface*)p1);
+		UISignal22 *uis = new UISignal22(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemDoubleClicked(QListWidgetItem*)),uis,SLOT(call(QListWidgetItem*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 304108: {
-		UISignal22 *uis = new UISignal22(pThis,(Iface*)p1);
+		UISignal22 *uis = new UISignal22(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemEntered(QListWidgetItem*)),uis,SLOT(call(QListWidgetItem*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 304109: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemSelectionChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 304110: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentTextChanged(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 304111: {
-		UISignal23 *uis = new UISignal23(pThis,(Iface*)p1);
+		UISignal23 *uis = new UISignal23(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentItemChanged(QListWidgetItem*,QListWidgetItem*)),uis,SLOT(call(QListWidgetItem*,QListWidgetItem*)))) {
 			*(void**)p2 = uis;
 		}
@@ -35705,7 +35705,7 @@ int drv_QListWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 304115: {
-		pThis->addItem(drvGetString(p1));
+		pThis->addItem(drvGetStringHead(p1));
 		break;
 	}
 	case 304116: {
@@ -35749,7 +35749,7 @@ int drv_QListWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 304126: {
-		drvSetListObj<QListWidgetItem*>(p3,71000,pThis->findItems(drvGetString(p1),*(QFlags<Qt::MatchFlag>*)p2));
+		drvSetListObj<QListWidgetItem*>(p3,71000,pThis->findItems(drvGetStringHead(p1),*(QFlags<Qt::MatchFlag>*)p2));
 		break;
 	}
 	case 304127: {
@@ -35761,7 +35761,7 @@ int drv_QListWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 304129: {
-		pThis->insertItem(*(int*)p1,drvGetString(p2));
+		pThis->insertItem(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
 	case 304130: {
@@ -35906,14 +35906,14 @@ int drv_QMainWindow(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	} 
 	case 305102: {
-		UISignal65 *uis = new UISignal65(pThis,(Iface*)p1);
+		UISignal65 *uis = new UISignal65(pThis);
 		if (QObject::connect(pThis,SIGNAL(toolButtonStyleChanged(Qt::ToolButtonStyle)),uis,SLOT(call(Qt::ToolButtonStyle)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 305103: {
-		UISignal38 *uis = new UISignal38(pThis,(Iface*)p1);
+		UISignal38 *uis = new UISignal38(pThis);
 		if (QObject::connect(pThis,SIGNAL(iconSizeChanged(QSize const&)),uis,SLOT(call(QSize const&)))) {
 			*(void**)p2 = uis;
 		}
@@ -35936,7 +35936,7 @@ int drv_QMainWindow(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 305108: {
-		*(void**)p2 = pThis->addToolBar(drvGetString(p1));
+		*(void**)p2 = pThis->addToolBar(drvGetStringHead(p1));
 		break;
 	}
 	case 305109: {
@@ -36165,7 +36165,7 @@ int drv_QMdiArea(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	} 
 	case 306102: {
-		UISignal24 *uis = new UISignal24(pThis,(Iface*)p1);
+		UISignal24 *uis = new UISignal24(pThis);
 		if (QObject::connect(pThis,SIGNAL(subWindowActivated(QMdiSubWindow*)),uis,SLOT(call(QMdiSubWindow*)))) {
 			*(void**)p2 = uis;
 		}
@@ -36360,14 +36360,14 @@ int drv_QMdiSubWindow(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	} 
 	case 307102: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(aboutToActivate()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 307103: {
-		UISignal16 *uis = new UISignal16(pThis,(Iface*)p1);
+		UISignal16 *uis = new UISignal16(pThis);
 		if (QObject::connect(pThis,SIGNAL(windowStateChanged(QFlags<Qt::WindowState>,QFlags<Qt::WindowState>)),uis,SLOT(call(QFlags<Qt::WindowState>,QFlags<Qt::WindowState>)))) {
 			*(void**)p2 = uis;
 		}
@@ -36553,28 +36553,28 @@ int drv_QMenu(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	} 
 	case 308102: {
-		UISignal6 *uis = new UISignal6(pThis,(Iface*)p1);
+		UISignal6 *uis = new UISignal6(pThis);
 		if (QObject::connect(pThis,SIGNAL(hovered(QAction*)),uis,SLOT(call(QAction*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 308103: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(aboutToHide()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 308104: {
-		UISignal6 *uis = new UISignal6(pThis,(Iface*)p1);
+		UISignal6 *uis = new UISignal6(pThis);
 		if (QObject::connect(pThis,SIGNAL(triggered(QAction*)),uis,SLOT(call(QAction*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 308105: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(aboutToShow()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
@@ -36589,7 +36589,7 @@ int drv_QMenu(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	}
 	case 308108: {
-		*(void**)_p = new QMenu(drvGetString(p1),(QWidget*)(p2));
+		*(void**)_p = new QMenu(drvGetStringHead(p1),(QWidget*)(p2));
 		break;
 	}
 	case 308109: {
@@ -36614,21 +36614,21 @@ int drv_QMenu(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	}
 	case 308114: {
-		*(void**)p2 = pThis->addAction(drvGetString(p1));
+		*(void**)p2 = pThis->addAction(drvGetStringHead(p1));
 		break;
 	}
 	case 308115: {
 		if(p1==0)return -2;
-		*(void**)p3 = pThis->addAction(*(QIcon*)(p1),drvGetString(p2));
+		*(void**)p3 = pThis->addAction(*(QIcon*)(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 308116: {
-		*(void**)p5 = pThis->addAction(drvGetString(p1),(QObject*)(p2),drvGet_const_char(p3),p4==0?QKeySequence():*(QKeySequence*)(p4));
+		*(void**)p5 = pThis->addAction(drvGetStringHead(p1),(QObject*)(p2),drvGet_const_char(p3),p4==0?QKeySequence():*(QKeySequence*)(p4));
 		break;
 	}
 	case 308117: {
 		if(p1==0)return -2;
-		*(void**)p6 = pThis->addAction(*(QIcon*)(p1),drvGetString(p2),(QObject*)(p3),drvGet_const_char(p4),p5==0?QKeySequence():*(QKeySequence*)(p5));
+		*(void**)p6 = pThis->addAction(*(QIcon*)(p1),drvGetStringHead(p2),(QObject*)(p3),drvGet_const_char(p4),p5==0?QKeySequence():*(QKeySequence*)(p5));
 		break;
 	}
 	case 308118: {
@@ -36636,12 +36636,12 @@ int drv_QMenu(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	}
 	case 308119: {
-		*(void**)p2 = pThis->addMenu(drvGetString(p1));
+		*(void**)p2 = pThis->addMenu(drvGetStringHead(p1));
 		break;
 	}
 	case 308120: {
 		if(p1==0)return -2;
-		*(void**)p3 = pThis->addMenu(*(QIcon*)(p1),drvGetString(p2));
+		*(void**)p3 = pThis->addMenu(*(QIcon*)(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 308121: {
@@ -36800,7 +36800,7 @@ int drv_QMenu(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	}
 	case 308158: {
-		pThis->setTitle(drvGetString(p1));
+		pThis->setTitle(drvGetStringHead(p1));
 		break;
 	}
 	case 308159: {
@@ -36835,14 +36835,14 @@ int drv_QMenuBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	} 
 	case 309102: {
-		UISignal6 *uis = new UISignal6(pThis,(Iface*)p1);
+		UISignal6 *uis = new UISignal6(pThis);
 		if (QObject::connect(pThis,SIGNAL(hovered(QAction*)),uis,SLOT(call(QAction*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 309103: {
-		UISignal6 *uis = new UISignal6(pThis,(Iface*)p1);
+		UISignal6 *uis = new UISignal6(pThis);
 		if (QObject::connect(pThis,SIGNAL(triggered(QAction*)),uis,SLOT(call(QAction*)))) {
 			*(void**)p2 = uis;
 		}
@@ -36878,11 +36878,11 @@ int drv_QMenuBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 309111: {
-		*(void**)p2 = pThis->addAction(drvGetString(p1));
+		*(void**)p2 = pThis->addAction(drvGetStringHead(p1));
 		break;
 	}
 	case 309112: {
-		*(void**)p4 = pThis->addAction(drvGetString(p1),(QObject*)(p2),drvGet_const_char(p3));
+		*(void**)p4 = pThis->addAction(drvGetStringHead(p1),(QObject*)(p2),drvGet_const_char(p3));
 		break;
 	}
 	case 309113: {
@@ -36890,12 +36890,12 @@ int drv_QMenuBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 309114: {
-		*(void**)p2 = pThis->addMenu(drvGetString(p1));
+		*(void**)p2 = pThis->addMenu(drvGetStringHead(p1));
 		break;
 	}
 	case 309115: {
 		if(p1==0)return -2;
-		*(void**)p3 = pThis->addMenu(*(QIcon*)(p1),drvGetString(p2));
+		*(void**)p3 = pThis->addMenu(*(QIcon*)(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 309116: {
@@ -37034,7 +37034,7 @@ int drv_QMessageBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	} 
 	case 310102: {
-		UISignal5 *uis = new UISignal5(pThis,(Iface*)p1);
+		UISignal5 *uis = new UISignal5(pThis);
 		if (QObject::connect(pThis,SIGNAL(buttonClicked(QAbstractButton*)),uis,SLOT(call(QAbstractButton*)))) {
 			*(void**)p2 = uis;
 		}
@@ -37049,15 +37049,15 @@ int drv_QMessageBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 310105: {
-		*(void**)_p = new QMessageBox(*(QMessageBox::Icon*)p1,drvGetString(p2),drvGetString(p3),*(QFlags<QMessageBox::StandardButton>*)p4,(QWidget*)(p5),*(QFlags<Qt::WindowType>*)p6);
+		*(void**)_p = new QMessageBox(*(QMessageBox::Icon*)p1,drvGetStringHead(p2),drvGetStringHead(p3),*(QFlags<QMessageBox::StandardButton>*)p4,(QWidget*)(p5),*(QFlags<Qt::WindowType>*)p6);
 		break;
 	}
 	case 310106: {
-		*(void**)_p = new QMessageBox(drvGetString(p1),drvGetString(p2),*(QMessageBox::Icon*)p3,*(int*)p4,*(int*)p5,*(int*)p6,(QWidget*)(p7),*(QFlags<Qt::WindowType>*)p8);
+		*(void**)_p = new QMessageBox(drvGetStringHead(p1),drvGetStringHead(p2),*(QMessageBox::Icon*)p3,*(int*)p4,*(int*)p5,*(int*)p6,(QWidget*)(p7),*(QFlags<Qt::WindowType>*)p8);
 		break;
 	}
 	case 310107: {
-		QMessageBox::about((QWidget*)(p1),drvGetString(p2),drvGetString(p3));
+		QMessageBox::about((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3));
 		break;
 	}
 	case 310108: {
@@ -37065,7 +37065,7 @@ int drv_QMessageBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 310109: {
-		QMessageBox::aboutQt((QWidget*)(p1),drvGetString(p2));
+		QMessageBox::aboutQt((QWidget*)(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 310110: {
@@ -37077,7 +37077,7 @@ int drv_QMessageBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 310112: {
-		*(void**)p3 = pThis->addButton(drvGetString(p1),*(QMessageBox::ButtonRole*)p2);
+		*(void**)p3 = pThis->addButton(drvGetStringHead(p1),*(QMessageBox::ButtonRole*)p2);
 		break;
 	}
 	case 310113: {
@@ -37109,15 +37109,15 @@ int drv_QMessageBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 310120: {
-		*(QMessageBox::StandardButton*)p6 = QMessageBox::critical((QWidget*)(p1),drvGetString(p2),drvGetString(p3),*(QFlags<QMessageBox::StandardButton>*)p4,*(QMessageBox::StandardButton*)p5);
+		*(QMessageBox::StandardButton*)p6 = QMessageBox::critical((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),*(QFlags<QMessageBox::StandardButton>*)p4,*(QMessageBox::StandardButton*)p5);
 		break;
 	}
 	case 310121: {
-		*(int*)p7 = QMessageBox::critical((QWidget*)(p1),drvGetString(p2),drvGetString(p3),*(int*)p4,*(int*)p5,*(int*)p6);
+		*(int*)p7 = QMessageBox::critical((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),*(int*)p4,*(int*)p5,*(int*)p6);
 		break;
 	}
 	case 310122: {
-		*(int*)p9 = QMessageBox::critical((QWidget*)(p1),drvGetString(p2),drvGetString(p3),drvGetString(p4),drvGetString(p5),drvGetString(p6),*(int*)p7,*(int*)p8);
+		*(int*)p9 = QMessageBox::critical((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),drvGetStringHead(p4),drvGetStringHead(p5),drvGetStringHead(p6),*(int*)p7,*(int*)p8);
 		break;
 	}
 	case 310123: {
@@ -37145,15 +37145,15 @@ int drv_QMessageBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 310129: {
-		*(QMessageBox::StandardButton*)p6 = QMessageBox::information((QWidget*)(p1),drvGetString(p2),drvGetString(p3),*(QFlags<QMessageBox::StandardButton>*)p4,*(QMessageBox::StandardButton*)p5);
+		*(QMessageBox::StandardButton*)p6 = QMessageBox::information((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),*(QFlags<QMessageBox::StandardButton>*)p4,*(QMessageBox::StandardButton*)p5);
 		break;
 	}
 	case 310130: {
-		*(int*)p7 = QMessageBox::information((QWidget*)(p1),drvGetString(p2),drvGetString(p3),*(int*)p4,*(int*)p5,*(int*)p6);
+		*(int*)p7 = QMessageBox::information((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),*(int*)p4,*(int*)p5,*(int*)p6);
 		break;
 	}
 	case 310131: {
-		*(int*)p9 = QMessageBox::information((QWidget*)(p1),drvGetString(p2),drvGetString(p3),drvGetString(p4),drvGetString(p5),drvGetString(p6),*(int*)p7,*(int*)p8);
+		*(int*)p9 = QMessageBox::information((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),drvGetStringHead(p4),drvGetStringHead(p5),drvGetStringHead(p6),*(int*)p7,*(int*)p8);
 		break;
 	}
 	case 310132: {
@@ -37173,15 +37173,15 @@ int drv_QMessageBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 310136: {
-		*(QMessageBox::StandardButton*)p6 = QMessageBox::question((QWidget*)(p1),drvGetString(p2),drvGetString(p3),*(QFlags<QMessageBox::StandardButton>*)p4,*(QMessageBox::StandardButton*)p5);
+		*(QMessageBox::StandardButton*)p6 = QMessageBox::question((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),*(QFlags<QMessageBox::StandardButton>*)p4,*(QMessageBox::StandardButton*)p5);
 		break;
 	}
 	case 310137: {
-		*(int*)p7 = QMessageBox::question((QWidget*)(p1),drvGetString(p2),drvGetString(p3),*(int*)p4,*(int*)p5,*(int*)p6);
+		*(int*)p7 = QMessageBox::question((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),*(int*)p4,*(int*)p5,*(int*)p6);
 		break;
 	}
 	case 310138: {
-		*(int*)p9 = QMessageBox::question((QWidget*)(p1),drvGetString(p2),drvGetString(p3),drvGetString(p4),drvGetString(p5),drvGetString(p6),*(int*)p7,*(int*)p8);
+		*(int*)p9 = QMessageBox::question((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),drvGetStringHead(p4),drvGetStringHead(p5),drvGetStringHead(p6),*(int*)p7,*(int*)p8);
 		break;
 	}
 	case 310139: {
@@ -37193,7 +37193,7 @@ int drv_QMessageBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 310141: {
-		pThis->setButtonText(*(int*)p1,drvGetString(p2));
+		pThis->setButtonText(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
 	case 310142: {
@@ -37205,7 +37205,7 @@ int drv_QMessageBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 310144: {
-		pThis->setDetailedText(drvGetString(p1));
+		pThis->setDetailedText(drvGetStringHead(p1));
 		break;
 	}
 	case 310145: {
@@ -37226,7 +37226,7 @@ int drv_QMessageBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 310149: {
-		pThis->setInformativeText(drvGetString(p1));
+		pThis->setInformativeText(drvGetStringHead(p1));
 		break;
 	}
 	case 310150: {
@@ -37234,7 +37234,7 @@ int drv_QMessageBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 310151: {
-		pThis->setText(drvGetString(p1));
+		pThis->setText(drvGetStringHead(p1));
 		break;
 	}
 	case 310152: {
@@ -37246,7 +37246,7 @@ int drv_QMessageBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 310154: {
-		pThis->setWindowTitle(drvGetString(p1));
+		pThis->setWindowTitle(drvGetStringHead(p1));
 		break;
 	}
 	case 310155: {
@@ -37278,15 +37278,15 @@ int drv_QMessageBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 310162: {
-		*(QMessageBox::StandardButton*)p6 = QMessageBox::warning((QWidget*)(p1),drvGetString(p2),drvGetString(p3),*(QFlags<QMessageBox::StandardButton>*)p4,*(QMessageBox::StandardButton*)p5);
+		*(QMessageBox::StandardButton*)p6 = QMessageBox::warning((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),*(QFlags<QMessageBox::StandardButton>*)p4,*(QMessageBox::StandardButton*)p5);
 		break;
 	}
 	case 310163: {
-		*(int*)p7 = QMessageBox::warning((QWidget*)(p1),drvGetString(p2),drvGetString(p3),*(int*)p4,*(int*)p5,*(int*)p6);
+		*(int*)p7 = QMessageBox::warning((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),*(int*)p4,*(int*)p5,*(int*)p6);
 		break;
 	}
 	case 310164: {
-		*(int*)p9 = QMessageBox::warning((QWidget*)(p1),drvGetString(p2),drvGetString(p3),drvGetString(p4),drvGetString(p5),drvGetString(p6),*(int*)p7,*(int*)p8);
+		*(int*)p9 = QMessageBox::warning((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),drvGetStringHead(p4),drvGetStringHead(p5),drvGetStringHead(p6),*(int*)p7,*(int*)p8);
 		break;
 	}
 	default:
@@ -37317,7 +37317,7 @@ int drv_QMimeData(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 311105: {
-		drvSetByteArray(p2,pThis->data(drvGetString(p1)));
+		drvSetByteArray(p2,pThis->data(drvGetStringHead(p1)));
 		break;
 	}
 	case 311106: {
@@ -37329,7 +37329,7 @@ int drv_QMimeData(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 311108: {
-		*(bool*)p2 = pThis->hasFormat(drvGetString(p1));
+		*(bool*)p2 = pThis->hasFormat(drvGetStringHead(p1));
 		break;
 	}
 	case 311109: {
@@ -37357,11 +37357,11 @@ int drv_QMimeData(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 311115: {
-		pThis->removeFormat(drvGetString(p1));
+		pThis->removeFormat(drvGetStringHead(p1));
 		break;
 	}
 	case 311116: {
-		*(void**)p3 = new QVariant(pThis->retrieveData(drvGetString(p1),*(QVariant::Type*)p2));
+		*(void**)p3 = new QVariant(pThis->retrieveData(drvGetStringHead(p1),*(QVariant::Type*)p2));
 		break;
 	}
 	case 311117: {
@@ -37370,11 +37370,11 @@ int drv_QMimeData(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 311118: {
-		pThis->setData(drvGetString(p1),drvGetByteArray(p2));
+		pThis->setData(drvGetStringHead(p1),drvGetByteArray(p2));
 		break;
 	}
 	case 311119: {
-		pThis->setHtml(drvGetString(p1));
+		pThis->setHtml(drvGetStringHead(p1));
 		break;
 	}
 	case 311120: {
@@ -37383,7 +37383,7 @@ int drv_QMimeData(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 311121: {
-		pThis->setText(drvGetString(p1));
+		pThis->setText(drvGetStringHead(p1));
 		break;
 	}
 	case 311122: {
@@ -37474,49 +37474,49 @@ int drv_QMovie(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 		break;
 	} 
 	case 313102: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(frameChanged(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 313103: {
-		UISignal18 *uis = new UISignal18(pThis,(Iface*)p1);
+		UISignal18 *uis = new UISignal18(pThis);
 		if (QObject::connect(pThis,SIGNAL(error(QImageReader::ImageReaderError)),uis,SLOT(call(QImageReader::ImageReaderError)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 313104: {
-		UISignal38 *uis = new UISignal38(pThis,(Iface*)p1);
+		UISignal38 *uis = new UISignal38(pThis);
 		if (QObject::connect(pThis,SIGNAL(resized(QSize const&)),uis,SLOT(call(QSize const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 313105: {
-		UISignal27 *uis = new UISignal27(pThis,(Iface*)p1);
+		UISignal27 *uis = new UISignal27(pThis);
 		if (QObject::connect(pThis,SIGNAL(stateChanged(QMovie::MovieState)),uis,SLOT(call(QMovie::MovieState)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 313106: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(started()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 313107: {
-		UISignal34 *uis = new UISignal34(pThis,(Iface*)p1);
+		UISignal34 *uis = new UISignal34(pThis);
 		if (QObject::connect(pThis,SIGNAL(updated(QRect const&)),uis,SLOT(call(QRect const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 313108: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(finished()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
@@ -37535,7 +37535,7 @@ int drv_QMovie(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 		break;
 	}
 	case 313112: {
-		*(void**)_p = new QMovie(drvGetString(p1),drvGetByteArray(p2),(QObject*)(p3));
+		*(void**)_p = new QMovie(drvGetStringHead(p1),drvGetByteArray(p2),(QObject*)(p3));
 		break;
 	}
 	case 313113: {
@@ -37616,7 +37616,7 @@ int drv_QMovie(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 		break;
 	}
 	case 313132: {
-		pThis->setFileName(drvGetString(p1));
+		pThis->setFileName(drvGetStringHead(p1));
 		break;
 	}
 	case 313133: {
@@ -37672,14 +37672,14 @@ int drv_QObject(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,voi
 		break;
 	} 
 	case 314102: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(destroyed()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 314103: {
-		UISignal28 *uis = new UISignal28(pThis,(Iface*)p1);
+		UISignal28 *uis = new UISignal28(pThis);
 		if (QObject::connect(pThis,SIGNAL(destroyed(QObject*)),uis,SLOT(call(QObject*)))) {
 			*(void**)p2 = uis;
 		}
@@ -37722,11 +37722,11 @@ int drv_QObject(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,voi
 		break;
 	}
 	case 314113: {
-		*(void**)p2 = pThis->findChild<QObject*>(drvGetString(p1));
+		*(void**)p2 = pThis->findChild<QObject*>(drvGetStringHead(p1));
 		break;
 	}
 	case 314114: {
-		drvSetObjectArray(p2,314000,pThis->findChildren<QObject*>(drvGetString(p1)));
+		drvSetObjectArray(p2,314000,pThis->findChildren<QObject*>(drvGetStringHead(p1)));
 		break;
 	}
 	case 314115: {
@@ -37775,7 +37775,7 @@ int drv_QObject(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,voi
 		break;
 	}
 	case 314126: {
-		pThis->setObjectName(drvGetString(p1));
+		pThis->setObjectName(drvGetStringHead(p1));
 		break;
 	}
 	case 314127: {
@@ -38178,63 +38178,63 @@ int drv_QPlainTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	} 
 	case 321102: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(copyAvailable(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 321103: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(undoAvailable(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 321104: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(blockCountChanged(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 321105: {
-		UISignal35 *uis = new UISignal35(pThis,(Iface*)p1);
+		UISignal35 *uis = new UISignal35(pThis);
 		if (QObject::connect(pThis,SIGNAL(updateRequest(QRect const&,int)),uis,SLOT(call(QRect const&,int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 321106: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(modificationChanged(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 321107: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(cursorPositionChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 321108: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(selectionChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 321109: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(textChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 321110: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(redoAvailable(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
@@ -38249,7 +38249,7 @@ int drv_QPlainTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	}
 	case 321113: {
-		*(void**)_p = new QPlainTextEdit(drvGetString(p1),(QWidget*)(p2));
+		*(void**)_p = new QPlainTextEdit(drvGetStringHead(p1),(QWidget*)(p2));
 		break;
 	}
 	case 321114: {
@@ -38258,11 +38258,11 @@ int drv_QPlainTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	}
 	case 321115: {
-		pThis->appendHtml(drvGetString(p1));
+		pThis->appendHtml(drvGetStringHead(p1));
 		break;
 	}
 	case 321116: {
-		pThis->appendPlainText(drvGetString(p1));
+		pThis->appendPlainText(drvGetStringHead(p1));
 		break;
 	}
 	case 321117: {
@@ -38390,11 +38390,11 @@ int drv_QPlainTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	}
 	case 321147: {
-		*(bool*)p2 = pThis->find(drvGetString(p1));
+		*(bool*)p2 = pThis->find(drvGetStringHead(p1));
 		break;
 	}
 	case 321148: {
-		*(bool*)p3 = pThis->find(drvGetString(p1),*(QFlags<QTextDocument::FindFlag>*)p2);
+		*(bool*)p3 = pThis->find(drvGetStringHead(p1),*(QFlags<QTextDocument::FindFlag>*)p2);
 		break;
 	}
 	case 321149: {
@@ -38430,7 +38430,7 @@ int drv_QPlainTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	}
 	case 321157: {
-		pThis->insertPlainText(drvGetString(p1));
+		pThis->insertPlainText(drvGetStringHead(p1));
 		break;
 	}
 	case 321158: {
@@ -38545,7 +38545,7 @@ int drv_QPlainTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	}
 	case 321185: {
-		pThis->setDocumentTitle(drvGetString(p1));
+		pThis->setDocumentTitle(drvGetStringHead(p1));
 		break;
 	}
 	case 321186: {
@@ -38565,7 +38565,7 @@ int drv_QPlainTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	}
 	case 321190: {
-		pThis->setPlainText(drvGetString(p1));
+		pThis->setPlainText(drvGetStringHead(p1));
 		break;
 	}
 	case 321191: {
@@ -38661,7 +38661,7 @@ int drv_QPluginLoader(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 322104: {
-		*(void**)_p = new QPluginLoader(drvGetString(p1),(QObject*)(p2));
+		*(void**)_p = new QPluginLoader(drvGetStringHead(p1),(QObject*)(p2));
 		break;
 	}
 	case 322105: {
@@ -38689,7 +38689,7 @@ int drv_QPluginLoader(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 322111: {
-		pThis->setFileName(drvGetString(p1));
+		pThis->setFileName(drvGetStringHead(p1));
 		break;
 	}
 	case 322112: {
@@ -38720,7 +38720,7 @@ int drv_QPrintDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	} 
 	case 323102: {
-		UISignal31 *uis = new UISignal31(pThis,(Iface*)p1);
+		UISignal31 *uis = new UISignal31(pThis);
 		if (QObject::connect(pThis,SIGNAL(accepted(QPrinter*)),uis,SLOT(call(QPrinter*)))) {
 			*(void**)p2 = uis;
 		}
@@ -38798,7 +38798,7 @@ int drv_QPrintPreviewDialog(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 		break;
 	} 
 	case 324102: {
-		UISignal31 *uis = new UISignal31(pThis,(Iface*)p1);
+		UISignal31 *uis = new UISignal31(pThis);
 		if (QObject::connect(pThis,SIGNAL(paintRequested(QPrinter*)),uis,SLOT(call(QPrinter*)))) {
 			*(void**)p2 = uis;
 		}
@@ -38852,14 +38852,14 @@ int drv_QPrintPreviewWidget(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 		break;
 	} 
 	case 325102: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(previewChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 325103: {
-		UISignal31 *uis = new UISignal31(pThis,(Iface*)p1);
+		UISignal31 *uis = new UISignal31(pThis);
 		if (QObject::connect(pThis,SIGNAL(paintRequested(QPrinter*)),uis,SLOT(call(QPrinter*)))) {
 			*(void**)p2 = uis;
 		}
@@ -38993,49 +38993,49 @@ int drv_QProcess(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	} 
 	case 326102: {
-		UISignal32 *uis = new UISignal32(pThis,(Iface*)p1);
+		UISignal32 *uis = new UISignal32(pThis);
 		if (QObject::connect(pThis,SIGNAL(error(QProcess::ProcessError)),uis,SLOT(call(QProcess::ProcessError)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 326103: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(readyReadStandardError()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 326104: {
-		UISignal33 *uis = new UISignal33(pThis,(Iface*)p1);
+		UISignal33 *uis = new UISignal33(pThis);
 		if (QObject::connect(pThis,SIGNAL(stateChanged(QProcess::ProcessState)),uis,SLOT(call(QProcess::ProcessState)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 326105: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(started()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 326106: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(readyReadStandardOutput()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 326107: {
-		UISignal70 *uis = new UISignal70(pThis,(Iface*)p1);
+		UISignal70 *uis = new UISignal70(pThis);
 		if (QObject::connect(pThis,SIGNAL(finished(int,QProcess::ExitStatus)),uis,SLOT(call(int,QProcess::ExitStatus)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 326108: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(finished(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
@@ -39086,11 +39086,11 @@ int drv_QProcess(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 326120: {
-		*(int*)p2 = QProcess::execute(drvGetString(p1));
+		*(int*)p2 = QProcess::execute(drvGetStringHead(p1));
 		break;
 	}
 	case 326121: {
-		*(int*)p3 = QProcess::execute(drvGetString(p1),drvGetStringArray(p2));
+		*(int*)p3 = QProcess::execute(drvGetStringHead(p1),drvGetStringArray(p2));
 		break;
 	}
 	case 326122: {
@@ -39163,23 +39163,23 @@ int drv_QProcess(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 326139: {
-		pThis->setStandardErrorFile(drvGetString(p1));
+		pThis->setStandardErrorFile(drvGetStringHead(p1));
 		break;
 	}
 	case 326140: {
-		pThis->setStandardErrorFile(drvGetString(p1),*(QFlags<QIODevice::OpenModeFlag>*)p2);
+		pThis->setStandardErrorFile(drvGetStringHead(p1),*(QFlags<QIODevice::OpenModeFlag>*)p2);
 		break;
 	}
 	case 326141: {
-		pThis->setStandardInputFile(drvGetString(p1));
+		pThis->setStandardInputFile(drvGetStringHead(p1));
 		break;
 	}
 	case 326142: {
-		pThis->setStandardOutputFile(drvGetString(p1));
+		pThis->setStandardOutputFile(drvGetStringHead(p1));
 		break;
 	}
 	case 326143: {
-		pThis->setStandardOutputFile(drvGetString(p1),*(QFlags<QIODevice::OpenModeFlag>*)p2);
+		pThis->setStandardOutputFile(drvGetStringHead(p1),*(QFlags<QIODevice::OpenModeFlag>*)p2);
 		break;
 	}
 	case 326144: {
@@ -39187,7 +39187,7 @@ int drv_QProcess(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 326145: {
-		pThis->setWorkingDirectory(drvGetString(p1));
+		pThis->setWorkingDirectory(drvGetStringHead(p1));
 		break;
 	}
 	case 326146: {
@@ -39195,27 +39195,27 @@ int drv_QProcess(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 326147: {
-		pThis->start(drvGetString(p1));
+		pThis->start(drvGetStringHead(p1));
 		break;
 	}
 	case 326148: {
-		pThis->start(drvGetString(p1),*(QFlags<QIODevice::OpenModeFlag>*)p2);
+		pThis->start(drvGetStringHead(p1),*(QFlags<QIODevice::OpenModeFlag>*)p2);
 		break;
 	}
 	case 326149: {
-		pThis->start(drvGetString(p1),drvGetStringArray(p2),*(QFlags<QIODevice::OpenModeFlag>*)p3);
+		pThis->start(drvGetStringHead(p1),drvGetStringArray(p2),*(QFlags<QIODevice::OpenModeFlag>*)p3);
 		break;
 	}
 	case 326150: {
-		*(bool*)p2 = QProcess::startDetached(drvGetString(p1));
+		*(bool*)p2 = QProcess::startDetached(drvGetStringHead(p1));
 		break;
 	}
 	case 326151: {
-		*(bool*)p3 = QProcess::startDetached(drvGetString(p1),drvGetStringArray(p2));
+		*(bool*)p3 = QProcess::startDetached(drvGetStringHead(p1),drvGetStringArray(p2));
 		break;
 	}
 	case 326152: {
-		*(bool*)p5 = QProcess::startDetached(drvGetString(p1),drvGetStringArray(p2),drvGetString(p3),*(qint64**)p4);
+		*(bool*)p5 = QProcess::startDetached(drvGetStringHead(p1),drvGetStringArray(p2),drvGetStringHead(p3),*(qint64**)p4);
 		break;
 	}
 	case 326153: {
@@ -39286,7 +39286,7 @@ int drv_QProgressBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	} 
 	case 327102: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(valueChanged(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
@@ -39349,7 +39349,7 @@ int drv_QProgressBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 327117: {
-		pThis->setFormat(drvGetString(p1));
+		pThis->setFormat(drvGetStringHead(p1));
 		break;
 	}
 	case 327118: {
@@ -39416,7 +39416,7 @@ int drv_QProgressDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	} 
 	case 328102: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(canceled()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
@@ -39431,7 +39431,7 @@ int drv_QProgressDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	}
 	case 328105: {
-		*(void**)_p = new QProgressDialog(drvGetString(p1),drvGetString(p2),*(int*)p3,*(int*)p4,(QWidget*)(p5),*(QFlags<Qt::WindowType>*)p6);
+		*(void**)_p = new QProgressDialog(drvGetStringHead(p1),drvGetStringHead(p2),*(int*)p3,*(int*)p4,(QWidget*)(p5),*(QFlags<Qt::WindowType>*)p6);
 		break;
 	}
 	case 328106: {
@@ -39507,7 +39507,7 @@ int drv_QProgressDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	}
 	case 328124: {
-		pThis->setCancelButtonText(drvGetString(p1));
+		pThis->setCancelButtonText(drvGetStringHead(p1));
 		break;
 	}
 	case 328125: {
@@ -39515,7 +39515,7 @@ int drv_QProgressDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	}
 	case 328126: {
-		pThis->setLabelText(drvGetString(p1));
+		pThis->setLabelText(drvGetStringHead(p1));
 		break;
 	}
 	case 328127: {
@@ -39646,7 +39646,7 @@ int drv_QProxyStyle(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 	case 330106: {
 		if(p2==0)return -2;
 	if(p4==0)return -2;
-		pThis->drawItemText((QPainter*)(p1),*(QRect*)(p2),*(int*)p3,*(QPalette*)(p4),*(bool*)p5,drvGetString(p6),*(QPalette::ColorRole*)p7);
+		pThis->drawItemText((QPainter*)(p1),*(QRect*)(p2),*(int*)p3,*(QPalette*)(p4),*(bool*)p5,drvGetStringHead(p6),*(QPalette::ColorRole*)p7);
 		break;
 	}
 	case 330107: {
@@ -39662,7 +39662,7 @@ int drv_QProxyStyle(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 	case 330109: {
 		if(p1==0)return -2;
 	if(p2==0)return -2;
-		*(void**)p6 = new QRect(pThis->itemTextRect(*(QFontMetrics*)(p1),*(QRect*)(p2),*(int*)p3,*(bool*)p4,drvGetString(p5)));
+		*(void**)p6 = new QRect(pThis->itemTextRect(*(QFontMetrics*)(p1),*(QRect*)(p2),*(int*)p3,*(bool*)p4,drvGetStringHead(p5)));
 		break;
 	}
 	case 330110: {
@@ -39726,12 +39726,12 @@ int drv_QPushButton(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 331104: {
-		*(void**)_p = new QPushButton(drvGetString(p1),(QWidget*)(p2));
+		*(void**)_p = new QPushButton(drvGetStringHead(p1),(QWidget*)(p2));
 		break;
 	}
 	case 331105: {
 		if(p1==0)return -2;
-		*(void**)_p = new QPushButton(*(QIcon*)(p1),drvGetString(p2),(QWidget*)(p3));
+		*(void**)_p = new QPushButton(*(QIcon*)(p1),drvGetStringHead(p2),(QWidget*)(p3));
 		break;
 	}
 	case 331106: {
@@ -39822,7 +39822,7 @@ int drv_QRadioButton(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 332104: {
-		*(void**)_p = new QRadioButton(drvGetString(p1),(QWidget*)(p2));
+		*(void**)_p = new QRadioButton(drvGetStringHead(p1),(QWidget*)(p2));
 		break;
 	}
 	case 332105: {
@@ -40129,7 +40129,7 @@ int drv_QSequentialAnimationGroup(void *_p, int funcid, void* p1,void* p2,void* 
 		break;
 	} 
 	case 337102: {
-		UISignal2 *uis = new UISignal2(pThis,(Iface*)p1);
+		UISignal2 *uis = new UISignal2(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentAnimationChanged(QAbstractAnimation*)),uis,SLOT(call(QAbstractAnimation*)))) {
 			*(void**)p2 = uis;
 		}
@@ -40235,11 +40235,11 @@ int drv_QSessionManager(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	}
 	case 338114: {
-		pThis->setManagerProperty(drvGetString(p1),drvGetString(p2));
+		pThis->setManagerProperty(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 338115: {
-		pThis->setManagerProperty(drvGetString(p1),drvGetStringArray(p2));
+		pThis->setManagerProperty(drvGetStringHead(p1),drvGetStringArray(p2));
 		break;
 	}
 	case 338116: {
@@ -40274,19 +40274,19 @@ int drv_QSettings(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 339104: {
-		*(void**)_p = new QSettings(drvGetString(p1),*(QSettings::Format*)p2,(QObject*)(p3));
+		*(void**)_p = new QSettings(drvGetStringHead(p1),*(QSettings::Format*)p2,(QObject*)(p3));
 		break;
 	}
 	case 339105: {
-		*(void**)_p = new QSettings(drvGetString(p1),drvGetString(p2),(QObject*)(p3));
+		*(void**)_p = new QSettings(drvGetStringHead(p1),drvGetStringHead(p2),(QObject*)(p3));
 		break;
 	}
 	case 339106: {
-		*(void**)_p = new QSettings(*(QSettings::Scope*)p1,drvGetString(p2),drvGetString(p3),(QObject*)(p4));
+		*(void**)_p = new QSettings(*(QSettings::Scope*)p1,drvGetStringHead(p2),drvGetStringHead(p3),(QObject*)(p4));
 		break;
 	}
 	case 339107: {
-		*(void**)_p = new QSettings(*(QSettings::Format*)p1,*(QSettings::Scope*)p2,drvGetString(p3),drvGetString(p4),(QObject*)(p5));
+		*(void**)_p = new QSettings(*(QSettings::Format*)p1,*(QSettings::Scope*)p2,drvGetStringHead(p3),drvGetStringHead(p4),(QObject*)(p5));
 		break;
 	}
 	case 339108: {
@@ -40298,19 +40298,19 @@ int drv_QSettings(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 339110: {
-		pThis->beginGroup(drvGetString(p1));
+		pThis->beginGroup(drvGetStringHead(p1));
 		break;
 	}
 	case 339111: {
-		*(int*)p2 = pThis->beginReadArray(drvGetString(p1));
+		*(int*)p2 = pThis->beginReadArray(drvGetStringHead(p1));
 		break;
 	}
 	case 339112: {
-		pThis->beginWriteArray(drvGetString(p1));
+		pThis->beginWriteArray(drvGetStringHead(p1));
 		break;
 	}
 	case 339113: {
-		pThis->beginWriteArray(drvGetString(p1),*(int*)p2);
+		pThis->beginWriteArray(drvGetStringHead(p1),*(int*)p2);
 		break;
 	}
 	case 339114: {
@@ -40326,7 +40326,7 @@ int drv_QSettings(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 339117: {
-		*(bool*)p2 = pThis->contains(drvGetString(p1));
+		*(bool*)p2 = pThis->contains(drvGetStringHead(p1));
 		break;
 	}
 	case 339118: {
@@ -40374,7 +40374,7 @@ int drv_QSettings(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 339129: {
-		pThis->remove(drvGetString(p1));
+		pThis->remove(drvGetStringHead(p1));
 		break;
 	}
 	case 339130: {
@@ -40402,20 +40402,20 @@ int drv_QSettings(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 339136: {
-		QSettings::setPath(*(QSettings::Format*)p1,*(QSettings::Scope*)p2,drvGetString(p3));
+		QSettings::setPath(*(QSettings::Format*)p1,*(QSettings::Scope*)p2,drvGetStringHead(p3));
 		break;
 	}
 	case 339137: {
-		QSettings::setSystemIniPath(drvGetString(p1));
+		QSettings::setSystemIniPath(drvGetStringHead(p1));
 		break;
 	}
 	case 339138: {
-		QSettings::setUserIniPath(drvGetString(p1));
+		QSettings::setUserIniPath(drvGetStringHead(p1));
 		break;
 	}
 	case 339139: {
 		if(p2==0)return -2;
-		pThis->setValue(drvGetString(p1),*(QVariant*)(p2));
+		pThis->setValue(drvGetStringHead(p1),*(QVariant*)(p2));
 		break;
 	}
 	case 339140: {
@@ -40427,11 +40427,11 @@ int drv_QSettings(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 339142: {
-		*(void**)p2 = new QVariant(pThis->value(drvGetString(p1)));
+		*(void**)p2 = new QVariant(pThis->value(drvGetStringHead(p1)));
 		break;
 	}
 	case 339143: {
-		*(void**)p3 = new QVariant(pThis->value(drvGetString(p1),p2==0?QVariant():*(QVariant*)(p2)));
+		*(void**)p3 = new QVariant(pThis->value(drvGetStringHead(p1),p2==0?QVariant():*(QVariant*)(p2)));
 		break;
 	}
 	default:
@@ -40458,7 +40458,7 @@ int drv_QSharedMemory(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 340104: {
-		*(void**)_p = new QSharedMemory(drvGetString(p1),(QObject*)(p2));
+		*(void**)_p = new QSharedMemory(drvGetStringHead(p1),(QObject*)(p2));
 		break;
 	}
 	case 340105: {
@@ -40482,7 +40482,7 @@ int drv_QSharedMemory(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 340110: {
-		*(void**)p1 = pThis->data();
+		*(void const**)p1 = pThis->data();
 		break;
 	}
 	case 340111: {
@@ -40510,7 +40510,7 @@ int drv_QSharedMemory(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 340117: {
-		pThis->setKey(drvGetString(p1));
+		pThis->setKey(drvGetStringHead(p1));
 		break;
 	}
 	case 340118: {
@@ -40537,14 +40537,14 @@ int drv_QShortcut(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	} 
 	case 341102: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(activatedAmbiguously()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 341103: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(activated()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
@@ -40605,7 +40605,7 @@ int drv_QShortcut(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 341117: {
-		pThis->setWhatsThis(drvGetString(p1));
+		pThis->setWhatsThis(drvGetStringHead(p1));
 		break;
 	}
 	case 341118: {
@@ -40628,28 +40628,28 @@ int drv_QSignalMapper(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	} 
 	case 342102: {
-		UISignal28 *uis = new UISignal28(pThis,(Iface*)p1);
+		UISignal28 *uis = new UISignal28(pThis);
 		if (QObject::connect(pThis,SIGNAL(mapped(QObject*)),uis,SLOT(call(QObject*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 342103: {
-		UISignal58 *uis = new UISignal58(pThis,(Iface*)p1);
+		UISignal58 *uis = new UISignal58(pThis);
 		if (QObject::connect(pThis,SIGNAL(mapped(QWidget*)),uis,SLOT(call(QWidget*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 342104: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(mapped(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 342105: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(mapped(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
@@ -40676,7 +40676,7 @@ int drv_QSignalMapper(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 342111: {
-		*(void**)p2 = pThis->mapping(drvGetString(p1));
+		*(void**)p2 = pThis->mapping(drvGetStringHead(p1));
 		break;
 	}
 	case 342112: {
@@ -40696,7 +40696,7 @@ int drv_QSignalMapper(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 342116: {
-		pThis->setMapping((QObject*)(p1),drvGetString(p2));
+		pThis->setMapping((QObject*)(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 342117: {
@@ -41061,7 +41061,7 @@ int drv_QSortFilterProxyModel(void *_p, int funcid, void* p1,void* p2,void* p3,v
 		break;
 	}
 	case 345148: {
-		pThis->setFilterFixedString(drvGetString(p1));
+		pThis->setFilterFixedString(drvGetStringHead(p1));
 		break;
 	}
 	case 345149: {
@@ -41074,7 +41074,7 @@ int drv_QSortFilterProxyModel(void *_p, int funcid, void* p1,void* p2,void* p3,v
 		break;
 	}
 	case 345151: {
-		pThis->setFilterRegExp(drvGetString(p1));
+		pThis->setFilterRegExp(drvGetStringHead(p1));
 		break;
 	}
 	case 345152: {
@@ -41082,7 +41082,7 @@ int drv_QSortFilterProxyModel(void *_p, int funcid, void* p1,void* p2,void* p3,v
 		break;
 	}
 	case 345153: {
-		pThis->setFilterWildcard(drvGetString(p1));
+		pThis->setFilterWildcard(drvGetStringHead(p1));
 		break;
 	}
 	case 345154: {
@@ -41155,14 +41155,14 @@ int drv_QSpinBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	} 
 	case 346102: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(valueChanged(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 346103: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(valueChanged(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
@@ -41211,7 +41211,7 @@ int drv_QSpinBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 346114: {
-		pThis->setPrefix(drvGetString(p1));
+		pThis->setPrefix(drvGetStringHead(p1));
 		break;
 	}
 	case 346115: {
@@ -41223,7 +41223,7 @@ int drv_QSpinBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 346117: {
-		pThis->setSuffix(drvGetString(p1));
+		pThis->setSuffix(drvGetStringHead(p1));
 		break;
 	}
 	case 346118: {
@@ -41253,7 +41253,7 @@ int drv_QSpinBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 346124: {
-		*(int*)p2 = pThis->valueFromText(drvGetString(p1));
+		*(int*)p2 = pThis->valueFromText(drvGetStringHead(p1));
 		break;
 	}
 	default:
@@ -41272,7 +41272,7 @@ int drv_QSplashScreen(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	} 
 	case 347102: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(messageChanged(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
@@ -41324,11 +41324,11 @@ int drv_QSplashScreen(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 347114: {
-		pThis->showMessage(drvGetString(p1));
+		pThis->showMessage(drvGetStringHead(p1));
 		break;
 	}
 	case 347115: {
-		pThis->showMessage(drvGetString(p1),*(int*)p2,p3==0?QColor():*(QColor*)(p3));
+		pThis->showMessage(drvGetStringHead(p1),*(int*)p2,p3==0?QColor():*(QColor*)(p3));
 		break;
 	}
 	default:
@@ -41347,7 +41347,7 @@ int drv_QSplitter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	} 
 	case 348102: {
-		UISignal72 *uis = new UISignal72(pThis,(Iface*)p1);
+		UISignal72 *uis = new UISignal72(pThis);
 		if (QObject::connect(pThis,SIGNAL(splitterMoved(int,int)),uis,SLOT(call(int,int)))) {
 			*(void**)p2 = uis;
 		}
@@ -41584,14 +41584,14 @@ int drv_QStackedLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	} 
 	case 350102: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(widgetRemoved(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 350103: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentChanged(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
@@ -41694,14 +41694,14 @@ int drv_QStackedWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	} 
 	case 351102: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(widgetRemoved(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 351103: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentChanged(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
@@ -41775,7 +41775,7 @@ int drv_QStandardItemModel(void *_p, int funcid, void* p1,void* p2,void* p3,void
 		break;
 	} 
 	case 352102: {
-		UISignal40 *uis = new UISignal40(pThis,(Iface*)p1);
+		UISignal40 *uis = new UISignal40(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemChanged(QStandardItem*)),uis,SLOT(call(QStandardItem*)))) {
 			*(void**)p2 = uis;
 		}
@@ -41833,11 +41833,11 @@ int drv_QStandardItemModel(void *_p, int funcid, void* p1,void* p2,void* p3,void
 		break;
 	}
 	case 352115: {
-		drvSetListObj<QStandardItem*>(p2,123000,pThis->findItems(drvGetString(p1)));
+		drvSetListObj<QStandardItem*>(p2,123000,pThis->findItems(drvGetStringHead(p1)));
 		break;
 	}
 	case 352116: {
-		drvSetListObj<QStandardItem*>(p4,123000,pThis->findItems(drvGetString(p1),*(QFlags<Qt::MatchFlag>*)p2,*(int*)p3));
+		drvSetListObj<QStandardItem*>(p4,123000,pThis->findItems(drvGetStringHead(p1),*(QFlags<Qt::MatchFlag>*)p2,*(int*)p3));
 		break;
 	}
 	case 352117: {
@@ -42080,14 +42080,14 @@ int drv_QState(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 		break;
 	} 
 	case 353102: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(finished()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 353103: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(propertiesAssigned()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
@@ -42178,14 +42178,14 @@ int drv_QStateMachine(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	} 
 	case 354102: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(started()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 354103: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(stopped()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
@@ -42323,7 +42323,7 @@ int drv_QStatusBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	} 
 	case 355102: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(messageChanged(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
@@ -42406,11 +42406,11 @@ int drv_QStatusBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	}
 	case 355122: {
-		pThis->showMessage(drvGetString(p1));
+		pThis->showMessage(drvGetStringHead(p1));
 		break;
 	}
 	case 355123: {
-		pThis->showMessage(drvGetString(p1),*(int*)p2);
+		pThis->showMessage(drvGetStringHead(p1),*(int*)p2);
 		break;
 	}
 	default:
@@ -42510,7 +42510,7 @@ int drv_QStyle(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 	case 357104: {
 		if(p2==0)return -2;
 	if(p4==0)return -2;
-		pThis->drawItemText((QPainter*)(p1),*(QRect*)(p2),*(int*)p3,*(QPalette*)(p4),*(bool*)p5,drvGetString(p6),*(QPalette::ColorRole*)p7);
+		pThis->drawItemText((QPainter*)(p1),*(QRect*)(p2),*(int*)p3,*(QPalette*)(p4),*(bool*)p5,drvGetStringHead(p6),*(QPalette::ColorRole*)p7);
 		break;
 	}
 	case 357105: {
@@ -42522,7 +42522,7 @@ int drv_QStyle(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 	case 357106: {
 		if(p1==0)return -2;
 	if(p2==0)return -2;
-		*(void**)p6 = new QRect(pThis->itemTextRect(*(QFontMetrics*)(p1),*(QRect*)(p2),*(int*)p3,*(bool*)p4,drvGetString(p5)));
+		*(void**)p6 = new QRect(pThis->itemTextRect(*(QFontMetrics*)(p1),*(QRect*)(p2),*(int*)p3,*(bool*)p4,drvGetStringHead(p5)));
 		break;
 	}
 	case 357107: {
@@ -42720,7 +42720,7 @@ int drv_QSyntaxHighlighter(void *_p, int funcid, void* p1,void* p2,void* p3,void
 		break;
 	}
 	case 360107: {
-		pThis->highlightBlock(drvGetString(p1));
+		pThis->highlightBlock(drvGetStringHead(p1));
 		break;
 	}
 	case 360108: {
@@ -42779,7 +42779,7 @@ int drv_QSyntaxHighlighterHook(void *_p, int funcid, void* p1,void* p2,void* p3,
 		break;
 	} 
 	case 361102: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(hook_highlightBlock(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
@@ -42798,7 +42798,7 @@ int drv_QSyntaxHighlighterHook(void *_p, int funcid, void* p1,void* p2,void* p3,
 		break;
 	}
 	case 361106: {
-		pThis->highlightBlock(drvGetString(p1));
+		pThis->highlightBlock(drvGetStringHead(p1));
 		break;
 	}
 	default:
@@ -42817,14 +42817,14 @@ int drv_QSystemTrayIcon(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	} 
 	case 362102: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(messageClicked()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 362103: {
-		UISignal44 *uis = new UISignal44(pThis,(Iface*)p1);
+		UISignal44 *uis = new UISignal44(pThis);
 		if (QObject::connect(pThis,SIGNAL(activated(QSystemTrayIcon::ActivationReason)),uis,SLOT(call(QSystemTrayIcon::ActivationReason)))) {
 			*(void**)p2 = uis;
 		}
@@ -42881,7 +42881,7 @@ int drv_QSystemTrayIcon(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	}
 	case 362116: {
-		pThis->setToolTip(drvGetString(p1));
+		pThis->setToolTip(drvGetStringHead(p1));
 		break;
 	}
 	case 362117: {
@@ -42893,7 +42893,7 @@ int drv_QSystemTrayIcon(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	}
 	case 362119: {
-		pThis->showMessage(drvGetString(p1),drvGetString(p2),*(QSystemTrayIcon::MessageIcon*)p3,*(int*)p4);
+		pThis->showMessage(drvGetStringHead(p1),drvGetStringHead(p2),*(QSystemTrayIcon::MessageIcon*)p3,*(int*)p4);
 		break;
 	}
 	case 362120: {
@@ -42920,21 +42920,21 @@ int drv_QTabBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	} 
 	case 363102: {
-		UISignal72 *uis = new UISignal72(pThis,(Iface*)p1);
+		UISignal72 *uis = new UISignal72(pThis);
 		if (QObject::connect(pThis,SIGNAL(tabMoved(int,int)),uis,SLOT(call(int,int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 363103: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentChanged(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 363104: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(tabCloseRequested(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
@@ -42949,12 +42949,12 @@ int drv_QTabBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 363107: {
-		*(int*)p2 = pThis->addTab(drvGetString(p1));
+		*(int*)p2 = pThis->addTab(drvGetStringHead(p1));
 		break;
 	}
 	case 363108: {
 		if(p1==0)return -2;
-		*(int*)p3 = pThis->addTab(*(QIcon*)(p1),drvGetString(p2));
+		*(int*)p3 = pThis->addTab(*(QIcon*)(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 363109: {
@@ -42998,12 +42998,12 @@ int drv_QTabBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 363119: {
-		*(int*)p3 = pThis->insertTab(*(int*)p1,drvGetString(p2));
+		*(int*)p3 = pThis->insertTab(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
 	case 363120: {
 		if(p2==0)return -2;
-		*(int*)p4 = pThis->insertTab(*(int*)p1,*(QIcon*)(p2),drvGetString(p3));
+		*(int*)p4 = pThis->insertTab(*(int*)p1,*(QIcon*)(p2),drvGetStringHead(p3));
 		break;
 	}
 	case 363121: {
@@ -43110,7 +43110,7 @@ int drv_QTabBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 363146: {
-		pThis->setTabText(*(int*)p1,drvGetString(p2));
+		pThis->setTabText(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
 	case 363147: {
@@ -43119,11 +43119,11 @@ int drv_QTabBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 363148: {
-		pThis->setTabToolTip(*(int*)p1,drvGetString(p2));
+		pThis->setTabToolTip(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
 	case 363149: {
-		pThis->setTabWhatsThis(*(int*)p1,drvGetString(p2));
+		pThis->setTabWhatsThis(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
 	case 363150: {
@@ -43227,14 +43227,14 @@ int drv_QTabWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	} 
 	case 364102: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentChanged(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 364103: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(tabCloseRequested(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
@@ -43249,12 +43249,12 @@ int drv_QTabWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	}
 	case 364106: {
-		*(int*)p3 = pThis->addTab((QWidget*)(p1),drvGetString(p2));
+		*(int*)p3 = pThis->addTab((QWidget*)(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 364107: {
 		if(p2==0)return -2;
-		*(int*)p4 = pThis->addTab((QWidget*)(p1),*(QIcon*)(p2),drvGetString(p3));
+		*(int*)p4 = pThis->addTab((QWidget*)(p1),*(QIcon*)(p2),drvGetStringHead(p3));
 		break;
 	}
 	case 364108: {
@@ -43306,12 +43306,12 @@ int drv_QTabWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	}
 	case 364120: {
-		*(int*)p4 = pThis->insertTab(*(int*)p1,(QWidget*)(p2),drvGetString(p3));
+		*(int*)p4 = pThis->insertTab(*(int*)p1,(QWidget*)(p2),drvGetStringHead(p3));
 		break;
 	}
 	case 364121: {
 		if(p3==0)return -2;
-		*(int*)p5 = pThis->insertTab(*(int*)p1,(QWidget*)(p2),*(QIcon*)(p3),drvGetString(p4));
+		*(int*)p5 = pThis->insertTab(*(int*)p1,(QWidget*)(p2),*(QIcon*)(p3),drvGetStringHead(p4));
 		break;
 	}
 	case 364122: {
@@ -43397,15 +43397,15 @@ int drv_QTabWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	}
 	case 364142: {
-		pThis->setTabText(*(int*)p1,drvGetString(p2));
+		pThis->setTabText(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
 	case 364143: {
-		pThis->setTabToolTip(*(int*)p1,drvGetString(p2));
+		pThis->setTabToolTip(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
 	case 364144: {
-		pThis->setTabWhatsThis(*(int*)p1,drvGetString(p2));
+		pThis->setTabWhatsThis(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
 	case 364145: {
@@ -43811,105 +43811,105 @@ int drv_QTableWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	} 
 	case 366102: {
-		UISignal45 *uis = new UISignal45(pThis,(Iface*)p1);
+		UISignal45 *uis = new UISignal45(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemEntered(QTableWidgetItem*)),uis,SLOT(call(QTableWidgetItem*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 366103: {
-		UISignal74 *uis = new UISignal74(pThis,(Iface*)p1);
+		UISignal74 *uis = new UISignal74(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentCellChanged(int,int,int,int)),uis,SLOT(call(int,int,int,int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 366104: {
-		UISignal45 *uis = new UISignal45(pThis,(Iface*)p1);
+		UISignal45 *uis = new UISignal45(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemPressed(QTableWidgetItem*)),uis,SLOT(call(QTableWidgetItem*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 366105: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemSelectionChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 366106: {
-		UISignal72 *uis = new UISignal72(pThis,(Iface*)p1);
+		UISignal72 *uis = new UISignal72(pThis);
 		if (QObject::connect(pThis,SIGNAL(cellActivated(int,int)),uis,SLOT(call(int,int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 366107: {
-		UISignal72 *uis = new UISignal72(pThis,(Iface*)p1);
+		UISignal72 *uis = new UISignal72(pThis);
 		if (QObject::connect(pThis,SIGNAL(cellClicked(int,int)),uis,SLOT(call(int,int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 366108: {
-		UISignal72 *uis = new UISignal72(pThis,(Iface*)p1);
+		UISignal72 *uis = new UISignal72(pThis);
 		if (QObject::connect(pThis,SIGNAL(cellChanged(int,int)),uis,SLOT(call(int,int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 366109: {
-		UISignal72 *uis = new UISignal72(pThis,(Iface*)p1);
+		UISignal72 *uis = new UISignal72(pThis);
 		if (QObject::connect(pThis,SIGNAL(cellDoubleClicked(int,int)),uis,SLOT(call(int,int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 366110: {
-		UISignal45 *uis = new UISignal45(pThis,(Iface*)p1);
+		UISignal45 *uis = new UISignal45(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemActivated(QTableWidgetItem*)),uis,SLOT(call(QTableWidgetItem*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 366111: {
-		UISignal46 *uis = new UISignal46(pThis,(Iface*)p1);
+		UISignal46 *uis = new UISignal46(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)),uis,SLOT(call(QTableWidgetItem*,QTableWidgetItem*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 366112: {
-		UISignal45 *uis = new UISignal45(pThis,(Iface*)p1);
+		UISignal45 *uis = new UISignal45(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemDoubleClicked(QTableWidgetItem*)),uis,SLOT(call(QTableWidgetItem*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 366113: {
-		UISignal72 *uis = new UISignal72(pThis,(Iface*)p1);
+		UISignal72 *uis = new UISignal72(pThis);
 		if (QObject::connect(pThis,SIGNAL(cellPressed(int,int)),uis,SLOT(call(int,int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 366114: {
-		UISignal72 *uis = new UISignal72(pThis,(Iface*)p1);
+		UISignal72 *uis = new UISignal72(pThis);
 		if (QObject::connect(pThis,SIGNAL(cellEntered(int,int)),uis,SLOT(call(int,int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 366115: {
-		UISignal45 *uis = new UISignal45(pThis,(Iface*)p1);
+		UISignal45 *uis = new UISignal45(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemChanged(QTableWidgetItem*)),uis,SLOT(call(QTableWidgetItem*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 366116: {
-		UISignal45 *uis = new UISignal45(pThis,(Iface*)p1);
+		UISignal45 *uis = new UISignal45(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemClicked(QTableWidgetItem*)),uis,SLOT(call(QTableWidgetItem*)))) {
 			*(void**)p2 = uis;
 		}
@@ -43980,7 +43980,7 @@ int drv_QTableWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 366133: {
-		drvSetListObj<QTableWidgetItem*>(p3,134000,pThis->findItems(drvGetString(p1),*(QFlags<Qt::MatchFlag>*)p2));
+		drvSetListObj<QTableWidgetItem*>(p3,134000,pThis->findItems(drvGetStringHead(p1),*(QFlags<Qt::MatchFlag>*)p2));
 		break;
 	}
 	case 366134: {
@@ -44282,11 +44282,11 @@ int drv_QTemporaryFile(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	}
 	case 369104: {
-		*(void**)_p = new QTemporaryFile(drvGetString(p1));
+		*(void**)_p = new QTemporaryFile(drvGetStringHead(p1));
 		break;
 	}
 	case 369105: {
-		*(void**)_p = new QTemporaryFile(drvGetString(p1),(QObject*)(p2));
+		*(void**)_p = new QTemporaryFile(drvGetStringHead(p1),(QObject*)(p2));
 		break;
 	}
 	case 369106: {
@@ -44299,7 +44299,7 @@ int drv_QTemporaryFile(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	}
 	case 369108: {
-		*(void**)p2 = QTemporaryFile::createLocalFile(drvGetString(p1));
+		*(void**)p2 = QTemporaryFile::createLocalFile(drvGetStringHead(p1));
 		break;
 	}
 	case 369109: {
@@ -44323,7 +44323,7 @@ int drv_QTemporaryFile(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	}
 	case 369114: {
-		pThis->setFileTemplate(drvGetString(p1));
+		pThis->setFileTemplate(drvGetStringHead(p1));
 		break;
 	}
 	default:
@@ -44372,49 +44372,49 @@ int drv_QTextBrowser(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	} 
 	case 371102: {
-		UISignal56 *uis = new UISignal56(pThis,(Iface*)p1);
+		UISignal56 *uis = new UISignal56(pThis);
 		if (QObject::connect(pThis,SIGNAL(sourceChanged(QUrl const&)),uis,SLOT(call(QUrl const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 371103: {
-		UISignal56 *uis = new UISignal56(pThis,(Iface*)p1);
+		UISignal56 *uis = new UISignal56(pThis);
 		if (QObject::connect(pThis,SIGNAL(anchorClicked(QUrl const&)),uis,SLOT(call(QUrl const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 371104: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(highlighted(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 371105: {
-		UISignal56 *uis = new UISignal56(pThis,(Iface*)p1);
+		UISignal56 *uis = new UISignal56(pThis);
 		if (QObject::connect(pThis,SIGNAL(highlighted(QUrl const&)),uis,SLOT(call(QUrl const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 371106: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(historyChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 371107: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(backwardAvailable(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 371108: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(forwardAvailable(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
@@ -44558,63 +44558,63 @@ int drv_QTextDocument(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	} 
 	case 372102: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(undoAvailable(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 372103: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(blockCountChanged(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 372104: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(modificationChanged(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 372105: {
-		UISignal49 *uis = new UISignal49(pThis,(Iface*)p1);
+		UISignal49 *uis = new UISignal49(pThis);
 		if (QObject::connect(pThis,SIGNAL(cursorPositionChanged(QTextCursor const&)),uis,SLOT(call(QTextCursor const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 372106: {
-		UISignal73 *uis = new UISignal73(pThis,(Iface*)p1);
+		UISignal73 *uis = new UISignal73(pThis);
 		if (QObject::connect(pThis,SIGNAL(contentsChange(int,int,int)),uis,SLOT(call(int,int,int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 372107: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(documentLayoutChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 372108: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(undoCommandAdded()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 372109: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(contentsChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 372110: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(redoAvailable(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
@@ -44629,7 +44629,7 @@ int drv_QTextDocument(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 372113: {
-		*(void**)_p = new QTextDocument(drvGetString(p1),(QObject*)(p2));
+		*(void**)_p = new QTextDocument(drvGetStringHead(p1),(QObject*)(p2));
 		break;
 	}
 	case 372114: {
@@ -44737,7 +44737,7 @@ int drv_QTextDocument(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 372139: {
-		*(void**)p2 = new QTextCursor(pThis->find(drvGetString(p1)));
+		*(void**)p2 = new QTextCursor(pThis->find(drvGetStringHead(p1)));
 		break;
 	}
 	case 372140: {
@@ -44753,11 +44753,11 @@ int drv_QTextDocument(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 	}
 	case 372142: {
 		if(p2==0)return -2;
-		*(void**)p4 = new QTextCursor(pThis->find(drvGetString(p1),*(QTextCursor*)(p2),*(QFlags<QTextDocument::FindFlag>*)p3));
+		*(void**)p4 = new QTextCursor(pThis->find(drvGetStringHead(p1),*(QTextCursor*)(p2),*(QFlags<QTextDocument::FindFlag>*)p3));
 		break;
 	}
 	case 372143: {
-		*(void**)p4 = new QTextCursor(pThis->find(drvGetString(p1),*(int*)p2,*(QFlags<QTextDocument::FindFlag>*)p3));
+		*(void**)p4 = new QTextCursor(pThis->find(drvGetStringHead(p1),*(int*)p2,*(QFlags<QTextDocument::FindFlag>*)p3));
 		break;
 	}
 	case 372144: {
@@ -44881,7 +44881,7 @@ int drv_QTextDocument(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 372173: {
-		pThis->setDefaultStyleSheet(drvGetString(p1));
+		pThis->setDefaultStyleSheet(drvGetStringHead(p1));
 		break;
 	}
 	case 372174: {
@@ -44898,7 +44898,7 @@ int drv_QTextDocument(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 372177: {
-		pThis->setHtml(drvGetString(p1));
+		pThis->setHtml(drvGetStringHead(p1));
 		break;
 	}
 	case 372178: {
@@ -44910,7 +44910,7 @@ int drv_QTextDocument(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 372180: {
-		pThis->setMetaInformation(*(QTextDocument::MetaInformation*)p1,drvGetString(p2));
+		pThis->setMetaInformation(*(QTextDocument::MetaInformation*)p1,drvGetStringHead(p2));
 		break;
 	}
 	case 372181: {
@@ -44923,7 +44923,7 @@ int drv_QTextDocument(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 372183: {
-		pThis->setPlainText(drvGetString(p1));
+		pThis->setPlainText(drvGetStringHead(p1));
 		break;
 	}
 	case 372184: {
@@ -44986,49 +44986,49 @@ int drv_QTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	} 
 	case 373102: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(copyAvailable(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 373103: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(undoAvailable(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 373104: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(cursorPositionChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 373105: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(selectionChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 373106: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(textChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 373107: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(redoAvailable(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 373108: {
-		UISignal48 *uis = new UISignal48(pThis,(Iface*)p1);
+		UISignal48 *uis = new UISignal48(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentCharFormatChanged(QTextCharFormat const&)),uis,SLOT(call(QTextCharFormat const&)))) {
 			*(void**)p2 = uis;
 		}
@@ -45043,7 +45043,7 @@ int drv_QTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 373111: {
-		*(void**)_p = new QTextEdit(drvGetString(p1),(QWidget*)(p2));
+		*(void**)_p = new QTextEdit(drvGetStringHead(p1),(QWidget*)(p2));
 		break;
 	}
 	case 373112: {
@@ -45060,7 +45060,7 @@ int drv_QTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 373115: {
-		pThis->append(drvGetString(p1));
+		pThis->append(drvGetStringHead(p1));
 		break;
 	}
 	case 373116: {
@@ -45171,11 +45171,11 @@ int drv_QTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 373142: {
-		*(bool*)p2 = pThis->find(drvGetString(p1));
+		*(bool*)p2 = pThis->find(drvGetStringHead(p1));
 		break;
 	}
 	case 373143: {
-		*(bool*)p3 = pThis->find(drvGetString(p1),*(QFlags<QTextDocument::FindFlag>*)p2);
+		*(bool*)p3 = pThis->find(drvGetStringHead(p1),*(QFlags<QTextDocument::FindFlag>*)p2);
 		break;
 	}
 	case 373144: {
@@ -45223,11 +45223,11 @@ int drv_QTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 373155: {
-		pThis->insertHtml(drvGetString(p1));
+		pThis->insertHtml(drvGetStringHead(p1));
 		break;
 	}
 	case 373156: {
-		pThis->insertPlainText(drvGetString(p1));
+		pThis->insertPlainText(drvGetStringHead(p1));
 		break;
 	}
 	case 373157: {
@@ -45317,7 +45317,7 @@ int drv_QTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 373178: {
-		pThis->scrollToAnchor(drvGetString(p1));
+		pThis->scrollToAnchor(drvGetStringHead(p1));
 		break;
 	}
 	case 373179: {
@@ -45355,7 +45355,7 @@ int drv_QTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 373187: {
-		pThis->setDocumentTitle(drvGetString(p1));
+		pThis->setDocumentTitle(drvGetStringHead(p1));
 		break;
 	}
 	case 373188: {
@@ -45363,7 +45363,7 @@ int drv_QTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 373189: {
-		pThis->setFontFamily(drvGetString(p1));
+		pThis->setFontFamily(drvGetStringHead(p1));
 		break;
 	}
 	case 373190: {
@@ -45383,7 +45383,7 @@ int drv_QTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 373194: {
-		pThis->setHtml(drvGetString(p1));
+		pThis->setHtml(drvGetStringHead(p1));
 		break;
 	}
 	case 373195: {
@@ -45399,7 +45399,7 @@ int drv_QTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 373198: {
-		pThis->setPlainText(drvGetString(p1));
+		pThis->setPlainText(drvGetStringHead(p1));
 		break;
 	}
 	case 373199: {
@@ -45415,7 +45415,7 @@ int drv_QTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 373202: {
-		pThis->setText(drvGetString(p1));
+		pThis->setText(drvGetStringHead(p1));
 		break;
 	}
 	case 373203: {
@@ -45813,28 +45813,28 @@ int drv_QTimeLine(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	} 
 	case 379102: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(frameChanged(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 379103: {
-		UISignal51 *uis = new UISignal51(pThis,(Iface*)p1);
+		UISignal51 *uis = new UISignal51(pThis);
 		if (QObject::connect(pThis,SIGNAL(stateChanged(QTimeLine::State)),uis,SLOT(call(QTimeLine::State)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 379104: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(finished()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 379105: {
-		UISignal67 *uis = new UISignal67(pThis,(Iface*)p1);
+		UISignal67 *uis = new UISignal67(pThis);
 		if (QObject::connect(pThis,SIGNAL(valueChanged(double)),uis,SLOT(call(double)))) {
 			*(void**)p2 = uis;
 		}
@@ -45985,7 +45985,7 @@ int drv_QTimer(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 		break;
 	} 
 	case 380102: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(timeout()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
@@ -46059,56 +46059,56 @@ int drv_QToolBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	} 
 	case 381102: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(movableChanged(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 381103: {
-		UISignal65 *uis = new UISignal65(pThis,(Iface*)p1);
+		UISignal65 *uis = new UISignal65(pThis);
 		if (QObject::connect(pThis,SIGNAL(toolButtonStyleChanged(Qt::ToolButtonStyle)),uis,SLOT(call(Qt::ToolButtonStyle)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 381104: {
-		UISignal6 *uis = new UISignal6(pThis,(Iface*)p1);
+		UISignal6 *uis = new UISignal6(pThis);
 		if (QObject::connect(pThis,SIGNAL(actionTriggered(QAction*)),uis,SLOT(call(QAction*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 381105: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(topLevelChanged(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 381106: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(visibilityChanged(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 381107: {
-		UISignal63 *uis = new UISignal63(pThis,(Iface*)p1);
+		UISignal63 *uis = new UISignal63(pThis);
 		if (QObject::connect(pThis,SIGNAL(orientationChanged(Qt::Orientation)),uis,SLOT(call(Qt::Orientation)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 381108: {
-		UISignal15 *uis = new UISignal15(pThis,(Iface*)p1);
+		UISignal15 *uis = new UISignal15(pThis);
 		if (QObject::connect(pThis,SIGNAL(allowedAreasChanged(QFlags<Qt::ToolBarArea>)),uis,SLOT(call(QFlags<Qt::ToolBarArea>)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 381109: {
-		UISignal38 *uis = new UISignal38(pThis,(Iface*)p1);
+		UISignal38 *uis = new UISignal38(pThis);
 		if (QObject::connect(pThis,SIGNAL(iconSizeChanged(QSize const&)),uis,SLOT(call(QSize const&)))) {
 			*(void**)p2 = uis;
 		}
@@ -46123,7 +46123,7 @@ int drv_QToolBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 381112: {
-		*(void**)_p = new QToolBar(drvGetString(p1),(QWidget*)(p2));
+		*(void**)_p = new QToolBar(drvGetStringHead(p1),(QWidget*)(p2));
 		break;
 	}
 	case 381113: {
@@ -46148,21 +46148,21 @@ int drv_QToolBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 381118: {
-		*(void**)p2 = pThis->addAction(drvGetString(p1));
+		*(void**)p2 = pThis->addAction(drvGetStringHead(p1));
 		break;
 	}
 	case 381119: {
 		if(p1==0)return -2;
-		*(void**)p3 = pThis->addAction(*(QIcon*)(p1),drvGetString(p2));
+		*(void**)p3 = pThis->addAction(*(QIcon*)(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 381120: {
-		*(void**)p4 = pThis->addAction(drvGetString(p1),(QObject*)(p2),drvGet_const_char(p3));
+		*(void**)p4 = pThis->addAction(drvGetStringHead(p1),(QObject*)(p2),drvGet_const_char(p3));
 		break;
 	}
 	case 381121: {
 		if(p1==0)return -2;
-		*(void**)p5 = pThis->addAction(*(QIcon*)(p1),drvGetString(p2),(QObject*)(p3),drvGet_const_char(p4));
+		*(void**)p5 = pThis->addAction(*(QIcon*)(p1),drvGetStringHead(p2),(QObject*)(p3),drvGet_const_char(p4));
 		break;
 	}
 	case 381122: {
@@ -46286,7 +46286,7 @@ int drv_QToolBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	} 
 	case 382102: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentChanged(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
@@ -46301,12 +46301,12 @@ int drv_QToolBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 382105: {
-		*(int*)p3 = pThis->addItem((QWidget*)(p1),drvGetString(p2));
+		*(int*)p3 = pThis->addItem((QWidget*)(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 382106: {
 		if(p2==0)return -2;
-		*(int*)p4 = pThis->addItem((QWidget*)(p1),*(QIcon*)(p2),drvGetString(p3));
+		*(int*)p4 = pThis->addItem((QWidget*)(p1),*(QIcon*)(p2),drvGetStringHead(p3));
 		break;
 	}
 	case 382107: {
@@ -46334,12 +46334,12 @@ int drv_QToolBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 382113: {
-		*(int*)p4 = pThis->insertItem(*(int*)p1,(QWidget*)(p2),drvGetString(p3));
+		*(int*)p4 = pThis->insertItem(*(int*)p1,(QWidget*)(p2),drvGetStringHead(p3));
 		break;
 	}
 	case 382114: {
 		if(p3==0)return -2;
-		*(int*)p5 = pThis->insertItem(*(int*)p1,(QWidget*)(p2),*(QIcon*)(p3),drvGetString(p4));
+		*(int*)p5 = pThis->insertItem(*(int*)p1,(QWidget*)(p2),*(QIcon*)(p3),drvGetStringHead(p4));
 		break;
 	}
 	case 382115: {
@@ -46388,11 +46388,11 @@ int drv_QToolBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 382126: {
-		pThis->setItemText(*(int*)p1,drvGetString(p2));
+		pThis->setItemText(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
 	case 382127: {
-		pThis->setItemToolTip(*(int*)p1,drvGetString(p2));
+		pThis->setItemToolTip(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
 	case 382128: {
@@ -46419,7 +46419,7 @@ int drv_QToolButton(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	} 
 	case 383102: {
-		UISignal6 *uis = new UISignal6(pThis,(Iface*)p1);
+		UISignal6 *uis = new UISignal6(pThis);
 		if (QObject::connect(pThis,SIGNAL(triggered(QAction*)),uis,SLOT(call(QAction*)))) {
 			*(void**)p2 = uis;
 		}
@@ -46566,7 +46566,7 @@ int drv_QTranslator(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 384105: {
-		*(bool*)p2 = pThis->load(drvGetString(p1));
+		*(bool*)p2 = pThis->load(drvGetStringHead(p1));
 		break;
 	}
 	case 384106: {
@@ -46574,7 +46574,7 @@ int drv_QTranslator(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 384107: {
-		*(bool*)p5 = pThis->load(drvGetString(p1),drvGetString(p2),drvGetString(p3),drvGetString(p4));
+		*(bool*)p5 = pThis->load(drvGetStringHead(p1),drvGetStringHead(p2),drvGetStringHead(p3),drvGetStringHead(p4));
 		break;
 	}
 	case 384108: {
@@ -46601,14 +46601,14 @@ int drv_QTreeView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	} 
 	case 385102: {
-		UISignal25 *uis = new UISignal25(pThis,(Iface*)p1);
+		UISignal25 *uis = new UISignal25(pThis);
 		if (QObject::connect(pThis,SIGNAL(collapsed(QModelIndex const&)),uis,SLOT(call(QModelIndex const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 385103: {
-		UISignal25 *uis = new UISignal25(pThis,(Iface*)p1);
+		UISignal25 *uis = new UISignal25(pThis);
 		if (QObject::connect(pThis,SIGNAL(expanded(QModelIndex const&)),uis,SLOT(call(QModelIndex const&)))) {
 			*(void**)p2 = uis;
 		}
@@ -46796,7 +46796,7 @@ int drv_QTreeView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 385145: {
-		pThis->keyboardSearch(drvGetString(p1));
+		pThis->keyboardSearch(drvGetStringHead(p1));
 		break;
 	}
 	case 385146: {
@@ -47042,70 +47042,70 @@ int drv_QTreeWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	} 
 	case 386102: {
-		UISignal54 *uis = new UISignal54(pThis,(Iface*)p1);
+		UISignal54 *uis = new UISignal54(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemEntered(QTreeWidgetItem*,int)),uis,SLOT(call(QTreeWidgetItem*,int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 386103: {
-		UISignal54 *uis = new UISignal54(pThis,(Iface*)p1);
+		UISignal54 *uis = new UISignal54(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemPressed(QTreeWidgetItem*,int)),uis,SLOT(call(QTreeWidgetItem*,int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 386104: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemSelectionChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 386105: {
-		UISignal52 *uis = new UISignal52(pThis,(Iface*)p1);
+		UISignal52 *uis = new UISignal52(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemCollapsed(QTreeWidgetItem*)),uis,SLOT(call(QTreeWidgetItem*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 386106: {
-		UISignal54 *uis = new UISignal54(pThis,(Iface*)p1);
+		UISignal54 *uis = new UISignal54(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemActivated(QTreeWidgetItem*,int)),uis,SLOT(call(QTreeWidgetItem*,int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 386107: {
-		UISignal53 *uis = new UISignal53(pThis,(Iface*)p1);
+		UISignal53 *uis = new UISignal53(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)),uis,SLOT(call(QTreeWidgetItem*,QTreeWidgetItem*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 386108: {
-		UISignal54 *uis = new UISignal54(pThis,(Iface*)p1);
+		UISignal54 *uis = new UISignal54(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)),uis,SLOT(call(QTreeWidgetItem*,int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 386109: {
-		UISignal52 *uis = new UISignal52(pThis,(Iface*)p1);
+		UISignal52 *uis = new UISignal52(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemExpanded(QTreeWidgetItem*)),uis,SLOT(call(QTreeWidgetItem*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 386110: {
-		UISignal54 *uis = new UISignal54(pThis,(Iface*)p1);
+		UISignal54 *uis = new UISignal54(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemChanged(QTreeWidgetItem*,int)),uis,SLOT(call(QTreeWidgetItem*,int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 386111: {
-		UISignal54 *uis = new UISignal54(pThis,(Iface*)p1);
+		UISignal54 *uis = new UISignal54(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemClicked(QTreeWidgetItem*,int)),uis,SLOT(call(QTreeWidgetItem*,int)))) {
 			*(void**)p2 = uis;
 		}
@@ -47180,7 +47180,7 @@ int drv_QTreeWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 386129: {
-		drvSetListObj<QTreeWidgetItem*>(p4,177000,pThis->findItems(drvGetString(p1),*(QFlags<Qt::MatchFlag>*)p2,*(int*)p3));
+		drvSetListObj<QTreeWidgetItem*>(p4,177000,pThis->findItems(drvGetStringHead(p1),*(QFlags<Qt::MatchFlag>*)p2,*(int*)p3));
 		break;
 	}
 	case 386130: {
@@ -47314,7 +47314,7 @@ int drv_QTreeWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 386162: {
-		pThis->setHeaderLabel(drvGetString(p1));
+		pThis->setHeaderLabel(drvGetStringHead(p1));
 		break;
 	}
 	case 386163: {
@@ -47397,7 +47397,7 @@ int drv_QUiLoader(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 387104: {
-		pThis->addPluginPath(drvGetString(p1));
+		pThis->addPluginPath(drvGetStringHead(p1));
 		break;
 	}
 	case 387105: {
@@ -47417,7 +47417,7 @@ int drv_QUiLoader(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 387109: {
-		*(void**)p3 = pThis->createAction((QObject*)(p1),drvGetString(p2));
+		*(void**)p3 = pThis->createAction((QObject*)(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 387110: {
@@ -47425,23 +47425,23 @@ int drv_QUiLoader(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 387111: {
-		*(void**)p3 = pThis->createActionGroup((QObject*)(p1),drvGetString(p2));
+		*(void**)p3 = pThis->createActionGroup((QObject*)(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 387112: {
-		*(void**)p2 = pThis->createLayout(drvGetString(p1));
+		*(void**)p2 = pThis->createLayout(drvGetStringHead(p1));
 		break;
 	}
 	case 387113: {
-		*(void**)p4 = pThis->createLayout(drvGetString(p1),(QObject*)(p2),drvGetString(p3));
+		*(void**)p4 = pThis->createLayout(drvGetStringHead(p1),(QObject*)(p2),drvGetStringHead(p3));
 		break;
 	}
 	case 387114: {
-		*(void**)p2 = pThis->createWidget(drvGetString(p1));
+		*(void**)p2 = pThis->createWidget(drvGetStringHead(p1));
 		break;
 	}
 	case 387115: {
-		*(void**)p4 = pThis->createWidget(drvGetString(p1),(QWidget*)(p2),drvGetString(p3));
+		*(void**)p4 = pThis->createWidget(drvGetStringHead(p1),(QWidget*)(p2),drvGetStringHead(p3));
 		break;
 	}
 	case 387116: {
@@ -47489,49 +47489,49 @@ int drv_QUndoGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	} 
 	case 388102: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(indexChanged(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 388103: {
-		UISignal55 *uis = new UISignal55(pThis,(Iface*)p1);
+		UISignal55 *uis = new UISignal55(pThis);
 		if (QObject::connect(pThis,SIGNAL(activeStackChanged(QUndoStack*)),uis,SLOT(call(QUndoStack*)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 388104: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(undoTextChanged(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 388105: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(canUndoChanged(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 388106: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(redoTextChanged(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 388107: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(canRedoChanged(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 388108: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(cleanChanged(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
@@ -47566,7 +47566,7 @@ int drv_QUndoGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	}
 	case 388116: {
-		*(void**)p3 = pThis->createRedoAction((QObject*)(p1),drvGetString(p2));
+		*(void**)p3 = pThis->createRedoAction((QObject*)(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 388117: {
@@ -47574,7 +47574,7 @@ int drv_QUndoGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	}
 	case 388118: {
-		*(void**)p3 = pThis->createUndoAction((QObject*)(p1),drvGetString(p2));
+		*(void**)p3 = pThis->createUndoAction((QObject*)(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 388119: {
@@ -47625,42 +47625,42 @@ int drv_QUndoStack(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	} 
 	case 389102: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(indexChanged(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 389103: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(undoTextChanged(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 389104: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(canUndoChanged(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 389105: {
-		UISignal41 *uis = new UISignal41(pThis,(Iface*)p1);
+		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(redoTextChanged(QString const&)),uis,SLOT(call(QString const&)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 389106: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(canRedoChanged(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 389107: {
-		UISignal66 *uis = new UISignal66(pThis,(Iface*)p1);
+		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(cleanChanged(bool)),uis,SLOT(call(bool)))) {
 			*(void**)p2 = uis;
 		}
@@ -47675,7 +47675,7 @@ int drv_QUndoStack(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	}
 	case 389110: {
-		pThis->beginMacro(drvGetString(p1));
+		pThis->beginMacro(drvGetStringHead(p1));
 		break;
 	}
 	case 389111: {
@@ -47707,7 +47707,7 @@ int drv_QUndoStack(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	}
 	case 389118: {
-		*(void**)p3 = pThis->createRedoAction((QObject*)(p1),drvGetString(p2));
+		*(void**)p3 = pThis->createRedoAction((QObject*)(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 389119: {
@@ -47715,7 +47715,7 @@ int drv_QUndoStack(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	}
 	case 389120: {
-		*(void**)p3 = pThis->createUndoAction((QObject*)(p1),drvGetString(p2));
+		*(void**)p3 = pThis->createUndoAction((QObject*)(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 389121: {
@@ -47827,7 +47827,7 @@ int drv_QUndoView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 390110: {
-		pThis->setEmptyLabel(drvGetString(p1));
+		pThis->setEmptyLabel(drvGetStringHead(p1));
 		break;
 	}
 	case 390111: {
@@ -47862,7 +47862,7 @@ int drv_QUrlQuery(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 391103: {
-		*(void**)_p = new QUrlQuery(drvGetString(p1));
+		*(void**)_p = new QUrlQuery(drvGetStringHead(p1));
 		break;
 	}
 	case 391104: {
@@ -47876,11 +47876,11 @@ int drv_QUrlQuery(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 391106: {
-		pThis->addQueryItem(drvGetString(p1),drvGetString(p2));
+		pThis->addQueryItem(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
 	case 391107: {
-		drvSetStringArray(p2,pThis->allQueryItemValues(drvGetString(p1)));
+		drvSetStringArray(p2,pThis->allQueryItemValues(drvGetStringHead(p1)));
 		break;
 	}
 	case 391108: {
@@ -47896,7 +47896,7 @@ int drv_QUrlQuery(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 391111: {
-		*(bool*)p2 = pThis->hasQueryItem(drvGetString(p1));
+		*(bool*)p2 = pThis->hasQueryItem(drvGetStringHead(p1));
 		break;
 	}
 	case 391112: {
@@ -47912,7 +47912,7 @@ int drv_QUrlQuery(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 391115: {
-		drvSetString(p2,pThis->queryItemValue(drvGetString(p1)));
+		drvSetString(p2,pThis->queryItemValue(drvGetStringHead(p1)));
 		break;
 	}
 	case 391116: {
@@ -47924,15 +47924,15 @@ int drv_QUrlQuery(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 391118: {
-		pThis->removeAllQueryItems(drvGetString(p1));
+		pThis->removeAllQueryItems(drvGetStringHead(p1));
 		break;
 	}
 	case 391119: {
-		pThis->removeQueryItem(drvGetString(p1));
+		pThis->removeQueryItem(drvGetStringHead(p1));
 		break;
 	}
 	case 391120: {
-		pThis->setQuery(drvGetString(p1));
+		pThis->setQuery(drvGetStringHead(p1));
 		break;
 	}
 	case 391121: {
@@ -48023,7 +48023,7 @@ int drv_QVariantAnimation(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 		break;
 	} 
 	case 394102: {
-		UISignal57 *uis = new UISignal57(pThis,(Iface*)p1);
+		UISignal57 *uis = new UISignal57(pThis);
 		if (QObject::connect(pThis,SIGNAL(valueChanged(QVariant const&)),uis,SLOT(call(QVariant const&)))) {
 			*(void**)p2 = uis;
 		}
@@ -48116,7 +48116,7 @@ int drv_QWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	} 
 	case 395102: {
-		UISignal29 *uis = new UISignal29(pThis,(Iface*)p1);
+		UISignal29 *uis = new UISignal29(pThis);
 		if (QObject::connect(pThis,SIGNAL(customContextMenuRequested(QPoint const&)),uis,SLOT(call(QPoint const&)))) {
 			*(void**)p2 = uis;
 		}
@@ -48790,11 +48790,11 @@ int drv_QWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 395266: {
-		pThis->setAccessibleDescription(drvGetString(p1));
+		pThis->setAccessibleDescription(drvGetStringHead(p1));
 		break;
 	}
 	case 395267: {
-		pThis->setAccessibleName(drvGetString(p1));
+		pThis->setAccessibleName(drvGetStringHead(p1));
 		break;
 	}
 	case 395268: {
@@ -49020,7 +49020,7 @@ int drv_QWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 395320: {
-		pThis->setStatusTip(drvGetString(p1));
+		pThis->setStatusTip(drvGetStringHead(p1));
 		break;
 	}
 	case 395321: {
@@ -49028,7 +49028,7 @@ int drv_QWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 395322: {
-		pThis->setStyleSheet(drvGetString(p1));
+		pThis->setStyleSheet(drvGetStringHead(p1));
 		break;
 	}
 	case 395323: {
@@ -49036,7 +49036,7 @@ int drv_QWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 395324: {
-		pThis->setToolTip(drvGetString(p1));
+		pThis->setToolTip(drvGetStringHead(p1));
 		break;
 	}
 	case 395325: {
@@ -49048,11 +49048,11 @@ int drv_QWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 395327: {
-		pThis->setWhatsThis(drvGetString(p1));
+		pThis->setWhatsThis(drvGetStringHead(p1));
 		break;
 	}
 	case 395328: {
-		pThis->setWindowFilePath(drvGetString(p1));
+		pThis->setWindowFilePath(drvGetStringHead(p1));
 		break;
 	}
 	case 395329: {
@@ -49065,7 +49065,7 @@ int drv_QWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 395331: {
-		pThis->setWindowIconText(drvGetString(p1));
+		pThis->setWindowIconText(drvGetStringHead(p1));
 		break;
 	}
 	case 395332: {
@@ -49081,7 +49081,7 @@ int drv_QWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 395335: {
-		pThis->setWindowRole(drvGetString(p1));
+		pThis->setWindowRole(drvGetStringHead(p1));
 		break;
 	}
 	case 395336: {
@@ -49089,7 +49089,7 @@ int drv_QWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 395337: {
-		pThis->setWindowTitle(drvGetString(p1));
+		pThis->setWindowTitle(drvGetStringHead(p1));
 		break;
 	}
 	case 395338: {
@@ -49357,35 +49357,35 @@ int drv_QWizard(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	} 
 	case 397102: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(helpRequested()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 397103: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentIdChanged(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 397104: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(customButtonClicked(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 397105: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(pageAdded(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
 		break;
 	}
 	case 397106: {
-		UISignal68 *uis = new UISignal68(pThis,(Iface*)p1);
+		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(pageRemoved(int)),uis,SLOT(call(int)))) {
 			*(void**)p2 = uis;
 		}
@@ -49436,7 +49436,7 @@ int drv_QWizard(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 397118: {
-		*(void**)p2 = new QVariant(pThis->field(drvGetString(p1)));
+		*(void**)p2 = new QVariant(pThis->field(drvGetStringHead(p1)));
 		break;
 	}
 	case 397119: {
@@ -49496,7 +49496,7 @@ int drv_QWizard(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 397133: {
-		pThis->setButtonText(*(QWizard::WizardButton*)p1,drvGetString(p2));
+		pThis->setButtonText(*(QWizard::WizardButton*)p1,drvGetStringHead(p2));
 		break;
 	}
 	case 397134: {
@@ -49505,7 +49505,7 @@ int drv_QWizard(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 	}
 	case 397135: {
 		if(p2==0)return -2;
-		pThis->setField(drvGetString(p1),*(QVariant*)(p2));
+		pThis->setField(drvGetStringHead(p1),*(QVariant*)(p2));
 		break;
 	}
 	case 397136: {
@@ -49605,7 +49605,7 @@ int drv_QWizardPage(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	} 
 	case 398102: {
-		UISignal1 *uis = new UISignal1(pThis,(Iface*)p1);
+		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(completeChanged()),uis,SLOT(call()))) {
 			*(void**)p2 = uis;
 		}
@@ -49628,7 +49628,7 @@ int drv_QWizardPage(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 398107: {
-		*(void**)p2 = new QVariant(pThis->field(drvGetString(p1)));
+		*(void**)p2 = new QVariant(pThis->field(drvGetStringHead(p1)));
 		break;
 	}
 	case 398108: {
@@ -49656,11 +49656,11 @@ int drv_QWizardPage(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 398114: {
-		pThis->registerField(drvGetString(p1),(QWidget*)(p2),drvGet_const_char(p3),drvGet_const_char(p4));
+		pThis->registerField(drvGetStringHead(p1),(QWidget*)(p2),drvGet_const_char(p3),drvGet_const_char(p4));
 		break;
 	}
 	case 398115: {
-		pThis->setButtonText(*(QWizard::WizardButton*)p1,drvGetString(p2));
+		pThis->setButtonText(*(QWizard::WizardButton*)p1,drvGetStringHead(p2));
 		break;
 	}
 	case 398116: {
@@ -49669,7 +49669,7 @@ int drv_QWizardPage(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 	}
 	case 398117: {
 		if(p2==0)return -2;
-		pThis->setField(drvGetString(p1),*(QVariant*)(p2));
+		pThis->setField(drvGetStringHead(p1),*(QVariant*)(p2));
 		break;
 	}
 	case 398118: {
@@ -49682,11 +49682,11 @@ int drv_QWizardPage(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 398120: {
-		pThis->setSubTitle(drvGetString(p1));
+		pThis->setSubTitle(drvGetStringHead(p1));
 		break;
 	}
 	case 398121: {
-		pThis->setTitle(drvGetString(p1));
+		pThis->setTitle(drvGetStringHead(p1));
 		break;
 	}
 	case 398122: {
