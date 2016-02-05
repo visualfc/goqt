@@ -14,7 +14,7 @@ func drvSignalCall(fn interface{}, id int32, v1, v2, v3, v4 unsafe.Pointer) erro
 		fn.(func())()
 	case 2:
 		_v1 := &QAbstractAnimation{}
-		_v1.SetDriver(uintptr(v1), 192000, false)
+		_v1.SetDriver(uintptr(v1), 194000, false)
 		fn.(func(*QAbstractAnimation))(_v1)
 	case 3:
 		fn.(func(QAbstractAnimation_Direction))(*(*QAbstractAnimation_Direction)(v1))
@@ -22,11 +22,11 @@ func drvSignalCall(fn interface{}, id int32, v1, v2, v3, v4 unsafe.Pointer) erro
 		fn.(func(QAbstractAnimation_State, QAbstractAnimation_State))(*(*QAbstractAnimation_State)(v1), *(*QAbstractAnimation_State)(v2))
 	case 5:
 		_v1 := &QAbstractButton{}
-		_v1.SetDriver(uintptr(v1), 193000, false)
+		_v1.SetDriver(uintptr(v1), 195000, false)
 		fn.(func(*QAbstractButton))(_v1)
 	case 6:
 		_v1 := &QAction{}
-		_v1.SetDriver(uintptr(v1), 207000, false)
+		_v1.SetDriver(uintptr(v1), 209000, false)
 		fn.(func(*QAction))(_v1)
 	case 7:
 		_v1 := &QBrush{}
@@ -64,59 +64,59 @@ func drvSignalCall(fn interface{}, id int32, v1, v2, v3, v4 unsafe.Pointer) erro
 		fn.(func(QImageReader_ImageReaderError))(*(*QImageReader_ImageReaderError)(v1))
 	case 19:
 		_v1 := &QItemSelection{}
-		_v1.SetDriver(uintptr(v1), 62000, false)
+		_v1.SetDriver(uintptr(v1), 63000, false)
 		_v2 := &QItemSelection{}
-		_v2.SetDriver(uintptr(v2), 62000, false)
+		_v2.SetDriver(uintptr(v2), 63000, false)
 		fn.(func(*QItemSelection, *QItemSelection))(_v1, _v2)
 	case 20:
 		var _v1 []*QModelIndex
-		drvGetModelIndexArray(unsafe.Pointer(&_v1), v1, 79000)
+		drvGetModelIndexArray(unsafe.Pointer(&_v1), v1, 80000)
 		fn.(func([]*QModelIndex))(_v1)
 	case 21:
 		var _v1 []*QRectF
-		drvGetRectFArray(unsafe.Pointer(&_v1), v1, 111000)
+		drvGetRectFArray(unsafe.Pointer(&_v1), v1, 112000)
 		fn.(func([]*QRectF))(_v1)
 	case 22:
 		_v1 := &QListWidgetItem{}
-		_v1.SetDriver(uintptr(v1), 71000, false)
+		_v1.SetDriver(uintptr(v1), 72000, false)
 		fn.(func(*QListWidgetItem))(_v1)
 	case 23:
 		_v1 := &QListWidgetItem{}
-		_v1.SetDriver(uintptr(v1), 71000, false)
+		_v1.SetDriver(uintptr(v1), 72000, false)
 		_v2 := &QListWidgetItem{}
-		_v2.SetDriver(uintptr(v2), 71000, false)
+		_v2.SetDriver(uintptr(v2), 72000, false)
 		fn.(func(*QListWidgetItem, *QListWidgetItem))(_v1, _v2)
 	case 24:
 		_v1 := &QMdiSubWindow{}
-		_v1.SetDriver(uintptr(v1), 307000, false)
+		_v1.SetDriver(uintptr(v1), 309000, false)
 		fn.(func(*QMdiSubWindow))(_v1)
 	case 25:
 		_v1 := &QModelIndex{}
-		_v1.SetDriver(uintptr(v1), 79000, false)
+		_v1.SetDriver(uintptr(v1), 80000, false)
 		fn.(func(*QModelIndex))(_v1)
 	case 26:
 		_v1 := &QModelIndex{}
-		_v1.SetDriver(uintptr(v1), 79000, false)
+		_v1.SetDriver(uintptr(v1), 80000, false)
 		_v2 := &QModelIndex{}
-		_v2.SetDriver(uintptr(v2), 79000, false)
+		_v2.SetDriver(uintptr(v2), 80000, false)
 		fn.(func(*QModelIndex, *QModelIndex))(_v1, _v2)
 	case 27:
 		fn.(func(QMovie_MovieState))(*(*QMovie_MovieState)(v1))
 	case 28:
 		_v1 := &QObject{}
-		_v1.SetDriver(uintptr(v1), 314000, false)
+		_v1.SetDriver(uintptr(v1), 316000, false)
 		fn.(func(*QObject))(_v1)
 	case 29:
 		_v1 := &QPoint{}
-		_v1.SetDriver(uintptr(v1), 99000, false)
+		_v1.SetDriver(uintptr(v1), 100000, false)
 		fn.(func(*QPoint))(_v1)
 	case 30:
 		_v1 := &QPointF{}
-		_v1.SetDriver(uintptr(v1), 100000, false)
+		_v1.SetDriver(uintptr(v1), 101000, false)
 		fn.(func(*QPointF))(_v1)
 	case 31:
 		_v1 := &QPrinter{}
-		_v1.SetDriver(uintptr(v1), 104000, false)
+		_v1.SetDriver(uintptr(v1), 105000, false)
 		fn.(func(*QPrinter))(_v1)
 	case 32:
 		fn.(func(QProcess_ProcessError))(*(*QProcess_ProcessError)(v1))
@@ -124,31 +124,31 @@ func drvSignalCall(fn interface{}, id int32, v1, v2, v3, v4 unsafe.Pointer) erro
 		fn.(func(QProcess_ProcessState))(*(*QProcess_ProcessState)(v1))
 	case 34:
 		_v1 := &QRect{}
-		_v1.SetDriver(uintptr(v1), 110000, false)
+		_v1.SetDriver(uintptr(v1), 111000, false)
 		fn.(func(*QRect))(_v1)
 	case 35:
 		_v1 := &QRect{}
-		_v1.SetDriver(uintptr(v1), 110000, false)
+		_v1.SetDriver(uintptr(v1), 111000, false)
 		fn.(func(*QRect, int32))(_v1, *(*int32)(v2))
 	case 36:
 		_v1 := &QRectF{}
-		_v1.SetDriver(uintptr(v1), 111000, false)
+		_v1.SetDriver(uintptr(v1), 112000, false)
 		fn.(func(*QRectF))(_v1)
 	case 37:
 		_v1 := &QSessionManager{}
-		_v1.SetDriver(uintptr(v1), 338000, false)
+		_v1.SetDriver(uintptr(v1), 340000, false)
 		fn.(func(*QSessionManager))(_v1)
 	case 38:
 		_v1 := &QSize{}
-		_v1.SetDriver(uintptr(v1), 119000, false)
+		_v1.SetDriver(uintptr(v1), 120000, false)
 		fn.(func(*QSize))(_v1)
 	case 39:
 		_v1 := &QSizeF{}
-		_v1.SetDriver(uintptr(v1), 120000, false)
+		_v1.SetDriver(uintptr(v1), 121000, false)
 		fn.(func(*QSizeF))(_v1)
 	case 40:
 		_v1 := &QStandardItem{}
-		_v1.SetDriver(uintptr(v1), 123000, false)
+		_v1.SetDriver(uintptr(v1), 124000, false)
 		fn.(func(*QStandardItem))(_v1)
 	case 41:
 		var _v1 string
@@ -170,71 +170,71 @@ func drvSignalCall(fn interface{}, id int32, v1, v2, v3, v4 unsafe.Pointer) erro
 		fn.(func(QSystemTrayIcon_ActivationReason))(*(*QSystemTrayIcon_ActivationReason)(v1))
 	case 45:
 		_v1 := &QTableWidgetItem{}
-		_v1.SetDriver(uintptr(v1), 134000, false)
+		_v1.SetDriver(uintptr(v1), 136000, false)
 		fn.(func(*QTableWidgetItem))(_v1)
 	case 46:
 		_v1 := &QTableWidgetItem{}
-		_v1.SetDriver(uintptr(v1), 134000, false)
+		_v1.SetDriver(uintptr(v1), 136000, false)
 		_v2 := &QTableWidgetItem{}
-		_v2.SetDriver(uintptr(v2), 134000, false)
+		_v2.SetDriver(uintptr(v2), 136000, false)
 		fn.(func(*QTableWidgetItem, *QTableWidgetItem))(_v1, _v2)
 	case 47:
 		_v1 := &QTextBlock{}
-		_v1.SetDriver(uintptr(v1), 137000, false)
+		_v1.SetDriver(uintptr(v1), 139000, false)
 		fn.(func(*QTextBlock))(_v1)
 	case 48:
 		_v1 := &QTextCharFormat{}
-		_v1.SetDriver(uintptr(v1), 142000, false)
+		_v1.SetDriver(uintptr(v1), 144000, false)
 		fn.(func(*QTextCharFormat))(_v1)
 	case 49:
 		_v1 := &QTextCursor{}
-		_v1.SetDriver(uintptr(v1), 145000, false)
+		_v1.SetDriver(uintptr(v1), 147000, false)
 		fn.(func(*QTextCursor))(_v1)
 	case 50:
 		_v1 := &QTime{}
-		_v1.SetDriver(uintptr(v1), 170000, false)
+		_v1.SetDriver(uintptr(v1), 172000, false)
 		fn.(func(*QTime))(_v1)
 	case 51:
 		fn.(func(QTimeLine_State))(*(*QTimeLine_State)(v1))
 	case 52:
 		_v1 := &QTreeWidgetItem{}
-		_v1.SetDriver(uintptr(v1), 177000, false)
+		_v1.SetDriver(uintptr(v1), 179000, false)
 		fn.(func(*QTreeWidgetItem))(_v1)
 	case 53:
 		_v1 := &QTreeWidgetItem{}
-		_v1.SetDriver(uintptr(v1), 177000, false)
+		_v1.SetDriver(uintptr(v1), 179000, false)
 		_v2 := &QTreeWidgetItem{}
-		_v2.SetDriver(uintptr(v2), 177000, false)
+		_v2.SetDriver(uintptr(v2), 179000, false)
 		fn.(func(*QTreeWidgetItem, *QTreeWidgetItem))(_v1, _v2)
 	case 54:
 		_v1 := &QTreeWidgetItem{}
-		_v1.SetDriver(uintptr(v1), 177000, false)
+		_v1.SetDriver(uintptr(v1), 179000, false)
 		fn.(func(*QTreeWidgetItem, int32))(_v1, *(*int32)(v2))
 	case 55:
 		_v1 := &QUndoStack{}
-		_v1.SetDriver(uintptr(v1), 389000, false)
+		_v1.SetDriver(uintptr(v1), 391000, false)
 		fn.(func(*QUndoStack))(_v1)
 	case 56:
 		_v1 := &QUrl{}
-		_v1.SetDriver(uintptr(v1), 180000, false)
+		_v1.SetDriver(uintptr(v1), 182000, false)
 		fn.(func(*QUrl))(_v1)
 	case 57:
 		_v1 := &QVariant{}
-		_v1.SetDriver(uintptr(v1), 182000, false)
+		_v1.SetDriver(uintptr(v1), 184000, false)
 		fn.(func(*QVariant))(_v1)
 	case 58:
 		_v1 := &QWidget{}
-		_v1.SetDriver(uintptr(v1), 395000, false)
+		_v1.SetDriver(uintptr(v1), 397000, false)
 		fn.(func(*QWidget))(_v1)
 	case 59:
 		_v1 := &QWidget{}
-		_v1.SetDriver(uintptr(v1), 395000, false)
+		_v1.SetDriver(uintptr(v1), 397000, false)
 		fn.(func(*QWidget, QAbstractItemDelegate_EndEditHint))(_v1, *(*QAbstractItemDelegate_EndEditHint)(v2))
 	case 60:
 		_v1 := &QWidget{}
-		_v1.SetDriver(uintptr(v1), 395000, false)
+		_v1.SetDriver(uintptr(v1), 397000, false)
 		_v2 := &QWidget{}
-		_v2.SetDriver(uintptr(v2), 395000, false)
+		_v2.SetDriver(uintptr(v2), 397000, false)
 		fn.(func(*QWidget, *QWidget))(_v1, _v2)
 	case 61:
 		fn.(func(Qt_DockWidgetArea))(*(*Qt_DockWidgetArea)(v1))

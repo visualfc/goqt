@@ -22,6 +22,7 @@
 #include <QtGui>
 #include <QUiLoader>
 #include "qsyntaxhighlighterhook.h"
+#include "../ui/cdrv_def.h"
 
 #if QT_VERSION >= 0x050000
 #define QTDRV_QT5 1
@@ -35,12 +36,10 @@
     #include "./qurl/qurlquery.h"
 #endif
 
-typedef	unsigned int uint32;
+typedef QMap<QString,QVariant> QStringVariantMap;
+typedef QMap<int,QVariant> QIntVariantMap;
 
-struct string_head {
-    const char *data;
-    int size;
-};
+typedef	unsigned int uint32;
 
 typedef struct {
     const char **data;
@@ -112,15 +111,12 @@ inline void drvSetBitArray(void *p, QBitArray v)
     if (p == 0) {
         return;
     }
-#if QT_VERSION >= 0x050000
     QVector<bool> ar;
+    ar.resize(v.size());
     for (int i = 0; i < v.size(); i++) {
-        ar.push_back(v.at(i));
+        ar[i] = v[i];
     }
     array_to_slice(p,ar.data(),ar.size());
-#else
-    array_to_slice(p,v.data_ptr()->data,v.size());
-#endif
 }
 
 inline QString drvGetStringHead(void *p)
@@ -130,6 +126,29 @@ inline QString drvGetStringHead(void *p)
     }
     string_head *sh = (string_head*)p;
     return QString::fromUtf8(sh->data,sh->size);
+}
+
+inline QBitArray drvGetBoolArrayHead(void *p)
+{
+    if (p == 0) {
+        return QBitArray();
+    }
+    bool_array_head *sh = (bool_array_head*)p;
+    QBitArray ar;
+    ar.resize(sh->size);
+    for (int i = 0; i < sh->size; i++) {
+        ar[i] = sh->data[i];
+    }
+    return ar;
+}
+
+inline QByteArray drvGetByteArrayHead(void *p)
+{
+    if (p == 0) {
+        return QByteArray();
+    }
+    byte_array_head *sh = (byte_array_head*)p;
+    return QByteArray(sh->data,sh->size);
 }
 
 inline QStringList drvGetStringArray(void *p)

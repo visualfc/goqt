@@ -6,7 +6,8 @@ package ui
 
 /*
 #include <stdlib.h>
-#include "cdrv.h"
+#include <string.h>
+#include "cdrv_def.h"
 
 extern int qtdrv(void *p, int typeid,int funcid, void *p1,void *p2,void *p3,void *p4,void *p5, void *p6,void *p7,void *p8, void *p9, void *p10, void *p11, void *p12);
 static void init()
@@ -287,12 +288,114 @@ func (d *_qt_drv) Delete() error {
 	return err
 }
 
-func NewCS(s string) *C.string_head {
-	return &C.string_head{C.CString(s), C.int(len(s))}
+func NewCPtrArrayHead(sa []uintptr) *C.ptr_array_head {
+	size := len(sa)
+	if size == 0 {
+		return &C.ptr_array_head{}
+	}
+	var p *C.pvoid
+	p = (*C.pvoid)(C.malloc(C.size_t(size * C.pvoid_size)))
+	C.memcpy(unsafe.Pointer(p), unsafe.Pointer(&sa[0]), C.size_t(size*C.pvoid_size))
+	v := &C.ptr_array_head{}
+	v.data = p
+	v.size = C.int(size)
+	return v
 }
 
-func FreeCS(s *C.string_head) {
+func UnsafePtrSize() int {
+	return C.pvoid_size
+}
+
+func FreeCPtrArrayHead(h *C.ptr_array_head) {
+	if h.size == 0 {
+		return
+	}
+	C.free(unsafe.Pointer(h.data))
+}
+
+func NewCIntArrayHead(sa []int32) *C.int_array_head {
+	size := len(sa)
+	if size == 0 {
+		return &C.int_array_head{}
+	}
+	var p *C.int
+	p = (*C.int)(C.malloc(C.size_t(size * 4)))
+	C.memcpy(unsafe.Pointer(p), unsafe.Pointer(&sa[0]), C.size_t(size*4))
+	v := &C.int_array_head{}
+	v.data = p
+	v.size = C.int(size)
+	return v
+
+}
+
+func FreeCIntArrayHead(h *C.int_array_head) {
+	if h.size == 0 {
+		return
+	}
+	C.free(unsafe.Pointer(h.data))
+}
+
+func NewCBoolArrayHead(sa []bool) *C.bool_array_head {
+	size := len(sa)
+	if size == 0 {
+		return &C.bool_array_head{}
+	}
+	var p *C.bool
+	p = (*C.bool)(C.malloc(C.size_t(size)))
+	C.memcpy(unsafe.Pointer(p), unsafe.Pointer(&sa[0]), C.size_t(size))
+	v := &C.bool_array_head{}
+	v.data = p
+	v.size = C.int(size)
+	return v
+}
+
+func FreeCBoolArrayHead(h *C.bool_array_head) {
+	if h.size == 0 {
+		return
+	}
+	C.free(unsafe.Pointer(h.data))
+}
+
+func NewCByteArrayHead(sa []byte) *C.byte_array_head {
+	size := len(sa)
+	if size == 0 {
+		return &C.byte_array_head{}
+	}
+	var p *C.char
+	p = (*C.char)(C.malloc(C.size_t(size)))
+	C.memcpy(unsafe.Pointer(p), unsafe.Pointer(&sa[0]), C.size_t(size))
+	v := &C.byte_array_head{}
+	v.data = p
+	v.size = C.int(size)
+	return v
+}
+
+func FreeCByteArrayHead(h *C.byte_array_head) {
+	if h.size == 0 {
+		return
+	}
+	C.free(unsafe.Pointer(h.data))
+}
+
+func NewCStringHead(s string) *C.string_head {
+	v := &C.string_head{}
+	v.data = C.CString(s)
+	v.size = C.int(len(s))
+	return v
+}
+
+func FreeCStringHead(s *C.string_head) {
 	C.free(unsafe.Pointer(s.data))
+}
+
+func NewCBytesArray(sa [][]byte) ([]*C.char, int) {
+	max := len(sa)
+	csa := make([]*C.char, max+1)
+	for i := 0; i < max; i++ {
+		csa[i] = C.CString(string(sa[i]))
+	}
+	csa[max] = nil
+	return csa, max
 }
 
 func NewCSArray(sa []string) ([]*C.char, int) {

@@ -6,7 +6,7 @@ package ui
 
 func drvNewObject(obj uintptr) *QObject {
 	_obj := &QObject{}
-	_obj.SetDriver(obj, 314000, false)
+	_obj.SetDriver(obj, 316000, false)
 	return _obj
 }
 func drvEventCall(i interface{}, obj *QObject, evid uint32, event uintptr) bool {
@@ -33,13 +33,13 @@ func drvEventCall(i interface{}, obj *QObject, evid uint32, event uintptr) bool 
 			OnTimerEvent(*QObject, *QTimerEvent) bool
 		}); ok {
 			e := &QTimerEvent{}
-			e.SetDriver(event, 171000, false)
+			e.SetDriver(event, 173000, false)
 			return v.OnTimerEvent(obj, e)
 		} else if v, ok := i.(interface {
 			OnTimerEvent(*QTimerEvent) bool
 		}); ok {
 			e := &QTimerEvent{}
-			e.SetDriver(event, 171000, false)
+			e.SetDriver(event, 173000, false)
 			return v.OnTimerEvent(e)
 		}
 	case QEvent_MouseButtonPress:
@@ -187,13 +187,13 @@ func drvEventCall(i interface{}, obj *QObject, evid uint32, event uintptr) bool 
 			OnPaintEvent(*QObject, *QPaintEvent) bool
 		}); ok {
 			e := &QPaintEvent{}
-			e.SetDriver(event, 85000, false)
+			e.SetDriver(event, 86000, false)
 			return v.OnPaintEvent(obj, e)
 		} else if v, ok := i.(interface {
 			OnPaintEvent(*QPaintEvent) bool
 		}); ok {
 			e := &QPaintEvent{}
-			e.SetDriver(event, 85000, false)
+			e.SetDriver(event, 86000, false)
 			return v.OnPaintEvent(e)
 		}
 	case QEvent_Move:
@@ -201,13 +201,13 @@ func drvEventCall(i interface{}, obj *QObject, evid uint32, event uintptr) bool 
 			OnMoveEvent(*QObject, *QMoveEvent) bool
 		}); ok {
 			e := &QMoveEvent{}
-			e.SetDriver(event, 81000, false)
+			e.SetDriver(event, 82000, false)
 			return v.OnMoveEvent(obj, e)
 		} else if v, ok := i.(interface {
 			OnMoveEvent(*QMoveEvent) bool
 		}); ok {
 			e := &QMoveEvent{}
-			e.SetDriver(event, 81000, false)
+			e.SetDriver(event, 82000, false)
 			return v.OnMoveEvent(e)
 		}
 	case QEvent_Resize:
@@ -215,13 +215,13 @@ func drvEventCall(i interface{}, obj *QObject, evid uint32, event uintptr) bool 
 			OnResizeEvent(*QObject, *QResizeEvent) bool
 		}); ok {
 			e := &QResizeEvent{}
-			e.SetDriver(event, 115000, false)
+			e.SetDriver(event, 116000, false)
 			return v.OnResizeEvent(obj, e)
 		} else if v, ok := i.(interface {
 			OnResizeEvent(*QResizeEvent) bool
 		}); ok {
 			e := &QResizeEvent{}
-			e.SetDriver(event, 115000, false)
+			e.SetDriver(event, 116000, false)
 			return v.OnResizeEvent(e)
 		}
 	case QEvent_Create:
@@ -257,13 +257,13 @@ func drvEventCall(i interface{}, obj *QObject, evid uint32, event uintptr) bool 
 			OnShowEvent(*QObject, *QShowEvent) bool
 		}); ok {
 			e := &QShowEvent{}
-			e.SetDriver(event, 118000, false)
+			e.SetDriver(event, 119000, false)
 			return v.OnShowEvent(obj, e)
 		} else if v, ok := i.(interface {
 			OnShowEvent(*QShowEvent) bool
 		}); ok {
 			e := &QShowEvent{}
-			e.SetDriver(event, 118000, false)
+			e.SetDriver(event, 119000, false)
 			return v.OnShowEvent(e)
 		}
 	case QEvent_Hide:
@@ -411,13 +411,13 @@ func drvEventCall(i interface{}, obj *QObject, evid uint32, event uintptr) bool 
 			OnWheelEvent(*QObject, *QWheelEvent) bool
 		}); ok {
 			e := &QWheelEvent{}
-			e.SetDriver(event, 189000, false)
+			e.SetDriver(event, 191000, false)
 			return v.OnWheelEvent(obj, e)
 		} else if v, ok := i.(interface {
 			OnWheelEvent(*QWheelEvent) bool
 		}); ok {
 			e := &QWheelEvent{}
-			e.SetDriver(event, 189000, false)
+			e.SetDriver(event, 191000, false)
 			return v.OnWheelEvent(e)
 		}
 	case QEvent_WindowTitleChange:
@@ -1153,13 +1153,13 @@ func drvEventCall(i interface{}, obj *QObject, evid uint32, event uintptr) bool 
 			OnWindowStateChangeEvent(*QObject, *QWindowStateChangeEvent) bool
 		}); ok {
 			e := &QWindowStateChangeEvent{}
-			e.SetDriver(event, 191000, false)
+			e.SetDriver(event, 193000, false)
 			return v.OnWindowStateChangeEvent(obj, e)
 		} else if v, ok := i.(interface {
 			OnWindowStateChangeEvent(*QWindowStateChangeEvent) bool
 		}); ok {
 			e := &QWindowStateChangeEvent{}
-			e.SetDriver(event, 191000, false)
+			e.SetDriver(event, 193000, false)
 			return v.OnWindowStateChangeEvent(e)
 		}
 	case QEvent_ToolTip:
@@ -1195,13 +1195,13 @@ func drvEventCall(i interface{}, obj *QObject, evid uint32, event uintptr) bool 
 			OnStatusTipEvent(*QObject, *QStatusTipEvent) bool
 		}); ok {
 			e := &QStatusTipEvent{}
-			e.SetDriver(event, 127000, false)
+			e.SetDriver(event, 128000, false)
 			return v.OnStatusTipEvent(obj, e)
 		} else if v, ok := i.(interface {
 			OnStatusTipEvent(*QStatusTipEvent) bool
 		}); ok {
 			e := &QStatusTipEvent{}
-			e.SetDriver(event, 127000, false)
+			e.SetDriver(event, 128000, false)
 			return v.OnStatusTipEvent(e)
 		}
 	case QEvent_ActionChanged:
@@ -1265,13 +1265,13 @@ func drvEventCall(i interface{}, obj *QObject, evid uint32, event uintptr) bool 
 			OnShortcutEvent(*QObject, *QShortcutEvent) bool
 		}); ok {
 			e := &QShortcutEvent{}
-			e.SetDriver(event, 117000, false)
+			e.SetDriver(event, 118000, false)
 			return v.OnShortcutEvent(obj, e)
 		} else if v, ok := i.(interface {
 			OnShortcutEvent(*QShortcutEvent) bool
 		}); ok {
 			e := &QShortcutEvent{}
-			e.SetDriver(event, 117000, false)
+			e.SetDriver(event, 118000, false)
 			return v.OnShortcutEvent(e)
 		}
 	case QEvent_ShortcutOverride:
@@ -1293,13 +1293,13 @@ func drvEventCall(i interface{}, obj *QObject, evid uint32, event uintptr) bool 
 			OnWhatsThisClickedEvent(*QObject, *QWhatsThisClickedEvent) bool
 		}); ok {
 			e := &QWhatsThisClickedEvent{}
-			e.SetDriver(event, 188000, false)
+			e.SetDriver(event, 190000, false)
 			return v.OnWhatsThisClickedEvent(obj, e)
 		} else if v, ok := i.(interface {
 			OnWhatsThisClickedEvent(*QWhatsThisClickedEvent) bool
 		}); ok {
 			e := &QWhatsThisClickedEvent{}
-			e.SetDriver(event, 188000, false)
+			e.SetDriver(event, 190000, false)
 			return v.OnWhatsThisClickedEvent(e)
 		}
 	case QEvent_ToolBarChange:
@@ -1307,13 +1307,13 @@ func drvEventCall(i interface{}, obj *QObject, evid uint32, event uintptr) bool 
 			OnToolBarChangeEvent(*QObject, *QToolBarChangeEvent) bool
 		}); ok {
 			e := &QToolBarChangeEvent{}
-			e.SetDriver(event, 172000, false)
+			e.SetDriver(event, 174000, false)
 			return v.OnToolBarChangeEvent(obj, e)
 		} else if v, ok := i.(interface {
 			OnToolBarChangeEvent(*QToolBarChangeEvent) bool
 		}); ok {
 			e := &QToolBarChangeEvent{}
-			e.SetDriver(event, 172000, false)
+			e.SetDriver(event, 174000, false)
 			return v.OnToolBarChangeEvent(e)
 		}
 	case QEvent_ApplicationActivate:
@@ -1573,13 +1573,13 @@ func drvEventCall(i interface{}, obj *QObject, evid uint32, event uintptr) bool 
 			OnGraphicsSceneContextMenuEvent(*QObject, *QGraphicsSceneContextMenuEvent) bool
 		}); ok {
 			e := &QGraphicsSceneContextMenuEvent{}
-			e.SetDriver(event, 273000, false)
+			e.SetDriver(event, 275000, false)
 			return v.OnGraphicsSceneContextMenuEvent(obj, e)
 		} else if v, ok := i.(interface {
 			OnGraphicsSceneContextMenuEvent(*QGraphicsSceneContextMenuEvent) bool
 		}); ok {
 			e := &QGraphicsSceneContextMenuEvent{}
-			e.SetDriver(event, 273000, false)
+			e.SetDriver(event, 275000, false)
 			return v.OnGraphicsSceneContextMenuEvent(e)
 		}
 	case QEvent_GraphicsSceneHoverEnter:
@@ -1629,13 +1629,13 @@ func drvEventCall(i interface{}, obj *QObject, evid uint32, event uintptr) bool 
 			OnGraphicsSceneHelpEvent(*QObject, *QGraphicsSceneHelpEvent) bool
 		}); ok {
 			e := &QGraphicsSceneHelpEvent{}
-			e.SetDriver(event, 276000, false)
+			e.SetDriver(event, 278000, false)
 			return v.OnGraphicsSceneHelpEvent(obj, e)
 		} else if v, ok := i.(interface {
 			OnGraphicsSceneHelpEvent(*QGraphicsSceneHelpEvent) bool
 		}); ok {
 			e := &QGraphicsSceneHelpEvent{}
-			e.SetDriver(event, 276000, false)
+			e.SetDriver(event, 278000, false)
 			return v.OnGraphicsSceneHelpEvent(e)
 		}
 	case QEvent_GraphicsSceneDragEnter:
@@ -1699,13 +1699,13 @@ func drvEventCall(i interface{}, obj *QObject, evid uint32, event uintptr) bool 
 			OnGraphicsSceneWheelEvent(*QObject, *QGraphicsSceneWheelEvent) bool
 		}); ok {
 			e := &QGraphicsSceneWheelEvent{}
-			e.SetDriver(event, 281000, false)
+			e.SetDriver(event, 283000, false)
 			return v.OnGraphicsSceneWheelEvent(obj, e)
 		} else if v, ok := i.(interface {
 			OnGraphicsSceneWheelEvent(*QGraphicsSceneWheelEvent) bool
 		}); ok {
 			e := &QGraphicsSceneWheelEvent{}
-			e.SetDriver(event, 281000, false)
+			e.SetDriver(event, 283000, false)
 			return v.OnGraphicsSceneWheelEvent(e)
 		}
 	case QEvent_KeyboardLayoutChange:
@@ -1881,13 +1881,13 @@ func drvEventCall(i interface{}, obj *QObject, evid uint32, event uintptr) bool 
 			OnGraphicsSceneResizeEvent(*QObject, *QGraphicsSceneResizeEvent) bool
 		}); ok {
 			e := &QGraphicsSceneResizeEvent{}
-			e.SetDriver(event, 280000, false)
+			e.SetDriver(event, 282000, false)
 			return v.OnGraphicsSceneResizeEvent(obj, e)
 		} else if v, ok := i.(interface {
 			OnGraphicsSceneResizeEvent(*QGraphicsSceneResizeEvent) bool
 		}); ok {
 			e := &QGraphicsSceneResizeEvent{}
-			e.SetDriver(event, 280000, false)
+			e.SetDriver(event, 282000, false)
 			return v.OnGraphicsSceneResizeEvent(e)
 		}
 	case QEvent_GraphicsSceneMove:
@@ -1895,13 +1895,13 @@ func drvEventCall(i interface{}, obj *QObject, evid uint32, event uintptr) bool 
 			OnGraphicsSceneMoveEvent(*QObject, *QGraphicsSceneMoveEvent) bool
 		}); ok {
 			e := &QGraphicsSceneMoveEvent{}
-			e.SetDriver(event, 279000, false)
+			e.SetDriver(event, 281000, false)
 			return v.OnGraphicsSceneMoveEvent(obj, e)
 		} else if v, ok := i.(interface {
 			OnGraphicsSceneMoveEvent(*QGraphicsSceneMoveEvent) bool
 		}); ok {
 			e := &QGraphicsSceneMoveEvent{}
-			e.SetDriver(event, 279000, false)
+			e.SetDriver(event, 281000, false)
 			return v.OnGraphicsSceneMoveEvent(e)
 		}
 	case QEvent_CursorChange:

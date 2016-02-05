@@ -400,7 +400,7 @@ type QAbstractItemModelInterface interface {
 	InsertRow(int32) bool
 	InsertRowWithRowParent(int32, *QModelIndex) bool
 	InsertRows(int32, int32, *QModelIndex) bool
-	ItemData(*QModelIndex) map[int]*QVariant
+	ItemData(*QModelIndex) map[int32]*QVariant
 	Match(*QModelIndex, int32, *QVariant, int32, Qt_MatchFlag) []*QModelIndex
 	MimeData([]*QModelIndex) *QMimeData
 	MimeTypes() []string
@@ -415,7 +415,7 @@ type QAbstractItemModelInterface interface {
 	RowCountWithParent(*QModelIndex) int32
 	SetData(*QModelIndex, *QVariant, int32) bool
 	SetHeaderData(int32, Qt_Orientation, *QVariant, int32) bool
-	SetItemData(*QModelIndex, map[int]*QVariant) bool
+	SetItemData(*QModelIndex, map[int32]*QVariant) bool
 	Sibling(int32, int32, *QModelIndex) *QModelIndex
 	Sort(int32)
 	SortWithColumnOrder(int32, Qt_SortOrder)
