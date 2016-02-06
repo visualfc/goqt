@@ -35,6 +35,8 @@ typedef void (*APP_EVENT_INIT)();
 typedef int  (*DRV_EVENT_FILTER)(const void *filter, void *face, void *obj, unsigned int evid, void *event);
 typedef void (*DRV_REMOVE_EVENT_FILTER)(const void *filter);
 typedef void (*APP_ASYNC_TASK)();
+typedef void (*APPEND_UINT32_TO_SLICE)(void *p, unsigned int v);
+typedef void (*APPEND_DOUBLE_TO_SLICE)(void *p, double v);
 
 static ARRAY_TO_SLICE pfn_array_to_slice;
 static UTF8_TO_STRING pfn_utf8_to_string;
@@ -54,6 +56,8 @@ static APP_EVENT_INIT pfn_app_event_init;
 static DRV_EVENT_FILTER pfn_drv_event_filter;
 static DRV_REMOVE_EVENT_FILTER pfn_drv_remove_event_filter;
 static APP_ASYNC_TASK pfn_app_async_task;
+static APPEND_UINT32_TO_SLICE pfn_append_uint_to_slice;
+static APPEND_DOUBLE_TO_SLICE pfn_append_double_to_slice;
 
 void utf8_to_string(void *info,const char *data, int size)
 {
@@ -145,6 +149,16 @@ void drv_remove_event_filter(const void *filter)
     pfn_drv_remove_event_filter(filter);
 }
 
+void append_uint32_to_slice(void *p, unsigned int v)
+{
+    pfn_append_uint_to_slice(p,v);
+}
+
+void append_double_to_slice(void *p, double v)
+{
+    pfn_append_double_to_slice(p,v);
+}
+
 int init_callback(void *p, int id, void *p1, void *p2, void *p3)
 {
     switch (id) {
@@ -201,6 +215,12 @@ int init_callback(void *p, int id, void *p1, void *p2, void *p3)
         break;
     case 18:
         pfn_app_async_task = (APP_ASYNC_TASK)p;
+        break;
+    case 19:
+        pfn_append_uint_to_slice = (APPEND_UINT32_TO_SLICE)p;
+        break;
+    case 20:
+        pfn_append_double_to_slice = (APPEND_DOUBLE_TO_SLICE)p;
         break;
     case 100: //QString => string
         drvSetString(p,*(QString*)p1);

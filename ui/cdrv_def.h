@@ -23,9 +23,14 @@ typedef struct {
 } bool_array_head;
 
 typedef struct {
-	const int *data;
+    const int *data;
 	int	size;
 } int_array_head;
+
+typedef struct {
+	const unsigned int *data;
+	int	size;
+} uint_array_head;
 
 typedef void* pvoid;
 
@@ -33,6 +38,11 @@ typedef struct {
 	const pvoid *data;
 	int	 size;
 } ptr_array_head;
+
+typedef struct {
+	double *data;
+	int		size;
+} double_array_head;
 
 #define pvoid_size sizeof(pvoid)
 

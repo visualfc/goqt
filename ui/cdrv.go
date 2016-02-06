@@ -30,6 +30,8 @@ static void init()
 	extern int drv_event_filter(void *filter, void *face, void *obj, unsigned int evid, void *event);
 	extern void drv_remove_event_filter(void *filter);
 	extern void app_async_task();
+	extern void append_uint32_to_slice(void *p, unsigned int v);
+	extern void append_double_to_slice(void *p, double v);
 	qtdrv(&utf8_to_string,1,1,0,0,0,0,0,0,0,0,0,0,0,0);
 	qtdrv(&array_to_slice,1,2,0,0,0,0,0,0,0,0,0,0,0,0);
 	qtdrv(&append_utf8_to_slice,1,3,0,0,0,0,0,0,0,0,0,0,0,0);
@@ -48,6 +50,8 @@ static void init()
 	qtdrv(&drv_event_filter,1,16,0,0,0,0,0,0,0,0,0,0,0,0);
 	qtdrv(&drv_remove_event_filter,1,17,0,0,0,0,0,0,0,0,0,0,0,0);
 	qtdrv(&app_async_task,1,18,0,0,0,0,0,0,0,0,0,0,0,0);
+	qtdrv(&append_uint32_to_slice,1,19,0,0,0,0,0,0,0,0,0,0,0,0);
+	qtdrv(&append_double_to_slice,1,20,0,0,0,0,0,0,0,0,0,0,0,0);
 }
 #cgo linux LDFLAGS: -L../bin -L../../bin -L. -lqtdrv.ui
 #cgo darwin LDFLAGS: -L../bin -L../../bin -L. -lqtdrv.ui
@@ -288,6 +292,85 @@ func (d *_qt_drv) Delete() error {
 	return err
 }
 
+func UnsafePtrSize() int {
+	return C.pvoid_size
+}
+
+func NewCWidgetArrayHead(sa []QWidgetInterface) *C.ptr_array_head {
+	size := len(sa)
+	if size == 0 {
+		return &C.ptr_array_head{}
+	}
+	var p *C.pvoid
+	p = (*C.pvoid)(C.malloc(C.size_t(size * C.pvoid_size)))
+	objs := make([]unsafe.Pointer, size)
+	for i := 0; i < size; i++ {
+		objs[i] = Native(sa[i])
+	}
+	C.memcpy(unsafe.Pointer(p), unsafe.Pointer(&objs[0]), C.size_t(size*C.pvoid_size))
+	v := &C.ptr_array_head{}
+	v.data = p
+	v.size = C.int(size)
+	return v
+}
+
+func FreeCWidgetArrayHead(h *C.ptr_array_head) {
+	if h.size == 0 {
+		return
+	}
+	C.free(unsafe.Pointer(h.data))
+}
+
+func NewCNoObjectArrayHead(sa []*QObject) *C.ptr_array_head {
+	size := len(sa)
+	if size == 0 {
+		return &C.ptr_array_head{}
+	}
+	var p *C.pvoid
+	p = (*C.pvoid)(C.malloc(C.size_t(size * C.pvoid_size)))
+	objs := make([]unsafe.Pointer, size)
+	for i := 0; i < size; i++ {
+		objs[i] = Native(sa[i])
+	}
+	C.memcpy(unsafe.Pointer(p), unsafe.Pointer(&objs[0]), C.size_t(size*C.pvoid_size))
+	v := &C.ptr_array_head{}
+	v.data = p
+	v.size = C.int(size)
+	return v
+}
+
+func FreeCNoObjectArrayHead(h *C.ptr_array_head) {
+	if h.size == 0 {
+		return
+	}
+	C.free(unsafe.Pointer(h.data))
+}
+
+func NewCObjectArrayHead(sa []*QObject) *C.ptr_array_head {
+	size := len(sa)
+	if size == 0 {
+		return &C.ptr_array_head{}
+	}
+	var p *C.pvoid
+	p = (*C.pvoid)(C.malloc(C.size_t(size * C.pvoid_size)))
+	objs := make([]unsafe.Pointer, size)
+	for i := 0; i < size; i++ {
+		objs[i] = Native(sa[i])
+	}
+	C.memcpy(unsafe.Pointer(p), unsafe.Pointer(&objs[0]), C.size_t(size*C.pvoid_size))
+	v := &C.ptr_array_head{}
+	v.data = p
+	v.size = C.int(size)
+	return v
+}
+
+func FreeCObjectArrayHead(h *C.ptr_array_head) {
+	if h.size == 0 {
+		return
+	}
+	C.free(unsafe.Pointer(h.data))
+}
+
 func NewCPtrArrayHead(sa []uintptr) *C.ptr_array_head {
 	size := len(sa)
 	if size == 0 {
@@ -300,10 +383,6 @@ func NewCPtrArrayHead(sa []uintptr) *C.ptr_array_head {
 	v.data = p
 	v.size = C.int(size)
 	return v
-}
-
-func UnsafePtrSize() int {
-	return C.pvoid_size
 }
 
 func FreeCPtrArrayHead(h *C.ptr_array_head) {
@@ -325,10 +404,51 @@ func NewCIntArrayHead(sa []int32) *C.int_array_head {
 	v.data = p
 	v.size = C.int(size)
 	return v
-
 }
 
 func FreeCIntArrayHead(h *C.int_array_head) {
+	if h.size == 0 {
+		return
+	}
+	C.free(unsafe.Pointer(h.data))
+}
+
+func NewCUintArrayHead(sa []uint32) *C.uint_array_head {
+	size := len(sa)
+	if size == 0 {
+		return &C.uint_array_head{}
+	}
+	var p *C.uint
+	p = (*C.uint)(C.malloc(C.size_t(size * 4)))
+	C.memcpy(unsafe.Pointer(p), unsafe.Pointer(&sa[0]), C.size_t(size*4))
+	v := &C.uint_array_head{}
+	v.data = p
+	v.size = C.int(size)
+	return v
+}
+
+func FreeCUintArrayHead(h *C.uint_array_head) {
+	if h.size == 0 {
+		return
+	}
+	C.free(unsafe.Pointer(h.data))
+}
+
+func NewCDoubleArrayHead(sa []float64) *C.double_array_head {
+	size := len(sa)
+	if size == 0 {
+		return &C.double_array_head{}
+	}
+	var p *C.double
+	p = (*C.double)(C.malloc(C.size_t(size * 8)))
+	C.memcpy(unsafe.Pointer(p), unsafe.Pointer(&sa[0]), C.size_t(size*8))
+	v := &C.double_array_head{}
+	v.data = p
+	v.size = C.int(size)
+	return v
+}
+
+func FreeCDoubleArrayHead(h *C.double_array_head) {
 	if h.size == 0 {
 		return
 	}
@@ -459,6 +579,16 @@ func string_slice_index(slice unsafe.Pointer, index C.int) unsafe.Pointer {
 //export object_slice_index
 func object_slice_index(slice unsafe.Pointer, index C.int) unsafe.Pointer {
 	return ((*(*[]*QObject)(slice))[index]).Native()
+}
+
+//export append_uint32_to_slice
+func append_uint32_to_slice(dst unsafe.Pointer, src C.uint) {
+	*(*[]uint32)(dst) = append(*(*[]uint32)(dst), uint32(src))
+}
+
+//export append_double_to_slice
+func append_double_to_slice(dst unsafe.Pointer, src C.double) {
+	*(*[]float64)(dst) = append(*(*[]float64)(dst), float64(src))
 }
 
 var (

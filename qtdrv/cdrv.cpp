@@ -4353,7 +4353,7 @@ int drv_QGestureEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	} 
 	case 44102: {
-		*(void**)_p = new QGestureEvent(drvGetListObj<QGesture*>(p1));
+		*(void**)_p = new QGestureEvent(drvGetObjectArrayHeadT<QGesture*>(p1));
 		break;
 	}
 	case 44103: {
@@ -4877,7 +4877,7 @@ int drv_QImage(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 		break;
 	}
 	case 53118: {
-		drvSetVector<QRgb>(p1,pThis->colorTable());
+		drvSetVectorQRgb(p1,pThis->colorTable());
 		break;
 	}
 	case 53119: {
@@ -4897,7 +4897,7 @@ int drv_QImage(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 		break;
 	}
 	case 53123: {
-		*(void**)p4 = new QImage(pThis->convertToFormat(*(QImage::Format*)p1,drvGetVector<QRgb>(p2),*(QFlags<Qt::ImageConversionFlag>*)p3));
+		*(void**)p4 = new QImage(pThis->convertToFormat(*(QImage::Format*)p1,drvGetUintVectorHeadT<QRgb>(p2),*(QFlags<Qt::ImageConversionFlag>*)p3));
 		break;
 	}
 	case 53124: {
@@ -5125,7 +5125,7 @@ int drv_QImage(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 		break;
 	}
 	case 53179: {
-		pThis->setColorTable(drvGetVector<QRgb>(p1));
+		pThis->setColorTable(drvGetUintVectorHeadT<QRgb>(p1));
 		break;
 	}
 	case 53180: {
@@ -5661,7 +5661,7 @@ int drv_QInputMethodEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 		break;
 	}
 	case 58104: {
-		*(void**)_p = new QInputMethodEvent(drvGetStringHead(p1),drvGetListPtr<QInputMethodEvent::Attribute>(p2));
+		*(void**)_p = new QInputMethodEvent(drvGetStringHead(p1),drvGetNoObjectArrayHeadT<QInputMethodEvent::Attribute>(p2));
 		break;
 	}
 	case 58105: {
@@ -9723,7 +9723,7 @@ int drv_QPainterPathStroker(void *_p, int funcid, void* p1,void* p2,void*,void*,
 		break;
 	}
 	case 91107: {
-		drvSetVector<double>(p1,pThis->dashPattern());
+		drvSetVectorDouble(p1,pThis->dashPattern());
 		break;
 	}
 	case 91108: {
@@ -9747,7 +9747,7 @@ int drv_QPainterPathStroker(void *_p, int funcid, void* p1,void* p2,void*,void*,
 		break;
 	}
 	case 91113: {
-		pThis->setDashPattern(drvGetVector<qreal>(p1));
+		pThis->setDashPattern(drvGetDoubleVectorHead(p1));
 		break;
 	}
 	case 91114: {
@@ -10059,7 +10059,7 @@ int drv_QPen(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,
 		break;
 	}
 	case 93111: {
-		drvSetVector<double>(p1,pThis->dashPattern());
+		drvSetVectorDouble(p1,pThis->dashPattern());
 		break;
 	}
 	case 93112: {
@@ -10105,7 +10105,7 @@ int drv_QPen(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,
 		break;
 	}
 	case 93122: {
-		pThis->setDashPattern(drvGetVector<qreal>(p1));
+		pThis->setDashPattern(drvGetDoubleVectorHead(p1));
 		break;
 	}
 	case 93123: {
@@ -13269,11 +13269,11 @@ int drv_QStandardItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*,voi
 		break;
 	}
 	case 124108: {
-		pThis->appendColumn(drvGetListObj<QStandardItem*>(p1));
+		pThis->appendColumn(drvGetObjectArrayHeadT<QStandardItem*>(p1));
 		break;
 	}
 	case 124109: {
-		pThis->appendRow(drvGetListObj<QStandardItem*>(p1));
+		pThis->appendRow(drvGetObjectArrayHeadT<QStandardItem*>(p1));
 		break;
 	}
 	case 124110: {
@@ -13281,7 +13281,7 @@ int drv_QStandardItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*,voi
 		break;
 	}
 	case 124111: {
-		pThis->appendRows(drvGetListObj<QStandardItem*>(p1));
+		pThis->appendRows(drvGetObjectArrayHeadT<QStandardItem*>(p1));
 		break;
 	}
 	case 124112: {
@@ -13345,7 +13345,7 @@ int drv_QStandardItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*,voi
 		break;
 	}
 	case 124127: {
-		pThis->insertColumn(*(int*)p1,drvGetListObj<QStandardItem*>(p2));
+		pThis->insertColumn(*(int*)p1,drvGetObjectArrayHeadT<QStandardItem*>(p2));
 		break;
 	}
 	case 124128: {
@@ -13353,7 +13353,7 @@ int drv_QStandardItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*,voi
 		break;
 	}
 	case 124129: {
-		pThis->insertRow(*(int*)p1,drvGetListObj<QStandardItem*>(p2));
+		pThis->insertRow(*(int*)p1,drvGetObjectArrayHeadT<QStandardItem*>(p2));
 		break;
 	}
 	case 124130: {
@@ -13361,7 +13361,7 @@ int drv_QStandardItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*,voi
 		break;
 	}
 	case 124131: {
-		pThis->insertRows(*(int*)p1,drvGetListObj<QStandardItem*>(p2));
+		pThis->insertRows(*(int*)p1,drvGetObjectArrayHeadT<QStandardItem*>(p2));
 		break;
 	}
 	case 124132: {
@@ -13611,7 +13611,7 @@ int drv_QStateMachine_SignalEvent(void *_p, int funcid, void* p1,void* p2,void* 
 		break;
 	} 
 	case 125102: {
-		*(void**)_p = new QStateMachine::SignalEvent((QObject*)(p1),*(int*)p2,drvGetListPtr<QVariant>(p3));
+		*(void**)_p = new QStateMachine::SignalEvent((QObject*)(p1),*(int*)p2,drvGetNoObjectArrayHeadT<QVariant>(p3));
 		break;
 	}
 	case 125103: {
@@ -14576,7 +14576,7 @@ int drv_QTextBlockFormat(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 		break;
 	}
 	case 141118: {
-		pThis->setTabPositions(drvGetListPtr<QTextOption::Tab>(p1));
+		pThis->setTabPositions(drvGetNoObjectArrayHeadT<QTextOption::Tab>(p1));
 		break;
 	}
 	case 141119: {
@@ -16275,7 +16275,7 @@ int drv_QTextLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 	}
 	case 160113: {
 		if(p2==0)return -2;
-		pThis->draw((QPainter*)(p1),*(QPointF*)(p2),drvGetVectorPtr<QTextLayout::FormatRange>(p3),p4==0?QRectF():*(QRectF*)(p4));
+		pThis->draw((QPainter*)(p1),*(QPointF*)(p2),drvGetNoObjectVectorHeadT<QTextLayout::FormatRange>(p3),p4==0?QRectF():*(QRectF*)(p4));
 		break;
 	}
 	case 160114: {
@@ -16349,7 +16349,7 @@ int drv_QTextLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 160131: {
-		pThis->setAdditionalFormats(drvGetListPtr<QTextLayout::FormatRange>(p1));
+		pThis->setAdditionalFormats(drvGetNoObjectArrayHeadT<QTextLayout::FormatRange>(p1));
 		break;
 	}
 	case 160132: {
@@ -16688,7 +16688,7 @@ int drv_QTextOption(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*
 		break;
 	}
 	case 166109: {
-		pThis->setTabArray(drvGetList<qreal>(p1));
+		pThis->setTabArray(drvGetDoubleArrayHead(p1));
 		break;
 	}
 	case 166110: {
@@ -16696,7 +16696,7 @@ int drv_QTextOption(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*
 		break;
 	}
 	case 166111: {
-		pThis->setTabs(drvGetListPtr<QTextOption::Tab>(p1));
+		pThis->setTabs(drvGetNoObjectArrayHeadT<QTextOption::Tab>(p1));
 		break;
 	}
 	case 166112: {
@@ -17240,7 +17240,7 @@ int drv_QTouchEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 176103: {
-		pThis->setTouchPoints(drvGetListPtr<QTouchEvent::TouchPoint>(p1));
+		pThis->setTouchPoints(drvGetNoObjectArrayHeadT<QTouchEvent::TouchPoint>(p1));
 		break;
 	}
 	case 176104: {
@@ -17753,7 +17753,7 @@ int drv_QTreeWidgetItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*,v
 		break;
 	}
 	case 179113: {
-		pThis->addChildren(drvGetListObj<QTreeWidgetItem*>(p1));
+		pThis->addChildren(drvGetObjectArrayHeadT<QTreeWidgetItem*>(p1));
 		break;
 	}
 	case 179114: {
@@ -17817,7 +17817,7 @@ int drv_QTreeWidgetItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*,v
 		break;
 	}
 	case 179129: {
-		pThis->insertChildren(*(int*)p1,drvGetListObj<QTreeWidgetItem*>(p2));
+		pThis->insertChildren(*(int*)p1,drvGetObjectArrayHeadT<QTreeWidgetItem*>(p2));
 		break;
 	}
 	case 179130: {
@@ -18462,7 +18462,7 @@ int drv_QVariant(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,vo
 		break;
 	}
 	case 184111: {
-		*(void**)_p = new QVariant(drvGetListPtr<QVariant>(p1));
+		*(void**)_p = new QVariant(drvGetNoObjectArrayHeadT<QVariant>(p1));
 		break;
 	}
 	case 184112: {
@@ -19868,7 +19868,7 @@ int drv_QAbstractItemModel(void *_p, int funcid, void* p1,void* p2,void* p3,void
 		break;
 	}
 	case 197116: {
-		pThis->changePersistentIndexList(drvGetListPtr<QModelIndex>(p1),drvGetListPtr<QModelIndex>(p2));
+		pThis->changePersistentIndexList(drvGetNoObjectArrayHeadT<QModelIndex>(p1),drvGetNoObjectArrayHeadT<QModelIndex>(p2));
 		break;
 	}
 	case 197117: {
@@ -20000,7 +20000,7 @@ int drv_QAbstractItemModel(void *_p, int funcid, void* p1,void* p2,void* p3,void
 		break;
 	}
 	case 197147: {
-		*(void**)p2 = pThis->mimeData(drvGetListPtr<QModelIndex>(p1));
+		*(void**)p2 = pThis->mimeData(drvGetNoObjectArrayHeadT<QModelIndex>(p1));
 		break;
 	}
 	case 197148: {
@@ -20784,7 +20784,7 @@ int drv_QAbstractPrintDialog(void *_p, int funcid, void* p1,void* p2,void* p3,vo
 		break;
 	}
 	case 200114: {
-		pThis->setOptionTabs(drvGetListObj<QWidget*>(p1));
+		pThis->setOptionTabs(drvGetObjectArrayHeadT<QWidget*>(p1));
 		break;
 	}
 	case 200115: {
@@ -21720,7 +21720,7 @@ int drv_QAbstractTransition(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 		break;
 	}
 	case 208110: {
-		pThis->setTargetStates(drvGetListObj<QAbstractState*>(p1));
+		pThis->setTargetStates(drvGetObjectArrayHeadT<QAbstractState*>(p1));
 		break;
 	}
 	case 208111: {
@@ -21959,7 +21959,7 @@ int drv_QAction(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 209149: {
-		pThis->setShortcuts(drvGetListPtr<QKeySequence>(p1));
+		pThis->setShortcuts(drvGetNoObjectArrayHeadT<QKeySequence>(p1));
 		break;
 	}
 	case 209150: {
@@ -23178,7 +23178,7 @@ int drv_QColumnView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 218121: {
-		pThis->setColumnWidths(drvGetList<int>(p1));
+		pThis->setColumnWidths(drvGetIntArrayHead(p1));
 		break;
 	}
 	case 218122: {
@@ -25025,7 +25025,7 @@ int drv_QDirModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 230126: {
-		*(void**)p2 = pThis->mimeData(drvGetListPtr<QModelIndex>(p1));
+		*(void**)p2 = pThis->mimeData(drvGetNoObjectArrayHeadT<QModelIndex>(p1));
 		break;
 	}
 	case 230127: {
@@ -26188,7 +26188,7 @@ int drv_QFileDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 239165: {
-		pThis->setSidebarUrls(drvGetListPtr<QUrl>(p1));
+		pThis->setSidebarUrls(drvGetNoObjectArrayHeadT<QUrl>(p1));
 		break;
 	}
 	case 239166: {
@@ -26364,7 +26364,7 @@ int drv_QFileSystemModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 		break;
 	}
 	case 240131: {
-		*(void**)p2 = pThis->mimeData(drvGetListPtr<QModelIndex>(p1));
+		*(void**)p2 = pThis->mimeData(drvGetNoObjectArrayHeadT<QModelIndex>(p1));
 		break;
 	}
 	case 240132: {
@@ -28760,7 +28760,7 @@ int drv_QGraphicsItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 258267: {
-		pThis->setTransformations(drvGetListObj<QGraphicsTransform*>(p1));
+		pThis->setTransformations(drvGetObjectArrayHeadT<QGraphicsTransform*>(p1));
 		break;
 	}
 	case 258268: {
@@ -30453,7 +30453,7 @@ int drv_QGraphicsScene(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	}
 	case 274141: {
-		*(void**)p2 = pThis->createItemGroup(drvGetListObj<QGraphicsItem*>(p1));
+		*(void**)p2 = pThis->createItemGroup(drvGetObjectArrayHeadT<QGraphicsItem*>(p1));
 		break;
 	}
 	case 274142: {
@@ -32242,7 +32242,7 @@ int drv_QGraphicsView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 287216: {
-		pThis->updateScene(drvGetListPtr<QRectF>(p1));
+		pThis->updateScene(drvGetNoObjectArrayHeadT<QRectF>(p1));
 		break;
 	}
 	case 287217: {
@@ -32312,7 +32312,7 @@ int drv_QGraphicsWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	}
 	case 288108: {
-		pThis->addActions(drvGetListObj<QAction*>(p1));
+		pThis->addActions(drvGetObjectArrayHeadT<QAction*>(p1));
 		break;
 	}
 	case 288109: {
@@ -32414,7 +32414,7 @@ int drv_QGraphicsWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	}
 	case 288133: {
-		pThis->insertActions((QAction*)(p1),drvGetListObj<QAction*>(p2));
+		pThis->insertActions((QAction*)(p1),drvGetObjectArrayHeadT<QAction*>(p2));
 		break;
 	}
 	case 288134: {
@@ -35869,7 +35869,7 @@ int drv_QListWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 306140: {
-		*(void**)p2 = pThis->mimeData(drvGetListObj<QListWidgetItem*>(p1));
+		*(void**)p2 = pThis->mimeData(drvGetObjectArrayHeadT<QListWidgetItem*>(p1));
 		break;
 	}
 	case 306141: {
@@ -36750,12 +36750,12 @@ int drv_QMenu(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 	}
 	case 310131: {
 		if(p2==0)return -2;
-		*(void**)p4 = QMenu::exec(drvGetListObj<QAction*>(p1),*(QPoint*)(p2),(QAction*)(p3));
+		*(void**)p4 = QMenu::exec(drvGetObjectArrayHeadT<QAction*>(p1),*(QPoint*)(p2),(QAction*)(p3));
 		break;
 	}
 	case 310132: {
 		if(p2==0)return -2;
-		*(void**)p5 = QMenu::exec(drvGetListObj<QAction*>(p1),*(QPoint*)(p2),(QAction*)(p3),(QWidget*)(p4));
+		*(void**)p5 = QMenu::exec(drvGetObjectArrayHeadT<QAction*>(p1),*(QPoint*)(p2),(QAction*)(p3),(QWidget*)(p4));
 		break;
 	}
 	case 310133: {
@@ -37449,7 +37449,7 @@ int drv_QMimeData(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 313122: {
-		pThis->setUrls(drvGetListPtr<QUrl>(p1));
+		pThis->setUrls(drvGetNoObjectArrayHeadT<QUrl>(p1));
 		break;
 	}
 	case 313123: {
@@ -38611,7 +38611,7 @@ int drv_QPlainTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	}
 	case 323186: {
-		pThis->setExtraSelections(drvGetListPtr<QTextEdit::ExtraSelection>(p1));
+		pThis->setExtraSelections(drvGetNoObjectArrayHeadT<QTextEdit::ExtraSelection>(p1));
 		break;
 	}
 	case 323187: {
@@ -41076,7 +41076,7 @@ int drv_QSortFilterProxyModel(void *_p, int funcid, void* p1,void* p2,void* p3,v
 		break;
 	}
 	case 347137: {
-		*(void**)p2 = pThis->mimeData(drvGetListPtr<QModelIndex>(p1));
+		*(void**)p2 = pThis->mimeData(drvGetNoObjectArrayHeadT<QModelIndex>(p1));
 		break;
 	}
 	case 347138: {
@@ -41540,7 +41540,7 @@ int drv_QSplitter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 350134: {
-		pThis->setSizes(drvGetList<int>(p1));
+		pThis->setSizes(drvGetIntArrayHead(p1));
 		break;
 	}
 	case 350135: {
@@ -41856,11 +41856,11 @@ int drv_QStandardItemModel(void *_p, int funcid, void* p1,void* p2,void* p3,void
 		break;
 	}
 	case 354106: {
-		pThis->appendColumn(drvGetListObj<QStandardItem*>(p1));
+		pThis->appendColumn(drvGetObjectArrayHeadT<QStandardItem*>(p1));
 		break;
 	}
 	case 354107: {
-		pThis->appendRow(drvGetListObj<QStandardItem*>(p1));
+		pThis->appendRow(drvGetObjectArrayHeadT<QStandardItem*>(p1));
 		break;
 	}
 	case 354108: {
@@ -41936,7 +41936,7 @@ int drv_QStandardItemModel(void *_p, int funcid, void* p1,void* p2,void* p3,void
 		break;
 	}
 	case 354125: {
-		pThis->insertColumn(*(int*)p1,drvGetListObj<QStandardItem*>(p2));
+		pThis->insertColumn(*(int*)p1,drvGetObjectArrayHeadT<QStandardItem*>(p2));
 		break;
 	}
 	case 354126: {
@@ -41952,7 +41952,7 @@ int drv_QStandardItemModel(void *_p, int funcid, void* p1,void* p2,void* p3,void
 		break;
 	}
 	case 354129: {
-		pThis->insertRow(*(int*)p1,drvGetListObj<QStandardItem*>(p2));
+		pThis->insertRow(*(int*)p1,drvGetObjectArrayHeadT<QStandardItem*>(p2));
 		break;
 	}
 	case 354130: {
@@ -41994,7 +41994,7 @@ int drv_QStandardItemModel(void *_p, int funcid, void* p1,void* p2,void* p3,void
 		break;
 	}
 	case 354139: {
-		*(void**)p2 = pThis->mimeData(drvGetListPtr<QModelIndex>(p1));
+		*(void**)p2 = pThis->mimeData(drvGetNoObjectArrayHeadT<QModelIndex>(p1));
 		break;
 	}
 	case 354140: {
@@ -44096,7 +44096,7 @@ int drv_QTableWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 368146: {
-		*(void**)p2 = pThis->mimeData(drvGetListObj<QTableWidgetItem*>(p1));
+		*(void**)p2 = pThis->mimeData(drvGetObjectArrayHeadT<QTableWidgetItem*>(p1));
 		break;
 	}
 	case 368147: {
@@ -45421,7 +45421,7 @@ int drv_QTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 375188: {
-		pThis->setExtraSelections(drvGetListPtr<QTextEdit::ExtraSelection>(p1));
+		pThis->setExtraSelections(drvGetNoObjectArrayHeadT<QTextEdit::ExtraSelection>(p1));
 		break;
 	}
 	case 375189: {
@@ -47186,7 +47186,7 @@ int drv_QTreeWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 388115: {
-		pThis->addTopLevelItems(drvGetListObj<QTreeWidgetItem*>(p1));
+		pThis->addTopLevelItems(drvGetObjectArrayHeadT<QTreeWidgetItem*>(p1));
 		break;
 	}
 	case 388116: {
@@ -47262,7 +47262,7 @@ int drv_QTreeWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 388134: {
-		pThis->insertTopLevelItems(*(int*)p1,drvGetListObj<QTreeWidgetItem*>(p2));
+		pThis->insertTopLevelItems(*(int*)p1,drvGetObjectArrayHeadT<QTreeWidgetItem*>(p2));
 		break;
 	}
 	case 388135: {
@@ -47320,7 +47320,7 @@ int drv_QTreeWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 388148: {
-		*(void**)p2 = pThis->mimeData(drvGetListObj<QTreeWidgetItem*>(p1));
+		*(void**)p2 = pThis->mimeData(drvGetObjectArrayHeadT<QTreeWidgetItem*>(p1));
 		break;
 	}
 	case 388149: {
@@ -48221,7 +48221,7 @@ int drv_QWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 397112: {
-		pThis->addActions(drvGetListObj<QAction*>(p1));
+		pThis->addActions(drvGetObjectArrayHeadT<QAction*>(p1));
 		break;
 	}
 	case 397113: {
@@ -48493,7 +48493,7 @@ int drv_QWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 397179: {
-		pThis->insertActions((QAction*)(p1),drvGetListObj<QAction*>(p2));
+		pThis->insertActions((QAction*)(p1),drvGetObjectArrayHeadT<QAction*>(p2));
 		break;
 	}
 	case 397180: {
@@ -49554,7 +49554,7 @@ int drv_QWizard(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 399132: {
-		pThis->setButtonLayout(drvGetList<QWizard::WizardButton>(p1));
+		pThis->setButtonLayout(drvGetIntArrayHeadT<QWizard::WizardButton>(p1));
 		break;
 	}
 	case 399133: {

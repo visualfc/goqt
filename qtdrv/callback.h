@@ -35,6 +35,8 @@ void app_event_init();
 bool drv_event_filter(const void *filter, void *face, void *obj, unsigned int evid, void *event);
 void drv_remove_event_filter(const void *filter);
 void app_async_task();
+void append_uint32_to_slice(void *p, unsigned int v);
+void append_double_to_slice(void *p, double v);
 
 int init_callback(void *p, int id, void *p1, void *p2, void *p3);
 

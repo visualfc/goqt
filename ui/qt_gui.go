@@ -9028,8 +9028,10 @@ type QGestureEvent struct {
 
 //QGestureEvent::QGestureEvent(QList<QGesture*> const&)
 func NewGestureEvent(gestures []*QGesture) *QGestureEvent {
+	_gestures := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&gestures)))
+	defer FreeCObjectArrayHead(_gestures)
 	var __rv uintptr
-	err := DirectQtDrv(unsafe.Pointer(&__rv), 44000, 44102, unsafe.Pointer(&gestures), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	err := DirectQtDrv(unsafe.Pointer(&__rv), 44000, 44102, unsafe.Pointer(_gestures), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 	if err != nil || __rv == 0 {
 		return nil
 	}
@@ -10092,8 +10094,10 @@ func (q *QImage) ConvertToFormatWithFormatFlags(f QImage_Format, flags Qt_ImageC
 
 //QImage::convertToFormat(QImage::Format,QVector<QRgb> const&,QFlags<Qt::ImageConversionFlag>)
 func (q *QImage) ConvertToFormatWithFormatColortableFlags(f QImage_Format, colorTable []QRgb, flags Qt_ImageConversionFlag) *QImage {
+	_colorTable := NewCUintArrayHead(*(*[]uint32)(unsafe.Pointer(&colorTable)))
+	defer FreeCUintArrayHead(_colorTable)
 	var __rv uintptr
-	q.Drv(53000, 53123, unsafe.Pointer(&f), unsafe.Pointer(&colorTable), unsafe.Pointer(&flags), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil)
+	q.Drv(53000, 53123, unsafe.Pointer(&f), unsafe.Pointer(_colorTable), unsafe.Pointer(&flags), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil)
 	if __rv == 0 {
 		return nil
 	}
@@ -10673,7 +10677,9 @@ func (q *QImage) SetColorCount(value int32) {
 
 //QImage::setColorTable(QVector<QRgb> const)
 func (q *QImage) SetColorTable(colors []QRgb) {
-	q.Drv(53000, 53179, unsafe.Pointer(&colors), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_colors := NewCUintArrayHead(*(*[]uint32)(unsafe.Pointer(&colors)))
+	defer FreeCUintArrayHead(_colors)
+	q.Drv(53000, 53179, unsafe.Pointer(_colors), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QImage::setDotsPerMeterX(int)
@@ -11703,8 +11709,10 @@ func NewInputMethodEventCopy(other *QInputMethodEvent) *QInputMethodEvent {
 func NewInputMethodEventWithPreedittextAttributes(preeditText string, attributes []*QInputMethodEventAttribute) *QInputMethodEvent {
 	_preeditText := NewCStringHead(preeditText)
 	defer FreeCStringHead(_preeditText)
+	_attributes := NewCNoObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&attributes)))
+	defer FreeCNoObjectArrayHead(_attributes)
 	var __rv uintptr
-	err := DirectQtDrv(unsafe.Pointer(&__rv), 58000, 58104, unsafe.Pointer(_preeditText), unsafe.Pointer(&attributes), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	err := DirectQtDrv(unsafe.Pointer(&__rv), 58000, 58104, unsafe.Pointer(_preeditText), unsafe.Pointer(_attributes), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 	if err != nil || __rv == 0 {
 		return nil
 	}
@@ -17648,22 +17656,22 @@ func (q *QPainter) DrawLineWithX1Y1X2Y2(x1 int32, y1 int32, x2 int32, y2 int32) 
 
 //QPainter::drawLines(QVector<QLine> const&)
 func (q *QPainter) DrawLines(lines []*QLine) {
-	q.Drv(87000, 87151, unsafe.Pointer(&lines), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	q.Drv(87000, 87151, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QPainter::drawLines(QVector<QLineF> const&)
 func (q *QPainter) DrawLinesWithLinefs(lines []*QLineF) {
-	q.Drv(87000, 87152, unsafe.Pointer(&lines), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	q.Drv(87000, 87152, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QPainter::drawLines(QVector<QPoint> const&)
 func (q *QPainter) DrawLinesWithPointpairs(pointPairs []*QPoint) {
-	q.Drv(87000, 87153, unsafe.Pointer(&pointPairs), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	q.Drv(87000, 87153, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QPainter::drawLines(QVector<QPointF> const&)
 func (q *QPainter) DrawLinesWithPointfpairs(pointPairs []*QPointF) {
-	q.Drv(87000, 87154, unsafe.Pointer(&pointPairs), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	q.Drv(87000, 87154, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QPainter::drawLines(QLine const*,int)
@@ -17883,12 +17891,12 @@ func (q *QPainter) DrawRectWithXYWidthHeight(x int32, y int32, w int32, h int32)
 
 //QPainter::drawRects(QVector<QRect> const&)
 func (q *QPainter) DrawRects(rectangles []*QRect) {
-	q.Drv(87000, 87198, unsafe.Pointer(&rectangles), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	q.Drv(87000, 87198, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QPainter::drawRects(QVector<QRectF> const&)
 func (q *QPainter) DrawRectsWithRectanglefs(rectangles []*QRectF) {
-	q.Drv(87000, 87199, unsafe.Pointer(&rectangles), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	q.Drv(87000, 87199, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QPainter::drawRects(QRect const*,int)
@@ -19382,7 +19390,9 @@ func (q *QPainterPathStroker) SetDashOffset(offset float64) {
 
 //QPainterPathStroker::setDashPattern(QVector<qreal> const&)
 func (q *QPainterPathStroker) SetDashPattern(dashPattern []float64) {
-	q.Drv(91000, 91113, unsafe.Pointer(&dashPattern), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_dashPattern := NewCDoubleArrayHead(dashPattern)
+	defer FreeCDoubleArrayHead(_dashPattern)
+	q.Drv(91000, 91113, unsafe.Pointer(_dashPattern), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QPainterPathStroker::setDashPattern(Qt::PenStyle)
@@ -20104,7 +20114,9 @@ func (q *QPen) SetDashOffset(doffset float64) {
 
 //QPen::setDashPattern(QVector<qreal> const&)
 func (q *QPen) SetDashPattern(pattern []float64) {
-	q.Drv(93000, 93122, unsafe.Pointer(&pattern), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_pattern := NewCDoubleArrayHead(pattern)
+	defer FreeCDoubleArrayHead(_pattern)
+	q.Drv(93000, 93122, unsafe.Pointer(_pattern), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QPen::setJoinStyle(Qt::PenJoinStyle)
@@ -22066,7 +22078,7 @@ func NewPolygonCopy(a *QPolygon) *QPolygon {
 //QPolygon::QPolygon(QVector<QPoint> const&)
 func NewPolygonWithPointarray(v []*QPoint) *QPolygon {
 	var __rv uintptr
-	err := DirectQtDrv(unsafe.Pointer(&__rv), 102000, 102104, unsafe.Pointer(&v), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	err := DirectQtDrv(unsafe.Pointer(&__rv), 102000, 102104, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 	if err != nil || __rv == 0 {
 		return nil
 	}
@@ -22283,7 +22295,7 @@ func NewPolygonFWithRectf(r *QRectF) *QPolygonF {
 //QPolygonF::QPolygonF(QVector<QPointF> const&)
 func NewPolygonFWithPointfarray(v []*QPointF) *QPolygonF {
 	var __rv uintptr
-	err := DirectQtDrv(unsafe.Pointer(&__rv), 103000, 103106, unsafe.Pointer(&v), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	err := DirectQtDrv(unsafe.Pointer(&__rv), 103000, 103106, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 	if err != nil || __rv == 0 {
 		return nil
 	}
@@ -26399,12 +26411,16 @@ func (q *QStandardItem) AccessibleText() string {
 
 //QStandardItem::appendColumn(QList<QStandardItem*> const&)
 func (q *QStandardItem) AppendColumn(items []*QStandardItem) {
-	q.Drv(124000, 124108, unsafe.Pointer(&items), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_items := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&items)))
+	defer FreeCObjectArrayHead(_items)
+	q.Drv(124000, 124108, unsafe.Pointer(_items), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QStandardItem::appendRow(QList<QStandardItem*> const&)
 func (q *QStandardItem) AppendRow(items []*QStandardItem) {
-	q.Drv(124000, 124109, unsafe.Pointer(&items), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_items := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&items)))
+	defer FreeCObjectArrayHead(_items)
+	q.Drv(124000, 124109, unsafe.Pointer(_items), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QStandardItem::appendRow(QStandardItem*)
@@ -26414,7 +26430,9 @@ func (q *QStandardItem) AppendRowWithItem(item *QStandardItem) {
 
 //QStandardItem::appendRows(QList<QStandardItem*> const&)
 func (q *QStandardItem) AppendRows(items []*QStandardItem) {
-	q.Drv(124000, 124111, unsafe.Pointer(&items), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_items := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&items)))
+	defer FreeCObjectArrayHead(_items)
+	q.Drv(124000, 124111, unsafe.Pointer(_items), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QStandardItem::background()
@@ -26574,7 +26592,9 @@ func (q *QStandardItem) Index() *QModelIndex {
 
 //QStandardItem::insertColumn(int,QList<QStandardItem*> const&)
 func (q *QStandardItem) InsertColumn(column int32, items []*QStandardItem) {
-	q.Drv(124000, 124127, unsafe.Pointer(&column), unsafe.Pointer(&items), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_items := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&items)))
+	defer FreeCObjectArrayHead(_items)
+	q.Drv(124000, 124127, unsafe.Pointer(&column), unsafe.Pointer(_items), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QStandardItem::insertColumns(int,int)
@@ -26584,7 +26604,9 @@ func (q *QStandardItem) InsertColumns(column int32, count int32) {
 
 //QStandardItem::insertRow(int,QList<QStandardItem*> const&)
 func (q *QStandardItem) InsertRowWithRowItems(row int32, items []*QStandardItem) {
-	q.Drv(124000, 124129, unsafe.Pointer(&row), unsafe.Pointer(&items), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_items := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&items)))
+	defer FreeCObjectArrayHead(_items)
+	q.Drv(124000, 124129, unsafe.Pointer(&row), unsafe.Pointer(_items), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QStandardItem::insertRow(int,QStandardItem*)
@@ -26594,7 +26616,9 @@ func (q *QStandardItem) InsertRowWithRowItem(row int32, item *QStandardItem) {
 
 //QStandardItem::insertRows(int,QList<QStandardItem*> const&)
 func (q *QStandardItem) InsertRowsWithRowItems(row int32, items []*QStandardItem) {
-	q.Drv(124000, 124131, unsafe.Pointer(&row), unsafe.Pointer(&items), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_items := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&items)))
+	defer FreeCObjectArrayHead(_items)
+	q.Drv(124000, 124131, unsafe.Pointer(&row), unsafe.Pointer(_items), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QStandardItem::insertRows(int,int)
@@ -26965,8 +26989,10 @@ type QStateMachineSignalEvent struct {
 
 //QStateMachine::SignalEvent::SignalEvent(QObject*,int,QList<QVariant> const&)
 func NewStateMachineSignalEvent(sender QObjectInterface, signalIndex int32, arguments []*QVariant) *QStateMachineSignalEvent {
+	_arguments := NewCNoObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&arguments)))
+	defer FreeCNoObjectArrayHead(_arguments)
 	var __rv uintptr
-	err := DirectQtDrv(unsafe.Pointer(&__rv), 125000, 125102, Native(sender), unsafe.Pointer(&signalIndex), unsafe.Pointer(&arguments), nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	err := DirectQtDrv(unsafe.Pointer(&__rv), 125000, 125102, Native(sender), unsafe.Pointer(&signalIndex), unsafe.Pointer(_arguments), nil, nil, nil, nil, nil, nil, nil, nil, nil)
 	if err != nil || __rv == 0 {
 		return nil
 	}
@@ -28673,7 +28699,9 @@ func (q *QTextBlockFormat) SetRightMargin(margin float64) {
 
 //QTextBlockFormat::setTabPositions(QList<QTextOption::Tab> const&)
 func (q *QTextBlockFormat) SetTabPositions(tabs []*QTextOptionTab) {
-	q.Drv(141000, 141118, unsafe.Pointer(&tabs), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_tabs := NewCNoObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&tabs)))
+	defer FreeCNoObjectArrayHead(_tabs)
+	q.Drv(141000, 141118, unsafe.Pointer(_tabs), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QTextBlockFormat::setTextIndent(double)
@@ -31130,7 +31158,7 @@ func (q *QTextFormat) SetPropertyWithPropertyidValue(propertyId int32, value *QV
 
 //QTextFormat::setProperty(int,QVector<QTextLength> const&)
 func (q *QTextFormat) SetPropertyWithPropertyidLengths(propertyId int32, lengths []*QTextLength) {
-	q.Drv(153000, 153140, unsafe.Pointer(&propertyId), unsafe.Pointer(&lengths), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	q.Drv(153000, 153140, unsafe.Pointer(&propertyId), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QTextFormat::stringProperty(int)
@@ -31986,7 +32014,9 @@ func (q *QTextLayout) CreateLine() *QTextLine {
 
 //QTextLayout::draw(QPainter*,QPointF const&,QVector<QTextLayout::FormatRange> const&,QRectF const&)
 func (q *QTextLayout) Draw(p *QPainter, pos *QPointF, selections []*QTextLayoutFormatRange, clip *QRectF) {
-	q.Drv(160000, 160113, Native(p), Native(pos), unsafe.Pointer(&selections), Native(clip), nil, nil, nil, nil, nil, nil, nil, nil)
+	_selections := NewCNoObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&selections)))
+	defer FreeCNoObjectArrayHead(_selections)
+	q.Drv(160000, 160113, Native(p), Native(pos), unsafe.Pointer(_selections), Native(clip), nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QTextLayout::drawCursor(QPainter*,QPointF const&,int)
@@ -32124,7 +32154,9 @@ func (q *QTextLayout) PreviousCursorPositionWithOldposMode(oldPos int32, mode QT
 
 //QTextLayout::setAdditionalFormats(QList<QTextLayout::FormatRange> const&)
 func (q *QTextLayout) SetAdditionalFormats(overrides []*QTextLayoutFormatRange) {
-	q.Drv(160000, 160131, unsafe.Pointer(&overrides), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_overrides := NewCNoObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&overrides)))
+	defer FreeCNoObjectArrayHead(_overrides)
+	q.Drv(160000, 160131, unsafe.Pointer(_overrides), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QTextLayout::setCacheEnabled(bool)
@@ -32672,7 +32704,9 @@ func (q *QTextOption) SetFlags(flags QTextOption_Flag) {
 
 //QTextOption::setTabArray(QList<qreal>)
 func (q *QTextOption) SetTabArray(tabStops []float64) {
-	q.Drv(166000, 166109, unsafe.Pointer(&tabStops), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_tabStops := NewCDoubleArrayHead(tabStops)
+	defer FreeCDoubleArrayHead(_tabStops)
+	q.Drv(166000, 166109, unsafe.Pointer(_tabStops), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QTextOption::setTabStop(double)
@@ -32682,7 +32716,9 @@ func (q *QTextOption) SetTabStop(tabStop float64) {
 
 //QTextOption::setTabs(QList<QTextOption::Tab>)
 func (q *QTextOption) SetTabs(tabStops []*QTextOptionTab) {
-	q.Drv(166000, 166111, unsafe.Pointer(&tabStops), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_tabStops := NewCNoObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&tabStops)))
+	defer FreeCNoObjectArrayHead(_tabStops)
+	q.Drv(166000, 166111, unsafe.Pointer(_tabStops), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QTextOption::setTextDirection(Qt::LayoutDirection)
@@ -33086,7 +33122,7 @@ func (q *QTextTableFormat) SetCellSpacing(spacing float64) {
 
 //QTextTableFormat::setColumnWidthConstraints(QVector<QTextLength> const&)
 func (q *QTextTableFormat) SetColumnWidthConstraints(constraints []*QTextLength) {
-	q.Drv(170000, 170114, unsafe.Pointer(&constraints), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	q.Drv(170000, 170114, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QTextTableFormat::setColumns(int)
@@ -33650,7 +33686,9 @@ func (q *QTouchEvent) SetTouchPointStates(aTouchPointStates Qt_TouchPointState) 
 
 //QTouchEvent::setTouchPoints(QList<QTouchEvent::TouchPoint> const&)
 func (q *QTouchEvent) SetTouchPoints(atouchPoints []*QTouchEventTouchPoint) {
-	q.Drv(176000, 176103, unsafe.Pointer(&atouchPoints), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_atouchPoints := NewCNoObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&atouchPoints)))
+	defer FreeCNoObjectArrayHead(_atouchPoints)
+	q.Drv(176000, 176103, unsafe.Pointer(_atouchPoints), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QTouchEvent::touchPointStates()
@@ -34738,7 +34776,9 @@ func (q *QTreeWidgetItem) AddChild(child *QTreeWidgetItem) {
 
 //QTreeWidgetItem::addChildren(QList<QTreeWidgetItem*> const&)
 func (q *QTreeWidgetItem) AddChildren(children []*QTreeWidgetItem) {
-	q.Drv(179000, 179113, unsafe.Pointer(&children), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_children := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&children)))
+	defer FreeCObjectArrayHead(_children)
+	q.Drv(179000, 179113, unsafe.Pointer(_children), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QTreeWidgetItem::background(int)
@@ -34886,7 +34926,9 @@ func (q *QTreeWidgetItem) InsertChild(index int32, child *QTreeWidgetItem) {
 
 //QTreeWidgetItem::insertChildren(int,QList<QTreeWidgetItem*> const&)
 func (q *QTreeWidgetItem) InsertChildren(index int32, children []*QTreeWidgetItem) {
-	q.Drv(179000, 179129, unsafe.Pointer(&index), unsafe.Pointer(&children), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_children := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&children)))
+	defer FreeCObjectArrayHead(_children)
+	q.Drv(179000, 179129, unsafe.Pointer(&index), unsafe.Pointer(_children), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QTreeWidgetItem::isDisabled()
@@ -36247,8 +36289,10 @@ func NewVariantWithLineF(line *QLineF) *QVariant {
 
 //QVariant::QVariant(QList<QVariant> const&)
 func NewVariantWithVariantArray(list []*QVariant) *QVariant {
+	_list := NewCNoObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&list)))
+	defer FreeCNoObjectArrayHead(_list)
 	var __rv uintptr
-	err := DirectQtDrv(unsafe.Pointer(&__rv), 184000, 184111, unsafe.Pointer(&list), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	err := DirectQtDrv(unsafe.Pointer(&__rv), 184000, 184111, unsafe.Pointer(_list), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 	if err != nil || __rv == 0 {
 		return nil
 	}
@@ -38782,7 +38826,11 @@ func (q *QAbstractItemModel) ChangePersistentIndex(from *QModelIndex, to *QModel
 
 //QAbstractItemModel::changePersistentIndexList(QList<QModelIndex> const&,QList<QModelIndex> const&)
 func (q *QAbstractItemModel) ChangePersistentIndexList(from []*QModelIndex, to []*QModelIndex) {
-	q.Drv(197000, 197116, unsafe.Pointer(&from), unsafe.Pointer(&to), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_from := NewCNoObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&from)))
+	defer FreeCNoObjectArrayHead(_from)
+	_to := NewCNoObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&to)))
+	defer FreeCNoObjectArrayHead(_to)
+	q.Drv(197000, 197116, unsafe.Pointer(_from), unsafe.Pointer(_to), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QAbstractItemModel::columnCount()
@@ -39022,8 +39070,10 @@ func (q *QAbstractItemModel) Match(start *QModelIndex, role int32, value *QVaria
 
 //QAbstractItemModel::mimeData(QList<QModelIndex> const&)
 func (q *QAbstractItemModel) MimeData(indexes []*QModelIndex) *QMimeData {
+	_indexes := NewCNoObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&indexes)))
+	defer FreeCNoObjectArrayHead(_indexes)
 	var __rv uintptr
-	q.Drv(197000, 197147, unsafe.Pointer(&indexes), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	q.Drv(197000, 197147, unsafe.Pointer(_indexes), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 	if __rv == 0 {
 		return nil
 	}
@@ -40321,7 +40371,9 @@ func (q *QAbstractPrintDialog) SetMinMax(min int32, max int32) {
 
 //QAbstractPrintDialog::setOptionTabs(QList<QWidget*> const&)
 func (q *QAbstractPrintDialog) SetOptionTabs(tabs []QWidgetInterface) {
-	q.Drv(200000, 200114, unsafe.Pointer(&tabs), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_tabs := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&tabs)))
+	defer FreeCObjectArrayHead(_tabs)
+	q.Drv(200000, 200114, unsafe.Pointer(_tabs), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QAbstractPrintDialog::setPrintRange(QAbstractPrintDialog::PrintRange)
@@ -41758,7 +41810,9 @@ func (q *QAbstractTransition) SetTargetState(target *QAbstractState) {
 
 //QAbstractTransition::setTargetStates(QList<QAbstractState*> const&)
 func (q *QAbstractTransition) SetTargetStates(targets []*QAbstractState) {
-	q.Drv(208000, 208110, unsafe.Pointer(&targets), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_targets := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&targets)))
+	defer FreeCObjectArrayHead(_targets)
+	q.Drv(208000, 208110, unsafe.Pointer(_targets), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QAbstractTransition::sourceState()
@@ -42184,7 +42238,9 @@ func (q *QAction) SetShortcuts(value QKeySequence_StandardKey) {
 
 //QAction::setShortcuts(QList<QKeySequence> const&)
 func (q *QAction) SetShortcutsWithShortcuts(shortcuts []*QKeySequence) {
-	q.Drv(209000, 209149, unsafe.Pointer(&shortcuts), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_shortcuts := NewCNoObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&shortcuts)))
+	defer FreeCNoObjectArrayHead(_shortcuts)
+	q.Drv(209000, 209149, unsafe.Pointer(_shortcuts), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QAction::setStatusTip(QString const&)
@@ -44224,7 +44280,9 @@ func (q *QColumnView) SelectAll() {
 
 //QColumnView::setColumnWidths(QList<int> const&)
 func (q *QColumnView) SetColumnWidths(list []int32) {
-	q.Drv(218000, 218121, unsafe.Pointer(&list), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_list := NewCIntArrayHead(list)
+	defer FreeCIntArrayHead(_list)
+	q.Drv(218000, 218121, unsafe.Pointer(_list), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QColumnView::setModel(QAbstractItemModel*)
@@ -47444,8 +47502,10 @@ func (q *QDirModel) LazyChildCount() bool {
 
 //QDirModel::mimeData(QList<QModelIndex> const&)
 func (q *QDirModel) MimeData(indexes []*QModelIndex) *QMimeData {
+	_indexes := NewCNoObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&indexes)))
+	defer FreeCNoObjectArrayHead(_indexes)
 	var __rv uintptr
-	q.Drv(230000, 230126, unsafe.Pointer(&indexes), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	q.Drv(230000, 230126, unsafe.Pointer(_indexes), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 	if __rv == 0 {
 		return nil
 	}
@@ -49744,7 +49804,9 @@ func (q *QFileDialog) SetResolveSymlinks(enabled bool) {
 
 //QFileDialog::setSidebarUrls(QList<QUrl> const&)
 func (q *QFileDialog) SetSidebarUrls(urls []*QUrl) {
-	q.Drv(239000, 239165, unsafe.Pointer(&urls), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_urls := NewCNoObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&urls)))
+	defer FreeCNoObjectArrayHead(_urls)
+	q.Drv(239000, 239165, unsafe.Pointer(_urls), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QFileDialog::setViewMode(QFileDialog::ViewMode)
@@ -50067,8 +50129,10 @@ func (q *QFileSystemModel) LastModified(index *QModelIndex) *QDateTime {
 
 //QFileSystemModel::mimeData(QList<QModelIndex> const&)
 func (q *QFileSystemModel) MimeData(indexes []*QModelIndex) *QMimeData {
+	_indexes := NewCNoObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&indexes)))
+	defer FreeCNoObjectArrayHead(_indexes)
 	var __rv uintptr
-	q.Drv(240000, 240131, unsafe.Pointer(&indexes), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	q.Drv(240000, 240131, unsafe.Pointer(_indexes), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 	if __rv == 0 {
 		return nil
 	}
@@ -54437,7 +54501,9 @@ func (q *QGraphicsItem) SetTransformOriginPointFWithAxAy(ax float64, ay float64)
 
 //QGraphicsItem::setTransformations(QList<QGraphicsTransform*> const&)
 func (q *QGraphicsItem) SetTransformations(transformations []*QGraphicsTransform) {
-	q.Drv(258000, 258267, unsafe.Pointer(&transformations), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_transformations := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&transformations)))
+	defer FreeCObjectArrayHead(_transformations)
+	q.Drv(258000, 258267, unsafe.Pointer(_transformations), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QGraphicsItem::setVisible(bool)
@@ -57330,8 +57396,10 @@ func (q *QGraphicsScene) ContextMenuEvent(event *QGraphicsSceneContextMenuEvent)
 
 //QGraphicsScene::createItemGroup(QList<QGraphicsItem*> const&)
 func (q *QGraphicsScene) CreateItemGroup(items []*QGraphicsItem) *QGraphicsItemGroup {
+	_items := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&items)))
+	defer FreeCObjectArrayHead(_items)
 	var __rv uintptr
-	q.Drv(274000, 274141, unsafe.Pointer(&items), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	q.Drv(274000, 274141, unsafe.Pointer(_items), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 	if __rv == 0 {
 		return nil
 	}
@@ -60244,7 +60312,9 @@ func (q *QGraphicsView) Translate(dx float64, dy float64) {
 
 //QGraphicsView::updateScene(QList<QRectF> const&)
 func (q *QGraphicsView) UpdateScene(rects []*QRectF) {
-	q.Drv(287000, 287216, unsafe.Pointer(&rects), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_rects := NewCNoObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&rects)))
+	defer FreeCNoObjectArrayHead(_rects)
+	q.Drv(287000, 287216, unsafe.Pointer(_rects), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QGraphicsView::updateSceneRect(QRectF const&)
@@ -60355,7 +60425,9 @@ func (q *QGraphicsWidget) AddAction(action *QAction) {
 
 //QGraphicsWidget::addActions(QList<QAction*>)
 func (q *QGraphicsWidget) AddActions(actions []*QAction) {
-	q.Drv(288000, 288108, unsafe.Pointer(&actions), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_actions := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&actions)))
+	defer FreeCObjectArrayHead(_actions)
+	q.Drv(288000, 288108, unsafe.Pointer(_actions), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QGraphicsWidget::adjustSize()
@@ -60517,7 +60589,9 @@ func (q *QGraphicsWidget) InsertAction(before *QAction, action *QAction) {
 
 //QGraphicsWidget::insertActions(QAction*,QList<QAction*>)
 func (q *QGraphicsWidget) InsertActions(before *QAction, actions []*QAction) {
-	q.Drv(288000, 288133, Native(before), unsafe.Pointer(&actions), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_actions := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&actions)))
+	defer FreeCObjectArrayHead(_actions)
+	q.Drv(288000, 288133, Native(before), unsafe.Pointer(_actions), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QGraphicsWidget::isActiveWindow()
@@ -66150,8 +66224,10 @@ func (q *QListWidget) Items(data *QMimeData) []*QListWidgetItem {
 
 //QListWidget::mimeData(QList<QListWidgetItem*> const)
 func (q *QListWidget) MimeData(items []*QListWidgetItem) *QMimeData {
+	_items := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&items)))
+	defer FreeCObjectArrayHead(_items)
 	var __rv uintptr
-	q.Drv(306000, 306140, unsafe.Pointer(&items), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	q.Drv(306000, 306140, unsafe.Pointer(_items), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 	if __rv == 0 {
 		return nil
 	}
@@ -67690,8 +67766,10 @@ func (q *QMenu) ExecWithPosAt(pos *QPoint, at *QAction) *QAction {
 
 //QMenu::exec(QList<QAction*>,QPoint const&,QAction*)
 func QMenuExecWithActionsPosAt(actions []*QAction, pos *QPoint, at *QAction) *QAction {
+	_actions := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&actions)))
+	defer FreeCObjectArrayHead(_actions)
 	var __rv uintptr
-	DirectQtDrv(nil, 310000, 310131, unsafe.Pointer(&actions), Native(pos), Native(at), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil)
+	DirectQtDrv(nil, 310000, 310131, unsafe.Pointer(_actions), Native(pos), Native(at), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil)
 	if __rv == 0 {
 		return nil
 	}
@@ -67702,8 +67780,10 @@ func QMenuExecWithActionsPosAt(actions []*QAction, pos *QPoint, at *QAction) *QA
 
 //QMenu::exec(QList<QAction*>,QPoint const&,QAction*)
 func (q *QMenu) ExecWithActionsPosAt(actions []*QAction, pos *QPoint, at *QAction) *QAction {
+	_actions := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&actions)))
+	defer FreeCObjectArrayHead(_actions)
 	var __rv uintptr
-	q.Drv(310000, 310131, unsafe.Pointer(&actions), Native(pos), Native(at), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil)
+	q.Drv(310000, 310131, unsafe.Pointer(_actions), Native(pos), Native(at), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil)
 	if __rv == 0 {
 		return nil
 	}
@@ -67714,8 +67794,10 @@ func (q *QMenu) ExecWithActionsPosAt(actions []*QAction, pos *QPoint, at *QActio
 
 //QMenu::exec(QList<QAction*>,QPoint const&,QAction*,QWidget*)
 func QMenuExecWithActionsPosAtParent(actions []*QAction, pos *QPoint, at *QAction, parent QWidgetInterface) *QAction {
+	_actions := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&actions)))
+	defer FreeCObjectArrayHead(_actions)
 	var __rv uintptr
-	DirectQtDrv(nil, 310000, 310132, unsafe.Pointer(&actions), Native(pos), Native(at), Native(parent), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil)
+	DirectQtDrv(nil, 310000, 310132, unsafe.Pointer(_actions), Native(pos), Native(at), Native(parent), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil)
 	if __rv == 0 {
 		return nil
 	}
@@ -67726,8 +67808,10 @@ func QMenuExecWithActionsPosAtParent(actions []*QAction, pos *QPoint, at *QActio
 
 //QMenu::exec(QList<QAction*>,QPoint const&,QAction*,QWidget*)
 func (q *QMenu) ExecWithActionsPosAtParent(actions []*QAction, pos *QPoint, at *QAction, parent QWidgetInterface) *QAction {
+	_actions := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&actions)))
+	defer FreeCObjectArrayHead(_actions)
 	var __rv uintptr
-	q.Drv(310000, 310132, unsafe.Pointer(&actions), Native(pos), Native(at), Native(parent), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil)
+	q.Drv(310000, 310132, unsafe.Pointer(_actions), Native(pos), Native(at), Native(parent), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil)
 	if __rv == 0 {
 		return nil
 	}
@@ -69341,7 +69425,9 @@ func (q *QMimeData) SetText(text string) {
 
 //QMimeData::setUrls(QList<QUrl> const&)
 func (q *QMimeData) SetUrls(urls []*QUrl) {
-	q.Drv(313000, 313122, unsafe.Pointer(&urls), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_urls := NewCNoObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&urls)))
+	defer FreeCNoObjectArrayHead(_urls)
+	q.Drv(313000, 313122, unsafe.Pointer(_urls), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QMimeData::text()
@@ -71951,7 +72037,9 @@ func (q *QPlainTextEdit) SetDocumentTitle(title string) {
 
 //QPlainTextEdit::setExtraSelections(QList<QTextEdit::ExtraSelection> const&)
 func (q *QPlainTextEdit) SetExtraSelections(selections []*QTextEditExtraSelection) {
-	q.Drv(323000, 323186, unsafe.Pointer(&selections), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_selections := NewCNoObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&selections)))
+	defer FreeCNoObjectArrayHead(_selections)
+	q.Drv(323000, 323186, unsafe.Pointer(_selections), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QPlainTextEdit::setLineWrapMode(QPlainTextEdit::LineWrapMode)
@@ -76323,8 +76411,10 @@ func (q *QSortFilterProxyModel) Match(start *QModelIndex, role int32, value *QVa
 
 //QSortFilterProxyModel::mimeData(QList<QModelIndex> const&)
 func (q *QSortFilterProxyModel) MimeData(indexes []*QModelIndex) *QMimeData {
+	_indexes := NewCNoObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&indexes)))
+	defer FreeCNoObjectArrayHead(_indexes)
 	var __rv uintptr
-	q.Drv(347000, 347137, unsafe.Pointer(&indexes), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	q.Drv(347000, 347137, unsafe.Pointer(_indexes), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 	if __rv == 0 {
 		return nil
 	}
@@ -77067,7 +77157,9 @@ func (q *QSplitter) SetRubberBand(position int32) {
 
 //QSplitter::setSizes(QList<int> const&)
 func (q *QSplitter) SetSizes(list []int32) {
-	q.Drv(350000, 350134, unsafe.Pointer(&list), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_list := NewCIntArrayHead(list)
+	defer FreeCIntArrayHead(_list)
+	q.Drv(350000, 350134, unsafe.Pointer(_list), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QSplitter::setStretchFactor(int,int)
@@ -77626,12 +77718,16 @@ func NewStandardItemModelWithRowsColumnsParent(rows int32, columns int32, parent
 
 //QStandardItemModel::appendColumn(QList<QStandardItem*> const&)
 func (q *QStandardItemModel) AppendColumn(items []*QStandardItem) {
-	q.Drv(354000, 354106, unsafe.Pointer(&items), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_items := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&items)))
+	defer FreeCObjectArrayHead(_items)
+	q.Drv(354000, 354106, unsafe.Pointer(_items), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QStandardItemModel::appendRow(QList<QStandardItem*> const&)
 func (q *QStandardItemModel) AppendRow(items []*QStandardItem) {
-	q.Drv(354000, 354107, unsafe.Pointer(&items), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_items := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&items)))
+	defer FreeCObjectArrayHead(_items)
+	q.Drv(354000, 354107, unsafe.Pointer(_items), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QStandardItemModel::appendRow(QStandardItem*)
@@ -77785,7 +77881,9 @@ func (q *QStandardItemModel) InsertColumn(column int32) bool {
 
 //QStandardItemModel::insertColumn(int,QList<QStandardItem*> const&)
 func (q *QStandardItemModel) InsertColumnWithColumnItems(column int32, items []*QStandardItem) {
-	q.Drv(354000, 354125, unsafe.Pointer(&column), unsafe.Pointer(&items), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_items := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&items)))
+	defer FreeCObjectArrayHead(_items)
+	q.Drv(354000, 354125, unsafe.Pointer(&column), unsafe.Pointer(_items), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QStandardItemModel::insertColumn(int,QModelIndex const&)
@@ -77811,7 +77909,9 @@ func (q *QStandardItemModel) InsertRow(row int32) bool {
 
 //QStandardItemModel::insertRow(int,QList<QStandardItem*> const&)
 func (q *QStandardItemModel) InsertRowWithRowItems(row int32, items []*QStandardItem) {
-	q.Drv(354000, 354129, unsafe.Pointer(&row), unsafe.Pointer(&items), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_items := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&items)))
+	defer FreeCObjectArrayHead(_items)
+	q.Drv(354000, 354129, unsafe.Pointer(&row), unsafe.Pointer(_items), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QStandardItemModel::insertRow(int,QModelIndex const&)
@@ -77908,8 +78008,10 @@ func (q *QStandardItemModel) ItemPrototype() *QStandardItem {
 
 //QStandardItemModel::mimeData(QList<QModelIndex> const&)
 func (q *QStandardItemModel) MimeData(indexes []*QModelIndex) *QMimeData {
+	_indexes := NewCNoObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&indexes)))
+	defer FreeCNoObjectArrayHead(_indexes)
 	var __rv uintptr
-	q.Drv(354000, 354139, unsafe.Pointer(&indexes), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	q.Drv(354000, 354139, unsafe.Pointer(_indexes), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 	if __rv == 0 {
 		return nil
 	}
@@ -82039,8 +82141,10 @@ func (q *QTableWidget) Items(data *QMimeData) []*QTableWidgetItem {
 
 //QTableWidget::mimeData(QList<QTableWidgetItem*> const)
 func (q *QTableWidget) MimeData(items []*QTableWidgetItem) *QMimeData {
+	_items := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&items)))
+	defer FreeCObjectArrayHead(_items)
 	var __rv uintptr
-	q.Drv(368000, 368146, unsafe.Pointer(&items), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	q.Drv(368000, 368146, unsafe.Pointer(_items), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 	if __rv == 0 {
 		return nil
 	}
@@ -84328,7 +84432,9 @@ func (q *QTextEdit) SetDocumentTitle(title string) {
 
 //QTextEdit::setExtraSelections(QList<QTextEdit::ExtraSelection> const&)
 func (q *QTextEdit) SetExtraSelections(selections []*QTextEditExtraSelection) {
-	q.Drv(375000, 375188, unsafe.Pointer(&selections), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_selections := NewCNoObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&selections)))
+	defer FreeCNoObjectArrayHead(_selections)
+	q.Drv(375000, 375188, unsafe.Pointer(_selections), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QTextEdit::setFontFamily(QString const&)
@@ -87129,7 +87235,9 @@ func (q *QTreeWidget) AddTopLevelItem(item *QTreeWidgetItem) {
 
 //QTreeWidget::addTopLevelItems(QList<QTreeWidgetItem*> const&)
 func (q *QTreeWidget) AddTopLevelItems(items []*QTreeWidgetItem) {
-	q.Drv(388000, 388115, unsafe.Pointer(&items), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_items := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&items)))
+	defer FreeCObjectArrayHead(_items)
+	q.Drv(388000, 388115, unsafe.Pointer(_items), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QTreeWidget::clear()
@@ -87259,7 +87367,9 @@ func (q *QTreeWidget) InsertTopLevelItem(index int32, item *QTreeWidgetItem) {
 
 //QTreeWidget::insertTopLevelItems(int,QList<QTreeWidgetItem*> const&)
 func (q *QTreeWidget) InsertTopLevelItems(index int32, items []*QTreeWidgetItem) {
-	q.Drv(388000, 388134, unsafe.Pointer(&index), unsafe.Pointer(&items), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_items := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&items)))
+	defer FreeCObjectArrayHead(_items)
+	q.Drv(388000, 388134, unsafe.Pointer(&index), unsafe.Pointer(_items), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QTreeWidget::invisibleRootItem()
@@ -87390,8 +87500,10 @@ func (q *QTreeWidget) Items(data *QMimeData) []*QTreeWidgetItem {
 
 //QTreeWidget::mimeData(QList<QTreeWidgetItem*> const)
 func (q *QTreeWidget) MimeData(items []*QTreeWidgetItem) *QMimeData {
+	_items := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&items)))
+	defer FreeCObjectArrayHead(_items)
 	var __rv uintptr
-	q.Drv(388000, 388148, unsafe.Pointer(&items), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	q.Drv(388000, 388148, unsafe.Pointer(_items), unsafe.Pointer(&__rv), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 	if __rv == 0 {
 		return nil
 	}
@@ -88946,7 +89058,9 @@ func (q *QWidget) AddAction(action *QAction) {
 
 //QWidget::addActions(QList<QAction*>)
 func (q *QWidget) AddActions(actions []*QAction) {
-	q.Drv(397000, 397112, unsafe.Pointer(&actions), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_actions := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&actions)))
+	defer FreeCObjectArrayHead(_actions)
+	q.Drv(397000, 397112, unsafe.Pointer(_actions), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QWidget::adjustSize()
@@ -89456,7 +89570,9 @@ func (q *QWidget) InsertAction(before *QAction, action *QAction) {
 
 //QWidget::insertActions(QAction*,QList<QAction*>)
 func (q *QWidget) InsertActions(before *QAction, actions []*QAction) {
-	q.Drv(397000, 397179, Native(before), unsafe.Pointer(&actions), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_actions := NewCObjectArrayHead(*(*[]*QObject)(unsafe.Pointer(&actions)))
+	defer FreeCObjectArrayHead(_actions)
+	q.Drv(397000, 397179, Native(before), unsafe.Pointer(_actions), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QWidget::isActiveWindow()
@@ -91265,7 +91381,9 @@ func (q *QWizard) SetButton(which QWizard_WizardButton, button *QAbstractButton)
 
 //QWizard::setButtonLayout(QList<QWizard::WizardButton> const&)
 func (q *QWizard) SetButtonLayout(layout []QWizard_WizardButton) {
-	q.Drv(399000, 399132, unsafe.Pointer(&layout), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	_layout := NewCIntArrayHead(*(*[]int32)(unsafe.Pointer(&layout)))
+	defer FreeCIntArrayHead(_layout)
+	q.Drv(399000, 399132, unsafe.Pointer(_layout), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 }
 
 //QWizard::setButtonText(QWizard::WizardButton,QString const&)

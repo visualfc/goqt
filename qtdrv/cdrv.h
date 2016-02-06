@@ -128,6 +128,116 @@ inline QString drvGetStringHead(void *p)
     return QString::fromUtf8(sh->data,sh->size);
 }
 
+inline QList<int> drvGetIntArrayHead(void *p)
+{
+    if (p == 0) {
+        return QList<int>();
+    }
+    int_array_head *sh = (int_array_head*)p;
+    QList<int> v;
+    for (int i = 0; i < sh->size; i++) {
+        v.push_back(sh->data[i]);
+    }
+    return v;
+}
+
+template <typename T>
+inline QList<T> drvGetIntArrayHeadT(void *p)
+{
+    if (p == 0) {
+        return QList<T>();
+    }
+    int_array_head *sh = (int_array_head*)p;
+    QList<T> v;
+    for (int i = 0; i < sh->size; i++) {
+        v.push_back((T)sh->data[i]);
+    }
+    return v;
+}
+
+template <typename T>
+inline QList<T> drvGetObjectArrayHeadT(void *p)
+{
+    if (p == 0) {
+        return QList<T>();
+    }
+    ptr_array_head *sh = (ptr_array_head*)p;
+    QList<T> v;
+    for (int i = 0; i < sh->size; i++) {
+        v.push_back((T)sh->data[i]);
+    }
+    return v;
+}
+
+template <typename T>
+inline QList<T> drvGetNoObjectArrayHeadT(void *p)
+{
+    if (p == 0) {
+        return QList<T>();
+    }
+    ptr_array_head *sh = (ptr_array_head*)p;
+    QList<T> v;
+    for (int i = 0; i < sh->size; i++) {
+        v.push_back(*(T*)sh->data[i]);
+    }
+    return v;
+}
+
+inline QList<double> drvGetDoubleArrayHead(void *p)
+{
+    if (p == 0) {
+        return QList<double>();
+    }
+    double_array_head *sh = (double_array_head*)p;
+    QList<double> v;
+    for (int i = 0; i < sh->size; i++) {
+        v.push_back(sh->data[i]);
+    }
+    return v;
+}
+
+template <typename T>
+inline QVector<T> drvGetUintVectorHeadT(void *p)
+{
+    if (p == 0) {
+        return QVector<T>();
+    }
+    uint_array_head *sh = (uint_array_head*)p;
+    QVector<T> v;
+    for (int i = 0; i < sh->size; i++) {
+        v.push_back((T)sh->data[i]);
+    }
+    return v;
+}
+
+inline QVector<double> drvGetDoubleVectorHead(void *p)
+{
+    if (p == 0) {
+        return QVector<double>();
+    }
+    double_array_head *sh = (double_array_head*)p;
+    QVector<double> v;
+    for (int i = 0; i < sh->size; i++) {
+        v.push_back(sh->data[i]);
+    }
+    return v;
+}
+
+template <typename T>
+inline QVector<T> drvGetNoObjectVectorHeadT(void *p)
+{
+    if (p == 0) {
+        return QVector<T>();
+    }
+    ptr_array_head *sh = (ptr_array_head*)p;
+    QVector<T> v;
+    for (int i = 0; i < sh->size; i++) {
+        v.push_back(*(T*)sh->data[i]);
+    }
+    return v;
+}
+
+
 inline QBitArray drvGetBoolArrayHead(void *p)
 {
     if (p == 0) {
@@ -314,6 +424,29 @@ inline void drvSetVector(void *p, QVector<T> ar)
     }
     array_to_slice(p,&ar[0],ar.size());
 }
+inline void drvSetVectorQRgb(void *p, QVector<QRgb> ar)
+{
+    if (p == 0) {
+        return;
+    }
+    //array_to_slice(p,&ar[0],ar.size());
+    for (int i = 0; i < ar.size(); i++) {
+        append_uint32_to_slice(p,ar[i]);
+    }
+}
+
+inline void drvSetVectorDouble(void *p, QVector<double> ar)
+{
+    if (p == 0) {
+        return;
+    }
+    //array_to_slice(p,&ar[0],ar.size());
+    for (int i = 0; i < ar.size(); i++) {
+        append_double_to_slice(p,ar[i]);
+    }
+}
+
+
 
 template <class T>
 inline void drvSetList(void *p, QList<T> ar)
