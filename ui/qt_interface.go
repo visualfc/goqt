@@ -12,19 +12,12 @@ type QLayoutInterface interface {
 	ContentsMargins() *QMargins
 	ContentsRect() *QRect
 	Count() int32
-	ExpandingDirections() Qt_Orientation
-	Geometry() *QRect
 	GetContentsMargins(*int32, *int32, *int32, *int32)
 	IndexOf(QWidgetInterface) int32
-	Invalidate()
-	IsEmpty() bool
 	IsEnabled() bool
 	ItemAt(int32) *QLayoutItem
-	Layout() *QLayout
 	Margin() int32
-	MaximumSize() *QSize
 	MenuBar() *QWidget
-	MinimumSize() *QSize
 	ParentWidget() *QWidget
 	RemoveItem(*QLayoutItem)
 	RemoveWidget(QWidgetInterface)
@@ -34,7 +27,6 @@ type QLayoutInterface interface {
 	SetContentsMargins(*QMargins)
 	SetContentsMarginsWithLeftTopRightBottom(int32, int32, int32, int32)
 	SetEnabled(bool)
-	SetGeometry(*QRect)
 	SetMargin(int32)
 	SetMenuBar(QWidgetInterface)
 	SetSizeConstraint(QLayout_SizeConstraint)

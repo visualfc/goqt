@@ -433,23 +433,15 @@ int drv_QAbstractGraphicsShapeItem(void *_p, int funcid, void* p1,void* p2,void*
 		break;
 	}
 	case 1103: {
-		*(bool*)p2 = pThis->isObscuredBy((QGraphicsItem*)(p1));
-		break;
-	}
-	case 1104: {
-		*(void**)p1 = new QPainterPath(pThis->opaqueArea());
-		break;
-	}
-	case 1105: {
 		*(void**)p1 = new QPen(pThis->pen());
 		break;
 	}
-	case 1106: {
+	case 1104: {
 		if(p1==0)return -2;
 		pThis->setBrush(*(QBrush*)(p1));
 		break;
 	}
-	case 1107: {
+	case 1105: {
 		if(p1==0)return -2;
 		pThis->setPen(*(QPen*)(p1));
 		break;
@@ -694,338 +686,334 @@ int drv_QApplication(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 6133: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 6134: {
 		*(int*)p1 = QApplication::exec();
 		break;
 	}
-	case 6135: {
+	case 6134: {
 		QCoreApplication::exit();
 		break;
 	}
-	case 6136: {
+	case 6135: {
 		QCoreApplication::exit(*(int*)p1);
 		break;
 	}
-	case 6137: {
+	case 6136: {
 		QCoreApplication::flush();
 		break;
 	}
-	case 6138: {
+	case 6137: {
 		*(void**)p1 = QApplication::focusWidget();
 		break;
 	}
-	case 6139: {
+	case 6138: {
 		*(void**)p1 = new QFont(QApplication::font());
 		break;
 	}
-	case 6140: {
+	case 6139: {
 		*(void**)p2 = new QFont(QApplication::font((QWidget*)(p1)));
 		break;
 	}
-	case 6141: {
+	case 6140: {
 		*(void**)p2 = new QFont(QApplication::font(drvGet_const_char(p1)));
 		break;
 	}
-	case 6142: {
+	case 6141: {
 		*(void**)p1 = new QFontMetrics(QApplication::fontMetrics());
 		break;
 	}
-	case 6143: {
+	case 6142: {
 		*(void**)p1 = new QSize(QApplication::globalStrut());
 		break;
 	}
-	case 6144: {
+	case 6143: {
 		*(bool*)p1 = QCoreApplication::hasPendingEvents();
 		break;
 	}
-	case 6145: {
+	case 6144: {
 		QCoreApplication::installTranslator((QTranslator*)(p1));
 		break;
 	}
-	case 6146: {
+	case 6145: {
 		*(void**)p1 = QCoreApplication::instance();
 		break;
 	}
-	case 6147: {
+	case 6146: {
 		*(bool*)p2 = QApplication::isEffectEnabled(*(Qt::UIEffect*)p1);
 		break;
 	}
-	case 6148: {
+	case 6147: {
 		*(bool*)p1 = QApplication::isLeftToRight();
 		break;
 	}
-	case 6149: {
+	case 6148: {
 		*(bool*)p1 = QApplication::isRightToLeft();
 		break;
 	}
-	case 6150: {
+	case 6149: {
 		*(bool*)p1 = pThis->isSessionRestored();
 		break;
 	}
-	case 6151: {
+	case 6150: {
 		*(int*)p1 = QApplication::keyboardInputInterval();
 		break;
 	}
-	case 6152: {
+	case 6151: {
 		*(QFlags<Qt::KeyboardModifier>*)p1 = QApplication::keyboardModifiers();
 		break;
 	}
-	case 6153: {
+	case 6152: {
 		*(Qt::LayoutDirection*)p1 = QApplication::layoutDirection();
 		break;
 	}
-	case 6154: {
+	case 6153: {
 		drvSetStringArray(p1,QCoreApplication::libraryPaths());
 		break;
 	}
-	case 6155: {
+	case 6154: {
 		*(QFlags<Qt::MouseButton>*)p1 = QApplication::mouseButtons();
 		break;
 	}
-	case 6156: {
+	case 6155: {
 		*(bool*)p3 = pThis->notify((QObject*)(p1),(QEvent*)(p2));
 		break;
 	}
-	case 6157: {
+	case 6156: {
 		drvSetString(p1,QCoreApplication::organizationDomain());
 		break;
 	}
-	case 6158: {
+	case 6157: {
 		drvSetString(p1,QCoreApplication::organizationName());
 		break;
 	}
-	case 6159: {
+	case 6158: {
 		*(void**)p1 = QApplication::overrideCursor();
 		break;
 	}
-	case 6160: {
+	case 6159: {
 		*(void**)p1 = new QPalette(QApplication::palette());
 		break;
 	}
-	case 6161: {
+	case 6160: {
 		*(void**)p2 = new QPalette(QApplication::palette((QWidget*)(p1)));
 		break;
 	}
-	case 6162: {
+	case 6161: {
 		*(void**)p2 = new QPalette(QApplication::palette(drvGet_const_char(p1)));
 		break;
 	}
-	case 6163: {
+	case 6162: {
 		QCoreApplication::postEvent((QObject*)(p1),(QEvent*)(p2));
 		break;
 	}
-	case 6164: {
+	case 6163: {
 		QCoreApplication::quit();
 		break;
 	}
-	case 6165: {
+	case 6164: {
 		*(bool*)p1 = QApplication::quitOnLastWindowClosed();
 		break;
 	}
-	case 6166: {
+	case 6165: {
 		QCoreApplication::removeLibraryPath(drvGetStringHead(p1));
 		break;
 	}
-	case 6167: {
+	case 6166: {
 		QCoreApplication::removePostedEvents((QObject*)(p1));
 		break;
 	}
-	case 6168: {
+	case 6167: {
 		QCoreApplication::removeTranslator((QTranslator*)(p1));
 		break;
 	}
-	case 6169: {
+	case 6168: {
 		QApplication::restoreOverrideCursor();
 		break;
 	}
-	case 6170: {
+	case 6169: {
 		*(bool*)p3 = QCoreApplication::sendEvent((QObject*)(p1),(QEvent*)(p2));
 		break;
 	}
-	case 6171: {
+	case 6170: {
 		QCoreApplication::sendPostedEvents();
 		break;
 	}
-	case 6172: {
+	case 6171: {
 		drvSetString(p1,pThis->sessionId());
 		break;
 	}
-	case 6173: {
+	case 6172: {
 		drvSetString(p1,pThis->sessionKey());
 		break;
 	}
-	case 6174: {
+	case 6173: {
 		QApplication::setActiveWindow((QWidget*)(p1));
 		break;
 	}
-	case 6175: {
+	case 6174: {
 		QCoreApplication::setApplicationName(drvGetStringHead(p1));
 		break;
 	}
-	case 6176: {
+	case 6175: {
 		QCoreApplication::setApplicationVersion(drvGetStringHead(p1));
 		break;
 	}
-	case 6177: {
+	case 6176: {
 		QCoreApplication::setAttribute(*(Qt::ApplicationAttribute*)p1);
 		break;
 	}
-	case 6178: {
+	case 6177: {
 		QCoreApplication::setAttribute(*(Qt::ApplicationAttribute*)p1,*(bool*)p2);
 		break;
 	}
-	case 6179: {
+	case 6178: {
 		pThis->setAutoSipEnabled(*(bool const*)p1);
 		break;
 	}
-	case 6180: {
+	case 6179: {
 		QApplication::setColorSpec(*(int*)p1);
 		break;
 	}
-	case 6181: {
+	case 6180: {
 		QApplication::setCursorFlashTime(*(int*)p1);
 		break;
 	}
-	case 6182: {
+	case 6181: {
 		QApplication::setDesktopSettingsAware(*(bool*)p1);
 		break;
 	}
-	case 6183: {
+	case 6182: {
 		QApplication::setDoubleClickInterval(*(int*)p1);
 		break;
 	}
-	case 6184: {
+	case 6183: {
 		QApplication::setEffectEnabled(*(Qt::UIEffect*)p1);
 		break;
 	}
-	case 6185: {
+	case 6184: {
 		QApplication::setEffectEnabled(*(Qt::UIEffect*)p1,*(bool*)p2);
 		break;
 	}
-	case 6186: {
+	case 6185: {
 		if(p1==0)return -2;
 		QApplication::setFont(*(QFont*)(p1));
 		break;
 	}
-	case 6187: {
+	case 6186: {
 		if(p1==0)return -2;
 		QApplication::setFont(*(QFont*)(p1),drvGet_const_char(p2));
 		break;
 	}
-	case 6188: {
+	case 6187: {
 		if(p1==0)return -2;
 		QApplication::setGlobalStrut(*(QSize*)(p1));
 		break;
 	}
-	case 6189: {
+	case 6188: {
 		QApplication::setKeyboardInputInterval(*(int*)p1);
 		break;
 	}
-	case 6190: {
+	case 6189: {
 		QApplication::setLayoutDirection(*(Qt::LayoutDirection*)p1);
 		break;
 	}
-	case 6191: {
+	case 6190: {
 		QCoreApplication::setLibraryPaths(drvGetStringArray(p1));
 		break;
 	}
-	case 6192: {
+	case 6191: {
 		QCoreApplication::setOrganizationDomain(drvGetStringHead(p1));
 		break;
 	}
-	case 6193: {
+	case 6192: {
 		QCoreApplication::setOrganizationName(drvGetStringHead(p1));
 		break;
 	}
-	case 6194: {
+	case 6193: {
 		if(p1==0)return -2;
 		QApplication::setOverrideCursor(*(QCursor*)(p1));
 		break;
 	}
-	case 6195: {
+	case 6194: {
 		if(p1==0)return -2;
 		QApplication::setPalette(*(QPalette*)(p1));
 		break;
 	}
-	case 6196: {
+	case 6195: {
 		if(p1==0)return -2;
 		QApplication::setPalette(*(QPalette*)(p1),drvGet_const_char(p2));
 		break;
 	}
-	case 6197: {
+	case 6196: {
 		QApplication::setQuitOnLastWindowClosed(*(bool*)p1);
 		break;
 	}
-	case 6198: {
+	case 6197: {
 		QApplication::setStartDragDistance(*(int*)p1);
 		break;
 	}
-	case 6199: {
+	case 6198: {
 		QApplication::setStartDragTime(*(int*)p1);
 		break;
 	}
-	case 6200: {
+	case 6199: {
 		*(void**)p2 = QApplication::setStyle(drvGetStringHead(p1));
 		break;
 	}
-	case 6201: {
+	case 6200: {
 		QApplication::setStyle((QStyle*)(p1));
 		break;
 	}
-	case 6202: {
+	case 6201: {
 		pThis->setStyleSheet(drvGetStringHead(p1));
 		break;
 	}
-	case 6203: {
+	case 6202: {
 		QApplication::setWheelScrollLines(*(int*)p1);
 		break;
 	}
-	case 6204: {
+	case 6203: {
 		if(p1==0)return -2;
 		QApplication::setWindowIcon(*(QIcon*)(p1));
 		break;
 	}
-	case 6205: {
+	case 6204: {
 		*(int*)p1 = QApplication::startDragDistance();
 		break;
 	}
-	case 6206: {
+	case 6205: {
 		*(int*)p1 = QApplication::startDragTime();
 		break;
 	}
-	case 6207: {
+	case 6206: {
 		*(bool*)p1 = QCoreApplication::startingUp();
 		break;
 	}
-	case 6208: {
+	case 6207: {
 		*(void**)p1 = QApplication::style();
 		break;
 	}
-	case 6209: {
+	case 6208: {
 		drvSetString(p1,pThis->styleSheet());
 		break;
 	}
-	case 6210: {
+	case 6209: {
 		*(bool*)p2 = QCoreApplication::testAttribute(*(Qt::ApplicationAttribute*)p1);
 		break;
 	}
-	case 6211: {
+	case 6210: {
 		if(p1==0)return -2;
 		*(void**)p2 = QApplication::topLevelAt(*(QPoint*)(p1));
 		break;
 	}
-	case 6212: {
+	case 6211: {
 		*(void**)p3 = QApplication::topLevelAt(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 6213: {
+	case 6212: {
 		drvSetListObj<QWidget*>(p1,397000,QApplication::topLevelWidgets());
 		break;
 	}
-	case 6214: {
+	case 6213: {
 #ifdef QTDRV_QT5
 		drvSetString(p4,QCoreApplication::translate(drvGet_const_char(p1),drvGet_const_char(p2),drvGet_const_char(p3)));
 #else
@@ -1033,7 +1021,7 @@ int drv_QApplication(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 #endif		
 		break;
 	}
-	case 6215: {
+	case 6214: {
 #ifdef QTDRV_QT5
 		drvSetString(p5,QCoreApplication::translate(drvGet_const_char(p1),drvGet_const_char(p2),drvGet_const_char(p3),*(int*)p4));
 #else
@@ -1041,20 +1029,20 @@ int drv_QApplication(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 #endif		
 		break;
 	}
-	case 6216: {
+	case 6215: {
 		*(int*)p1 = QApplication::wheelScrollLines();
 		break;
 	}
-	case 6217: {
+	case 6216: {
 		if(p1==0)return -2;
 		*(void**)p2 = QApplication::widgetAt(*(QPoint*)(p1));
 		break;
 	}
-	case 6218: {
+	case 6217: {
 		*(void**)p3 = QApplication::widgetAt(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 6219: {
+	case 6218: {
 		*(void**)p1 = new QIcon(QApplication::windowIcon());
 		break;
 	}
@@ -4941,275 +4929,267 @@ int drv_QImage(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 		break;
 	}
 	case 53134: {
-		*(int*)p1 = pThis->devType();
-		break;
-	}
-	case 53135: {
 		*(int*)p1 = pThis->dotsPerMeterX();
 		break;
 	}
-	case 53136: {
+	case 53135: {
 		*(int*)p1 = pThis->dotsPerMeterY();
 		break;
 	}
-	case 53137: {
+	case 53136: {
 		pThis->fill(*(unsigned int*)p1);
 		break;
 	}
-	case 53138: {
+	case 53137: {
 		*(QImage::Format*)p1 = pThis->format();
 		break;
 	}
-	case 53139: {
+	case 53138: {
 		*(void**)p2 = new QImage(QImage::fromData(drvGetByteArrayHead(p1)));
 		break;
 	}
-	case 53140: {
+	case 53139: {
 		*(void**)p3 = new QImage(QImage::fromData(drvGetByteArrayHead(p1),drvGet_const_char(p2)));
 		break;
 	}
-	case 53141: {
+	case 53140: {
 		*(void**)p4 = new QImage(QImage::fromData(*(unsigned char const**)p1,*(int*)p2,drvGet_const_char(p3)));
 		break;
 	}
-	case 53142: {
+	case 53141: {
 		*(bool*)p1 = pThis->hasAlphaChannel();
 		break;
 	}
-	case 53143: {
+	case 53142: {
 		*(int*)p1 = pThis->height();
 		break;
 	}
-	case 53144: {
+	case 53143: {
 		pThis->invertPixels();
 		break;
 	}
-	case 53145: {
+	case 53144: {
 		pThis->invertPixels(*(QImage::InvertMode*)p1);
 		break;
 	}
-	case 53146: {
+	case 53145: {
 		*(bool*)p1 = pThis->isDetached();
 		break;
 	}
-	case 53147: {
+	case 53146: {
 		*(bool*)p1 = pThis->isGrayscale();
 		break;
 	}
-	case 53148: {
+	case 53147: {
 		*(bool*)p1 = pThis->isNull();
 		break;
 	}
-	case 53149: {
+	case 53148: {
 		*(bool*)p2 = pThis->load(drvGetStringHead(p1));
 		break;
 	}
-	case 53150: {
+	case 53149: {
 		*(bool*)p3 = pThis->load((QIODevice*)(p1),drvGet_const_char(p2));
 		break;
 	}
-	case 53151: {
+	case 53150: {
 		*(bool*)p3 = pThis->load(drvGetStringHead(p1),drvGet_const_char(p2));
 		break;
 	}
-	case 53152: {
+	case 53151: {
 		*(bool*)p2 = pThis->loadFromData(drvGetByteArrayHead(p1));
 		break;
 	}
-	case 53153: {
+	case 53152: {
 		*(bool*)p3 = pThis->loadFromData(drvGetByteArrayHead(p1),drvGet_const_char(p2));
 		break;
 	}
-	case 53154: {
+	case 53153: {
 		*(bool*)p4 = pThis->loadFromData(*(unsigned char const**)p1,*(int*)p2,drvGet_const_char(p3));
 		break;
 	}
-	case 53155: {
+	case 53154: {
 		*(void**)p1 = new QImage(pThis->mirrored());
 		break;
 	}
-	case 53156: {
+	case 53155: {
 		*(void**)p3 = new QImage(pThis->mirrored(*(bool*)p1,*(bool*)p2));
 		break;
 	}
-	case 53157: {
+	case 53156: {
 		*(void**)p1 = new QPoint(pThis->offset());
 		break;
 	}
-	case 53158: {
-		*(void**)p1 = pThis->paintEngine();
-		break;
-	}
-	case 53159: {
+	case 53157: {
 		if(p1==0)return -2;
 		*(unsigned int*)p2 = pThis->pixel(*(QPoint*)(p1));
 		break;
 	}
-	case 53160: {
+	case 53158: {
 		*(unsigned int*)p3 = pThis->pixel(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 53161: {
+	case 53159: {
 		if(p1==0)return -2;
 		*(int*)p2 = pThis->pixelIndex(*(QPoint*)(p1));
 		break;
 	}
-	case 53162: {
+	case 53160: {
 		*(int*)p3 = pThis->pixelIndex(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 53163: {
+	case 53161: {
 		*(void**)p1 = new QRect(pThis->rect());
 		break;
 	}
-	case 53164: {
+	case 53162: {
 		*(void**)p1 = new QImage(pThis->rgbSwapped());
 		break;
 	}
-	case 53165: {
+	case 53163: {
 		*(bool*)p2 = pThis->save((QIODevice*)(p1));
 		break;
 	}
-	case 53166: {
+	case 53164: {
 		*(bool*)p2 = pThis->save(drvGetStringHead(p1));
 		break;
 	}
-	case 53167: {
+	case 53165: {
 		*(bool*)p4 = pThis->save((QIODevice*)(p1),drvGet_const_char(p2),*(int*)p3);
 		break;
 	}
-	case 53168: {
+	case 53166: {
 		*(bool*)p4 = pThis->save(drvGetStringHead(p1),drvGet_const_char(p2),*(int*)p3);
 		break;
 	}
-	case 53169: {
+	case 53167: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QImage(pThis->scaled(*(QSize*)(p1)));
 		break;
 	}
-	case 53170: {
+	case 53168: {
 		if(p1==0)return -2;
 		*(void**)p4 = new QImage(pThis->scaled(*(QSize*)(p1),*(Qt::AspectRatioMode*)p2,*(Qt::TransformationMode*)p3));
 		break;
 	}
-	case 53171: {
+	case 53169: {
 		*(void**)p5 = new QImage(pThis->scaled(*(int*)p1,*(int*)p2,*(Qt::AspectRatioMode*)p3,*(Qt::TransformationMode*)p4));
 		break;
 	}
-	case 53172: {
+	case 53170: {
 		*(void**)p2 = new QImage(pThis->scaledToHeight(*(int*)p1));
 		break;
 	}
-	case 53173: {
+	case 53171: {
 		*(void**)p3 = new QImage(pThis->scaledToHeight(*(int*)p1,*(Qt::TransformationMode*)p2));
 		break;
 	}
-	case 53174: {
+	case 53172: {
 		*(void**)p2 = new QImage(pThis->scaledToWidth(*(int*)p1));
 		break;
 	}
-	case 53175: {
+	case 53173: {
 		*(void**)p3 = new QImage(pThis->scaledToWidth(*(int*)p1,*(Qt::TransformationMode*)p2));
 		break;
 	}
-	case 53176: {
+	case 53174: {
 		*(unsigned char const**)p2 = pThis->scanLine(*(int*)p1);
 		break;
 	}
-	case 53177: {
+	case 53175: {
 		pThis->setColor(*(int*)p1,*(unsigned int*)p2);
 		break;
 	}
-	case 53178: {
+	case 53176: {
 		pThis->setColorCount(*(int*)p1);
 		break;
 	}
-	case 53179: {
+	case 53177: {
 		pThis->setColorTable(drvGetUintVectorHeadT<QRgb>(p1));
 		break;
 	}
-	case 53180: {
+	case 53178: {
 		pThis->setDotsPerMeterX(*(int*)p1);
 		break;
 	}
-	case 53181: {
+	case 53179: {
 		pThis->setDotsPerMeterY(*(int*)p1);
 		break;
 	}
-	case 53182: {
+	case 53180: {
 		if(p1==0)return -2;
 		pThis->setOffset(*(QPoint*)(p1));
 		break;
 	}
-	case 53183: {
+	case 53181: {
 		if(p1==0)return -2;
 		pThis->setPixel(*(QPoint*)(p1),*(unsigned int*)p2);
 		break;
 	}
-	case 53184: {
+	case 53182: {
 		pThis->setPixel(*(int*)p1,*(int*)p2,*(unsigned int*)p3);
 		break;
 	}
-	case 53185: {
+	case 53183: {
 		pThis->setText(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
-	case 53186: {
+	case 53184: {
 		*(void**)p1 = new QSize(pThis->size());
 		break;
 	}
-	case 53187: {
+	case 53185: {
 		drvSetString(p1,pThis->text());
 		break;
 	}
-	case 53188: {
+	case 53186: {
 		drvSetString(p2,pThis->text(drvGetStringHead(p1)));
 		break;
 	}
-	case 53189: {
+	case 53187: {
 		drvSetStringArray(p1,pThis->textKeys());
 		break;
 	}
-	case 53190: {
+	case 53188: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QImage(pThis->transformed(*(QMatrix*)(p1)));
 		break;
 	}
-	case 53191: {
+	case 53189: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QImage(pThis->transformed(*(QTransform*)(p1)));
 		break;
 	}
-	case 53192: {
+	case 53190: {
 		if(p1==0)return -2;
 		*(void**)p3 = new QImage(pThis->transformed(*(QMatrix*)(p1),*(Qt::TransformationMode*)p2));
 		break;
 	}
-	case 53193: {
+	case 53191: {
 		if(p1==0)return -2;
 		*(void**)p3 = new QImage(pThis->transformed(*(QTransform*)(p1),*(Qt::TransformationMode*)p2));
 		break;
 	}
-	case 53194: {
+	case 53192: {
 		if(p1==0)return -2;
 		*(void**)p4 = new QMatrix(QImage::trueMatrix(*(QMatrix*)(p1),*(int*)p2,*(int*)p3));
 		break;
 	}
-	case 53195: {
+	case 53193: {
 		if(p1==0)return -2;
 		*(void**)p4 = new QTransform(QImage::trueMatrix(*(QTransform*)(p1),*(int*)p2,*(int*)p3));
 		break;
 	}
-	case 53196: {
+	case 53194: {
 		if(p1==0)return -2;
 		*(bool*)p2 = pThis->valid(*(QPoint*)(p1));
 		break;
 	}
-	case 53197: {
+	case 53195: {
 		*(bool*)p3 = pThis->valid(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 53198: {
+	case 53196: {
 		*(int*)p1 = pThis->width();
 		break;
 	}
@@ -10258,87 +10238,79 @@ int drv_QPicture(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 95108: {
-		*(int*)p1 = pThis->devType();
-		break;
-	}
-	case 95109: {
 		drvSetStringArray(p1,QPicture::inputFormatList());
 		break;
 	}
-	case 95110: {
+	case 95109: {
 		drvSetBytesArray(p1,QPicture::inputFormats());
 		break;
 	}
-	case 95111: {
+	case 95110: {
 		*(bool*)p1 = pThis->isDetached();
 		break;
 	}
-	case 95112: {
+	case 95111: {
 		*(bool*)p1 = pThis->isNull();
 		break;
 	}
-	case 95113: {
+	case 95112: {
 		*(bool*)p2 = pThis->load((QIODevice*)(p1));
 		break;
 	}
-	case 95114: {
+	case 95113: {
 		*(bool*)p2 = pThis->load(drvGetStringHead(p1));
 		break;
 	}
-	case 95115: {
+	case 95114: {
 		*(bool*)p3 = pThis->load((QIODevice*)(p1),drvGet_const_char(p2));
 		break;
 	}
-	case 95116: {
+	case 95115: {
 		*(bool*)p3 = pThis->load(drvGetStringHead(p1),drvGet_const_char(p2));
 		break;
 	}
-	case 95117: {
+	case 95116: {
 		drvSetStringArray(p1,QPicture::outputFormatList());
 		break;
 	}
-	case 95118: {
+	case 95117: {
 		drvSetBytesArray(p1,QPicture::outputFormats());
 		break;
 	}
-	case 95119: {
-		*(void**)p1 = pThis->paintEngine();
-		break;
-	}
-	case 95120: {
+	case 95118: {
 		drvSetString(p2,QPicture::pictureFormat(drvGetStringHead(p1)));
 		break;
 	}
-	case 95121: {
+	case 95119: {
 		*(bool*)p2 = pThis->play((QPainter*)(p1));
 		break;
 	}
-	case 95122: {
+	case 95120: {
 		*(bool*)p2 = pThis->save((QIODevice*)(p1));
 		break;
 	}
-	case 95123: {
+	case 95121: {
 		*(bool*)p2 = pThis->save(drvGetStringHead(p1));
 		break;
 	}
-	case 95124: {
+	case 95122: {
 		*(bool*)p3 = pThis->save((QIODevice*)(p1),drvGet_const_char(p2));
 		break;
 	}
-	case 95125: {
+	case 95123: {
 		*(bool*)p3 = pThis->save(drvGetStringHead(p1),drvGet_const_char(p2));
 		break;
 	}
-	case 95126: {
+	case 95124: {
 		if(p1==0)return -2;
 		pThis->setBoundingRect(*(QRect*)(p1));
 		break;
 	}
-	case 95127: {
+	case 95125: {
 		pThis->setData(drvGet_const_char(p1),*(unsigned int*)p2);
 		break;
 	}
-	case 95128: {
+	case 95126: {
 		*(unsigned int*)p1 = pThis->size();
 		break;
 	}
@@ -10560,212 +10532,204 @@ int drv_QPixmap(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 97120: {
-		*(int*)p1 = pThis->devType();
-		break;
-	}
-	case 97121: {
 		pThis->fill();
 		break;
 	}
-	case 97122: {
+	case 97121: {
 		pThis->fill(p1==0?QColor():*(QColor*)(p1));
 		break;
 	}
-	case 97123: {
+	case 97122: {
 		if(p2==0)return -2;
 		pThis->fill((QWidget*)(p1),*(QPoint*)(p2));
 		break;
 	}
-	case 97124: {
+	case 97123: {
 		pThis->fill((QWidget*)(p1),*(int*)p2,*(int*)p3);
 		break;
 	}
-	case 97125: {
+	case 97124: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QPixmap(QPixmap::fromImage(*(QImage*)(p1)));
 		break;
 	}
-	case 97126: {
+	case 97125: {
 		if(p1==0)return -2;
 		*(void**)p3 = new QPixmap(QPixmap::fromImage(*(QImage*)(p1),*(QFlags<Qt::ImageConversionFlag>*)p2));
 		break;
 	}
-	case 97127: {
+	case 97126: {
 		*(void**)p2 = new QPixmap(QPixmap::fromImageReader((QImageReader*)(p1)));
 		break;
 	}
-	case 97128: {
+	case 97127: {
 		*(void**)p3 = new QPixmap(QPixmap::fromImageReader((QImageReader*)(p1),*(QFlags<Qt::ImageConversionFlag>*)p2));
 		break;
 	}
-	case 97129: {
+	case 97128: {
 		*(void**)p2 = new QPixmap(QPixmap::grabWidget((QWidget*)(p1)));
 		break;
 	}
-	case 97130: {
+	case 97129: {
 		if(p2==0)return -2;
 		*(void**)p3 = new QPixmap(QPixmap::grabWidget((QWidget*)(p1),*(QRect*)(p2)));
 		break;
 	}
-	case 97131: {
+	case 97130: {
 		*(void**)p6 = new QPixmap(QPixmap::grabWidget((QWidget*)(p1),*(int*)p2,*(int*)p3,*(int*)p4,*(int*)p5));
 		break;
 	}
-	case 97132: {
+	case 97131: {
 		*(bool*)p1 = pThis->hasAlpha();
 		break;
 	}
-	case 97133: {
+	case 97132: {
 		*(bool*)p1 = pThis->hasAlphaChannel();
 		break;
 	}
-	case 97134: {
+	case 97133: {
 		*(int*)p1 = pThis->height();
 		break;
 	}
-	case 97135: {
+	case 97134: {
 		*(bool*)p1 = pThis->isDetached();
 		break;
 	}
-	case 97136: {
+	case 97135: {
 		*(bool*)p1 = pThis->isNull();
 		break;
 	}
-	case 97137: {
+	case 97136: {
 		*(bool*)p1 = pThis->isQBitmap();
 		break;
 	}
-	case 97138: {
+	case 97137: {
 		*(bool*)p2 = pThis->load(drvGetStringHead(p1));
 		break;
 	}
-	case 97139: {
+	case 97138: {
 		*(bool*)p4 = pThis->load(drvGetStringHead(p1),drvGet_const_char(p2),*(QFlags<Qt::ImageConversionFlag>*)p3);
 		break;
 	}
-	case 97140: {
+	case 97139: {
 		*(bool*)p2 = pThis->loadFromData(drvGetByteArrayHead(p1));
 		break;
 	}
-	case 97141: {
+	case 97140: {
 		*(bool*)p4 = pThis->loadFromData(drvGetByteArrayHead(p1),drvGet_const_char(p2),*(QFlags<Qt::ImageConversionFlag>*)p3);
 		break;
 	}
-	case 97142: {
+	case 97141: {
 		*(bool*)p5 = pThis->loadFromData(*(unsigned char const**)p1,*(unsigned int*)p2,drvGet_const_char(p3),*(QFlags<Qt::ImageConversionFlag>*)p4);
 		break;
 	}
-	case 97143: {
+	case 97142: {
 		*(void**)p1 = new QBitmap(pThis->mask());
 		break;
 	}
-	case 97144: {
-		*(void**)p1 = pThis->paintEngine();
-		break;
-	}
-	case 97145: {
+	case 97143: {
 		*(void**)p1 = new QRect(pThis->rect());
 		break;
 	}
-	case 97146: {
+	case 97144: {
 		*(bool*)p2 = pThis->save((QIODevice*)(p1));
 		break;
 	}
-	case 97147: {
+	case 97145: {
 		*(bool*)p2 = pThis->save(drvGetStringHead(p1));
 		break;
 	}
-	case 97148: {
+	case 97146: {
 		*(bool*)p4 = pThis->save((QIODevice*)(p1),drvGet_const_char(p2),*(int*)p3);
 		break;
 	}
-	case 97149: {
+	case 97147: {
 		*(bool*)p4 = pThis->save(drvGetStringHead(p1),drvGet_const_char(p2),*(int*)p3);
 		break;
 	}
-	case 97150: {
+	case 97148: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QPixmap(pThis->scaled(*(QSize*)(p1)));
 		break;
 	}
-	case 97151: {
+	case 97149: {
 		if(p1==0)return -2;
 		*(void**)p4 = new QPixmap(pThis->scaled(*(QSize*)(p1),*(Qt::AspectRatioMode*)p2,*(Qt::TransformationMode*)p3));
 		break;
 	}
-	case 97152: {
+	case 97150: {
 		*(void**)p5 = new QPixmap(pThis->scaled(*(int*)p1,*(int*)p2,*(Qt::AspectRatioMode*)p3,*(Qt::TransformationMode*)p4));
 		break;
 	}
-	case 97153: {
+	case 97151: {
 		*(void**)p2 = new QPixmap(pThis->scaledToHeight(*(int*)p1));
 		break;
 	}
-	case 97154: {
+	case 97152: {
 		*(void**)p3 = new QPixmap(pThis->scaledToHeight(*(int*)p1,*(Qt::TransformationMode*)p2));
 		break;
 	}
-	case 97155: {
+	case 97153: {
 		*(void**)p2 = new QPixmap(pThis->scaledToWidth(*(int*)p1));
 		break;
 	}
-	case 97156: {
+	case 97154: {
 		*(void**)p3 = new QPixmap(pThis->scaledToWidth(*(int*)p1,*(Qt::TransformationMode*)p2));
 		break;
 	}
-	case 97157: {
+	case 97155: {
 		if(p3==0)return -2;
 		pThis->scroll(*(int*)p1,*(int*)p2,*(QRect*)(p3),(QRegion*)(p4));
 		break;
 	}
-	case 97158: {
+	case 97156: {
 		pThis->scroll(*(int*)p1,*(int*)p2,*(int*)p3,*(int*)p4,*(int*)p5,*(int*)p6,(QRegion*)(p7));
 		break;
 	}
-	case 97159: {
+	case 97157: {
 		if(p1==0)return -2;
 		pThis->setMask(*(QBitmap*)(p1));
 		break;
 	}
-	case 97160: {
+	case 97158: {
 		*(void**)p1 = new QSize(pThis->size());
 		break;
 	}
-	case 97161: {
+	case 97159: {
 		*(void**)p1 = new QImage(pThis->toImage());
 		break;
 	}
-	case 97162: {
+	case 97160: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QPixmap(pThis->transformed(*(QMatrix*)(p1)));
 		break;
 	}
-	case 97163: {
+	case 97161: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QPixmap(pThis->transformed(*(QTransform*)(p1)));
 		break;
 	}
-	case 97164: {
+	case 97162: {
 		if(p1==0)return -2;
 		*(void**)p3 = new QPixmap(pThis->transformed(*(QMatrix*)(p1),*(Qt::TransformationMode*)p2));
 		break;
 	}
-	case 97165: {
+	case 97163: {
 		if(p1==0)return -2;
 		*(void**)p3 = new QPixmap(pThis->transformed(*(QTransform*)(p1),*(Qt::TransformationMode*)p2));
 		break;
 	}
-	case 97166: {
+	case 97164: {
 		if(p1==0)return -2;
 		*(void**)p4 = new QMatrix(QPixmap::trueMatrix(*(QMatrix*)(p1),*(int*)p2,*(int*)p3));
 		break;
 	}
-	case 97167: {
+	case 97165: {
 		if(p1==0)return -2;
 		*(void**)p4 = new QTransform(QPixmap::trueMatrix(*(QTransform*)(p1),*(int*)p2,*(int*)p3));
 		break;
 	}
-	case 97168: {
+	case 97166: {
 		*(int*)p1 = pThis->width();
 		break;
 	}
@@ -11267,231 +11231,223 @@ int drv_QPrinter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 105111: {
-		*(int*)p1 = pThis->devType();
-		break;
-	}
-	case 105112: {
 		drvSetString(p1,pThis->docName());
 		break;
 	}
-	case 105113: {
+	case 105112: {
 		*(bool*)p1 = pThis->doubleSidedPrinting();
 		break;
 	}
-	case 105114: {
+	case 105113: {
 		*(QPrinter::DuplexMode*)p1 = pThis->duplex();
 		break;
 	}
-	case 105115: {
+	case 105114: {
 		*(bool*)p1 = pThis->fontEmbeddingEnabled();
 		break;
 	}
-	case 105116: {
+	case 105115: {
 		*(int*)p1 = pThis->fromPage();
 		break;
 	}
-	case 105117: {
+	case 105116: {
 		*(bool*)p1 = pThis->fullPage();
 		break;
 	}
-	case 105118: {
+	case 105117: {
 		pThis->getPageMargins(*(double**)p1,*(double**)p2,*(double**)p3,*(double**)p4,*(QPrinter::Unit*)p5);
 		break;
 	}
-	case 105119: {
+	case 105118: {
 		*(bool*)p1 = pThis->isValid();
 		break;
 	}
-	case 105120: {
+	case 105119: {
 		*(bool*)p1 = pThis->newPage();
 		break;
 	}
-	case 105121: {
+	case 105120: {
 		*(int*)p1 = pThis->numCopies();
 		break;
 	}
-	case 105122: {
+	case 105121: {
 		*(QPrinter::Orientation*)p1 = pThis->orientation();
 		break;
 	}
-	case 105123: {
+	case 105122: {
 		drvSetString(p1,pThis->outputFileName());
 		break;
 	}
-	case 105124: {
+	case 105123: {
 		*(QPrinter::OutputFormat*)p1 = pThis->outputFormat();
 		break;
 	}
-	case 105125: {
+	case 105124: {
 		*(QPrinter::PageOrder*)p1 = pThis->pageOrder();
 		break;
 	}
-	case 105126: {
+	case 105125: {
 		*(void**)p1 = new QRect(pThis->pageRect());
 		break;
 	}
-	case 105127: {
+	case 105126: {
 		*(void**)p2 = new QRectF(pThis->pageRect(*(QPrinter::Unit*)p1));
 		break;
 	}
-	case 105128: {
+	case 105127: {
 		*(QPrinter::PageSize*)p1 = pThis->pageSize();
 		break;
 	}
-	case 105129: {
-		*(void**)p1 = pThis->paintEngine();
-		break;
-	}
-	case 105130: {
+	case 105128: {
 		*(void**)p1 = new QRect(pThis->paperRect());
 		break;
 	}
-	case 105131: {
+	case 105129: {
 		*(void**)p2 = new QRectF(pThis->paperRect(*(QPrinter::Unit*)p1));
 		break;
 	}
-	case 105132: {
+	case 105130: {
 		*(QPrinter::PageSize*)p1 = pThis->paperSize();
 		break;
 	}
-	case 105133: {
+	case 105131: {
 		*(void**)p2 = new QSizeF(pThis->paperSize(*(QPrinter::Unit*)p1));
 		break;
 	}
-	case 105134: {
+	case 105132: {
 		*(QPrinter::PaperSource*)p1 = pThis->paperSource();
 		break;
 	}
-	case 105135: {
+	case 105133: {
 		*(void**)p1 = pThis->printEngine();
 		break;
 	}
-	case 105136: {
+	case 105134: {
 		drvSetString(p1,pThis->printProgram());
 		break;
 	}
-	case 105137: {
+	case 105135: {
 		*(QPrinter::PrintRange*)p1 = pThis->printRange();
 		break;
 	}
-	case 105138: {
+	case 105136: {
 		drvSetString(p1,pThis->printerName());
 		break;
 	}
-	case 105139: {
+	case 105137: {
 		*(QPrinter::PrinterState*)p1 = pThis->printerState();
 		break;
 	}
-	case 105140: {
+	case 105138: {
 		*(int*)p1 = pThis->resolution();
 		break;
 	}
-	case 105141: {
+	case 105139: {
 		pThis->setCollateCopies(*(bool*)p1);
 		break;
 	}
-	case 105142: {
+	case 105140: {
 		pThis->setColorMode(*(QPrinter::ColorMode*)p1);
 		break;
 	}
-	case 105143: {
+	case 105141: {
 		pThis->setCopyCount(*(int*)p1);
 		break;
 	}
-	case 105144: {
+	case 105142: {
 		pThis->setCreator(drvGetStringHead(p1));
 		break;
 	}
-	case 105145: {
+	case 105143: {
 		pThis->setDocName(drvGetStringHead(p1));
 		break;
 	}
-	case 105146: {
+	case 105144: {
 		pThis->setDoubleSidedPrinting(*(bool*)p1);
 		break;
 	}
-	case 105147: {
+	case 105145: {
 		pThis->setDuplex(*(QPrinter::DuplexMode*)p1);
 		break;
 	}
-	case 105148: {
+	case 105146: {
 		pThis->setFontEmbeddingEnabled(*(bool*)p1);
 		break;
 	}
-	case 105149: {
+	case 105147: {
 		pThis->setFromTo(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 105150: {
+	case 105148: {
 		pThis->setFullPage(*(bool*)p1);
 		break;
 	}
-	case 105151: {
+	case 105149: {
 		pThis->setNumCopies(*(int*)p1);
 		break;
 	}
-	case 105152: {
+	case 105150: {
 		pThis->setOrientation(*(QPrinter::Orientation*)p1);
 		break;
 	}
-	case 105153: {
+	case 105151: {
 		pThis->setOutputFileName(drvGetStringHead(p1));
 		break;
 	}
-	case 105154: {
+	case 105152: {
 		pThis->setOutputFormat(*(QPrinter::OutputFormat*)p1);
 		break;
 	}
-	case 105155: {
+	case 105153: {
 		pThis->setPageMargins(*(double*)p1,*(double*)p2,*(double*)p3,*(double*)p4,*(QPrinter::Unit*)p5);
 		break;
 	}
-	case 105156: {
+	case 105154: {
 		pThis->setPageOrder(*(QPrinter::PageOrder*)p1);
 		break;
 	}
-	case 105157: {
+	case 105155: {
 		pThis->setPageSize(*(QPrinter::PageSize*)p1);
 		break;
 	}
-	case 105158: {
+	case 105156: {
 		pThis->setPaperSize(*(QPrinter::PageSize*)p1);
 		break;
 	}
-	case 105159: {
+	case 105157: {
 		if(p1==0)return -2;
 		pThis->setPaperSize(*(QSizeF*)(p1),*(QPrinter::Unit*)p2);
 		break;
 	}
-	case 105160: {
+	case 105158: {
 		pThis->setPaperSource(*(QPrinter::PaperSource*)p1);
 		break;
 	}
-	case 105161: {
+	case 105159: {
 		pThis->setPrintProgram(drvGetStringHead(p1));
 		break;
 	}
-	case 105162: {
+	case 105160: {
 		pThis->setPrintRange(*(QPrinter::PrintRange*)p1);
 		break;
 	}
-	case 105163: {
+	case 105161: {
 		pThis->setPrinterName(drvGetStringHead(p1));
 		break;
 	}
-	case 105164: {
+	case 105162: {
 		pThis->setResolution(*(int*)p1);
 		break;
 	}
-	case 105165: {
+	case 105163: {
 		drvSetList<int>(p1,pThis->supportedResolutions());
 		break;
 	}
-	case 105166: {
+	case 105164: {
 		*(bool*)p1 = pThis->supportsMultipleCopies();
 		break;
 	}
-	case 105167: {
+	case 105165: {
 		*(int*)p1 = pThis->toPage();
 		break;
 	}
@@ -13193,39 +13149,6 @@ int drv_QSpacerItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 	}
 	case 123103: {
 		pThis->changeSize(*(int*)p1,*(int*)p2,*(QSizePolicy::Policy*)p3,*(QSizePolicy::Policy*)p4);
-		break;
-	}
-	case 123104: {
-		*(QFlags<Qt::Orientation>*)p1 = pThis->expandingDirections();
-		break;
-	}
-	case 123105: {
-		*(void**)p1 = new QRect(pThis->geometry());
-		break;
-	}
-	case 123106: {
-		*(bool*)p1 = pThis->isEmpty();
-		break;
-	}
-	case 123107: {
-		*(void**)p1 = new QSize(pThis->maximumSize());
-		break;
-	}
-	case 123108: {
-		*(void**)p1 = new QSize(pThis->minimumSize());
-		break;
-	}
-	case 123109: {
-		if(p1==0)return -2;
-		pThis->setGeometry(*(QRect*)(p1));
-		break;
-	}
-	case 123110: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 123111: {
-		*(void**)p1 = pThis->spacerItem();
 		break;
 	}
 	default:
@@ -19300,47 +19223,6 @@ int drv_QWidgetItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		*(void**)_p = new QWidgetItem((QWidget*)(p1));
 		break;
 	}
-	case 192103: {
-		*(QFlags<Qt::Orientation>*)p1 = pThis->expandingDirections();
-		break;
-	}
-	case 192104: {
-		*(void**)p1 = new QRect(pThis->geometry());
-		break;
-	}
-	case 192105: {
-		*(bool*)p1 = pThis->hasHeightForWidth();
-		break;
-	}
-	case 192106: {
-		*(int*)p2 = pThis->heightForWidth(*(int*)p1);
-		break;
-	}
-	case 192107: {
-		*(bool*)p1 = pThis->isEmpty();
-		break;
-	}
-	case 192108: {
-		*(void**)p1 = new QSize(pThis->maximumSize());
-		break;
-	}
-	case 192109: {
-		*(void**)p1 = new QSize(pThis->minimumSize());
-		break;
-	}
-	case 192110: {
-		if(p1==0)return -2;
-		pThis->setGeometry(*(QRect*)(p1));
-		break;
-	}
-	case 192111: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 192112: {
-		*(void**)p1 = pThis->widget();
-		break;
-	}
 	default:
 		return drv_QLayoutItem(_p,funcid,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12);
 	}
@@ -19436,70 +19318,66 @@ int drv_QAbstractAnimation(void *_p, int funcid, void* p1,void* p2,void* p3,void
 		break;
 	}
 	case 194111: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 194112: {
 		*(void**)p1 = pThis->group();
 		break;
 	}
-	case 194113: {
+	case 194112: {
 		*(int*)p1 = pThis->loopCount();
 		break;
 	}
-	case 194114: {
+	case 194113: {
 		pThis->pause();
 		break;
 	}
-	case 194115: {
+	case 194114: {
 		pThis->resume();
 		break;
 	}
-	case 194116: {
+	case 194115: {
 		pThis->setCurrentTime(*(int*)p1);
 		break;
 	}
-	case 194117: {
+	case 194116: {
 		pThis->setDirection(*(QAbstractAnimation::Direction*)p1);
 		break;
 	}
-	case 194118: {
+	case 194117: {
 		pThis->setLoopCount(*(int*)p1);
 		break;
 	}
-	case 194119: {
+	case 194118: {
 		pThis->setPaused(*(bool*)p1);
 		break;
 	}
-	case 194120: {
+	case 194119: {
 		pThis->start();
 		break;
 	}
-	case 194121: {
+	case 194120: {
 		pThis->start(*(QAbstractAnimation::DeletionPolicy*)p1);
 		break;
 	}
-	case 194122: {
+	case 194121: {
 		*(QAbstractAnimation::State*)p1 = pThis->state();
 		break;
 	}
-	case 194123: {
+	case 194122: {
 		pThis->stop();
 		break;
 	}
-	case 194124: {
+	case 194123: {
 		*(int*)p1 = pThis->totalDuration();
 		break;
 	}
-	case 194125: {
+	case 194124: {
 		pThis->updateCurrentTime(*(int*)p1);
 		break;
 	}
-	case 194126: {
+	case 194125: {
 		pThis->updateDirection(*(QAbstractAnimation::Direction*)p1);
 		break;
 	}
-	case 194127: {
+	case 194126: {
 		pThis->updateState(*(QAbstractAnimation::State*)p1,*(QAbstractAnimation::State*)p2);
 		break;
 	}
@@ -19578,146 +19456,102 @@ int drv_QAbstractButton(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	}
 	case 195113: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 195114: {
 		pThis->checkStateSet();
 		break;
 	}
-	case 195115: {
+	case 195114: {
 		pThis->click();
 		break;
 	}
-	case 195116: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 195117: {
-		pThis->focusInEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 195118: {
-		pThis->focusOutEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 195119: {
+	case 195115: {
 		*(void**)p1 = pThis->group();
 		break;
 	}
-	case 195120: {
+	case 195116: {
 		if(p1==0)return -2;
 		*(bool*)p2 = pThis->hitButton(*(QPoint*)(p1));
 		break;
 	}
-	case 195121: {
+	case 195117: {
 		*(void**)p1 = new QIcon(pThis->icon());
 		break;
 	}
-	case 195122: {
+	case 195118: {
 		*(void**)p1 = new QSize(pThis->iconSize());
 		break;
 	}
-	case 195123: {
+	case 195119: {
 		*(bool*)p1 = pThis->isCheckable();
 		break;
 	}
-	case 195124: {
+	case 195120: {
 		*(bool*)p1 = pThis->isChecked();
 		break;
 	}
-	case 195125: {
+	case 195121: {
 		*(bool*)p1 = pThis->isDown();
 		break;
 	}
-	case 195126: {
-		pThis->keyPressEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 195127: {
-		pThis->keyReleaseEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 195128: {
-		pThis->mouseMoveEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 195129: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 195130: {
-		pThis->mouseReleaseEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 195131: {
+	case 195122: {
 		pThis->nextCheckState();
 		break;
 	}
-	case 195132: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 195133: {
+	case 195123: {
 		pThis->setAutoExclusive(*(bool*)p1);
 		break;
 	}
-	case 195134: {
+	case 195124: {
 		pThis->setAutoRepeat(*(bool*)p1);
 		break;
 	}
-	case 195135: {
+	case 195125: {
 		pThis->setAutoRepeatDelay(*(int*)p1);
 		break;
 	}
-	case 195136: {
+	case 195126: {
 		pThis->setAutoRepeatInterval(*(int*)p1);
 		break;
 	}
-	case 195137: {
+	case 195127: {
 		pThis->setCheckable(*(bool*)p1);
 		break;
 	}
-	case 195138: {
+	case 195128: {
 		pThis->setChecked(*(bool*)p1);
 		break;
 	}
-	case 195139: {
+	case 195129: {
 		pThis->setDown(*(bool*)p1);
 		break;
 	}
-	case 195140: {
+	case 195130: {
 		if(p1==0)return -2;
 		pThis->setIcon(*(QIcon*)(p1));
 		break;
 	}
-	case 195141: {
+	case 195131: {
 		if(p1==0)return -2;
 		pThis->setIconSize(*(QSize*)(p1));
 		break;
 	}
-	case 195142: {
+	case 195132: {
 		if(p1==0)return -2;
 		pThis->setShortcut(*(QKeySequence*)(p1));
 		break;
 	}
-	case 195143: {
+	case 195133: {
 		pThis->setText(drvGetStringHead(p1));
 		break;
 	}
-	case 195144: {
+	case 195134: {
 		*(void**)p1 = new QKeySequence(pThis->shortcut());
 		break;
 	}
-	case 195145: {
+	case 195135: {
 		drvSetString(p1,pThis->text());
 		break;
 	}
-	case 195146: {
-		pThis->timerEvent((QTimerEvent*)(p1));
-		break;
-	}
-	case 195147: {
+	case 195136: {
 		pThis->toggle();
 		break;
 	}
@@ -20229,465 +20063,393 @@ int drv_QAbstractItemView(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 		break;
 	}
 	case 198124: {
-		pThis->dragEnterEvent((QDragEnterEvent*)(p1));
-		break;
-	}
-	case 198125: {
-		pThis->dragLeaveEvent((QDragLeaveEvent*)(p1));
-		break;
-	}
-	case 198126: {
-		pThis->dragMoveEvent((QDragMoveEvent*)(p1));
-		break;
-	}
-	case 198127: {
-		pThis->dropEvent((QDropEvent*)(p1));
-		break;
-	}
-	case 198128: {
 		*(QAbstractItemView::DropIndicatorPosition*)p1 = pThis->dropIndicatorPosition();
 		break;
 	}
-	case 198129: {
+	case 198125: {
 		if(p1==0)return -2;
 		pThis->edit(*(QModelIndex*)(p1));
 		break;
 	}
-	case 198130: {
+	case 198126: {
 		if(p1==0)return -2;
 		*(bool*)p4 = pThis->edit(*(QModelIndex*)(p1),*(QAbstractItemView::EditTrigger*)p2,(QEvent*)(p3));
 		break;
 	}
-	case 198131: {
+	case 198127: {
 		*(QFlags<QAbstractItemView::EditTrigger>*)p1 = pThis->editTriggers();
 		break;
 	}
-	case 198132: {
+	case 198128: {
 		pThis->editorDestroyed((QObject*)(p1));
 		break;
 	}
-	case 198133: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 198134: {
+	case 198129: {
 		pThis->executeDelayedItemsLayout();
 		break;
 	}
-	case 198135: {
-		pThis->focusInEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 198136: {
-		*(bool*)p2 = pThis->focusNextPrevChild(*(bool*)p1);
-		break;
-	}
-	case 198137: {
-		pThis->focusOutEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 198138: {
+	case 198130: {
 		*(bool*)p1 = pThis->hasAutoScroll();
 		break;
 	}
-	case 198139: {
+	case 198131: {
 		*(int*)p1 = pThis->horizontalOffset();
 		break;
 	}
-	case 198140: {
+	case 198132: {
 		*(QAbstractItemView::ScrollMode*)p1 = pThis->horizontalScrollMode();
 		break;
 	}
-	case 198141: {
+	case 198133: {
 		pThis->horizontalScrollbarAction(*(int*)p1);
 		break;
 	}
-	case 198142: {
+	case 198134: {
 		pThis->horizontalScrollbarValueChanged(*(int*)p1);
 		break;
 	}
-	case 198143: {
+	case 198135: {
 		*(int*)p1 = pThis->horizontalStepsPerItem();
 		break;
 	}
-	case 198144: {
+	case 198136: {
 		*(void**)p1 = new QSize(pThis->iconSize());
 		break;
 	}
-	case 198145: {
+	case 198137: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QModelIndex(pThis->indexAt(*(QPoint*)(p1)));
 		break;
 	}
-	case 198146: {
+	case 198138: {
 		if(p1==0)return -2;
 		*(void**)p2 = pThis->indexWidget(*(QModelIndex*)(p1));
 		break;
 	}
-	case 198147: {
-		pThis->inputMethodEvent((QInputMethodEvent*)(p1));
-		break;
-	}
-	case 198148: {
-		*(void**)p2 = new QVariant(pThis->inputMethodQuery(*(Qt::InputMethodQuery*)p1));
-		break;
-	}
-	case 198149: {
+	case 198139: {
 		if(p1==0)return -2;
 		*(bool*)p2 = pThis->isIndexHidden(*(QModelIndex*)(p1));
 		break;
 	}
-	case 198150: {
+	case 198140: {
 		*(void**)p1 = pThis->itemDelegate();
 		break;
 	}
-	case 198151: {
+	case 198141: {
 		if(p1==0)return -2;
 		*(void**)p2 = pThis->itemDelegate(*(QModelIndex*)(p1));
 		break;
 	}
-	case 198152: {
+	case 198142: {
 		*(void**)p2 = pThis->itemDelegateForColumn(*(int*)p1);
 		break;
 	}
-	case 198153: {
+	case 198143: {
 		*(void**)p2 = pThis->itemDelegateForRow(*(int*)p1);
 		break;
 	}
-	case 198154: {
-		pThis->keyPressEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 198155: {
+	case 198144: {
 		pThis->keyboardSearch(drvGetStringHead(p1));
 		break;
 	}
-	case 198156: {
+	case 198145: {
 		*(void**)p1 = pThis->model();
 		break;
 	}
-	case 198157: {
-		pThis->mouseDoubleClickEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 198158: {
-		pThis->mouseMoveEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 198159: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 198160: {
-		pThis->mouseReleaseEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 198161: {
+	case 198146: {
 		*(void**)p3 = new QModelIndex(pThis->moveCursor(*(QAbstractItemView::CursorAction*)p1,*(QFlags<Qt::KeyboardModifier>*)p2));
 		break;
 	}
-	case 198162: {
+	case 198147: {
 		if(p1==0)return -2;
 		pThis->openPersistentEditor(*(QModelIndex*)(p1));
 		break;
 	}
-	case 198163: {
+	case 198148: {
 		pThis->reset();
 		break;
 	}
-	case 198164: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 198165: {
+	case 198149: {
 		*(void**)p1 = new QModelIndex(pThis->rootIndex());
 		break;
 	}
-	case 198166: {
+	case 198150: {
 		if(p1==0)return -2;
 		pThis->rowsAboutToBeRemoved(*(QModelIndex*)(p1),*(int*)p2,*(int*)p3);
 		break;
 	}
-	case 198167: {
+	case 198151: {
 		if(p1==0)return -2;
 		pThis->rowsInserted(*(QModelIndex*)(p1),*(int*)p2,*(int*)p3);
 		break;
 	}
-	case 198168: {
+	case 198152: {
 		pThis->scheduleDelayedItemsLayout();
 		break;
 	}
-	case 198169: {
+	case 198153: {
 		pThis->scrollDirtyRegion(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 198170: {
+	case 198154: {
 		if(p1==0)return -2;
 		pThis->scrollTo(*(QModelIndex*)(p1));
 		break;
 	}
-	case 198171: {
+	case 198155: {
 		if(p1==0)return -2;
 		pThis->scrollTo(*(QModelIndex*)(p1),*(QAbstractItemView::ScrollHint*)p2);
 		break;
 	}
-	case 198172: {
+	case 198156: {
 		pThis->scrollToBottom();
 		break;
 	}
-	case 198173: {
+	case 198157: {
 		pThis->scrollToTop();
 		break;
 	}
-	case 198174: {
+	case 198158: {
 		pThis->selectAll();
 		break;
 	}
-	case 198175: {
+	case 198159: {
 		drvSetListPtr<QModelIndex>(p1,80000,pThis->selectedIndexes());
 		break;
 	}
-	case 198176: {
+	case 198160: {
 		*(QAbstractItemView::SelectionBehavior*)p1 = pThis->selectionBehavior();
 		break;
 	}
-	case 198177: {
+	case 198161: {
 		if(p1==0)return -2;
 	if(p2==0)return -2;
 		pThis->selectionChanged(*(QItemSelection*)(p1),*(QItemSelection*)(p2));
 		break;
 	}
-	case 198178: {
+	case 198162: {
 		if(p1==0)return -2;
 		*(QFlags<QItemSelectionModel::SelectionFlag>*)p3 = pThis->selectionCommand(*(QModelIndex*)(p1),(QEvent*)(p2));
 		break;
 	}
-	case 198179: {
+	case 198163: {
 		*(QAbstractItemView::SelectionMode*)p1 = pThis->selectionMode();
 		break;
 	}
-	case 198180: {
+	case 198164: {
 		*(void**)p1 = pThis->selectionModel();
 		break;
 	}
-	case 198181: {
+	case 198165: {
 		pThis->setAlternatingRowColors(*(bool*)p1);
 		break;
 	}
-	case 198182: {
+	case 198166: {
 		pThis->setAutoScroll(*(bool*)p1);
 		break;
 	}
-	case 198183: {
+	case 198167: {
 		pThis->setAutoScrollMargin(*(int*)p1);
 		break;
 	}
-	case 198184: {
+	case 198168: {
 		if(p1==0)return -2;
 		pThis->setCurrentIndex(*(QModelIndex*)(p1));
 		break;
 	}
-	case 198185: {
+	case 198169: {
 		pThis->setDefaultDropAction(*(Qt::DropAction*)p1);
 		break;
 	}
-	case 198186: {
+	case 198170: {
 		if(p1==0)return -2;
 		pThis->setDirtyRegion(*(QRegion*)(p1));
 		break;
 	}
-	case 198187: {
+	case 198171: {
 		pThis->setDragDropMode(*(QAbstractItemView::DragDropMode*)p1);
 		break;
 	}
-	case 198188: {
+	case 198172: {
 		pThis->setDragDropOverwriteMode(*(bool*)p1);
 		break;
 	}
-	case 198189: {
+	case 198173: {
 		pThis->setDragEnabled(*(bool*)p1);
 		break;
 	}
-	case 198190: {
+	case 198174: {
 		pThis->setDropIndicatorShown(*(bool*)p1);
 		break;
 	}
-	case 198191: {
+	case 198175: {
 		pThis->setEditTriggers(*(QFlags<QAbstractItemView::EditTrigger>*)p1);
 		break;
 	}
-	case 198192: {
+	case 198176: {
 		pThis->setHorizontalScrollMode(*(QAbstractItemView::ScrollMode*)p1);
 		break;
 	}
-	case 198193: {
+	case 198177: {
 		pThis->setHorizontalStepsPerItem(*(int*)p1);
 		break;
 	}
-	case 198194: {
+	case 198178: {
 		if(p1==0)return -2;
 		pThis->setIconSize(*(QSize*)(p1));
 		break;
 	}
-	case 198195: {
+	case 198179: {
 		if(p1==0)return -2;
 		pThis->setIndexWidget(*(QModelIndex*)(p1),(QWidget*)(p2));
 		break;
 	}
-	case 198196: {
+	case 198180: {
 		pThis->setItemDelegate((QAbstractItemDelegate*)(p1));
 		break;
 	}
-	case 198197: {
+	case 198181: {
 		pThis->setItemDelegateForColumn(*(int*)p1,(QAbstractItemDelegate*)(p2));
 		break;
 	}
-	case 198198: {
+	case 198182: {
 		pThis->setItemDelegateForRow(*(int*)p1,(QAbstractItemDelegate*)(p2));
 		break;
 	}
-	case 198199: {
+	case 198183: {
 		pThis->setModel((QAbstractItemModel*)(p1));
 		break;
 	}
-	case 198200: {
+	case 198184: {
 		if(p1==0)return -2;
 		pThis->setRootIndex(*(QModelIndex*)(p1));
 		break;
 	}
-	case 198201: {
+	case 198185: {
 		if(p1==0)return -2;
 		pThis->setSelection(*(QRect*)(p1),*(QFlags<QItemSelectionModel::SelectionFlag>*)p2);
 		break;
 	}
-	case 198202: {
+	case 198186: {
 		pThis->setSelectionBehavior(*(QAbstractItemView::SelectionBehavior*)p1);
 		break;
 	}
-	case 198203: {
+	case 198187: {
 		pThis->setSelectionMode(*(QAbstractItemView::SelectionMode*)p1);
 		break;
 	}
-	case 198204: {
+	case 198188: {
 		pThis->setSelectionModel((QItemSelectionModel*)(p1));
 		break;
 	}
-	case 198205: {
+	case 198189: {
 		pThis->setState(*(QAbstractItemView::State*)p1);
 		break;
 	}
-	case 198206: {
+	case 198190: {
 		pThis->setTabKeyNavigation(*(bool*)p1);
 		break;
 	}
-	case 198207: {
+	case 198191: {
 		pThis->setTextElideMode(*(Qt::TextElideMode*)p1);
 		break;
 	}
-	case 198208: {
+	case 198192: {
 		pThis->setVerticalScrollMode(*(QAbstractItemView::ScrollMode*)p1);
 		break;
 	}
-	case 198209: {
+	case 198193: {
 		pThis->setVerticalStepsPerItem(*(int*)p1);
 		break;
 	}
-	case 198210: {
+	case 198194: {
 		*(bool*)p1 = pThis->showDropIndicator();
 		break;
 	}
-	case 198211: {
+	case 198195: {
 		*(int*)p2 = pThis->sizeHintForColumn(*(int*)p1);
 		break;
 	}
-	case 198212: {
+	case 198196: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QSize(pThis->sizeHintForIndex(*(QModelIndex*)(p1)));
 		break;
 	}
-	case 198213: {
+	case 198197: {
 		*(int*)p2 = pThis->sizeHintForRow(*(int*)p1);
 		break;
 	}
-	case 198214: {
+	case 198198: {
 		pThis->startAutoScroll();
 		break;
 	}
-	case 198215: {
+	case 198199: {
 		pThis->startDrag(*(QFlags<Qt::DropAction>*)p1);
 		break;
 	}
-	case 198216: {
+	case 198200: {
 		*(QAbstractItemView::State*)p1 = pThis->state();
 		break;
 	}
-	case 198217: {
+	case 198201: {
 		pThis->stopAutoScroll();
 		break;
 	}
-	case 198218: {
+	case 198202: {
 		*(bool*)p1 = pThis->tabKeyNavigation();
 		break;
 	}
-	case 198219: {
+	case 198203: {
 		*(Qt::TextElideMode*)p1 = pThis->textElideMode();
 		break;
 	}
-	case 198220: {
-		pThis->timerEvent((QTimerEvent*)(p1));
-		break;
-	}
-	case 198221: {
+	case 198204: {
 		pThis->update();
 		break;
 	}
-	case 198222: {
+	case 198205: {
 		if(p1==0)return -2;
 		pThis->update(*(QModelIndex*)(p1));
 		break;
 	}
-	case 198223: {
+	case 198206: {
 		pThis->updateEditorData();
 		break;
 	}
-	case 198224: {
+	case 198207: {
 		pThis->updateEditorGeometries();
 		break;
 	}
-	case 198225: {
+	case 198208: {
 		pThis->updateGeometries();
 		break;
 	}
-	case 198226: {
+	case 198209: {
 		*(int*)p1 = pThis->verticalOffset();
 		break;
 	}
-	case 198227: {
+	case 198210: {
 		*(QAbstractItemView::ScrollMode*)p1 = pThis->verticalScrollMode();
 		break;
 	}
-	case 198228: {
+	case 198211: {
 		pThis->verticalScrollbarAction(*(int*)p1);
 		break;
 	}
-	case 198229: {
+	case 198212: {
 		pThis->verticalScrollbarValueChanged(*(int*)p1);
 		break;
 	}
-	case 198230: {
+	case 198213: {
 		*(int*)p1 = pThis->verticalStepsPerItem();
 		break;
 	}
-	case 198231: {
-		*(bool*)p2 = pThis->viewportEvent((QEvent*)(p1));
-		break;
-	}
-	case 198232: {
+	case 198214: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QRect(pThis->visualRect(*(QModelIndex*)(p1)));
 		break;
 	}
-	case 198233: {
+	case 198215: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QRegion(pThis->visualRegionForSelection(*(QItemSelection*)(p1)));
 		break;
@@ -20708,16 +20470,7 @@ int drv_QAbstractListModel(void *_p, int funcid, void* p1,void* p2,void* p3,void
 		break;
 	} 
 	case 199102: {
-		if(p5==0)return -2;
-		*(bool*)p6 = pThis->dropMimeData((QMimeData*)(p1),*(Qt::DropAction*)p2,*(int*)p3,*(int*)p4,*(QModelIndex*)(p5));
-		break;
-	}
-	case 199103: {
 		*(void**)p2 = new QModelIndex(pThis->index(*(int*)p1));
-		break;
-	}
-	case 199104: {
-		*(void**)p4 = new QModelIndex(pThis->index(*(int*)p1,*(int*)p2,p3==0?QModelIndex():*(QModelIndex*)(p3)));
 		break;
 	}
 	default:
@@ -20812,73 +20565,30 @@ int drv_QAbstractProxyModel(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 	} 
 	case 201102: {
 		if(p1==0)return -2;
-		*(void**)p2 = new QVariant(pThis->data(*(QModelIndex*)(p1)));
+		*(void**)p2 = new QModelIndex(pThis->mapFromSource(*(QModelIndex*)(p1)));
 		break;
 	}
 	case 201103: {
 		if(p1==0)return -2;
-		*(void**)p3 = new QVariant(pThis->data(*(QModelIndex*)(p1),*(int*)p2));
+		*(void**)p2 = new QItemSelection(pThis->mapSelectionFromSource(*(QItemSelection*)(p1)));
 		break;
 	}
 	case 201104: {
 		if(p1==0)return -2;
-		*(QFlags<Qt::ItemFlag>*)p2 = pThis->flags(*(QModelIndex*)(p1));
-		break;
-	}
-	case 201105: {
-		*(void**)p4 = new QVariant(pThis->headerData(*(int*)p1,*(Qt::Orientation*)p2,*(int*)p3));
-		break;
-	}
-	case 201106: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QIntVariantMap(pThis->itemData(*(QModelIndex*)(p1)));
-		break;
-	}
-	case 201107: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QModelIndex(pThis->mapFromSource(*(QModelIndex*)(p1)));
-		break;
-	}
-	case 201108: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QItemSelection(pThis->mapSelectionFromSource(*(QItemSelection*)(p1)));
-		break;
-	}
-	case 201109: {
-		if(p1==0)return -2;
 		*(void**)p2 = new QItemSelection(pThis->mapSelectionToSource(*(QItemSelection*)(p1)));
 		break;
 	}
-	case 201110: {
+	case 201105: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QModelIndex(pThis->mapToSource(*(QModelIndex*)(p1)));
 		break;
 	}
-	case 201111: {
-		pThis->revert();
-		break;
-	}
-	case 201112: {
-		if(p1==0)return -2;
-	if(p2==0)return -2;
-		*(bool*)p4 = pThis->setData(*(QModelIndex*)(p1),*(QVariant*)(p2),*(int*)p3);
-		break;
-	}
-	case 201113: {
-		if(p3==0)return -2;
-		*(bool*)p5 = pThis->setHeaderData(*(int*)p1,*(Qt::Orientation*)p2,*(QVariant*)(p3),*(int*)p4);
-		break;
-	}
-	case 201114: {
+	case 201106: {
 		pThis->setSourceModel((QAbstractItemModel*)(p1));
 		break;
 	}
-	case 201115: {
+	case 201107: {
 		*(void**)p1 = pThis->sourceModel();
-		break;
-	}
-	case 201116: {
-		*(bool*)p1 = pThis->submit();
 		break;
 	}
 	default:
@@ -20909,144 +20619,80 @@ int drv_QAbstractScrollArea(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 		break;
 	}
 	case 202105: {
-		pThis->contextMenuEvent((QContextMenuEvent*)(p1));
-		break;
-	}
-	case 202106: {
 		*(void**)p1 = pThis->cornerWidget();
 		break;
 	}
-	case 202107: {
-		pThis->dragEnterEvent((QDragEnterEvent*)(p1));
-		break;
-	}
-	case 202108: {
-		pThis->dragLeaveEvent((QDragLeaveEvent*)(p1));
-		break;
-	}
-	case 202109: {
-		pThis->dragMoveEvent((QDragMoveEvent*)(p1));
-		break;
-	}
-	case 202110: {
-		pThis->dropEvent((QDropEvent*)(p1));
-		break;
-	}
-	case 202111: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 202112: {
+	case 202106: {
 		*(void**)p1 = pThis->horizontalScrollBar();
 		break;
 	}
-	case 202113: {
+	case 202107: {
 		*(Qt::ScrollBarPolicy*)p1 = pThis->horizontalScrollBarPolicy();
 		break;
 	}
-	case 202114: {
-		pThis->keyPressEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 202115: {
+	case 202108: {
 		*(void**)p1 = new QSize(pThis->maximumViewportSize());
 		break;
 	}
-	case 202116: {
-		*(void**)p1 = new QSize(pThis->minimumSizeHint());
-		break;
-	}
-	case 202117: {
-		pThis->mouseDoubleClickEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 202118: {
-		pThis->mouseMoveEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 202119: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 202120: {
-		pThis->mouseReleaseEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 202121: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 202122: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 202123: {
+	case 202109: {
 		drvSetListObj<QWidget*>(p2,397000,pThis->scrollBarWidgets(*(QFlags<Qt::AlignmentFlag>*)p1));
 		break;
 	}
-	case 202124: {
+	case 202110: {
 		pThis->scrollContentsBy(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 202125: {
+	case 202111: {
 		pThis->setCornerWidget((QWidget*)(p1));
 		break;
 	}
-	case 202126: {
+	case 202112: {
 		pThis->setHorizontalScrollBar((QScrollBar*)(p1));
 		break;
 	}
-	case 202127: {
+	case 202113: {
 		pThis->setHorizontalScrollBarPolicy(*(Qt::ScrollBarPolicy*)p1);
 		break;
 	}
-	case 202128: {
+	case 202114: {
 		pThis->setVerticalScrollBar((QScrollBar*)(p1));
 		break;
 	}
-	case 202129: {
+	case 202115: {
 		pThis->setVerticalScrollBarPolicy(*(Qt::ScrollBarPolicy*)p1);
 		break;
 	}
-	case 202130: {
+	case 202116: {
 		pThis->setViewport((QWidget*)(p1));
 		break;
 	}
-	case 202131: {
+	case 202117: {
 		if(p1==0)return -2;
 		pThis->setViewportMargins(*(QMargins*)(p1));
 		break;
 	}
-	case 202132: {
+	case 202118: {
 		pThis->setViewportMargins(*(int*)p1,*(int*)p2,*(int*)p3,*(int*)p4);
 		break;
 	}
-	case 202133: {
+	case 202119: {
 		pThis->setupViewport((QWidget*)(p1));
 		break;
 	}
-	case 202134: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 202135: {
+	case 202120: {
 		*(void**)p1 = pThis->verticalScrollBar();
 		break;
 	}
-	case 202136: {
+	case 202121: {
 		*(Qt::ScrollBarPolicy*)p1 = pThis->verticalScrollBarPolicy();
 		break;
 	}
-	case 202137: {
+	case 202122: {
 		*(void**)p1 = pThis->viewport();
 		break;
 	}
-	case 202138: {
+	case 202123: {
 		*(bool*)p2 = pThis->viewportEvent((QEvent*)(p1));
-		break;
-	}
-	case 202139: {
-		pThis->wheelEvent((QWheelEvent*)(p1));
 		break;
 	}
 	default:
@@ -21115,131 +20761,111 @@ int drv_QAbstractSlider(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	}
 	case 203110: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 203111: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 203112: {
 		*(bool*)p1 = pThis->hasTracking();
 		break;
 	}
-	case 203113: {
+	case 203111: {
 		*(bool*)p1 = pThis->invertedAppearance();
 		break;
 	}
-	case 203114: {
+	case 203112: {
 		*(bool*)p1 = pThis->invertedControls();
 		break;
 	}
-	case 203115: {
+	case 203113: {
 		*(bool*)p1 = pThis->isSliderDown();
 		break;
 	}
-	case 203116: {
-		pThis->keyPressEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 203117: {
+	case 203114: {
 		*(int*)p1 = pThis->maximum();
 		break;
 	}
-	case 203118: {
+	case 203115: {
 		*(int*)p1 = pThis->minimum();
 		break;
 	}
-	case 203119: {
+	case 203116: {
 		*(Qt::Orientation*)p1 = pThis->orientation();
 		break;
 	}
-	case 203120: {
+	case 203117: {
 		*(int*)p1 = pThis->pageStep();
 		break;
 	}
-	case 203121: {
+	case 203118: {
 		*(QAbstractSlider::SliderAction*)p1 = pThis->repeatAction();
 		break;
 	}
-	case 203122: {
+	case 203119: {
 		pThis->setInvertedAppearance(*(bool*)p1);
 		break;
 	}
-	case 203123: {
+	case 203120: {
 		pThis->setInvertedControls(*(bool*)p1);
 		break;
 	}
-	case 203124: {
+	case 203121: {
 		pThis->setMaximum(*(int*)p1);
 		break;
 	}
-	case 203125: {
+	case 203122: {
 		pThis->setMinimum(*(int*)p1);
 		break;
 	}
-	case 203126: {
+	case 203123: {
 		pThis->setOrientation(*(Qt::Orientation*)p1);
 		break;
 	}
-	case 203127: {
+	case 203124: {
 		pThis->setPageStep(*(int*)p1);
 		break;
 	}
-	case 203128: {
+	case 203125: {
 		pThis->setRange(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 203129: {
+	case 203126: {
 		pThis->setRepeatAction(*(QAbstractSlider::SliderAction*)p1,*(int*)p2,*(int*)p3);
 		break;
 	}
-	case 203130: {
+	case 203127: {
 		pThis->setSingleStep(*(int*)p1);
 		break;
 	}
-	case 203131: {
+	case 203128: {
 		pThis->setSliderDown(*(bool*)p1);
 		break;
 	}
-	case 203132: {
+	case 203129: {
 		pThis->setSliderPosition(*(int*)p1);
 		break;
 	}
-	case 203133: {
+	case 203130: {
 		pThis->setTracking(*(bool*)p1);
 		break;
 	}
-	case 203134: {
+	case 203131: {
 		pThis->setValue(*(int*)p1);
 		break;
 	}
-	case 203135: {
+	case 203132: {
 		*(int*)p1 = pThis->singleStep();
 		break;
 	}
-	case 203136: {
+	case 203133: {
 		pThis->sliderChange(*(QAbstractSlider::SliderChange*)p1);
 		break;
 	}
-	case 203137: {
+	case 203134: {
 		*(int*)p1 = pThis->sliderPosition();
 		break;
 	}
-	case 203138: {
-		pThis->timerEvent((QTimerEvent*)(p1));
-		break;
-	}
-	case 203139: {
+	case 203135: {
 		pThis->triggerAction(*(QAbstractSlider::SliderAction*)p1);
 		break;
 	}
-	case 203140: {
+	case 203136: {
 		*(int*)p1 = pThis->value();
-		break;
-	}
-	case 203141: {
-		pThis->wheelEvent((QWheelEvent*)(p1));
 		break;
 	}
 	default:
@@ -21281,202 +20907,122 @@ int drv_QAbstractSpinBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 		break;
 	}
 	case 204107: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 204108: {
 		pThis->clear();
 		break;
 	}
-	case 204109: {
-		pThis->closeEvent((QCloseEvent*)(p1));
-		break;
-	}
-	case 204110: {
-		pThis->contextMenuEvent((QContextMenuEvent*)(p1));
-		break;
-	}
-	case 204111: {
+	case 204108: {
 		*(QAbstractSpinBox::CorrectionMode*)p1 = pThis->correctionMode();
 		break;
 	}
-	case 204112: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 204113: {
+	case 204109: {
 		QString _p1=drvGetStringRef(p1);
 		pThis->fixup(_p1);
 		drvSetStringRef(p1,_p1);
 		break;
 	}
-	case 204114: {
-		pThis->focusInEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 204115: {
-		pThis->focusOutEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 204116: {
+	case 204110: {
 		*(bool*)p1 = pThis->hasAcceptableInput();
 		break;
 	}
-	case 204117: {
+	case 204111: {
 		*(bool*)p1 = pThis->hasFrame();
 		break;
 	}
-	case 204118: {
-		pThis->hideEvent((QHideEvent*)(p1));
-		break;
-	}
-	case 204119: {
-		*(void**)p2 = new QVariant(pThis->inputMethodQuery(*(Qt::InputMethodQuery*)p1));
-		break;
-	}
-	case 204120: {
+	case 204112: {
 		pThis->interpretText();
 		break;
 	}
-	case 204121: {
+	case 204113: {
 		*(bool*)p1 = pThis->isAccelerated();
 		break;
 	}
-	case 204122: {
+	case 204114: {
 		*(bool*)p1 = pThis->isReadOnly();
 		break;
 	}
-	case 204123: {
-		pThis->keyPressEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 204124: {
-		pThis->keyReleaseEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 204125: {
+	case 204115: {
 		*(bool*)p1 = pThis->keyboardTracking();
 		break;
 	}
-	case 204126: {
+	case 204116: {
 		*(void**)p1 = pThis->lineEdit();
 		break;
 	}
-	case 204127: {
-		*(void**)p1 = new QSize(pThis->minimumSizeHint());
-		break;
-	}
-	case 204128: {
-		pThis->mouseMoveEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 204129: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 204130: {
-		pThis->mouseReleaseEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 204131: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 204132: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 204133: {
+	case 204117: {
 		pThis->selectAll();
 		break;
 	}
-	case 204134: {
+	case 204118: {
 		pThis->setAccelerated(*(bool*)p1);
 		break;
 	}
-	case 204135: {
+	case 204119: {
 		pThis->setAlignment(*(QFlags<Qt::AlignmentFlag>*)p1);
 		break;
 	}
-	case 204136: {
+	case 204120: {
 		pThis->setButtonSymbols(*(QAbstractSpinBox::ButtonSymbols*)p1);
 		break;
 	}
-	case 204137: {
+	case 204121: {
 		pThis->setCorrectionMode(*(QAbstractSpinBox::CorrectionMode*)p1);
 		break;
 	}
-	case 204138: {
+	case 204122: {
 		pThis->setFrame(*(bool*)p1);
 		break;
 	}
-	case 204139: {
+	case 204123: {
 		pThis->setKeyboardTracking(*(bool*)p1);
 		break;
 	}
-	case 204140: {
+	case 204124: {
 		pThis->setLineEdit((QLineEdit*)(p1));
 		break;
 	}
-	case 204141: {
+	case 204125: {
 		pThis->setReadOnly(*(bool*)p1);
 		break;
 	}
-	case 204142: {
+	case 204126: {
 		pThis->setSpecialValueText(drvGetStringHead(p1));
 		break;
 	}
-	case 204143: {
+	case 204127: {
 		pThis->setWrapping(*(bool*)p1);
 		break;
 	}
-	case 204144: {
-		pThis->showEvent((QShowEvent*)(p1));
-		break;
-	}
-	case 204145: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 204146: {
+	case 204128: {
 		drvSetString(p1,pThis->specialValueText());
 		break;
 	}
-	case 204147: {
+	case 204129: {
 		pThis->stepBy(*(int*)p1);
 		break;
 	}
-	case 204148: {
+	case 204130: {
 		pThis->stepDown();
 		break;
 	}
-	case 204149: {
+	case 204131: {
 		*(QFlags<QAbstractSpinBox::StepEnabledFlag>*)p1 = pThis->stepEnabled();
 		break;
 	}
-	case 204150: {
+	case 204132: {
 		pThis->stepUp();
 		break;
 	}
-	case 204151: {
+	case 204133: {
 		drvSetString(p1,pThis->text());
 		break;
 	}
-	case 204152: {
-		pThis->timerEvent((QTimerEvent*)(p1));
-		break;
-	}
-	case 204153: {
+	case 204134: {
 		QString _p1=drvGetStringRef(p1);
 		*(QValidator::State*)p3 = pThis->validate(_p1,*(int*)p2);
 		drvSetStringRef(p1,_p1);
 		break;
 	}
-	case 204154: {
-		pThis->wheelEvent((QWheelEvent*)(p1));
-		break;
-	}
-	case 204155: {
+	case 204135: {
 		*(bool*)p1 = pThis->wrapping();
 		break;
 	}
@@ -21496,22 +21042,18 @@ int drv_QAbstractState(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	} 
 	case 205102: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 205103: {
 		*(void**)p1 = pThis->machine();
 		break;
 	}
-	case 205104: {
+	case 205103: {
 		pThis->onEntry((QEvent*)(p1));
 		break;
 	}
-	case 205105: {
+	case 205104: {
 		pThis->onExit((QEvent*)(p1));
 		break;
 	}
-	case 205106: {
+	case 205105: {
 		*(void**)p1 = pThis->parentState();
 		break;
 	}
@@ -21530,15 +21072,6 @@ int drv_QAbstractTableModel(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 		delete pThis;
 		break;
 	} 
-	case 206102: {
-		if(p5==0)return -2;
-		*(bool*)p6 = pThis->dropMimeData((QMimeData*)(p1),*(Qt::DropAction*)p2,*(int*)p3,*(int*)p4,*(QModelIndex*)(p5));
-		break;
-	}
-	case 206103: {
-		*(void**)p4 = new QModelIndex(pThis->index(*(int*)p1,*(int*)p2,p3==0?QModelIndex():*(QModelIndex*)(p3)));
-		break;
-	}
 	default:
 		return drv_QAbstractItemModel(_p,funcid,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12);
 	}
@@ -21696,42 +21229,38 @@ int drv_QAbstractTransition(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 		break;
 	}
 	case 208104: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 208105: {
 		*(bool*)p2 = pThis->eventTest((QEvent*)(p1));
 		break;
 	}
-	case 208106: {
+	case 208105: {
 		*(void**)p1 = pThis->machine();
 		break;
 	}
-	case 208107: {
+	case 208106: {
 		pThis->onTransition((QEvent*)(p1));
 		break;
 	}
-	case 208108: {
+	case 208107: {
 		pThis->removeAnimation((QAbstractAnimation*)(p1));
 		break;
 	}
-	case 208109: {
+	case 208108: {
 		pThis->setTargetState((QAbstractState*)(p1));
 		break;
 	}
-	case 208110: {
+	case 208109: {
 		pThis->setTargetStates(drvGetObjectArrayHeadT<QAbstractState*>(p1));
 		break;
 	}
-	case 208111: {
+	case 208110: {
 		*(void**)p1 = pThis->sourceState();
 		break;
 	}
-	case 208112: {
+	case 208111: {
 		*(void**)p1 = pThis->targetState();
 		break;
 	}
-	case 208113: {
+	case 208112: {
 		drvSetListObj<QAbstractState*>(p1,205000,pThis->targetStates());
 		break;
 	}
@@ -21823,206 +21352,202 @@ int drv_QAction(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 209116: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 209117: {
 		*(void**)p1 = new QFont(pThis->font());
 		break;
 	}
-	case 209118: {
+	case 209117: {
 		pThis->hover();
 		break;
 	}
-	case 209119: {
+	case 209118: {
 		*(void**)p1 = new QIcon(pThis->icon());
 		break;
 	}
-	case 209120: {
+	case 209119: {
 		drvSetString(p1,pThis->iconText());
 		break;
 	}
-	case 209121: {
+	case 209120: {
 		*(bool*)p1 = pThis->isCheckable();
 		break;
 	}
-	case 209122: {
+	case 209121: {
 		*(bool*)p1 = pThis->isChecked();
 		break;
 	}
-	case 209123: {
+	case 209122: {
 		*(bool*)p1 = pThis->isEnabled();
 		break;
 	}
-	case 209124: {
+	case 209123: {
 		*(bool*)p1 = pThis->isIconVisibleInMenu();
 		break;
 	}
-	case 209125: {
+	case 209124: {
 		*(bool*)p1 = pThis->isSeparator();
 		break;
 	}
-	case 209126: {
+	case 209125: {
 		*(bool*)p1 = pThis->isVisible();
 		break;
 	}
-	case 209127: {
+	case 209126: {
 		*(void**)p1 = pThis->menu();
 		break;
 	}
-	case 209128: {
+	case 209127: {
 		*(QAction::MenuRole*)p1 = pThis->menuRole();
 		break;
 	}
-	case 209129: {
+	case 209128: {
 		*(void**)p1 = pThis->parentWidget();
 		break;
 	}
-	case 209130: {
+	case 209129: {
 		*(QAction::Priority*)p1 = pThis->priority();
 		break;
 	}
-	case 209131: {
+	case 209130: {
 		pThis->setActionGroup((QActionGroup*)(p1));
 		break;
 	}
-	case 209132: {
+	case 209131: {
 		pThis->setAutoRepeat(*(bool*)p1);
 		break;
 	}
-	case 209133: {
+	case 209132: {
 		pThis->setCheckable(*(bool*)p1);
 		break;
 	}
-	case 209134: {
+	case 209133: {
 		pThis->setChecked(*(bool*)p1);
 		break;
 	}
-	case 209135: {
+	case 209134: {
 		if(p1==0)return -2;
 		pThis->setData(*(QVariant*)(p1));
 		break;
 	}
-	case 209136: {
+	case 209135: {
 		pThis->setDisabled(*(bool*)p1);
 		break;
 	}
-	case 209137: {
+	case 209136: {
 		pThis->setEnabled(*(bool*)p1);
 		break;
 	}
-	case 209138: {
+	case 209137: {
 		if(p1==0)return -2;
 		pThis->setFont(*(QFont*)(p1));
 		break;
 	}
-	case 209139: {
+	case 209138: {
 		if(p1==0)return -2;
 		pThis->setIcon(*(QIcon*)(p1));
 		break;
 	}
-	case 209140: {
+	case 209139: {
 		pThis->setIconText(drvGetStringHead(p1));
 		break;
 	}
-	case 209141: {
+	case 209140: {
 		pThis->setIconVisibleInMenu(*(bool*)p1);
 		break;
 	}
-	case 209142: {
+	case 209141: {
 		pThis->setMenu((QMenu*)(p1));
 		break;
 	}
-	case 209143: {
+	case 209142: {
 		pThis->setMenuRole(*(QAction::MenuRole*)p1);
 		break;
 	}
-	case 209144: {
+	case 209143: {
 		pThis->setPriority(*(QAction::Priority*)p1);
 		break;
 	}
-	case 209145: {
+	case 209144: {
 		pThis->setSeparator(*(bool*)p1);
 		break;
 	}
-	case 209146: {
+	case 209145: {
 		if(p1==0)return -2;
 		pThis->setShortcut(*(QKeySequence*)(p1));
 		break;
 	}
-	case 209147: {
+	case 209146: {
 		pThis->setShortcutContext(*(Qt::ShortcutContext*)p1);
 		break;
 	}
-	case 209148: {
+	case 209147: {
 		pThis->setShortcuts(*(QKeySequence::StandardKey*)p1);
 		break;
 	}
-	case 209149: {
+	case 209148: {
 		pThis->setShortcuts(drvGetNoObjectArrayHeadT<QKeySequence>(p1));
 		break;
 	}
-	case 209150: {
+	case 209149: {
 		pThis->setStatusTip(drvGetStringHead(p1));
 		break;
 	}
-	case 209151: {
+	case 209150: {
 		pThis->setText(drvGetStringHead(p1));
 		break;
 	}
-	case 209152: {
+	case 209151: {
 		pThis->setToolTip(drvGetStringHead(p1));
 		break;
 	}
-	case 209153: {
+	case 209152: {
 		pThis->setVisible(*(bool*)p1);
 		break;
 	}
-	case 209154: {
+	case 209153: {
 		pThis->setWhatsThis(drvGetStringHead(p1));
 		break;
 	}
-	case 209155: {
+	case 209154: {
 		*(void**)p1 = new QKeySequence(pThis->shortcut());
 		break;
 	}
-	case 209156: {
+	case 209155: {
 		*(Qt::ShortcutContext*)p1 = pThis->shortcutContext();
 		break;
 	}
-	case 209157: {
+	case 209156: {
 		drvSetListPtr<QKeySequence>(p1,66000,pThis->shortcuts());
 		break;
 	}
-	case 209158: {
+	case 209157: {
 		*(bool*)p1 = pThis->showStatusText();
 		break;
 	}
-	case 209159: {
+	case 209158: {
 		*(bool*)p2 = pThis->showStatusText((QWidget*)(p1));
 		break;
 	}
-	case 209160: {
+	case 209159: {
 		drvSetString(p1,pThis->statusTip());
 		break;
 	}
-	case 209161: {
+	case 209160: {
 		drvSetString(p1,pThis->text());
 		break;
 	}
-	case 209162: {
+	case 209161: {
 		pThis->toggle();
 		break;
 	}
-	case 209163: {
+	case 209162: {
 		drvSetString(p1,pThis->toolTip());
 		break;
 	}
-	case 209164: {
+	case 209163: {
 		pThis->trigger();
 		break;
 	}
-	case 209165: {
+	case 209164: {
 		drvSetString(p1,pThis->whatsThis());
 		break;
 	}
@@ -22151,22 +21676,18 @@ int drv_QAnimationGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	}
 	case 211106: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 211107: {
 		*(int*)p2 = pThis->indexOfAnimation((QAbstractAnimation*)(p1));
 		break;
 	}
-	case 211108: {
+	case 211107: {
 		pThis->insertAnimation(*(int*)p1,(QAbstractAnimation*)(p2));
 		break;
 	}
-	case 211109: {
+	case 211108: {
 		pThis->removeAnimation((QAbstractAnimation*)(p1));
 		break;
 	}
-	case 211110: {
+	case 211109: {
 		*(void**)p2 = pThis->takeAnimation(*(int*)p1);
 		break;
 	}
@@ -22190,152 +21711,99 @@ int drv_QBoxLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	}
 	case 212103: {
-		pThis->addItem((QLayoutItem*)(p1));
-		break;
-	}
-	case 212104: {
 		pThis->addLayout((QLayout*)(p1));
 		break;
 	}
-	case 212105: {
+	case 212104: {
 		pThis->addLayout((QLayout*)(p1),*(int*)p2);
 		break;
 	}
-	case 212106: {
+	case 212105: {
 		pThis->addSpacerItem((QSpacerItem*)(p1));
 		break;
 	}
-	case 212107: {
+	case 212106: {
 		pThis->addSpacing(*(int*)p1);
 		break;
 	}
-	case 212108: {
+	case 212107: {
 		pThis->addStretch();
 		break;
 	}
-	case 212109: {
+	case 212108: {
 		pThis->addStretch(*(int*)p1);
 		break;
 	}
-	case 212110: {
+	case 212109: {
 		pThis->addStrut(*(int*)p1);
 		break;
 	}
-	case 212111: {
+	case 212110: {
 		pThis->addWidget((QWidget*)(p1));
 		break;
 	}
-	case 212112: {
+	case 212111: {
 		pThis->addWidget((QWidget*)(p1),*(int*)p2,*(QFlags<Qt::AlignmentFlag>*)p3);
 		break;
 	}
-	case 212113: {
-		*(int*)p1 = pThis->count();
-		break;
-	}
-	case 212114: {
+	case 212112: {
 		*(QBoxLayout::Direction*)p1 = pThis->direction();
 		break;
 	}
-	case 212115: {
-		*(QFlags<Qt::Orientation>*)p1 = pThis->expandingDirections();
-		break;
-	}
-	case 212116: {
-		*(bool*)p1 = pThis->hasHeightForWidth();
-		break;
-	}
-	case 212117: {
-		*(int*)p2 = pThis->heightForWidth(*(int*)p1);
-		break;
-	}
-	case 212118: {
+	case 212113: {
 		pThis->insertItem(*(int*)p1,(QLayoutItem*)(p2));
 		break;
 	}
-	case 212119: {
+	case 212114: {
 		pThis->insertLayout(*(int*)p1,(QLayout*)(p2),*(int*)p3);
 		break;
 	}
-	case 212120: {
+	case 212115: {
 		pThis->insertSpacerItem(*(int*)p1,(QSpacerItem*)(p2));
 		break;
 	}
-	case 212121: {
+	case 212116: {
 		pThis->insertSpacing(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 212122: {
+	case 212117: {
 		pThis->insertStretch(*(int*)p1);
 		break;
 	}
-	case 212123: {
+	case 212118: {
 		pThis->insertStretch(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 212124: {
+	case 212119: {
 		pThis->insertWidget(*(int*)p1,(QWidget*)(p2),*(int*)p3,*(QFlags<Qt::AlignmentFlag>*)p4);
 		break;
 	}
-	case 212125: {
-		pThis->invalidate();
-		break;
-	}
-	case 212126: {
-		*(void**)p2 = pThis->itemAt(*(int*)p1);
-		break;
-	}
-	case 212127: {
-		*(void**)p1 = new QSize(pThis->maximumSize());
-		break;
-	}
-	case 212128: {
-		*(int*)p2 = pThis->minimumHeightForWidth(*(int*)p1);
-		break;
-	}
-	case 212129: {
-		*(void**)p1 = new QSize(pThis->minimumSize());
-		break;
-	}
-	case 212130: {
+	case 212120: {
 		pThis->setDirection(*(QBoxLayout::Direction*)p1);
 		break;
 	}
-	case 212131: {
-		if(p1==0)return -2;
-		pThis->setGeometry(*(QRect*)(p1));
-		break;
-	}
-	case 212132: {
+	case 212121: {
 		pThis->setSpacing(*(int*)p1);
 		break;
 	}
-	case 212133: {
+	case 212122: {
 		pThis->setStretch(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 212134: {
+	case 212123: {
 		*(bool*)p3 = pThis->setStretchFactor((QLayout*)(p1),*(int*)p2);
 		break;
 	}
-	case 212135: {
+	case 212124: {
 		*(bool*)p3 = pThis->setStretchFactor((QWidget*)(p1),*(int*)p2);
 		break;
 	}
-	case 212136: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 212137: {
+	case 212125: {
 		*(int*)p1 = pThis->spacing();
 		break;
 	}
-	case 212138: {
+	case 212126: {
 		*(int*)p2 = pThis->stretch(*(int*)p1);
-		break;
-	}
-	case 212139: {
-		*(void**)p2 = pThis->takeAt(*(int*)p1);
 		break;
 	}
 	default:
@@ -22508,198 +21976,170 @@ int drv_QCalendarWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	}
 	case 214110: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 214111: {
-		*(bool*)p3 = pThis->eventFilter((QObject*)(p1),(QEvent*)(p2));
-		break;
-	}
-	case 214112: {
 		*(Qt::DayOfWeek*)p1 = pThis->firstDayOfWeek();
 		break;
 	}
-	case 214113: {
+	case 214111: {
 		*(void**)p1 = new QTextCharFormat(pThis->headerTextFormat());
 		break;
 	}
-	case 214114: {
+	case 214112: {
 		*(QCalendarWidget::HorizontalHeaderFormat*)p1 = pThis->horizontalHeaderFormat();
 		break;
 	}
-	case 214115: {
+	case 214113: {
 		*(bool*)p1 = pThis->isDateEditEnabled();
 		break;
 	}
-	case 214116: {
+	case 214114: {
 		*(bool*)p1 = pThis->isGridVisible();
 		break;
 	}
-	case 214117: {
+	case 214115: {
 		*(bool*)p1 = pThis->isNavigationBarVisible();
 		break;
 	}
-	case 214118: {
-		pThis->keyPressEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 214119: {
+	case 214116: {
 		*(void**)p1 = new QDate(pThis->maximumDate());
 		break;
 	}
-	case 214120: {
+	case 214117: {
 		*(void**)p1 = new QDate(pThis->minimumDate());
 		break;
 	}
-	case 214121: {
-		*(void**)p1 = new QSize(pThis->minimumSizeHint());
-		break;
-	}
-	case 214122: {
+	case 214118: {
 		*(int*)p1 = pThis->monthShown();
 		break;
 	}
-	case 214123: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 214124: {
+	case 214119: {
 		if(p2==0)return -2;
 	if(p3==0)return -2;
 		pThis->paintCell((QPainter*)(p1),*(QRect*)(p2),*(QDate*)(p3));
 		break;
 	}
-	case 214125: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 214126: {
+	case 214120: {
 		*(void**)p1 = new QDate(pThis->selectedDate());
 		break;
 	}
-	case 214127: {
+	case 214121: {
 		*(QCalendarWidget::SelectionMode*)p1 = pThis->selectionMode();
 		break;
 	}
-	case 214128: {
+	case 214122: {
 		pThis->setCurrentPage(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 214129: {
+	case 214123: {
 		pThis->setDateEditAcceptDelay(*(int*)p1);
 		break;
 	}
-	case 214130: {
+	case 214124: {
 		pThis->setDateEditEnabled(*(bool*)p1);
 		break;
 	}
-	case 214131: {
+	case 214125: {
 		if(p1==0)return -2;
 	if(p2==0)return -2;
 		pThis->setDateRange(*(QDate*)(p1),*(QDate*)(p2));
 		break;
 	}
-	case 214132: {
+	case 214126: {
 		if(p1==0)return -2;
 	if(p2==0)return -2;
 		pThis->setDateTextFormat(*(QDate*)(p1),*(QTextCharFormat*)(p2));
 		break;
 	}
-	case 214133: {
+	case 214127: {
 		pThis->setFirstDayOfWeek(*(Qt::DayOfWeek*)p1);
 		break;
 	}
-	case 214134: {
+	case 214128: {
 		pThis->setGridVisible(*(bool*)p1);
 		break;
 	}
-	case 214135: {
+	case 214129: {
 		if(p1==0)return -2;
 		pThis->setHeaderTextFormat(*(QTextCharFormat*)(p1));
 		break;
 	}
-	case 214136: {
+	case 214130: {
 		pThis->setHorizontalHeaderFormat(*(QCalendarWidget::HorizontalHeaderFormat*)p1);
 		break;
 	}
-	case 214137: {
+	case 214131: {
 		if(p1==0)return -2;
 		pThis->setMaximumDate(*(QDate*)(p1));
 		break;
 	}
-	case 214138: {
+	case 214132: {
 		if(p1==0)return -2;
 		pThis->setMinimumDate(*(QDate*)(p1));
 		break;
 	}
-	case 214139: {
+	case 214133: {
 		pThis->setNavigationBarVisible(*(bool*)p1);
 		break;
 	}
-	case 214140: {
+	case 214134: {
 		if(p1==0)return -2;
 		pThis->setSelectedDate(*(QDate*)(p1));
 		break;
 	}
-	case 214141: {
+	case 214135: {
 		pThis->setSelectionMode(*(QCalendarWidget::SelectionMode*)p1);
 		break;
 	}
-	case 214142: {
+	case 214136: {
 		pThis->setVerticalHeaderFormat(*(QCalendarWidget::VerticalHeaderFormat*)p1);
 		break;
 	}
-	case 214143: {
+	case 214137: {
 		if(p2==0)return -2;
 		pThis->setWeekdayTextFormat(*(Qt::DayOfWeek*)p1,*(QTextCharFormat*)(p2));
 		break;
 	}
-	case 214144: {
+	case 214138: {
 		pThis->showNextMonth();
 		break;
 	}
-	case 214145: {
+	case 214139: {
 		pThis->showNextYear();
 		break;
 	}
-	case 214146: {
+	case 214140: {
 		pThis->showPreviousMonth();
 		break;
 	}
-	case 214147: {
+	case 214141: {
 		pThis->showPreviousYear();
 		break;
 	}
-	case 214148: {
+	case 214142: {
 		pThis->showSelectedDate();
 		break;
 	}
-	case 214149: {
+	case 214143: {
 		pThis->showToday();
 		break;
 	}
-	case 214150: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 214151: {
+	case 214144: {
 		if(p1==0)return -2;
 		pThis->updateCell(*(QDate*)(p1));
 		break;
 	}
-	case 214152: {
+	case 214145: {
 		pThis->updateCells();
 		break;
 	}
-	case 214153: {
+	case 214146: {
 		*(QCalendarWidget::VerticalHeaderFormat*)p1 = pThis->verticalHeaderFormat();
 		break;
 	}
-	case 214154: {
+	case 214147: {
 		*(void**)p2 = new QTextCharFormat(pThis->weekdayTextFormat(*(Qt::DayOfWeek*)p1));
 		break;
 	}
-	case 214155: {
+	case 214148: {
 		*(int*)p1 = pThis->yearShown();
 		break;
 	}
@@ -22742,44 +22182,15 @@ int drv_QCheckBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 215107: {
-		pThis->checkStateSet();
-		break;
-	}
-	case 215108: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 215109: {
-		if(p1==0)return -2;
-		*(bool*)p2 = pThis->hitButton(*(QPoint*)(p1));
-		break;
-	}
-	case 215110: {
 		*(bool*)p1 = pThis->isTristate();
 		break;
 	}
-	case 215111: {
-		pThis->mouseMoveEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 215112: {
-		pThis->nextCheckState();
-		break;
-	}
-	case 215113: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 215114: {
+	case 215108: {
 		pThis->setCheckState(*(Qt::CheckState*)p1);
 		break;
 	}
-	case 215115: {
+	case 215109: {
 		pThis->setTristate(*(bool*)p1);
-		break;
-	}
-	case 215116: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
 		break;
 	}
 	default:
@@ -22830,104 +22241,100 @@ int drv_QClipboard(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	}
 	case 216108: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 216109: {
 		*(void**)p1 = new QImage(pThis->image());
 		break;
 	}
-	case 216110: {
+	case 216109: {
 		*(void**)p2 = new QImage(pThis->image(*(QClipboard::Mode*)p1));
 		break;
 	}
-	case 216111: {
+	case 216110: {
 		*(const void**)p1 = pThis->mimeData();
 		break;
 	}
-	case 216112: {
+	case 216111: {
 		*(const void**)p2 = pThis->mimeData(*(QClipboard::Mode*)p1);
 		break;
 	}
-	case 216113: {
+	case 216112: {
 		*(bool*)p1 = pThis->ownsClipboard();
 		break;
 	}
-	case 216114: {
+	case 216113: {
 		*(bool*)p1 = pThis->ownsFindBuffer();
 		break;
 	}
-	case 216115: {
+	case 216114: {
 		*(bool*)p1 = pThis->ownsSelection();
 		break;
 	}
-	case 216116: {
+	case 216115: {
 		*(void**)p1 = new QPixmap(pThis->pixmap());
 		break;
 	}
-	case 216117: {
+	case 216116: {
 		*(void**)p2 = new QPixmap(pThis->pixmap(*(QClipboard::Mode*)p1));
 		break;
 	}
-	case 216118: {
+	case 216117: {
 		if(p1==0)return -2;
 		pThis->setImage(*(QImage*)(p1));
 		break;
 	}
-	case 216119: {
+	case 216118: {
 		if(p1==0)return -2;
 		pThis->setImage(*(QImage*)(p1),*(QClipboard::Mode*)p2);
 		break;
 	}
-	case 216120: {
+	case 216119: {
 		pThis->setMimeData((QMimeData*)(p1));
 		break;
 	}
-	case 216121: {
+	case 216120: {
 		pThis->setMimeData((QMimeData*)(p1),*(QClipboard::Mode*)p2);
 		break;
 	}
-	case 216122: {
+	case 216121: {
 		if(p1==0)return -2;
 		pThis->setPixmap(*(QPixmap*)(p1));
 		break;
 	}
-	case 216123: {
+	case 216122: {
 		if(p1==0)return -2;
 		pThis->setPixmap(*(QPixmap*)(p1),*(QClipboard::Mode*)p2);
 		break;
 	}
-	case 216124: {
+	case 216123: {
 		pThis->setText(drvGetStringHead(p1));
 		break;
 	}
-	case 216125: {
+	case 216124: {
 		pThis->setText(drvGetStringHead(p1),*(QClipboard::Mode*)p2);
 		break;
 	}
-	case 216126: {
+	case 216125: {
 		*(bool*)p1 = pThis->supportsFindBuffer();
 		break;
 	}
-	case 216127: {
+	case 216126: {
 		*(bool*)p1 = pThis->supportsSelection();
 		break;
 	}
-	case 216128: {
+	case 216127: {
 		drvSetString(p1,pThis->text());
 		break;
 	}
-	case 216129: {
+	case 216128: {
 		drvSetString(p2,pThis->text(*(QClipboard::Mode*)p1));
 		break;
 	}
-	case 216130: {
+	case 216129: {
 		QString _p1=drvGetStringRef(p1);
 		drvSetString(p2,pThis->text(_p1));
 		drvSetStringRef(p1,_p1);
 		break;
 	}
-	case 216131: {
+	case 216130: {
 		QString _p1=drvGetStringRef(p1);
 		drvSetString(p3,pThis->text(_p1,*(QClipboard::Mode*)p2));
 		drvSetStringRef(p1,_p1);
@@ -22976,68 +22383,60 @@ int drv_QColorDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 217107: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 217108: {
 		*(void**)p1 = new QColor(pThis->currentColor());
 		break;
 	}
-	case 217109: {
+	case 217108: {
 		*(void**)p2 = new QColor(QColorDialog::customColor(*(int*)p1));
 		break;
 	}
-	case 217110: {
+	case 217109: {
 		*(int*)p1 = QColorDialog::customCount();
 		break;
 	}
-	case 217111: {
-		pThis->done(*(int*)p1);
-		break;
-	}
-	case 217112: {
+	case 217110: {
 		*(void**)p1 = new QColor(QColorDialog::getColor());
 		break;
 	}
-	case 217113: {
+	case 217111: {
 		*(void**)p3 = new QColor(QColorDialog::getColor(p1==0?QColor():*(QColor*)(p1),(QWidget*)(p2)));
 		break;
 	}
-	case 217114: {
+	case 217112: {
 		if(p1==0)return -2;
 		*(void**)p5 = new QColor(QColorDialog::getColor(*(QColor*)(p1),(QWidget*)(p2),drvGetStringHead(p3),*(QFlags<QColorDialog::ColorDialogOption>*)p4));
 		break;
 	}
-	case 217115: {
+	case 217113: {
 		*(unsigned int*)p1 = QColorDialog::getRgba();
 		break;
 	}
-	case 217116: {
+	case 217114: {
 		*(unsigned int*)p4 = QColorDialog::getRgba(*(unsigned int*)p1,*(bool**)p2,(QWidget*)(p3));
 		break;
 	}
-	case 217117: {
+	case 217115: {
 		pThis->open();
 		break;
 	}
-	case 217118: {
+	case 217116: {
 		pThis->open((QObject*)(p1),drvGet_const_char(p2));
 		break;
 	}
-	case 217119: {
+	case 217117: {
 		*(QFlags<QColorDialog::ColorDialogOption>*)p1 = pThis->options();
 		break;
 	}
-	case 217120: {
+	case 217118: {
 		*(void**)p1 = new QColor(pThis->selectedColor());
 		break;
 	}
-	case 217121: {
+	case 217119: {
 		if(p1==0)return -2;
 		pThis->setCurrentColor(*(QColor*)(p1));
 		break;
 	}
-	case 217122: {
+	case 217120: {
 		if(p2==0)return -2;
 #ifdef QTDRV_QT5
 		QColorDialog::setCustomColor(*(int*)p1,(*(QColor*)(p2)));
@@ -23046,19 +22445,19 @@ int drv_QColorDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 #endif		
 		break;
 	}
-	case 217123: {
+	case 217121: {
 		pThis->setOption(*(QColorDialog::ColorDialogOption*)p1);
 		break;
 	}
-	case 217124: {
+	case 217122: {
 		pThis->setOption(*(QColorDialog::ColorDialogOption*)p1,*(bool*)p2);
 		break;
 	}
-	case 217125: {
+	case 217123: {
 		pThis->setOptions(*(QFlags<QColorDialog::ColorDialogOption>*)p1);
 		break;
 	}
-	case 217126: {
+	case 217124: {
 		if(p2==0)return -2;
 #ifdef QTDRV_QT5
 		QColorDialog::setStandardColor(*(int*)p1,(*(QColor*)(p2)));
@@ -23067,11 +22466,7 @@ int drv_QColorDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 #endif		
 		break;
 	}
-	case 217127: {
-		pThis->setVisible(*(bool*)p1);
-		break;
-	}
-	case 217128: {
+	case 217125: {
 		*(bool*)p2 = pThis->testOption(*(QColorDialog::ColorDialogOption*)p1);
 		break;
 	}
@@ -23115,114 +22510,27 @@ int drv_QColumnView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 218107: {
-		if(p1==0)return -2;
-	if(p2==0)return -2;
-		pThis->currentChanged(*(QModelIndex*)(p1),*(QModelIndex*)(p2));
-		break;
-	}
-	case 218108: {
-		*(int*)p1 = pThis->horizontalOffset();
-		break;
-	}
-	case 218109: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QModelIndex(pThis->indexAt(*(QPoint*)(p1)));
-		break;
-	}
-	case 218110: {
 		pThis->initializeColumn((QAbstractItemView*)(p1));
 		break;
 	}
-	case 218111: {
-		if(p1==0)return -2;
-		*(bool*)p2 = pThis->isIndexHidden(*(QModelIndex*)(p1));
-		break;
-	}
-	case 218112: {
-		*(void**)p3 = new QModelIndex(pThis->moveCursor(*(QAbstractItemView::CursorAction*)p1,*(QFlags<Qt::KeyboardModifier>*)p2));
-		break;
-	}
-	case 218113: {
+	case 218108: {
 		*(void**)p1 = pThis->previewWidget();
 		break;
 	}
-	case 218114: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 218115: {
+	case 218109: {
 		*(bool*)p1 = pThis->resizeGripsVisible();
 		break;
 	}
-	case 218116: {
-		if(p1==0)return -2;
-		pThis->rowsInserted(*(QModelIndex*)(p1),*(int*)p2,*(int*)p3);
-		break;
-	}
-	case 218117: {
-		pThis->scrollContentsBy(*(int*)p1,*(int*)p2);
-		break;
-	}
-	case 218118: {
-		if(p1==0)return -2;
-		pThis->scrollTo(*(QModelIndex*)(p1));
-		break;
-	}
-	case 218119: {
-		if(p1==0)return -2;
-		pThis->scrollTo(*(QModelIndex*)(p1),*(QAbstractItemView::ScrollHint*)p2);
-		break;
-	}
-	case 218120: {
-		pThis->selectAll();
-		break;
-	}
-	case 218121: {
+	case 218110: {
 		pThis->setColumnWidths(drvGetIntArrayHead(p1));
 		break;
 	}
-	case 218122: {
-		pThis->setModel((QAbstractItemModel*)(p1));
-		break;
-	}
-	case 218123: {
+	case 218111: {
 		pThis->setPreviewWidget((QWidget*)(p1));
 		break;
 	}
-	case 218124: {
+	case 218112: {
 		pThis->setResizeGripsVisible(*(bool*)p1);
-		break;
-	}
-	case 218125: {
-		if(p1==0)return -2;
-		pThis->setRootIndex(*(QModelIndex*)(p1));
-		break;
-	}
-	case 218126: {
-		if(p1==0)return -2;
-		pThis->setSelection(*(QRect*)(p1),*(QFlags<QItemSelectionModel::SelectionFlag>*)p2);
-		break;
-	}
-	case 218127: {
-		pThis->setSelectionModel((QItemSelectionModel*)(p1));
-		break;
-	}
-	case 218128: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 218129: {
-		*(int*)p1 = pThis->verticalOffset();
-		break;
-	}
-	case 218130: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QRect(pThis->visualRect(*(QModelIndex*)(p1)));
-		break;
-	}
-	case 218131: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QRegion(pThis->visualRegionForSelection(*(QItemSelection*)(p1)));
 		break;
 	}
 	default:
@@ -23323,326 +22631,254 @@ int drv_QComboBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 219117: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 219118: {
 		pThis->clear();
 		break;
 	}
-	case 219119: {
+	case 219118: {
 		pThis->clearEditText();
 		break;
 	}
-	case 219120: {
+	case 219119: {
 		*(void**)p1 = pThis->completer();
 		break;
 	}
-	case 219121: {
-		pThis->contextMenuEvent((QContextMenuEvent*)(p1));
-		break;
-	}
-	case 219122: {
+	case 219120: {
 		*(int*)p1 = pThis->count();
 		break;
 	}
-	case 219123: {
+	case 219121: {
 		*(int*)p1 = pThis->currentIndex();
 		break;
 	}
-	case 219124: {
+	case 219122: {
 		drvSetString(p1,pThis->currentText());
 		break;
 	}
-	case 219125: {
+	case 219123: {
 		*(bool*)p1 = pThis->duplicatesEnabled();
 		break;
 	}
-	case 219126: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 219127: {
+	case 219124: {
 		if(p1==0)return -2;
 		*(int*)p2 = pThis->findData(*(QVariant*)(p1));
 		break;
 	}
-	case 219128: {
+	case 219125: {
 		if(p1==0)return -2;
 		*(int*)p4 = pThis->findData(*(QVariant*)(p1),*(int*)p2,*(QFlags<Qt::MatchFlag>*)p3);
 		break;
 	}
-	case 219129: {
+	case 219126: {
 		*(int*)p2 = pThis->findText(drvGetStringHead(p1));
 		break;
 	}
-	case 219130: {
+	case 219127: {
 		*(int*)p3 = pThis->findText(drvGetStringHead(p1),*(QFlags<Qt::MatchFlag>*)p2);
 		break;
 	}
-	case 219131: {
-		pThis->focusInEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 219132: {
-		pThis->focusOutEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 219133: {
+	case 219128: {
 		*(bool*)p1 = pThis->hasFrame();
 		break;
 	}
-	case 219134: {
-		pThis->hideEvent((QHideEvent*)(p1));
-		break;
-	}
-	case 219135: {
+	case 219129: {
 		pThis->hidePopup();
 		break;
 	}
-	case 219136: {
+	case 219130: {
 		*(void**)p1 = new QSize(pThis->iconSize());
 		break;
 	}
-	case 219137: {
-		pThis->inputMethodEvent((QInputMethodEvent*)(p1));
-		break;
-	}
-	case 219138: {
-		*(void**)p2 = new QVariant(pThis->inputMethodQuery(*(Qt::InputMethodQuery*)p1));
-		break;
-	}
-	case 219139: {
+	case 219131: {
 		pThis->insertItem(*(int*)p1,drvGetStringHead(p2),p3==0?QVariant():*(QVariant*)(p3));
 		break;
 	}
-	case 219140: {
+	case 219132: {
 		if(p2==0)return -2;
 		pThis->insertItem(*(int*)p1,*(QIcon*)(p2),drvGetStringHead(p3),p4==0?QVariant():*(QVariant*)(p4));
 		break;
 	}
-	case 219141: {
+	case 219133: {
 		pThis->insertItems(*(int*)p1,drvGetStringArray(p2));
 		break;
 	}
-	case 219142: {
+	case 219134: {
 		*(QComboBox::InsertPolicy*)p1 = pThis->insertPolicy();
 		break;
 	}
-	case 219143: {
+	case 219135: {
 		pThis->insertSeparator(*(int*)p1);
 		break;
 	}
-	case 219144: {
+	case 219136: {
 		*(bool*)p1 = pThis->isEditable();
 		break;
 	}
-	case 219145: {
+	case 219137: {
 		*(void**)p2 = new QVariant(pThis->itemData(*(int*)p1));
 		break;
 	}
-	case 219146: {
+	case 219138: {
 		*(void**)p3 = new QVariant(pThis->itemData(*(int*)p1,*(int*)p2));
 		break;
 	}
-	case 219147: {
+	case 219139: {
 		*(void**)p1 = pThis->itemDelegate();
 		break;
 	}
-	case 219148: {
+	case 219140: {
 		*(void**)p2 = new QIcon(pThis->itemIcon(*(int*)p1));
 		break;
 	}
-	case 219149: {
+	case 219141: {
 		drvSetString(p2,pThis->itemText(*(int*)p1));
 		break;
 	}
-	case 219150: {
-		pThis->keyPressEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 219151: {
-		pThis->keyReleaseEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 219152: {
+	case 219142: {
 		*(void**)p1 = pThis->lineEdit();
 		break;
 	}
-	case 219153: {
+	case 219143: {
 		*(int*)p1 = pThis->maxCount();
 		break;
 	}
-	case 219154: {
+	case 219144: {
 		*(int*)p1 = pThis->maxVisibleItems();
 		break;
 	}
-	case 219155: {
+	case 219145: {
 		*(int*)p1 = pThis->minimumContentsLength();
 		break;
 	}
-	case 219156: {
-		*(void**)p1 = new QSize(pThis->minimumSizeHint());
-		break;
-	}
-	case 219157: {
+	case 219146: {
 		*(void**)p1 = pThis->model();
 		break;
 	}
-	case 219158: {
+	case 219147: {
 		*(int*)p1 = pThis->modelColumn();
 		break;
 	}
-	case 219159: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 219160: {
-		pThis->mouseReleaseEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 219161: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 219162: {
+	case 219148: {
 		pThis->removeItem(*(int*)p1);
 		break;
 	}
-	case 219163: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 219164: {
+	case 219149: {
 		*(void**)p1 = new QModelIndex(pThis->rootModelIndex());
 		break;
 	}
-	case 219165: {
+	case 219150: {
 		pThis->setAutoCompletion(*(bool*)p1);
 		break;
 	}
-	case 219166: {
+	case 219151: {
 		pThis->setAutoCompletionCaseSensitivity(*(Qt::CaseSensitivity*)p1);
 		break;
 	}
-	case 219167: {
+	case 219152: {
 		pThis->setCompleter((QCompleter*)(p1));
 		break;
 	}
-	case 219168: {
+	case 219153: {
 		pThis->setCurrentIndex(*(int*)p1);
 		break;
 	}
-	case 219169: {
+	case 219154: {
 		pThis->setDuplicatesEnabled(*(bool*)p1);
 		break;
 	}
-	case 219170: {
+	case 219155: {
 		pThis->setEditText(drvGetStringHead(p1));
 		break;
 	}
-	case 219171: {
+	case 219156: {
 		pThis->setEditable(*(bool*)p1);
 		break;
 	}
-	case 219172: {
+	case 219157: {
 		pThis->setFrame(*(bool*)p1);
 		break;
 	}
-	case 219173: {
+	case 219158: {
 		if(p1==0)return -2;
 		pThis->setIconSize(*(QSize*)(p1));
 		break;
 	}
-	case 219174: {
+	case 219159: {
 		pThis->setInsertPolicy(*(QComboBox::InsertPolicy*)p1);
 		break;
 	}
-	case 219175: {
+	case 219160: {
 		if(p2==0)return -2;
 		pThis->setItemData(*(int*)p1,*(QVariant*)(p2),*(int*)p3);
 		break;
 	}
-	case 219176: {
+	case 219161: {
 		pThis->setItemDelegate((QAbstractItemDelegate*)(p1));
 		break;
 	}
-	case 219177: {
+	case 219162: {
 		if(p2==0)return -2;
 		pThis->setItemIcon(*(int*)p1,*(QIcon*)(p2));
 		break;
 	}
-	case 219178: {
+	case 219163: {
 		pThis->setItemText(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
-	case 219179: {
+	case 219164: {
 		pThis->setLineEdit((QLineEdit*)(p1));
 		break;
 	}
-	case 219180: {
+	case 219165: {
 		pThis->setMaxCount(*(int*)p1);
 		break;
 	}
-	case 219181: {
+	case 219166: {
 		pThis->setMaxVisibleItems(*(int*)p1);
 		break;
 	}
-	case 219182: {
+	case 219167: {
 		pThis->setMinimumContentsLength(*(int*)p1);
 		break;
 	}
-	case 219183: {
+	case 219168: {
 		pThis->setModel((QAbstractItemModel*)(p1));
 		break;
 	}
-	case 219184: {
+	case 219169: {
 		pThis->setModelColumn(*(int*)p1);
 		break;
 	}
-	case 219185: {
+	case 219170: {
 		if(p1==0)return -2;
 		pThis->setRootModelIndex(*(QModelIndex*)(p1));
 		break;
 	}
-	case 219186: {
+	case 219171: {
 		pThis->setSizeAdjustPolicy(*(QComboBox::SizeAdjustPolicy*)p1);
 		break;
 	}
-	case 219187: {
+	case 219172: {
 		pThis->setValidator((QValidator*)(p1));
 		break;
 	}
-	case 219188: {
+	case 219173: {
 		pThis->setView((QAbstractItemView*)(p1));
 		break;
 	}
-	case 219189: {
-		pThis->showEvent((QShowEvent*)(p1));
-		break;
-	}
-	case 219190: {
+	case 219174: {
 		pThis->showPopup();
 		break;
 	}
-	case 219191: {
+	case 219175: {
 		*(QComboBox::SizeAdjustPolicy*)p1 = pThis->sizeAdjustPolicy();
 		break;
 	}
-	case 219192: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 219193: {
+	case 219176: {
 		*(const void**)p1 = pThis->validator();
 		break;
 	}
-	case 219194: {
+	case 219177: {
 		*(void**)p1 = pThis->view();
-		break;
-	}
-	case 219195: {
-		pThis->wheelEvent((QWheelEvent*)(p1));
 		break;
 	}
 	default:
@@ -23681,27 +22917,7 @@ int drv_QCommandLinkButton(void *_p, int funcid, void* p1,void* p2,void* p3,void
 		break;
 	}
 	case 220107: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 220108: {
-		*(int*)p2 = pThis->heightForWidth(*(int*)p1);
-		break;
-	}
-	case 220109: {
-		*(void**)p1 = new QSize(pThis->minimumSizeHint());
-		break;
-	}
-	case 220110: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 220111: {
 		pThis->setDescription(drvGetStringHead(p1));
-		break;
-	}
-	case 220112: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
 		break;
 	}
 	default:
@@ -23721,39 +22937,6 @@ int drv_QCommonStyle(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 	} 
 	case 221102: {
 		*(void**)_p = new QCommonStyle();
-		break;
-	}
-	case 221103: {
-		*(int*)p2 = pThis->pixelMetric(*(QStyle::PixelMetric*)p1);
-		break;
-	}
-	case 221104: {
-		pThis->polish((QApplication*)(p1));
-		break;
-	}
-	case 221105: {
-		if(p1==0)return -2;
-		pThis->polish(*(QPalette*)(p1));
-		break;
-	}
-	case 221106: {
-		pThis->polish((QWidget*)(p1));
-		break;
-	}
-	case 221107: {
-		*(void**)p2 = new QPixmap(pThis->standardPixmap(*(QStyle::StandardPixmap*)p1));
-		break;
-	}
-	case 221108: {
-		*(int*)p2 = pThis->styleHint(*(QStyle::StyleHint*)p1);
-		break;
-	}
-	case 221109: {
-		pThis->unpolish((QApplication*)(p1));
-		break;
-	}
-	case 221110: {
-		pThis->unpolish((QWidget*)(p1));
 		break;
 	}
 	default:
@@ -23864,91 +23047,83 @@ int drv_QCompleter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	}
 	case 222122: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 222123: {
-		*(bool*)p3 = pThis->eventFilter((QObject*)(p1),(QEvent*)(p2));
-		break;
-	}
-	case 222124: {
 		*(int*)p1 = pThis->maxVisibleItems();
 		break;
 	}
-	case 222125: {
+	case 222123: {
 		*(void**)p1 = pThis->model();
 		break;
 	}
-	case 222126: {
+	case 222124: {
 		*(QCompleter::ModelSorting*)p1 = pThis->modelSorting();
 		break;
 	}
-	case 222127: {
+	case 222125: {
 		if(p1==0)return -2;
 		drvSetString(p2,pThis->pathFromIndex(*(QModelIndex*)(p1)));
 		break;
 	}
-	case 222128: {
+	case 222126: {
 		*(void**)p1 = pThis->popup();
 		break;
 	}
-	case 222129: {
+	case 222127: {
 		pThis->setCaseSensitivity(*(Qt::CaseSensitivity*)p1);
 		break;
 	}
-	case 222130: {
+	case 222128: {
 		pThis->setCompletionColumn(*(int*)p1);
 		break;
 	}
-	case 222131: {
+	case 222129: {
 		pThis->setCompletionMode(*(QCompleter::CompletionMode*)p1);
 		break;
 	}
-	case 222132: {
+	case 222130: {
 		pThis->setCompletionPrefix(drvGetStringHead(p1));
 		break;
 	}
-	case 222133: {
+	case 222131: {
 		pThis->setCompletionRole(*(int*)p1);
 		break;
 	}
-	case 222134: {
+	case 222132: {
 		*(bool*)p2 = pThis->setCurrentRow(*(int*)p1);
 		break;
 	}
-	case 222135: {
+	case 222133: {
 		pThis->setMaxVisibleItems(*(int*)p1);
 		break;
 	}
-	case 222136: {
+	case 222134: {
 		pThis->setModel((QAbstractItemModel*)(p1));
 		break;
 	}
-	case 222137: {
+	case 222135: {
 		pThis->setModelSorting(*(QCompleter::ModelSorting*)p1);
 		break;
 	}
-	case 222138: {
+	case 222136: {
 		pThis->setPopup((QAbstractItemView*)(p1));
 		break;
 	}
-	case 222139: {
+	case 222137: {
 		pThis->setWidget((QWidget*)(p1));
 		break;
 	}
-	case 222140: {
+	case 222138: {
 		pThis->setWrapAround(*(bool*)p1);
 		break;
 	}
-	case 222141: {
+	case 222139: {
 		drvSetStringArray(p2,pThis->splitPath(drvGetStringHead(p1)));
 		break;
 	}
-	case 222142: {
+	case 222140: {
 		*(void**)p1 = pThis->widget();
 		break;
 	}
-	case 222143: {
+	case 222141: {
 		*(bool*)p1 = pThis->wrapAround();
 		break;
 	}
@@ -24184,251 +23359,195 @@ int drv_QDateTimeEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 225112: {
-		pThis->clear();
-		break;
-	}
-	case 225113: {
 		pThis->clearMaximumDate();
 		break;
 	}
-	case 225114: {
+	case 225113: {
 		pThis->clearMaximumDateTime();
 		break;
 	}
-	case 225115: {
+	case 225114: {
 		pThis->clearMaximumTime();
 		break;
 	}
-	case 225116: {
+	case 225115: {
 		pThis->clearMinimumDate();
 		break;
 	}
-	case 225117: {
+	case 225116: {
 		pThis->clearMinimumDateTime();
 		break;
 	}
-	case 225118: {
+	case 225117: {
 		pThis->clearMinimumTime();
 		break;
 	}
-	case 225119: {
+	case 225118: {
 		*(QDateTimeEdit::Section*)p1 = pThis->currentSection();
 		break;
 	}
-	case 225120: {
+	case 225119: {
 		*(int*)p1 = pThis->currentSectionIndex();
 		break;
 	}
-	case 225121: {
+	case 225120: {
 		*(void**)p1 = new QDate(pThis->date());
 		break;
 	}
-	case 225122: {
+	case 225121: {
 		*(void**)p1 = new QDateTime(pThis->dateTime());
 		break;
 	}
-	case 225123: {
+	case 225122: {
 		*(void**)p2 = new QDateTime(pThis->dateTimeFromText(drvGetStringHead(p1)));
 		break;
 	}
-	case 225124: {
+	case 225123: {
 		drvSetString(p1,pThis->displayFormat());
 		break;
 	}
-	case 225125: {
+	case 225124: {
 		*(QFlags<QDateTimeEdit::Section>*)p1 = pThis->displayedSections();
 		break;
 	}
-	case 225126: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 225127: {
-		QString _p1=drvGetStringRef(p1);
-		pThis->fixup(_p1);
-		drvSetStringRef(p1,_p1);
-		break;
-	}
-	case 225128: {
-		pThis->focusInEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 225129: {
-		*(bool*)p2 = pThis->focusNextPrevChild(*(bool*)p1);
-		break;
-	}
-	case 225130: {
-		pThis->keyPressEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 225131: {
+	case 225125: {
 		*(void**)p1 = new QDate(pThis->maximumDate());
 		break;
 	}
-	case 225132: {
+	case 225126: {
 		*(void**)p1 = new QDateTime(pThis->maximumDateTime());
 		break;
 	}
-	case 225133: {
+	case 225127: {
 		*(void**)p1 = new QTime(pThis->maximumTime());
 		break;
 	}
-	case 225134: {
+	case 225128: {
 		*(void**)p1 = new QDate(pThis->minimumDate());
 		break;
 	}
-	case 225135: {
+	case 225129: {
 		*(void**)p1 = new QDateTime(pThis->minimumDateTime());
 		break;
 	}
-	case 225136: {
+	case 225130: {
 		*(void**)p1 = new QTime(pThis->minimumTime());
 		break;
 	}
-	case 225137: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 225138: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 225139: {
+	case 225131: {
 		*(QDateTimeEdit::Section*)p2 = pThis->sectionAt(*(int*)p1);
 		break;
 	}
-	case 225140: {
+	case 225132: {
 		*(int*)p1 = pThis->sectionCount();
 		break;
 	}
-	case 225141: {
+	case 225133: {
 		drvSetString(p2,pThis->sectionText(*(QDateTimeEdit::Section*)p1));
 		break;
 	}
-	case 225142: {
+	case 225134: {
 		pThis->setCalendarPopup(*(bool*)p1);
 		break;
 	}
-	case 225143: {
+	case 225135: {
 		pThis->setCalendarWidget((QCalendarWidget*)(p1));
 		break;
 	}
-	case 225144: {
+	case 225136: {
 		pThis->setCurrentSection(*(QDateTimeEdit::Section*)p1);
 		break;
 	}
-	case 225145: {
+	case 225137: {
 		pThis->setCurrentSectionIndex(*(int*)p1);
 		break;
 	}
-	case 225146: {
+	case 225138: {
 		if(p1==0)return -2;
 		pThis->setDate(*(QDate*)(p1));
 		break;
 	}
-	case 225147: {
+	case 225139: {
 		if(p1==0)return -2;
 	if(p2==0)return -2;
 		pThis->setDateRange(*(QDate*)(p1),*(QDate*)(p2));
 		break;
 	}
-	case 225148: {
+	case 225140: {
 		if(p1==0)return -2;
 		pThis->setDateTime(*(QDateTime*)(p1));
 		break;
 	}
-	case 225149: {
+	case 225141: {
 		if(p1==0)return -2;
 	if(p2==0)return -2;
 		pThis->setDateTimeRange(*(QDateTime*)(p1),*(QDateTime*)(p2));
 		break;
 	}
-	case 225150: {
+	case 225142: {
 		pThis->setDisplayFormat(drvGetStringHead(p1));
 		break;
 	}
-	case 225151: {
+	case 225143: {
 		if(p1==0)return -2;
 		pThis->setMaximumDate(*(QDate*)(p1));
 		break;
 	}
-	case 225152: {
+	case 225144: {
 		if(p1==0)return -2;
 		pThis->setMaximumDateTime(*(QDateTime*)(p1));
 		break;
 	}
-	case 225153: {
+	case 225145: {
 		if(p1==0)return -2;
 		pThis->setMaximumTime(*(QTime*)(p1));
 		break;
 	}
-	case 225154: {
+	case 225146: {
 		if(p1==0)return -2;
 		pThis->setMinimumDate(*(QDate*)(p1));
 		break;
 	}
-	case 225155: {
+	case 225147: {
 		if(p1==0)return -2;
 		pThis->setMinimumDateTime(*(QDateTime*)(p1));
 		break;
 	}
-	case 225156: {
+	case 225148: {
 		if(p1==0)return -2;
 		pThis->setMinimumTime(*(QTime*)(p1));
 		break;
 	}
-	case 225157: {
+	case 225149: {
 		pThis->setSelectedSection(*(QDateTimeEdit::Section*)p1);
 		break;
 	}
-	case 225158: {
+	case 225150: {
 		if(p1==0)return -2;
 		pThis->setTime(*(QTime*)(p1));
 		break;
 	}
-	case 225159: {
+	case 225151: {
 		if(p1==0)return -2;
 	if(p2==0)return -2;
 		pThis->setTimeRange(*(QTime*)(p1),*(QTime*)(p2));
 		break;
 	}
-	case 225160: {
+	case 225152: {
 		pThis->setTimeSpec(*(Qt::TimeSpec*)p1);
 		break;
 	}
-	case 225161: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 225162: {
-		pThis->stepBy(*(int*)p1);
-		break;
-	}
-	case 225163: {
-		*(QFlags<QAbstractSpinBox::StepEnabledFlag>*)p1 = pThis->stepEnabled();
-		break;
-	}
-	case 225164: {
+	case 225153: {
 		if(p1==0)return -2;
 		drvSetString(p2,pThis->textFromDateTime(*(QDateTime*)(p1)));
 		break;
 	}
-	case 225165: {
+	case 225154: {
 		*(void**)p1 = new QTime(pThis->time());
 		break;
 	}
-	case 225166: {
+	case 225155: {
 		*(Qt::TimeSpec*)p1 = pThis->timeSpec();
-		break;
-	}
-	case 225167: {
-		QString _p1=drvGetStringRef(p1);
-		*(QValidator::State*)p3 = pThis->validate(_p1,*(int*)p2);
-		drvSetStringRef(p1,_p1);
-		break;
-	}
-	case 225168: {
-		pThis->wheelEvent((QWheelEvent*)(p1));
 		break;
 	}
 	default:
@@ -24501,48 +23620,44 @@ int drv_QDesktopWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	}
 	case 226113: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 226114: {
 		*(void**)p1 = pThis->screen();
 		break;
 	}
-	case 226115: {
+	case 226114: {
 		*(void**)p2 = pThis->screen(*(int*)p1);
 		break;
 	}
-	case 226116: {
+	case 226115: {
 		*(int*)p1 = pThis->screenCount();
 		break;
 	}
-	case 226117: {
+	case 226116: {
 		*(const void**)p1 = new QRect(pThis->screenGeometry());
 		break;
 	}
-	case 226118: {
+	case 226117: {
 		if(p1==0)return -2;
 		*(const void**)p2 = new QRect(pThis->screenGeometry(*(QPoint*)(p1)));
 		break;
 	}
-	case 226119: {
+	case 226118: {
 		*(const void**)p2 = new QRect(pThis->screenGeometry((QWidget*)(p1)));
 		break;
 	}
-	case 226120: {
+	case 226119: {
 		*(const void**)p2 = new QRect(pThis->screenGeometry(*(int*)p1));
 		break;
 	}
-	case 226121: {
+	case 226120: {
 		*(int*)p1 = pThis->screenNumber();
 		break;
 	}
-	case 226122: {
+	case 226121: {
 		if(p1==0)return -2;
 		*(int*)p2 = pThis->screenNumber(*(QPoint*)(p1));
 		break;
 	}
-	case 226123: {
+	case 226122: {
 		*(int*)p2 = pThis->screenNumber((QWidget*)(p1));
 		break;
 	}
@@ -24570,66 +23685,30 @@ int drv_QDial(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	}
 	case 227104: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 227105: {
-		*(void**)p1 = new QSize(pThis->minimumSizeHint());
-		break;
-	}
-	case 227106: {
-		pThis->mouseMoveEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 227107: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 227108: {
-		pThis->mouseReleaseEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 227109: {
 		*(int*)p1 = pThis->notchSize();
 		break;
 	}
-	case 227110: {
+	case 227105: {
 		*(double*)p1 = pThis->notchTarget();
 		break;
 	}
-	case 227111: {
+	case 227106: {
 		*(bool*)p1 = pThis->notchesVisible();
 		break;
 	}
-	case 227112: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 227113: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 227114: {
+	case 227107: {
 		pThis->setNotchTarget(*(double*)p1);
 		break;
 	}
-	case 227115: {
+	case 227108: {
 		pThis->setNotchesVisible(*(bool*)p1);
 		break;
 	}
-	case 227116: {
+	case 227109: {
 		pThis->setWrapping(*(bool*)p1);
 		break;
 	}
-	case 227117: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 227118: {
-		pThis->sliderChange(*(QAbstractSlider::SliderChange*)p1);
-		break;
-	}
-	case 227119: {
+	case 227110: {
 		*(bool*)p1 = pThis->wrapping();
 		break;
 	}
@@ -24686,95 +23765,59 @@ int drv_QDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 228109: {
-		pThis->closeEvent((QCloseEvent*)(p1));
-		break;
-	}
-	case 228110: {
-		pThis->contextMenuEvent((QContextMenuEvent*)(p1));
-		break;
-	}
-	case 228111: {
 		pThis->done(*(int*)p1);
 		break;
 	}
-	case 228112: {
-		*(bool*)p3 = pThis->eventFilter((QObject*)(p1),(QEvent*)(p2));
-		break;
-	}
-	case 228113: {
+	case 228110: {
 		*(int*)p1 = pThis->exec();
 		break;
 	}
-	case 228114: {
+	case 228111: {
 		*(void**)p1 = pThis->extension();
 		break;
 	}
-	case 228115: {
+	case 228112: {
 		*(bool*)p1 = pThis->isSizeGripEnabled();
 		break;
 	}
-	case 228116: {
-		pThis->keyPressEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 228117: {
-		*(void**)p1 = new QSize(pThis->minimumSizeHint());
-		break;
-	}
-	case 228118: {
+	case 228113: {
 		pThis->open();
 		break;
 	}
-	case 228119: {
+	case 228114: {
 		*(Qt::Orientation*)p1 = pThis->orientation();
 		break;
 	}
-	case 228120: {
+	case 228115: {
 		pThis->reject();
 		break;
 	}
-	case 228121: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 228122: {
+	case 228116: {
 		*(int*)p1 = pThis->result();
 		break;
 	}
-	case 228123: {
+	case 228117: {
 		pThis->setExtension((QWidget*)(p1));
 		break;
 	}
-	case 228124: {
+	case 228118: {
 		pThis->setModal(*(bool*)p1);
 		break;
 	}
-	case 228125: {
+	case 228119: {
 		pThis->setOrientation(*(Qt::Orientation*)p1);
 		break;
 	}
-	case 228126: {
+	case 228120: {
 		pThis->setResult(*(int*)p1);
 		break;
 	}
-	case 228127: {
+	case 228121: {
 		pThis->setSizeGripEnabled(*(bool*)p1);
 		break;
 	}
-	case 228128: {
-		pThis->setVisible(*(bool*)p1);
-		break;
-	}
-	case 228129: {
-		pThis->showEvent((QShowEvent*)(p1));
-		break;
-	}
-	case 228130: {
+	case 228122: {
 		pThis->showExtension(*(bool*)p1);
-		break;
-	}
-	case 228131: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
 		break;
 	}
 	default:
@@ -24865,42 +23908,34 @@ int drv_QDialogButtonBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 		break;
 	}
 	case 229117: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 229118: {
 		pThis->clear();
 		break;
 	}
-	case 229119: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 229120: {
+	case 229118: {
 		*(Qt::Orientation*)p1 = pThis->orientation();
 		break;
 	}
-	case 229121: {
+	case 229119: {
 		pThis->removeButton((QAbstractButton*)(p1));
 		break;
 	}
-	case 229122: {
+	case 229120: {
 		pThis->setCenterButtons(*(bool*)p1);
 		break;
 	}
-	case 229123: {
+	case 229121: {
 		pThis->setOrientation(*(Qt::Orientation*)p1);
 		break;
 	}
-	case 229124: {
+	case 229122: {
 		pThis->setStandardButtons(*(QFlags<QDialogButtonBox::StandardButton>*)p1);
 		break;
 	}
-	case 229125: {
+	case 229123: {
 		*(QDialogButtonBox::StandardButton*)p2 = pThis->standardButton((QAbstractButton*)(p1));
 		break;
 	}
-	case 229126: {
+	case 229124: {
 		*(QFlags<QDialogButtonBox::StandardButton>*)p1 = pThis->standardButtons();
 		break;
 	}
@@ -24932,202 +23967,119 @@ int drv_QDirModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 230105: {
-		*(int*)p1 = pThis->columnCount();
-		break;
-	}
-	case 230106: {
-		*(int*)p2 = pThis->columnCount(p1==0?QModelIndex():*(QModelIndex*)(p1));
-		break;
-	}
-	case 230107: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QVariant(pThis->data(*(QModelIndex*)(p1)));
-		break;
-	}
-	case 230108: {
-		if(p1==0)return -2;
-		*(void**)p3 = new QVariant(pThis->data(*(QModelIndex*)(p1),*(int*)p2));
-		break;
-	}
-	case 230109: {
-		if(p5==0)return -2;
-		*(bool*)p6 = pThis->dropMimeData((QMimeData*)(p1),*(Qt::DropAction*)p2,*(int*)p3,*(int*)p4,*(QModelIndex*)(p5));
-		break;
-	}
-	case 230110: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QIcon(pThis->fileIcon(*(QModelIndex*)(p1)));
 		break;
 	}
-	case 230111: {
+	case 230106: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QFileInfo(pThis->fileInfo(*(QModelIndex*)(p1)));
 		break;
 	}
-	case 230112: {
+	case 230107: {
 		if(p1==0)return -2;
 		drvSetString(p2,pThis->fileName(*(QModelIndex*)(p1)));
 		break;
 	}
-	case 230113: {
+	case 230108: {
 		if(p1==0)return -2;
 		drvSetString(p2,pThis->filePath(*(QModelIndex*)(p1)));
 		break;
 	}
-	case 230114: {
+	case 230109: {
 		*(QFlags<QDir::Filter>*)p1 = pThis->filter();
 		break;
 	}
-	case 230115: {
-		if(p1==0)return -2;
-		*(QFlags<Qt::ItemFlag>*)p2 = pThis->flags(*(QModelIndex*)(p1));
-		break;
-	}
-	case 230116: {
-		*(bool*)p1 = pThis->hasChildren();
-		break;
-	}
-	case 230117: {
-		*(bool*)p2 = pThis->hasChildren(p1==0?QModelIndex():*(QModelIndex*)(p1));
-		break;
-	}
-	case 230118: {
-		*(void**)p4 = new QVariant(pThis->headerData(*(int*)p1,*(Qt::Orientation*)p2,*(int*)p3));
-		break;
-	}
-	case 230119: {
+	case 230110: {
 		*(void**)p1 = pThis->iconProvider();
 		break;
 	}
-	case 230120: {
+	case 230111: {
 		*(void**)p2 = new QModelIndex(pThis->index(drvGetStringHead(p1)));
 		break;
 	}
-	case 230121: {
+	case 230112: {
 		*(void**)p3 = new QModelIndex(pThis->index(drvGetStringHead(p1),*(int*)p2));
 		break;
 	}
-	case 230122: {
-		*(void**)p4 = new QModelIndex(pThis->index(*(int*)p1,*(int*)p2,p3==0?QModelIndex():*(QModelIndex*)(p3)));
-		break;
-	}
-	case 230123: {
+	case 230113: {
 		if(p1==0)return -2;
 		*(bool*)p2 = pThis->isDir(*(QModelIndex*)(p1));
 		break;
 	}
-	case 230124: {
+	case 230114: {
 		*(bool*)p1 = pThis->isReadOnly();
 		break;
 	}
-	case 230125: {
+	case 230115: {
 		*(bool*)p1 = pThis->lazyChildCount();
 		break;
 	}
-	case 230126: {
-		*(void**)p2 = pThis->mimeData(drvGetNoObjectArrayHeadT<QModelIndex>(p1));
-		break;
-	}
-	case 230127: {
-		drvSetStringArray(p1,pThis->mimeTypes());
-		break;
-	}
-	case 230128: {
+	case 230116: {
 		if(p1==0)return -2;
 		*(void**)p3 = new QModelIndex(pThis->mkdir(*(QModelIndex*)(p1),drvGetStringHead(p2)));
 		break;
 	}
-	case 230129: {
+	case 230117: {
 		drvSetStringArray(p1,pThis->nameFilters());
 		break;
 	}
-	case 230130: {
+	case 230118: {
 		*(void**)p1 = pThis->parent();
 		break;
 	}
-	case 230131: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QModelIndex(pThis->parent(*(QModelIndex*)(p1)));
-		break;
-	}
-	case 230132: {
+	case 230119: {
 		pThis->refresh();
 		break;
 	}
-	case 230133: {
+	case 230120: {
 		pThis->refresh(p1==0?QModelIndex():*(QModelIndex*)(p1));
 		break;
 	}
-	case 230134: {
+	case 230121: {
 		if(p1==0)return -2;
 		*(bool*)p2 = pThis->remove(*(QModelIndex*)(p1));
 		break;
 	}
-	case 230135: {
+	case 230122: {
 		*(bool*)p1 = pThis->resolveSymlinks();
 		break;
 	}
-	case 230136: {
+	case 230123: {
 		if(p1==0)return -2;
 		*(bool*)p2 = pThis->rmdir(*(QModelIndex*)(p1));
 		break;
 	}
-	case 230137: {
-		*(int*)p1 = pThis->rowCount();
-		break;
-	}
-	case 230138: {
-		*(int*)p2 = pThis->rowCount(p1==0?QModelIndex():*(QModelIndex*)(p1));
-		break;
-	}
-	case 230139: {
-		if(p1==0)return -2;
-	if(p2==0)return -2;
-		*(bool*)p4 = pThis->setData(*(QModelIndex*)(p1),*(QVariant*)(p2),*(int*)p3);
-		break;
-	}
-	case 230140: {
+	case 230124: {
 		pThis->setFilter(*(QFlags<QDir::Filter>*)p1);
 		break;
 	}
-	case 230141: {
+	case 230125: {
 		pThis->setIconProvider((QFileIconProvider*)(p1));
 		break;
 	}
-	case 230142: {
+	case 230126: {
 		pThis->setLazyChildCount(*(bool*)p1);
 		break;
 	}
-	case 230143: {
+	case 230127: {
 		pThis->setNameFilters(drvGetStringArray(p1));
 		break;
 	}
-	case 230144: {
+	case 230128: {
 		pThis->setReadOnly(*(bool*)p1);
 		break;
 	}
-	case 230145: {
+	case 230129: {
 		pThis->setResolveSymlinks(*(bool*)p1);
 		break;
 	}
-	case 230146: {
+	case 230130: {
 		pThis->setSorting(*(QFlags<QDir::SortFlag>*)p1);
 		break;
 	}
-	case 230147: {
-		pThis->sort(*(int*)p1);
-		break;
-	}
-	case 230148: {
-		pThis->sort(*(int*)p1,*(Qt::SortOrder*)p2);
-		break;
-	}
-	case 230149: {
+	case 230131: {
 		*(QFlags<QDir::SortFlag>*)p1 = pThis->sorting();
-		break;
-	}
-	case 230150: {
-		*(QFlags<Qt::DropAction>*)p1 = pThis->supportedDropActions();
 		break;
 	}
 	default:
@@ -25197,62 +24149,46 @@ int drv_QDockWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 231111: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 231112: {
-		pThis->closeEvent((QCloseEvent*)(p1));
-		break;
-	}
-	case 231113: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 231114: {
 		*(QFlags<QDockWidget::DockWidgetFeature>*)p1 = pThis->features();
 		break;
 	}
-	case 231115: {
+	case 231112: {
 		*(bool*)p2 = pThis->isAreaAllowed(*(Qt::DockWidgetArea*)p1);
 		break;
 	}
-	case 231116: {
+	case 231113: {
 		*(bool*)p1 = pThis->isFloating();
 		break;
 	}
-	case 231117: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 231118: {
+	case 231114: {
 		pThis->setAllowedAreas(*(QFlags<Qt::DockWidgetArea>*)p1);
 		break;
 	}
-	case 231119: {
+	case 231115: {
 		pThis->setFeatures(*(QFlags<QDockWidget::DockWidgetFeature>*)p1);
 		break;
 	}
-	case 231120: {
+	case 231116: {
 		pThis->setFloating(*(bool*)p1);
 		break;
 	}
-	case 231121: {
+	case 231117: {
 		pThis->setTitleBarWidget((QWidget*)(p1));
 		break;
 	}
-	case 231122: {
+	case 231118: {
 		pThis->setWidget((QWidget*)(p1));
 		break;
 	}
-	case 231123: {
+	case 231119: {
 		*(void**)p1 = pThis->titleBarWidget();
 		break;
 	}
-	case 231124: {
+	case 231120: {
 		*(void**)p1 = pThis->toggleViewAction();
 		break;
 	}
-	case 231125: {
+	case 231121: {
 		*(void**)p1 = pThis->widget();
 		break;
 	}
@@ -25302,78 +24238,66 @@ int drv_QDoubleSpinBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	}
 	case 232108: {
-		QString _p1=drvGetStringRef(p1);
-		pThis->fixup(_p1);
-		drvSetStringRef(p1,_p1);
-		break;
-	}
-	case 232109: {
 		*(double*)p1 = pThis->maximum();
 		break;
 	}
-	case 232110: {
+	case 232109: {
 		*(double*)p1 = pThis->minimum();
 		break;
 	}
-	case 232111: {
+	case 232110: {
 		drvSetString(p1,pThis->prefix());
 		break;
 	}
-	case 232112: {
+	case 232111: {
 		pThis->setDecimals(*(int*)p1);
 		break;
 	}
-	case 232113: {
+	case 232112: {
 		pThis->setMaximum(*(double*)p1);
 		break;
 	}
-	case 232114: {
+	case 232113: {
 		pThis->setMinimum(*(double*)p1);
 		break;
 	}
-	case 232115: {
+	case 232114: {
 		pThis->setPrefix(drvGetStringHead(p1));
 		break;
 	}
-	case 232116: {
+	case 232115: {
 		pThis->setRange(*(double*)p1,*(double*)p2);
 		break;
 	}
-	case 232117: {
+	case 232116: {
 		pThis->setSingleStep(*(double*)p1);
 		break;
 	}
-	case 232118: {
+	case 232117: {
 		pThis->setSuffix(drvGetStringHead(p1));
 		break;
 	}
-	case 232119: {
+	case 232118: {
 		pThis->setValue(*(double*)p1);
 		break;
 	}
-	case 232120: {
+	case 232119: {
 		*(double*)p1 = pThis->singleStep();
 		break;
 	}
-	case 232121: {
+	case 232120: {
 		drvSetString(p1,pThis->suffix());
 		break;
 	}
-	case 232122: {
+	case 232121: {
 		drvSetString(p2,pThis->textFromValue(*(double*)p1));
 		break;
 	}
-	case 232123: {
-		QString _p1=drvGetStringRef(p1);
-		*(QValidator::State*)p3 = pThis->validate(_p1,*(int*)p2);
-		drvSetStringRef(p1,_p1);
-		break;
-	}
-	case 232124: {
+	case 232122: {
 		*(double*)p1 = pThis->value();
 		break;
 	}
-	case 232125: {
+	case 232123: {
 		*(double*)p2 = pThis->valueFromText(drvGetStringHead(p1));
 		break;
 	}
@@ -25438,12 +24362,6 @@ int drv_QDoubleValidator(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 	}
 	case 233113: {
 		*(double*)p1 = pThis->top();
-		break;
-	}
-	case 233114: {
-		QString _p1=drvGetStringRef(p1);
-		*(QValidator::State*)p3 = pThis->validate(_p1,*(int*)p2);
-		drvSetStringRef(p1,_p1);
 		break;
 	}
 	default:
@@ -25562,22 +24480,14 @@ int drv_QErrorMessage(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 235104: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 235105: {
-		pThis->done(*(int*)p1);
-		break;
-	}
-	case 235106: {
 		*(void**)p1 = QErrorMessage::qtHandler();
 		break;
 	}
-	case 235107: {
+	case 235105: {
 		pThis->showMessage(drvGetStringHead(p1));
 		break;
 	}
-	case 235108: {
+	case 235106: {
 		pThis->showMessage(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
@@ -25672,30 +24582,18 @@ int drv_QEventTransition(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 		break;
 	}
 	case 237105: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 237106: {
 		*(void**)p1 = pThis->eventSource();
 		break;
 	}
-	case 237107: {
-		*(bool*)p2 = pThis->eventTest((QEvent*)(p1));
-		break;
-	}
-	case 237108: {
+	case 237106: {
 		*(QEvent::Type*)p1 = pThis->eventType();
 		break;
 	}
-	case 237109: {
-		pThis->onTransition((QEvent*)(p1));
-		break;
-	}
-	case 237110: {
+	case 237107: {
 		pThis->setEventSource((QObject*)(p1));
 		break;
 	}
-	case 237111: {
+	case 237108: {
 		pThis->setEventType(*(QEvent::Type*)p1);
 		break;
 	}
@@ -25731,171 +24629,131 @@ int drv_QFile(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	}
 	case 238106: {
-		*(bool*)p1 = pThis->atEnd();
-		break;
-	}
-	case 238107: {
-		pThis->close();
-		break;
-	}
-	case 238108: {
 		*(bool*)p2 = pThis->copy(drvGetStringHead(p1));
 		break;
 	}
-	case 238109: {
+	case 238107: {
 		*(bool*)p3 = QFile::copy(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
-	case 238110: {
+	case 238108: {
 		drvSetString(p2,QFile::decodeName(drvGetByteArrayHead(p1)));
 		break;
 	}
-	case 238111: {
+	case 238109: {
 		drvSetByteArray(p2,QFile::encodeName(drvGetStringHead(p1)));
 		break;
 	}
-	case 238112: {
+	case 238110: {
 		*(QFile::FileError*)p1 = pThis->error();
 		break;
 	}
-	case 238113: {
+	case 238111: {
 		*(bool*)p1 = pThis->exists();
 		break;
 	}
-	case 238114: {
+	case 238112: {
 		*(bool*)p2 = QFile::exists(drvGetStringHead(p1));
 		break;
 	}
-	case 238115: {
+	case 238113: {
 		drvSetString(p1,pThis->fileName());
 		break;
 	}
-	case 238116: {
+	case 238114: {
 		*(bool*)p1 = pThis->flush();
 		break;
 	}
-	case 238117: {
+	case 238115: {
 		*(int*)p1 = pThis->handle();
 		break;
 	}
-	case 238118: {
-		*(bool*)p1 = pThis->isSequential();
-		break;
-	}
-	case 238119: {
+	case 238116: {
 		*(bool*)p2 = pThis->link(drvGetStringHead(p1));
 		break;
 	}
-	case 238120: {
+	case 238117: {
 		*(bool*)p3 = QFile::link(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
-	case 238121: {
+	case 238118: {
 		*(unsigned char**)p4 = pThis->map(*(qint64*)p1,*(qint64*)p2,*(QFile::MemoryMapFlags*)p3);
 		break;
 	}
-	case 238122: {
-		*(bool*)p2 = pThis->open(*(QFlags<QIODevice::OpenModeFlag>*)p1);
-		break;
-	}
-	case 238123: {
+	case 238119: {
 		*(bool*)p3 = pThis->open(*(FILE**)p1,*(QFlags<QIODevice::OpenModeFlag>*)p2);
 		break;
 	}
-	case 238124: {
+	case 238120: {
 		*(bool*)p3 = pThis->open(*(int*)p1,*(QFlags<QIODevice::OpenModeFlag>*)p2);
 		break;
 	}
-	case 238125: {
+	case 238121: {
 		*(QFlags<QFile::Permission>*)p1 = pThis->permissions();
 		break;
 	}
-	case 238126: {
+	case 238122: {
 		*(QFlags<QFile::Permission>*)p2 = QFile::permissions(drvGetStringHead(p1));
 		break;
 	}
-	case 238127: {
-		*(qint64*)p1 = pThis->pos();
-		break;
-	}
-	case 238128: {
-		*(qint64*)p3 = pThis->readData(*(char**)p1,*(qint64*)p2);
-		break;
-	}
-	case 238129: {
-		*(qint64*)p3 = pThis->readLineData(*(char**)p1,*(qint64*)p2);
-		break;
-	}
-	case 238130: {
+	case 238123: {
 		drvSetString(p1,pThis->readLink());
 		break;
 	}
-	case 238131: {
+	case 238124: {
 		drvSetString(p2,QFile::readLink(drvGetStringHead(p1)));
 		break;
 	}
-	case 238132: {
+	case 238125: {
 		*(bool*)p1 = pThis->remove();
 		break;
 	}
-	case 238133: {
+	case 238126: {
 		*(bool*)p2 = QFile::remove(drvGetStringHead(p1));
 		break;
 	}
-	case 238134: {
+	case 238127: {
 		*(bool*)p2 = pThis->rename(drvGetStringHead(p1));
 		break;
 	}
-	case 238135: {
+	case 238128: {
 		*(bool*)p3 = QFile::rename(drvGetStringHead(p1),drvGetStringHead(p2));
 		break;
 	}
-	case 238136: {
+	case 238129: {
 		*(bool*)p2 = pThis->resize(*(qint64*)p1);
 		break;
 	}
-	case 238137: {
+	case 238130: {
 		*(bool*)p3 = QFile::resize(drvGetStringHead(p1),*(qint64*)p2);
 		break;
 	}
-	case 238138: {
-		*(bool*)p2 = pThis->seek(*(qint64*)p1);
-		break;
-	}
-	case 238139: {
+	case 238131: {
 		pThis->setFileName(drvGetStringHead(p1));
 		break;
 	}
-	case 238140: {
+	case 238132: {
 		*(bool*)p2 = pThis->setPermissions(*(QFlags<QFile::Permission>*)p1);
 		break;
 	}
-	case 238141: {
+	case 238133: {
 		*(bool*)p3 = QFile::setPermissions(drvGetStringHead(p1),*(QFlags<QFile::Permission>*)p2);
 		break;
 	}
-	case 238142: {
-		*(qint64*)p1 = pThis->size();
-		break;
-	}
-	case 238143: {
+	case 238134: {
 		drvSetString(p1,pThis->symLinkTarget());
 		break;
 	}
-	case 238144: {
+	case 238135: {
 		drvSetString(p2,QFile::symLinkTarget(drvGetStringHead(p1)));
 		break;
 	}
-	case 238145: {
+	case 238136: {
 		*(bool*)p2 = pThis->unmap(*(unsigned char**)p1);
 		break;
 	}
-	case 238146: {
+	case 238137: {
 		pThis->unsetError();
-		break;
-	}
-	case 238147: {
-		*(qint64*)p3 = pThis->writeData(*(char const**)p1,*(qint64*)p2);
 		break;
 	}
 	default:
@@ -25961,253 +24819,237 @@ int drv_QFileDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 239110: {
-		pThis->accept();
-		break;
-	}
-	case 239111: {
 		*(QFileDialog::AcceptMode*)p1 = pThis->acceptMode();
 		break;
 	}
-	case 239112: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 239113: {
+	case 239111: {
 		*(bool*)p1 = pThis->confirmOverwrite();
 		break;
 	}
-	case 239114: {
+	case 239112: {
 		drvSetString(p1,pThis->defaultSuffix());
 		break;
 	}
-	case 239115: {
+	case 239113: {
 		*(void**)p1 = new QDir(pThis->directory());
 		break;
 	}
-	case 239116: {
-		pThis->done(*(int*)p1);
-		break;
-	}
-	case 239117: {
+	case 239114: {
 		*(QFileDialog::FileMode*)p1 = pThis->fileMode();
 		break;
 	}
-	case 239118: {
+	case 239115: {
 		*(QFlags<QDir::Filter>*)p1 = pThis->filter();
 		break;
 	}
-	case 239119: {
+	case 239116: {
 		drvSetString(p1,QFileDialog::getExistingDirectory());
 		break;
 	}
-	case 239120: {
+	case 239117: {
 		drvSetString(p5,QFileDialog::getExistingDirectory((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),*(QFlags<QFileDialog::Option>*)p4));
 		break;
 	}
-	case 239121: {
+	case 239118: {
 		drvSetString(p1,QFileDialog::getOpenFileName());
 		break;
 	}
-	case 239122: {
+	case 239119: {
 		QString _p5=drvGetStringRef(p5);
 		drvSetString(p7,QFileDialog::getOpenFileName((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),drvGetStringHead(p4),&_p5,*(QFlags<QFileDialog::Option>*)p6));
 		drvSetStringRef(p5,_p5);
 		break;
 	}
-	case 239123: {
+	case 239120: {
 		drvSetStringArray(p1,QFileDialog::getOpenFileNames());
 		break;
 	}
-	case 239124: {
+	case 239121: {
 		QString _p5=drvGetStringRef(p5);
 		drvSetStringArray(p7,QFileDialog::getOpenFileNames((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),drvGetStringHead(p4),&_p5,*(QFlags<QFileDialog::Option>*)p6));
 		drvSetStringRef(p5,_p5);
 		break;
 	}
-	case 239125: {
+	case 239122: {
 		drvSetString(p1,QFileDialog::getSaveFileName());
 		break;
 	}
-	case 239126: {
+	case 239123: {
 		QString _p5=drvGetStringRef(p5);
 		drvSetString(p7,QFileDialog::getSaveFileName((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),drvGetStringHead(p4),&_p5,*(QFlags<QFileDialog::Option>*)p6));
 		drvSetStringRef(p5,_p5);
 		break;
 	}
-	case 239127: {
+	case 239124: {
 		drvSetStringArray(p1,pThis->history());
 		break;
 	}
-	case 239128: {
+	case 239125: {
 		*(void**)p1 = pThis->iconProvider();
 		break;
 	}
-	case 239129: {
+	case 239126: {
 		*(bool*)p1 = pThis->isNameFilterDetailsVisible();
 		break;
 	}
-	case 239130: {
+	case 239127: {
 		*(bool*)p1 = pThis->isReadOnly();
 		break;
 	}
-	case 239131: {
+	case 239128: {
 		*(void**)p1 = pThis->itemDelegate();
 		break;
 	}
-	case 239132: {
+	case 239129: {
 		drvSetString(p2,pThis->labelText(*(QFileDialog::DialogLabel*)p1));
 		break;
 	}
-	case 239133: {
+	case 239130: {
 		drvSetStringArray(p1,pThis->nameFilters());
 		break;
 	}
-	case 239134: {
+	case 239131: {
 		pThis->open();
 		break;
 	}
-	case 239135: {
+	case 239132: {
 		pThis->open((QObject*)(p1),drvGet_const_char(p2));
 		break;
 	}
-	case 239136: {
+	case 239133: {
 		*(QFlags<QFileDialog::Option>*)p1 = pThis->options();
 		break;
 	}
-	case 239137: {
+	case 239134: {
 		*(void**)p1 = pThis->proxyModel();
 		break;
 	}
-	case 239138: {
+	case 239135: {
 		*(bool*)p1 = pThis->resolveSymlinks();
 		break;
 	}
-	case 239139: {
+	case 239136: {
 		*(bool*)p2 = pThis->restoreState(drvGetByteArrayHead(p1));
 		break;
 	}
-	case 239140: {
+	case 239137: {
 		drvSetByteArray(p1,pThis->saveState());
 		break;
 	}
-	case 239141: {
+	case 239138: {
 		pThis->selectFile(drvGetStringHead(p1));
 		break;
 	}
-	case 239142: {
+	case 239139: {
 		pThis->selectNameFilter(drvGetStringHead(p1));
 		break;
 	}
-	case 239143: {
+	case 239140: {
 		drvSetStringArray(p1,pThis->selectedFiles());
 		break;
 	}
-	case 239144: {
+	case 239141: {
 		drvSetString(p1,pThis->selectedNameFilter());
 		break;
 	}
-	case 239145: {
+	case 239142: {
 		pThis->setAcceptMode(*(QFileDialog::AcceptMode*)p1);
 		break;
 	}
-	case 239146: {
+	case 239143: {
 		pThis->setConfirmOverwrite(*(bool*)p1);
 		break;
 	}
-	case 239147: {
+	case 239144: {
 		pThis->setDefaultSuffix(drvGetStringHead(p1));
 		break;
 	}
-	case 239148: {
+	case 239145: {
 		if(p1==0)return -2;
 		pThis->setDirectory(*(QDir*)(p1));
 		break;
 	}
-	case 239149: {
+	case 239146: {
 		pThis->setDirectory(drvGetStringHead(p1));
 		break;
 	}
-	case 239150: {
+	case 239147: {
 		pThis->setFileMode(*(QFileDialog::FileMode*)p1);
 		break;
 	}
-	case 239151: {
+	case 239148: {
 		pThis->setFilter(*(QFlags<QDir::Filter>*)p1);
 		break;
 	}
-	case 239152: {
+	case 239149: {
 		pThis->setHistory(drvGetStringArray(p1));
 		break;
 	}
-	case 239153: {
+	case 239150: {
 		pThis->setIconProvider((QFileIconProvider*)(p1));
 		break;
 	}
-	case 239154: {
+	case 239151: {
 		pThis->setItemDelegate((QAbstractItemDelegate*)(p1));
 		break;
 	}
-	case 239155: {
+	case 239152: {
 		pThis->setLabelText(*(QFileDialog::DialogLabel*)p1,drvGetStringHead(p2));
 		break;
 	}
-	case 239156: {
+	case 239153: {
 		pThis->setNameFilter(drvGetStringHead(p1));
 		break;
 	}
-	case 239157: {
+	case 239154: {
 		pThis->setNameFilterDetailsVisible(*(bool*)p1);
 		break;
 	}
-	case 239158: {
+	case 239155: {
 		pThis->setNameFilters(drvGetStringArray(p1));
 		break;
 	}
-	case 239159: {
+	case 239156: {
 		pThis->setOption(*(QFileDialog::Option*)p1);
 		break;
 	}
-	case 239160: {
+	case 239157: {
 		pThis->setOption(*(QFileDialog::Option*)p1,*(bool*)p2);
 		break;
 	}
-	case 239161: {
+	case 239158: {
 		pThis->setOptions(*(QFlags<QFileDialog::Option>*)p1);
 		break;
 	}
-	case 239162: {
+	case 239159: {
 		pThis->setProxyModel((QAbstractProxyModel*)(p1));
 		break;
 	}
-	case 239163: {
+	case 239160: {
 		pThis->setReadOnly(*(bool*)p1);
 		break;
 	}
-	case 239164: {
+	case 239161: {
 		pThis->setResolveSymlinks(*(bool*)p1);
 		break;
 	}
-	case 239165: {
+	case 239162: {
 		pThis->setSidebarUrls(drvGetNoObjectArrayHeadT<QUrl>(p1));
 		break;
 	}
-	case 239166: {
+	case 239163: {
 		pThis->setViewMode(*(QFileDialog::ViewMode*)p1);
 		break;
 	}
-	case 239167: {
-		pThis->setVisible(*(bool*)p1);
-		break;
-	}
-	case 239168: {
+	case 239164: {
 		drvSetListPtr<QUrl>(p1,182000,pThis->sidebarUrls());
 		break;
 	}
-	case 239169: {
+	case 239165: {
 		*(bool*)p2 = pThis->testOption(*(QFileDialog::Option*)p1);
 		break;
 	}
-	case 239170: {
+	case 239166: {
 		*(QFileDialog::ViewMode*)p1 = pThis->viewMode();
 		break;
 	}
@@ -26257,237 +25099,136 @@ int drv_QFileSystemModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 	}
 	case 240107: {
 		if(p1==0)return -2;
-		*(bool*)p2 = pThis->canFetchMore(*(QModelIndex*)(p1));
-		break;
-	}
-	case 240108: {
-		*(int*)p1 = pThis->columnCount();
-		break;
-	}
-	case 240109: {
-		*(int*)p2 = pThis->columnCount(p1==0?QModelIndex():*(QModelIndex*)(p1));
-		break;
-	}
-	case 240110: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QVariant(pThis->data(*(QModelIndex*)(p1)));
-		break;
-	}
-	case 240111: {
-		if(p1==0)return -2;
-		*(void**)p3 = new QVariant(pThis->data(*(QModelIndex*)(p1),*(int*)p2));
-		break;
-	}
-	case 240112: {
-		if(p5==0)return -2;
-		*(bool*)p6 = pThis->dropMimeData((QMimeData*)(p1),*(Qt::DropAction*)p2,*(int*)p3,*(int*)p4,*(QModelIndex*)(p5));
-		break;
-	}
-	case 240113: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 240114: {
-		if(p1==0)return -2;
-		pThis->fetchMore(*(QModelIndex*)(p1));
-		break;
-	}
-	case 240115: {
-		if(p1==0)return -2;
 		*(void**)p2 = new QIcon(pThis->fileIcon(*(QModelIndex*)(p1)));
 		break;
 	}
-	case 240116: {
+	case 240108: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QFileInfo(pThis->fileInfo(*(QModelIndex*)(p1)));
 		break;
 	}
-	case 240117: {
+	case 240109: {
 		if(p1==0)return -2;
 		drvSetString(p2,pThis->fileName(*(QModelIndex*)(p1)));
 		break;
 	}
-	case 240118: {
+	case 240110: {
 		if(p1==0)return -2;
 		drvSetString(p2,pThis->filePath(*(QModelIndex*)(p1)));
 		break;
 	}
-	case 240119: {
+	case 240111: {
 		*(QFlags<QDir::Filter>*)p1 = pThis->filter();
 		break;
 	}
-	case 240120: {
-		if(p1==0)return -2;
-		*(QFlags<Qt::ItemFlag>*)p2 = pThis->flags(*(QModelIndex*)(p1));
-		break;
-	}
-	case 240121: {
-		*(bool*)p1 = pThis->hasChildren();
-		break;
-	}
-	case 240122: {
-		*(bool*)p2 = pThis->hasChildren(p1==0?QModelIndex():*(QModelIndex*)(p1));
-		break;
-	}
-	case 240123: {
-		*(void**)p4 = new QVariant(pThis->headerData(*(int*)p1,*(Qt::Orientation*)p2,*(int*)p3));
-		break;
-	}
-	case 240124: {
+	case 240112: {
 		*(void**)p1 = pThis->iconProvider();
 		break;
 	}
-	case 240125: {
+	case 240113: {
 		*(void**)p2 = new QModelIndex(pThis->index(drvGetStringHead(p1)));
 		break;
 	}
-	case 240126: {
+	case 240114: {
 		*(void**)p3 = new QModelIndex(pThis->index(drvGetStringHead(p1),*(int*)p2));
 		break;
 	}
-	case 240127: {
-		*(void**)p4 = new QModelIndex(pThis->index(*(int*)p1,*(int*)p2,p3==0?QModelIndex():*(QModelIndex*)(p3)));
-		break;
-	}
-	case 240128: {
+	case 240115: {
 		if(p1==0)return -2;
 		*(bool*)p2 = pThis->isDir(*(QModelIndex*)(p1));
 		break;
 	}
-	case 240129: {
+	case 240116: {
 		*(bool*)p1 = pThis->isReadOnly();
 		break;
 	}
-	case 240130: {
+	case 240117: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QDateTime(pThis->lastModified(*(QModelIndex*)(p1)));
 		break;
 	}
-	case 240131: {
-		*(void**)p2 = pThis->mimeData(drvGetNoObjectArrayHeadT<QModelIndex>(p1));
-		break;
-	}
-	case 240132: {
-		drvSetStringArray(p1,pThis->mimeTypes());
-		break;
-	}
-	case 240133: {
+	case 240118: {
 		if(p1==0)return -2;
 		*(void**)p3 = new QModelIndex(pThis->mkdir(*(QModelIndex*)(p1),drvGetStringHead(p2)));
 		break;
 	}
-	case 240134: {
+	case 240119: {
 		*(void**)p1 = new QVariant(pThis->myComputer());
 		break;
 	}
-	case 240135: {
+	case 240120: {
 		*(void**)p2 = new QVariant(pThis->myComputer(*(int*)p1));
 		break;
 	}
-	case 240136: {
+	case 240121: {
 		*(bool*)p1 = pThis->nameFilterDisables();
 		break;
 	}
-	case 240137: {
+	case 240122: {
 		drvSetStringArray(p1,pThis->nameFilters());
 		break;
 	}
-	case 240138: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QModelIndex(pThis->parent(*(QModelIndex*)(p1)));
-		break;
-	}
-	case 240139: {
+	case 240123: {
 		if(p1==0)return -2;
 		*(QFlags<QFile::Permission>*)p2 = pThis->permissions(*(QModelIndex*)(p1));
 		break;
 	}
-	case 240140: {
+	case 240124: {
 		if(p1==0)return -2;
 		*(bool*)p2 = pThis->remove(*(QModelIndex*)(p1));
 		break;
 	}
-	case 240141: {
+	case 240125: {
 		*(bool*)p1 = pThis->resolveSymlinks();
 		break;
 	}
-	case 240142: {
+	case 240126: {
 		if(p1==0)return -2;
 		*(bool*)p2 = pThis->rmdir(*(QModelIndex*)(p1));
 		break;
 	}
-	case 240143: {
+	case 240127: {
 		*(void**)p1 = new QDir(pThis->rootDirectory());
 		break;
 	}
-	case 240144: {
+	case 240128: {
 		drvSetString(p1,pThis->rootPath());
 		break;
 	}
-	case 240145: {
-		*(int*)p1 = pThis->rowCount();
-		break;
-	}
-	case 240146: {
-		*(int*)p2 = pThis->rowCount(p1==0?QModelIndex():*(QModelIndex*)(p1));
-		break;
-	}
-	case 240147: {
-		if(p1==0)return -2;
-	if(p2==0)return -2;
-		*(bool*)p4 = pThis->setData(*(QModelIndex*)(p1),*(QVariant*)(p2),*(int*)p3);
-		break;
-	}
-	case 240148: {
+	case 240129: {
 		pThis->setFilter(*(QFlags<QDir::Filter>*)p1);
 		break;
 	}
-	case 240149: {
+	case 240130: {
 		pThis->setIconProvider((QFileIconProvider*)(p1));
 		break;
 	}
-	case 240150: {
+	case 240131: {
 		pThis->setNameFilterDisables(*(bool*)p1);
 		break;
 	}
-	case 240151: {
+	case 240132: {
 		pThis->setNameFilters(drvGetStringArray(p1));
 		break;
 	}
-	case 240152: {
+	case 240133: {
 		pThis->setReadOnly(*(bool*)p1);
 		break;
 	}
-	case 240153: {
+	case 240134: {
 		pThis->setResolveSymlinks(*(bool*)p1);
 		break;
 	}
-	case 240154: {
+	case 240135: {
 		*(void**)p2 = new QModelIndex(pThis->setRootPath(drvGetStringHead(p1)));
 		break;
 	}
-	case 240155: {
+	case 240136: {
 		if(p1==0)return -2;
 		*(qint64*)p2 = pThis->size(*(QModelIndex*)(p1));
 		break;
 	}
-	case 240156: {
-		pThis->sort(*(int*)p1);
-		break;
-	}
-	case 240157: {
-		pThis->sort(*(int*)p1,*(Qt::SortOrder*)p2);
-		break;
-	}
-	case 240158: {
-		*(QFlags<Qt::DropAction>*)p1 = pThis->supportedDropActions();
-		break;
-	}
-	case 240159: {
-		pThis->timerEvent((QTimerEvent*)(p1));
-		break;
-	}
-	case 240160: {
+	case 240137: {
 		if(p1==0)return -2;
 		drvSetString(p2,pThis->type(*(QModelIndex*)(p1)));
 		break;
@@ -26580,18 +25321,6 @@ int drv_QFinalState(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		*(void**)_p = new QFinalState((QState*)(p1));
 		break;
 	}
-	case 242104: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 242105: {
-		pThis->onEntry((QEvent*)(p1));
-		break;
-	}
-	case 242106: {
-		pThis->onExit((QEvent*)(p1));
-		break;
-	}
 	default:
 		return drv_QAbstractState(_p,funcid,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12);
 	}
@@ -26616,22 +25345,10 @@ int drv_QFocusFrame(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 243104: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 243105: {
-		*(bool*)p3 = pThis->eventFilter((QObject*)(p1),(QEvent*)(p2));
-		break;
-	}
-	case 243106: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 243107: {
 		pThis->setWidget((QWidget*)(p1));
 		break;
 	}
-	case 243108: {
+	case 243105: {
 		*(void**)p1 = pThis->widget();
 		break;
 	}
@@ -26670,31 +25387,23 @@ int drv_QFontComboBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 244106: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 244107: {
 		*(QFlags<QFontComboBox::FontFilter>*)p1 = pThis->fontFilters();
 		break;
 	}
-	case 244108: {
+	case 244107: {
 		if(p1==0)return -2;
 		pThis->setCurrentFont(*(QFont*)(p1));
 		break;
 	}
-	case 244109: {
+	case 244108: {
 		pThis->setFontFilters(*(QFlags<QFontComboBox::FontFilter>*)p1);
 		break;
 	}
-	case 244110: {
+	case 244109: {
 		pThis->setWritingSystem(*(QFontDatabase::WritingSystem*)p1);
 		break;
 	}
-	case 244111: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 244112: {
+	case 244110: {
 		*(QFontDatabase::WritingSystem*)p1 = pThis->writingSystem();
 		break;
 	}
@@ -26741,78 +25450,66 @@ int drv_QFontDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 245107: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 245108: {
 		*(void**)p1 = new QFont(pThis->currentFont());
 		break;
 	}
-	case 245109: {
-		pThis->done(*(int*)p1);
-		break;
-	}
-	case 245110: {
+	case 245108: {
 		*(void**)p2 = new QFont(QFontDialog::getFont(*(bool**)p1));
 		break;
 	}
-	case 245111: {
+	case 245109: {
 		*(void**)p3 = new QFont(QFontDialog::getFont(*(bool**)p1,(QWidget*)(p2)));
 		break;
 	}
-	case 245112: {
+	case 245110: {
 		if(p2==0)return -2;
 		*(void**)p4 = new QFont(QFontDialog::getFont(*(bool**)p1,*(QFont*)(p2),(QWidget*)(p3)));
 		break;
 	}
-	case 245113: {
+	case 245111: {
 		if(p2==0)return -2;
 		*(void**)p5 = new QFont(QFontDialog::getFont(*(bool**)p1,*(QFont*)(p2),(QWidget*)(p3),drvGetStringHead(p4)));
 		break;
 	}
-	case 245114: {
+	case 245112: {
 		if(p2==0)return -2;
 		*(void**)p6 = new QFont(QFontDialog::getFont(*(bool**)p1,*(QFont*)(p2),(QWidget*)(p3),drvGetStringHead(p4),*(QFlags<QFontDialog::FontDialogOption>*)p5));
 		break;
 	}
-	case 245115: {
+	case 245113: {
 		pThis->open();
 		break;
 	}
-	case 245116: {
+	case 245114: {
 		pThis->open((QObject*)(p1),drvGet_const_char(p2));
 		break;
 	}
-	case 245117: {
+	case 245115: {
 		*(QFlags<QFontDialog::FontDialogOption>*)p1 = pThis->options();
 		break;
 	}
-	case 245118: {
+	case 245116: {
 		*(void**)p1 = new QFont(pThis->selectedFont());
 		break;
 	}
-	case 245119: {
+	case 245117: {
 		if(p1==0)return -2;
 		pThis->setCurrentFont(*(QFont*)(p1));
 		break;
 	}
-	case 245120: {
+	case 245118: {
 		pThis->setOption(*(QFontDialog::FontDialogOption*)p1);
 		break;
 	}
-	case 245121: {
+	case 245119: {
 		pThis->setOption(*(QFontDialog::FontDialogOption*)p1,*(bool*)p2);
 		break;
 	}
-	case 245122: {
+	case 245120: {
 		pThis->setOptions(*(QFlags<QFontDialog::FontDialogOption>*)p1);
 		break;
 	}
-	case 245123: {
-		pThis->setVisible(*(bool*)p1);
-		break;
-	}
-	case 245124: {
+	case 245121: {
 		*(bool*)p2 = pThis->testOption(*(QFontDialog::FontDialogOption*)p1);
 		break;
 	}
@@ -26840,191 +25537,146 @@ int drv_QFormLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 246104: {
-		pThis->addItem((QLayoutItem*)(p1));
-		break;
-	}
-	case 246105: {
 		pThis->addRow((QLayout*)(p1));
 		break;
 	}
-	case 246106: {
+	case 246105: {
 		pThis->addRow((QWidget*)(p1));
 		break;
 	}
-	case 246107: {
+	case 246106: {
 		pThis->addRow(drvGetStringHead(p1),(QLayout*)(p2));
 		break;
 	}
-	case 246108: {
+	case 246107: {
 		pThis->addRow(drvGetStringHead(p1),(QWidget*)(p2));
 		break;
 	}
-	case 246109: {
+	case 246108: {
 		pThis->addRow((QWidget*)(p1),(QLayout*)(p2));
 		break;
 	}
-	case 246110: {
+	case 246109: {
 		pThis->addRow((QWidget*)(p1),(QWidget*)(p2));
 		break;
 	}
-	case 246111: {
-		*(int*)p1 = pThis->count();
-		break;
-	}
-	case 246112: {
-		*(QFlags<Qt::Orientation>*)p1 = pThis->expandingDirections();
-		break;
-	}
-	case 246113: {
+	case 246110: {
 		*(QFormLayout::FieldGrowthPolicy*)p1 = pThis->fieldGrowthPolicy();
 		break;
 	}
-	case 246114: {
+	case 246111: {
 		*(QFlags<Qt::AlignmentFlag>*)p1 = pThis->formAlignment();
 		break;
 	}
-	case 246115: {
+	case 246112: {
 		pThis->getItemPosition(*(int*)p1,*(int**)p2,*(QFormLayout::ItemRole**)p3);
 		break;
 	}
-	case 246116: {
+	case 246113: {
 		pThis->getLayoutPosition((QLayout*)(p1),*(int**)p2,*(QFormLayout::ItemRole**)p3);
 		break;
 	}
-	case 246117: {
+	case 246114: {
 		pThis->getWidgetPosition((QWidget*)(p1),*(int**)p2,*(QFormLayout::ItemRole**)p3);
 		break;
 	}
-	case 246118: {
-		*(bool*)p1 = pThis->hasHeightForWidth();
-		break;
-	}
-	case 246119: {
-		*(int*)p2 = pThis->heightForWidth(*(int*)p1);
-		break;
-	}
-	case 246120: {
+	case 246115: {
 		*(int*)p1 = pThis->horizontalSpacing();
 		break;
 	}
-	case 246121: {
+	case 246116: {
 		pThis->insertRow(*(int*)p1,(QLayout*)(p2));
 		break;
 	}
-	case 246122: {
+	case 246117: {
 		pThis->insertRow(*(int*)p1,(QWidget*)(p2));
 		break;
 	}
-	case 246123: {
+	case 246118: {
 		pThis->insertRow(*(int*)p1,drvGetStringHead(p2),(QLayout*)(p3));
 		break;
 	}
-	case 246124: {
+	case 246119: {
 		pThis->insertRow(*(int*)p1,drvGetStringHead(p2),(QWidget*)(p3));
 		break;
 	}
-	case 246125: {
+	case 246120: {
 		pThis->insertRow(*(int*)p1,(QWidget*)(p2),(QLayout*)(p3));
 		break;
 	}
-	case 246126: {
+	case 246121: {
 		pThis->insertRow(*(int*)p1,(QWidget*)(p2),(QWidget*)(p3));
 		break;
 	}
-	case 246127: {
-		pThis->invalidate();
-		break;
-	}
-	case 246128: {
-		*(void**)p2 = pThis->itemAt(*(int*)p1);
-		break;
-	}
-	case 246129: {
+	case 246122: {
 		*(void**)p3 = pThis->itemAt(*(int*)p1,*(QFormLayout::ItemRole*)p2);
 		break;
 	}
-	case 246130: {
+	case 246123: {
 		*(QFlags<Qt::AlignmentFlag>*)p1 = pThis->labelAlignment();
 		break;
 	}
-	case 246131: {
+	case 246124: {
 		*(void**)p2 = pThis->labelForField((QLayout*)(p1));
 		break;
 	}
-	case 246132: {
+	case 246125: {
 		*(void**)p2 = pThis->labelForField((QWidget*)(p1));
 		break;
 	}
-	case 246133: {
-		*(void**)p1 = new QSize(pThis->minimumSize());
-		break;
-	}
-	case 246134: {
+	case 246126: {
 		*(int*)p1 = pThis->rowCount();
 		break;
 	}
-	case 246135: {
+	case 246127: {
 		*(QFormLayout::RowWrapPolicy*)p1 = pThis->rowWrapPolicy();
 		break;
 	}
-	case 246136: {
+	case 246128: {
 		pThis->setFieldGrowthPolicy(*(QFormLayout::FieldGrowthPolicy*)p1);
 		break;
 	}
-	case 246137: {
+	case 246129: {
 		pThis->setFormAlignment(*(QFlags<Qt::AlignmentFlag>*)p1);
 		break;
 	}
-	case 246138: {
-		if(p1==0)return -2;
-		pThis->setGeometry(*(QRect*)(p1));
-		break;
-	}
-	case 246139: {
+	case 246130: {
 		pThis->setHorizontalSpacing(*(int*)p1);
 		break;
 	}
-	case 246140: {
+	case 246131: {
 		pThis->setItem(*(int*)p1,*(QFormLayout::ItemRole*)p2,(QLayoutItem*)(p3));
 		break;
 	}
-	case 246141: {
+	case 246132: {
 		pThis->setLabelAlignment(*(QFlags<Qt::AlignmentFlag>*)p1);
 		break;
 	}
-	case 246142: {
+	case 246133: {
 		pThis->setLayout(*(int*)p1,*(QFormLayout::ItemRole*)p2,(QLayout*)(p3));
 		break;
 	}
-	case 246143: {
+	case 246134: {
 		pThis->setRowWrapPolicy(*(QFormLayout::RowWrapPolicy*)p1);
 		break;
 	}
-	case 246144: {
+	case 246135: {
 		pThis->setSpacing(*(int*)p1);
 		break;
 	}
-	case 246145: {
+	case 246136: {
 		pThis->setVerticalSpacing(*(int*)p1);
 		break;
 	}
-	case 246146: {
+	case 246137: {
 		pThis->setWidget(*(int*)p1,*(QFormLayout::ItemRole*)p2,(QWidget*)(p3));
 		break;
 	}
-	case 246147: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 246148: {
+	case 246138: {
 		*(int*)p1 = pThis->spacing();
 		break;
 	}
-	case 246149: {
-		*(void**)p2 = pThis->takeAt(*(int*)p1);
-		break;
-	}
-	case 246150: {
+	case 246139: {
 		*(int*)p1 = pThis->verticalSpacing();
 		break;
 	}
@@ -27052,76 +25704,60 @@ int drv_QFrame(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 		break;
 	}
 	case 247104: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 247105: {
 		pThis->drawFrame((QPainter*)(p1));
 		break;
 	}
-	case 247106: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 247107: {
+	case 247105: {
 		*(void**)p1 = new QRect(pThis->frameRect());
 		break;
 	}
-	case 247108: {
+	case 247106: {
 		*(QFrame::Shadow*)p1 = pThis->frameShadow();
 		break;
 	}
-	case 247109: {
+	case 247107: {
 		*(QFrame::Shape*)p1 = pThis->frameShape();
 		break;
 	}
-	case 247110: {
+	case 247108: {
 		*(int*)p1 = pThis->frameStyle();
 		break;
 	}
-	case 247111: {
+	case 247109: {
 		*(int*)p1 = pThis->frameWidth();
 		break;
 	}
-	case 247112: {
+	case 247110: {
 		*(int*)p1 = pThis->lineWidth();
 		break;
 	}
-	case 247113: {
+	case 247111: {
 		*(int*)p1 = pThis->midLineWidth();
 		break;
 	}
-	case 247114: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 247115: {
+	case 247112: {
 		if(p1==0)return -2;
 		pThis->setFrameRect(*(QRect*)(p1));
 		break;
 	}
-	case 247116: {
+	case 247113: {
 		pThis->setFrameShadow(*(QFrame::Shadow*)p1);
 		break;
 	}
-	case 247117: {
+	case 247114: {
 		pThis->setFrameShape(*(QFrame::Shape*)p1);
 		break;
 	}
-	case 247118: {
+	case 247115: {
 		pThis->setFrameStyle(*(int*)p1);
 		break;
 	}
-	case 247119: {
+	case 247116: {
 		pThis->setLineWidth(*(int*)p1);
 		break;
 	}
-	case 247120: {
+	case 247117: {
 		pThis->setMidLineWidth(*(int*)p1);
-		break;
-	}
-	case 247121: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
 		break;
 	}
 	default:
@@ -27222,66 +25858,62 @@ int drv_QFutureWatcherBase(void *_p, int funcid, void* p1,void* p2,void* p3,void
 		break;
 	}
 	case 248115: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 248116: {
 		*(bool*)p1 = pThis->isCanceled();
 		break;
 	}
-	case 248117: {
+	case 248116: {
 		*(bool*)p1 = pThis->isFinished();
 		break;
 	}
-	case 248118: {
+	case 248117: {
 		*(bool*)p1 = pThis->isPaused();
 		break;
 	}
-	case 248119: {
+	case 248118: {
 		*(bool*)p1 = pThis->isRunning();
 		break;
 	}
-	case 248120: {
+	case 248119: {
 		*(bool*)p1 = pThis->isStarted();
 		break;
 	}
-	case 248121: {
+	case 248120: {
 		pThis->pause();
 		break;
 	}
-	case 248122: {
+	case 248121: {
 		*(int*)p1 = pThis->progressMaximum();
 		break;
 	}
-	case 248123: {
+	case 248122: {
 		*(int*)p1 = pThis->progressMinimum();
 		break;
 	}
-	case 248124: {
+	case 248123: {
 		drvSetString(p1,pThis->progressText());
 		break;
 	}
-	case 248125: {
+	case 248124: {
 		*(int*)p1 = pThis->progressValue();
 		break;
 	}
-	case 248126: {
+	case 248125: {
 		pThis->resume();
 		break;
 	}
-	case 248127: {
+	case 248126: {
 		pThis->setPaused(*(bool*)p1);
 		break;
 	}
-	case 248128: {
+	case 248127: {
 		pThis->setPendingResultsLimit(*(int*)p1);
 		break;
 	}
-	case 248129: {
+	case 248128: {
 		pThis->togglePaused();
 		break;
 	}
-	case 248130: {
+	case 248129: {
 		pThis->waitForFinished();
 		break;
 	}
@@ -27416,43 +26048,22 @@ int drv_QGraphicsAnchorLayout(void *_p, int funcid, void* p1,void* p2,void* p3,v
 		break;
 	}
 	case 251108: {
-		*(int*)p1 = pThis->count();
-		break;
-	}
-	case 251109: {
 		*(double*)p1 = pThis->horizontalSpacing();
 		break;
 	}
-	case 251110: {
-		pThis->invalidate();
-		break;
-	}
-	case 251111: {
-		*(void**)p2 = pThis->itemAt(*(int*)p1);
-		break;
-	}
-	case 251112: {
-		pThis->removeAt(*(int*)p1);
-		break;
-	}
-	case 251113: {
-		if(p1==0)return -2;
-		pThis->setGeometry(*(QRectF*)(p1));
-		break;
-	}
-	case 251114: {
+	case 251109: {
 		pThis->setHorizontalSpacing(*(double*)p1);
 		break;
 	}
-	case 251115: {
+	case 251110: {
 		pThis->setSpacing(*(double*)p1);
 		break;
 	}
-	case 251116: {
+	case 251111: {
 		pThis->setVerticalSpacing(*(double*)p1);
 		break;
 	}
-	case 251117: {
+	case 251112: {
 		*(double*)p1 = pThis->verticalSpacing();
 		break;
 	}
@@ -27502,19 +26113,10 @@ int drv_QGraphicsBlurEffect(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 		break;
 	}
 	case 252108: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QRectF(pThis->boundingRectFor(*(QRectF*)(p1)));
-		break;
-	}
-	case 252109: {
-		pThis->draw((QPainter*)(p1));
-		break;
-	}
-	case 252110: {
 		pThis->setBlurHints(*(QFlags<QGraphicsBlurEffect::BlurHint>*)p1);
 		break;
 	}
-	case 252111: {
+	case 252109: {
 		pThis->setBlurRadius(*(double*)p1);
 		break;
 	}
@@ -27560,19 +26162,15 @@ int drv_QGraphicsColorizeEffect(void *_p, int funcid, void* p1,void* p2,void* p3
 		break;
 	}
 	case 253107: {
-		pThis->draw((QPainter*)(p1));
-		break;
-	}
-	case 253108: {
 		if(p1==0)return -2;
 		pThis->setColor(*(QColor*)(p1));
 		break;
 	}
-	case 253109: {
+	case 253108: {
 		pThis->setStrength(*(double*)p1);
 		break;
 	}
-	case 253110: {
+	case 253109: {
 		*(double*)p1 = pThis->strength();
 		break;
 	}
@@ -27625,57 +26223,48 @@ int drv_QGraphicsDropShadowEffect(void *_p, int funcid, void* p1,void* p2,void* 
 		break;
 	}
 	case 254108: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QRectF(pThis->boundingRectFor(*(QRectF*)(p1)));
-		break;
-	}
-	case 254109: {
 		*(void**)p1 = new QColor(pThis->color());
 		break;
 	}
-	case 254110: {
-		pThis->draw((QPainter*)(p1));
-		break;
-	}
-	case 254111: {
+	case 254109: {
 		*(void**)p1 = new QPointF(pThis->offset());
 		break;
 	}
-	case 254112: {
+	case 254110: {
 		pThis->setBlurRadius(*(double*)p1);
 		break;
 	}
-	case 254113: {
+	case 254111: {
 		if(p1==0)return -2;
 		pThis->setColor(*(QColor*)(p1));
 		break;
 	}
-	case 254114: {
+	case 254112: {
 		if(p1==0)return -2;
 		pThis->setOffset(*(QPointF*)(p1));
 		break;
 	}
-	case 254115: {
+	case 254113: {
 		pThis->setOffset(*(double*)p1);
 		break;
 	}
-	case 254116: {
+	case 254114: {
 		pThis->setOffset(*(double*)p1,*(double*)p2);
 		break;
 	}
-	case 254117: {
+	case 254115: {
 		pThis->setXOffset(*(double*)p1);
 		break;
 	}
-	case 254118: {
+	case 254116: {
 		pThis->setYOffset(*(double*)p1);
 		break;
 	}
-	case 254119: {
+	case 254117: {
 		*(double*)p1 = pThis->xOffset();
 		break;
 	}
-	case 254120: {
+	case 254118: {
 		*(double*)p1 = pThis->yOffset();
 		break;
 	}
@@ -27783,57 +26372,32 @@ int drv_QGraphicsEllipseItem(void *_p, int funcid, void* p1,void* p2,void* p3,vo
 		break;
 	}
 	case 256106: {
-		*(void**)p1 = new QRectF(pThis->boundingRect());
+		*(void**)p1 = new QRectF(pThis->rect());
 		break;
 	}
 	case 256107: {
 		if(p1==0)return -2;
-		*(bool*)p2 = pThis->contains(*(QPointF*)(p1));
-		break;
-	}
-	case 256108: {
-		*(bool*)p2 = pThis->isObscuredBy((QGraphicsItem*)(p1));
-		break;
-	}
-	case 256109: {
-		*(void**)p1 = new QPainterPath(pThis->opaqueArea());
-		break;
-	}
-	case 256110: {
-		*(void**)p1 = new QRectF(pThis->rect());
-		break;
-	}
-	case 256111: {
-		if(p1==0)return -2;
 		pThis->setRect(*(QRectF*)(p1));
 		break;
 	}
-	case 256112: {
+	case 256108: {
 		pThis->setRect(*(double*)p1,*(double*)p2,*(double*)p3,*(double*)p4);
 		break;
 	}
-	case 256113: {
+	case 256109: {
 		pThis->setSpanAngle(*(int*)p1);
 		break;
 	}
-	case 256114: {
+	case 256110: {
 		pThis->setStartAngle(*(int*)p1);
 		break;
 	}
-	case 256115: {
-		*(void**)p1 = new QPainterPath(pThis->shape());
-		break;
-	}
-	case 256116: {
+	case 256111: {
 		*(int*)p1 = pThis->spanAngle();
 		break;
 	}
-	case 256117: {
+	case 256112: {
 		*(int*)p1 = pThis->startAngle();
-		break;
-	}
-	case 256118: {
-		*(int*)p1 = pThis->type();
 		break;
 	}
 	default:
@@ -27900,143 +26464,118 @@ int drv_QGraphicsGridLayout(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 		break;
 	}
 	case 257114: {
-		*(int*)p1 = pThis->count();
-		break;
-	}
-	case 257115: {
 		*(double*)p1 = pThis->horizontalSpacing();
 		break;
 	}
-	case 257116: {
-		pThis->invalidate();
-		break;
-	}
-	case 257117: {
-		*(void**)p2 = pThis->itemAt(*(int*)p1);
-		break;
-	}
-	case 257118: {
+	case 257115: {
 		*(void**)p3 = pThis->itemAt(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 257119: {
-		pThis->removeAt(*(int*)p1);
-		break;
-	}
-	case 257120: {
+	case 257116: {
 		*(QFlags<Qt::AlignmentFlag>*)p2 = pThis->rowAlignment(*(int*)p1);
 		break;
 	}
-	case 257121: {
+	case 257117: {
 		*(int*)p1 = pThis->rowCount();
 		break;
 	}
-	case 257122: {
+	case 257118: {
 		*(double*)p2 = pThis->rowMaximumHeight(*(int*)p1);
 		break;
 	}
-	case 257123: {
+	case 257119: {
 		*(double*)p2 = pThis->rowMinimumHeight(*(int*)p1);
 		break;
 	}
-	case 257124: {
+	case 257120: {
 		*(double*)p2 = pThis->rowPreferredHeight(*(int*)p1);
 		break;
 	}
-	case 257125: {
+	case 257121: {
 		*(double*)p2 = pThis->rowSpacing(*(int*)p1);
 		break;
 	}
-	case 257126: {
+	case 257122: {
 		*(int*)p2 = pThis->rowStretchFactor(*(int*)p1);
 		break;
 	}
-	case 257127: {
+	case 257123: {
 		pThis->setAlignment((QGraphicsLayoutItem*)(p1),*(QFlags<Qt::AlignmentFlag>*)p2);
 		break;
 	}
-	case 257128: {
+	case 257124: {
 		pThis->setColumnAlignment(*(int*)p1,*(QFlags<Qt::AlignmentFlag>*)p2);
 		break;
 	}
-	case 257129: {
+	case 257125: {
 		pThis->setColumnFixedWidth(*(int*)p1,*(double*)p2);
 		break;
 	}
-	case 257130: {
+	case 257126: {
 		pThis->setColumnMaximumWidth(*(int*)p1,*(double*)p2);
 		break;
 	}
-	case 257131: {
+	case 257127: {
 		pThis->setColumnMinimumWidth(*(int*)p1,*(double*)p2);
 		break;
 	}
-	case 257132: {
+	case 257128: {
 		pThis->setColumnPreferredWidth(*(int*)p1,*(double*)p2);
 		break;
 	}
-	case 257133: {
+	case 257129: {
 		pThis->setColumnSpacing(*(int*)p1,*(double*)p2);
 		break;
 	}
-	case 257134: {
+	case 257130: {
 		pThis->setColumnStretchFactor(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 257135: {
-		if(p1==0)return -2;
-		pThis->setGeometry(*(QRectF*)(p1));
-		break;
-	}
-	case 257136: {
+	case 257131: {
 		pThis->setHorizontalSpacing(*(double*)p1);
 		break;
 	}
-	case 257137: {
+	case 257132: {
 		pThis->setRowAlignment(*(int*)p1,*(QFlags<Qt::AlignmentFlag>*)p2);
 		break;
 	}
-	case 257138: {
+	case 257133: {
 		pThis->setRowFixedHeight(*(int*)p1,*(double*)p2);
 		break;
 	}
-	case 257139: {
+	case 257134: {
 		pThis->setRowMaximumHeight(*(int*)p1,*(double*)p2);
 		break;
 	}
-	case 257140: {
+	case 257135: {
 		pThis->setRowMinimumHeight(*(int*)p1,*(double*)p2);
 		break;
 	}
-	case 257141: {
+	case 257136: {
 		pThis->setRowPreferredHeight(*(int*)p1,*(double*)p2);
 		break;
 	}
-	case 257142: {
+	case 257137: {
 		pThis->setRowSpacing(*(int*)p1,*(double*)p2);
 		break;
 	}
-	case 257143: {
+	case 257138: {
 		pThis->setRowStretchFactor(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 257144: {
+	case 257139: {
 		pThis->setSpacing(*(double*)p1);
 		break;
 	}
-	case 257145: {
+	case 257140: {
 		pThis->setVerticalSpacing(*(double*)p1);
 		break;
 	}
-	case 257146: {
+	case 257141: {
 		*(void**)p2 = new QSizeF(pThis->sizeHint(*(Qt::SizeHint*)p1));
 		break;
 	}
-	case 257147: {
-		*(void**)p3 = new QSizeF(pThis->sizeHint(*(Qt::SizeHint*)p1,p2==0?QSizeF():*(QSizeF*)(p2)));
-		break;
-	}
-	case 257148: {
+	case 257142: {
 		*(double*)p1 = pThis->verticalSpacing();
 		break;
 	}
@@ -29007,23 +27546,7 @@ int drv_QGraphicsItemGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void
 		break;
 	}
 	case 260105: {
-		*(void**)p1 = new QRectF(pThis->boundingRect());
-		break;
-	}
-	case 260106: {
-		*(bool*)p2 = pThis->isObscuredBy((QGraphicsItem*)(p1));
-		break;
-	}
-	case 260107: {
-		*(void**)p1 = new QPainterPath(pThis->opaqueArea());
-		break;
-	}
-	case 260108: {
 		pThis->removeFromGroup((QGraphicsItem*)(p1));
-		break;
-	}
-	case 260109: {
-		*(int*)p1 = pThis->type();
 		break;
 	}
 	default:
@@ -29050,42 +27573,34 @@ int drv_QGraphicsLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	}
 	case 261104: {
-		pThis->getContentsMargins(*(double**)p1,*(double**)p2,*(double**)p3,*(double**)p4);
-		break;
-	}
-	case 261105: {
 		*(bool*)p1 = QGraphicsLayout::instantInvalidatePropagation();
 		break;
 	}
-	case 261106: {
+	case 261105: {
 		pThis->invalidate();
 		break;
 	}
-	case 261107: {
+	case 261106: {
 		*(bool*)p1 = pThis->isActivated();
 		break;
 	}
-	case 261108: {
+	case 261107: {
 		*(void**)p2 = pThis->itemAt(*(int*)p1);
 		break;
 	}
-	case 261109: {
+	case 261108: {
 		pThis->removeAt(*(int*)p1);
 		break;
 	}
-	case 261110: {
+	case 261109: {
 		pThis->setContentsMargins(*(double*)p1,*(double*)p2,*(double*)p3,*(double*)p4);
 		break;
 	}
-	case 261111: {
+	case 261110: {
 		QGraphicsLayout::setInstantInvalidatePropagation(*(bool*)p1);
 		break;
 	}
-	case 261112: {
-		pThis->updateGeometry();
-		break;
-	}
-	case 261113: {
+	case 261111: {
 		pThis->widgetEvent((QEvent*)(p1));
 		break;
 	}
@@ -29286,50 +27801,25 @@ int drv_QGraphicsLineItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 		break;
 	}
 	case 263106: {
-		*(void**)p1 = new QRectF(pThis->boundingRect());
-		break;
-	}
-	case 263107: {
-		if(p1==0)return -2;
-		*(bool*)p2 = pThis->contains(*(QPointF*)(p1));
-		break;
-	}
-	case 263108: {
-		*(bool*)p2 = pThis->isObscuredBy((QGraphicsItem*)(p1));
-		break;
-	}
-	case 263109: {
 		*(void**)p1 = new QLineF(pThis->line());
 		break;
 	}
-	case 263110: {
-		*(void**)p1 = new QPainterPath(pThis->opaqueArea());
-		break;
-	}
-	case 263111: {
+	case 263107: {
 		*(void**)p1 = new QPen(pThis->pen());
 		break;
 	}
-	case 263112: {
+	case 263108: {
 		if(p1==0)return -2;
 		pThis->setLine(*(QLineF*)(p1));
 		break;
 	}
-	case 263113: {
+	case 263109: {
 		pThis->setLine(*(double*)p1,*(double*)p2,*(double*)p3,*(double*)p4);
 		break;
 	}
-	case 263114: {
+	case 263110: {
 		if(p1==0)return -2;
 		pThis->setPen(*(QPen*)(p1));
-		break;
-	}
-	case 263115: {
-		*(void**)p1 = new QPainterPath(pThis->shape());
-		break;
-	}
-	case 263116: {
-		*(int*)p1 = pThis->type();
 		break;
 	}
 	default:
@@ -29376,91 +27866,66 @@ int drv_QGraphicsLinearLayout(void *_p, int funcid, void* p1,void* p2,void* p3,v
 		break;
 	}
 	case 264109: {
-		*(int*)p1 = pThis->count();
-		break;
-	}
-	case 264110: {
 		pThis->dump();
 		break;
 	}
-	case 264111: {
+	case 264110: {
 		pThis->dump(*(int*)p1);
 		break;
 	}
-	case 264112: {
+	case 264111: {
 		pThis->insertItem(*(int*)p1,(QGraphicsLayoutItem*)(p2));
 		break;
 	}
-	case 264113: {
+	case 264112: {
 		pThis->insertStretch(*(int*)p1);
 		break;
 	}
-	case 264114: {
+	case 264113: {
 		pThis->insertStretch(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 264115: {
-		pThis->invalidate();
-		break;
-	}
-	case 264116: {
-		*(void**)p2 = pThis->itemAt(*(int*)p1);
-		break;
-	}
-	case 264117: {
+	case 264114: {
 		*(double*)p2 = pThis->itemSpacing(*(int*)p1);
 		break;
 	}
-	case 264118: {
+	case 264115: {
 		*(Qt::Orientation*)p1 = pThis->orientation();
 		break;
 	}
-	case 264119: {
-		pThis->removeAt(*(int*)p1);
-		break;
-	}
-	case 264120: {
+	case 264116: {
 		pThis->removeItem((QGraphicsLayoutItem*)(p1));
 		break;
 	}
-	case 264121: {
+	case 264117: {
 		pThis->setAlignment((QGraphicsLayoutItem*)(p1),*(QFlags<Qt::AlignmentFlag>*)p2);
 		break;
 	}
-	case 264122: {
-		if(p1==0)return -2;
-		pThis->setGeometry(*(QRectF*)(p1));
-		break;
-	}
-	case 264123: {
+	case 264118: {
 		pThis->setItemSpacing(*(int*)p1,*(double*)p2);
 		break;
 	}
-	case 264124: {
+	case 264119: {
 		pThis->setOrientation(*(Qt::Orientation*)p1);
 		break;
 	}
-	case 264125: {
+	case 264120: {
 		pThis->setSpacing(*(double*)p1);
 		break;
 	}
-	case 264126: {
+	case 264121: {
 		pThis->setStretchFactor((QGraphicsLayoutItem*)(p1),*(int*)p2);
 		break;
 	}
-	case 264127: {
+	case 264122: {
 		*(void**)p2 = new QSizeF(pThis->sizeHint(*(Qt::SizeHint*)p1));
 		break;
 	}
-	case 264128: {
-		*(void**)p3 = new QSizeF(pThis->sizeHint(*(Qt::SizeHint*)p1,p2==0?QSizeF():*(QSizeF*)(p2)));
-		break;
-	}
-	case 264129: {
+	case 264123: {
 		*(double*)p1 = pThis->spacing();
 		break;
 	}
-	case 264130: {
+	case 264124: {
 		*(int*)p2 = pThis->stretchFactor((QGraphicsLayoutItem*)(p1));
 		break;
 	}
@@ -29621,22 +28086,18 @@ int drv_QGraphicsOpacityEffect(void *_p, int funcid, void* p1,void* p2,void* p3,
 		break;
 	}
 	case 266106: {
-		pThis->draw((QPainter*)(p1));
-		break;
-	}
-	case 266107: {
 		*(double*)p1 = pThis->opacity();
 		break;
 	}
-	case 266108: {
+	case 266107: {
 		*(void**)p1 = new QBrush(pThis->opacityMask());
 		break;
 	}
-	case 266109: {
+	case 266108: {
 		pThis->setOpacity(*(double*)p1);
 		break;
 	}
-	case 266110: {
+	case 266109: {
 		if(p1==0)return -2;
 		pThis->setOpacityMask(*(QBrush*)(p1));
 		break;
@@ -29670,37 +28131,12 @@ int drv_QGraphicsPathItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 		break;
 	}
 	case 267105: {
-		*(void**)p1 = new QRectF(pThis->boundingRect());
+		*(void**)p1 = new QPainterPath(pThis->path());
 		break;
 	}
 	case 267106: {
 		if(p1==0)return -2;
-		*(bool*)p2 = pThis->contains(*(QPointF*)(p1));
-		break;
-	}
-	case 267107: {
-		*(bool*)p2 = pThis->isObscuredBy((QGraphicsItem*)(p1));
-		break;
-	}
-	case 267108: {
-		*(void**)p1 = new QPainterPath(pThis->opaqueArea());
-		break;
-	}
-	case 267109: {
-		*(void**)p1 = new QPainterPath(pThis->path());
-		break;
-	}
-	case 267110: {
-		if(p1==0)return -2;
 		pThis->setPath(*(QPainterPath*)(p1));
-		break;
-	}
-	case 267111: {
-		*(void**)p1 = new QPainterPath(pThis->shape());
-		break;
-	}
-	case 267112: {
-		*(int*)p1 = pThis->type();
 		break;
 	}
 	default:
@@ -29732,66 +28168,41 @@ int drv_QGraphicsPixmapItem(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 		break;
 	}
 	case 268105: {
-		*(void**)p1 = new QRectF(pThis->boundingRect());
-		break;
-	}
-	case 268106: {
-		if(p1==0)return -2;
-		*(bool*)p2 = pThis->contains(*(QPointF*)(p1));
-		break;
-	}
-	case 268107: {
-		*(bool*)p2 = pThis->isObscuredBy((QGraphicsItem*)(p1));
-		break;
-	}
-	case 268108: {
 		*(void**)p1 = new QPointF(pThis->offset());
 		break;
 	}
-	case 268109: {
-		*(void**)p1 = new QPainterPath(pThis->opaqueArea());
-		break;
-	}
-	case 268110: {
+	case 268106: {
 		*(void**)p1 = new QPixmap(pThis->pixmap());
 		break;
 	}
-	case 268111: {
+	case 268107: {
 		if(p1==0)return -2;
 		pThis->setOffset(*(QPointF*)(p1));
 		break;
 	}
-	case 268112: {
+	case 268108: {
 		pThis->setOffset(*(double*)p1,*(double*)p2);
 		break;
 	}
-	case 268113: {
+	case 268109: {
 		if(p1==0)return -2;
 		pThis->setPixmap(*(QPixmap*)(p1));
 		break;
 	}
-	case 268114: {
+	case 268110: {
 		pThis->setShapeMode(*(QGraphicsPixmapItem::ShapeMode*)p1);
 		break;
 	}
-	case 268115: {
+	case 268111: {
 		pThis->setTransformationMode(*(Qt::TransformationMode*)p1);
 		break;
 	}
-	case 268116: {
-		*(void**)p1 = new QPainterPath(pThis->shape());
-		break;
-	}
-	case 268117: {
+	case 268112: {
 		*(QGraphicsPixmapItem::ShapeMode*)p1 = pThis->shapeMode();
 		break;
 	}
-	case 268118: {
+	case 268113: {
 		*(Qt::TransformationMode*)p1 = pThis->transformationMode();
-		break;
-	}
-	case 268119: {
-		*(int*)p1 = pThis->type();
 		break;
 	}
 	default:
@@ -29823,45 +28234,20 @@ int drv_QGraphicsPolygonItem(void *_p, int funcid, void* p1,void* p2,void* p3,vo
 		break;
 	}
 	case 269105: {
-		*(void**)p1 = new QRectF(pThis->boundingRect());
-		break;
-	}
-	case 269106: {
-		if(p1==0)return -2;
-		*(bool*)p2 = pThis->contains(*(QPointF*)(p1));
-		break;
-	}
-	case 269107: {
 		*(Qt::FillRule*)p1 = pThis->fillRule();
 		break;
 	}
-	case 269108: {
-		*(bool*)p2 = pThis->isObscuredBy((QGraphicsItem*)(p1));
-		break;
-	}
-	case 269109: {
-		*(void**)p1 = new QPainterPath(pThis->opaqueArea());
-		break;
-	}
-	case 269110: {
+	case 269106: {
 		*(void**)p1 = new QPolygonF(pThis->polygon());
 		break;
 	}
-	case 269111: {
+	case 269107: {
 		pThis->setFillRule(*(Qt::FillRule*)p1);
 		break;
 	}
-	case 269112: {
+	case 269108: {
 		if(p1==0)return -2;
 		pThis->setPolygon(*(QPolygonF*)(p1));
-		break;
-	}
-	case 269113: {
-		*(void**)p1 = new QPainterPath(pThis->shape());
-		break;
-	}
-	case 269114: {
-		*(int*)p1 = pThis->type();
 		break;
 	}
 	default:
@@ -29888,140 +28274,22 @@ int drv_QGraphicsProxyWidget(void *_p, int funcid, void* p1,void* p2,void* p3,vo
 		break;
 	}
 	case 270104: {
-		pThis->contextMenuEvent((QGraphicsSceneContextMenuEvent*)(p1));
-		break;
-	}
-	case 270105: {
 		*(void**)p2 = pThis->createProxyForChildWidget((QWidget*)(p1));
 		break;
 	}
-	case 270106: {
-		pThis->dragEnterEvent((QGraphicsSceneDragDropEvent*)(p1));
-		break;
-	}
-	case 270107: {
-		pThis->dragLeaveEvent((QGraphicsSceneDragDropEvent*)(p1));
-		break;
-	}
-	case 270108: {
-		pThis->dragMoveEvent((QGraphicsSceneDragDropEvent*)(p1));
-		break;
-	}
-	case 270109: {
-		pThis->dropEvent((QGraphicsSceneDragDropEvent*)(p1));
-		break;
-	}
-	case 270110: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 270111: {
-		*(bool*)p3 = pThis->eventFilter((QObject*)(p1),(QEvent*)(p2));
-		break;
-	}
-	case 270112: {
-		pThis->focusInEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 270113: {
-		*(bool*)p2 = pThis->focusNextPrevChild(*(bool*)p1);
-		break;
-	}
-	case 270114: {
-		pThis->focusOutEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 270115: {
-		pThis->grabMouseEvent((QEvent*)(p1));
-		break;
-	}
-	case 270116: {
-		pThis->hideEvent((QHideEvent*)(p1));
-		break;
-	}
-	case 270117: {
-		pThis->hoverEnterEvent((QGraphicsSceneHoverEvent*)(p1));
-		break;
-	}
-	case 270118: {
-		pThis->hoverLeaveEvent((QGraphicsSceneHoverEvent*)(p1));
-		break;
-	}
-	case 270119: {
-		pThis->hoverMoveEvent((QGraphicsSceneHoverEvent*)(p1));
-		break;
-	}
-	case 270120: {
-		if(p2==0)return -2;
-		*(void**)p3 = new QVariant(pThis->itemChange(*(QGraphicsItem::GraphicsItemChange*)p1,*(QVariant*)(p2)));
-		break;
-	}
-	case 270121: {
-		pThis->keyPressEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 270122: {
-		pThis->keyReleaseEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 270123: {
-		pThis->mouseDoubleClickEvent((QGraphicsSceneMouseEvent*)(p1));
-		break;
-	}
-	case 270124: {
-		pThis->mouseMoveEvent((QGraphicsSceneMouseEvent*)(p1));
-		break;
-	}
-	case 270125: {
-		pThis->mousePressEvent((QGraphicsSceneMouseEvent*)(p1));
-		break;
-	}
-	case 270126: {
-		pThis->mouseReleaseEvent((QGraphicsSceneMouseEvent*)(p1));
-		break;
-	}
-	case 270127: {
+	case 270105: {
 		*(void**)p2 = pThis->newProxyWidget((QWidget*)(p1));
 		break;
 	}
-	case 270128: {
-		pThis->resizeEvent((QGraphicsSceneResizeEvent*)(p1));
-		break;
-	}
-	case 270129: {
-		if(p1==0)return -2;
-		pThis->setGeometry(*(QRectF*)(p1));
-		break;
-	}
-	case 270130: {
+	case 270106: {
 		pThis->setWidget((QWidget*)(p1));
 		break;
 	}
-	case 270131: {
-		pThis->showEvent((QShowEvent*)(p1));
-		break;
-	}
-	case 270132: {
-		*(void**)p3 = new QSizeF(pThis->sizeHint(*(Qt::SizeHint*)p1,p2==0?QSizeF():*(QSizeF*)(p2)));
-		break;
-	}
-	case 270133: {
+	case 270107: {
 		*(void**)p2 = new QRectF(pThis->subWidgetRect((QWidget*)(p1)));
 		break;
 	}
-	case 270134: {
-		*(int*)p1 = pThis->type();
-		break;
-	}
-	case 270135: {
-		pThis->ungrabMouseEvent((QEvent*)(p1));
-		break;
-	}
-	case 270136: {
-		pThis->wheelEvent((QGraphicsSceneWheelEvent*)(p1));
-		break;
-	}
-	case 270137: {
+	case 270108: {
 		*(void**)p1 = pThis->widget();
 		break;
 	}
@@ -30058,41 +28326,16 @@ int drv_QGraphicsRectItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 		break;
 	}
 	case 271106: {
-		*(void**)p1 = new QRectF(pThis->boundingRect());
+		*(void**)p1 = new QRectF(pThis->rect());
 		break;
 	}
 	case 271107: {
 		if(p1==0)return -2;
-		*(bool*)p2 = pThis->contains(*(QPointF*)(p1));
-		break;
-	}
-	case 271108: {
-		*(bool*)p2 = pThis->isObscuredBy((QGraphicsItem*)(p1));
-		break;
-	}
-	case 271109: {
-		*(void**)p1 = new QPainterPath(pThis->opaqueArea());
-		break;
-	}
-	case 271110: {
-		*(void**)p1 = new QRectF(pThis->rect());
-		break;
-	}
-	case 271111: {
-		if(p1==0)return -2;
 		pThis->setRect(*(QRectF*)(p1));
 		break;
 	}
-	case 271112: {
+	case 271108: {
 		pThis->setRect(*(double*)p1,*(double*)p2,*(double*)p3,*(double*)p4);
-		break;
-	}
-	case 271113: {
-		*(void**)p1 = new QPainterPath(pThis->shape());
-		break;
-	}
-	case 271114: {
-		*(int*)p1 = pThis->type();
 		break;
 	}
 	default:
@@ -30487,312 +28730,304 @@ int drv_QGraphicsScene(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	}
 	case 274149: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 274150: {
-		*(bool*)p3 = pThis->eventFilter((QObject*)(p1),(QEvent*)(p2));
-		break;
-	}
-	case 274151: {
 		pThis->focusInEvent((QFocusEvent*)(p1));
 		break;
 	}
-	case 274152: {
+	case 274150: {
 		*(void**)p1 = pThis->focusItem();
 		break;
 	}
-	case 274153: {
+	case 274151: {
 		*(bool*)p2 = pThis->focusNextPrevChild(*(bool*)p1);
 		break;
 	}
-	case 274154: {
+	case 274152: {
 		pThis->focusOutEvent((QFocusEvent*)(p1));
 		break;
 	}
-	case 274155: {
+	case 274153: {
 		*(void**)p1 = new QFont(pThis->font());
 		break;
 	}
-	case 274156: {
+	case 274154: {
 		*(void**)p1 = new QBrush(pThis->foregroundBrush());
 		break;
 	}
-	case 274157: {
+	case 274155: {
 		*(bool*)p1 = pThis->hasFocus();
 		break;
 	}
-	case 274158: {
+	case 274156: {
 		*(double*)p1 = pThis->height();
 		break;
 	}
-	case 274159: {
+	case 274157: {
 		pThis->helpEvent((QGraphicsSceneHelpEvent*)(p1));
 		break;
 	}
-	case 274160: {
+	case 274158: {
 		pThis->inputMethodEvent((QInputMethodEvent*)(p1));
 		break;
 	}
-	case 274161: {
+	case 274159: {
 		*(void**)p2 = new QVariant(pThis->inputMethodQuery(*(Qt::InputMethodQuery*)p1));
 		break;
 	}
-	case 274162: {
+	case 274160: {
 		pThis->invalidate();
 		break;
 	}
-	case 274163: {
+	case 274161: {
 		pThis->invalidate(p1==0?QRectF():*(QRectF*)(p1),*(QFlags<QGraphicsScene::SceneLayer>*)p2);
 		break;
 	}
-	case 274164: {
+	case 274162: {
 		pThis->invalidate(*(double*)p1,*(double*)p2,*(double*)p3,*(double*)p4,*(QFlags<QGraphicsScene::SceneLayer>*)p5);
 		break;
 	}
-	case 274165: {
+	case 274163: {
 		*(bool*)p1 = pThis->isActive();
 		break;
 	}
-	case 274166: {
+	case 274164: {
 		*(bool*)p1 = pThis->isSortCacheEnabled();
 		break;
 	}
-	case 274167: {
+	case 274165: {
 		if(p1==0)return -2;
 	if(p2==0)return -2;
 		*(void**)p3 = pThis->itemAt(*(QPointF*)(p1),*(QTransform*)(p2));
 		break;
 	}
-	case 274168: {
+	case 274166: {
 		if(p3==0)return -2;
 		*(void**)p4 = pThis->itemAt(*(double*)p1,*(double*)p2,*(QTransform*)(p3));
 		break;
 	}
-	case 274169: {
+	case 274167: {
 		*(QGraphicsScene::ItemIndexMethod*)p1 = pThis->itemIndexMethod();
 		break;
 	}
-	case 274170: {
+	case 274168: {
 		drvSetListObj<QGraphicsItem*>(p1,258000,pThis->items());
 		break;
 	}
-	case 274171: {
+	case 274169: {
 		drvSetListObj<QGraphicsItem*>(p2,258000,pThis->items(*(Qt::SortOrder*)p1));
 		break;
 	}
-	case 274172: {
+	case 274170: {
 		if(p1==0)return -2;
 		drvSetListObj<QGraphicsItem*>(p5,258000,pThis->items(*(QPainterPath*)(p1),*(Qt::ItemSelectionMode*)p2,*(Qt::SortOrder*)p3,p4==0?QTransform():*(QTransform*)(p4)));
 		break;
 	}
-	case 274173: {
+	case 274171: {
 		if(p1==0)return -2;
 		drvSetListObj<QGraphicsItem*>(p5,258000,pThis->items(*(QPointF*)(p1),*(Qt::ItemSelectionMode*)p2,*(Qt::SortOrder*)p3,p4==0?QTransform():*(QTransform*)(p4)));
 		break;
 	}
-	case 274174: {
+	case 274172: {
 		if(p1==0)return -2;
 		drvSetListObj<QGraphicsItem*>(p5,258000,pThis->items(*(QPolygonF*)(p1),*(Qt::ItemSelectionMode*)p2,*(Qt::SortOrder*)p3,p4==0?QTransform():*(QTransform*)(p4)));
 		break;
 	}
-	case 274175: {
+	case 274173: {
 		if(p1==0)return -2;
 		drvSetListObj<QGraphicsItem*>(p5,258000,pThis->items(*(QRectF*)(p1),*(Qt::ItemSelectionMode*)p2,*(Qt::SortOrder*)p3,p4==0?QTransform():*(QTransform*)(p4)));
 		break;
 	}
-	case 274176: {
+	case 274174: {
 		drvSetListObj<QGraphicsItem*>(p8,258000,pThis->items(*(double*)p1,*(double*)p2,*(double*)p3,*(double*)p4,*(Qt::ItemSelectionMode*)p5,*(Qt::SortOrder*)p6,p7==0?QTransform():*(QTransform*)(p7)));
 		break;
 	}
-	case 274177: {
+	case 274175: {
 		*(void**)p1 = new QRectF(pThis->itemsBoundingRect());
 		break;
 	}
-	case 274178: {
+	case 274176: {
 		pThis->keyPressEvent((QKeyEvent*)(p1));
 		break;
 	}
-	case 274179: {
+	case 274177: {
 		pThis->keyReleaseEvent((QKeyEvent*)(p1));
 		break;
 	}
-	case 274180: {
+	case 274178: {
 		pThis->mouseDoubleClickEvent((QGraphicsSceneMouseEvent*)(p1));
 		break;
 	}
-	case 274181: {
+	case 274179: {
 		*(void**)p1 = pThis->mouseGrabberItem();
 		break;
 	}
-	case 274182: {
+	case 274180: {
 		pThis->mouseMoveEvent((QGraphicsSceneMouseEvent*)(p1));
 		break;
 	}
-	case 274183: {
+	case 274181: {
 		pThis->mousePressEvent((QGraphicsSceneMouseEvent*)(p1));
 		break;
 	}
-	case 274184: {
+	case 274182: {
 		pThis->mouseReleaseEvent((QGraphicsSceneMouseEvent*)(p1));
 		break;
 	}
-	case 274185: {
+	case 274183: {
 		*(void**)p1 = new QPalette(pThis->palette());
 		break;
 	}
-	case 274186: {
+	case 274184: {
 		pThis->removeItem((QGraphicsItem*)(p1));
 		break;
 	}
-	case 274187: {
+	case 274185: {
 		pThis->render((QPainter*)(p1));
 		break;
 	}
-	case 274188: {
+	case 274186: {
 		pThis->render((QPainter*)(p1),p2==0?QRectF():*(QRectF*)(p2),p3==0?QRectF():*(QRectF*)(p3),*(Qt::AspectRatioMode*)p4);
 		break;
 	}
-	case 274189: {
+	case 274187: {
 		*(void**)p1 = new QRectF(pThis->sceneRect());
 		break;
 	}
-	case 274190: {
+	case 274188: {
 		drvSetListObj<QGraphicsItem*>(p1,258000,pThis->selectedItems());
 		break;
 	}
-	case 274191: {
+	case 274189: {
 		*(void**)p1 = new QPainterPath(pThis->selectionArea());
 		break;
 	}
-	case 274192: {
+	case 274190: {
 		*(bool*)p3 = pThis->sendEvent((QGraphicsItem*)(p1),(QEvent*)(p2));
 		break;
 	}
-	case 274193: {
+	case 274191: {
 		pThis->setActivePanel((QGraphicsItem*)(p1));
 		break;
 	}
-	case 274194: {
+	case 274192: {
 		pThis->setActiveWindow((QGraphicsWidget*)(p1));
 		break;
 	}
-	case 274195: {
+	case 274193: {
 		if(p1==0)return -2;
 		pThis->setBackgroundBrush(*(QBrush*)(p1));
 		break;
 	}
-	case 274196: {
+	case 274194: {
 		pThis->setBspTreeDepth(*(int*)p1);
 		break;
 	}
-	case 274197: {
+	case 274195: {
 		pThis->setFocus();
 		break;
 	}
-	case 274198: {
+	case 274196: {
 		pThis->setFocus(*(Qt::FocusReason*)p1);
 		break;
 	}
-	case 274199: {
+	case 274197: {
 		pThis->setFocusItem((QGraphicsItem*)(p1));
 		break;
 	}
-	case 274200: {
+	case 274198: {
 		pThis->setFocusItem((QGraphicsItem*)(p1),*(Qt::FocusReason*)p2);
 		break;
 	}
-	case 274201: {
+	case 274199: {
 		if(p1==0)return -2;
 		pThis->setFont(*(QFont*)(p1));
 		break;
 	}
-	case 274202: {
+	case 274200: {
 		if(p1==0)return -2;
 		pThis->setForegroundBrush(*(QBrush*)(p1));
 		break;
 	}
-	case 274203: {
+	case 274201: {
 		pThis->setItemIndexMethod(*(QGraphicsScene::ItemIndexMethod*)p1);
 		break;
 	}
-	case 274204: {
+	case 274202: {
 		if(p1==0)return -2;
 		pThis->setPalette(*(QPalette*)(p1));
 		break;
 	}
-	case 274205: {
+	case 274203: {
 		if(p1==0)return -2;
 		pThis->setSceneRect(*(QRectF*)(p1));
 		break;
 	}
-	case 274206: {
+	case 274204: {
 		pThis->setSceneRect(*(double*)p1,*(double*)p2,*(double*)p3,*(double*)p4);
 		break;
 	}
-	case 274207: {
+	case 274205: {
 		if(p1==0)return -2;
 		pThis->setSelectionArea(*(QPainterPath*)(p1));
 		break;
 	}
-	case 274208: {
+	case 274206: {
 		if(p1==0)return -2;
 	if(p2==0)return -2;
 		pThis->setSelectionArea(*(QPainterPath*)(p1),*(QTransform*)(p2));
 		break;
 	}
-	case 274209: {
+	case 274207: {
 		if(p1==0)return -2;
 		pThis->setSelectionArea(*(QPainterPath*)(p1),*(Qt::ItemSelectionMode*)p2);
 		break;
 	}
-	case 274210: {
+	case 274208: {
 		if(p1==0)return -2;
 	if(p3==0)return -2;
 		pThis->setSelectionArea(*(QPainterPath*)(p1),*(Qt::ItemSelectionMode*)p2,*(QTransform*)(p3));
 		break;
 	}
-	case 274211: {
+	case 274209: {
 		pThis->setSortCacheEnabled(*(bool*)p1);
 		break;
 	}
-	case 274212: {
+	case 274210: {
 		pThis->setStickyFocus(*(bool*)p1);
 		break;
 	}
-	case 274213: {
+	case 274211: {
 		pThis->setStyle((QStyle*)(p1));
 		break;
 	}
-	case 274214: {
+	case 274212: {
 		*(bool*)p1 = pThis->stickyFocus();
 		break;
 	}
-	case 274215: {
+	case 274213: {
 		*(void**)p1 = pThis->style();
 		break;
 	}
-	case 274216: {
+	case 274214: {
 		pThis->update();
 		break;
 	}
-	case 274217: {
+	case 274215: {
 		pThis->update(p1==0?QRectF():*(QRectF*)(p1));
 		break;
 	}
-	case 274218: {
+	case 274216: {
 		pThis->update(*(double*)p1,*(double*)p2,*(double*)p3,*(double*)p4);
 		break;
 	}
-	case 274219: {
+	case 274217: {
 		drvSetListObj<QGraphicsView*>(p1,287000,pThis->views());
 		break;
 	}
-	case 274220: {
+	case 274218: {
 		pThis->wheelEvent((QGraphicsSceneWheelEvent*)(p1));
 		break;
 	}
-	case 274221: {
+	case 274219: {
 		*(double*)p1 = pThis->width();
 		break;
 	}
@@ -31437,45 +29672,20 @@ int drv_QGraphicsSimpleTextItem(void *_p, int funcid, void* p1,void* p2,void* p3
 		break;
 	}
 	case 284105: {
-		*(void**)p1 = new QRectF(pThis->boundingRect());
+		*(void**)p1 = new QFont(pThis->font());
 		break;
 	}
 	case 284106: {
 		if(p1==0)return -2;
-		*(bool*)p2 = pThis->contains(*(QPointF*)(p1));
-		break;
-	}
-	case 284107: {
-		*(void**)p1 = new QFont(pThis->font());
-		break;
-	}
-	case 284108: {
-		*(bool*)p2 = pThis->isObscuredBy((QGraphicsItem*)(p1));
-		break;
-	}
-	case 284109: {
-		*(void**)p1 = new QPainterPath(pThis->opaqueArea());
-		break;
-	}
-	case 284110: {
-		if(p1==0)return -2;
 		pThis->setFont(*(QFont*)(p1));
 		break;
 	}
-	case 284111: {
+	case 284107: {
 		pThis->setText(drvGetStringHead(p1));
 		break;
 	}
-	case 284112: {
-		*(void**)p1 = new QPainterPath(pThis->shape());
-		break;
-	}
-	case 284113: {
+	case 284108: {
 		drvSetString(p1,pThis->text());
-		break;
-	}
-	case 284114: {
-		*(int*)p1 = pThis->type();
 		break;
 	}
 	default:
@@ -31524,201 +29734,86 @@ int drv_QGraphicsTextItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 		break;
 	}
 	case 285108: {
-		*(void**)p1 = new QRectF(pThis->boundingRect());
-		break;
-	}
-	case 285109: {
-		if(p1==0)return -2;
-		*(bool*)p2 = pThis->contains(*(QPointF*)(p1));
-		break;
-	}
-	case 285110: {
-		pThis->contextMenuEvent((QGraphicsSceneContextMenuEvent*)(p1));
-		break;
-	}
-	case 285111: {
 		*(void**)p1 = new QColor(pThis->defaultTextColor());
 		break;
 	}
-	case 285112: {
+	case 285109: {
 		*(void**)p1 = pThis->document();
 		break;
 	}
-	case 285113: {
-		pThis->dragEnterEvent((QGraphicsSceneDragDropEvent*)(p1));
-		break;
-	}
-	case 285114: {
-		pThis->dragLeaveEvent((QGraphicsSceneDragDropEvent*)(p1));
-		break;
-	}
-	case 285115: {
-		pThis->dragMoveEvent((QGraphicsSceneDragDropEvent*)(p1));
-		break;
-	}
-	case 285116: {
-		pThis->dropEvent((QGraphicsSceneDragDropEvent*)(p1));
-		break;
-	}
-	case 285117: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QVariant(pThis->extension(*(QVariant*)(p1)));
-		break;
-	}
-	case 285118: {
-		pThis->focusInEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 285119: {
-		pThis->focusOutEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 285120: {
+	case 285110: {
 		*(void**)p1 = new QFont(pThis->font());
 		break;
 	}
-	case 285121: {
-		pThis->hoverEnterEvent((QGraphicsSceneHoverEvent*)(p1));
-		break;
-	}
-	case 285122: {
-		pThis->hoverLeaveEvent((QGraphicsSceneHoverEvent*)(p1));
-		break;
-	}
-	case 285123: {
-		pThis->hoverMoveEvent((QGraphicsSceneHoverEvent*)(p1));
-		break;
-	}
-	case 285124: {
-		pThis->inputMethodEvent((QInputMethodEvent*)(p1));
-		break;
-	}
-	case 285125: {
-		*(void**)p2 = new QVariant(pThis->inputMethodQuery(*(Qt::InputMethodQuery*)p1));
-		break;
-	}
-	case 285126: {
-		*(bool*)p2 = pThis->isObscuredBy((QGraphicsItem*)(p1));
-		break;
-	}
-	case 285127: {
-		pThis->keyPressEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 285128: {
-		pThis->keyReleaseEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 285129: {
-		pThis->mouseDoubleClickEvent((QGraphicsSceneMouseEvent*)(p1));
-		break;
-	}
-	case 285130: {
-		pThis->mouseMoveEvent((QGraphicsSceneMouseEvent*)(p1));
-		break;
-	}
-	case 285131: {
-		pThis->mousePressEvent((QGraphicsSceneMouseEvent*)(p1));
-		break;
-	}
-	case 285132: {
-		pThis->mouseReleaseEvent((QGraphicsSceneMouseEvent*)(p1));
-		break;
-	}
-	case 285133: {
-		*(void**)p1 = new QPainterPath(pThis->opaqueArea());
-		break;
-	}
-	case 285134: {
+	case 285111: {
 		*(bool*)p1 = pThis->openExternalLinks();
 		break;
 	}
-	case 285135: {
-		*(bool*)p2 = pThis->sceneEvent((QEvent*)(p1));
-		break;
-	}
-	case 285136: {
+	case 285112: {
 		if(p1==0)return -2;
 		pThis->setDefaultTextColor(*(QColor*)(p1));
 		break;
 	}
-	case 285137: {
+	case 285113: {
 		pThis->setDocument((QTextDocument*)(p1));
 		break;
 	}
-	case 285138: {
-		if(p2==0)return -2;
-		pThis->setExtension(*(QGraphicsItem::Extension*)p1,*(QVariant*)(p2));
-		break;
-	}
-	case 285139: {
+	case 285114: {
 		if(p1==0)return -2;
 		pThis->setFont(*(QFont*)(p1));
 		break;
 	}
-	case 285140: {
+	case 285115: {
 		pThis->setHtml(drvGetStringHead(p1));
 		break;
 	}
-	case 285141: {
+	case 285116: {
 		pThis->setOpenExternalLinks(*(bool*)p1);
 		break;
 	}
-	case 285142: {
+	case 285117: {
 		pThis->setPlainText(drvGetStringHead(p1));
 		break;
 	}
-	case 285143: {
+	case 285118: {
 		pThis->setTabChangesFocus(*(bool*)p1);
 		break;
 	}
-	case 285144: {
+	case 285119: {
 		if(p1==0)return -2;
 		pThis->setTextCursor(*(QTextCursor*)(p1));
 		break;
 	}
-	case 285145: {
+	case 285120: {
 		pThis->setTextInteractionFlags(*(QFlags<Qt::TextInteractionFlag>*)p1);
 		break;
 	}
-	case 285146: {
+	case 285121: {
 		pThis->setTextWidth(*(double*)p1);
 		break;
 	}
-	case 285147: {
-		*(void**)p1 = new QPainterPath(pThis->shape());
-		break;
-	}
-	case 285148: {
-		*(bool*)p2 = pThis->supportsExtension(*(QGraphicsItem::Extension*)p1);
-		break;
-	}
-	case 285149: {
+	case 285122: {
 		*(bool*)p1 = pThis->tabChangesFocus();
 		break;
 	}
-	case 285150: {
+	case 285123: {
 		*(void**)p1 = new QTextCursor(pThis->textCursor());
 		break;
 	}
-	case 285151: {
+	case 285124: {
 		*(QFlags<Qt::TextInteractionFlag>*)p1 = pThis->textInteractionFlags();
 		break;
 	}
-	case 285152: {
+	case 285125: {
 		*(double*)p1 = pThis->textWidth();
 		break;
 	}
-	case 285153: {
+	case 285126: {
 		drvSetString(p1,pThis->toHtml());
 		break;
 	}
-	case 285154: {
+	case 285127: {
 		drvSetString(p1,pThis->toPlainText());
-		break;
-	}
-	case 285155: {
-		*(int*)p1 = pThis->type();
 		break;
 	}
 	default:
@@ -31789,481 +29884,385 @@ int drv_QGraphicsView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 287110: {
-		pThis->contextMenuEvent((QContextMenuEvent*)(p1));
-		break;
-	}
-	case 287111: {
-		pThis->dragEnterEvent((QDragEnterEvent*)(p1));
-		break;
-	}
-	case 287112: {
-		pThis->dragLeaveEvent((QDragLeaveEvent*)(p1));
-		break;
-	}
-	case 287113: {
 		*(QGraphicsView::DragMode*)p1 = pThis->dragMode();
 		break;
 	}
-	case 287114: {
-		pThis->dragMoveEvent((QDragMoveEvent*)(p1));
-		break;
-	}
-	case 287115: {
+	case 287111: {
 		if(p2==0)return -2;
 		pThis->drawBackground((QPainter*)(p1),*(QRectF*)(p2));
 		break;
 	}
-	case 287116: {
+	case 287112: {
 		if(p2==0)return -2;
 		pThis->drawForeground((QPainter*)(p1),*(QRectF*)(p2));
 		break;
 	}
-	case 287117: {
-		pThis->dropEvent((QDropEvent*)(p1));
-		break;
-	}
-	case 287118: {
+	case 287113: {
 		pThis->ensureVisible((QGraphicsItem*)(p1));
 		break;
 	}
-	case 287119: {
+	case 287114: {
 		if(p1==0)return -2;
 		pThis->ensureVisible(*(QRectF*)(p1));
 		break;
 	}
-	case 287120: {
+	case 287115: {
 		pThis->ensureVisible((QGraphicsItem*)(p1),*(int*)p2,*(int*)p3);
 		break;
 	}
-	case 287121: {
+	case 287116: {
 		if(p1==0)return -2;
 		pThis->ensureVisible(*(QRectF*)(p1),*(int*)p2,*(int*)p3);
 		break;
 	}
-	case 287122: {
+	case 287117: {
 		pThis->ensureVisible(*(double*)p1,*(double*)p2,*(double*)p3,*(double*)p4,*(int*)p5,*(int*)p6);
 		break;
 	}
-	case 287123: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 287124: {
+	case 287118: {
 		pThis->fitInView((QGraphicsItem*)(p1));
 		break;
 	}
-	case 287125: {
+	case 287119: {
 		if(p1==0)return -2;
 		pThis->fitInView(*(QRectF*)(p1));
 		break;
 	}
-	case 287126: {
+	case 287120: {
 		pThis->fitInView((QGraphicsItem*)(p1),*(Qt::AspectRatioMode*)p2);
 		break;
 	}
-	case 287127: {
+	case 287121: {
 		if(p1==0)return -2;
 		pThis->fitInView(*(QRectF*)(p1),*(Qt::AspectRatioMode*)p2);
 		break;
 	}
-	case 287128: {
+	case 287122: {
 		pThis->fitInView(*(double*)p1,*(double*)p2,*(double*)p3,*(double*)p4,*(Qt::AspectRatioMode*)p5);
 		break;
 	}
-	case 287129: {
-		pThis->focusInEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 287130: {
-		*(bool*)p2 = pThis->focusNextPrevChild(*(bool*)p1);
-		break;
-	}
-	case 287131: {
-		pThis->focusOutEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 287132: {
+	case 287123: {
 		*(void**)p1 = new QBrush(pThis->foregroundBrush());
 		break;
 	}
-	case 287133: {
-		pThis->inputMethodEvent((QInputMethodEvent*)(p1));
-		break;
-	}
-	case 287134: {
-		*(void**)p2 = new QVariant(pThis->inputMethodQuery(*(Qt::InputMethodQuery*)p1));
-		break;
-	}
-	case 287135: {
+	case 287124: {
 		pThis->invalidateScene();
 		break;
 	}
-	case 287136: {
+	case 287125: {
 		pThis->invalidateScene(p1==0?QRectF():*(QRectF*)(p1),*(QFlags<QGraphicsScene::SceneLayer>*)p2);
 		break;
 	}
-	case 287137: {
+	case 287126: {
 		*(bool*)p1 = pThis->isInteractive();
 		break;
 	}
-	case 287138: {
+	case 287127: {
 		*(bool*)p1 = pThis->isTransformed();
 		break;
 	}
-	case 287139: {
+	case 287128: {
 		if(p1==0)return -2;
 		*(void**)p2 = pThis->itemAt(*(QPoint*)(p1));
 		break;
 	}
-	case 287140: {
+	case 287129: {
 		*(void**)p3 = pThis->itemAt(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 287141: {
+	case 287130: {
 		drvSetListObj<QGraphicsItem*>(p1,258000,pThis->items());
 		break;
 	}
-	case 287142: {
+	case 287131: {
 		if(p1==0)return -2;
 		drvSetListObj<QGraphicsItem*>(p2,258000,pThis->items(*(QPainterPath*)(p1)));
 		break;
 	}
-	case 287143: {
+	case 287132: {
 		if(p1==0)return -2;
 		drvSetListObj<QGraphicsItem*>(p2,258000,pThis->items(*(QPoint*)(p1)));
 		break;
 	}
-	case 287144: {
+	case 287133: {
 		if(p1==0)return -2;
 		drvSetListObj<QGraphicsItem*>(p2,258000,pThis->items(*(QPolygon*)(p1)));
 		break;
 	}
-	case 287145: {
+	case 287134: {
 		if(p1==0)return -2;
 		drvSetListObj<QGraphicsItem*>(p2,258000,pThis->items(*(QRect*)(p1)));
 		break;
 	}
-	case 287146: {
+	case 287135: {
 		if(p1==0)return -2;
 		drvSetListObj<QGraphicsItem*>(p3,258000,pThis->items(*(QPainterPath*)(p1),*(Qt::ItemSelectionMode*)p2));
 		break;
 	}
-	case 287147: {
+	case 287136: {
 		if(p1==0)return -2;
 		drvSetListObj<QGraphicsItem*>(p3,258000,pThis->items(*(QPolygon*)(p1),*(Qt::ItemSelectionMode*)p2));
 		break;
 	}
-	case 287148: {
+	case 287137: {
 		if(p1==0)return -2;
 		drvSetListObj<QGraphicsItem*>(p3,258000,pThis->items(*(QRect*)(p1),*(Qt::ItemSelectionMode*)p2));
 		break;
 	}
-	case 287149: {
+	case 287138: {
 		drvSetListObj<QGraphicsItem*>(p3,258000,pThis->items(*(int*)p1,*(int*)p2));
 		break;
 	}
-	case 287150: {
+	case 287139: {
 		drvSetListObj<QGraphicsItem*>(p6,258000,pThis->items(*(int*)p1,*(int*)p2,*(int*)p3,*(int*)p4,*(Qt::ItemSelectionMode*)p5));
 		break;
 	}
-	case 287151: {
-		pThis->keyPressEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 287152: {
-		pThis->keyReleaseEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 287153: {
+	case 287140: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QPainterPath(pThis->mapFromScene(*(QPainterPath*)(p1)));
 		break;
 	}
-	case 287154: {
+	case 287141: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QPoint(pThis->mapFromScene(*(QPointF*)(p1)));
 		break;
 	}
-	case 287155: {
+	case 287142: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QPolygon(pThis->mapFromScene(*(QPolygonF*)(p1)));
 		break;
 	}
-	case 287156: {
+	case 287143: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QPolygon(pThis->mapFromScene(*(QRectF*)(p1)));
 		break;
 	}
-	case 287157: {
+	case 287144: {
 		*(void**)p3 = new QPoint(pThis->mapFromScene(*(double*)p1,*(double*)p2));
 		break;
 	}
-	case 287158: {
+	case 287145: {
 		*(void**)p5 = new QPolygon(pThis->mapFromScene(*(double*)p1,*(double*)p2,*(double*)p3,*(double*)p4));
 		break;
 	}
-	case 287159: {
+	case 287146: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QPainterPath(pThis->mapToScene(*(QPainterPath*)(p1)));
 		break;
 	}
-	case 287160: {
+	case 287147: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QPointF(pThis->mapToScene(*(QPoint*)(p1)));
 		break;
 	}
-	case 287161: {
+	case 287148: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QPolygonF(pThis->mapToScene(*(QPolygon*)(p1)));
 		break;
 	}
-	case 287162: {
+	case 287149: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QPolygonF(pThis->mapToScene(*(QRect*)(p1)));
 		break;
 	}
-	case 287163: {
+	case 287150: {
 		*(void**)p3 = new QPointF(pThis->mapToScene(*(int*)p1,*(int*)p2));
 		break;
 	}
-	case 287164: {
+	case 287151: {
 		*(void**)p5 = new QPolygonF(pThis->mapToScene(*(int*)p1,*(int*)p2,*(int*)p3,*(int*)p4));
 		break;
 	}
-	case 287165: {
+	case 287152: {
 		*(void**)p1 = new QMatrix(pThis->matrix());
 		break;
 	}
-	case 287166: {
-		pThis->mouseDoubleClickEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 287167: {
-		pThis->mouseMoveEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 287168: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 287169: {
-		pThis->mouseReleaseEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 287170: {
+	case 287153: {
 		*(QFlags<QGraphicsView::OptimizationFlag>*)p1 = pThis->optimizationFlags();
 		break;
 	}
-	case 287171: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 287172: {
+	case 287154: {
 		pThis->render((QPainter*)(p1));
 		break;
 	}
-	case 287173: {
+	case 287155: {
 		pThis->render((QPainter*)(p1),p2==0?QRectF():*(QRectF*)(p2),p3==0?QRect():*(QRect*)(p3),*(Qt::AspectRatioMode*)p4);
 		break;
 	}
-	case 287174: {
+	case 287156: {
 		*(QFlags<QPainter::RenderHint>*)p1 = pThis->renderHints();
 		break;
 	}
-	case 287175: {
+	case 287157: {
 		pThis->resetCachedContent();
 		break;
 	}
-	case 287176: {
+	case 287158: {
 		pThis->resetMatrix();
 		break;
 	}
-	case 287177: {
+	case 287159: {
 		pThis->resetTransform();
 		break;
 	}
-	case 287178: {
+	case 287160: {
 		*(QGraphicsView::ViewportAnchor*)p1 = pThis->resizeAnchor();
 		break;
 	}
-	case 287179: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 287180: {
+	case 287161: {
 		pThis->rotate(*(double*)p1);
 		break;
 	}
-	case 287181: {
+	case 287162: {
 		*(Qt::ItemSelectionMode*)p1 = pThis->rubberBandSelectionMode();
 		break;
 	}
-	case 287182: {
+	case 287163: {
 		pThis->scale(*(double*)p1,*(double*)p2);
 		break;
 	}
-	case 287183: {
+	case 287164: {
 		*(void**)p1 = pThis->scene();
 		break;
 	}
-	case 287184: {
+	case 287165: {
 		*(void**)p1 = new QRectF(pThis->sceneRect());
 		break;
 	}
-	case 287185: {
-		pThis->scrollContentsBy(*(int*)p1,*(int*)p2);
-		break;
-	}
-	case 287186: {
+	case 287166: {
 		pThis->setAlignment(*(QFlags<Qt::AlignmentFlag>*)p1);
 		break;
 	}
-	case 287187: {
+	case 287167: {
 		if(p1==0)return -2;
 		pThis->setBackgroundBrush(*(QBrush*)(p1));
 		break;
 	}
-	case 287188: {
+	case 287168: {
 		pThis->setCacheMode(*(QFlags<QGraphicsView::CacheModeFlag>*)p1);
 		break;
 	}
-	case 287189: {
+	case 287169: {
 		pThis->setDragMode(*(QGraphicsView::DragMode*)p1);
 		break;
 	}
-	case 287190: {
+	case 287170: {
 		if(p1==0)return -2;
 		pThis->setForegroundBrush(*(QBrush*)(p1));
 		break;
 	}
-	case 287191: {
+	case 287171: {
 		pThis->setInteractive(*(bool*)p1);
 		break;
 	}
-	case 287192: {
+	case 287172: {
 		if(p1==0)return -2;
 		pThis->setMatrix(*(QMatrix*)(p1));
 		break;
 	}
-	case 287193: {
+	case 287173: {
 		if(p1==0)return -2;
 		pThis->setMatrix(*(QMatrix*)(p1),*(bool*)p2);
 		break;
 	}
-	case 287194: {
+	case 287174: {
 		pThis->setOptimizationFlag(*(QGraphicsView::OptimizationFlag*)p1);
 		break;
 	}
-	case 287195: {
+	case 287175: {
 		pThis->setOptimizationFlag(*(QGraphicsView::OptimizationFlag*)p1,*(bool*)p2);
 		break;
 	}
-	case 287196: {
+	case 287176: {
 		pThis->setOptimizationFlags(*(QFlags<QGraphicsView::OptimizationFlag>*)p1);
 		break;
 	}
-	case 287197: {
+	case 287177: {
 		pThis->setRenderHint(*(QPainter::RenderHint*)p1);
 		break;
 	}
-	case 287198: {
+	case 287178: {
 		pThis->setRenderHint(*(QPainter::RenderHint*)p1,*(bool*)p2);
 		break;
 	}
-	case 287199: {
+	case 287179: {
 		pThis->setRenderHints(*(QFlags<QPainter::RenderHint>*)p1);
 		break;
 	}
-	case 287200: {
+	case 287180: {
 		pThis->setResizeAnchor(*(QGraphicsView::ViewportAnchor*)p1);
 		break;
 	}
-	case 287201: {
+	case 287181: {
 		pThis->setRubberBandSelectionMode(*(Qt::ItemSelectionMode*)p1);
 		break;
 	}
-	case 287202: {
+	case 287182: {
 		pThis->setScene((QGraphicsScene*)(p1));
 		break;
 	}
-	case 287203: {
+	case 287183: {
 		if(p1==0)return -2;
 		pThis->setSceneRect(*(QRectF*)(p1));
 		break;
 	}
-	case 287204: {
+	case 287184: {
 		pThis->setSceneRect(*(double*)p1,*(double*)p2,*(double*)p3,*(double*)p4);
 		break;
 	}
-	case 287205: {
+	case 287185: {
 		if(p1==0)return -2;
 		pThis->setTransform(*(QTransform*)(p1));
 		break;
 	}
-	case 287206: {
+	case 287186: {
 		if(p1==0)return -2;
 		pThis->setTransform(*(QTransform*)(p1),*(bool*)p2);
 		break;
 	}
-	case 287207: {
+	case 287187: {
 		pThis->setTransformationAnchor(*(QGraphicsView::ViewportAnchor*)p1);
 		break;
 	}
-	case 287208: {
+	case 287188: {
 		pThis->setViewportUpdateMode(*(QGraphicsView::ViewportUpdateMode*)p1);
 		break;
 	}
-	case 287209: {
+	case 287189: {
 		pThis->setupViewport((QWidget*)(p1));
 		break;
 	}
-	case 287210: {
+	case 287190: {
 		pThis->shear(*(double*)p1,*(double*)p2);
 		break;
 	}
-	case 287211: {
-		pThis->showEvent((QShowEvent*)(p1));
-		break;
-	}
-	case 287212: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 287213: {
+	case 287191: {
 		*(void**)p1 = new QTransform(pThis->transform());
 		break;
 	}
-	case 287214: {
+	case 287192: {
 		*(QGraphicsView::ViewportAnchor*)p1 = pThis->transformationAnchor();
 		break;
 	}
-	case 287215: {
+	case 287193: {
 		pThis->translate(*(double*)p1,*(double*)p2);
 		break;
 	}
-	case 287216: {
+	case 287194: {
 		pThis->updateScene(drvGetNoObjectArrayHeadT<QRectF>(p1));
 		break;
 	}
-	case 287217: {
+	case 287195: {
 		if(p1==0)return -2;
 		pThis->updateSceneRect(*(QRectF*)(p1));
 		break;
 	}
-	case 287218: {
-		*(bool*)p2 = pThis->viewportEvent((QEvent*)(p1));
-		break;
-	}
-	case 287219: {
+	case 287196: {
 		*(void**)p1 = new QTransform(pThis->viewportTransform());
 		break;
 	}
-	case 287220: {
+	case 287197: {
 		*(QGraphicsView::ViewportUpdateMode*)p1 = pThis->viewportUpdateMode();
-		break;
-	}
-	case 287221: {
-		pThis->wheelEvent((QWheelEvent*)(p1));
 		break;
 	}
 	default:
@@ -32324,319 +30323,261 @@ int drv_QGraphicsWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	}
 	case 288111: {
-		*(void**)p1 = new QRectF(pThis->boundingRect());
-		break;
-	}
-	case 288112: {
 		pThis->changeEvent((QEvent*)(p1));
 		break;
 	}
-	case 288113: {
+	case 288112: {
 		drvSetObjectArray(p1,316000,pThis->children());
 		break;
 	}
-	case 288114: {
+	case 288113: {
 		*(bool*)p1 = pThis->close();
 		break;
 	}
-	case 288115: {
+	case 288114: {
 		pThis->closeEvent((QCloseEvent*)(p1));
 		break;
 	}
-	case 288116: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 288117: {
-		pThis->focusInEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 288118: {
+	case 288115: {
 		*(bool*)p2 = pThis->focusNextPrevChild(*(bool*)p1);
 		break;
 	}
-	case 288119: {
-		pThis->focusOutEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 288120: {
+	case 288116: {
 		*(Qt::FocusPolicy*)p1 = pThis->focusPolicy();
 		break;
 	}
-	case 288121: {
+	case 288117: {
 		*(void**)p1 = pThis->focusWidget();
 		break;
 	}
-	case 288122: {
+	case 288118: {
 		*(void**)p1 = new QFont(pThis->font());
 		break;
 	}
-	case 288123: {
-		pThis->getContentsMargins(*(double**)p1,*(double**)p2,*(double**)p3,*(double**)p4);
-		break;
-	}
-	case 288124: {
+	case 288119: {
 		pThis->getWindowFrameMargins(*(double**)p1,*(double**)p2,*(double**)p3,*(double**)p4);
 		break;
 	}
-	case 288125: {
+	case 288120: {
 		pThis->grabKeyboardEvent((QEvent*)(p1));
 		break;
 	}
-	case 288126: {
+	case 288121: {
 		pThis->grabMouseEvent((QEvent*)(p1));
 		break;
 	}
-	case 288127: {
+	case 288122: {
 		if(p1==0)return -2;
 		*(int*)p2 = pThis->grabShortcut(*(QKeySequence*)(p1));
 		break;
 	}
-	case 288128: {
+	case 288123: {
 		if(p1==0)return -2;
 		*(int*)p3 = pThis->grabShortcut(*(QKeySequence*)(p1),*(Qt::ShortcutContext*)p2);
 		break;
 	}
-	case 288129: {
+	case 288124: {
 		pThis->hideEvent((QHideEvent*)(p1));
 		break;
 	}
-	case 288130: {
-		pThis->hoverLeaveEvent((QGraphicsSceneHoverEvent*)(p1));
-		break;
-	}
-	case 288131: {
-		pThis->hoverMoveEvent((QGraphicsSceneHoverEvent*)(p1));
-		break;
-	}
-	case 288132: {
+	case 288125: {
 		pThis->insertAction((QAction*)(p1),(QAction*)(p2));
 		break;
 	}
-	case 288133: {
+	case 288126: {
 		pThis->insertActions((QAction*)(p1),drvGetObjectArrayHeadT<QAction*>(p2));
 		break;
 	}
-	case 288134: {
+	case 288127: {
 		*(bool*)p1 = pThis->isActiveWindow();
 		break;
 	}
-	case 288135: {
-		if(p2==0)return -2;
-		*(void**)p3 = new QVariant(pThis->itemChange(*(QGraphicsItem::GraphicsItemChange*)p1,*(QVariant*)(p2)));
-		break;
-	}
-	case 288136: {
+	case 288128: {
 		*(void**)p1 = pThis->layout();
 		break;
 	}
-	case 288137: {
+	case 288129: {
 		*(Qt::LayoutDirection*)p1 = pThis->layoutDirection();
 		break;
 	}
-	case 288138: {
+	case 288130: {
 		pThis->moveEvent((QGraphicsSceneMoveEvent*)(p1));
 		break;
 	}
-	case 288139: {
+	case 288131: {
 		*(void**)p1 = new QPalette(pThis->palette());
 		break;
 	}
-	case 288140: {
+	case 288132: {
 		pThis->polishEvent();
 		break;
 	}
-	case 288141: {
+	case 288133: {
 		if(p2==0)return -2;
 		*(void**)p3 = new QVariant(pThis->propertyChange(drvGetStringHead(p1),*(QVariant*)(p2)));
 		break;
 	}
-	case 288142: {
+	case 288134: {
 		*(void**)p1 = new QRectF(pThis->rect());
 		break;
 	}
-	case 288143: {
+	case 288135: {
 		pThis->releaseShortcut(*(int*)p1);
 		break;
 	}
-	case 288144: {
+	case 288136: {
 		pThis->removeAction((QAction*)(p1));
 		break;
 	}
-	case 288145: {
+	case 288137: {
 		if(p1==0)return -2;
 		pThis->resize(*(QSizeF*)(p1));
 		break;
 	}
-	case 288146: {
+	case 288138: {
 		pThis->resize(*(double*)p1,*(double*)p2);
 		break;
 	}
-	case 288147: {
+	case 288139: {
 		pThis->resizeEvent((QGraphicsSceneResizeEvent*)(p1));
 		break;
 	}
-	case 288148: {
-		*(bool*)p2 = pThis->sceneEvent((QEvent*)(p1));
-		break;
-	}
-	case 288149: {
+	case 288140: {
 		pThis->setAttribute(*(Qt::WidgetAttribute*)p1);
 		break;
 	}
-	case 288150: {
+	case 288141: {
 		pThis->setAttribute(*(Qt::WidgetAttribute*)p1,*(bool*)p2);
 		break;
 	}
-	case 288151: {
+	case 288142: {
 		pThis->setAutoFillBackground(*(bool*)p1);
 		break;
 	}
-	case 288152: {
+	case 288143: {
 		pThis->setContentsMargins(*(double*)p1,*(double*)p2,*(double*)p3,*(double*)p4);
 		break;
 	}
-	case 288153: {
+	case 288144: {
 		pThis->setFocusPolicy(*(Qt::FocusPolicy*)p1);
 		break;
 	}
-	case 288154: {
+	case 288145: {
 		if(p1==0)return -2;
 		pThis->setFont(*(QFont*)(p1));
 		break;
 	}
-	case 288155: {
-		if(p1==0)return -2;
-		pThis->setGeometry(*(QRectF*)(p1));
-		break;
-	}
-	case 288156: {
+	case 288146: {
 		pThis->setGeometry(*(double*)p1,*(double*)p2,*(double*)p3,*(double*)p4);
 		break;
 	}
-	case 288157: {
+	case 288147: {
 		pThis->setLayout((QGraphicsLayout*)(p1));
 		break;
 	}
-	case 288158: {
+	case 288148: {
 		pThis->setLayoutDirection(*(Qt::LayoutDirection*)p1);
 		break;
 	}
-	case 288159: {
+	case 288149: {
 		if(p1==0)return -2;
 		pThis->setPalette(*(QPalette*)(p1));
 		break;
 	}
-	case 288160: {
+	case 288150: {
 		pThis->setShortcutAutoRepeat(*(int*)p1);
 		break;
 	}
-	case 288161: {
+	case 288151: {
 		pThis->setShortcutAutoRepeat(*(int*)p1,*(bool*)p2);
 		break;
 	}
-	case 288162: {
+	case 288152: {
 		pThis->setShortcutEnabled(*(int*)p1);
 		break;
 	}
-	case 288163: {
+	case 288153: {
 		pThis->setShortcutEnabled(*(int*)p1,*(bool*)p2);
 		break;
 	}
-	case 288164: {
+	case 288154: {
 		pThis->setStyle((QStyle*)(p1));
 		break;
 	}
-	case 288165: {
+	case 288155: {
 		QGraphicsWidget::setTabOrder((QGraphicsWidget*)(p1),(QGraphicsWidget*)(p2));
 		break;
 	}
-	case 288166: {
+	case 288156: {
 		pThis->setWindowFlags(*(QFlags<Qt::WindowType>*)p1);
 		break;
 	}
-	case 288167: {
+	case 288157: {
 		pThis->setWindowFrameMargins(*(double*)p1,*(double*)p2,*(double*)p3,*(double*)p4);
 		break;
 	}
-	case 288168: {
+	case 288158: {
 		pThis->setWindowTitle(drvGetStringHead(p1));
 		break;
 	}
-	case 288169: {
-		*(void**)p1 = new QPainterPath(pThis->shape());
-		break;
-	}
-	case 288170: {
+	case 288159: {
 		pThis->showEvent((QShowEvent*)(p1));
 		break;
 	}
-	case 288171: {
+	case 288160: {
 		*(void**)p1 = new QSizeF(pThis->size());
 		break;
 	}
-	case 288172: {
-		*(void**)p3 = new QSizeF(pThis->sizeHint(*(Qt::SizeHint*)p1,p2==0?QSizeF():*(QSizeF*)(p2)));
-		break;
-	}
-	case 288173: {
+	case 288161: {
 		*(void**)p1 = pThis->style();
 		break;
 	}
-	case 288174: {
+	case 288162: {
 		*(bool*)p2 = pThis->testAttribute(*(Qt::WidgetAttribute*)p1);
 		break;
 	}
-	case 288175: {
-		*(int*)p1 = pThis->type();
-		break;
-	}
-	case 288176: {
+	case 288163: {
 		pThis->ungrabKeyboardEvent((QEvent*)(p1));
 		break;
 	}
-	case 288177: {
+	case 288164: {
 		pThis->ungrabMouseEvent((QEvent*)(p1));
 		break;
 	}
-	case 288178: {
+	case 288165: {
 		pThis->unsetLayoutDirection();
 		break;
 	}
-	case 288179: {
+	case 288166: {
 		pThis->unsetWindowFrameMargins();
 		break;
 	}
-	case 288180: {
-		pThis->updateGeometry();
-		break;
-	}
-	case 288181: {
+	case 288167: {
 		*(QFlags<Qt::WindowType>*)p1 = pThis->windowFlags();
 		break;
 	}
-	case 288182: {
+	case 288168: {
 		*(bool*)p2 = pThis->windowFrameEvent((QEvent*)(p1));
 		break;
 	}
-	case 288183: {
+	case 288169: {
 		*(void**)p1 = new QRectF(pThis->windowFrameGeometry());
 		break;
 	}
-	case 288184: {
+	case 288170: {
 		*(void**)p1 = new QRectF(pThis->windowFrameRect());
 		break;
 	}
-	case 288185: {
+	case 288171: {
 		if(p1==0)return -2;
 		*(Qt::WindowFrameSection*)p2 = pThis->windowFrameSectionAt(*(QPointF*)(p1));
 		break;
 	}
-	case 288186: {
+	case 288172: {
 		drvSetString(p1,pThis->windowTitle());
 		break;
 	}
-	case 288187: {
+	case 288173: {
 		*(Qt::WindowType*)p1 = pThis->windowType();
 		break;
 	}
@@ -32664,167 +30605,114 @@ int drv_QGridLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 289104: {
-		pThis->addItem((QLayoutItem*)(p1));
-		break;
-	}
-	case 289105: {
 		pThis->addItem((QLayoutItem*)(p1),*(int*)p2,*(int*)p3,*(int*)p4,*(int*)p5,*(QFlags<Qt::AlignmentFlag>*)p6);
 		break;
 	}
-	case 289106: {
+	case 289105: {
 		pThis->addLayout((QLayout*)(p1),*(int*)p2,*(int*)p3,*(QFlags<Qt::AlignmentFlag>*)p4);
 		break;
 	}
-	case 289107: {
+	case 289106: {
 		pThis->addLayout((QLayout*)(p1),*(int*)p2,*(int*)p3,*(int*)p4,*(int*)p5,*(QFlags<Qt::AlignmentFlag>*)p6);
 		break;
 	}
-	case 289108: {
+	case 289107: {
 		pThis->addWidget((QWidget*)(p1));
 		break;
 	}
-	case 289109: {
+	case 289108: {
 		pThis->addWidget((QWidget*)(p1),*(int*)p2,*(int*)p3,*(QFlags<Qt::AlignmentFlag>*)p4);
 		break;
 	}
-	case 289110: {
+	case 289109: {
 		pThis->addWidget((QWidget*)(p1),*(int*)p2,*(int*)p3,*(int*)p4,*(int*)p5,*(QFlags<Qt::AlignmentFlag>*)p6);
 		break;
 	}
-	case 289111: {
+	case 289110: {
 		*(void**)p3 = new QRect(pThis->cellRect(*(int*)p1,*(int*)p2));
 		break;
 	}
-	case 289112: {
+	case 289111: {
 		*(int*)p1 = pThis->columnCount();
 		break;
 	}
-	case 289113: {
+	case 289112: {
 		*(int*)p2 = pThis->columnMinimumWidth(*(int*)p1);
 		break;
 	}
-	case 289114: {
+	case 289113: {
 		*(int*)p2 = pThis->columnStretch(*(int*)p1);
 		break;
 	}
-	case 289115: {
-		*(int*)p1 = pThis->count();
-		break;
-	}
-	case 289116: {
-		*(QFlags<Qt::Orientation>*)p1 = pThis->expandingDirections();
-		break;
-	}
-	case 289117: {
+	case 289114: {
 		pThis->getItemPosition(*(int*)p1,*(int**)p2,*(int**)p3,*(int**)p4,*(int**)p5);
 		break;
 	}
-	case 289118: {
-		*(bool*)p1 = pThis->hasHeightForWidth();
-		break;
-	}
-	case 289119: {
-		*(int*)p2 = pThis->heightForWidth(*(int*)p1);
-		break;
-	}
-	case 289120: {
+	case 289115: {
 		*(int*)p1 = pThis->horizontalSpacing();
 		break;
 	}
-	case 289121: {
-		pThis->invalidate();
-		break;
-	}
-	case 289122: {
-		*(void**)p2 = pThis->itemAt(*(int*)p1);
-		break;
-	}
-	case 289123: {
+	case 289116: {
 		*(void**)p3 = pThis->itemAtPosition(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 289124: {
-		*(void**)p1 = new QSize(pThis->maximumSize());
-		break;
-	}
-	case 289125: {
-		*(int*)p2 = pThis->minimumHeightForWidth(*(int*)p1);
-		break;
-	}
-	case 289126: {
-		*(void**)p1 = new QSize(pThis->minimumSize());
-		break;
-	}
-	case 289127: {
+	case 289117: {
 		*(Qt::Corner*)p1 = pThis->originCorner();
 		break;
 	}
-	case 289128: {
+	case 289118: {
 		*(int*)p1 = pThis->rowCount();
 		break;
 	}
-	case 289129: {
+	case 289119: {
 		*(int*)p2 = pThis->rowMinimumHeight(*(int*)p1);
 		break;
 	}
-	case 289130: {
+	case 289120: {
 		*(int*)p2 = pThis->rowStretch(*(int*)p1);
 		break;
 	}
-	case 289131: {
+	case 289121: {
 		pThis->setColumnMinimumWidth(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 289132: {
+	case 289122: {
 		pThis->setColumnStretch(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 289133: {
+	case 289123: {
 		pThis->setDefaultPositioning(*(int*)p1,*(Qt::Orientation*)p2);
 		break;
 	}
-	case 289134: {
-		if(p1==0)return -2;
-		pThis->setGeometry(*(QRect*)(p1));
-		break;
-	}
-	case 289135: {
+	case 289124: {
 		pThis->setHorizontalSpacing(*(int*)p1);
 		break;
 	}
-	case 289136: {
+	case 289125: {
 		pThis->setOriginCorner(*(Qt::Corner*)p1);
 		break;
 	}
-	case 289137: {
+	case 289126: {
 		pThis->setRowMinimumHeight(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 289138: {
+	case 289127: {
 		pThis->setRowStretch(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 289139: {
+	case 289128: {
 		pThis->setSpacing(*(int*)p1);
 		break;
 	}
-	case 289140: {
+	case 289129: {
 		pThis->setVerticalSpacing(*(int*)p1);
 		break;
 	}
-	case 289141: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 289142: {
+	case 289130: {
 		*(int*)p1 = pThis->spacing();
 		break;
 	}
-	case 289143: {
-		*(void**)p2 = pThis->takeAt(*(int*)p1);
-		break;
-	}
-	case 289144: {
+	case 289131: {
 		*(int*)p1 = pThis->verticalSpacing();
 		break;
 	}
@@ -32881,78 +30769,38 @@ int drv_QGroupBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 290109: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 290110: {
-		pThis->childEvent((QChildEvent*)(p1));
-		break;
-	}
-	case 290111: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 290112: {
-		pThis->focusInEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 290113: {
 		*(bool*)p1 = pThis->isCheckable();
 		break;
 	}
-	case 290114: {
+	case 290110: {
 		*(bool*)p1 = pThis->isChecked();
 		break;
 	}
-	case 290115: {
+	case 290111: {
 		*(bool*)p1 = pThis->isFlat();
 		break;
 	}
-	case 290116: {
-		*(void**)p1 = new QSize(pThis->minimumSizeHint());
-		break;
-	}
-	case 290117: {
-		pThis->mouseMoveEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 290118: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 290119: {
-		pThis->mouseReleaseEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 290120: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 290121: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 290122: {
+	case 290112: {
 		pThis->setAlignment(*(int*)p1);
 		break;
 	}
-	case 290123: {
+	case 290113: {
 		pThis->setCheckable(*(bool*)p1);
 		break;
 	}
-	case 290124: {
+	case 290114: {
 		pThis->setChecked(*(bool*)p1);
 		break;
 	}
-	case 290125: {
+	case 290115: {
 		pThis->setFlat(*(bool*)p1);
 		break;
 	}
-	case 290126: {
+	case 290116: {
 		pThis->setTitle(drvGetStringHead(p1));
 		break;
 	}
-	case 290127: {
+	case 290117: {
 		drvSetString(p1,pThis->title());
 		break;
 	}
@@ -33080,71 +30928,42 @@ int drv_QHeaderView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 292115: {
-		if(p1==0)return -2;
-	if(p2==0)return -2;
-		pThis->currentChanged(*(QModelIndex*)(p1),*(QModelIndex*)(p2));
-		break;
-	}
-	case 292116: {
-		if(p1==0)return -2;
-	if(p2==0)return -2;
-		pThis->dataChanged(*(QModelIndex*)(p1),*(QModelIndex*)(p2));
-		break;
-	}
-	case 292117: {
 		*(QFlags<Qt::AlignmentFlag>*)p1 = pThis->defaultAlignment();
 		break;
 	}
-	case 292118: {
+	case 292116: {
 		*(int*)p1 = pThis->defaultSectionSize();
 		break;
 	}
-	case 292119: {
-		pThis->doItemsLayout();
-		break;
-	}
-	case 292120: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 292121: {
+	case 292117: {
 		pThis->headerDataChanged(*(Qt::Orientation*)p1,*(int*)p2,*(int*)p3);
 		break;
 	}
-	case 292122: {
+	case 292118: {
 		*(int*)p1 = pThis->hiddenSectionCount();
 		break;
 	}
-	case 292123: {
+	case 292119: {
 		pThis->hideSection(*(int*)p1);
 		break;
 	}
-	case 292124: {
+	case 292120: {
 		*(bool*)p1 = pThis->highlightSections();
 		break;
 	}
-	case 292125: {
-		*(int*)p1 = pThis->horizontalOffset();
-		break;
-	}
-	case 292126: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QModelIndex(pThis->indexAt(*(QPoint*)(p1)));
-		break;
-	}
-	case 292127: {
+	case 292121: {
 		pThis->initialize();
 		break;
 	}
-	case 292128: {
+	case 292122: {
 		pThis->initializeSections();
 		break;
 	}
-	case 292129: {
+	case 292123: {
 		pThis->initializeSections(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 292130: {
+	case 292124: {
 #ifdef QTDRV_QT5
 		*(bool*)p1 = pThis->sectionsClickable();
 #else
@@ -33152,12 +30971,7 @@ int drv_QHeaderView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 #endif		
 		break;
 	}
-	case 292131: {
-		if(p1==0)return -2;
-		*(bool*)p2 = pThis->isIndexHidden(*(QModelIndex*)(p1));
-		break;
-	}
-	case 292132: {
+	case 292125: {
 #ifdef QTDRV_QT5
 		*(bool*)p1 = pThis->sectionsMovable();
 #else
@@ -33165,85 +30979,57 @@ int drv_QHeaderView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 #endif		
 		break;
 	}
-	case 292133: {
+	case 292126: {
 		*(bool*)p2 = pThis->isSectionHidden(*(int*)p1);
 		break;
 	}
-	case 292134: {
+	case 292127: {
 		*(bool*)p1 = pThis->isSortIndicatorShown();
 		break;
 	}
-	case 292135: {
+	case 292128: {
 		*(int*)p1 = pThis->length();
 		break;
 	}
-	case 292136: {
+	case 292129: {
 		*(int*)p2 = pThis->logicalIndex(*(int*)p1);
 		break;
 	}
-	case 292137: {
+	case 292130: {
 		if(p1==0)return -2;
 		*(int*)p2 = pThis->logicalIndexAt(*(QPoint*)(p1));
 		break;
 	}
-	case 292138: {
+	case 292131: {
 		*(int*)p2 = pThis->logicalIndexAt(*(int*)p1);
 		break;
 	}
-	case 292139: {
+	case 292132: {
 		*(int*)p3 = pThis->logicalIndexAt(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 292140: {
+	case 292133: {
 		*(int*)p1 = pThis->minimumSectionSize();
 		break;
 	}
-	case 292141: {
-		pThis->mouseDoubleClickEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 292142: {
-		pThis->mouseMoveEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 292143: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 292144: {
-		pThis->mouseReleaseEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 292145: {
-		*(void**)p3 = new QModelIndex(pThis->moveCursor(*(QAbstractItemView::CursorAction*)p1,*(QFlags<Qt::KeyboardModifier>*)p2));
-		break;
-	}
-	case 292146: {
+	case 292134: {
 		pThis->moveSection(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 292147: {
+	case 292135: {
 		*(int*)p1 = pThis->offset();
 		break;
 	}
-	case 292148: {
+	case 292136: {
 		*(Qt::Orientation*)p1 = pThis->orientation();
 		break;
 	}
-	case 292149: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 292150: {
+	case 292137: {
 		if(p2==0)return -2;
 		pThis->paintSection((QPainter*)(p1),*(QRect*)(p2),*(int*)p3);
 		break;
 	}
-	case 292151: {
-		pThis->reset();
-		break;
-	}
-	case 292152: {
+	case 292138: {
 #ifdef QTDRV_QT5
 		*(QHeaderView::ResizeMode*)p2 = pThis->sectionResizeMode(*(int*)p1);
 #else
@@ -33251,83 +31037,69 @@ int drv_QHeaderView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 #endif		
 		break;
 	}
-	case 292153: {
+	case 292139: {
 		pThis->resizeSection(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 292154: {
+	case 292140: {
 		pThis->resizeSections();
 		break;
 	}
-	case 292155: {
+	case 292141: {
 		pThis->resizeSections(*(QHeaderView::ResizeMode*)p1);
 		break;
 	}
-	case 292156: {
+	case 292142: {
 		*(bool*)p2 = pThis->restoreState(drvGetByteArrayHead(p1));
 		break;
 	}
-	case 292157: {
-		if(p1==0)return -2;
-		pThis->rowsInserted(*(QModelIndex*)(p1),*(int*)p2,*(int*)p3);
-		break;
-	}
-	case 292158: {
+	case 292143: {
 		drvSetByteArray(p1,pThis->saveState());
 		break;
 	}
-	case 292159: {
-		pThis->scrollContentsBy(*(int*)p1,*(int*)p2);
-		break;
-	}
-	case 292160: {
-		if(p1==0)return -2;
-		pThis->scrollTo(*(QModelIndex*)(p1),*(QAbstractItemView::ScrollHint*)p2);
-		break;
-	}
-	case 292161: {
+	case 292144: {
 		*(int*)p2 = pThis->sectionPosition(*(int*)p1);
 		break;
 	}
-	case 292162: {
+	case 292145: {
 		*(int*)p2 = pThis->sectionSize(*(int*)p1);
 		break;
 	}
-	case 292163: {
+	case 292146: {
 		*(void**)p2 = new QSize(pThis->sectionSizeFromContents(*(int*)p1));
 		break;
 	}
-	case 292164: {
+	case 292147: {
 		*(int*)p2 = pThis->sectionSizeHint(*(int*)p1);
 		break;
 	}
-	case 292165: {
+	case 292148: {
 		*(int*)p2 = pThis->sectionViewportPosition(*(int*)p1);
 		break;
 	}
-	case 292166: {
+	case 292149: {
 		if(p1==0)return -2;
 		pThis->sectionsAboutToBeRemoved(*(QModelIndex*)(p1),*(int*)p2,*(int*)p3);
 		break;
 	}
-	case 292167: {
+	case 292150: {
 		*(bool*)p1 = pThis->sectionsHidden();
 		break;
 	}
-	case 292168: {
+	case 292151: {
 		if(p1==0)return -2;
 		pThis->sectionsInserted(*(QModelIndex*)(p1),*(int*)p2,*(int*)p3);
 		break;
 	}
-	case 292169: {
+	case 292152: {
 		*(bool*)p1 = pThis->sectionsMoved();
 		break;
 	}
-	case 292170: {
+	case 292153: {
 		pThis->setCascadingSectionResizes(*(bool*)p1);
 		break;
 	}
-	case 292171: {
+	case 292154: {
 #ifdef QTDRV_QT5
 		pThis->setSectionsClickable(*(bool*)p1);
 #else
@@ -33335,27 +31107,23 @@ int drv_QHeaderView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 #endif		
 		break;
 	}
-	case 292172: {
+	case 292155: {
 		pThis->setDefaultAlignment(*(QFlags<Qt::AlignmentFlag>*)p1);
 		break;
 	}
-	case 292173: {
+	case 292156: {
 		pThis->setDefaultSectionSize(*(int*)p1);
 		break;
 	}
-	case 292174: {
+	case 292157: {
 		pThis->setHighlightSections(*(bool*)p1);
 		break;
 	}
-	case 292175: {
+	case 292158: {
 		pThis->setMinimumSectionSize(*(int*)p1);
 		break;
 	}
-	case 292176: {
-		pThis->setModel((QAbstractItemModel*)(p1));
-		break;
-	}
-	case 292177: {
+	case 292159: {
 #ifdef QTDRV_QT5
 		pThis->setSectionsMovable(*(bool*)p1);
 #else
@@ -33363,19 +31131,19 @@ int drv_QHeaderView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 #endif		
 		break;
 	}
-	case 292178: {
+	case 292160: {
 		pThis->setOffset(*(int*)p1);
 		break;
 	}
-	case 292179: {
+	case 292161: {
 		pThis->setOffsetToLastSection();
 		break;
 	}
-	case 292180: {
+	case 292162: {
 		pThis->setOffsetToSectionPosition(*(int*)p1);
 		break;
 	}
-	case 292181: {
+	case 292163: {
 #ifdef QTDRV_QT5
 		pThis->setSectionResizeMode(*(QHeaderView::ResizeMode*)p1);
 #else
@@ -33383,7 +31151,7 @@ int drv_QHeaderView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 #endif		
 		break;
 	}
-	case 292182: {
+	case 292164: {
 #ifdef QTDRV_QT5
 		pThis->setSectionResizeMode(*(int*)p1,*(QHeaderView::ResizeMode*)p2);
 #else
@@ -33391,87 +31159,56 @@ int drv_QHeaderView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 #endif		
 		break;
 	}
-	case 292183: {
+	case 292165: {
 		pThis->setSectionHidden(*(int*)p1,*(bool*)p2);
 		break;
 	}
-	case 292184: {
-		if(p1==0)return -2;
-		pThis->setSelection(*(QRect*)(p1),*(QFlags<QItemSelectionModel::SelectionFlag>*)p2);
-		break;
-	}
-	case 292185: {
+	case 292166: {
 		pThis->setSortIndicator(*(int*)p1,*(Qt::SortOrder*)p2);
 		break;
 	}
-	case 292186: {
+	case 292167: {
 		pThis->setSortIndicatorShown(*(bool*)p1);
 		break;
 	}
-	case 292187: {
+	case 292168: {
 		pThis->setStretchLastSection(*(bool*)p1);
 		break;
 	}
-	case 292188: {
+	case 292169: {
 		pThis->showSection(*(int*)p1);
 		break;
 	}
-	case 292189: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 292190: {
+	case 292170: {
 		*(Qt::SortOrder*)p1 = pThis->sortIndicatorOrder();
 		break;
 	}
-	case 292191: {
+	case 292171: {
 		*(int*)p1 = pThis->sortIndicatorSection();
 		break;
 	}
-	case 292192: {
+	case 292172: {
 		*(bool*)p1 = pThis->stretchLastSection();
 		break;
 	}
-	case 292193: {
+	case 292173: {
 		*(int*)p1 = pThis->stretchSectionCount();
 		break;
 	}
-	case 292194: {
+	case 292174: {
 		pThis->swapSections(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 292195: {
-		pThis->updateGeometries();
-		break;
-	}
-	case 292196: {
+	case 292175: {
 		pThis->updateSection(*(int*)p1);
 		break;
 	}
-	case 292197: {
-		*(int*)p1 = pThis->verticalOffset();
-		break;
-	}
-	case 292198: {
-		*(bool*)p2 = pThis->viewportEvent((QEvent*)(p1));
-		break;
-	}
-	case 292199: {
+	case 292176: {
 		*(int*)p2 = pThis->visualIndex(*(int*)p1);
 		break;
 	}
-	case 292200: {
+	case 292177: {
 		*(int*)p2 = pThis->visualIndexAt(*(int*)p1);
-		break;
-	}
-	case 292201: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QRect(pThis->visualRect(*(QModelIndex*)(p1)));
-		break;
-	}
-	case 292202: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QRegion(pThis->visualRegionForSelection(*(QItemSelection*)(p1)));
 		break;
 	}
 	default:
@@ -33506,26 +31243,14 @@ int drv_QHistoryState(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 293106: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 293107: {
 		*(QHistoryState::HistoryType*)p1 = pThis->historyType();
 		break;
 	}
-	case 293108: {
-		pThis->onEntry((QEvent*)(p1));
-		break;
-	}
-	case 293109: {
-		pThis->onExit((QEvent*)(p1));
-		break;
-	}
-	case 293110: {
+	case 293107: {
 		pThis->setDefaultState((QAbstractState*)(p1));
 		break;
 	}
-	case 293111: {
+	case 293108: {
 		pThis->setHistoryType(*(QHistoryState::HistoryType*)p1);
 		break;
 	}
@@ -33798,190 +31523,174 @@ int drv_QInputDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 295112: {
-		pThis->done(*(int*)p1);
-		break;
-	}
-	case 295113: {
 		*(int*)p1 = pThis->doubleDecimals();
 		break;
 	}
-	case 295114: {
+	case 295113: {
 		*(double*)p1 = pThis->doubleMaximum();
 		break;
 	}
-	case 295115: {
+	case 295114: {
 		*(double*)p1 = pThis->doubleMinimum();
 		break;
 	}
-	case 295116: {
+	case 295115: {
 		*(double*)p1 = pThis->doubleValue();
 		break;
 	}
-	case 295117: {
+	case 295116: {
 		*(double*)p10 = QInputDialog::getDouble((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),*(double*)p4,*(double*)p5,*(double*)p6,*(int*)p7,*(bool**)p8,*(QFlags<Qt::WindowType>*)p9);
 		break;
 	}
-	case 295118: {
+	case 295117: {
 		*(int*)p10 = QInputDialog::getInt((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),*(int*)p4,*(int*)p5,*(int*)p6,*(int*)p7,*(bool**)p8,*(QFlags<Qt::WindowType>*)p9);
 		break;
 	}
-	case 295119: {
+	case 295118: {
 		drvSetString(p9,QInputDialog::getItem((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),drvGetStringArray(p4),*(int*)p5,*(bool*)p6,*(bool**)p7,*(QFlags<Qt::WindowType>*)p8));
 		break;
 	}
-	case 295120: {
+	case 295119: {
 		drvSetString(p8,QInputDialog::getText((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),*(QLineEdit::EchoMode*)p4,drvGetStringHead(p5),*(bool**)p6,*(QFlags<Qt::WindowType>*)p7));
 		break;
 	}
-	case 295121: {
+	case 295120: {
 		*(QInputDialog::InputMode*)p1 = pThis->inputMode();
 		break;
 	}
-	case 295122: {
+	case 295121: {
 		*(int*)p1 = pThis->intMaximum();
 		break;
 	}
-	case 295123: {
+	case 295122: {
 		*(int*)p1 = pThis->intMinimum();
 		break;
 	}
-	case 295124: {
+	case 295123: {
 		*(int*)p1 = pThis->intStep();
 		break;
 	}
-	case 295125: {
+	case 295124: {
 		*(int*)p1 = pThis->intValue();
 		break;
 	}
-	case 295126: {
+	case 295125: {
 		*(bool*)p1 = pThis->isComboBoxEditable();
 		break;
 	}
-	case 295127: {
+	case 295126: {
 		drvSetString(p1,pThis->labelText());
 		break;
 	}
-	case 295128: {
-		*(void**)p1 = new QSize(pThis->minimumSizeHint());
-		break;
-	}
-	case 295129: {
+	case 295127: {
 		drvSetString(p1,pThis->okButtonText());
 		break;
 	}
-	case 295130: {
+	case 295128: {
 		pThis->open();
 		break;
 	}
-	case 295131: {
+	case 295129: {
 		pThis->open((QObject*)(p1),drvGet_const_char(p2));
 		break;
 	}
-	case 295132: {
+	case 295130: {
 		*(QFlags<QInputDialog::InputDialogOption>*)p1 = pThis->options();
 		break;
 	}
-	case 295133: {
+	case 295131: {
 		pThis->setCancelButtonText(drvGetStringHead(p1));
 		break;
 	}
-	case 295134: {
+	case 295132: {
 		pThis->setComboBoxEditable(*(bool*)p1);
 		break;
 	}
-	case 295135: {
+	case 295133: {
 		pThis->setComboBoxItems(drvGetStringArray(p1));
 		break;
 	}
-	case 295136: {
+	case 295134: {
 		pThis->setDoubleDecimals(*(int*)p1);
 		break;
 	}
-	case 295137: {
+	case 295135: {
 		pThis->setDoubleMaximum(*(double*)p1);
 		break;
 	}
-	case 295138: {
+	case 295136: {
 		pThis->setDoubleMinimum(*(double*)p1);
 		break;
 	}
-	case 295139: {
+	case 295137: {
 		pThis->setDoubleRange(*(double*)p1,*(double*)p2);
 		break;
 	}
-	case 295140: {
+	case 295138: {
 		pThis->setDoubleValue(*(double*)p1);
 		break;
 	}
-	case 295141: {
+	case 295139: {
 		pThis->setInputMode(*(QInputDialog::InputMode*)p1);
 		break;
 	}
-	case 295142: {
+	case 295140: {
 		pThis->setIntMaximum(*(int*)p1);
 		break;
 	}
-	case 295143: {
+	case 295141: {
 		pThis->setIntMinimum(*(int*)p1);
 		break;
 	}
-	case 295144: {
+	case 295142: {
 		pThis->setIntRange(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 295145: {
+	case 295143: {
 		pThis->setIntStep(*(int*)p1);
 		break;
 	}
-	case 295146: {
+	case 295144: {
 		pThis->setIntValue(*(int*)p1);
 		break;
 	}
-	case 295147: {
+	case 295145: {
 		pThis->setLabelText(drvGetStringHead(p1));
 		break;
 	}
-	case 295148: {
+	case 295146: {
 		pThis->setOkButtonText(drvGetStringHead(p1));
 		break;
 	}
-	case 295149: {
+	case 295147: {
 		pThis->setOption(*(QInputDialog::InputDialogOption*)p1);
 		break;
 	}
-	case 295150: {
+	case 295148: {
 		pThis->setOption(*(QInputDialog::InputDialogOption*)p1,*(bool*)p2);
 		break;
 	}
-	case 295151: {
+	case 295149: {
 		pThis->setOptions(*(QFlags<QInputDialog::InputDialogOption>*)p1);
 		break;
 	}
-	case 295152: {
+	case 295150: {
 		pThis->setTextEchoMode(*(QLineEdit::EchoMode*)p1);
 		break;
 	}
-	case 295153: {
+	case 295151: {
 		pThis->setTextValue(drvGetStringHead(p1));
 		break;
 	}
-	case 295154: {
-		pThis->setVisible(*(bool*)p1);
-		break;
-	}
-	case 295155: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 295156: {
+	case 295152: {
 		*(bool*)p2 = pThis->testOption(*(QInputDialog::InputDialogOption*)p1);
 		break;
 	}
-	case 295157: {
+	case 295153: {
 		*(QLineEdit::EchoMode*)p1 = pThis->textEchoMode();
 		break;
 	}
-	case 295158: {
+	case 295154: {
 		drvSetString(p1,pThis->textValue());
 		break;
 	}
@@ -34017,31 +31726,19 @@ int drv_QIntValidator(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 296106: {
-		QString _p1=drvGetStringRef(p1);
-		pThis->fixup(_p1);
-		drvSetStringRef(p1,_p1);
-		break;
-	}
-	case 296107: {
 		pThis->setBottom(*(int*)p1);
 		break;
 	}
-	case 296108: {
+	case 296107: {
 		pThis->setRange(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 296109: {
+	case 296108: {
 		pThis->setTop(*(int*)p1);
 		break;
 	}
-	case 296110: {
+	case 296109: {
 		*(int*)p1 = pThis->top();
-		break;
-	}
-	case 296111: {
-		QString _p1=drvGetStringRef(p1);
-		*(QValidator::State*)p3 = pThis->validate(_p1,*(int*)p2);
-		drvSetStringRef(p1,_p1);
 		break;
 	}
 	default:
@@ -34068,42 +31765,28 @@ int drv_QItemDelegate(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 297104: {
-		*(bool*)p3 = pThis->eventFilter((QObject*)(p1),(QEvent*)(p2));
-		break;
-	}
-	case 297105: {
 		*(bool*)p1 = pThis->hasClipping();
 		break;
 	}
-	case 297106: {
+	case 297105: {
 		*(void**)p1 = pThis->itemEditorFactory();
 		break;
 	}
-	case 297107: {
+	case 297106: {
 		if(p1==0)return -2;
 	if(p2==0)return -2;
 		*(void**)p4 = pThis->selected(*(QPixmap*)(p1),*(QPalette*)(p2),*(bool*)p3);
 		break;
 	}
-	case 297108: {
+	case 297107: {
 		pThis->setClipping(*(bool*)p1);
 		break;
 	}
-	case 297109: {
-		if(p2==0)return -2;
-		pThis->setEditorData((QWidget*)(p1),*(QModelIndex*)(p2));
-		break;
-	}
-	case 297110: {
+	case 297108: {
 		pThis->setItemEditorFactory((QItemEditorFactory*)(p1));
 		break;
 	}
-	case 297111: {
-		if(p3==0)return -2;
-		pThis->setModelData((QWidget*)(p1),(QAbstractItemModel*)(p2),*(QModelIndex*)(p3));
-		break;
-	}
-	case 297112: {
+	case 297109: {
 		if(p2==0)return -2;
 	if(p3==0)return -2;
 		*(void**)p5 = new QRect(pThis->textRectangle((QPainter*)(p1),*(QRect*)(p2),*(QFont*)(p3),drvGetStringHead(p4)));
@@ -34282,26 +31965,18 @@ int drv_QKeyEventTransition(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 		break;
 	}
 	case 299105: {
-		*(bool*)p2 = pThis->eventTest((QEvent*)(p1));
-		break;
-	}
-	case 299106: {
 		*(int*)p1 = pThis->key();
 		break;
 	}
-	case 299107: {
+	case 299106: {
 		*(QFlags<Qt::KeyboardModifier>*)p1 = pThis->modifierMask();
 		break;
 	}
-	case 299108: {
-		pThis->onTransition((QEvent*)(p1));
-		break;
-	}
-	case 299109: {
+	case 299107: {
 		pThis->setKey(*(int*)p1);
 		break;
 	}
-	case 299110: {
+	case 299108: {
 		pThis->setModifierMask(*(QFlags<Qt::KeyboardModifier>*)p1);
 		break;
 	}
@@ -34364,66 +32039,54 @@ int drv_QLCDNumber(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	}
 	case 300112: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 300113: {
 		*(int*)p1 = pThis->intValue();
 		break;
 	}
-	case 300114: {
+	case 300113: {
 		*(QLCDNumber::Mode*)p1 = pThis->mode();
 		break;
 	}
-	case 300115: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 300116: {
+	case 300114: {
 		*(QLCDNumber::SegmentStyle*)p1 = pThis->segmentStyle();
 		break;
 	}
-	case 300117: {
+	case 300115: {
 		pThis->setBinMode();
 		break;
 	}
-	case 300118: {
+	case 300116: {
 		pThis->setDecMode();
 		break;
 	}
-	case 300119: {
+	case 300117: {
 		pThis->setDigitCount(*(int*)p1);
 		break;
 	}
-	case 300120: {
+	case 300118: {
 		pThis->setHexMode();
 		break;
 	}
-	case 300121: {
+	case 300119: {
 		pThis->setMode(*(QLCDNumber::Mode*)p1);
 		break;
 	}
-	case 300122: {
+	case 300120: {
 		pThis->setOctMode();
 		break;
 	}
-	case 300123: {
+	case 300121: {
 		pThis->setSegmentStyle(*(QLCDNumber::SegmentStyle*)p1);
 		break;
 	}
-	case 300124: {
+	case 300122: {
 		pThis->setSmallDecimalPoint(*(bool*)p1);
 		break;
 	}
-	case 300125: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 300126: {
+	case 300123: {
 		*(bool*)p1 = pThis->smallDecimalPoint();
 		break;
 	}
-	case 300127: {
+	case 300124: {
 		*(double*)p1 = pThis->value();
 		break;
 	}
@@ -34477,184 +32140,128 @@ int drv_QLabel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 		break;
 	}
 	case 301109: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 301110: {
 		pThis->clear();
 		break;
 	}
-	case 301111: {
-		pThis->contextMenuEvent((QContextMenuEvent*)(p1));
-		break;
-	}
-	case 301112: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 301113: {
-		pThis->focusInEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 301114: {
-		*(bool*)p2 = pThis->focusNextPrevChild(*(bool*)p1);
-		break;
-	}
-	case 301115: {
-		pThis->focusOutEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 301116: {
+	case 301110: {
 		*(bool*)p1 = pThis->hasScaledContents();
 		break;
 	}
-	case 301117: {
+	case 301111: {
 		*(bool*)p1 = pThis->hasSelectedText();
 		break;
 	}
-	case 301118: {
-		*(int*)p2 = pThis->heightForWidth(*(int*)p1);
-		break;
-	}
-	case 301119: {
+	case 301112: {
 		*(int*)p1 = pThis->indent();
 		break;
 	}
-	case 301120: {
-		pThis->keyPressEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 301121: {
+	case 301113: {
 		*(int*)p1 = pThis->margin();
 		break;
 	}
-	case 301122: {
-		*(void**)p1 = new QSize(pThis->minimumSizeHint());
-		break;
-	}
-	case 301123: {
-		pThis->mouseMoveEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 301124: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 301125: {
-		pThis->mouseReleaseEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 301126: {
+	case 301114: {
 		*(void**)p1 = pThis->movie();
 		break;
 	}
-	case 301127: {
+	case 301115: {
 		*(bool*)p1 = pThis->openExternalLinks();
 		break;
 	}
-	case 301128: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 301129: {
+	case 301116: {
 		*(const void**)p1 = pThis->picture();
 		break;
 	}
-	case 301130: {
+	case 301117: {
 		*(const void**)p1 = pThis->pixmap();
 		break;
 	}
-	case 301131: {
+	case 301118: {
 		drvSetString(p1,pThis->selectedText());
 		break;
 	}
-	case 301132: {
+	case 301119: {
 		*(int*)p1 = pThis->selectionStart();
 		break;
 	}
-	case 301133: {
+	case 301120: {
 		pThis->setAlignment(*(QFlags<Qt::AlignmentFlag>*)p1);
 		break;
 	}
-	case 301134: {
+	case 301121: {
 		pThis->setBuddy((QWidget*)(p1));
 		break;
 	}
-	case 301135: {
+	case 301122: {
 		pThis->setIndent(*(int*)p1);
 		break;
 	}
-	case 301136: {
+	case 301123: {
 		pThis->setMargin(*(int*)p1);
 		break;
 	}
-	case 301137: {
+	case 301124: {
 		pThis->setMovie((QMovie*)(p1));
 		break;
 	}
-	case 301138: {
+	case 301125: {
 		pThis->setNum(*(double*)p1);
 		break;
 	}
-	case 301139: {
+	case 301126: {
 		pThis->setNum(*(int*)p1);
 		break;
 	}
-	case 301140: {
+	case 301127: {
 		pThis->setOpenExternalLinks(*(bool*)p1);
 		break;
 	}
-	case 301141: {
+	case 301128: {
 		if(p1==0)return -2;
 		pThis->setPicture(*(QPicture*)(p1));
 		break;
 	}
-	case 301142: {
+	case 301129: {
 		if(p1==0)return -2;
 		pThis->setPixmap(*(QPixmap*)(p1));
 		break;
 	}
-	case 301143: {
+	case 301130: {
 		pThis->setScaledContents(*(bool*)p1);
 		break;
 	}
-	case 301144: {
+	case 301131: {
 		pThis->setSelection(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 301145: {
+	case 301132: {
 		pThis->setText(drvGetStringHead(p1));
 		break;
 	}
-	case 301146: {
+	case 301133: {
 		pThis->setTextFormat(*(Qt::TextFormat*)p1);
 		break;
 	}
-	case 301147: {
+	case 301134: {
 		pThis->setTextInteractionFlags(*(QFlags<Qt::TextInteractionFlag>*)p1);
 		break;
 	}
-	case 301148: {
+	case 301135: {
 		pThis->setWordWrap(*(bool*)p1);
 		break;
 	}
-	case 301149: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 301150: {
+	case 301136: {
 		drvSetString(p1,pThis->text());
 		break;
 	}
-	case 301151: {
+	case 301137: {
 		*(Qt::TextFormat*)p1 = pThis->textFormat();
 		break;
 	}
-	case 301152: {
+	case 301138: {
 		*(QFlags<Qt::TextInteractionFlag>*)p1 = pThis->textInteractionFlags();
 		break;
 	}
-	case 301153: {
+	case 301139: {
 		*(bool*)p1 = pThis->wordWrap();
 		break;
 	}
@@ -34699,169 +32306,132 @@ int drv_QLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 302108: {
-		pThis->childEvent((QChildEvent*)(p1));
-		break;
-	}
-	case 302109: {
 		if(p2==0)return -2;
 		*(void**)p3 = new QSize(QLayout::closestAcceptableSize((QWidget*)(p1),*(QSize*)(p2)));
 		break;
 	}
-	case 302110: {
+	case 302109: {
 		*(void**)p1 = new QMargins(pThis->contentsMargins());
 		break;
 	}
-	case 302111: {
+	case 302110: {
 		*(void**)p1 = new QRect(pThis->contentsRect());
 		break;
 	}
-	case 302112: {
+	case 302111: {
 		*(int*)p1 = pThis->count();
 		break;
 	}
-	case 302113: {
-		*(QFlags<Qt::Orientation>*)p1 = pThis->expandingDirections();
-		break;
-	}
-	case 302114: {
-		*(void**)p1 = new QRect(pThis->geometry());
-		break;
-	}
-	case 302115: {
+	case 302112: {
 		pThis->getContentsMargins(*(int**)p1,*(int**)p2,*(int**)p3,*(int**)p4);
 		break;
 	}
-	case 302116: {
+	case 302113: {
 		*(int*)p2 = pThis->indexOf((QWidget*)(p1));
 		break;
 	}
-	case 302117: {
-		pThis->invalidate();
-		break;
-	}
-	case 302118: {
-		*(bool*)p1 = pThis->isEmpty();
-		break;
-	}
-	case 302119: {
+	case 302114: {
 		*(bool*)p1 = pThis->isEnabled();
 		break;
 	}
-	case 302120: {
+	case 302115: {
 		*(void**)p2 = pThis->itemAt(*(int*)p1);
 		break;
 	}
-	case 302121: {
-		*(void**)p1 = pThis->layout();
-		break;
-	}
-	case 302122: {
+	case 302116: {
 		*(int*)p1 = pThis->margin();
 		break;
 	}
-	case 302123: {
-		*(void**)p1 = new QSize(pThis->maximumSize());
-		break;
-	}
-	case 302124: {
+	case 302117: {
 		*(void**)p1 = pThis->menuBar();
 		break;
 	}
-	case 302125: {
-		*(void**)p1 = new QSize(pThis->minimumSize());
-		break;
-	}
-	case 302126: {
+	case 302118: {
 		*(void**)p1 = pThis->parentWidget();
 		break;
 	}
-	case 302127: {
+	case 302119: {
 		pThis->removeItem((QLayoutItem*)(p1));
 		break;
 	}
-	case 302128: {
+	case 302120: {
 		pThis->removeWidget((QWidget*)(p1));
 		break;
 	}
-	case 302129: {
+	case 302121: {
 		pThis->setAlignment(*(QFlags<Qt::AlignmentFlag>*)p1);
 		break;
 	}
-	case 302130: {
+	case 302122: {
 		*(bool*)p3 = pThis->setAlignment((QLayout*)(p1),*(QFlags<Qt::AlignmentFlag>*)p2);
 		break;
 	}
-	case 302131: {
+	case 302123: {
 		*(bool*)p3 = pThis->setAlignment((QWidget*)(p1),*(QFlags<Qt::AlignmentFlag>*)p2);
 		break;
 	}
-	case 302132: {
+	case 302124: {
 		if(p1==0)return -2;
 		pThis->setContentsMargins(*(QMargins*)(p1));
 		break;
 	}
-	case 302133: {
+	case 302125: {
 		pThis->setContentsMargins(*(int*)p1,*(int*)p2,*(int*)p3,*(int*)p4);
 		break;
 	}
-	case 302134: {
+	case 302126: {
 		pThis->setEnabled(*(bool*)p1);
 		break;
 	}
-	case 302135: {
-		if(p1==0)return -2;
-		pThis->setGeometry(*(QRect*)(p1));
-		break;
-	}
-	case 302136: {
+	case 302127: {
 		pThis->setMargin(*(int*)p1);
 		break;
 	}
-	case 302137: {
+	case 302128: {
 		pThis->setMenuBar((QWidget*)(p1));
 		break;
 	}
-	case 302138: {
+	case 302129: {
 		pThis->setSizeConstraint(*(QLayout::SizeConstraint*)p1);
 		break;
 	}
-	case 302139: {
+	case 302130: {
 		pThis->setSpacing(*(int*)p1);
 		break;
 	}
-	case 302140: {
+	case 302131: {
 		*(QLayout::SizeConstraint*)p1 = pThis->sizeConstraint();
 		break;
 	}
-	case 302141: {
+	case 302132: {
 		*(int*)p1 = pThis->spacing();
 		break;
 	}
-	case 302142: {
+	case 302133: {
 		*(void**)p2 = pThis->takeAt(*(int*)p1);
 		break;
 	}
-	case 302143: {
+	case 302134: {
 		*(int*)p2 = pThis->totalHeightForWidth(*(int*)p1);
 		break;
 	}
-	case 302144: {
+	case 302135: {
 		*(void**)p1 = new QSize(pThis->totalMaximumSize());
 		break;
 	}
-	case 302145: {
+	case 302136: {
 		*(void**)p1 = new QSize(pThis->totalMinimumSize());
 		break;
 	}
-	case 302146: {
+	case 302137: {
 		*(void**)p1 = new QSize(pThis->totalSizeHint());
 		break;
 	}
-	case 302147: {
+	case 302138: {
 		pThis->update();
 		break;
 	}
-	case 302148: {
+	case 302139: {
 		pThis->widgetEvent((QEvent*)(p1));
 		break;
 	}
@@ -35054,312 +32624,236 @@ int drv_QLineEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 304113: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 304114: {
 		pThis->clear();
 		break;
 	}
-	case 304115: {
+	case 304114: {
 		*(void**)p1 = pThis->completer();
 		break;
 	}
-	case 304116: {
-		pThis->contextMenuEvent((QContextMenuEvent*)(p1));
-		break;
-	}
-	case 304117: {
+	case 304115: {
 		pThis->copy();
 		break;
 	}
-	case 304118: {
+	case 304116: {
 		*(void**)p1 = pThis->createStandardContextMenu();
 		break;
 	}
-	case 304119: {
+	case 304117: {
 		pThis->cursorBackward(*(bool*)p1);
 		break;
 	}
-	case 304120: {
+	case 304118: {
 		pThis->cursorBackward(*(bool*)p1,*(int*)p2);
 		break;
 	}
-	case 304121: {
+	case 304119: {
 		pThis->cursorForward(*(bool*)p1);
 		break;
 	}
-	case 304122: {
+	case 304120: {
 		pThis->cursorForward(*(bool*)p1,*(int*)p2);
 		break;
 	}
-	case 304123: {
+	case 304121: {
 		*(int*)p1 = pThis->cursorPosition();
 		break;
 	}
-	case 304124: {
+	case 304122: {
 		if(p1==0)return -2;
 		*(int*)p2 = pThis->cursorPositionAt(*(QPoint*)(p1));
 		break;
 	}
-	case 304125: {
+	case 304123: {
 		*(void**)p1 = new QRect(pThis->cursorRect());
 		break;
 	}
-	case 304126: {
+	case 304124: {
 		pThis->cursorWordBackward(*(bool*)p1);
 		break;
 	}
-	case 304127: {
+	case 304125: {
 		pThis->cursorWordForward(*(bool*)p1);
 		break;
 	}
-	case 304128: {
+	case 304126: {
 		pThis->cut();
 		break;
 	}
-	case 304129: {
+	case 304127: {
 		pThis->del();
 		break;
 	}
-	case 304130: {
+	case 304128: {
 		pThis->deselect();
 		break;
 	}
-	case 304131: {
+	case 304129: {
 		drvSetString(p1,pThis->displayText());
 		break;
 	}
-	case 304132: {
+	case 304130: {
 		*(bool*)p1 = pThis->dragEnabled();
 		break;
 	}
-	case 304133: {
-		pThis->dragEnterEvent((QDragEnterEvent*)(p1));
-		break;
-	}
-	case 304134: {
-		pThis->dragLeaveEvent((QDragLeaveEvent*)(p1));
-		break;
-	}
-	case 304135: {
-		pThis->dragMoveEvent((QDragMoveEvent*)(p1));
-		break;
-	}
-	case 304136: {
-		pThis->dropEvent((QDropEvent*)(p1));
-		break;
-	}
-	case 304137: {
+	case 304131: {
 		*(QLineEdit::EchoMode*)p1 = pThis->echoMode();
 		break;
 	}
-	case 304138: {
+	case 304132: {
 		pThis->end(*(bool*)p1);
 		break;
 	}
-	case 304139: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 304140: {
-		pThis->focusInEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 304141: {
-		pThis->focusOutEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 304142: {
+	case 304133: {
 		pThis->getTextMargins(*(int**)p1,*(int**)p2,*(int**)p3,*(int**)p4);
 		break;
 	}
-	case 304143: {
+	case 304134: {
 		*(bool*)p1 = pThis->hasAcceptableInput();
 		break;
 	}
-	case 304144: {
+	case 304135: {
 		*(bool*)p1 = pThis->hasFrame();
 		break;
 	}
-	case 304145: {
+	case 304136: {
 		*(bool*)p1 = pThis->hasSelectedText();
 		break;
 	}
-	case 304146: {
+	case 304137: {
 		pThis->home(*(bool*)p1);
 		break;
 	}
-	case 304147: {
+	case 304138: {
 		drvSetString(p1,pThis->inputMask());
 		break;
 	}
-	case 304148: {
-		pThis->inputMethodEvent((QInputMethodEvent*)(p1));
-		break;
-	}
-	case 304149: {
-		*(void**)p2 = new QVariant(pThis->inputMethodQuery(*(Qt::InputMethodQuery*)p1));
-		break;
-	}
-	case 304150: {
+	case 304139: {
 		pThis->insert(drvGetStringHead(p1));
 		break;
 	}
-	case 304151: {
+	case 304140: {
 		*(bool*)p1 = pThis->isModified();
 		break;
 	}
-	case 304152: {
+	case 304141: {
 		*(bool*)p1 = pThis->isReadOnly();
 		break;
 	}
-	case 304153: {
+	case 304142: {
 		*(bool*)p1 = pThis->isRedoAvailable();
 		break;
 	}
-	case 304154: {
+	case 304143: {
 		*(bool*)p1 = pThis->isUndoAvailable();
 		break;
 	}
-	case 304155: {
-		pThis->keyPressEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 304156: {
+	case 304144: {
 		*(int*)p1 = pThis->maxLength();
 		break;
 	}
-	case 304157: {
-		*(void**)p1 = new QSize(pThis->minimumSizeHint());
-		break;
-	}
-	case 304158: {
-		pThis->mouseDoubleClickEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 304159: {
-		pThis->mouseMoveEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 304160: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 304161: {
-		pThis->mouseReleaseEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 304162: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 304163: {
+	case 304145: {
 		pThis->paste();
 		break;
 	}
-	case 304164: {
+	case 304146: {
 		drvSetString(p1,pThis->placeholderText());
 		break;
 	}
-	case 304165: {
+	case 304147: {
 		pThis->redo();
 		break;
 	}
-	case 304166: {
+	case 304148: {
 		pThis->selectAll();
 		break;
 	}
-	case 304167: {
+	case 304149: {
 		drvSetString(p1,pThis->selectedText());
 		break;
 	}
-	case 304168: {
+	case 304150: {
 		*(int*)p1 = pThis->selectionStart();
 		break;
 	}
-	case 304169: {
+	case 304151: {
 		pThis->setAlignment(*(QFlags<Qt::AlignmentFlag>*)p1);
 		break;
 	}
-	case 304170: {
+	case 304152: {
 		pThis->setCompleter((QCompleter*)(p1));
 		break;
 	}
-	case 304171: {
+	case 304153: {
 		pThis->setCursorPosition(*(int*)p1);
 		break;
 	}
-	case 304172: {
+	case 304154: {
 		pThis->setDragEnabled(*(bool*)p1);
 		break;
 	}
-	case 304173: {
+	case 304155: {
 		pThis->setEchoMode(*(QLineEdit::EchoMode*)p1);
 		break;
 	}
-	case 304174: {
+	case 304156: {
 		pThis->setFrame(*(bool*)p1);
 		break;
 	}
-	case 304175: {
+	case 304157: {
 		pThis->setInputMask(drvGetStringHead(p1));
 		break;
 	}
-	case 304176: {
+	case 304158: {
 		pThis->setMaxLength(*(int*)p1);
 		break;
 	}
-	case 304177: {
+	case 304159: {
 		pThis->setModified(*(bool*)p1);
 		break;
 	}
-	case 304178: {
+	case 304160: {
 		pThis->setPlaceholderText(drvGetStringHead(p1));
 		break;
 	}
-	case 304179: {
+	case 304161: {
 		pThis->setReadOnly(*(bool*)p1);
 		break;
 	}
-	case 304180: {
+	case 304162: {
 		pThis->setSelection(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 304181: {
+	case 304163: {
 		pThis->setText(drvGetStringHead(p1));
 		break;
 	}
-	case 304182: {
+	case 304164: {
 		if(p1==0)return -2;
 		pThis->setTextMargins(*(QMargins*)(p1));
 		break;
 	}
-	case 304183: {
+	case 304165: {
 		pThis->setTextMargins(*(int*)p1,*(int*)p2,*(int*)p3,*(int*)p4);
 		break;
 	}
-	case 304184: {
+	case 304166: {
 		pThis->setValidator((QValidator*)(p1));
 		break;
 	}
-	case 304185: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 304186: {
+	case 304167: {
 		drvSetString(p1,pThis->text());
 		break;
 	}
-	case 304187: {
+	case 304168: {
 		*(void**)p1 = new QMargins(pThis->textMargins());
 		break;
 	}
-	case 304188: {
+	case 304169: {
 		pThis->undo();
 		break;
 	}
-	case 304189: {
+	case 304170: {
 		*(const void**)p1 = pThis->validator();
 		break;
 	}
@@ -35406,266 +32900,126 @@ int drv_QListView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 305108: {
-		if(p1==0)return -2;
-	if(p2==0)return -2;
-		pThis->currentChanged(*(QModelIndex*)(p1),*(QModelIndex*)(p2));
-		break;
-	}
-	case 305109: {
-		if(p1==0)return -2;
-	if(p2==0)return -2;
-		pThis->dataChanged(*(QModelIndex*)(p1),*(QModelIndex*)(p2));
-		break;
-	}
-	case 305110: {
-		pThis->doItemsLayout();
-		break;
-	}
-	case 305111: {
-		pThis->dragLeaveEvent((QDragLeaveEvent*)(p1));
-		break;
-	}
-	case 305112: {
-		pThis->dragMoveEvent((QDragMoveEvent*)(p1));
-		break;
-	}
-	case 305113: {
-		pThis->dropEvent((QDropEvent*)(p1));
-		break;
-	}
-	case 305114: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 305115: {
 		*(QListView::Flow*)p1 = pThis->flow();
 		break;
 	}
-	case 305116: {
+	case 305109: {
 		*(void**)p1 = new QSize(pThis->gridSize());
 		break;
 	}
-	case 305117: {
-		*(int*)p1 = pThis->horizontalOffset();
-		break;
-	}
-	case 305118: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QModelIndex(pThis->indexAt(*(QPoint*)(p1)));
-		break;
-	}
-	case 305119: {
-		if(p1==0)return -2;
-		*(bool*)p2 = pThis->isIndexHidden(*(QModelIndex*)(p1));
-		break;
-	}
-	case 305120: {
+	case 305110: {
 		*(bool*)p2 = pThis->isRowHidden(*(int*)p1);
 		break;
 	}
-	case 305121: {
+	case 305111: {
 		*(bool*)p1 = pThis->isSelectionRectVisible();
 		break;
 	}
-	case 305122: {
+	case 305112: {
 		*(bool*)p1 = pThis->isWrapping();
 		break;
 	}
-	case 305123: {
+	case 305113: {
 		*(QListView::LayoutMode*)p1 = pThis->layoutMode();
 		break;
 	}
-	case 305124: {
+	case 305114: {
 		*(int*)p1 = pThis->modelColumn();
 		break;
 	}
-	case 305125: {
-		pThis->mouseMoveEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 305126: {
-		pThis->mouseReleaseEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 305127: {
-		*(void**)p3 = new QModelIndex(pThis->moveCursor(*(QAbstractItemView::CursorAction*)p1,*(QFlags<Qt::KeyboardModifier>*)p2));
-		break;
-	}
-	case 305128: {
+	case 305115: {
 		*(QListView::Movement*)p1 = pThis->movement();
 		break;
 	}
-	case 305129: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 305130: {
+	case 305116: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QRect(pThis->rectForIndex(*(QModelIndex*)(p1)));
 		break;
 	}
-	case 305131: {
-		pThis->reset();
-		break;
-	}
-	case 305132: {
+	case 305117: {
 		pThis->resizeContents(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 305133: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 305134: {
+	case 305118: {
 		*(QListView::ResizeMode*)p1 = pThis->resizeMode();
 		break;
 	}
-	case 305135: {
-		if(p1==0)return -2;
-		pThis->rowsAboutToBeRemoved(*(QModelIndex*)(p1),*(int*)p2,*(int*)p3);
-		break;
-	}
-	case 305136: {
-		if(p1==0)return -2;
-		pThis->rowsInserted(*(QModelIndex*)(p1),*(int*)p2,*(int*)p3);
-		break;
-	}
-	case 305137: {
-		pThis->scrollContentsBy(*(int*)p1,*(int*)p2);
-		break;
-	}
-	case 305138: {
-		if(p1==0)return -2;
-		pThis->scrollTo(*(QModelIndex*)(p1));
-		break;
-	}
-	case 305139: {
-		if(p1==0)return -2;
-		pThis->scrollTo(*(QModelIndex*)(p1),*(QAbstractItemView::ScrollHint*)p2);
-		break;
-	}
-	case 305140: {
-		drvSetListPtr<QModelIndex>(p1,80000,pThis->selectedIndexes());
-		break;
-	}
-	case 305141: {
-		if(p1==0)return -2;
-	if(p2==0)return -2;
-		pThis->selectionChanged(*(QItemSelection*)(p1),*(QItemSelection*)(p2));
-		break;
-	}
-	case 305142: {
+	case 305119: {
 		pThis->setBatchSize(*(int*)p1);
 		break;
 	}
-	case 305143: {
+	case 305120: {
 		pThis->setFlow(*(QListView::Flow*)p1);
 		break;
 	}
-	case 305144: {
+	case 305121: {
 		if(p1==0)return -2;
 		pThis->setGridSize(*(QSize*)(p1));
 		break;
 	}
-	case 305145: {
+	case 305122: {
 		pThis->setLayoutMode(*(QListView::LayoutMode*)p1);
 		break;
 	}
-	case 305146: {
+	case 305123: {
 		pThis->setModelColumn(*(int*)p1);
 		break;
 	}
-	case 305147: {
+	case 305124: {
 		pThis->setMovement(*(QListView::Movement*)p1);
 		break;
 	}
-	case 305148: {
+	case 305125: {
 		if(p1==0)return -2;
 	if(p2==0)return -2;
 		pThis->setPositionForIndex(*(QPoint*)(p1),*(QModelIndex*)(p2));
 		break;
 	}
-	case 305149: {
+	case 305126: {
 		pThis->setResizeMode(*(QListView::ResizeMode*)p1);
 		break;
 	}
-	case 305150: {
-		if(p1==0)return -2;
-		pThis->setRootIndex(*(QModelIndex*)(p1));
-		break;
-	}
-	case 305151: {
+	case 305127: {
 		pThis->setRowHidden(*(int*)p1,*(bool*)p2);
 		break;
 	}
-	case 305152: {
-		if(p1==0)return -2;
-		pThis->setSelection(*(QRect*)(p1),*(QFlags<QItemSelectionModel::SelectionFlag>*)p2);
-		break;
-	}
-	case 305153: {
+	case 305128: {
 		pThis->setSelectionRectVisible(*(bool*)p1);
 		break;
 	}
-	case 305154: {
+	case 305129: {
 		pThis->setSpacing(*(int*)p1);
 		break;
 	}
-	case 305155: {
+	case 305130: {
 		pThis->setUniformItemSizes(*(bool*)p1);
 		break;
 	}
-	case 305156: {
+	case 305131: {
 		pThis->setViewMode(*(QListView::ViewMode*)p1);
 		break;
 	}
-	case 305157: {
+	case 305132: {
 		pThis->setWordWrap(*(bool*)p1);
 		break;
 	}
-	case 305158: {
+	case 305133: {
 		pThis->setWrapping(*(bool*)p1);
 		break;
 	}
-	case 305159: {
+	case 305134: {
 		*(int*)p1 = pThis->spacing();
 		break;
 	}
-	case 305160: {
-		pThis->startDrag(*(QFlags<Qt::DropAction>*)p1);
-		break;
-	}
-	case 305161: {
-		pThis->timerEvent((QTimerEvent*)(p1));
-		break;
-	}
-	case 305162: {
+	case 305135: {
 		*(bool*)p1 = pThis->uniformItemSizes();
 		break;
 	}
-	case 305163: {
-		pThis->updateGeometries();
-		break;
-	}
-	case 305164: {
-		*(int*)p1 = pThis->verticalOffset();
-		break;
-	}
-	case 305165: {
+	case 305136: {
 		*(QListView::ViewMode*)p1 = pThis->viewMode();
 		break;
 	}
-	case 305166: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QRect(pThis->visualRect(*(QModelIndex*)(p1)));
-		break;
-	}
-	case 305167: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QRegion(pThis->visualRegionForSelection(*(QItemSelection*)(p1)));
-		break;
-	}
-	case 305168: {
+	case 305137: {
 		*(bool*)p1 = pThis->wordWrap();
 		break;
 	}
@@ -35795,160 +33149,152 @@ int drv_QListWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 306122: {
-		pThis->dropEvent((QDropEvent*)(p1));
-		break;
-	}
-	case 306123: {
 		*(bool*)p4 = pThis->dropMimeData(*(int*)p1,(QMimeData*)(p2),*(Qt::DropAction*)p3);
 		break;
 	}
-	case 306124: {
+	case 306123: {
 		pThis->editItem((QListWidgetItem*)(p1));
 		break;
 	}
-	case 306125: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 306126: {
+	case 306124: {
 		drvSetListObj<QListWidgetItem*>(p3,72000,pThis->findItems(drvGetStringHead(p1),*(QFlags<Qt::MatchFlag>*)p2));
 		break;
 	}
-	case 306127: {
+	case 306125: {
 		*(void**)p2 = new QModelIndex(pThis->indexFromItem((QListWidgetItem*)(p1)));
 		break;
 	}
-	case 306128: {
+	case 306126: {
 		pThis->insertItem(*(int*)p1,(QListWidgetItem*)(p2));
 		break;
 	}
-	case 306129: {
+	case 306127: {
 		pThis->insertItem(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
-	case 306130: {
+	case 306128: {
 		pThis->insertItems(*(int*)p1,drvGetStringArray(p2));
 		break;
 	}
-	case 306131: {
+	case 306129: {
 		*(bool*)p2 = pThis->isItemHidden((QListWidgetItem*)(p1));
 		break;
 	}
-	case 306132: {
+	case 306130: {
 		*(bool*)p2 = pThis->isItemSelected((QListWidgetItem*)(p1));
 		break;
 	}
-	case 306133: {
+	case 306131: {
 		*(bool*)p1 = pThis->isSortingEnabled();
 		break;
 	}
-	case 306134: {
+	case 306132: {
 		*(void**)p2 = pThis->item(*(int*)p1);
 		break;
 	}
-	case 306135: {
+	case 306133: {
 		if(p1==0)return -2;
 		*(void**)p2 = pThis->itemAt(*(QPoint*)(p1));
 		break;
 	}
-	case 306136: {
+	case 306134: {
 		*(void**)p3 = pThis->itemAt(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 306137: {
+	case 306135: {
 		if(p1==0)return -2;
 		*(void**)p2 = pThis->itemFromIndex(*(QModelIndex*)(p1));
 		break;
 	}
-	case 306138: {
+	case 306136: {
 		*(void**)p2 = pThis->itemWidget((QListWidgetItem*)(p1));
 		break;
 	}
-	case 306139: {
+	case 306137: {
 		drvSetListObj<QListWidgetItem*>(p2,72000,pThis->items((QMimeData*)(p1)));
 		break;
 	}
-	case 306140: {
+	case 306138: {
 		*(void**)p2 = pThis->mimeData(drvGetObjectArrayHeadT<QListWidgetItem*>(p1));
 		break;
 	}
-	case 306141: {
+	case 306139: {
 		drvSetStringArray(p1,pThis->mimeTypes());
 		break;
 	}
-	case 306142: {
+	case 306140: {
 		pThis->openPersistentEditor((QListWidgetItem*)(p1));
 		break;
 	}
-	case 306143: {
+	case 306141: {
 		pThis->removeItemWidget((QListWidgetItem*)(p1));
 		break;
 	}
-	case 306144: {
+	case 306142: {
 		*(int*)p2 = pThis->row((QListWidgetItem*)(p1));
 		break;
 	}
-	case 306145: {
+	case 306143: {
 		pThis->scrollToItem((QListWidgetItem*)(p1));
 		break;
 	}
-	case 306146: {
+	case 306144: {
 		pThis->scrollToItem((QListWidgetItem*)(p1),*(QAbstractItemView::ScrollHint*)p2);
 		break;
 	}
-	case 306147: {
+	case 306145: {
 		drvSetListObj<QListWidgetItem*>(p1,72000,pThis->selectedItems());
 		break;
 	}
-	case 306148: {
+	case 306146: {
 		pThis->setCurrentItem((QListWidgetItem*)(p1));
 		break;
 	}
-	case 306149: {
+	case 306147: {
 		pThis->setCurrentItem((QListWidgetItem*)(p1),*(QFlags<QItemSelectionModel::SelectionFlag>*)p2);
 		break;
 	}
-	case 306150: {
+	case 306148: {
 		pThis->setCurrentRow(*(int*)p1);
 		break;
 	}
-	case 306151: {
+	case 306149: {
 		pThis->setCurrentRow(*(int*)p1,*(QFlags<QItemSelectionModel::SelectionFlag>*)p2);
 		break;
 	}
-	case 306152: {
+	case 306150: {
 		pThis->setItemHidden((QListWidgetItem*)(p1),*(bool*)p2);
 		break;
 	}
-	case 306153: {
+	case 306151: {
 		pThis->setItemSelected((QListWidgetItem*)(p1),*(bool*)p2);
 		break;
 	}
-	case 306154: {
+	case 306152: {
 		pThis->setItemWidget((QListWidgetItem*)(p1),(QWidget*)(p2));
 		break;
 	}
-	case 306155: {
+	case 306153: {
 		pThis->setSortingEnabled(*(bool*)p1);
 		break;
 	}
-	case 306156: {
+	case 306154: {
 		pThis->sortItems();
 		break;
 	}
-	case 306157: {
+	case 306155: {
 		pThis->sortItems(*(Qt::SortOrder*)p1);
 		break;
 	}
-	case 306158: {
+	case 306156: {
 		*(QFlags<Qt::DropAction>*)p1 = pThis->supportedDropActions();
 		break;
 	}
-	case 306159: {
+	case 306157: {
 		*(void**)p2 = pThis->takeItem(*(int*)p1);
 		break;
 	}
-	case 306160: {
+	case 306158: {
 		*(void**)p2 = new QRect(pThis->visualItemRect((QListWidgetItem*)(p1)));
 		break;
 	}
@@ -36022,192 +33368,184 @@ int drv_QMainWindow(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 307114: {
-		pThis->contextMenuEvent((QContextMenuEvent*)(p1));
-		break;
-	}
-	case 307115: {
 		*(Qt::DockWidgetArea*)p2 = pThis->corner(*(Qt::Corner*)p1);
 		break;
 	}
-	case 307116: {
+	case 307115: {
 		*(void**)p1 = pThis->createPopupMenu();
 		break;
 	}
-	case 307117: {
+	case 307116: {
 		*(QFlags<QMainWindow::DockOption>*)p1 = pThis->dockOptions();
 		break;
 	}
-	case 307118: {
+	case 307117: {
 		*(Qt::DockWidgetArea*)p2 = pThis->dockWidgetArea((QDockWidget*)(p1));
 		break;
 	}
-	case 307119: {
+	case 307118: {
 		*(bool*)p1 = pThis->documentMode();
 		break;
 	}
-	case 307120: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 307121: {
+	case 307119: {
 		*(void**)p1 = new QSize(pThis->iconSize());
 		break;
 	}
-	case 307122: {
+	case 307120: {
 		pThis->insertToolBar((QToolBar*)(p1),(QToolBar*)(p2));
 		break;
 	}
-	case 307123: {
+	case 307121: {
 		pThis->insertToolBarBreak((QToolBar*)(p1));
 		break;
 	}
-	case 307124: {
+	case 307122: {
 		*(bool*)p1 = pThis->isAnimated();
 		break;
 	}
-	case 307125: {
+	case 307123: {
 		*(bool*)p1 = pThis->isDockNestingEnabled();
 		break;
 	}
-	case 307126: {
+	case 307124: {
 		if(p1==0)return -2;
 		*(bool*)p2 = pThis->isSeparator(*(QPoint*)(p1));
 		break;
 	}
-	case 307127: {
+	case 307125: {
 		*(void**)p1 = pThis->menuBar();
 		break;
 	}
-	case 307128: {
+	case 307126: {
 		*(void**)p1 = pThis->menuWidget();
 		break;
 	}
-	case 307129: {
+	case 307127: {
 		pThis->removeDockWidget((QDockWidget*)(p1));
 		break;
 	}
-	case 307130: {
+	case 307128: {
 		pThis->removeToolBar((QToolBar*)(p1));
 		break;
 	}
-	case 307131: {
+	case 307129: {
 		pThis->removeToolBarBreak((QToolBar*)(p1));
 		break;
 	}
-	case 307132: {
+	case 307130: {
 		*(bool*)p2 = pThis->restoreDockWidget((QDockWidget*)(p1));
 		break;
 	}
-	case 307133: {
+	case 307131: {
 		*(bool*)p2 = pThis->restoreState(drvGetByteArrayHead(p1));
 		break;
 	}
-	case 307134: {
+	case 307132: {
 		*(bool*)p3 = pThis->restoreState(drvGetByteArrayHead(p1),*(int*)p2);
 		break;
 	}
-	case 307135: {
+	case 307133: {
 		drvSetByteArray(p1,pThis->saveState());
 		break;
 	}
-	case 307136: {
+	case 307134: {
 		drvSetByteArray(p2,pThis->saveState(*(int*)p1));
 		break;
 	}
-	case 307137: {
+	case 307135: {
 		pThis->setAnimated(*(bool*)p1);
 		break;
 	}
-	case 307138: {
+	case 307136: {
 		pThis->setCentralWidget((QWidget*)(p1));
 		break;
 	}
-	case 307139: {
+	case 307137: {
 		pThis->setCorner(*(Qt::Corner*)p1,*(Qt::DockWidgetArea*)p2);
 		break;
 	}
-	case 307140: {
+	case 307138: {
 		pThis->setDockNestingEnabled(*(bool*)p1);
 		break;
 	}
-	case 307141: {
+	case 307139: {
 		pThis->setDockOptions(*(QFlags<QMainWindow::DockOption>*)p1);
 		break;
 	}
-	case 307142: {
+	case 307140: {
 		pThis->setDocumentMode(*(bool*)p1);
 		break;
 	}
-	case 307143: {
+	case 307141: {
 		if(p1==0)return -2;
 		pThis->setIconSize(*(QSize*)(p1));
 		break;
 	}
-	case 307144: {
+	case 307142: {
 		pThis->setMenuBar((QMenuBar*)(p1));
 		break;
 	}
-	case 307145: {
+	case 307143: {
 		pThis->setMenuWidget((QWidget*)(p1));
 		break;
 	}
-	case 307146: {
+	case 307144: {
 		pThis->setStatusBar((QStatusBar*)(p1));
 		break;
 	}
-	case 307147: {
+	case 307145: {
 		pThis->setTabPosition(*(QFlags<Qt::DockWidgetArea>*)p1,*(QTabWidget::TabPosition*)p2);
 		break;
 	}
-	case 307148: {
+	case 307146: {
 		pThis->setTabShape(*(QTabWidget::TabShape*)p1);
 		break;
 	}
-	case 307149: {
+	case 307147: {
 		pThis->setToolButtonStyle(*(Qt::ToolButtonStyle*)p1);
 		break;
 	}
-	case 307150: {
+	case 307148: {
 		pThis->setUnifiedTitleAndToolBarOnMac(*(bool*)p1);
 		break;
 	}
-	case 307151: {
+	case 307149: {
 		pThis->splitDockWidget((QDockWidget*)(p1),(QDockWidget*)(p2),*(Qt::Orientation*)p3);
 		break;
 	}
-	case 307152: {
+	case 307150: {
 		*(void**)p1 = pThis->statusBar();
 		break;
 	}
-	case 307153: {
+	case 307151: {
 		*(QTabWidget::TabPosition*)p2 = pThis->tabPosition(*(Qt::DockWidgetArea*)p1);
 		break;
 	}
-	case 307154: {
+	case 307152: {
 		*(QTabWidget::TabShape*)p1 = pThis->tabShape();
 		break;
 	}
-	case 307155: {
+	case 307153: {
 		drvSetListObj<QDockWidget*>(p2,231000,pThis->tabifiedDockWidgets((QDockWidget*)(p1)));
 		break;
 	}
-	case 307156: {
+	case 307154: {
 		pThis->tabifyDockWidget((QDockWidget*)(p1),(QDockWidget*)(p2));
 		break;
 	}
-	case 307157: {
+	case 307155: {
 		*(Qt::ToolBarArea*)p2 = pThis->toolBarArea((QToolBar*)(p1));
 		break;
 	}
-	case 307158: {
+	case 307156: {
 		*(bool*)p2 = pThis->toolBarBreak((QToolBar*)(p1));
 		break;
 	}
-	case 307159: {
+	case 307157: {
 		*(Qt::ToolButtonStyle*)p1 = pThis->toolButtonStyle();
 		break;
 	}
-	case 307160: {
+	case 307158: {
 		*(bool*)p1 = pThis->unifiedTitleAndToolBarOnMac();
 		break;
 	}
@@ -36274,136 +33612,92 @@ int drv_QMdiArea(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 308113: {
-		pThis->childEvent((QChildEvent*)(p1));
-		break;
-	}
-	case 308114: {
 		pThis->closeActiveSubWindow();
 		break;
 	}
-	case 308115: {
+	case 308114: {
 		pThis->closeAllSubWindows();
 		break;
 	}
-	case 308116: {
+	case 308115: {
 		*(void**)p1 = pThis->currentSubWindow();
 		break;
 	}
-	case 308117: {
+	case 308116: {
 		*(bool*)p1 = pThis->documentMode();
 		break;
 	}
-	case 308118: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 308119: {
-		*(bool*)p3 = pThis->eventFilter((QObject*)(p1),(QEvent*)(p2));
-		break;
-	}
-	case 308120: {
-		*(void**)p1 = new QSize(pThis->minimumSizeHint());
-		break;
-	}
-	case 308121: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 308122: {
+	case 308117: {
 		pThis->removeSubWindow((QWidget*)(p1));
 		break;
 	}
-	case 308123: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 308124: {
-		pThis->scrollContentsBy(*(int*)p1,*(int*)p2);
-		break;
-	}
-	case 308125: {
+	case 308118: {
 		pThis->setActivationOrder(*(QMdiArea::WindowOrder*)p1);
 		break;
 	}
-	case 308126: {
+	case 308119: {
 		pThis->setActiveSubWindow((QMdiSubWindow*)(p1));
 		break;
 	}
-	case 308127: {
+	case 308120: {
 		if(p1==0)return -2;
 		pThis->setBackground(*(QBrush*)(p1));
 		break;
 	}
-	case 308128: {
+	case 308121: {
 		pThis->setDocumentMode(*(bool*)p1);
 		break;
 	}
-	case 308129: {
+	case 308122: {
 		pThis->setOption(*(QMdiArea::AreaOption*)p1);
 		break;
 	}
-	case 308130: {
+	case 308123: {
 		pThis->setOption(*(QMdiArea::AreaOption*)p1,*(bool*)p2);
 		break;
 	}
-	case 308131: {
+	case 308124: {
 		pThis->setTabPosition(*(QTabWidget::TabPosition*)p1);
 		break;
 	}
-	case 308132: {
+	case 308125: {
 		pThis->setTabShape(*(QTabWidget::TabShape*)p1);
 		break;
 	}
-	case 308133: {
+	case 308126: {
 		pThis->setViewMode(*(QMdiArea::ViewMode*)p1);
 		break;
 	}
-	case 308134: {
+	case 308127: {
 		pThis->setupViewport((QWidget*)(p1));
 		break;
 	}
-	case 308135: {
-		pThis->showEvent((QShowEvent*)(p1));
-		break;
-	}
-	case 308136: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 308137: {
+	case 308128: {
 		drvSetListObj<QMdiSubWindow*>(p1,309000,pThis->subWindowList());
 		break;
 	}
-	case 308138: {
+	case 308129: {
 		drvSetListObj<QMdiSubWindow*>(p2,309000,pThis->subWindowList(*(QMdiArea::WindowOrder*)p1));
 		break;
 	}
-	case 308139: {
+	case 308130: {
 		*(QTabWidget::TabPosition*)p1 = pThis->tabPosition();
 		break;
 	}
-	case 308140: {
+	case 308131: {
 		*(QTabWidget::TabShape*)p1 = pThis->tabShape();
 		break;
 	}
-	case 308141: {
+	case 308132: {
 		*(bool*)p2 = pThis->testOption(*(QMdiArea::AreaOption*)p1);
 		break;
 	}
-	case 308142: {
+	case 308133: {
 		pThis->tileSubWindows();
 		break;
 	}
-	case 308143: {
-		pThis->timerEvent((QTimerEvent*)(p1));
-		break;
-	}
-	case 308144: {
+	case 308134: {
 		*(QMdiArea::ViewMode*)p1 = pThis->viewMode();
-		break;
-	}
-	case 308145: {
-		*(bool*)p2 = pThis->viewportEvent((QEvent*)(p1));
 		break;
 	}
 	default:
@@ -36444,158 +33738,70 @@ int drv_QMdiSubWindow(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 309106: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 309107: {
-		pThis->childEvent((QChildEvent*)(p1));
-		break;
-	}
-	case 309108: {
-		pThis->closeEvent((QCloseEvent*)(p1));
-		break;
-	}
-	case 309109: {
-		pThis->contextMenuEvent((QContextMenuEvent*)(p1));
-		break;
-	}
-	case 309110: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 309111: {
-		*(bool*)p3 = pThis->eventFilter((QObject*)(p1),(QEvent*)(p2));
-		break;
-	}
-	case 309112: {
-		pThis->focusInEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 309113: {
-		pThis->focusOutEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 309114: {
-		pThis->hideEvent((QHideEvent*)(p1));
-		break;
-	}
-	case 309115: {
 		*(bool*)p1 = pThis->isShaded();
 		break;
 	}
-	case 309116: {
-		pThis->keyPressEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 309117: {
+	case 309107: {
 		*(int*)p1 = pThis->keyboardPageStep();
 		break;
 	}
-	case 309118: {
+	case 309108: {
 		*(int*)p1 = pThis->keyboardSingleStep();
 		break;
 	}
-	case 309119: {
-		pThis->leaveEvent((QEvent*)(p1));
-		break;
-	}
-	case 309120: {
+	case 309109: {
 		*(void**)p1 = pThis->maximizedButtonsWidget();
 		break;
 	}
-	case 309121: {
+	case 309110: {
 		*(void**)p1 = pThis->maximizedSystemMenuIconWidget();
 		break;
 	}
-	case 309122: {
+	case 309111: {
 		*(void**)p1 = pThis->mdiArea();
 		break;
 	}
-	case 309123: {
-		*(void**)p1 = new QSize(pThis->minimumSizeHint());
-		break;
-	}
-	case 309124: {
-		pThis->mouseDoubleClickEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 309125: {
-		pThis->mouseMoveEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 309126: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 309127: {
-		pThis->mouseReleaseEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 309128: {
-		pThis->moveEvent((QMoveEvent*)(p1));
-		break;
-	}
-	case 309129: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 309130: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 309131: {
+	case 309112: {
 		pThis->setKeyboardPageStep(*(int*)p1);
 		break;
 	}
-	case 309132: {
+	case 309113: {
 		pThis->setKeyboardSingleStep(*(int*)p1);
 		break;
 	}
-	case 309133: {
+	case 309114: {
 		pThis->setOption(*(QMdiSubWindow::SubWindowOption*)p1);
 		break;
 	}
-	case 309134: {
+	case 309115: {
 		pThis->setOption(*(QMdiSubWindow::SubWindowOption*)p1,*(bool*)p2);
 		break;
 	}
-	case 309135: {
+	case 309116: {
 		pThis->setSystemMenu((QMenu*)(p1));
 		break;
 	}
-	case 309136: {
+	case 309117: {
 		pThis->setWidget((QWidget*)(p1));
 		break;
 	}
-	case 309137: {
-		pThis->showEvent((QShowEvent*)(p1));
-		break;
-	}
-	case 309138: {
+	case 309118: {
 		pThis->showShaded();
 		break;
 	}
-	case 309139: {
+	case 309119: {
 		pThis->showSystemMenu();
 		break;
 	}
-	case 309140: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 309141: {
+	case 309120: {
 		*(void**)p1 = pThis->systemMenu();
 		break;
 	}
-	case 309142: {
+	case 309121: {
 		*(bool*)p2 = pThis->testOption(*(QMdiSubWindow::SubWindowOption*)p1);
 		break;
 	}
-	case 309143: {
-		pThis->timerEvent((QTimerEvent*)(p1));
-		break;
-	}
-	case 309144: {
+	case 309122: {
 		*(void**)p1 = pThis->widget();
 		break;
 	}
@@ -36660,225 +33866,165 @@ int drv_QMenu(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 		break;
 	}
 	case 310110: {
-		pThis->actionEvent((QActionEvent*)(p1));
-		break;
-	}
-	case 310111: {
 		*(void**)p2 = new QRect(pThis->actionGeometry((QAction*)(p1)));
 		break;
 	}
-	case 310112: {
+	case 310111: {
 		*(void**)p1 = pThis->activeAction();
 		break;
 	}
-	case 310113: {
+	case 310112: {
 		pThis->addAction((QAction*)(p1));
 		break;
 	}
-	case 310114: {
+	case 310113: {
 		*(void**)p2 = pThis->addAction(drvGetStringHead(p1));
 		break;
 	}
-	case 310115: {
+	case 310114: {
 		if(p1==0)return -2;
 		*(void**)p3 = pThis->addAction(*(QIcon*)(p1),drvGetStringHead(p2));
 		break;
 	}
-	case 310116: {
+	case 310115: {
 		*(void**)p5 = pThis->addAction(drvGetStringHead(p1),(QObject*)(p2),drvGet_const_char(p3),p4==0?QKeySequence():*(QKeySequence*)(p4));
 		break;
 	}
-	case 310117: {
+	case 310116: {
 		if(p1==0)return -2;
 		*(void**)p6 = pThis->addAction(*(QIcon*)(p1),drvGetStringHead(p2),(QObject*)(p3),drvGet_const_char(p4),p5==0?QKeySequence():*(QKeySequence*)(p5));
 		break;
 	}
-	case 310118: {
+	case 310117: {
 		*(void**)p2 = pThis->addMenu((QMenu*)(p1));
 		break;
 	}
-	case 310119: {
+	case 310118: {
 		*(void**)p2 = pThis->addMenu(drvGetStringHead(p1));
 		break;
 	}
-	case 310120: {
+	case 310119: {
 		if(p1==0)return -2;
 		*(void**)p3 = pThis->addMenu(*(QIcon*)(p1),drvGetStringHead(p2));
 		break;
 	}
-	case 310121: {
+	case 310120: {
 		*(void**)p1 = pThis->addSeparator();
 		break;
 	}
-	case 310122: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 310123: {
+	case 310121: {
 		pThis->clear();
 		break;
 	}
-	case 310124: {
+	case 310122: {
 		*(int*)p1 = pThis->columnCount();
 		break;
 	}
-	case 310125: {
+	case 310123: {
 		*(void**)p1 = pThis->defaultAction();
 		break;
 	}
-	case 310126: {
-		pThis->enterEvent((QEvent*)(p1));
-		break;
-	}
-	case 310127: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 310128: {
+	case 310124: {
 		*(void**)p1 = pThis->exec();
 		break;
 	}
-	case 310129: {
+	case 310125: {
 		if(p1==0)return -2;
 		*(void**)p2 = pThis->exec(*(QPoint*)(p1));
 		break;
 	}
-	case 310130: {
+	case 310126: {
 		if(p1==0)return -2;
 		*(void**)p3 = pThis->exec(*(QPoint*)(p1),(QAction*)(p2));
 		break;
 	}
-	case 310131: {
+	case 310127: {
 		if(p2==0)return -2;
 		*(void**)p4 = QMenu::exec(drvGetObjectArrayHeadT<QAction*>(p1),*(QPoint*)(p2),(QAction*)(p3));
 		break;
 	}
-	case 310132: {
+	case 310128: {
 		if(p2==0)return -2;
 		*(void**)p5 = QMenu::exec(drvGetObjectArrayHeadT<QAction*>(p1),*(QPoint*)(p2),(QAction*)(p3),(QWidget*)(p4));
 		break;
 	}
-	case 310133: {
-		*(bool*)p2 = pThis->focusNextPrevChild(*(bool*)p1);
-		break;
-	}
-	case 310134: {
-		pThis->hideEvent((QHideEvent*)(p1));
-		break;
-	}
-	case 310135: {
+	case 310129: {
 		pThis->hideTearOffMenu();
 		break;
 	}
-	case 310136: {
+	case 310130: {
 		*(void**)p1 = new QIcon(pThis->icon());
 		break;
 	}
-	case 310137: {
+	case 310131: {
 		*(void**)p3 = pThis->insertMenu((QAction*)(p1),(QMenu*)(p2));
 		break;
 	}
-	case 310138: {
+	case 310132: {
 		*(void**)p2 = pThis->insertSeparator((QAction*)(p1));
 		break;
 	}
-	case 310139: {
+	case 310133: {
 		*(bool*)p1 = pThis->isEmpty();
 		break;
 	}
-	case 310140: {
+	case 310134: {
 		*(bool*)p1 = pThis->isTearOffEnabled();
 		break;
 	}
-	case 310141: {
+	case 310135: {
 		*(bool*)p1 = pThis->isTearOffMenuVisible();
 		break;
 	}
-	case 310142: {
-		pThis->keyPressEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 310143: {
-		pThis->leaveEvent((QEvent*)(p1));
-		break;
-	}
-	case 310144: {
+	case 310136: {
 		*(void**)p1 = pThis->menuAction();
 		break;
 	}
-	case 310145: {
-		pThis->mouseMoveEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 310146: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 310147: {
-		pThis->mouseReleaseEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 310148: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 310149: {
+	case 310137: {
 		if(p1==0)return -2;
 		pThis->popup(*(QPoint*)(p1));
 		break;
 	}
-	case 310150: {
+	case 310138: {
 		if(p1==0)return -2;
 		pThis->popup(*(QPoint*)(p1),(QAction*)(p2));
 		break;
 	}
-	case 310151: {
+	case 310139: {
 		*(bool*)p1 = pThis->separatorsCollapsible();
 		break;
 	}
-	case 310152: {
+	case 310140: {
 		pThis->setActiveAction((QAction*)(p1));
 		break;
 	}
-	case 310153: {
+	case 310141: {
 		pThis->setDefaultAction((QAction*)(p1));
 		break;
 	}
-	case 310154: {
+	case 310142: {
 		if(p1==0)return -2;
 		pThis->setIcon(*(QIcon*)(p1));
 		break;
 	}
-	case 310155: {
+	case 310143: {
 		pThis->setNoReplayFor((QWidget*)(p1));
 		break;
 	}
-	case 310156: {
+	case 310144: {
 		pThis->setSeparatorsCollapsible(*(bool*)p1);
 		break;
 	}
-	case 310157: {
+	case 310145: {
 		pThis->setTearOffEnabled(*(bool*)p1);
 		break;
 	}
-	case 310158: {
+	case 310146: {
 		pThis->setTitle(drvGetStringHead(p1));
 		break;
 	}
-	case 310159: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 310160: {
-		pThis->timerEvent((QTimerEvent*)(p1));
-		break;
-	}
-	case 310161: {
+	case 310147: {
 		drvSetString(p1,pThis->title());
-		break;
-	}
-	case 310162: {
-		pThis->wheelEvent((QWheelEvent*)(p1));
 		break;
 	}
 	default:
@@ -36924,160 +34070,88 @@ int drv_QMenuBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 311107: {
-		pThis->actionEvent((QActionEvent*)(p1));
-		break;
-	}
-	case 311108: {
 		*(void**)p2 = new QRect(pThis->actionGeometry((QAction*)(p1)));
 		break;
 	}
-	case 311109: {
+	case 311108: {
 		*(void**)p1 = pThis->activeAction();
 		break;
 	}
-	case 311110: {
+	case 311109: {
 		pThis->addAction((QAction*)(p1));
 		break;
 	}
-	case 311111: {
+	case 311110: {
 		*(void**)p2 = pThis->addAction(drvGetStringHead(p1));
 		break;
 	}
-	case 311112: {
+	case 311111: {
 		*(void**)p4 = pThis->addAction(drvGetStringHead(p1),(QObject*)(p2),drvGet_const_char(p3));
 		break;
 	}
-	case 311113: {
+	case 311112: {
 		*(void**)p2 = pThis->addMenu((QMenu*)(p1));
 		break;
 	}
-	case 311114: {
+	case 311113: {
 		*(void**)p2 = pThis->addMenu(drvGetStringHead(p1));
 		break;
 	}
-	case 311115: {
+	case 311114: {
 		if(p1==0)return -2;
 		*(void**)p3 = pThis->addMenu(*(QIcon*)(p1),drvGetStringHead(p2));
 		break;
 	}
-	case 311116: {
+	case 311115: {
 		*(void**)p1 = pThis->addSeparator();
 		break;
 	}
-	case 311117: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 311118: {
+	case 311116: {
 		pThis->clear();
 		break;
 	}
-	case 311119: {
+	case 311117: {
 		*(void**)p1 = pThis->cornerWidget();
 		break;
 	}
-	case 311120: {
+	case 311118: {
 		*(void**)p2 = pThis->cornerWidget(*(Qt::Corner*)p1);
 		break;
 	}
-	case 311121: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 311122: {
-		*(bool*)p3 = pThis->eventFilter((QObject*)(p1),(QEvent*)(p2));
-		break;
-	}
-	case 311123: {
-		pThis->focusInEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 311124: {
-		pThis->focusOutEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 311125: {
-		*(int*)p2 = pThis->heightForWidth(*(int*)p1);
-		break;
-	}
-	case 311126: {
+	case 311119: {
 		*(void**)p3 = pThis->insertMenu((QAction*)(p1),(QMenu*)(p2));
 		break;
 	}
-	case 311127: {
+	case 311120: {
 		*(void**)p2 = pThis->insertSeparator((QAction*)(p1));
 		break;
 	}
-	case 311128: {
+	case 311121: {
 		*(bool*)p1 = pThis->isDefaultUp();
 		break;
 	}
-	case 311129: {
+	case 311122: {
 		*(bool*)p1 = pThis->isNativeMenuBar();
 		break;
 	}
-	case 311130: {
-		pThis->keyPressEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 311131: {
-		pThis->leaveEvent((QEvent*)(p1));
-		break;
-	}
-	case 311132: {
-		*(void**)p1 = new QSize(pThis->minimumSizeHint());
-		break;
-	}
-	case 311133: {
-		pThis->mouseMoveEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 311134: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 311135: {
-		pThis->mouseReleaseEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 311136: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 311137: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 311138: {
+	case 311123: {
 		pThis->setActiveAction((QAction*)(p1));
 		break;
 	}
-	case 311139: {
+	case 311124: {
 		pThis->setCornerWidget((QWidget*)(p1));
 		break;
 	}
-	case 311140: {
+	case 311125: {
 		pThis->setCornerWidget((QWidget*)(p1),*(Qt::Corner*)p2);
 		break;
 	}
-	case 311141: {
+	case 311126: {
 		pThis->setDefaultUp(*(bool*)p1);
 		break;
 	}
-	case 311142: {
+	case 311127: {
 		pThis->setNativeMenuBar(*(bool*)p1);
-		break;
-	}
-	case 311143: {
-		pThis->setVisible(*(bool*)p1);
-		break;
-	}
-	case 311144: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 311145: {
-		pThis->timerEvent((QTimerEvent*)(p1));
 		break;
 	}
 	default:
@@ -37159,195 +34233,167 @@ int drv_QMessageBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 312117: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 312118: {
 		*(void**)p1 = pThis->clickedButton();
 		break;
 	}
-	case 312119: {
-		pThis->closeEvent((QCloseEvent*)(p1));
-		break;
-	}
-	case 312120: {
+	case 312118: {
 		*(QMessageBox::StandardButton*)p6 = QMessageBox::critical((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),*(QFlags<QMessageBox::StandardButton>*)p4,*(QMessageBox::StandardButton*)p5);
 		break;
 	}
-	case 312121: {
+	case 312119: {
 		*(int*)p7 = QMessageBox::critical((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),*(int*)p4,*(int*)p5,*(int*)p6);
 		break;
 	}
-	case 312122: {
+	case 312120: {
 		*(int*)p9 = QMessageBox::critical((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),drvGetStringHead(p4),drvGetStringHead(p5),drvGetStringHead(p6),*(int*)p7,*(int*)p8);
 		break;
 	}
-	case 312123: {
+	case 312121: {
 		*(void**)p1 = pThis->defaultButton();
 		break;
 	}
-	case 312124: {
+	case 312122: {
 		drvSetString(p1,pThis->detailedText());
 		break;
 	}
-	case 312125: {
+	case 312123: {
 		*(void**)p1 = pThis->escapeButton();
 		break;
 	}
-	case 312126: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 312127: {
+	case 312124: {
 		*(QMessageBox::Icon*)p1 = pThis->icon();
 		break;
 	}
-	case 312128: {
+	case 312125: {
 		*(void**)p1 = new QPixmap(pThis->iconPixmap());
 		break;
 	}
-	case 312129: {
+	case 312126: {
 		*(QMessageBox::StandardButton*)p6 = QMessageBox::information((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),*(QFlags<QMessageBox::StandardButton>*)p4,*(QMessageBox::StandardButton*)p5);
 		break;
 	}
-	case 312130: {
+	case 312127: {
 		*(int*)p7 = QMessageBox::information((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),*(int*)p4,*(int*)p5,*(int*)p6);
 		break;
 	}
-	case 312131: {
+	case 312128: {
 		*(int*)p9 = QMessageBox::information((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),drvGetStringHead(p4),drvGetStringHead(p5),drvGetStringHead(p6),*(int*)p7,*(int*)p8);
 		break;
 	}
-	case 312132: {
+	case 312129: {
 		drvSetString(p1,pThis->informativeText());
 		break;
 	}
-	case 312133: {
-		pThis->keyPressEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 312134: {
+	case 312130: {
 		pThis->open();
 		break;
 	}
-	case 312135: {
+	case 312131: {
 		pThis->open((QObject*)(p1),drvGet_const_char(p2));
 		break;
 	}
-	case 312136: {
+	case 312132: {
 		*(QMessageBox::StandardButton*)p6 = QMessageBox::question((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),*(QFlags<QMessageBox::StandardButton>*)p4,*(QMessageBox::StandardButton*)p5);
 		break;
 	}
-	case 312137: {
+	case 312133: {
 		*(int*)p7 = QMessageBox::question((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),*(int*)p4,*(int*)p5,*(int*)p6);
 		break;
 	}
-	case 312138: {
+	case 312134: {
 		*(int*)p9 = QMessageBox::question((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),drvGetStringHead(p4),drvGetStringHead(p5),drvGetStringHead(p6),*(int*)p7,*(int*)p8);
 		break;
 	}
-	case 312139: {
+	case 312135: {
 		pThis->removeButton((QAbstractButton*)(p1));
 		break;
 	}
-	case 312140: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 312141: {
+	case 312136: {
 		pThis->setButtonText(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
-	case 312142: {
+	case 312137: {
 		pThis->setDefaultButton(*(QMessageBox::StandardButton*)p1);
 		break;
 	}
-	case 312143: {
+	case 312138: {
 		pThis->setDefaultButton((QPushButton*)(p1));
 		break;
 	}
-	case 312144: {
+	case 312139: {
 		pThis->setDetailedText(drvGetStringHead(p1));
 		break;
 	}
-	case 312145: {
+	case 312140: {
 		pThis->setEscapeButton((QAbstractButton*)(p1));
 		break;
 	}
-	case 312146: {
+	case 312141: {
 		pThis->setEscapeButton(*(QMessageBox::StandardButton*)p1);
 		break;
 	}
-	case 312147: {
+	case 312142: {
 		pThis->setIcon(*(QMessageBox::Icon*)p1);
 		break;
 	}
-	case 312148: {
+	case 312143: {
 		if(p1==0)return -2;
 		pThis->setIconPixmap(*(QPixmap*)(p1));
 		break;
 	}
-	case 312149: {
+	case 312144: {
 		pThis->setInformativeText(drvGetStringHead(p1));
 		break;
 	}
-	case 312150: {
+	case 312145: {
 		pThis->setStandardButtons(*(QFlags<QMessageBox::StandardButton>*)p1);
 		break;
 	}
-	case 312151: {
+	case 312146: {
 		pThis->setText(drvGetStringHead(p1));
 		break;
 	}
-	case 312152: {
+	case 312147: {
 		pThis->setTextFormat(*(Qt::TextFormat*)p1);
 		break;
 	}
-	case 312153: {
+	case 312148: {
 		pThis->setWindowModality(*(Qt::WindowModality*)p1);
 		break;
 	}
-	case 312154: {
+	case 312149: {
 		pThis->setWindowTitle(drvGetStringHead(p1));
 		break;
 	}
-	case 312155: {
-		pThis->showEvent((QShowEvent*)(p1));
-		break;
-	}
-	case 312156: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 312157: {
+	case 312150: {
 		*(QMessageBox::StandardButton*)p2 = pThis->standardButton((QAbstractButton*)(p1));
 		break;
 	}
-	case 312158: {
+	case 312151: {
 		*(QFlags<QMessageBox::StandardButton>*)p1 = pThis->standardButtons();
 		break;
 	}
-	case 312159: {
+	case 312152: {
 		*(void**)p2 = new QPixmap(QMessageBox::standardIcon(*(QMessageBox::Icon*)p1));
 		break;
 	}
-	case 312160: {
+	case 312153: {
 		drvSetString(p1,pThis->text());
 		break;
 	}
-	case 312161: {
+	case 312154: {
 		*(Qt::TextFormat*)p1 = pThis->textFormat();
 		break;
 	}
-	case 312162: {
+	case 312155: {
 		*(QMessageBox::StandardButton*)p6 = QMessageBox::warning((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),*(QFlags<QMessageBox::StandardButton>*)p4,*(QMessageBox::StandardButton*)p5);
 		break;
 	}
-	case 312163: {
+	case 312156: {
 		*(int*)p7 = QMessageBox::warning((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),*(int*)p4,*(int*)p5,*(int*)p6);
 		break;
 	}
-	case 312164: {
+	case 312157: {
 		*(int*)p9 = QMessageBox::warning((QWidget*)(p1),drvGetStringHead(p2),drvGetStringHead(p3),drvGetStringHead(p4),drvGetStringHead(p5),drvGetStringHead(p6),*(int*)p7,*(int*)p8);
 		break;
 	}
@@ -37492,31 +34538,23 @@ int drv_QMouseEventTransition(void *_p, int funcid, void* p1,void* p2,void* p3,v
 		break;
 	}
 	case 314106: {
-		*(bool*)p2 = pThis->eventTest((QEvent*)(p1));
-		break;
-	}
-	case 314107: {
 		*(void**)p1 = new QPainterPath(pThis->hitTestPath());
 		break;
 	}
-	case 314108: {
+	case 314107: {
 		*(QFlags<Qt::KeyboardModifier>*)p1 = pThis->modifierMask();
 		break;
 	}
-	case 314109: {
-		pThis->onTransition((QEvent*)(p1));
-		break;
-	}
-	case 314110: {
+	case 314108: {
 		pThis->setButton(*(Qt::MouseButton*)p1);
 		break;
 	}
-	case 314111: {
+	case 314109: {
 		if(p1==0)return -2;
 		pThis->setHitTestPath(*(QPainterPath*)(p1));
 		break;
 	}
-	case 314112: {
+	case 314110: {
 		pThis->setModifierMask(*(QFlags<Qt::KeyboardModifier>*)p1);
 		break;
 	}
@@ -37980,26 +35018,6 @@ int drv_QParallelAnimationGroup(void *_p, int funcid, void* p1,void* p2,void* p3
 		*(void**)_p = new QParallelAnimationGroup((QObject*)(p1));
 		break;
 	}
-	case 319104: {
-		*(int*)p1 = pThis->duration();
-		break;
-	}
-	case 319105: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 319106: {
-		pThis->updateCurrentTime(*(int*)p1);
-		break;
-	}
-	case 319107: {
-		pThis->updateDirection(*(QAbstractAnimation::Direction*)p1);
-		break;
-	}
-	case 319108: {
-		pThis->updateState(*(QAbstractAnimation::State*)p1,*(QAbstractAnimation::State*)p2);
-		break;
-	}
 	default:
 		return drv_QAnimationGroup(_p,funcid,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12);
 	}
@@ -38028,19 +35046,7 @@ int drv_QPauseAnimation(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	}
 	case 320105: {
-		*(int*)p1 = pThis->duration();
-		break;
-	}
-	case 320106: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 320107: {
 		pThis->setDuration(*(int*)p1);
-		break;
-	}
-	case 320108: {
-		pThis->updateCurrentTime(*(int*)p1);
 		break;
 	}
 	default:
@@ -38177,50 +35183,19 @@ int drv_QPlainTextDocumentLayout(void *_p, int funcid, void* p1,void* p2,void* p
 		break;
 	}
 	case 322103: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QRectF(pThis->blockBoundingRect(*(QTextBlock*)(p1)));
-		break;
-	}
-	case 322104: {
 		*(int*)p1 = pThis->cursorWidth();
 		break;
 	}
-	case 322105: {
-		pThis->documentChanged(*(int*)p1,*(int*)p2,*(int*)p3);
-		break;
-	}
-	case 322106: {
-		*(void**)p1 = new QSizeF(pThis->documentSize());
-		break;
-	}
-	case 322107: {
-		if(p2==0)return -2;
-		pThis->draw((QPainter*)(p1),*(QAbstractTextDocumentLayout::PaintContext*)(p2));
-		break;
-	}
-	case 322108: {
+	case 322104: {
 		if(p1==0)return -2;
 		pThis->ensureBlockLayout(*(QTextBlock*)(p1));
 		break;
 	}
-	case 322109: {
-		*(void**)p2 = new QRectF(pThis->frameBoundingRect((QTextFrame*)(p1)));
-		break;
-	}
-	case 322110: {
-		if(p1==0)return -2;
-		*(int*)p3 = pThis->hitTest(*(QPointF*)(p1),*(Qt::HitTestAccuracy*)p2);
-		break;
-	}
-	case 322111: {
-		*(int*)p1 = pThis->pageCount();
-		break;
-	}
-	case 322112: {
+	case 322105: {
 		pThis->requestUpdate();
 		break;
 	}
-	case 322113: {
+	case 322106: {
 		pThis->setCursorWidth(*(int*)p1);
 		break;
 	}
@@ -38362,340 +35337,244 @@ int drv_QPlainTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	}
 	case 323125: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 323126: {
 		pThis->clear();
 		break;
 	}
-	case 323127: {
+	case 323126: {
 		*(void**)p1 = new QPointF(pThis->contentOffset());
 		break;
 	}
-	case 323128: {
-		pThis->contextMenuEvent((QContextMenuEvent*)(p1));
-		break;
-	}
-	case 323129: {
+	case 323127: {
 		pThis->copy();
 		break;
 	}
-	case 323130: {
+	case 323128: {
 		*(void**)p1 = pThis->createMimeDataFromSelection();
 		break;
 	}
-	case 323131: {
+	case 323129: {
 		*(void**)p1 = pThis->createStandardContextMenu();
 		break;
 	}
-	case 323132: {
+	case 323130: {
 		*(void**)p1 = new QTextCharFormat(pThis->currentCharFormat());
 		break;
 	}
-	case 323133: {
+	case 323131: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QTextCursor(pThis->cursorForPosition(*(QPoint*)(p1)));
 		break;
 	}
-	case 323134: {
+	case 323132: {
 		*(void**)p1 = new QRect(pThis->cursorRect());
 		break;
 	}
-	case 323135: {
+	case 323133: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QRect(pThis->cursorRect(*(QTextCursor*)(p1)));
 		break;
 	}
-	case 323136: {
+	case 323134: {
 		*(int*)p1 = pThis->cursorWidth();
 		break;
 	}
-	case 323137: {
+	case 323135: {
 		pThis->cut();
 		break;
 	}
-	case 323138: {
+	case 323136: {
 		*(void**)p1 = pThis->document();
 		break;
 	}
-	case 323139: {
+	case 323137: {
 		drvSetString(p1,pThis->documentTitle());
 		break;
 	}
-	case 323140: {
-		pThis->dragEnterEvent((QDragEnterEvent*)(p1));
-		break;
-	}
-	case 323141: {
-		pThis->dragLeaveEvent((QDragLeaveEvent*)(p1));
-		break;
-	}
-	case 323142: {
-		pThis->dragMoveEvent((QDragMoveEvent*)(p1));
-		break;
-	}
-	case 323143: {
-		pThis->dropEvent((QDropEvent*)(p1));
-		break;
-	}
-	case 323144: {
+	case 323138: {
 		pThis->ensureCursorVisible();
 		break;
 	}
-	case 323145: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 323146: {
+	case 323139: {
 		drvSetListPtr<QTextEdit::ExtraSelection>(p1,151000,pThis->extraSelections());
 		break;
 	}
-	case 323147: {
+	case 323140: {
 		*(bool*)p2 = pThis->find(drvGetStringHead(p1));
 		break;
 	}
-	case 323148: {
+	case 323141: {
 		*(bool*)p3 = pThis->find(drvGetStringHead(p1),*(QFlags<QTextDocument::FindFlag>*)p2);
 		break;
 	}
-	case 323149: {
+	case 323142: {
 		*(void**)p1 = new QTextBlock(pThis->firstVisibleBlock());
 		break;
 	}
-	case 323150: {
-		pThis->focusInEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 323151: {
-		*(bool*)p2 = pThis->focusNextPrevChild(*(bool*)p1);
-		break;
-	}
-	case 323152: {
-		pThis->focusOutEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 323153: {
+	case 323143: {
 		*(void**)p1 = new QAbstractTextDocumentLayout::PaintContext(pThis->getPaintContext());
 		break;
 	}
-	case 323154: {
-		pThis->inputMethodEvent((QInputMethodEvent*)(p1));
-		break;
-	}
-	case 323155: {
-		*(void**)p2 = new QVariant(pThis->inputMethodQuery(*(Qt::InputMethodQuery*)p1));
-		break;
-	}
-	case 323156: {
+	case 323144: {
 		pThis->insertFromMimeData((QMimeData*)(p1));
 		break;
 	}
-	case 323157: {
+	case 323145: {
 		pThis->insertPlainText(drvGetStringHead(p1));
 		break;
 	}
-	case 323158: {
+	case 323146: {
 		*(bool*)p1 = pThis->isReadOnly();
 		break;
 	}
-	case 323159: {
+	case 323147: {
 		*(bool*)p1 = pThis->isUndoRedoEnabled();
 		break;
 	}
-	case 323160: {
-		pThis->keyPressEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 323161: {
-		pThis->keyReleaseEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 323162: {
+	case 323148: {
 		*(QPlainTextEdit::LineWrapMode*)p1 = pThis->lineWrapMode();
 		break;
 	}
-	case 323163: {
+	case 323149: {
 		if(p2==0)return -2;
 		*(void**)p3 = new QVariant(pThis->loadResource(*(int*)p1,*(QUrl*)(p2)));
 		break;
 	}
-	case 323164: {
+	case 323150: {
 		*(int*)p1 = pThis->maximumBlockCount();
 		break;
 	}
-	case 323165: {
+	case 323151: {
 		if(p1==0)return -2;
 		pThis->mergeCurrentCharFormat(*(QTextCharFormat*)(p1));
 		break;
 	}
-	case 323166: {
-		pThis->mouseDoubleClickEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 323167: {
-		pThis->mouseMoveEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 323168: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 323169: {
-		pThis->mouseReleaseEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 323170: {
+	case 323152: {
 		pThis->moveCursor(*(QTextCursor::MoveOperation*)p1);
 		break;
 	}
-	case 323171: {
+	case 323153: {
 		pThis->moveCursor(*(QTextCursor::MoveOperation*)p1,*(QTextCursor::MoveMode*)p2);
 		break;
 	}
-	case 323172: {
+	case 323154: {
 		*(bool*)p1 = pThis->overwriteMode();
 		break;
 	}
-	case 323173: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 323174: {
+	case 323155: {
 		pThis->paste();
 		break;
 	}
-	case 323175: {
+	case 323156: {
 		pThis->print((QPrinter*)(p1));
 		break;
 	}
-	case 323176: {
+	case 323157: {
 		pThis->redo();
 		break;
 	}
-	case 323177: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 323178: {
-		pThis->scrollContentsBy(*(int*)p1,*(int*)p2);
-		break;
-	}
-	case 323179: {
+	case 323158: {
 		pThis->selectAll();
 		break;
 	}
-	case 323180: {
+	case 323159: {
 		pThis->setBackgroundVisible(*(bool*)p1);
 		break;
 	}
-	case 323181: {
+	case 323160: {
 		pThis->setCenterOnScroll(*(bool*)p1);
 		break;
 	}
-	case 323182: {
+	case 323161: {
 		if(p1==0)return -2;
 		pThis->setCurrentCharFormat(*(QTextCharFormat*)(p1));
 		break;
 	}
-	case 323183: {
+	case 323162: {
 		pThis->setCursorWidth(*(int*)p1);
 		break;
 	}
-	case 323184: {
+	case 323163: {
 		pThis->setDocument((QTextDocument*)(p1));
 		break;
 	}
-	case 323185: {
+	case 323164: {
 		pThis->setDocumentTitle(drvGetStringHead(p1));
 		break;
 	}
-	case 323186: {
+	case 323165: {
 		pThis->setExtraSelections(drvGetNoObjectArrayHeadT<QTextEdit::ExtraSelection>(p1));
 		break;
 	}
-	case 323187: {
+	case 323166: {
 		pThis->setLineWrapMode(*(QPlainTextEdit::LineWrapMode*)p1);
 		break;
 	}
-	case 323188: {
+	case 323167: {
 		pThis->setMaximumBlockCount(*(int*)p1);
 		break;
 	}
-	case 323189: {
+	case 323168: {
 		pThis->setOverwriteMode(*(bool*)p1);
 		break;
 	}
-	case 323190: {
+	case 323169: {
 		pThis->setPlainText(drvGetStringHead(p1));
 		break;
 	}
-	case 323191: {
+	case 323170: {
 		pThis->setReadOnly(*(bool*)p1);
 		break;
 	}
-	case 323192: {
+	case 323171: {
 		pThis->setTabChangesFocus(*(bool*)p1);
 		break;
 	}
-	case 323193: {
+	case 323172: {
 		pThis->setTabStopWidth(*(int*)p1);
 		break;
 	}
-	case 323194: {
+	case 323173: {
 		if(p1==0)return -2;
 		pThis->setTextCursor(*(QTextCursor*)(p1));
 		break;
 	}
-	case 323195: {
+	case 323174: {
 		pThis->setTextInteractionFlags(*(QFlags<Qt::TextInteractionFlag>*)p1);
 		break;
 	}
-	case 323196: {
+	case 323175: {
 		pThis->setUndoRedoEnabled(*(bool*)p1);
 		break;
 	}
-	case 323197: {
+	case 323176: {
 		pThis->setWordWrapMode(*(QTextOption::WrapMode*)p1);
 		break;
 	}
-	case 323198: {
-		pThis->showEvent((QShowEvent*)(p1));
-		break;
-	}
-	case 323199: {
+	case 323177: {
 		*(bool*)p1 = pThis->tabChangesFocus();
 		break;
 	}
-	case 323200: {
+	case 323178: {
 		*(int*)p1 = pThis->tabStopWidth();
 		break;
 	}
-	case 323201: {
+	case 323179: {
 		*(void**)p1 = new QTextCursor(pThis->textCursor());
 		break;
 	}
-	case 323202: {
+	case 323180: {
 		*(QFlags<Qt::TextInteractionFlag>*)p1 = pThis->textInteractionFlags();
 		break;
 	}
-	case 323203: {
-		pThis->timerEvent((QTimerEvent*)(p1));
-		break;
-	}
-	case 323204: {
+	case 323181: {
 		drvSetString(p1,pThis->toPlainText());
 		break;
 	}
-	case 323205: {
+	case 323182: {
 		pThis->undo();
 		break;
 	}
-	case 323206: {
-		pThis->wheelEvent((QWheelEvent*)(p1));
-		break;
-	}
-	case 323207: {
+	case 323183: {
 		*(QTextOption::WrapMode*)p1 = pThis->wordWrapMode();
 		break;
 	}
@@ -38805,42 +35684,30 @@ int drv_QPrintDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 325107: {
-		pThis->done(*(int*)p1);
-		break;
-	}
-	case 325108: {
-		*(int*)p1 = pThis->exec();
-		break;
-	}
-	case 325109: {
 		pThis->open();
 		break;
 	}
-	case 325110: {
+	case 325108: {
 		pThis->open((QObject*)(p1),drvGet_const_char(p2));
 		break;
 	}
-	case 325111: {
+	case 325109: {
 		*(QFlags<QAbstractPrintDialog::PrintDialogOption>*)p1 = pThis->options();
 		break;
 	}
-	case 325112: {
+	case 325110: {
 		pThis->setOption(*(QAbstractPrintDialog::PrintDialogOption*)p1);
 		break;
 	}
-	case 325113: {
+	case 325111: {
 		pThis->setOption(*(QAbstractPrintDialog::PrintDialogOption*)p1,*(bool*)p2);
 		break;
 	}
-	case 325114: {
+	case 325112: {
 		pThis->setOptions(*(QFlags<QAbstractPrintDialog::PrintDialogOption>*)p1);
 		break;
 	}
-	case 325115: {
-		pThis->setVisible(*(bool*)p1);
-		break;
-	}
-	case 325116: {
+	case 325113: {
 		*(bool*)p2 = pThis->testOption(*(QAbstractPrintDialog::PrintDialogOption*)p1);
 		break;
 	}
@@ -38879,23 +35746,15 @@ int drv_QPrintPreviewDialog(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 		break;
 	}
 	case 326106: {
-		pThis->done(*(int*)p1);
-		break;
-	}
-	case 326107: {
 		pThis->open();
 		break;
 	}
-	case 326108: {
+	case 326107: {
 		pThis->open((QObject*)(p1),drvGet_const_char(p2));
 		break;
 	}
-	case 326109: {
+	case 326108: {
 		*(void**)p1 = pThis->printer();
-		break;
-	}
-	case 326110: {
-		pThis->setVisible(*(bool*)p1);
 		break;
 	}
 	default:
@@ -38996,46 +35855,42 @@ int drv_QPrintPreviewWidget(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 		break;
 	}
 	case 327121: {
-		pThis->setVisible(*(bool*)p1);
-		break;
-	}
-	case 327122: {
 		pThis->setZoomFactor(*(double*)p1);
 		break;
 	}
-	case 327123: {
+	case 327122: {
 		pThis->setZoomMode(*(QPrintPreviewWidget::ZoomMode*)p1);
 		break;
 	}
-	case 327124: {
+	case 327123: {
 		pThis->updatePreview();
 		break;
 	}
-	case 327125: {
+	case 327124: {
 		*(QPrintPreviewWidget::ViewMode*)p1 = pThis->viewMode();
 		break;
 	}
-	case 327126: {
+	case 327125: {
 		*(double*)p1 = pThis->zoomFactor();
 		break;
 	}
-	case 327127: {
+	case 327126: {
 		pThis->zoomIn();
 		break;
 	}
-	case 327128: {
+	case 327127: {
 		pThis->zoomIn(*(double*)p1);
 		break;
 	}
-	case 327129: {
+	case 327128: {
 		*(QPrintPreviewWidget::ZoomMode*)p1 = pThis->zoomMode();
 		break;
 	}
-	case 327130: {
+	case 327129: {
 		pThis->zoomOut();
 		break;
 	}
-	case 327131: {
+	case 327130: {
 		pThis->zoomOut(*(double*)p1);
 		break;
 	}
@@ -39112,224 +35967,184 @@ int drv_QProcess(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 328111: {
-		*(bool*)p1 = pThis->atEnd();
-		break;
-	}
-	case 328112: {
-		*(qint64*)p1 = pThis->bytesAvailable();
-		break;
-	}
-	case 328113: {
-		*(qint64*)p1 = pThis->bytesToWrite();
-		break;
-	}
-	case 328114: {
-		*(bool*)p1 = pThis->canReadLine();
-		break;
-	}
-	case 328115: {
-		pThis->close();
-		break;
-	}
-	case 328116: {
 		pThis->closeReadChannel(*(QProcess::ProcessChannel*)p1);
 		break;
 	}
-	case 328117: {
+	case 328112: {
 		pThis->closeWriteChannel();
 		break;
 	}
-	case 328118: {
+	case 328113: {
 		drvSetStringArray(p1,pThis->environment());
 		break;
 	}
-	case 328119: {
+	case 328114: {
 		*(QProcess::ProcessError*)p1 = pThis->error();
 		break;
 	}
-	case 328120: {
+	case 328115: {
 		*(int*)p2 = QProcess::execute(drvGetStringHead(p1));
 		break;
 	}
-	case 328121: {
+	case 328116: {
 		*(int*)p3 = QProcess::execute(drvGetStringHead(p1),drvGetStringArray(p2));
 		break;
 	}
-	case 328122: {
+	case 328117: {
 		*(int*)p1 = pThis->exitCode();
 		break;
 	}
-	case 328123: {
+	case 328118: {
 		*(QProcess::ExitStatus*)p1 = pThis->exitStatus();
 		break;
 	}
-	case 328124: {
-		*(bool*)p1 = pThis->isSequential();
-		break;
-	}
-	case 328125: {
+	case 328119: {
 		pThis->kill();
 		break;
 	}
-	case 328126: {
+	case 328120: {
 		*(QProcess::ProcessChannelMode*)p1 = pThis->processChannelMode();
 		break;
 	}
-	case 328127: {
+	case 328121: {
 		*(void**)p1 = new QProcessEnvironment(pThis->processEnvironment());
 		break;
 	}
-	case 328128: {
+	case 328122: {
 		drvSetByteArray(p1,pThis->readAllStandardError());
 		break;
 	}
-	case 328129: {
+	case 328123: {
 		drvSetByteArray(p1,pThis->readAllStandardOutput());
 		break;
 	}
-	case 328130: {
+	case 328124: {
 		*(QProcess::ProcessChannel*)p1 = pThis->readChannel();
 		break;
 	}
-	case 328131: {
+	case 328125: {
 		*(QProcess::ProcessChannelMode*)p1 = pThis->readChannelMode();
 		break;
 	}
-	case 328132: {
-		*(qint64*)p3 = pThis->readData(*(char**)p1,*(qint64*)p2);
-		break;
-	}
-	case 328133: {
+	case 328126: {
 		pThis->setEnvironment(drvGetStringArray(p1));
 		break;
 	}
-	case 328134: {
+	case 328127: {
 		pThis->setProcessChannelMode(*(QProcess::ProcessChannelMode*)p1);
 		break;
 	}
-	case 328135: {
+	case 328128: {
 		if(p1==0)return -2;
 		pThis->setProcessEnvironment(*(QProcessEnvironment*)(p1));
 		break;
 	}
-	case 328136: {
+	case 328129: {
 		pThis->setProcessState(*(QProcess::ProcessState*)p1);
 		break;
 	}
-	case 328137: {
+	case 328130: {
 		pThis->setReadChannel(*(QProcess::ProcessChannel*)p1);
 		break;
 	}
-	case 328138: {
+	case 328131: {
 		pThis->setReadChannelMode(*(QProcess::ProcessChannelMode*)p1);
 		break;
 	}
-	case 328139: {
+	case 328132: {
 		pThis->setStandardErrorFile(drvGetStringHead(p1));
 		break;
 	}
-	case 328140: {
+	case 328133: {
 		pThis->setStandardErrorFile(drvGetStringHead(p1),*(QFlags<QIODevice::OpenModeFlag>*)p2);
 		break;
 	}
-	case 328141: {
+	case 328134: {
 		pThis->setStandardInputFile(drvGetStringHead(p1));
 		break;
 	}
-	case 328142: {
+	case 328135: {
 		pThis->setStandardOutputFile(drvGetStringHead(p1));
 		break;
 	}
-	case 328143: {
+	case 328136: {
 		pThis->setStandardOutputFile(drvGetStringHead(p1),*(QFlags<QIODevice::OpenModeFlag>*)p2);
 		break;
 	}
-	case 328144: {
+	case 328137: {
 		pThis->setStandardOutputProcess((QProcess*)(p1));
 		break;
 	}
-	case 328145: {
+	case 328138: {
 		pThis->setWorkingDirectory(drvGetStringHead(p1));
 		break;
 	}
-	case 328146: {
+	case 328139: {
 		pThis->setupChildProcess();
 		break;
 	}
-	case 328147: {
+	case 328140: {
 		pThis->start(drvGetStringHead(p1));
 		break;
 	}
-	case 328148: {
+	case 328141: {
 		pThis->start(drvGetStringHead(p1),*(QFlags<QIODevice::OpenModeFlag>*)p2);
 		break;
 	}
-	case 328149: {
+	case 328142: {
 		pThis->start(drvGetStringHead(p1),drvGetStringArray(p2),*(QFlags<QIODevice::OpenModeFlag>*)p3);
 		break;
 	}
-	case 328150: {
+	case 328143: {
 		*(bool*)p2 = QProcess::startDetached(drvGetStringHead(p1));
 		break;
 	}
-	case 328151: {
+	case 328144: {
 		*(bool*)p3 = QProcess::startDetached(drvGetStringHead(p1),drvGetStringArray(p2));
 		break;
 	}
-	case 328152: {
+	case 328145: {
 		*(bool*)p5 = QProcess::startDetached(drvGetStringHead(p1),drvGetStringArray(p2),drvGetStringHead(p3),*(qint64**)p4);
 		break;
 	}
-	case 328153: {
+	case 328146: {
 		*(QProcess::ProcessState*)p1 = pThis->state();
 		break;
 	}
-	case 328154: {
+	case 328147: {
 		drvSetStringArray(p1,QProcess::systemEnvironment());
 		break;
 	}
-	case 328155: {
+	case 328148: {
 		pThis->terminate();
 		break;
 	}
-	case 328156: {
+	case 328149: {
 		*(bool*)p1 = pThis->waitForBytesWritten();
 		break;
 	}
-	case 328157: {
-		*(bool*)p2 = pThis->waitForBytesWritten(*(int*)p1);
-		break;
-	}
-	case 328158: {
+	case 328150: {
 		*(bool*)p1 = pThis->waitForFinished();
 		break;
 	}
-	case 328159: {
+	case 328151: {
 		*(bool*)p2 = pThis->waitForFinished(*(int*)p1);
 		break;
 	}
-	case 328160: {
+	case 328152: {
 		*(bool*)p1 = pThis->waitForReadyRead();
 		break;
 	}
-	case 328161: {
-		*(bool*)p2 = pThis->waitForReadyRead(*(int*)p1);
-		break;
-	}
-	case 328162: {
+	case 328153: {
 		*(bool*)p1 = pThis->waitForStarted();
 		break;
 	}
-	case 328163: {
+	case 328154: {
 		*(bool*)p2 = pThis->waitForStarted(*(int*)p1);
 		break;
 	}
-	case 328164: {
+	case 328155: {
 		drvSetString(p1,pThis->workingDirectory());
-		break;
-	}
-	case 328165: {
-		*(qint64*)p3 = pThis->writeData(drvGet_const_char(p1),*(qint64*)p2);
 		break;
 	}
 	default:
@@ -39367,98 +36182,82 @@ int drv_QProgressBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 329106: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 329107: {
 		drvSetString(p1,pThis->format());
 		break;
 	}
-	case 329108: {
+	case 329107: {
 		*(bool*)p1 = pThis->invertedAppearance();
 		break;
 	}
-	case 329109: {
+	case 329108: {
 		*(bool*)p1 = pThis->isTextVisible();
 		break;
 	}
-	case 329110: {
+	case 329109: {
 		*(int*)p1 = pThis->maximum();
 		break;
 	}
-	case 329111: {
+	case 329110: {
 		*(int*)p1 = pThis->minimum();
 		break;
 	}
-	case 329112: {
-		*(void**)p1 = new QSize(pThis->minimumSizeHint());
-		break;
-	}
-	case 329113: {
+	case 329111: {
 		*(Qt::Orientation*)p1 = pThis->orientation();
 		break;
 	}
-	case 329114: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 329115: {
+	case 329112: {
 		pThis->reset();
 		break;
 	}
-	case 329116: {
+	case 329113: {
 		pThis->setAlignment(*(QFlags<Qt::AlignmentFlag>*)p1);
 		break;
 	}
-	case 329117: {
+	case 329114: {
 		pThis->setFormat(drvGetStringHead(p1));
 		break;
 	}
-	case 329118: {
+	case 329115: {
 		pThis->setInvertedAppearance(*(bool*)p1);
 		break;
 	}
-	case 329119: {
+	case 329116: {
 		pThis->setMaximum(*(int*)p1);
 		break;
 	}
-	case 329120: {
+	case 329117: {
 		pThis->setMinimum(*(int*)p1);
 		break;
 	}
-	case 329121: {
+	case 329118: {
 		pThis->setOrientation(*(Qt::Orientation*)p1);
 		break;
 	}
-	case 329122: {
+	case 329119: {
 		pThis->setRange(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 329123: {
+	case 329120: {
 		pThis->setTextDirection(*(QProgressBar::Direction*)p1);
 		break;
 	}
-	case 329124: {
+	case 329121: {
 		pThis->setTextVisible(*(bool*)p1);
 		break;
 	}
-	case 329125: {
+	case 329122: {
 		pThis->setValue(*(int*)p1);
 		break;
 	}
-	case 329126: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 329127: {
+	case 329123: {
 		drvSetString(p1,pThis->text());
 		break;
 	}
-	case 329128: {
+	case 329124: {
 		*(QProgressBar::Direction*)p1 = pThis->textDirection();
 		break;
 	}
-	case 329129: {
+	case 329125: {
 		*(int*)p1 = pThis->value();
 		break;
 	}
@@ -39509,110 +36308,90 @@ int drv_QProgressDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	}
 	case 330109: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 330110: {
-		pThis->closeEvent((QCloseEvent*)(p1));
-		break;
-	}
-	case 330111: {
 		pThis->forceShow();
 		break;
 	}
-	case 330112: {
+	case 330110: {
 		drvSetString(p1,pThis->labelText());
 		break;
 	}
-	case 330113: {
+	case 330111: {
 		*(int*)p1 = pThis->maximum();
 		break;
 	}
-	case 330114: {
+	case 330112: {
 		*(int*)p1 = pThis->minimum();
 		break;
 	}
-	case 330115: {
+	case 330113: {
 		*(int*)p1 = pThis->minimumDuration();
 		break;
 	}
-	case 330116: {
+	case 330114: {
 		pThis->open();
 		break;
 	}
-	case 330117: {
+	case 330115: {
 		pThis->open((QObject*)(p1),drvGet_const_char(p2));
 		break;
 	}
-	case 330118: {
+	case 330116: {
 		pThis->reset();
 		break;
 	}
-	case 330119: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 330120: {
+	case 330117: {
 		pThis->setAutoClose(*(bool*)p1);
 		break;
 	}
-	case 330121: {
+	case 330118: {
 		pThis->setAutoReset(*(bool*)p1);
 		break;
 	}
-	case 330122: {
+	case 330119: {
 		pThis->setBar((QProgressBar*)(p1));
 		break;
 	}
-	case 330123: {
+	case 330120: {
 		pThis->setCancelButton((QPushButton*)(p1));
 		break;
 	}
-	case 330124: {
+	case 330121: {
 		pThis->setCancelButtonText(drvGetStringHead(p1));
 		break;
 	}
-	case 330125: {
+	case 330122: {
 		pThis->setLabel((QLabel*)(p1));
 		break;
 	}
-	case 330126: {
+	case 330123: {
 		pThis->setLabelText(drvGetStringHead(p1));
 		break;
 	}
-	case 330127: {
+	case 330124: {
 		pThis->setMaximum(*(int*)p1);
 		break;
 	}
-	case 330128: {
+	case 330125: {
 		pThis->setMinimum(*(int*)p1);
 		break;
 	}
-	case 330129: {
+	case 330126: {
 		pThis->setMinimumDuration(*(int*)p1);
 		break;
 	}
-	case 330130: {
+	case 330127: {
 		pThis->setRange(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 330131: {
+	case 330128: {
 		pThis->setValue(*(int*)p1);
 		break;
 	}
-	case 330132: {
-		pThis->showEvent((QShowEvent*)(p1));
-		break;
-	}
-	case 330133: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 330134: {
+	case 330129: {
 		*(int*)p1 = pThis->value();
 		break;
 	}
-	case 330135: {
+	case 330130: {
 		*(bool*)p1 = pThis->wasCanceled();
 		break;
 	}
@@ -39644,32 +36423,19 @@ int drv_QPropertyAnimation(void *_p, int funcid, void* p1,void* p2,void* p3,void
 		break;
 	}
 	case 331105: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 331106: {
 		drvSetByteArray(p1,pThis->propertyName());
 		break;
 	}
-	case 331107: {
+	case 331106: {
 		pThis->setPropertyName(drvGetByteArrayHead(p1));
 		break;
 	}
-	case 331108: {
+	case 331107: {
 		pThis->setTargetObject((QObject*)(p1));
 		break;
 	}
-	case 331109: {
+	case 331108: {
 		*(void**)p1 = pThis->targetObject();
-		break;
-	}
-	case 331110: {
-		if(p1==0)return -2;
-		pThis->updateCurrentValue(*(QVariant*)(p1));
-		break;
-	}
-	case 331111: {
-		pThis->updateState(*(QAbstractAnimation::State*)p1,*(QAbstractAnimation::State*)p2);
 		break;
 	}
 	default:
@@ -39700,68 +36466,7 @@ int drv_QProxyStyle(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 332105: {
-		if(p2==0)return -2;
-	if(p4==0)return -2;
-		pThis->drawItemPixmap((QPainter*)(p1),*(QRect*)(p2),*(int*)p3,*(QPixmap*)(p4));
-		break;
-	}
-	case 332106: {
-		if(p2==0)return -2;
-	if(p4==0)return -2;
-		pThis->drawItemText((QPainter*)(p1),*(QRect*)(p2),*(int*)p3,*(QPalette*)(p4),*(bool*)p5,drvGetStringHead(p6),*(QPalette::ColorRole*)p7);
-		break;
-	}
-	case 332107: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 332108: {
-		if(p1==0)return -2;
-	if(p3==0)return -2;
-		*(void**)p4 = new QRect(pThis->itemPixmapRect(*(QRect*)(p1),*(int*)p2,*(QPixmap*)(p3)));
-		break;
-	}
-	case 332109: {
-		if(p1==0)return -2;
-	if(p2==0)return -2;
-		*(void**)p6 = new QRect(pThis->itemTextRect(*(QFontMetrics*)(p1),*(QRect*)(p2),*(int*)p3,*(bool*)p4,drvGetStringHead(p5)));
-		break;
-	}
-	case 332110: {
-		*(int*)p2 = pThis->pixelMetric(*(QStyle::PixelMetric*)p1);
-		break;
-	}
-	case 332111: {
-		pThis->polish((QApplication*)(p1));
-		break;
-	}
-	case 332112: {
-		if(p1==0)return -2;
-		pThis->polish(*(QPalette*)(p1));
-		break;
-	}
-	case 332113: {
-		pThis->polish((QWidget*)(p1));
-		break;
-	}
-	case 332114: {
 		pThis->setBaseStyle((QStyle*)(p1));
-		break;
-	}
-	case 332115: {
-		*(void**)p1 = new QPalette(pThis->standardPalette());
-		break;
-	}
-	case 332116: {
-		*(int*)p2 = pThis->styleHint(*(QStyle::StyleHint*)p1);
-		break;
-	}
-	case 332117: {
-		pThis->unpolish((QApplication*)(p1));
-		break;
-	}
-	case 332118: {
-		pThis->unpolish((QWidget*)(p1));
 		break;
 	}
 	default:
@@ -39801,63 +36506,35 @@ int drv_QPushButton(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 333107: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 333108: {
-		pThis->focusInEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 333109: {
-		pThis->focusOutEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 333110: {
 		*(bool*)p1 = pThis->isDefault();
 		break;
 	}
-	case 333111: {
+	case 333108: {
 		*(bool*)p1 = pThis->isFlat();
 		break;
 	}
-	case 333112: {
-		pThis->keyPressEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 333113: {
+	case 333109: {
 		*(void**)p1 = pThis->menu();
 		break;
 	}
-	case 333114: {
-		*(void**)p1 = new QSize(pThis->minimumSizeHint());
-		break;
-	}
-	case 333115: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 333116: {
+	case 333110: {
 		pThis->setAutoDefault(*(bool*)p1);
 		break;
 	}
-	case 333117: {
+	case 333111: {
 		pThis->setDefault(*(bool*)p1);
 		break;
 	}
-	case 333118: {
+	case 333112: {
 		pThis->setFlat(*(bool*)p1);
 		break;
 	}
-	case 333119: {
+	case 333113: {
 		pThis->setMenu((QMenu*)(p1));
 		break;
 	}
-	case 333120: {
+	case 333114: {
 		pThis->showMenu();
-		break;
-	}
-	case 333121: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
 		break;
 	}
 	default:
@@ -39885,27 +36562,6 @@ int drv_QRadioButton(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 	}
 	case 334104: {
 		*(void**)_p = new QRadioButton(drvGetStringHead(p1),(QWidget*)(p2));
-		break;
-	}
-	case 334105: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 334106: {
-		if(p1==0)return -2;
-		*(bool*)p2 = pThis->hitButton(*(QPoint*)(p1));
-		break;
-	}
-	case 334107: {
-		pThis->mouseMoveEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 334108: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 334109: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
 		break;
 	}
 	default:
@@ -39945,12 +36601,6 @@ int drv_QRegExpValidator(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 		pThis->setRegExp(*(QRegExp*)(p1));
 		break;
 	}
-	case 335107: {
-		QString _p1=drvGetStringRef(p1);
-		*(QValidator::State*)p3 = pThis->validate(_p1,*(int*)p2);
-		drvSetStringRef(p1,_p1);
-		break;
-	}
 	default:
 		return drv_QValidator(_p,funcid,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12);
 	}
@@ -39971,58 +36621,34 @@ int drv_QRubberBand(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 336103: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 336104: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 336105: {
 		if(p1==0)return -2;
 		pThis->move(*(QPoint*)(p1));
 		break;
 	}
-	case 336106: {
+	case 336104: {
 		pThis->move(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 336107: {
-		pThis->moveEvent((QMoveEvent*)(p1));
-		break;
-	}
-	case 336108: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 336109: {
+	case 336105: {
 		if(p1==0)return -2;
 		pThis->resize(*(QSize*)(p1));
 		break;
 	}
-	case 336110: {
+	case 336106: {
 		pThis->resize(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 336111: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 336112: {
+	case 336107: {
 		if(p1==0)return -2;
 		pThis->setGeometry(*(QRect*)(p1));
 		break;
 	}
-	case 336113: {
+	case 336108: {
 		pThis->setGeometry(*(int*)p1,*(int*)p2,*(int*)p3,*(int*)p4);
 		break;
 	}
-	case 336114: {
+	case 336109: {
 		*(QRubberBand::Shape*)p1 = pThis->shape();
-		break;
-	}
-	case 336115: {
-		pThis->showEvent((QShowEvent*)(p1));
 		break;
 	}
 	default:
@@ -40065,50 +36691,26 @@ int drv_QScrollArea(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 337108: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 337109: {
-		*(bool*)p3 = pThis->eventFilter((QObject*)(p1),(QEvent*)(p2));
-		break;
-	}
-	case 337110: {
-		*(bool*)p2 = pThis->focusNextPrevChild(*(bool*)p1);
-		break;
-	}
-	case 337111: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 337112: {
-		pThis->scrollContentsBy(*(int*)p1,*(int*)p2);
-		break;
-	}
-	case 337113: {
 		pThis->setAlignment(*(QFlags<Qt::AlignmentFlag>*)p1);
 		break;
 	}
-	case 337114: {
+	case 337109: {
 		pThis->setWidget((QWidget*)(p1));
 		break;
 	}
-	case 337115: {
+	case 337110: {
 		pThis->setWidgetResizable(*(bool*)p1);
 		break;
 	}
-	case 337116: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 337117: {
+	case 337111: {
 		*(void**)p1 = pThis->takeWidget();
 		break;
 	}
-	case 337118: {
+	case 337112: {
 		*(void**)p1 = pThis->widget();
 		break;
 	}
-	case 337119: {
+	case 337113: {
 		*(bool*)p1 = pThis->widgetResizable();
 		break;
 	}
@@ -40137,42 +36739,6 @@ int drv_QScrollBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 	}
 	case 338104: {
 		*(void**)_p = new QScrollBar(*(Qt::Orientation*)p1,(QWidget*)(p2));
-		break;
-	}
-	case 338105: {
-		pThis->contextMenuEvent((QContextMenuEvent*)(p1));
-		break;
-	}
-	case 338106: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 338107: {
-		pThis->hideEvent((QHideEvent*)(p1));
-		break;
-	}
-	case 338108: {
-		pThis->mouseMoveEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 338109: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 338110: {
-		pThis->mouseReleaseEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 338111: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 338112: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 338113: {
-		pThis->sliderChange(*(QAbstractSlider::SliderChange*)p1);
 		break;
 	}
 	default:
@@ -40214,27 +36780,7 @@ int drv_QSequentialAnimationGroup(void *_p, int funcid, void* p1,void* p2,void* 
 		break;
 	}
 	case 339107: {
-		*(int*)p1 = pThis->duration();
-		break;
-	}
-	case 339108: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 339109: {
 		*(void**)p3 = pThis->insertPause(*(int*)p1,*(int*)p2);
-		break;
-	}
-	case 339110: {
-		pThis->updateCurrentTime(*(int*)p1);
-		break;
-	}
-	case 339111: {
-		pThis->updateDirection(*(QAbstractAnimation::Direction*)p1);
-		break;
-	}
-	case 339112: {
-		pThis->updateState(*(QAbstractAnimation::State*)p1,*(QAbstractAnimation::State*)p2);
 		break;
 	}
 	default:
@@ -40404,95 +36950,91 @@ int drv_QSettings(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 341121: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 341122: {
 		*(bool*)p1 = pThis->fallbacksEnabled();
 		break;
 	}
-	case 341123: {
+	case 341122: {
 		drvSetString(p1,pThis->fileName());
 		break;
 	}
-	case 341124: {
+	case 341123: {
 		*(QSettings::Format*)p1 = pThis->format();
 		break;
 	}
-	case 341125: {
+	case 341124: {
 		drvSetString(p1,pThis->group());
 		break;
 	}
-	case 341126: {
+	case 341125: {
 		*(void**)p1 = pThis->iniCodec();
 		break;
 	}
-	case 341127: {
+	case 341126: {
 		*(bool*)p1 = pThis->isWritable();
 		break;
 	}
-	case 341128: {
+	case 341127: {
 		drvSetString(p1,pThis->organizationName());
 		break;
 	}
-	case 341129: {
+	case 341128: {
 		pThis->remove(drvGetStringHead(p1));
 		break;
 	}
-	case 341130: {
+	case 341129: {
 		*(QSettings::Scope*)p1 = pThis->scope();
 		break;
 	}
-	case 341131: {
+	case 341130: {
 		pThis->setArrayIndex(*(int*)p1);
 		break;
 	}
-	case 341132: {
+	case 341131: {
 		QSettings::setDefaultFormat(*(QSettings::Format*)p1);
 		break;
 	}
-	case 341133: {
+	case 341132: {
 		pThis->setFallbacksEnabled(*(bool*)p1);
 		break;
 	}
-	case 341134: {
+	case 341133: {
 		pThis->setIniCodec((QTextCodec*)(p1));
 		break;
 	}
-	case 341135: {
+	case 341134: {
 		pThis->setIniCodec(drvGet_const_char(p1));
 		break;
 	}
-	case 341136: {
+	case 341135: {
 		QSettings::setPath(*(QSettings::Format*)p1,*(QSettings::Scope*)p2,drvGetStringHead(p3));
 		break;
 	}
-	case 341137: {
+	case 341136: {
 		QSettings::setSystemIniPath(drvGetStringHead(p1));
 		break;
 	}
-	case 341138: {
+	case 341137: {
 		QSettings::setUserIniPath(drvGetStringHead(p1));
 		break;
 	}
-	case 341139: {
+	case 341138: {
 		if(p2==0)return -2;
 		pThis->setValue(drvGetStringHead(p1),*(QVariant*)(p2));
 		break;
 	}
-	case 341140: {
+	case 341139: {
 		*(QSettings::Status*)p1 = pThis->status();
 		break;
 	}
-	case 341141: {
+	case 341140: {
 		pThis->sync();
 		break;
 	}
-	case 341142: {
+	case 341141: {
 		*(void**)p2 = new QVariant(pThis->value(drvGetStringHead(p1)));
 		break;
 	}
-	case 341143: {
+	case 341142: {
 		*(void**)p3 = new QVariant(pThis->value(drvGetStringHead(p1),p2==0?QVariant():*(QVariant*)(p2)));
 		break;
 	}
@@ -40630,47 +37172,43 @@ int drv_QShortcut(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 343108: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 343109: {
 		*(int*)p1 = pThis->id();
 		break;
 	}
-	case 343110: {
+	case 343109: {
 		*(bool*)p1 = pThis->isEnabled();
 		break;
 	}
-	case 343111: {
+	case 343110: {
 		*(void**)p1 = new QKeySequence(pThis->key());
 		break;
 	}
-	case 343112: {
+	case 343111: {
 		*(void**)p1 = pThis->parentWidget();
 		break;
 	}
-	case 343113: {
+	case 343112: {
 		pThis->setAutoRepeat(*(bool*)p1);
 		break;
 	}
-	case 343114: {
+	case 343113: {
 		pThis->setContext(*(Qt::ShortcutContext*)p1);
 		break;
 	}
-	case 343115: {
+	case 343114: {
 		pThis->setEnabled(*(bool*)p1);
 		break;
 	}
-	case 343116: {
+	case 343115: {
 		if(p1==0)return -2;
 		pThis->setKey(*(QKeySequence*)(p1));
 		break;
 	}
-	case 343117: {
+	case 343116: {
 		pThis->setWhatsThis(drvGetStringHead(p1));
 		break;
 	}
-	case 343118: {
+	case 343117: {
 		drvSetString(p1,pThis->whatsThis());
 		break;
 	}
@@ -40788,50 +37326,6 @@ int drv_QSizeGrip(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		*(void**)_p = new QSizeGrip((QWidget*)(p1));
 		break;
 	}
-	case 345103: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 345104: {
-		*(bool*)p3 = pThis->eventFilter((QObject*)(p1),(QEvent*)(p2));
-		break;
-	}
-	case 345105: {
-		pThis->hideEvent((QHideEvent*)(p1));
-		break;
-	}
-	case 345106: {
-		pThis->mouseMoveEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 345107: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 345108: {
-		pThis->mouseReleaseEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 345109: {
-		pThis->moveEvent((QMoveEvent*)(p1));
-		break;
-	}
-	case 345110: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 345111: {
-		pThis->setVisible(*(bool*)p1);
-		break;
-	}
-	case 345112: {
-		pThis->showEvent((QShowEvent*)(p1));
-		break;
-	}
-	case 345113: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
 	default:
 		return drv_QWidget(_p,funcid,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12);
 	}
@@ -40860,46 +37354,18 @@ int drv_QSlider(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 346105: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 346106: {
-		*(void**)p1 = new QSize(pThis->minimumSizeHint());
-		break;
-	}
-	case 346107: {
-		pThis->mouseMoveEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 346108: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 346109: {
-		pThis->mouseReleaseEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 346110: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 346111: {
 		pThis->setTickInterval(*(int*)p1);
 		break;
 	}
-	case 346112: {
+	case 346106: {
 		pThis->setTickPosition(*(QSlider::TickPosition*)p1);
 		break;
 	}
-	case 346113: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 346114: {
+	case 346107: {
 		*(int*)p1 = pThis->tickInterval();
 		break;
 	}
-	case 346115: {
+	case 346108: {
 		*(QSlider::TickPosition*)p1 = pThis->tickPosition();
 		break;
 	}
@@ -40927,278 +37393,124 @@ int drv_QSortFilterProxyModel(void *_p, int funcid, void* p1,void* p2,void* p3,v
 		break;
 	}
 	case 347104: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QModelIndex(pThis->buddy(*(QModelIndex*)(p1)));
-		break;
-	}
-	case 347105: {
-		if(p1==0)return -2;
-		*(bool*)p2 = pThis->canFetchMore(*(QModelIndex*)(p1));
-		break;
-	}
-	case 347106: {
 		pThis->clear();
 		break;
 	}
-	case 347107: {
-		*(int*)p1 = pThis->columnCount();
-		break;
-	}
-	case 347108: {
-		*(int*)p2 = pThis->columnCount(p1==0?QModelIndex():*(QModelIndex*)(p1));
-		break;
-	}
-	case 347109: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QVariant(pThis->data(*(QModelIndex*)(p1)));
-		break;
-	}
-	case 347110: {
-		if(p1==0)return -2;
-		*(void**)p3 = new QVariant(pThis->data(*(QModelIndex*)(p1),*(int*)p2));
-		break;
-	}
-	case 347111: {
-		if(p5==0)return -2;
-		*(bool*)p6 = pThis->dropMimeData((QMimeData*)(p1),*(Qt::DropAction*)p2,*(int*)p3,*(int*)p4,*(QModelIndex*)(p5));
-		break;
-	}
-	case 347112: {
+	case 347105: {
 		*(bool*)p1 = pThis->dynamicSortFilter();
 		break;
 	}
-	case 347113: {
-		if(p1==0)return -2;
-		pThis->fetchMore(*(QModelIndex*)(p1));
-		break;
-	}
-	case 347114: {
+	case 347106: {
 		if(p2==0)return -2;
 		*(bool*)p3 = pThis->filterAcceptsColumn(*(int*)p1,*(QModelIndex*)(p2));
 		break;
 	}
-	case 347115: {
+	case 347107: {
 		if(p2==0)return -2;
 		*(bool*)p3 = pThis->filterAcceptsRow(*(int*)p1,*(QModelIndex*)(p2));
 		break;
 	}
-	case 347116: {
+	case 347108: {
 		*(Qt::CaseSensitivity*)p1 = pThis->filterCaseSensitivity();
 		break;
 	}
-	case 347117: {
+	case 347109: {
 		pThis->filterChanged();
 		break;
 	}
-	case 347118: {
+	case 347110: {
 		*(int*)p1 = pThis->filterKeyColumn();
 		break;
 	}
-	case 347119: {
+	case 347111: {
 		*(void**)p1 = new QRegExp(pThis->filterRegExp());
 		break;
 	}
-	case 347120: {
+	case 347112: {
 		*(int*)p1 = pThis->filterRole();
 		break;
 	}
-	case 347121: {
-		if(p1==0)return -2;
-		*(QFlags<Qt::ItemFlag>*)p2 = pThis->flags(*(QModelIndex*)(p1));
-		break;
-	}
-	case 347122: {
-		*(bool*)p1 = pThis->hasChildren();
-		break;
-	}
-	case 347123: {
-		*(bool*)p2 = pThis->hasChildren(p1==0?QModelIndex():*(QModelIndex*)(p1));
-		break;
-	}
-	case 347124: {
-		*(void**)p4 = new QVariant(pThis->headerData(*(int*)p1,*(Qt::Orientation*)p2,*(int*)p3));
-		break;
-	}
-	case 347125: {
-		*(void**)p4 = new QModelIndex(pThis->index(*(int*)p1,*(int*)p2,p3==0?QModelIndex():*(QModelIndex*)(p3)));
-		break;
-	}
-	case 347126: {
-		*(bool*)p4 = pThis->insertColumns(*(int*)p1,*(int*)p2,p3==0?QModelIndex():*(QModelIndex*)(p3));
-		break;
-	}
-	case 347127: {
-		*(bool*)p4 = pThis->insertRows(*(int*)p1,*(int*)p2,p3==0?QModelIndex():*(QModelIndex*)(p3));
-		break;
-	}
-	case 347128: {
+	case 347113: {
 		pThis->invalidate();
 		break;
 	}
-	case 347129: {
+	case 347114: {
 		pThis->invalidateFilter();
 		break;
 	}
-	case 347130: {
+	case 347115: {
 		*(bool*)p1 = pThis->isSortLocaleAware();
 		break;
 	}
-	case 347131: {
+	case 347116: {
 		if(p1==0)return -2;
 	if(p2==0)return -2;
 		*(bool*)p3 = pThis->lessThan(*(QModelIndex*)(p1),*(QModelIndex*)(p2));
 		break;
 	}
-	case 347132: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QModelIndex(pThis->mapFromSource(*(QModelIndex*)(p1)));
-		break;
-	}
-	case 347133: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QItemSelection(pThis->mapSelectionFromSource(*(QItemSelection*)(p1)));
-		break;
-	}
-	case 347134: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QItemSelection(pThis->mapSelectionToSource(*(QItemSelection*)(p1)));
-		break;
-	}
-	case 347135: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QModelIndex(pThis->mapToSource(*(QModelIndex*)(p1)));
-		break;
-	}
-	case 347136: {
-		if(p1==0)return -2;
-	if(p3==0)return -2;
-		drvSetListPtr<QModelIndex>(p6,80000,pThis->match(*(QModelIndex*)(p1),*(int*)p2,*(QVariant*)(p3),*(int*)p4,*(QFlags<Qt::MatchFlag>*)p5));
-		break;
-	}
-	case 347137: {
-		*(void**)p2 = pThis->mimeData(drvGetNoObjectArrayHeadT<QModelIndex>(p1));
-		break;
-	}
-	case 347138: {
-		drvSetStringArray(p1,pThis->mimeTypes());
-		break;
-	}
-	case 347139: {
+	case 347117: {
 		*(void**)p1 = pThis->parent();
 		break;
 	}
-	case 347140: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QModelIndex(pThis->parent(*(QModelIndex*)(p1)));
-		break;
-	}
-	case 347141: {
-		*(bool*)p4 = pThis->removeColumns(*(int*)p1,*(int*)p2,p3==0?QModelIndex():*(QModelIndex*)(p3));
-		break;
-	}
-	case 347142: {
-		*(bool*)p4 = pThis->removeRows(*(int*)p1,*(int*)p2,p3==0?QModelIndex():*(QModelIndex*)(p3));
-		break;
-	}
-	case 347143: {
-		*(int*)p1 = pThis->rowCount();
-		break;
-	}
-	case 347144: {
-		*(int*)p2 = pThis->rowCount(p1==0?QModelIndex():*(QModelIndex*)(p1));
-		break;
-	}
-	case 347145: {
-		if(p1==0)return -2;
-	if(p2==0)return -2;
-		*(bool*)p4 = pThis->setData(*(QModelIndex*)(p1),*(QVariant*)(p2),*(int*)p3);
-		break;
-	}
-	case 347146: {
+	case 347118: {
 		pThis->setDynamicSortFilter(*(bool*)p1);
 		break;
 	}
-	case 347147: {
+	case 347119: {
 		pThis->setFilterCaseSensitivity(*(Qt::CaseSensitivity*)p1);
 		break;
 	}
-	case 347148: {
+	case 347120: {
 		pThis->setFilterFixedString(drvGetStringHead(p1));
 		break;
 	}
-	case 347149: {
+	case 347121: {
 		pThis->setFilterKeyColumn(*(int*)p1);
 		break;
 	}
-	case 347150: {
+	case 347122: {
 		if(p1==0)return -2;
 		pThis->setFilterRegExp(*(QRegExp*)(p1));
 		break;
 	}
-	case 347151: {
+	case 347123: {
 		pThis->setFilterRegExp(drvGetStringHead(p1));
 		break;
 	}
-	case 347152: {
+	case 347124: {
 		pThis->setFilterRole(*(int*)p1);
 		break;
 	}
-	case 347153: {
+	case 347125: {
 		pThis->setFilterWildcard(drvGetStringHead(p1));
 		break;
 	}
-	case 347154: {
-		if(p3==0)return -2;
-		*(bool*)p5 = pThis->setHeaderData(*(int*)p1,*(Qt::Orientation*)p2,*(QVariant*)(p3),*(int*)p4);
-		break;
-	}
-	case 347155: {
+	case 347126: {
 		pThis->setSortCaseSensitivity(*(Qt::CaseSensitivity*)p1);
 		break;
 	}
-	case 347156: {
+	case 347127: {
 		pThis->setSortLocaleAware(*(bool*)p1);
 		break;
 	}
-	case 347157: {
+	case 347128: {
 		pThis->setSortRole(*(int*)p1);
 		break;
 	}
-	case 347158: {
-		pThis->setSourceModel((QAbstractItemModel*)(p1));
-		break;
-	}
-	case 347159: {
-		pThis->sort(*(int*)p1);
-		break;
-	}
-	case 347160: {
-		pThis->sort(*(int*)p1,*(Qt::SortOrder*)p2);
-		break;
-	}
-	case 347161: {
+	case 347129: {
 		*(Qt::CaseSensitivity*)p1 = pThis->sortCaseSensitivity();
 		break;
 	}
-	case 347162: {
+	case 347130: {
 		*(int*)p1 = pThis->sortColumn();
 		break;
 	}
-	case 347163: {
+	case 347131: {
 		*(Qt::SortOrder*)p1 = pThis->sortOrder();
 		break;
 	}
-	case 347164: {
+	case 347132: {
 		*(int*)p1 = pThis->sortRole();
-		break;
-	}
-	case 347165: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QSize(pThis->span(*(QModelIndex*)(p1)));
-		break;
-	}
-	case 347166: {
-		*(QFlags<Qt::DropAction>*)p1 = pThis->supportedDropActions();
 		break;
 	}
 	default:
@@ -41243,78 +37555,62 @@ int drv_QSpinBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 348107: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 348108: {
-		QString _p1=drvGetStringRef(p1);
-		pThis->fixup(_p1);
-		drvSetStringRef(p1,_p1);
-		break;
-	}
-	case 348109: {
 		*(int*)p1 = pThis->maximum();
 		break;
 	}
-	case 348110: {
+	case 348108: {
 		*(int*)p1 = pThis->minimum();
 		break;
 	}
-	case 348111: {
+	case 348109: {
 		drvSetString(p1,pThis->prefix());
 		break;
 	}
-	case 348112: {
+	case 348110: {
 		pThis->setMaximum(*(int*)p1);
 		break;
 	}
-	case 348113: {
+	case 348111: {
 		pThis->setMinimum(*(int*)p1);
 		break;
 	}
-	case 348114: {
+	case 348112: {
 		pThis->setPrefix(drvGetStringHead(p1));
 		break;
 	}
-	case 348115: {
+	case 348113: {
 		pThis->setRange(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 348116: {
+	case 348114: {
 		pThis->setSingleStep(*(int*)p1);
 		break;
 	}
-	case 348117: {
+	case 348115: {
 		pThis->setSuffix(drvGetStringHead(p1));
 		break;
 	}
-	case 348118: {
+	case 348116: {
 		pThis->setValue(*(int*)p1);
 		break;
 	}
-	case 348119: {
+	case 348117: {
 		*(int*)p1 = pThis->singleStep();
 		break;
 	}
-	case 348120: {
+	case 348118: {
 		drvSetString(p1,pThis->suffix());
 		break;
 	}
-	case 348121: {
+	case 348119: {
 		drvSetString(p2,pThis->textFromValue(*(int*)p1));
 		break;
 	}
-	case 348122: {
-		QString _p1=drvGetStringRef(p1);
-		*(QValidator::State*)p3 = pThis->validate(_p1,*(int*)p2);
-		drvSetStringRef(p1,_p1);
-		break;
-	}
-	case 348123: {
+	case 348120: {
 		*(int*)p1 = pThis->value();
 		break;
 	}
-	case 348124: {
+	case 348121: {
 		*(int*)p2 = pThis->valueFromText(drvGetStringHead(p1));
 		break;
 	}
@@ -41361,35 +37657,27 @@ int drv_QSplashScreen(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 349108: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 349109: {
 		pThis->finish((QWidget*)(p1));
 		break;
 	}
-	case 349110: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 349111: {
+	case 349109: {
 		*(const void**)p1 = new QPixmap(pThis->pixmap());
 		break;
 	}
-	case 349112: {
+	case 349110: {
 		pThis->repaint();
 		break;
 	}
-	case 349113: {
+	case 349111: {
 		if(p1==0)return -2;
 		pThis->setPixmap(*(QPixmap*)(p1));
 		break;
 	}
-	case 349114: {
+	case 349112: {
 		pThis->showMessage(drvGetStringHead(p1));
 		break;
 	}
-	case 349115: {
+	case 349113: {
 		pThis->showMessage(drvGetStringHead(p1),*(int*)p2,p3==0?QColor():*(QColor*)(p3));
 		break;
 	}
@@ -41432,130 +37720,106 @@ int drv_QSplitter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 350107: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 350108: {
-		pThis->childEvent((QChildEvent*)(p1));
-		break;
-	}
-	case 350109: {
 		*(bool*)p1 = pThis->childrenCollapsible();
 		break;
 	}
-	case 350110: {
+	case 350108: {
 		*(int*)p3 = pThis->closestLegalPosition(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 350111: {
+	case 350109: {
 		*(int*)p1 = pThis->count();
 		break;
 	}
-	case 350112: {
+	case 350110: {
 		*(void**)p1 = pThis->createHandle();
 		break;
 	}
-	case 350113: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 350114: {
+	case 350111: {
 		pThis->getRange(*(int*)p1,*(int**)p2,*(int**)p3);
 		break;
 	}
-	case 350115: {
+	case 350112: {
 		*(void**)p2 = pThis->handle(*(int*)p1);
 		break;
 	}
-	case 350116: {
+	case 350113: {
 		*(int*)p1 = pThis->handleWidth();
 		break;
 	}
-	case 350117: {
+	case 350114: {
 		*(int*)p2 = pThis->indexOf((QWidget*)(p1));
 		break;
 	}
-	case 350118: {
+	case 350115: {
 		pThis->insertWidget(*(int*)p1,(QWidget*)(p2));
 		break;
 	}
-	case 350119: {
+	case 350116: {
 		*(bool*)p2 = pThis->isCollapsible(*(int*)p1);
 		break;
 	}
-	case 350120: {
-		*(void**)p1 = new QSize(pThis->minimumSizeHint());
-		break;
-	}
-	case 350121: {
+	case 350117: {
 		pThis->moveSplitter(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 350122: {
+	case 350118: {
 		*(bool*)p1 = pThis->opaqueResize();
 		break;
 	}
-	case 350123: {
+	case 350119: {
 		*(Qt::Orientation*)p1 = pThis->orientation();
 		break;
 	}
-	case 350124: {
+	case 350120: {
 		pThis->refresh();
 		break;
 	}
-	case 350125: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 350126: {
+	case 350121: {
 		*(bool*)p2 = pThis->restoreState(drvGetByteArrayHead(p1));
 		break;
 	}
-	case 350127: {
+	case 350122: {
 		drvSetByteArray(p1,pThis->saveState());
 		break;
 	}
-	case 350128: {
+	case 350123: {
 		pThis->setChildrenCollapsible(*(bool*)p1);
 		break;
 	}
-	case 350129: {
+	case 350124: {
 		pThis->setCollapsible(*(int*)p1,*(bool*)p2);
 		break;
 	}
-	case 350130: {
+	case 350125: {
 		pThis->setHandleWidth(*(int*)p1);
 		break;
 	}
-	case 350131: {
+	case 350126: {
 		pThis->setOpaqueResize(*(bool*)p1);
 		break;
 	}
-	case 350132: {
+	case 350127: {
 		pThis->setOrientation(*(Qt::Orientation*)p1);
 		break;
 	}
-	case 350133: {
+	case 350128: {
 		pThis->setRubberBand(*(int*)p1);
 		break;
 	}
-	case 350134: {
+	case 350129: {
 		pThis->setSizes(drvGetIntArrayHead(p1));
 		break;
 	}
-	case 350135: {
+	case 350130: {
 		pThis->setStretchFactor(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 350136: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 350137: {
+	case 350131: {
 		drvSetList<int>(p1,pThis->sizes());
 		break;
 	}
-	case 350138: {
+	case 350132: {
 		*(void**)p2 = pThis->widget(*(int*)p1);
 		break;
 	}
@@ -41583,50 +37847,22 @@ int drv_QSplitterHandle(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	}
 	case 351104: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 351105: {
-		pThis->mouseMoveEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 351106: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 351107: {
-		pThis->mouseReleaseEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 351108: {
 		pThis->moveSplitter(*(int*)p1);
 		break;
 	}
-	case 351109: {
+	case 351105: {
 		*(bool*)p1 = pThis->opaqueResize();
 		break;
 	}
-	case 351110: {
+	case 351106: {
 		*(Qt::Orientation*)p1 = pThis->orientation();
 		break;
 	}
-	case 351111: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 351112: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 351113: {
+	case 351107: {
 		pThis->setOrientation(*(Qt::Orientation*)p1);
 		break;
 	}
-	case 351114: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 351115: {
+	case 351108: {
 		*(void**)p1 = pThis->splitter();
 		break;
 	}
@@ -41672,71 +37908,38 @@ int drv_QStackedLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	}
 	case 352107: {
-		pThis->addItem((QLayoutItem*)(p1));
-		break;
-	}
-	case 352108: {
 		*(int*)p2 = pThis->addWidget((QWidget*)(p1));
 		break;
 	}
-	case 352109: {
-		*(int*)p1 = pThis->count();
-		break;
-	}
-	case 352110: {
+	case 352108: {
 		*(int*)p1 = pThis->currentIndex();
 		break;
 	}
-	case 352111: {
+	case 352109: {
 		*(void**)p1 = pThis->currentWidget();
 		break;
 	}
-	case 352112: {
+	case 352110: {
 		*(int*)p3 = pThis->insertWidget(*(int*)p1,(QWidget*)(p2));
 		break;
 	}
-	case 352113: {
-		*(void**)p2 = pThis->itemAt(*(int*)p1);
-		break;
-	}
-	case 352114: {
-		*(void**)p1 = new QSize(pThis->minimumSize());
-		break;
-	}
-	case 352115: {
+	case 352111: {
 		pThis->setCurrentIndex(*(int*)p1);
 		break;
 	}
-	case 352116: {
+	case 352112: {
 		pThis->setCurrentWidget((QWidget*)(p1));
 		break;
 	}
-	case 352117: {
-		if(p1==0)return -2;
-		pThis->setGeometry(*(QRect*)(p1));
-		break;
-	}
-	case 352118: {
+	case 352113: {
 		pThis->setStackingMode(*(QStackedLayout::StackingMode*)p1);
 		break;
 	}
-	case 352119: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 352120: {
+	case 352114: {
 		*(QStackedLayout::StackingMode*)p1 = pThis->stackingMode();
 		break;
 	}
-	case 352121: {
-		*(void**)p2 = pThis->takeAt(*(int*)p1);
-		break;
-	}
-	case 352122: {
-		*(void**)p1 = pThis->widget();
-		break;
-	}
-	case 352123: {
+	case 352115: {
 		*(void**)p2 = pThis->widget(*(int*)p1);
 		break;
 	}
@@ -41794,30 +37997,26 @@ int drv_QStackedWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	}
 	case 353110: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 353111: {
 		*(int*)p2 = pThis->indexOf((QWidget*)(p1));
 		break;
 	}
-	case 353112: {
+	case 353111: {
 		*(int*)p3 = pThis->insertWidget(*(int*)p1,(QWidget*)(p2));
 		break;
 	}
-	case 353113: {
+	case 353112: {
 		pThis->removeWidget((QWidget*)(p1));
 		break;
 	}
-	case 353114: {
+	case 353113: {
 		pThis->setCurrentIndex(*(int*)p1);
 		break;
 	}
-	case 353115: {
+	case 353114: {
 		pThis->setCurrentWidget((QWidget*)(p1));
 		break;
 	}
-	case 353116: {
+	case 353115: {
 		*(void**)p2 = pThis->widget(*(int*)p1);
 		break;
 	}
@@ -41872,257 +38071,143 @@ int drv_QStandardItemModel(void *_p, int funcid, void* p1,void* p2,void* p3,void
 		break;
 	}
 	case 354110: {
-		*(int*)p1 = pThis->columnCount();
-		break;
-	}
-	case 354111: {
-		*(int*)p2 = pThis->columnCount(p1==0?QModelIndex():*(QModelIndex*)(p1));
-		break;
-	}
-	case 354112: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QVariant(pThis->data(*(QModelIndex*)(p1)));
-		break;
-	}
-	case 354113: {
-		if(p1==0)return -2;
-		*(void**)p3 = new QVariant(pThis->data(*(QModelIndex*)(p1),*(int*)p2));
-		break;
-	}
-	case 354114: {
-		if(p5==0)return -2;
-		*(bool*)p6 = pThis->dropMimeData((QMimeData*)(p1),*(Qt::DropAction*)p2,*(int*)p3,*(int*)p4,*(QModelIndex*)(p5));
-		break;
-	}
-	case 354115: {
 		drvSetListObj<QStandardItem*>(p2,124000,pThis->findItems(drvGetStringHead(p1)));
 		break;
 	}
-	case 354116: {
+	case 354111: {
 		drvSetListObj<QStandardItem*>(p4,124000,pThis->findItems(drvGetStringHead(p1),*(QFlags<Qt::MatchFlag>*)p2,*(int*)p3));
 		break;
 	}
-	case 354117: {
-		if(p1==0)return -2;
-		*(QFlags<Qt::ItemFlag>*)p2 = pThis->flags(*(QModelIndex*)(p1));
-		break;
-	}
-	case 354118: {
-		*(bool*)p1 = pThis->hasChildren();
-		break;
-	}
-	case 354119: {
-		*(bool*)p2 = pThis->hasChildren(p1==0?QModelIndex():*(QModelIndex*)(p1));
-		break;
-	}
-	case 354120: {
-		*(void**)p4 = new QVariant(pThis->headerData(*(int*)p1,*(Qt::Orientation*)p2,*(int*)p3));
-		break;
-	}
-	case 354121: {
+	case 354112: {
 		*(void**)p2 = pThis->horizontalHeaderItem(*(int*)p1);
 		break;
 	}
-	case 354122: {
-		*(void**)p4 = new QModelIndex(pThis->index(*(int*)p1,*(int*)p2,p3==0?QModelIndex():*(QModelIndex*)(p3)));
-		break;
-	}
-	case 354123: {
+	case 354113: {
 		*(void**)p2 = new QModelIndex(pThis->indexFromItem((QStandardItem*)(p1)));
 		break;
 	}
-	case 354124: {
+	case 354114: {
 		*(bool*)p2 = pThis->insertColumn(*(int*)p1);
 		break;
 	}
-	case 354125: {
+	case 354115: {
 		pThis->insertColumn(*(int*)p1,drvGetObjectArrayHeadT<QStandardItem*>(p2));
 		break;
 	}
-	case 354126: {
+	case 354116: {
 		*(bool*)p3 = pThis->insertColumn(*(int*)p1,p2==0?QModelIndex():*(QModelIndex*)(p2));
 		break;
 	}
-	case 354127: {
-		*(bool*)p4 = pThis->insertColumns(*(int*)p1,*(int*)p2,p3==0?QModelIndex():*(QModelIndex*)(p3));
-		break;
-	}
-	case 354128: {
+	case 354117: {
 		*(bool*)p2 = pThis->insertRow(*(int*)p1);
 		break;
 	}
-	case 354129: {
+	case 354118: {
 		pThis->insertRow(*(int*)p1,drvGetObjectArrayHeadT<QStandardItem*>(p2));
 		break;
 	}
-	case 354130: {
+	case 354119: {
 		*(bool*)p3 = pThis->insertRow(*(int*)p1,p2==0?QModelIndex():*(QModelIndex*)(p2));
 		break;
 	}
-	case 354131: {
+	case 354120: {
 		pThis->insertRow(*(int*)p1,(QStandardItem*)(p2));
 		break;
 	}
-	case 354132: {
-		*(bool*)p4 = pThis->insertRows(*(int*)p1,*(int*)p2,p3==0?QModelIndex():*(QModelIndex*)(p3));
-		break;
-	}
-	case 354133: {
+	case 354121: {
 		*(void**)p1 = pThis->invisibleRootItem();
 		break;
 	}
-	case 354134: {
+	case 354122: {
 		*(void**)p2 = pThis->item(*(int*)p1);
 		break;
 	}
-	case 354135: {
+	case 354123: {
 		*(void**)p3 = pThis->item(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 354136: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QIntVariantMap(pThis->itemData(*(QModelIndex*)(p1)));
-		break;
-	}
-	case 354137: {
+	case 354124: {
 		if(p1==0)return -2;
 		*(void**)p2 = pThis->itemFromIndex(*(QModelIndex*)(p1));
 		break;
 	}
-	case 354138: {
+	case 354125: {
 		*(const void**)p1 = pThis->itemPrototype();
 		break;
 	}
-	case 354139: {
-		*(void**)p2 = pThis->mimeData(drvGetNoObjectArrayHeadT<QModelIndex>(p1));
-		break;
-	}
-	case 354140: {
-		drvSetStringArray(p1,pThis->mimeTypes());
-		break;
-	}
-	case 354141: {
+	case 354126: {
 		*(void**)p1 = pThis->parent();
 		break;
 	}
-	case 354142: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QModelIndex(pThis->parent(*(QModelIndex*)(p1)));
-		break;
-	}
-	case 354143: {
-		*(bool*)p4 = pThis->removeColumns(*(int*)p1,*(int*)p2,p3==0?QModelIndex():*(QModelIndex*)(p3));
-		break;
-	}
-	case 354144: {
-		*(bool*)p4 = pThis->removeRows(*(int*)p1,*(int*)p2,p3==0?QModelIndex():*(QModelIndex*)(p3));
-		break;
-	}
-	case 354145: {
-		*(int*)p1 = pThis->rowCount();
-		break;
-	}
-	case 354146: {
-		*(int*)p2 = pThis->rowCount(p1==0?QModelIndex():*(QModelIndex*)(p1));
-		break;
-	}
-	case 354147: {
+	case 354127: {
 		pThis->setColumnCount(*(int*)p1);
 		break;
 	}
-	case 354148: {
-		if(p1==0)return -2;
-	if(p2==0)return -2;
-		*(bool*)p4 = pThis->setData(*(QModelIndex*)(p1),*(QVariant*)(p2),*(int*)p3);
-		break;
-	}
-	case 354149: {
-		if(p3==0)return -2;
-		*(bool*)p5 = pThis->setHeaderData(*(int*)p1,*(Qt::Orientation*)p2,*(QVariant*)(p3),*(int*)p4);
-		break;
-	}
-	case 354150: {
+	case 354128: {
 		pThis->setHorizontalHeaderItem(*(int*)p1,(QStandardItem*)(p2));
 		break;
 	}
-	case 354151: {
+	case 354129: {
 		pThis->setHorizontalHeaderLabels(drvGetStringArray(p1));
 		break;
 	}
-	case 354152: {
+	case 354130: {
 		pThis->setItem(*(int*)p1,(QStandardItem*)(p2));
 		break;
 	}
-	case 354153: {
+	case 354131: {
 		pThis->setItem(*(int*)p1,*(int*)p2,(QStandardItem*)(p3));
 		break;
 	}
-	case 354154: {
-		if(p1==0)return -2;
-		*(bool*)p3 = pThis->setItemData(*(QModelIndex*)(p1),*(QIntVariantMap*)(p2));
-		break;
-	}
-	case 354155: {
+	case 354132: {
 		pThis->setItemPrototype((QStandardItem*)(p1));
 		break;
 	}
-	case 354156: {
+	case 354133: {
 		pThis->setRowCount(*(int*)p1);
 		break;
 	}
-	case 354157: {
+	case 354134: {
 		pThis->setSortRole(*(int*)p1);
 		break;
 	}
-	case 354158: {
+	case 354135: {
 		pThis->setVerticalHeaderItem(*(int*)p1,(QStandardItem*)(p2));
 		break;
 	}
-	case 354159: {
+	case 354136: {
 		pThis->setVerticalHeaderLabels(drvGetStringArray(p1));
 		break;
 	}
-	case 354160: {
-		pThis->sort(*(int*)p1);
-		break;
-	}
-	case 354161: {
-		pThis->sort(*(int*)p1,*(Qt::SortOrder*)p2);
-		break;
-	}
-	case 354162: {
+	case 354137: {
 		*(int*)p1 = pThis->sortRole();
 		break;
 	}
-	case 354163: {
-		*(QFlags<Qt::DropAction>*)p1 = pThis->supportedDropActions();
-		break;
-	}
-	case 354164: {
+	case 354138: {
 		drvSetListObj<QStandardItem*>(p2,124000,pThis->takeColumn(*(int*)p1));
 		break;
 	}
-	case 354165: {
+	case 354139: {
 		*(void**)p2 = pThis->takeHorizontalHeaderItem(*(int*)p1);
 		break;
 	}
-	case 354166: {
+	case 354140: {
 		*(void**)p2 = pThis->takeItem(*(int*)p1);
 		break;
 	}
-	case 354167: {
+	case 354141: {
 		*(void**)p3 = pThis->takeItem(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 354168: {
+	case 354142: {
 		drvSetListObj<QStandardItem*>(p2,124000,pThis->takeRow(*(int*)p1));
 		break;
 	}
-	case 354169: {
+	case 354143: {
 		*(void**)p2 = pThis->takeVerticalHeaderItem(*(int*)p1);
 		break;
 	}
-	case 354170: {
+	case 354144: {
 		*(void**)p2 = pThis->verticalHeaderItem(*(int*)p1);
 		break;
 	}
@@ -42189,38 +38274,26 @@ int drv_QState(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 		break;
 	}
 	case 355112: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 355113: {
 		*(void**)p1 = pThis->initialState();
 		break;
 	}
-	case 355114: {
-		pThis->onEntry((QEvent*)(p1));
-		break;
-	}
-	case 355115: {
-		pThis->onExit((QEvent*)(p1));
-		break;
-	}
-	case 355116: {
+	case 355113: {
 		pThis->removeTransition((QAbstractTransition*)(p1));
 		break;
 	}
-	case 355117: {
+	case 355114: {
 		pThis->setChildMode(*(QState::ChildMode*)p1);
 		break;
 	}
-	case 355118: {
+	case 355115: {
 		pThis->setErrorState((QAbstractState*)(p1));
 		break;
 	}
-	case 355119: {
+	case 355116: {
 		pThis->setInitialState((QAbstractState*)(p1));
 		break;
 	}
-	case 355120: {
+	case 355117: {
 		drvSetListObj<QAbstractTransition*>(p1,208000,pThis->transitions());
 		break;
 	}
@@ -42306,66 +38379,50 @@ int drv_QStateMachine(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 356117: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 356118: {
-		*(bool*)p3 = pThis->eventFilter((QObject*)(p1),(QEvent*)(p2));
-		break;
-	}
-	case 356119: {
 		*(QStateMachine::RestorePolicy*)p1 = pThis->globalRestorePolicy();
 		break;
 	}
-	case 356120: {
+	case 356118: {
 		*(bool*)p1 = pThis->isAnimated();
 		break;
 	}
-	case 356121: {
+	case 356119: {
 		*(bool*)p1 = pThis->isRunning();
 		break;
 	}
-	case 356122: {
-		pThis->onEntry((QEvent*)(p1));
-		break;
-	}
-	case 356123: {
-		pThis->onExit((QEvent*)(p1));
-		break;
-	}
-	case 356124: {
+	case 356120: {
 		*(int*)p3 = pThis->postDelayedEvent((QEvent*)(p1),*(int*)p2);
 		break;
 	}
-	case 356125: {
+	case 356121: {
 		pThis->postEvent((QEvent*)(p1));
 		break;
 	}
-	case 356126: {
+	case 356122: {
 		pThis->postEvent((QEvent*)(p1),*(QStateMachine::EventPriority*)p2);
 		break;
 	}
-	case 356127: {
+	case 356123: {
 		pThis->removeDefaultAnimation((QAbstractAnimation*)(p1));
 		break;
 	}
-	case 356128: {
+	case 356124: {
 		pThis->removeState((QAbstractState*)(p1));
 		break;
 	}
-	case 356129: {
+	case 356125: {
 		pThis->setAnimated(*(bool*)p1);
 		break;
 	}
-	case 356130: {
+	case 356126: {
 		pThis->setGlobalRestorePolicy(*(QStateMachine::RestorePolicy*)p1);
 		break;
 	}
-	case 356131: {
+	case 356127: {
 		pThis->start();
 		break;
 	}
-	case 356132: {
+	case 356128: {
 		pThis->stop();
 		break;
 	}
@@ -42424,54 +38481,38 @@ int drv_QStatusBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	}
 	case 357111: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 357112: {
 		pThis->hideOrShow();
 		break;
 	}
-	case 357113: {
+	case 357112: {
 		*(int*)p4 = pThis->insertPermanentWidget(*(int*)p1,(QWidget*)(p2),*(int*)p3);
 		break;
 	}
-	case 357114: {
+	case 357113: {
 		*(int*)p4 = pThis->insertWidget(*(int*)p1,(QWidget*)(p2),*(int*)p3);
 		break;
 	}
-	case 357115: {
+	case 357114: {
 		*(bool*)p1 = pThis->isSizeGripEnabled();
 		break;
 	}
-	case 357116: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 357117: {
+	case 357115: {
 		pThis->reformat();
 		break;
 	}
-	case 357118: {
+	case 357116: {
 		pThis->removeWidget((QWidget*)(p1));
 		break;
 	}
-	case 357119: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 357120: {
+	case 357117: {
 		pThis->setSizeGripEnabled(*(bool*)p1);
 		break;
 	}
-	case 357121: {
-		pThis->showEvent((QShowEvent*)(p1));
-		break;
-	}
-	case 357122: {
+	case 357118: {
 		pThis->showMessage(drvGetStringHead(p1));
 		break;
 	}
-	case 357123: {
+	case 357119: {
 		pThis->showMessage(drvGetStringHead(p1),*(int*)p2);
 		break;
 	}
@@ -42491,55 +38532,11 @@ int drv_QStringListModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 		break;
 	} 
 	case 358102: {
-		if(p1==0)return -2;
-		*(void**)p3 = new QVariant(pThis->data(*(QModelIndex*)(p1),*(int*)p2));
-		break;
-	}
-	case 358103: {
-		if(p1==0)return -2;
-		*(QFlags<Qt::ItemFlag>*)p2 = pThis->flags(*(QModelIndex*)(p1));
-		break;
-	}
-	case 358104: {
-		*(bool*)p4 = pThis->insertRows(*(int*)p1,*(int*)p2,p3==0?QModelIndex():*(QModelIndex*)(p3));
-		break;
-	}
-	case 358105: {
-		*(bool*)p4 = pThis->removeRows(*(int*)p1,*(int*)p2,p3==0?QModelIndex():*(QModelIndex*)(p3));
-		break;
-	}
-	case 358106: {
-		*(int*)p1 = pThis->rowCount();
-		break;
-	}
-	case 358107: {
-		*(int*)p2 = pThis->rowCount(p1==0?QModelIndex():*(QModelIndex*)(p1));
-		break;
-	}
-	case 358108: {
-		if(p1==0)return -2;
-	if(p2==0)return -2;
-		*(bool*)p4 = pThis->setData(*(QModelIndex*)(p1),*(QVariant*)(p2),*(int*)p3);
-		break;
-	}
-	case 358109: {
 		pThis->setStringList(drvGetStringArray(p1));
 		break;
 	}
-	case 358110: {
-		pThis->sort(*(int*)p1);
-		break;
-	}
-	case 358111: {
-		pThis->sort(*(int*)p1,*(Qt::SortOrder*)p2);
-		break;
-	}
-	case 358112: {
+	case 358103: {
 		drvSetStringArray(p1,pThis->stringList());
-		break;
-	}
-	case 358113: {
-		*(QFlags<Qt::DropAction>*)p1 = pThis->supportedDropActions();
 		break;
 	}
 	default:
@@ -42686,25 +38683,11 @@ int drv_QStyledItemDelegate(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 		break;
 	}
 	case 360105: {
-		*(bool*)p3 = pThis->eventFilter((QObject*)(p1),(QEvent*)(p2));
-		break;
-	}
-	case 360106: {
 		*(void**)p1 = pThis->itemEditorFactory();
 		break;
 	}
-	case 360107: {
-		if(p2==0)return -2;
-		pThis->setEditorData((QWidget*)(p1),*(QModelIndex*)(p2));
-		break;
-	}
-	case 360108: {
+	case 360106: {
 		pThis->setItemEditorFactory((QItemEditorFactory*)(p1));
-		break;
-	}
-	case 360109: {
-		if(p3==0)return -2;
-		pThis->setModelData((QWidget*)(p1),(QAbstractItemModel*)(p2),*(QModelIndex*)(p3));
 		break;
 	}
 	default:
@@ -42859,10 +38842,6 @@ int drv_QSyntaxHighlighterHook(void *_p, int funcid, void* p1,void* p2,void* p3,
 		*(void**)_p = new QSyntaxHighlighterHook((QTextEdit*)(p1));
 		break;
 	}
-	case 363106: {
-		pThis->highlightBlock(drvGetStringHead(p1));
-		break;
-	}
 	default:
 		return drv_QSyntaxHighlighter(_p,funcid,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12);
 	}
@@ -42910,59 +38889,55 @@ int drv_QSystemTrayIcon(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 		break;
 	}
 	case 364108: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 364109: {
 		*(void**)p1 = new QRect(pThis->geometry());
 		break;
 	}
-	case 364110: {
+	case 364109: {
 		pThis->hide();
 		break;
 	}
-	case 364111: {
+	case 364110: {
 		*(void**)p1 = new QIcon(pThis->icon());
 		break;
 	}
-	case 364112: {
+	case 364111: {
 		*(bool*)p1 = QSystemTrayIcon::isSystemTrayAvailable();
 		break;
 	}
-	case 364113: {
+	case 364112: {
 		*(bool*)p1 = pThis->isVisible();
 		break;
 	}
-	case 364114: {
+	case 364113: {
 		pThis->setContextMenu((QMenu*)(p1));
 		break;
 	}
-	case 364115: {
+	case 364114: {
 		if(p1==0)return -2;
 		pThis->setIcon(*(QIcon*)(p1));
 		break;
 	}
-	case 364116: {
+	case 364115: {
 		pThis->setToolTip(drvGetStringHead(p1));
 		break;
 	}
-	case 364117: {
+	case 364116: {
 		pThis->setVisible(*(bool*)p1);
 		break;
 	}
-	case 364118: {
+	case 364117: {
 		pThis->show();
 		break;
 	}
-	case 364119: {
+	case 364118: {
 		pThis->showMessage(drvGetStringHead(p1),drvGetStringHead(p2),*(QSystemTrayIcon::MessageIcon*)p3,*(int*)p4);
 		break;
 	}
-	case 364120: {
+	case 364119: {
 		*(bool*)p1 = QSystemTrayIcon::supportsMessages();
 		break;
 	}
-	case 364121: {
+	case 364120: {
 		drvSetString(p1,pThis->toolTip());
 		break;
 	}
@@ -43020,257 +38995,205 @@ int drv_QTabBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 365109: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 365110: {
 		*(int*)p1 = pThis->count();
 		break;
 	}
-	case 365111: {
+	case 365110: {
 		*(int*)p1 = pThis->currentIndex();
 		break;
 	}
-	case 365112: {
+	case 365111: {
 		*(bool*)p1 = pThis->documentMode();
 		break;
 	}
-	case 365113: {
+	case 365112: {
 		*(bool*)p1 = pThis->drawBase();
 		break;
 	}
-	case 365114: {
+	case 365113: {
 		*(Qt::TextElideMode*)p1 = pThis->elideMode();
 		break;
 	}
-	case 365115: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 365116: {
+	case 365114: {
 		*(bool*)p1 = pThis->expanding();
 		break;
 	}
-	case 365117: {
-		pThis->hideEvent((QHideEvent*)(p1));
-		break;
-	}
-	case 365118: {
+	case 365115: {
 		*(void**)p1 = new QSize(pThis->iconSize());
 		break;
 	}
-	case 365119: {
+	case 365116: {
 		*(int*)p3 = pThis->insertTab(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
-	case 365120: {
+	case 365117: {
 		if(p2==0)return -2;
 		*(int*)p4 = pThis->insertTab(*(int*)p1,*(QIcon*)(p2),drvGetStringHead(p3));
 		break;
 	}
-	case 365121: {
+	case 365118: {
 		*(bool*)p1 = pThis->isMovable();
 		break;
 	}
-	case 365122: {
+	case 365119: {
 		*(bool*)p2 = pThis->isTabEnabled(*(int*)p1);
 		break;
 	}
-	case 365123: {
-		pThis->keyPressEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 365124: {
-		*(void**)p1 = new QSize(pThis->minimumSizeHint());
-		break;
-	}
-	case 365125: {
-		pThis->mouseMoveEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 365126: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 365127: {
-		pThis->mouseReleaseEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 365128: {
+	case 365120: {
 		pThis->moveTab(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 365129: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 365130: {
+	case 365121: {
 		pThis->removeTab(*(int*)p1);
 		break;
 	}
-	case 365131: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 365132: {
+	case 365122: {
 		*(QTabBar::SelectionBehavior*)p1 = pThis->selectionBehaviorOnRemove();
 		break;
 	}
-	case 365133: {
+	case 365123: {
 		pThis->setCurrentIndex(*(int*)p1);
 		break;
 	}
-	case 365134: {
+	case 365124: {
 		pThis->setDocumentMode(*(bool*)p1);
 		break;
 	}
-	case 365135: {
+	case 365125: {
 		pThis->setDrawBase(*(bool*)p1);
 		break;
 	}
-	case 365136: {
+	case 365126: {
 		pThis->setElideMode(*(Qt::TextElideMode*)p1);
 		break;
 	}
-	case 365137: {
+	case 365127: {
 		pThis->setExpanding(*(bool*)p1);
 		break;
 	}
-	case 365138: {
+	case 365128: {
 		if(p1==0)return -2;
 		pThis->setIconSize(*(QSize*)(p1));
 		break;
 	}
-	case 365139: {
+	case 365129: {
 		pThis->setMovable(*(bool*)p1);
 		break;
 	}
-	case 365140: {
+	case 365130: {
 		pThis->setSelectionBehaviorOnRemove(*(QTabBar::SelectionBehavior*)p1);
 		break;
 	}
-	case 365141: {
+	case 365131: {
 		pThis->setShape(*(QTabBar::Shape*)p1);
 		break;
 	}
-	case 365142: {
+	case 365132: {
 		pThis->setTabButton(*(int*)p1,*(QTabBar::ButtonPosition*)p2,(QWidget*)(p3));
 		break;
 	}
-	case 365143: {
+	case 365133: {
 		if(p2==0)return -2;
 		pThis->setTabData(*(int*)p1,*(QVariant*)(p2));
 		break;
 	}
-	case 365144: {
+	case 365134: {
 		pThis->setTabEnabled(*(int*)p1,*(bool*)p2);
 		break;
 	}
-	case 365145: {
+	case 365135: {
 		if(p2==0)return -2;
 		pThis->setTabIcon(*(int*)p1,*(QIcon*)(p2));
 		break;
 	}
-	case 365146: {
+	case 365136: {
 		pThis->setTabText(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
-	case 365147: {
+	case 365137: {
 		if(p2==0)return -2;
 		pThis->setTabTextColor(*(int*)p1,*(QColor*)(p2));
 		break;
 	}
-	case 365148: {
+	case 365138: {
 		pThis->setTabToolTip(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
-	case 365149: {
+	case 365139: {
 		pThis->setTabWhatsThis(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
-	case 365150: {
+	case 365140: {
 		pThis->setTabsClosable(*(bool*)p1);
 		break;
 	}
-	case 365151: {
+	case 365141: {
 		pThis->setUsesScrollButtons(*(bool*)p1);
 		break;
 	}
-	case 365152: {
+	case 365142: {
 		*(QTabBar::Shape*)p1 = pThis->shape();
 		break;
 	}
-	case 365153: {
-		pThis->showEvent((QShowEvent*)(p1));
-		break;
-	}
-	case 365154: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 365155: {
+	case 365143: {
 		if(p1==0)return -2;
 		*(int*)p2 = pThis->tabAt(*(QPoint*)(p1));
 		break;
 	}
-	case 365156: {
+	case 365144: {
 		*(void**)p3 = pThis->tabButton(*(int*)p1,*(QTabBar::ButtonPosition*)p2);
 		break;
 	}
-	case 365157: {
+	case 365145: {
 		*(void**)p2 = new QVariant(pThis->tabData(*(int*)p1));
 		break;
 	}
-	case 365158: {
+	case 365146: {
 		*(void**)p2 = new QIcon(pThis->tabIcon(*(int*)p1));
 		break;
 	}
-	case 365159: {
+	case 365147: {
 		pThis->tabInserted(*(int*)p1);
 		break;
 	}
-	case 365160: {
+	case 365148: {
 		pThis->tabLayoutChange();
 		break;
 	}
-	case 365161: {
+	case 365149: {
 		*(void**)p2 = new QRect(pThis->tabRect(*(int*)p1));
 		break;
 	}
-	case 365162: {
+	case 365150: {
 		pThis->tabRemoved(*(int*)p1);
 		break;
 	}
-	case 365163: {
+	case 365151: {
 		*(void**)p2 = new QSize(pThis->tabSizeHint(*(int*)p1));
 		break;
 	}
-	case 365164: {
+	case 365152: {
 		drvSetString(p2,pThis->tabText(*(int*)p1));
 		break;
 	}
-	case 365165: {
+	case 365153: {
 		*(void**)p2 = new QColor(pThis->tabTextColor(*(int*)p1));
 		break;
 	}
-	case 365166: {
+	case 365154: {
 		drvSetString(p2,pThis->tabToolTip(*(int*)p1));
 		break;
 	}
-	case 365167: {
+	case 365155: {
 		drvSetString(p2,pThis->tabWhatsThis(*(int*)p1));
 		break;
 	}
-	case 365168: {
+	case 365156: {
 		*(bool*)p1 = pThis->tabsClosable();
 		break;
 	}
-	case 365169: {
+	case 365157: {
 		*(bool*)p1 = pThis->usesScrollButtons();
-		break;
-	}
-	case 365170: {
-		pThis->wheelEvent((QWheelEvent*)(p1));
 		break;
 	}
 	default:
@@ -43320,217 +39243,185 @@ int drv_QTabWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	}
 	case 366108: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 366109: {
 		pThis->clear();
 		break;
 	}
-	case 366110: {
+	case 366109: {
 		*(void**)p1 = pThis->cornerWidget();
 		break;
 	}
-	case 366111: {
+	case 366110: {
 		*(void**)p2 = pThis->cornerWidget(*(Qt::Corner*)p1);
 		break;
 	}
-	case 366112: {
+	case 366111: {
 		*(int*)p1 = pThis->count();
 		break;
 	}
-	case 366113: {
+	case 366112: {
 		*(int*)p1 = pThis->currentIndex();
 		break;
 	}
-	case 366114: {
+	case 366113: {
 		*(void**)p1 = pThis->currentWidget();
 		break;
 	}
-	case 366115: {
+	case 366114: {
 		*(bool*)p1 = pThis->documentMode();
 		break;
 	}
-	case 366116: {
+	case 366115: {
 		*(Qt::TextElideMode*)p1 = pThis->elideMode();
 		break;
 	}
-	case 366117: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 366118: {
+	case 366116: {
 		*(void**)p1 = new QSize(pThis->iconSize());
 		break;
 	}
-	case 366119: {
+	case 366117: {
 		*(int*)p2 = pThis->indexOf((QWidget*)(p1));
 		break;
 	}
-	case 366120: {
+	case 366118: {
 		*(int*)p4 = pThis->insertTab(*(int*)p1,(QWidget*)(p2),drvGetStringHead(p3));
 		break;
 	}
-	case 366121: {
+	case 366119: {
 		if(p3==0)return -2;
 		*(int*)p5 = pThis->insertTab(*(int*)p1,(QWidget*)(p2),*(QIcon*)(p3),drvGetStringHead(p4));
 		break;
 	}
-	case 366122: {
+	case 366120: {
 		*(bool*)p1 = pThis->isMovable();
 		break;
 	}
-	case 366123: {
+	case 366121: {
 		*(bool*)p2 = pThis->isTabEnabled(*(int*)p1);
 		break;
 	}
-	case 366124: {
-		pThis->keyPressEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 366125: {
-		*(void**)p1 = new QSize(pThis->minimumSizeHint());
-		break;
-	}
-	case 366126: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 366127: {
+	case 366122: {
 		pThis->removeTab(*(int*)p1);
 		break;
 	}
-	case 366128: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 366129: {
+	case 366123: {
 		pThis->setCornerWidget((QWidget*)(p1));
 		break;
 	}
-	case 366130: {
+	case 366124: {
 		pThis->setCornerWidget((QWidget*)(p1),*(Qt::Corner*)p2);
 		break;
 	}
-	case 366131: {
+	case 366125: {
 		pThis->setCurrentIndex(*(int*)p1);
 		break;
 	}
-	case 366132: {
+	case 366126: {
 		pThis->setCurrentWidget((QWidget*)(p1));
 		break;
 	}
-	case 366133: {
+	case 366127: {
 		pThis->setDocumentMode(*(bool*)p1);
 		break;
 	}
-	case 366134: {
+	case 366128: {
 		pThis->setElideMode(*(Qt::TextElideMode*)p1);
 		break;
 	}
-	case 366135: {
+	case 366129: {
 		if(p1==0)return -2;
 		pThis->setIconSize(*(QSize*)(p1));
 		break;
 	}
-	case 366136: {
+	case 366130: {
 		pThis->setMovable(*(bool*)p1);
 		break;
 	}
-	case 366137: {
+	case 366131: {
 		pThis->setTabBar((QTabBar*)(p1));
 		break;
 	}
-	case 366138: {
+	case 366132: {
 		pThis->setTabEnabled(*(int*)p1,*(bool*)p2);
 		break;
 	}
-	case 366139: {
+	case 366133: {
 		if(p2==0)return -2;
 		pThis->setTabIcon(*(int*)p1,*(QIcon*)(p2));
 		break;
 	}
-	case 366140: {
+	case 366134: {
 		pThis->setTabPosition(*(QTabWidget::TabPosition*)p1);
 		break;
 	}
-	case 366141: {
+	case 366135: {
 		pThis->setTabShape(*(QTabWidget::TabShape*)p1);
 		break;
 	}
-	case 366142: {
+	case 366136: {
 		pThis->setTabText(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
-	case 366143: {
+	case 366137: {
 		pThis->setTabToolTip(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
-	case 366144: {
+	case 366138: {
 		pThis->setTabWhatsThis(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
-	case 366145: {
+	case 366139: {
 		pThis->setTabsClosable(*(bool*)p1);
 		break;
 	}
-	case 366146: {
+	case 366140: {
 		pThis->setUsesScrollButtons(*(bool*)p1);
 		break;
 	}
-	case 366147: {
-		pThis->showEvent((QShowEvent*)(p1));
-		break;
-	}
-	case 366148: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 366149: {
+	case 366141: {
 		*(void**)p1 = pThis->tabBar();
 		break;
 	}
-	case 366150: {
+	case 366142: {
 		*(void**)p2 = new QIcon(pThis->tabIcon(*(int*)p1));
 		break;
 	}
-	case 366151: {
+	case 366143: {
 		pThis->tabInserted(*(int*)p1);
 		break;
 	}
-	case 366152: {
+	case 366144: {
 		*(QTabWidget::TabPosition*)p1 = pThis->tabPosition();
 		break;
 	}
-	case 366153: {
+	case 366145: {
 		pThis->tabRemoved(*(int*)p1);
 		break;
 	}
-	case 366154: {
+	case 366146: {
 		*(QTabWidget::TabShape*)p1 = pThis->tabShape();
 		break;
 	}
-	case 366155: {
+	case 366147: {
 		drvSetString(p2,pThis->tabText(*(int*)p1));
 		break;
 	}
-	case 366156: {
+	case 366148: {
 		drvSetString(p2,pThis->tabToolTip(*(int*)p1));
 		break;
 	}
-	case 366157: {
+	case 366149: {
 		drvSetString(p2,pThis->tabWhatsThis(*(int*)p1));
 		break;
 	}
-	case 366158: {
+	case 366150: {
 		*(bool*)p1 = pThis->tabsClosable();
 		break;
 	}
-	case 366159: {
+	case 366151: {
 		*(bool*)p1 = pThis->usesScrollButtons();
 		break;
 	}
-	case 366160: {
+	case 366152: {
 		*(void**)p2 = pThis->widget(*(int*)p1);
 		break;
 	}
@@ -43590,270 +39481,162 @@ int drv_QTableView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 		break;
 	}
 	case 367112: {
-		if(p1==0)return -2;
-	if(p2==0)return -2;
-		pThis->currentChanged(*(QModelIndex*)(p1),*(QModelIndex*)(p2));
-		break;
-	}
-	case 367113: {
 		*(Qt::PenStyle*)p1 = pThis->gridStyle();
 		break;
 	}
-	case 367114: {
+	case 367113: {
 		pThis->hideColumn(*(int*)p1);
 		break;
 	}
-	case 367115: {
+	case 367114: {
 		pThis->hideRow(*(int*)p1);
 		break;
 	}
-	case 367116: {
+	case 367115: {
 		*(void**)p1 = pThis->horizontalHeader();
 		break;
 	}
-	case 367117: {
-		*(int*)p1 = pThis->horizontalOffset();
-		break;
-	}
-	case 367118: {
-		pThis->horizontalScrollbarAction(*(int*)p1);
-		break;
-	}
-	case 367119: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QModelIndex(pThis->indexAt(*(QPoint*)(p1)));
-		break;
-	}
-	case 367120: {
+	case 367116: {
 		*(bool*)p2 = pThis->isColumnHidden(*(int*)p1);
 		break;
 	}
-	case 367121: {
+	case 367117: {
 		*(bool*)p1 = pThis->isCornerButtonEnabled();
 		break;
 	}
-	case 367122: {
-		if(p1==0)return -2;
-		*(bool*)p2 = pThis->isIndexHidden(*(QModelIndex*)(p1));
-		break;
-	}
-	case 367123: {
+	case 367118: {
 		*(bool*)p2 = pThis->isRowHidden(*(int*)p1);
 		break;
 	}
-	case 367124: {
+	case 367119: {
 		*(bool*)p1 = pThis->isSortingEnabled();
 		break;
 	}
-	case 367125: {
-		*(void**)p3 = new QModelIndex(pThis->moveCursor(*(QAbstractItemView::CursorAction*)p1,*(QFlags<Qt::KeyboardModifier>*)p2));
-		break;
-	}
-	case 367126: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 367127: {
+	case 367120: {
 		pThis->resizeColumnToContents(*(int*)p1);
 		break;
 	}
-	case 367128: {
+	case 367121: {
 		pThis->resizeColumnsToContents();
 		break;
 	}
-	case 367129: {
+	case 367122: {
 		pThis->resizeRowToContents(*(int*)p1);
 		break;
 	}
-	case 367130: {
+	case 367123: {
 		pThis->resizeRowsToContents();
 		break;
 	}
-	case 367131: {
+	case 367124: {
 		*(int*)p2 = pThis->rowAt(*(int*)p1);
 		break;
 	}
-	case 367132: {
+	case 367125: {
 		pThis->rowCountChanged(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 367133: {
+	case 367126: {
 		*(int*)p2 = pThis->rowHeight(*(int*)p1);
 		break;
 	}
-	case 367134: {
+	case 367127: {
 		pThis->rowMoved(*(int*)p1,*(int*)p2,*(int*)p3);
 		break;
 	}
-	case 367135: {
+	case 367128: {
 		pThis->rowResized(*(int*)p1,*(int*)p2,*(int*)p3);
 		break;
 	}
-	case 367136: {
+	case 367129: {
 		*(int*)p3 = pThis->rowSpan(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 367137: {
+	case 367130: {
 		*(int*)p2 = pThis->rowViewportPosition(*(int*)p1);
 		break;
 	}
-	case 367138: {
-		pThis->scrollContentsBy(*(int*)p1,*(int*)p2);
-		break;
-	}
-	case 367139: {
-		if(p1==0)return -2;
-		pThis->scrollTo(*(QModelIndex*)(p1));
-		break;
-	}
-	case 367140: {
-		if(p1==0)return -2;
-		pThis->scrollTo(*(QModelIndex*)(p1),*(QAbstractItemView::ScrollHint*)p2);
-		break;
-	}
-	case 367141: {
+	case 367131: {
 		pThis->selectColumn(*(int*)p1);
 		break;
 	}
-	case 367142: {
+	case 367132: {
 		pThis->selectRow(*(int*)p1);
 		break;
 	}
-	case 367143: {
-		drvSetListPtr<QModelIndex>(p1,80000,pThis->selectedIndexes());
-		break;
-	}
-	case 367144: {
-		if(p1==0)return -2;
-	if(p2==0)return -2;
-		pThis->selectionChanged(*(QItemSelection*)(p1),*(QItemSelection*)(p2));
-		break;
-	}
-	case 367145: {
+	case 367133: {
 		pThis->setColumnHidden(*(int*)p1,*(bool*)p2);
 		break;
 	}
-	case 367146: {
+	case 367134: {
 		pThis->setColumnWidth(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 367147: {
+	case 367135: {
 		pThis->setCornerButtonEnabled(*(bool*)p1);
 		break;
 	}
-	case 367148: {
+	case 367136: {
 		pThis->setGridStyle(*(Qt::PenStyle*)p1);
 		break;
 	}
-	case 367149: {
+	case 367137: {
 		pThis->setHorizontalHeader((QHeaderView*)(p1));
 		break;
 	}
-	case 367150: {
-		pThis->setModel((QAbstractItemModel*)(p1));
-		break;
-	}
-	case 367151: {
-		if(p1==0)return -2;
-		pThis->setRootIndex(*(QModelIndex*)(p1));
-		break;
-	}
-	case 367152: {
+	case 367138: {
 		pThis->setRowHeight(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 367153: {
+	case 367139: {
 		pThis->setRowHidden(*(int*)p1,*(bool*)p2);
 		break;
 	}
-	case 367154: {
-		if(p1==0)return -2;
-		pThis->setSelection(*(QRect*)(p1),*(QFlags<QItemSelectionModel::SelectionFlag>*)p2);
-		break;
-	}
-	case 367155: {
-		pThis->setSelectionModel((QItemSelectionModel*)(p1));
-		break;
-	}
-	case 367156: {
+	case 367140: {
 		pThis->setShowGrid(*(bool*)p1);
 		break;
 	}
-	case 367157: {
+	case 367141: {
 		pThis->setSortingEnabled(*(bool*)p1);
 		break;
 	}
-	case 367158: {
+	case 367142: {
 		pThis->setSpan(*(int*)p1,*(int*)p2,*(int*)p3,*(int*)p4);
 		break;
 	}
-	case 367159: {
+	case 367143: {
 		pThis->setVerticalHeader((QHeaderView*)(p1));
 		break;
 	}
-	case 367160: {
+	case 367144: {
 		pThis->setWordWrap(*(bool*)p1);
 		break;
 	}
-	case 367161: {
+	case 367145: {
 		pThis->showColumn(*(int*)p1);
 		break;
 	}
-	case 367162: {
+	case 367146: {
 		*(bool*)p1 = pThis->showGrid();
 		break;
 	}
-	case 367163: {
+	case 367147: {
 		pThis->showRow(*(int*)p1);
 		break;
 	}
-	case 367164: {
-		*(int*)p2 = pThis->sizeHintForColumn(*(int*)p1);
-		break;
-	}
-	case 367165: {
-		*(int*)p2 = pThis->sizeHintForRow(*(int*)p1);
-		break;
-	}
-	case 367166: {
+	case 367148: {
 		pThis->sortByColumn(*(int*)p1);
 		break;
 	}
-	case 367167: {
+	case 367149: {
 		pThis->sortByColumn(*(int*)p1,*(Qt::SortOrder*)p2);
 		break;
 	}
-	case 367168: {
-		pThis->timerEvent((QTimerEvent*)(p1));
-		break;
-	}
-	case 367169: {
-		pThis->updateGeometries();
-		break;
-	}
-	case 367170: {
+	case 367150: {
 		*(void**)p1 = pThis->verticalHeader();
 		break;
 	}
-	case 367171: {
-		*(int*)p1 = pThis->verticalOffset();
-		break;
-	}
-	case 367172: {
-		pThis->verticalScrollbarAction(*(int*)p1);
-		break;
-	}
-	case 367173: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QRect(pThis->visualRect(*(QModelIndex*)(p1)));
-		break;
-	}
-	case 367174: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QRegion(pThis->visualRegionForSelection(*(QItemSelection*)(p1)));
-		break;
-	}
-	case 367175: {
+	case 367151: {
 		*(bool*)p1 = pThis->wordWrap();
 		break;
 	}
@@ -44026,225 +39809,217 @@ int drv_QTableWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 368129: {
-		pThis->dropEvent((QDropEvent*)(p1));
-		break;
-	}
-	case 368130: {
 		*(bool*)p5 = pThis->dropMimeData(*(int*)p1,*(int*)p2,(QMimeData*)(p3),*(Qt::DropAction*)p4);
 		break;
 	}
-	case 368131: {
+	case 368130: {
 		pThis->editItem((QTableWidgetItem*)(p1));
 		break;
 	}
-	case 368132: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 368133: {
+	case 368131: {
 		drvSetListObj<QTableWidgetItem*>(p3,136000,pThis->findItems(drvGetStringHead(p1),*(QFlags<Qt::MatchFlag>*)p2));
 		break;
 	}
-	case 368134: {
+	case 368132: {
 		*(void**)p2 = pThis->horizontalHeaderItem(*(int*)p1);
 		break;
 	}
-	case 368135: {
+	case 368133: {
 		*(void**)p2 = new QModelIndex(pThis->indexFromItem((QTableWidgetItem*)(p1)));
 		break;
 	}
-	case 368136: {
+	case 368134: {
 		pThis->insertColumn(*(int*)p1);
 		break;
 	}
-	case 368137: {
+	case 368135: {
 		pThis->insertRow(*(int*)p1);
 		break;
 	}
-	case 368138: {
+	case 368136: {
 		*(bool*)p2 = pThis->isItemSelected((QTableWidgetItem*)(p1));
 		break;
 	}
-	case 368139: {
+	case 368137: {
 		*(bool*)p1 = pThis->isSortingEnabled();
 		break;
 	}
-	case 368140: {
+	case 368138: {
 		*(void**)p3 = pThis->item(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 368141: {
+	case 368139: {
 		if(p1==0)return -2;
 		*(void**)p2 = pThis->itemAt(*(QPoint*)(p1));
 		break;
 	}
-	case 368142: {
+	case 368140: {
 		*(void**)p3 = pThis->itemAt(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 368143: {
+	case 368141: {
 		if(p1==0)return -2;
 		*(void**)p2 = pThis->itemFromIndex(*(QModelIndex*)(p1));
 		break;
 	}
-	case 368144: {
+	case 368142: {
 		*(const void**)p1 = pThis->itemPrototype();
 		break;
 	}
-	case 368145: {
+	case 368143: {
 		drvSetListObj<QTableWidgetItem*>(p2,136000,pThis->items((QMimeData*)(p1)));
 		break;
 	}
-	case 368146: {
+	case 368144: {
 		*(void**)p2 = pThis->mimeData(drvGetObjectArrayHeadT<QTableWidgetItem*>(p1));
 		break;
 	}
-	case 368147: {
+	case 368145: {
 		drvSetStringArray(p1,pThis->mimeTypes());
 		break;
 	}
-	case 368148: {
+	case 368146: {
 		pThis->openPersistentEditor((QTableWidgetItem*)(p1));
 		break;
 	}
-	case 368149: {
+	case 368147: {
 		pThis->removeCellWidget(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 368150: {
+	case 368148: {
 		pThis->removeColumn(*(int*)p1);
 		break;
 	}
-	case 368151: {
+	case 368149: {
 		pThis->removeRow(*(int*)p1);
 		break;
 	}
-	case 368152: {
+	case 368150: {
 		*(int*)p2 = pThis->row((QTableWidgetItem*)(p1));
 		break;
 	}
-	case 368153: {
+	case 368151: {
 		*(int*)p1 = pThis->rowCount();
 		break;
 	}
-	case 368154: {
+	case 368152: {
 		pThis->scrollToItem((QTableWidgetItem*)(p1));
 		break;
 	}
-	case 368155: {
+	case 368153: {
 		pThis->scrollToItem((QTableWidgetItem*)(p1),*(QAbstractItemView::ScrollHint*)p2);
 		break;
 	}
-	case 368156: {
+	case 368154: {
 		drvSetListObj<QTableWidgetItem*>(p1,136000,pThis->selectedItems());
 		break;
 	}
-	case 368157: {
+	case 368155: {
 		drvSetListPtr<QTableWidgetSelectionRange>(p1,137000,pThis->selectedRanges());
 		break;
 	}
-	case 368158: {
+	case 368156: {
 		pThis->setCellWidget(*(int*)p1,*(int*)p2,(QWidget*)(p3));
 		break;
 	}
-	case 368159: {
+	case 368157: {
 		pThis->setColumnCount(*(int*)p1);
 		break;
 	}
-	case 368160: {
+	case 368158: {
 		pThis->setCurrentCell(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 368161: {
+	case 368159: {
 		pThis->setCurrentCell(*(int*)p1,*(int*)p2,*(QFlags<QItemSelectionModel::SelectionFlag>*)p3);
 		break;
 	}
-	case 368162: {
+	case 368160: {
 		pThis->setCurrentItem((QTableWidgetItem*)(p1));
 		break;
 	}
-	case 368163: {
+	case 368161: {
 		pThis->setCurrentItem((QTableWidgetItem*)(p1),*(QFlags<QItemSelectionModel::SelectionFlag>*)p2);
 		break;
 	}
-	case 368164: {
+	case 368162: {
 		pThis->setHorizontalHeaderItem(*(int*)p1,(QTableWidgetItem*)(p2));
 		break;
 	}
-	case 368165: {
+	case 368163: {
 		pThis->setHorizontalHeaderLabels(drvGetStringArray(p1));
 		break;
 	}
-	case 368166: {
+	case 368164: {
 		pThis->setItem(*(int*)p1,*(int*)p2,(QTableWidgetItem*)(p3));
 		break;
 	}
-	case 368167: {
+	case 368165: {
 		pThis->setItemPrototype((QTableWidgetItem*)(p1));
 		break;
 	}
-	case 368168: {
+	case 368166: {
 		pThis->setItemSelected((QTableWidgetItem*)(p1),*(bool*)p2);
 		break;
 	}
-	case 368169: {
+	case 368167: {
 		if(p1==0)return -2;
 		pThis->setRangeSelected(*(QTableWidgetSelectionRange*)(p1),*(bool*)p2);
 		break;
 	}
-	case 368170: {
+	case 368168: {
 		pThis->setRowCount(*(int*)p1);
 		break;
 	}
-	case 368171: {
+	case 368169: {
 		pThis->setSortingEnabled(*(bool*)p1);
 		break;
 	}
-	case 368172: {
+	case 368170: {
 		pThis->setVerticalHeaderItem(*(int*)p1,(QTableWidgetItem*)(p2));
 		break;
 	}
-	case 368173: {
+	case 368171: {
 		pThis->setVerticalHeaderLabels(drvGetStringArray(p1));
 		break;
 	}
-	case 368174: {
+	case 368172: {
 		pThis->sortItems(*(int*)p1);
 		break;
 	}
-	case 368175: {
+	case 368173: {
 		pThis->sortItems(*(int*)p1,*(Qt::SortOrder*)p2);
 		break;
 	}
-	case 368176: {
+	case 368174: {
 		*(QFlags<Qt::DropAction>*)p1 = pThis->supportedDropActions();
 		break;
 	}
-	case 368177: {
+	case 368175: {
 		*(void**)p2 = pThis->takeHorizontalHeaderItem(*(int*)p1);
 		break;
 	}
-	case 368178: {
+	case 368176: {
 		*(void**)p3 = pThis->takeItem(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 368179: {
+	case 368177: {
 		*(void**)p2 = pThis->takeVerticalHeaderItem(*(int*)p1);
 		break;
 	}
-	case 368180: {
+	case 368178: {
 		*(void**)p2 = pThis->verticalHeaderItem(*(int*)p1);
 		break;
 	}
-	case 368181: {
+	case 368179: {
 		*(int*)p2 = pThis->visualColumn(*(int*)p1);
 		break;
 	}
-	case 368182: {
+	case 368180: {
 		*(void**)p2 = new QRect(pThis->visualItemRect((QTableWidgetItem*)(p1)));
 		break;
 	}
-	case 368183: {
+	case 368181: {
 		*(int*)p2 = pThis->visualRow(*(int*)p1);
 		break;
 	}
@@ -44377,14 +40152,10 @@ int drv_QTemporaryFile(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 		break;
 	}
 	case 371112: {
-		*(bool*)p2 = pThis->open(*(QFlags<QIODevice::OpenModeFlag>*)p1);
-		break;
-	}
-	case 371113: {
 		pThis->setAutoRemove(*(bool*)p1);
 		break;
 	}
-	case 371114: {
+	case 371113: {
 		pThis->setFileTemplate(drvGetStringHead(p1));
 		break;
 	}
@@ -44503,104 +40274,67 @@ int drv_QTextBrowser(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		break;
 	}
 	case 373114: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 373115: {
-		*(bool*)p2 = pThis->focusNextPrevChild(*(bool*)p1);
-		break;
-	}
-	case 373116: {
-		pThis->focusOutEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 373117: {
 		pThis->forward();
 		break;
 	}
-	case 373118: {
+	case 373115: {
 		*(int*)p1 = pThis->forwardHistoryCount();
 		break;
 	}
-	case 373119: {
+	case 373116: {
 		drvSetString(p2,pThis->historyTitle(*(int*)p1));
 		break;
 	}
-	case 373120: {
+	case 373117: {
 		*(void**)p2 = new QUrl(pThis->historyUrl(*(int*)p1));
 		break;
 	}
-	case 373121: {
+	case 373118: {
 		pThis->home();
 		break;
 	}
-	case 373122: {
+	case 373119: {
 		*(bool*)p1 = pThis->isBackwardAvailable();
 		break;
 	}
-	case 373123: {
+	case 373120: {
 		*(bool*)p1 = pThis->isForwardAvailable();
 		break;
 	}
-	case 373124: {
-		pThis->keyPressEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 373125: {
-		if(p2==0)return -2;
-		*(void**)p3 = new QVariant(pThis->loadResource(*(int*)p1,*(QUrl*)(p2)));
-		break;
-	}
-	case 373126: {
-		pThis->mouseMoveEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 373127: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 373128: {
-		pThis->mouseReleaseEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 373129: {
+	case 373121: {
 		*(bool*)p1 = pThis->openExternalLinks();
 		break;
 	}
-	case 373130: {
+	case 373122: {
 		*(bool*)p1 = pThis->openLinks();
 		break;
 	}
-	case 373131: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 373132: {
+	case 373123: {
 		pThis->reload();
 		break;
 	}
-	case 373133: {
+	case 373124: {
 		drvSetStringArray(p1,pThis->searchPaths());
 		break;
 	}
-	case 373134: {
+	case 373125: {
 		pThis->setOpenExternalLinks(*(bool*)p1);
 		break;
 	}
-	case 373135: {
+	case 373126: {
 		pThis->setOpenLinks(*(bool*)p1);
 		break;
 	}
-	case 373136: {
+	case 373127: {
 		pThis->setSearchPaths(drvGetStringArray(p1));
 		break;
 	}
-	case 373137: {
+	case 373128: {
 		if(p1==0)return -2;
 		pThis->setSource(*(QUrl*)(p1));
 		break;
 	}
-	case 373138: {
+	case 373129: {
 		*(void**)p1 = new QUrl(pThis->source());
 		break;
 	}
@@ -45138,440 +40872,344 @@ int drv_QTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 375119: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 375120: {
 		pThis->clear();
 		break;
 	}
-	case 375121: {
-		pThis->contextMenuEvent((QContextMenuEvent*)(p1));
-		break;
-	}
-	case 375122: {
+	case 375120: {
 		pThis->copy();
 		break;
 	}
-	case 375123: {
+	case 375121: {
 		*(void**)p1 = pThis->createMimeDataFromSelection();
 		break;
 	}
-	case 375124: {
+	case 375122: {
 		*(void**)p1 = pThis->createStandardContextMenu();
 		break;
 	}
-	case 375125: {
+	case 375123: {
 		if(p1==0)return -2;
 		*(void**)p2 = pThis->createStandardContextMenu(*(QPoint*)(p1));
 		break;
 	}
-	case 375126: {
+	case 375124: {
 		*(void**)p1 = new QTextCharFormat(pThis->currentCharFormat());
 		break;
 	}
-	case 375127: {
+	case 375125: {
 		*(void**)p1 = new QFont(pThis->currentFont());
 		break;
 	}
-	case 375128: {
+	case 375126: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QTextCursor(pThis->cursorForPosition(*(QPoint*)(p1)));
 		break;
 	}
-	case 375129: {
+	case 375127: {
 		*(void**)p1 = new QRect(pThis->cursorRect());
 		break;
 	}
-	case 375130: {
+	case 375128: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QRect(pThis->cursorRect(*(QTextCursor*)(p1)));
 		break;
 	}
-	case 375131: {
+	case 375129: {
 		*(int*)p1 = pThis->cursorWidth();
 		break;
 	}
-	case 375132: {
+	case 375130: {
 		pThis->cut();
 		break;
 	}
-	case 375133: {
+	case 375131: {
 		*(void**)p1 = pThis->document();
 		break;
 	}
-	case 375134: {
+	case 375132: {
 		drvSetString(p1,pThis->documentTitle());
 		break;
 	}
-	case 375135: {
-		pThis->dragEnterEvent((QDragEnterEvent*)(p1));
-		break;
-	}
-	case 375136: {
-		pThis->dragLeaveEvent((QDragLeaveEvent*)(p1));
-		break;
-	}
-	case 375137: {
-		pThis->dragMoveEvent((QDragMoveEvent*)(p1));
-		break;
-	}
-	case 375138: {
-		pThis->dropEvent((QDropEvent*)(p1));
-		break;
-	}
-	case 375139: {
+	case 375133: {
 		pThis->ensureCursorVisible();
 		break;
 	}
-	case 375140: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 375141: {
+	case 375134: {
 		drvSetListPtr<QTextEdit::ExtraSelection>(p1,151000,pThis->extraSelections());
 		break;
 	}
-	case 375142: {
+	case 375135: {
 		*(bool*)p2 = pThis->find(drvGetStringHead(p1));
 		break;
 	}
-	case 375143: {
+	case 375136: {
 		*(bool*)p3 = pThis->find(drvGetStringHead(p1),*(QFlags<QTextDocument::FindFlag>*)p2);
 		break;
 	}
-	case 375144: {
-		pThis->focusInEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 375145: {
-		*(bool*)p2 = pThis->focusNextPrevChild(*(bool*)p1);
-		break;
-	}
-	case 375146: {
-		pThis->focusOutEvent((QFocusEvent*)(p1));
-		break;
-	}
-	case 375147: {
+	case 375137: {
 		drvSetString(p1,pThis->fontFamily());
 		break;
 	}
-	case 375148: {
+	case 375138: {
 		*(bool*)p1 = pThis->fontItalic();
 		break;
 	}
-	case 375149: {
+	case 375139: {
 		*(double*)p1 = pThis->fontPointSize();
 		break;
 	}
-	case 375150: {
+	case 375140: {
 		*(bool*)p1 = pThis->fontUnderline();
 		break;
 	}
-	case 375151: {
+	case 375141: {
 		*(int*)p1 = pThis->fontWeight();
 		break;
 	}
-	case 375152: {
-		pThis->inputMethodEvent((QInputMethodEvent*)(p1));
-		break;
-	}
-	case 375153: {
-		*(void**)p2 = new QVariant(pThis->inputMethodQuery(*(Qt::InputMethodQuery*)p1));
-		break;
-	}
-	case 375154: {
+	case 375142: {
 		pThis->insertFromMimeData((QMimeData*)(p1));
 		break;
 	}
-	case 375155: {
+	case 375143: {
 		pThis->insertHtml(drvGetStringHead(p1));
 		break;
 	}
-	case 375156: {
+	case 375144: {
 		pThis->insertPlainText(drvGetStringHead(p1));
 		break;
 	}
-	case 375157: {
+	case 375145: {
 		*(bool*)p1 = pThis->isReadOnly();
 		break;
 	}
-	case 375158: {
+	case 375146: {
 		*(bool*)p1 = pThis->isUndoRedoEnabled();
 		break;
 	}
-	case 375159: {
-		pThis->keyPressEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 375160: {
-		pThis->keyReleaseEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 375161: {
+	case 375147: {
 		*(int*)p1 = pThis->lineWrapColumnOrWidth();
 		break;
 	}
-	case 375162: {
+	case 375148: {
 		*(QTextEdit::LineWrapMode*)p1 = pThis->lineWrapMode();
 		break;
 	}
-	case 375163: {
+	case 375149: {
 		if(p2==0)return -2;
 		*(void**)p3 = new QVariant(pThis->loadResource(*(int*)p1,*(QUrl*)(p2)));
 		break;
 	}
-	case 375164: {
+	case 375150: {
 		if(p1==0)return -2;
 		pThis->mergeCurrentCharFormat(*(QTextCharFormat*)(p1));
 		break;
 	}
-	case 375165: {
-		pThis->mouseDoubleClickEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 375166: {
-		pThis->mouseMoveEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 375167: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 375168: {
-		pThis->mouseReleaseEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 375169: {
+	case 375151: {
 		pThis->moveCursor(*(QTextCursor::MoveOperation*)p1);
 		break;
 	}
-	case 375170: {
+	case 375152: {
 		pThis->moveCursor(*(QTextCursor::MoveOperation*)p1,*(QTextCursor::MoveMode*)p2);
 		break;
 	}
-	case 375171: {
+	case 375153: {
 		*(bool*)p1 = pThis->overwriteMode();
 		break;
 	}
-	case 375172: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 375173: {
+	case 375154: {
 		pThis->paste();
 		break;
 	}
-	case 375174: {
+	case 375155: {
 		pThis->print((QPrinter*)(p1));
 		break;
 	}
-	case 375175: {
+	case 375156: {
 		pThis->redo();
 		break;
 	}
-	case 375176: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 375177: {
-		pThis->scrollContentsBy(*(int*)p1,*(int*)p2);
-		break;
-	}
-	case 375178: {
+	case 375157: {
 		pThis->scrollToAnchor(drvGetStringHead(p1));
 		break;
 	}
-	case 375179: {
+	case 375158: {
 		pThis->selectAll();
 		break;
 	}
-	case 375180: {
+	case 375159: {
 		pThis->setAcceptRichText(*(bool*)p1);
 		break;
 	}
-	case 375181: {
+	case 375160: {
 		pThis->setAlignment(*(QFlags<Qt::AlignmentFlag>*)p1);
 		break;
 	}
-	case 375182: {
+	case 375161: {
 		pThis->setAutoFormatting(*(QFlags<QTextEdit::AutoFormattingFlag>*)p1);
 		break;
 	}
-	case 375183: {
+	case 375162: {
 		if(p1==0)return -2;
 		pThis->setCurrentCharFormat(*(QTextCharFormat*)(p1));
 		break;
 	}
-	case 375184: {
+	case 375163: {
 		if(p1==0)return -2;
 		pThis->setCurrentFont(*(QFont*)(p1));
 		break;
 	}
-	case 375185: {
+	case 375164: {
 		pThis->setCursorWidth(*(int*)p1);
 		break;
 	}
-	case 375186: {
+	case 375165: {
 		pThis->setDocument((QTextDocument*)(p1));
 		break;
 	}
-	case 375187: {
+	case 375166: {
 		pThis->setDocumentTitle(drvGetStringHead(p1));
 		break;
 	}
-	case 375188: {
+	case 375167: {
 		pThis->setExtraSelections(drvGetNoObjectArrayHeadT<QTextEdit::ExtraSelection>(p1));
 		break;
 	}
-	case 375189: {
+	case 375168: {
 		pThis->setFontFamily(drvGetStringHead(p1));
 		break;
 	}
-	case 375190: {
+	case 375169: {
 		pThis->setFontItalic(*(bool*)p1);
 		break;
 	}
-	case 375191: {
+	case 375170: {
 		pThis->setFontPointSize(*(double*)p1);
 		break;
 	}
-	case 375192: {
+	case 375171: {
 		pThis->setFontUnderline(*(bool*)p1);
 		break;
 	}
-	case 375193: {
+	case 375172: {
 		pThis->setFontWeight(*(int*)p1);
 		break;
 	}
-	case 375194: {
+	case 375173: {
 		pThis->setHtml(drvGetStringHead(p1));
 		break;
 	}
-	case 375195: {
+	case 375174: {
 		pThis->setLineWrapColumnOrWidth(*(int*)p1);
 		break;
 	}
-	case 375196: {
+	case 375175: {
 		pThis->setLineWrapMode(*(QTextEdit::LineWrapMode*)p1);
 		break;
 	}
-	case 375197: {
+	case 375176: {
 		pThis->setOverwriteMode(*(bool*)p1);
 		break;
 	}
-	case 375198: {
+	case 375177: {
 		pThis->setPlainText(drvGetStringHead(p1));
 		break;
 	}
-	case 375199: {
+	case 375178: {
 		pThis->setReadOnly(*(bool*)p1);
 		break;
 	}
-	case 375200: {
+	case 375179: {
 		pThis->setTabChangesFocus(*(bool*)p1);
 		break;
 	}
-	case 375201: {
+	case 375180: {
 		pThis->setTabStopWidth(*(int*)p1);
 		break;
 	}
-	case 375202: {
+	case 375181: {
 		pThis->setText(drvGetStringHead(p1));
 		break;
 	}
-	case 375203: {
+	case 375182: {
 		if(p1==0)return -2;
 		pThis->setTextBackgroundColor(*(QColor*)(p1));
 		break;
 	}
-	case 375204: {
+	case 375183: {
 		if(p1==0)return -2;
 		pThis->setTextColor(*(QColor*)(p1));
 		break;
 	}
-	case 375205: {
+	case 375184: {
 		if(p1==0)return -2;
 		pThis->setTextCursor(*(QTextCursor*)(p1));
 		break;
 	}
-	case 375206: {
+	case 375185: {
 		pThis->setTextInteractionFlags(*(QFlags<Qt::TextInteractionFlag>*)p1);
 		break;
 	}
-	case 375207: {
+	case 375186: {
 		pThis->setUndoRedoEnabled(*(bool*)p1);
 		break;
 	}
-	case 375208: {
+	case 375187: {
 		pThis->setWordWrapMode(*(QTextOption::WrapMode*)p1);
 		break;
 	}
-	case 375209: {
-		pThis->showEvent((QShowEvent*)(p1));
-		break;
-	}
-	case 375210: {
+	case 375188: {
 		*(bool*)p1 = pThis->tabChangesFocus();
 		break;
 	}
-	case 375211: {
+	case 375189: {
 		*(int*)p1 = pThis->tabStopWidth();
 		break;
 	}
-	case 375212: {
+	case 375190: {
 		*(void**)p1 = new QColor(pThis->textBackgroundColor());
 		break;
 	}
-	case 375213: {
+	case 375191: {
 		*(void**)p1 = new QColor(pThis->textColor());
 		break;
 	}
-	case 375214: {
+	case 375192: {
 		*(void**)p1 = new QTextCursor(pThis->textCursor());
 		break;
 	}
-	case 375215: {
+	case 375193: {
 		*(QFlags<Qt::TextInteractionFlag>*)p1 = pThis->textInteractionFlags();
 		break;
 	}
-	case 375216: {
-		pThis->timerEvent((QTimerEvent*)(p1));
-		break;
-	}
-	case 375217: {
+	case 375194: {
 		drvSetString(p1,pThis->toHtml());
 		break;
 	}
-	case 375218: {
+	case 375195: {
 		drvSetString(p1,pThis->toPlainText());
 		break;
 	}
-	case 375219: {
+	case 375196: {
 		pThis->undo();
 		break;
 	}
-	case 375220: {
-		pThis->wheelEvent((QWheelEvent*)(p1));
-		break;
-	}
-	case 375221: {
+	case 375197: {
 		*(QTextOption::WrapMode*)p1 = pThis->wordWrapMode();
 		break;
 	}
-	case 375222: {
+	case 375198: {
 		pThis->zoomIn();
 		break;
 	}
-	case 375223: {
+	case 375199: {
 		pThis->zoomIn(*(int*)p1);
 		break;
 	}
-	case 375224: {
+	case 375200: {
 		pThis->zoomOut();
 		break;
 	}
-	case 375225: {
+	case 375201: {
 		pThis->zoomOut(*(int*)p1);
 		break;
 	}
@@ -46016,18 +41654,14 @@ int drv_QTimeLine(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 381134: {
-		pThis->timerEvent((QTimerEvent*)(p1));
-		break;
-	}
-	case 381135: {
 		pThis->toggleDirection();
 		break;
 	}
-	case 381136: {
+	case 381135: {
 		*(int*)p1 = pThis->updateInterval();
 		break;
 	}
-	case 381137: {
+	case 381136: {
 		*(double*)p2 = pThis->valueForTime(*(int*)p1);
 		break;
 	}
@@ -46098,10 +41732,6 @@ int drv_QTimer(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 		break;
 	}
 	case 382114: {
-		pThis->timerEvent((QTimerEvent*)(p1));
-		break;
-	}
-	case 382115: {
 		*(int*)p1 = pThis->timerId();
 		break;
 	}
@@ -46198,137 +41828,113 @@ int drv_QToolBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 383115: {
-		pThis->actionEvent((QActionEvent*)(p1));
-		break;
-	}
-	case 383116: {
 		*(void**)p2 = new QRect(pThis->actionGeometry((QAction*)(p1)));
 		break;
 	}
-	case 383117: {
+	case 383116: {
 		pThis->addAction((QAction*)(p1));
 		break;
 	}
-	case 383118: {
+	case 383117: {
 		*(void**)p2 = pThis->addAction(drvGetStringHead(p1));
 		break;
 	}
-	case 383119: {
+	case 383118: {
 		if(p1==0)return -2;
 		*(void**)p3 = pThis->addAction(*(QIcon*)(p1),drvGetStringHead(p2));
 		break;
 	}
-	case 383120: {
+	case 383119: {
 		*(void**)p4 = pThis->addAction(drvGetStringHead(p1),(QObject*)(p2),drvGet_const_char(p3));
 		break;
 	}
-	case 383121: {
+	case 383120: {
 		if(p1==0)return -2;
 		*(void**)p5 = pThis->addAction(*(QIcon*)(p1),drvGetStringHead(p2),(QObject*)(p3),drvGet_const_char(p4));
 		break;
 	}
-	case 383122: {
+	case 383121: {
 		*(void**)p1 = pThis->addSeparator();
 		break;
 	}
-	case 383123: {
+	case 383122: {
 		*(void**)p2 = pThis->addWidget((QWidget*)(p1));
 		break;
 	}
-	case 383124: {
+	case 383123: {
 		*(QFlags<Qt::ToolBarArea>*)p1 = pThis->allowedAreas();
 		break;
 	}
-	case 383125: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 383126: {
-		pThis->childEvent((QChildEvent*)(p1));
-		break;
-	}
-	case 383127: {
+	case 383124: {
 		pThis->clear();
 		break;
 	}
-	case 383128: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 383129: {
+	case 383125: {
 		*(void**)p1 = new QSize(pThis->iconSize());
 		break;
 	}
-	case 383130: {
+	case 383126: {
 		*(void**)p2 = pThis->insertSeparator((QAction*)(p1));
 		break;
 	}
-	case 383131: {
+	case 383127: {
 		*(void**)p3 = pThis->insertWidget((QAction*)(p1),(QWidget*)(p2));
 		break;
 	}
-	case 383132: {
+	case 383128: {
 		*(bool*)p2 = pThis->isAreaAllowed(*(Qt::ToolBarArea*)p1);
 		break;
 	}
-	case 383133: {
+	case 383129: {
 		*(bool*)p1 = pThis->isFloatable();
 		break;
 	}
-	case 383134: {
+	case 383130: {
 		*(bool*)p1 = pThis->isFloating();
 		break;
 	}
-	case 383135: {
+	case 383131: {
 		*(bool*)p1 = pThis->isMovable();
 		break;
 	}
-	case 383136: {
+	case 383132: {
 		*(Qt::Orientation*)p1 = pThis->orientation();
 		break;
 	}
-	case 383137: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 383138: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 383139: {
+	case 383133: {
 		pThis->setAllowedAreas(*(QFlags<Qt::ToolBarArea>*)p1);
 		break;
 	}
-	case 383140: {
+	case 383134: {
 		pThis->setFloatable(*(bool*)p1);
 		break;
 	}
-	case 383141: {
+	case 383135: {
 		if(p1==0)return -2;
 		pThis->setIconSize(*(QSize*)(p1));
 		break;
 	}
-	case 383142: {
+	case 383136: {
 		pThis->setMovable(*(bool*)p1);
 		break;
 	}
-	case 383143: {
+	case 383137: {
 		pThis->setOrientation(*(Qt::Orientation*)p1);
 		break;
 	}
-	case 383144: {
+	case 383138: {
 		pThis->setToolButtonStyle(*(Qt::ToolButtonStyle*)p1);
 		break;
 	}
-	case 383145: {
+	case 383139: {
 		*(void**)p1 = pThis->toggleViewAction();
 		break;
 	}
-	case 383146: {
+	case 383140: {
 		*(Qt::ToolButtonStyle*)p1 = pThis->toolButtonStyle();
 		break;
 	}
-	case 383147: {
+	case 383141: {
 		*(void**)p2 = pThis->widgetForAction((QAction*)(p1));
 		break;
 	}
@@ -46372,96 +41978,84 @@ int drv_QToolBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		break;
 	}
 	case 384107: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 384108: {
 		*(int*)p1 = pThis->count();
 		break;
 	}
-	case 384109: {
+	case 384108: {
 		*(int*)p1 = pThis->currentIndex();
 		break;
 	}
-	case 384110: {
+	case 384109: {
 		*(void**)p1 = pThis->currentWidget();
 		break;
 	}
-	case 384111: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 384112: {
+	case 384110: {
 		*(int*)p2 = pThis->indexOf((QWidget*)(p1));
 		break;
 	}
-	case 384113: {
+	case 384111: {
 		*(int*)p4 = pThis->insertItem(*(int*)p1,(QWidget*)(p2),drvGetStringHead(p3));
 		break;
 	}
-	case 384114: {
+	case 384112: {
 		if(p3==0)return -2;
 		*(int*)p5 = pThis->insertItem(*(int*)p1,(QWidget*)(p2),*(QIcon*)(p3),drvGetStringHead(p4));
 		break;
 	}
-	case 384115: {
+	case 384113: {
 		*(bool*)p2 = pThis->isItemEnabled(*(int*)p1);
 		break;
 	}
-	case 384116: {
+	case 384114: {
 		*(void**)p2 = new QIcon(pThis->itemIcon(*(int*)p1));
 		break;
 	}
-	case 384117: {
+	case 384115: {
 		pThis->itemInserted(*(int*)p1);
 		break;
 	}
-	case 384118: {
+	case 384116: {
 		pThis->itemRemoved(*(int*)p1);
 		break;
 	}
-	case 384119: {
+	case 384117: {
 		drvSetString(p2,pThis->itemText(*(int*)p1));
 		break;
 	}
-	case 384120: {
+	case 384118: {
 		drvSetString(p2,pThis->itemToolTip(*(int*)p1));
 		break;
 	}
-	case 384121: {
+	case 384119: {
 		pThis->removeItem(*(int*)p1);
 		break;
 	}
-	case 384122: {
+	case 384120: {
 		pThis->setCurrentIndex(*(int*)p1);
 		break;
 	}
-	case 384123: {
+	case 384121: {
 		pThis->setCurrentWidget((QWidget*)(p1));
 		break;
 	}
-	case 384124: {
+	case 384122: {
 		pThis->setItemEnabled(*(int*)p1,*(bool*)p2);
 		break;
 	}
-	case 384125: {
+	case 384123: {
 		if(p2==0)return -2;
 		pThis->setItemIcon(*(int*)p1,*(QIcon*)(p2));
 		break;
 	}
-	case 384126: {
+	case 384124: {
 		pThis->setItemText(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
-	case 384127: {
+	case 384125: {
 		pThis->setItemToolTip(*(int*)p1,drvGetStringHead(p2));
 		break;
 	}
-	case 384128: {
-		pThis->showEvent((QShowEvent*)(p1));
-		break;
-	}
-	case 384129: {
+	case 384126: {
 		*(void**)p2 = pThis->widget(*(int*)p1);
 		break;
 	}
@@ -46496,107 +42090,54 @@ int drv_QToolButton(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 385105: {
-		pThis->actionEvent((QActionEvent*)(p1));
-		break;
-	}
-	case 385106: {
 		*(Qt::ArrowType*)p1 = pThis->arrowType();
 		break;
 	}
-	case 385107: {
+	case 385106: {
 		*(bool*)p1 = pThis->autoRaise();
 		break;
 	}
-	case 385108: {
-		pThis->changeEvent((QEvent*)(p1));
-		break;
-	}
-	case 385109: {
+	case 385107: {
 		*(void**)p1 = pThis->defaultAction();
 		break;
 	}
-	case 385110: {
-		pThis->enterEvent((QEvent*)(p1));
-		break;
-	}
-	case 385111: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 385112: {
-		if(p1==0)return -2;
-		*(bool*)p2 = pThis->hitButton(*(QPoint*)(p1));
-		break;
-	}
-	case 385113: {
-		pThis->leaveEvent((QEvent*)(p1));
-		break;
-	}
-	case 385114: {
+	case 385108: {
 		*(void**)p1 = pThis->menu();
 		break;
 	}
-	case 385115: {
-		*(void**)p1 = new QSize(pThis->minimumSizeHint());
-		break;
-	}
-	case 385116: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 385117: {
-		pThis->mouseReleaseEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 385118: {
-		pThis->nextCheckState();
-		break;
-	}
-	case 385119: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 385120: {
+	case 385109: {
 		*(QToolButton::ToolButtonPopupMode*)p1 = pThis->popupMode();
 		break;
 	}
-	case 385121: {
+	case 385110: {
 		pThis->setArrowType(*(Qt::ArrowType*)p1);
 		break;
 	}
-	case 385122: {
+	case 385111: {
 		pThis->setAutoRaise(*(bool*)p1);
 		break;
 	}
-	case 385123: {
+	case 385112: {
 		pThis->setDefaultAction((QAction*)(p1));
 		break;
 	}
-	case 385124: {
+	case 385113: {
 		pThis->setMenu((QMenu*)(p1));
 		break;
 	}
-	case 385125: {
+	case 385114: {
 		pThis->setPopupMode(*(QToolButton::ToolButtonPopupMode*)p1);
 		break;
 	}
-	case 385126: {
+	case 385115: {
 		pThis->setToolButtonStyle(*(Qt::ToolButtonStyle*)p1);
 		break;
 	}
-	case 385127: {
+	case 385116: {
 		pThis->showMenu();
 		break;
 	}
-	case 385128: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 385129: {
-		pThis->timerEvent((QTimerEvent*)(p1));
-		break;
-	}
-	case 385130: {
+	case 385117: {
 		*(Qt::ToolButtonStyle*)p1 = pThis->toolButtonStyle();
 		break;
 	}
@@ -46726,365 +42267,205 @@ int drv_QTreeView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 		break;
 	}
 	case 387116: {
-		if(p1==0)return -2;
-	if(p2==0)return -2;
-		pThis->currentChanged(*(QModelIndex*)(p1),*(QModelIndex*)(p2));
-		break;
-	}
-	case 387117: {
-		if(p1==0)return -2;
-	if(p2==0)return -2;
-		pThis->dataChanged(*(QModelIndex*)(p1),*(QModelIndex*)(p2));
-		break;
-	}
-	case 387118: {
-		pThis->doItemsLayout();
-		break;
-	}
-	case 387119: {
-		pThis->dragMoveEvent((QDragMoveEvent*)(p1));
-		break;
-	}
-	case 387120: {
 		if(p2==0)return -2;
 	if(p3==0)return -2;
 		pThis->drawBranches((QPainter*)(p1),*(QRect*)(p2),*(QModelIndex*)(p3));
 		break;
 	}
-	case 387121: {
+	case 387117: {
 		if(p2==0)return -2;
 		pThis->drawTree((QPainter*)(p1),*(QRegion*)(p2));
 		break;
 	}
-	case 387122: {
+	case 387118: {
 		if(p1==0)return -2;
 		pThis->expand(*(QModelIndex*)(p1));
 		break;
 	}
-	case 387123: {
+	case 387119: {
 		pThis->expandAll();
 		break;
 	}
-	case 387124: {
+	case 387120: {
 		pThis->expandToDepth(*(int*)p1);
 		break;
 	}
-	case 387125: {
+	case 387121: {
 		*(bool*)p1 = pThis->expandsOnDoubleClick();
 		break;
 	}
-	case 387126: {
+	case 387122: {
 		*(void**)p1 = pThis->header();
 		break;
 	}
-	case 387127: {
+	case 387123: {
 		pThis->hideColumn(*(int*)p1);
 		break;
 	}
-	case 387128: {
-		*(int*)p1 = pThis->horizontalOffset();
-		break;
-	}
-	case 387129: {
-		pThis->horizontalScrollbarAction(*(int*)p1);
-		break;
-	}
-	case 387130: {
+	case 387124: {
 		*(int*)p1 = pThis->indentation();
 		break;
 	}
-	case 387131: {
+	case 387125: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QModelIndex(pThis->indexAbove(*(QModelIndex*)(p1)));
 		break;
 	}
-	case 387132: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QModelIndex(pThis->indexAt(*(QPoint*)(p1)));
-		break;
-	}
-	case 387133: {
+	case 387126: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QModelIndex(pThis->indexBelow(*(QModelIndex*)(p1)));
 		break;
 	}
-	case 387134: {
+	case 387127: {
 		if(p1==0)return -2;
 		*(int*)p2 = pThis->indexRowSizeHint(*(QModelIndex*)(p1));
 		break;
 	}
-	case 387135: {
+	case 387128: {
 		*(bool*)p1 = pThis->isAnimated();
 		break;
 	}
-	case 387136: {
+	case 387129: {
 		*(bool*)p2 = pThis->isColumnHidden(*(int*)p1);
 		break;
 	}
-	case 387137: {
+	case 387130: {
 		if(p1==0)return -2;
 		*(bool*)p2 = pThis->isExpanded(*(QModelIndex*)(p1));
 		break;
 	}
-	case 387138: {
+	case 387131: {
 		if(p2==0)return -2;
 		*(bool*)p3 = pThis->isFirstColumnSpanned(*(int*)p1,*(QModelIndex*)(p2));
 		break;
 	}
-	case 387139: {
+	case 387132: {
 		*(bool*)p1 = pThis->isHeaderHidden();
 		break;
 	}
-	case 387140: {
-		if(p1==0)return -2;
-		*(bool*)p2 = pThis->isIndexHidden(*(QModelIndex*)(p1));
-		break;
-	}
-	case 387141: {
+	case 387133: {
 		if(p2==0)return -2;
 		*(bool*)p3 = pThis->isRowHidden(*(int*)p1,*(QModelIndex*)(p2));
 		break;
 	}
-	case 387142: {
+	case 387134: {
 		*(bool*)p1 = pThis->isSortingEnabled();
 		break;
 	}
-	case 387143: {
+	case 387135: {
 		*(bool*)p1 = pThis->itemsExpandable();
 		break;
 	}
-	case 387144: {
-		pThis->keyPressEvent((QKeyEvent*)(p1));
-		break;
-	}
-	case 387145: {
-		pThis->keyboardSearch(drvGetStringHead(p1));
-		break;
-	}
-	case 387146: {
-		pThis->mouseDoubleClickEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 387147: {
-		pThis->mouseMoveEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 387148: {
-		pThis->mousePressEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 387149: {
-		pThis->mouseReleaseEvent((QMouseEvent*)(p1));
-		break;
-	}
-	case 387150: {
-		*(void**)p3 = new QModelIndex(pThis->moveCursor(*(QAbstractItemView::CursorAction*)p1,*(QFlags<Qt::KeyboardModifier>*)p2));
-		break;
-	}
-	case 387151: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 387152: {
+	case 387136: {
 		pThis->reexpand();
 		break;
 	}
-	case 387153: {
-		pThis->reset();
-		break;
-	}
-	case 387154: {
+	case 387137: {
 		pThis->resizeColumnToContents(*(int*)p1);
 		break;
 	}
-	case 387155: {
+	case 387138: {
 		*(bool*)p1 = pThis->rootIsDecorated();
 		break;
 	}
-	case 387156: {
+	case 387139: {
 		if(p1==0)return -2;
 		*(int*)p2 = pThis->rowHeight(*(QModelIndex*)(p1));
 		break;
 	}
-	case 387157: {
-		if(p1==0)return -2;
-		pThis->rowsAboutToBeRemoved(*(QModelIndex*)(p1),*(int*)p2,*(int*)p3);
-		break;
-	}
-	case 387158: {
-		if(p1==0)return -2;
-		pThis->rowsInserted(*(QModelIndex*)(p1),*(int*)p2,*(int*)p3);
-		break;
-	}
-	case 387159: {
+	case 387140: {
 		if(p1==0)return -2;
 		pThis->rowsRemoved(*(QModelIndex*)(p1),*(int*)p2,*(int*)p3);
 		break;
 	}
-	case 387160: {
-		pThis->scrollContentsBy(*(int*)p1,*(int*)p2);
-		break;
-	}
-	case 387161: {
-		if(p1==0)return -2;
-		pThis->scrollTo(*(QModelIndex*)(p1));
-		break;
-	}
-	case 387162: {
-		if(p1==0)return -2;
-		pThis->scrollTo(*(QModelIndex*)(p1),*(QAbstractItemView::ScrollHint*)p2);
-		break;
-	}
-	case 387163: {
-		pThis->selectAll();
-		break;
-	}
-	case 387164: {
-		drvSetListPtr<QModelIndex>(p1,80000,pThis->selectedIndexes());
-		break;
-	}
-	case 387165: {
-		if(p1==0)return -2;
-	if(p2==0)return -2;
-		pThis->selectionChanged(*(QItemSelection*)(p1),*(QItemSelection*)(p2));
-		break;
-	}
-	case 387166: {
+	case 387141: {
 		pThis->setAllColumnsShowFocus(*(bool*)p1);
 		break;
 	}
-	case 387167: {
+	case 387142: {
 		pThis->setAnimated(*(bool*)p1);
 		break;
 	}
-	case 387168: {
+	case 387143: {
 		pThis->setAutoExpandDelay(*(int*)p1);
 		break;
 	}
-	case 387169: {
+	case 387144: {
 		pThis->setColumnHidden(*(int*)p1,*(bool*)p2);
 		break;
 	}
-	case 387170: {
+	case 387145: {
 		pThis->setColumnWidth(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 387171: {
+	case 387146: {
 		if(p1==0)return -2;
 		pThis->setExpanded(*(QModelIndex*)(p1),*(bool*)p2);
 		break;
 	}
-	case 387172: {
+	case 387147: {
 		pThis->setExpandsOnDoubleClick(*(bool*)p1);
 		break;
 	}
-	case 387173: {
+	case 387148: {
 		if(p2==0)return -2;
 		pThis->setFirstColumnSpanned(*(int*)p1,*(QModelIndex*)(p2),*(bool*)p3);
 		break;
 	}
-	case 387174: {
+	case 387149: {
 		pThis->setHeader((QHeaderView*)(p1));
 		break;
 	}
-	case 387175: {
+	case 387150: {
 		pThis->setHeaderHidden(*(bool*)p1);
 		break;
 	}
-	case 387176: {
+	case 387151: {
 		pThis->setIndentation(*(int*)p1);
 		break;
 	}
-	case 387177: {
+	case 387152: {
 		pThis->setItemsExpandable(*(bool*)p1);
 		break;
 	}
-	case 387178: {
-		pThis->setModel((QAbstractItemModel*)(p1));
-		break;
-	}
-	case 387179: {
-		if(p1==0)return -2;
-		pThis->setRootIndex(*(QModelIndex*)(p1));
-		break;
-	}
-	case 387180: {
+	case 387153: {
 		pThis->setRootIsDecorated(*(bool*)p1);
 		break;
 	}
-	case 387181: {
+	case 387154: {
 		if(p2==0)return -2;
 		pThis->setRowHidden(*(int*)p1,*(QModelIndex*)(p2),*(bool*)p3);
 		break;
 	}
-	case 387182: {
-		if(p1==0)return -2;
-		pThis->setSelection(*(QRect*)(p1),*(QFlags<QItemSelectionModel::SelectionFlag>*)p2);
-		break;
-	}
-	case 387183: {
-		pThis->setSelectionModel((QItemSelectionModel*)(p1));
-		break;
-	}
-	case 387184: {
+	case 387155: {
 		pThis->setSortingEnabled(*(bool*)p1);
 		break;
 	}
-	case 387185: {
+	case 387156: {
 		pThis->setUniformRowHeights(*(bool*)p1);
 		break;
 	}
-	case 387186: {
+	case 387157: {
 		pThis->setWordWrap(*(bool*)p1);
 		break;
 	}
-	case 387187: {
+	case 387158: {
 		pThis->showColumn(*(int*)p1);
 		break;
 	}
-	case 387188: {
-		*(int*)p2 = pThis->sizeHintForColumn(*(int*)p1);
-		break;
-	}
-	case 387189: {
+	case 387159: {
 		pThis->sortByColumn(*(int*)p1);
 		break;
 	}
-	case 387190: {
+	case 387160: {
 		pThis->sortByColumn(*(int*)p1,*(Qt::SortOrder*)p2);
 		break;
 	}
-	case 387191: {
-		pThis->timerEvent((QTimerEvent*)(p1));
-		break;
-	}
-	case 387192: {
+	case 387161: {
 		*(bool*)p1 = pThis->uniformRowHeights();
 		break;
 	}
-	case 387193: {
-		pThis->updateGeometries();
-		break;
-	}
-	case 387194: {
-		*(int*)p1 = pThis->verticalOffset();
-		break;
-	}
-	case 387195: {
-		*(bool*)p2 = pThis->viewportEvent((QEvent*)(p1));
-		break;
-	}
-	case 387196: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QRect(pThis->visualRect(*(QModelIndex*)(p1)));
-		break;
-	}
-	case 387197: {
-		if(p1==0)return -2;
-		*(void**)p2 = new QRegion(pThis->visualRegionForSelection(*(QItemSelection*)(p1)));
-		break;
-	}
-	case 387198: {
+	case 387162: {
 		*(bool*)p1 = pThis->wordWrap();
 		break;
 	}
@@ -47218,220 +42599,208 @@ int drv_QTreeWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		break;
 	}
 	case 388123: {
-		pThis->dropEvent((QDropEvent*)(p1));
-		break;
-	}
-	case 388124: {
 		*(bool*)p5 = pThis->dropMimeData((QTreeWidgetItem*)(p1),*(int*)p2,(QMimeData*)(p3),*(Qt::DropAction*)p4);
 		break;
 	}
-	case 388125: {
+	case 388124: {
 		pThis->editItem((QTreeWidgetItem*)(p1));
 		break;
 	}
-	case 388126: {
+	case 388125: {
 		pThis->editItem((QTreeWidgetItem*)(p1),*(int*)p2);
 		break;
 	}
-	case 388127: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 388128: {
+	case 388126: {
 		pThis->expandItem((QTreeWidgetItem*)(p1));
 		break;
 	}
-	case 388129: {
+	case 388127: {
 		drvSetListObj<QTreeWidgetItem*>(p4,179000,pThis->findItems(drvGetStringHead(p1),*(QFlags<Qt::MatchFlag>*)p2,*(int*)p3));
 		break;
 	}
-	case 388130: {
+	case 388128: {
 		*(void**)p1 = pThis->headerItem();
 		break;
 	}
-	case 388131: {
+	case 388129: {
 		*(void**)p3 = new QModelIndex(pThis->indexFromItem((QTreeWidgetItem*)(p1),*(int*)p2));
 		break;
 	}
-	case 388132: {
+	case 388130: {
 		*(int*)p2 = pThis->indexOfTopLevelItem((QTreeWidgetItem*)(p1));
 		break;
 	}
-	case 388133: {
+	case 388131: {
 		pThis->insertTopLevelItem(*(int*)p1,(QTreeWidgetItem*)(p2));
 		break;
 	}
-	case 388134: {
+	case 388132: {
 		pThis->insertTopLevelItems(*(int*)p1,drvGetObjectArrayHeadT<QTreeWidgetItem*>(p2));
 		break;
 	}
-	case 388135: {
+	case 388133: {
 		*(void**)p1 = pThis->invisibleRootItem();
 		break;
 	}
-	case 388136: {
+	case 388134: {
 		*(bool*)p2 = pThis->isFirstItemColumnSpanned((QTreeWidgetItem*)(p1));
 		break;
 	}
-	case 388137: {
+	case 388135: {
 		*(bool*)p2 = pThis->isItemExpanded((QTreeWidgetItem*)(p1));
 		break;
 	}
-	case 388138: {
+	case 388136: {
 		*(bool*)p2 = pThis->isItemHidden((QTreeWidgetItem*)(p1));
 		break;
 	}
-	case 388139: {
+	case 388137: {
 		*(bool*)p2 = pThis->isItemSelected((QTreeWidgetItem*)(p1));
 		break;
 	}
-	case 388140: {
+	case 388138: {
 		*(bool*)p1 = pThis->isSortingEnabled();
 		break;
 	}
-	case 388141: {
+	case 388139: {
 		*(void**)p2 = pThis->itemAbove((QTreeWidgetItem*)(p1));
 		break;
 	}
-	case 388142: {
+	case 388140: {
 		if(p1==0)return -2;
 		*(void**)p2 = pThis->itemAt(*(QPoint*)(p1));
 		break;
 	}
-	case 388143: {
+	case 388141: {
 		*(void**)p3 = pThis->itemAt(*(int*)p1,*(int*)p2);
 		break;
 	}
-	case 388144: {
+	case 388142: {
 		*(void**)p2 = pThis->itemBelow((QTreeWidgetItem*)(p1));
 		break;
 	}
-	case 388145: {
+	case 388143: {
 		if(p1==0)return -2;
 		*(void**)p2 = pThis->itemFromIndex(*(QModelIndex*)(p1));
 		break;
 	}
-	case 388146: {
+	case 388144: {
 		*(void**)p3 = pThis->itemWidget((QTreeWidgetItem*)(p1),*(int*)p2);
 		break;
 	}
-	case 388147: {
+	case 388145: {
 		drvSetListObj<QTreeWidgetItem*>(p2,179000,pThis->items((QMimeData*)(p1)));
 		break;
 	}
-	case 388148: {
+	case 388146: {
 		*(void**)p2 = pThis->mimeData(drvGetObjectArrayHeadT<QTreeWidgetItem*>(p1));
 		break;
 	}
-	case 388149: {
+	case 388147: {
 		drvSetStringArray(p1,pThis->mimeTypes());
 		break;
 	}
-	case 388150: {
+	case 388148: {
 		pThis->openPersistentEditor((QTreeWidgetItem*)(p1));
 		break;
 	}
-	case 388151: {
+	case 388149: {
 		pThis->openPersistentEditor((QTreeWidgetItem*)(p1),*(int*)p2);
 		break;
 	}
-	case 388152: {
+	case 388150: {
 		pThis->removeItemWidget((QTreeWidgetItem*)(p1),*(int*)p2);
 		break;
 	}
-	case 388153: {
+	case 388151: {
 		pThis->scrollToItem((QTreeWidgetItem*)(p1));
 		break;
 	}
-	case 388154: {
+	case 388152: {
 		pThis->scrollToItem((QTreeWidgetItem*)(p1),*(QAbstractItemView::ScrollHint*)p2);
 		break;
 	}
-	case 388155: {
+	case 388153: {
 		drvSetListObj<QTreeWidgetItem*>(p1,179000,pThis->selectedItems());
 		break;
 	}
-	case 388156: {
+	case 388154: {
 		pThis->setColumnCount(*(int*)p1);
 		break;
 	}
-	case 388157: {
+	case 388155: {
 		pThis->setCurrentItem((QTreeWidgetItem*)(p1));
 		break;
 	}
-	case 388158: {
+	case 388156: {
 		pThis->setCurrentItem((QTreeWidgetItem*)(p1),*(int*)p2);
 		break;
 	}
-	case 388159: {
+	case 388157: {
 		pThis->setCurrentItem((QTreeWidgetItem*)(p1),*(int*)p2,*(QFlags<QItemSelectionModel::SelectionFlag>*)p3);
 		break;
 	}
-	case 388160: {
+	case 388158: {
 		pThis->setFirstItemColumnSpanned((QTreeWidgetItem*)(p1),*(bool*)p2);
 		break;
 	}
-	case 388161: {
+	case 388159: {
 		pThis->setHeaderItem((QTreeWidgetItem*)(p1));
 		break;
 	}
-	case 388162: {
+	case 388160: {
 		pThis->setHeaderLabel(drvGetStringHead(p1));
 		break;
 	}
-	case 388163: {
+	case 388161: {
 		pThis->setHeaderLabels(drvGetStringArray(p1));
 		break;
 	}
-	case 388164: {
+	case 388162: {
 		pThis->setItemExpanded((QTreeWidgetItem*)(p1),*(bool*)p2);
 		break;
 	}
-	case 388165: {
+	case 388163: {
 		pThis->setItemHidden((QTreeWidgetItem*)(p1),*(bool*)p2);
 		break;
 	}
-	case 388166: {
+	case 388164: {
 		pThis->setItemSelected((QTreeWidgetItem*)(p1),*(bool*)p2);
 		break;
 	}
-	case 388167: {
+	case 388165: {
 		pThis->setItemWidget((QTreeWidgetItem*)(p1),*(int*)p2,(QWidget*)(p3));
 		break;
 	}
-	case 388168: {
-		pThis->setSelectionModel((QItemSelectionModel*)(p1));
-		break;
-	}
-	case 388169: {
+	case 388166: {
 		pThis->setSortingEnabled(*(bool*)p1);
 		break;
 	}
-	case 388170: {
+	case 388167: {
 		*(int*)p1 = pThis->sortColumn();
 		break;
 	}
-	case 388171: {
+	case 388168: {
 		pThis->sortItems(*(int*)p1,*(Qt::SortOrder*)p2);
 		break;
 	}
-	case 388172: {
+	case 388169: {
 		*(QFlags<Qt::DropAction>*)p1 = pThis->supportedDropActions();
 		break;
 	}
-	case 388173: {
+	case 388170: {
 		*(void**)p2 = pThis->takeTopLevelItem(*(int*)p1);
 		break;
 	}
-	case 388174: {
+	case 388171: {
 		*(void**)p2 = pThis->topLevelItem(*(int*)p1);
 		break;
 	}
-	case 388175: {
+	case 388172: {
 		*(int*)p1 = pThis->topLevelItemCount();
 		break;
 	}
-	case 388176: {
+	case 388173: {
 		*(void**)p2 = new QRect(pThis->visualItemRect((QTreeWidgetItem*)(p1)));
 		break;
 	}
@@ -48096,70 +43465,54 @@ int drv_QVariantAnimation(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 		break;
 	}
 	case 396104: {
-		*(int*)p1 = pThis->duration();
-		break;
-	}
-	case 396105: {
 		*(void**)p1 = new QEasingCurve(pThis->easingCurve());
 		break;
 	}
-	case 396106: {
+	case 396105: {
 		*(void**)p1 = new QVariant(pThis->endValue());
 		break;
 	}
-	case 396107: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 396108: {
+	case 396106: {
 		if(p1==0)return -2;
 	if(p2==0)return -2;
 		*(void**)p4 = new QVariant(pThis->interpolated(*(QVariant*)(p1),*(QVariant*)(p2),*(double*)p3));
 		break;
 	}
-	case 396109: {
+	case 396107: {
 		*(void**)p2 = new QVariant(pThis->keyValueAt(*(double*)p1));
 		break;
 	}
-	case 396110: {
+	case 396108: {
 		pThis->setDuration(*(int*)p1);
 		break;
 	}
-	case 396111: {
+	case 396109: {
 		if(p1==0)return -2;
 		pThis->setEasingCurve(*(QEasingCurve*)(p1));
 		break;
 	}
-	case 396112: {
+	case 396110: {
 		if(p1==0)return -2;
 		pThis->setEndValue(*(QVariant*)(p1));
 		break;
 	}
-	case 396113: {
+	case 396111: {
 		if(p2==0)return -2;
 		pThis->setKeyValueAt(*(double*)p1,*(QVariant*)(p2));
 		break;
 	}
-	case 396114: {
+	case 396112: {
 		if(p1==0)return -2;
 		pThis->setStartValue(*(QVariant*)(p1));
 		break;
 	}
-	case 396115: {
+	case 396113: {
 		*(void**)p1 = new QVariant(pThis->startValue());
 		break;
 	}
-	case 396116: {
-		pThis->updateCurrentTime(*(int*)p1);
-		break;
-	}
-	case 396117: {
+	case 396114: {
 		if(p1==0)return -2;
 		pThis->updateCurrentValue(*(QVariant*)(p1));
-		break;
-	}
-	case 396118: {
-		pThis->updateState(*(QAbstractAnimation::State*)p1,*(QAbstractAnimation::State*)p2);
 		break;
 	}
 	default:
@@ -49384,22 +44737,14 @@ int drv_QWidgetAction(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 		break;
 	}
 	case 398107: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 398108: {
-		*(bool*)p3 = pThis->eventFilter((QObject*)(p1),(QEvent*)(p2));
-		break;
-	}
-	case 398109: {
 		pThis->releaseWidget((QWidget*)(p1));
 		break;
 	}
-	case 398110: {
+	case 398108: {
 		*(void**)p2 = pThis->requestWidget((QWidget*)(p1));
 		break;
 	}
-	case 398111: {
+	case 398109: {
 		pThis->setDefaultWidget((QWidget*)(p1));
 		break;
 	}
@@ -49490,164 +44835,140 @@ int drv_QWizard(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 		break;
 	}
 	case 399116: {
-		pThis->done(*(int*)p1);
-		break;
-	}
-	case 399117: {
-		*(bool*)p2 = pThis->event((QEvent*)(p1));
-		break;
-	}
-	case 399118: {
 		*(void**)p2 = new QVariant(pThis->field(drvGetStringHead(p1)));
 		break;
 	}
-	case 399119: {
+	case 399117: {
 		*(bool*)p2 = pThis->hasVisitedPage(*(int*)p1);
 		break;
 	}
-	case 399120: {
+	case 399118: {
 		pThis->initializePage(*(int*)p1);
 		break;
 	}
-	case 399121: {
+	case 399119: {
 		pThis->next();
 		break;
 	}
-	case 399122: {
+	case 399120: {
 		*(int*)p1 = pThis->nextId();
 		break;
 	}
-	case 399123: {
+	case 399121: {
 		*(QFlags<QWizard::WizardOption>*)p1 = pThis->options();
 		break;
 	}
-	case 399124: {
+	case 399122: {
 		*(void**)p2 = pThis->page(*(int*)p1);
 		break;
 	}
-	case 399125: {
+	case 399123: {
 		drvSetList<int>(p1,pThis->pageIds());
 		break;
 	}
-	case 399126: {
-		pThis->paintEvent((QPaintEvent*)(p1));
-		break;
-	}
-	case 399127: {
+	case 399124: {
 		*(void**)p2 = new QPixmap(pThis->pixmap(*(QWizard::WizardPixmap*)p1));
 		break;
 	}
-	case 399128: {
+	case 399125: {
 		pThis->removePage(*(int*)p1);
 		break;
 	}
-	case 399129: {
-		pThis->resizeEvent((QResizeEvent*)(p1));
-		break;
-	}
-	case 399130: {
+	case 399126: {
 		pThis->restart();
 		break;
 	}
-	case 399131: {
+	case 399127: {
 		pThis->setButton(*(QWizard::WizardButton*)p1,(QAbstractButton*)(p2));
 		break;
 	}
-	case 399132: {
+	case 399128: {
 		pThis->setButtonLayout(drvGetIntArrayHeadT<QWizard::WizardButton>(p1));
 		break;
 	}
-	case 399133: {
+	case 399129: {
 		pThis->setButtonText(*(QWizard::WizardButton*)p1,drvGetStringHead(p2));
 		break;
 	}
-	case 399134: {
+	case 399130: {
 		pThis->setDefaultProperty(drvGet_const_char(p1),drvGet_const_char(p2),drvGet_const_char(p3));
 		break;
 	}
-	case 399135: {
+	case 399131: {
 		if(p2==0)return -2;
 		pThis->setField(drvGetStringHead(p1),*(QVariant*)(p2));
 		break;
 	}
-	case 399136: {
+	case 399132: {
 		pThis->setOption(*(QWizard::WizardOption*)p1);
 		break;
 	}
-	case 399137: {
+	case 399133: {
 		pThis->setOption(*(QWizard::WizardOption*)p1,*(bool*)p2);
 		break;
 	}
-	case 399138: {
+	case 399134: {
 		pThis->setOptions(*(QFlags<QWizard::WizardOption>*)p1);
 		break;
 	}
-	case 399139: {
+	case 399135: {
 		pThis->setPage(*(int*)p1,(QWizardPage*)(p2));
 		break;
 	}
-	case 399140: {
+	case 399136: {
 		if(p2==0)return -2;
 		pThis->setPixmap(*(QWizard::WizardPixmap*)p1,*(QPixmap*)(p2));
 		break;
 	}
-	case 399141: {
+	case 399137: {
 		pThis->setSideWidget((QWidget*)(p1));
 		break;
 	}
-	case 399142: {
+	case 399138: {
 		pThis->setStartId(*(int*)p1);
 		break;
 	}
-	case 399143: {
+	case 399139: {
 		pThis->setSubTitleFormat(*(Qt::TextFormat*)p1);
 		break;
 	}
-	case 399144: {
+	case 399140: {
 		pThis->setTitleFormat(*(Qt::TextFormat*)p1);
 		break;
 	}
-	case 399145: {
-		pThis->setVisible(*(bool*)p1);
-		break;
-	}
-	case 399146: {
+	case 399141: {
 		pThis->setWizardStyle(*(QWizard::WizardStyle*)p1);
 		break;
 	}
-	case 399147: {
+	case 399142: {
 		*(void**)p1 = pThis->sideWidget();
 		break;
 	}
-	case 399148: {
-		*(void**)p1 = new QSize(pThis->sizeHint());
-		break;
-	}
-	case 399149: {
+	case 399143: {
 		*(int*)p1 = pThis->startId();
 		break;
 	}
-	case 399150: {
+	case 399144: {
 		*(Qt::TextFormat*)p1 = pThis->subTitleFormat();
 		break;
 	}
-	case 399151: {
+	case 399145: {
 		*(bool*)p2 = pThis->testOption(*(QWizard::WizardOption*)p1);
 		break;
 	}
-	case 399152: {
+	case 399146: {
 		*(Qt::TextFormat*)p1 = pThis->titleFormat();
 		break;
 	}
-	case 399153: {
+	case 399147: {
 		*(bool*)p1 = pThis->validateCurrentPage();
 		break;
 	}
-	case 399154: {
+	case 399148: {
 		drvSetList<int>(p1,pThis->visitedPages());
 		break;
 	}
-	case 399155: {
+	case 399149: {
 		*(QWizard::WizardStyle*)p1 = pThis->wizardStyle();
 		break;
 	}
