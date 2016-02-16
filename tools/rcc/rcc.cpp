@@ -302,7 +302,11 @@ qint64 RCCFileInfo::writeDataName(RCCResourceLibrary &lib, qint64 offset)
     offset += 2;
 
     // write the hash
+#if QT_VERSION >= 0x050000
+    lib.writeNumber4(qt_hash(m_name));
+#else
     lib.writeNumber4(qHash(m_name));
+#endif
     if (text)
         lib.writeString("\n  ");
     offset += 4;
