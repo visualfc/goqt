@@ -6,6 +6,7 @@ package ui
 
 import (
 	"log"
+	"runtime"
 )
 
 func Version() string {
@@ -18,6 +19,7 @@ func Async(fn func()) {
 }
 
 func Run(fn func()) int32 {
+	runtime.LockOSThread()
 	if qtdrv_init_error != nil {
 		log.Println(qtdrv_init_error)
 		return -2
@@ -30,6 +32,7 @@ func Run(fn func()) int32 {
 }
 
 func RunEx(args []string, fn func()) int32 {
+	runtime.LockOSThread()
 	if qtdrv_init_error != nil {
 		log.Println(qtdrv_init_error)
 		return -2
