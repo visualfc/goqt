@@ -9,6 +9,29 @@ import (
 	"runtime"
 )
 
+func init() {
+	runtime.LockOSThread()
+}
+
+func mainLoop() int32 {
+	for f := range mainfunc {
+		return f()
+	}
+	return 0
+}
+
+var mainfunc = make(chan func() int32)
+
+func runInOsMainThread(f func() int32) {
+	done := make(chan bool, 1)
+	mainfunc <- func() int32 {
+		res := f()
+		done <- true
+		return res
+	}
+	<-done
+}
+
 func Version() string {
 	return "0.1.1"
 }
@@ -19,29 +42,33 @@ func Async(fn func()) {
 }
 
 func Run(fn func()) int32 {
-	runtime.LockOSThread()
-	if qtdrv_init_error != nil {
-		log.Println(qtdrv_init_error)
-		return -2
-	}
-	app := NewApplication(nil)
-	Async(func() {
-		fn()
+	go runInOsMainThread(func() int32 {
+		if qtdrv_init_error != nil {
+			log.Println(qtdrv_init_error)
+			return -2
+		}
+		app := NewApplication(nil)
+		Async(func() {
+			fn()
+		})
+		return app.Exec()
 	})
-	return app.Exec()
+	return mainLoop()
 }
 
 func RunEx(args []string, fn func()) int32 {
-	runtime.LockOSThread()
-	if qtdrv_init_error != nil {
-		log.Println(qtdrv_init_error)
-		return -2
-	}
-	app := NewApplication(args)
-	Async(func() {
-		fn()
+	go runInOsMainThread(func() int32 {
+		if qtdrv_init_error != nil {
+			log.Println(qtdrv_init_error)
+			return -2
+		}
+		app := NewApplication(args)
+		Async(func() {
+			fn()
+		})
+		return app.Exec()
 	})
-	return app.Exec()
+	return mainLoop()
 }
 
 func Application() *QApplication {
