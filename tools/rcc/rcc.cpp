@@ -246,7 +246,7 @@ qint64 RCCFileInfo::writeDataBlob(RCCResourceLibrary &lib, qint64 offset,
     // some info
     if (text) {
         lib.writeString("  // ");
-        lib.writeByteArray(m_fileInfo.absoluteFilePath().toUtf8());
+        lib.writeByteArray(resourceName().toUtf8());
         lib.writeString("\n  ");
     }
 
