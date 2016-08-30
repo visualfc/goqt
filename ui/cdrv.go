@@ -53,8 +53,8 @@ static void init()
 	qtdrv(&append_uint32_to_slice,1,19,0,0,0,0,0,0,0,0,0,0,0,0);
 	qtdrv(&append_double_to_slice,1,20,0,0,0,0,0,0,0,0,0,0,0,0);
 }
-#cgo linux LDFLAGS: -L../bin -L../../bin -L. -lqtdrv.ui
-#cgo darwin LDFLAGS: -L../bin -L../../bin -L. -lqtdrv.ui
+#cgo linux LDFLAGS: -L${SRCDIR}/../bin -lqtdrv.ui
+#cgo darwin LDFLAGS: -L${SRCDIR}/../bin -lqtdrv.ui
 */
 import "C"
 import (
