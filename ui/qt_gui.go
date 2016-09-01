@@ -196,8 +196,8 @@ func (q *QApplication) OnFontDatabaseChanged(fn func()) uintptr {
 //QApplication::QApplication(int,char**)
 func NewApplication(args []string) *QApplication {
 	_argc := len(args)
-	_argv, _argv_size := NewCSArray(args)
-	defer FreeCSArray(_argv, _argv_size)
+	_argv, _ := NewCSArray(args)
+	//defer FreeCSArray(_argv, _argv_size)
 	var __rv uintptr
 	err := DirectQtDrv(unsafe.Pointer(&__rv), 6000, 6107, unsafe.Pointer(&_argc), unsafe.Pointer(&_argv[0]), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 	if err != nil || __rv == 0 {

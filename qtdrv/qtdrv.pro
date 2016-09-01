@@ -13,6 +13,8 @@ greaterThan(QT_MAJOR_VERSION, 4) {
 TARGET = qtdrv.ui
 TEMPLATE = lib
 
+CONFIG += app_bundle
+
 BUILD_SOURCE_TREE = $$PWD
 BUILD_LIB_PATH = $$BUILD_SOURCE_TREE/../bin
 

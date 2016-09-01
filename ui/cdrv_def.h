@@ -10,39 +10,39 @@
 typedef struct {
     const char *data;
     int size;
-} string_head;
+} __attribute__ ((packed)) string_head;
 
 typedef struct {
     const char *data;
     int size;
-} byte_array_head;
+} __attribute__ ((packed)) byte_array_head;
 
 typedef struct {
 	const bool *data;
 	int	size;
-} bool_array_head;
+} __attribute__ ((packed)) bool_array_head;
 
 typedef struct {
     const int *data;
 	int	size;
-} int_array_head;
+} __attribute__ ((packed)) int_array_head;
 
 typedef struct {
 	const unsigned int *data;
 	int	size;
-} uint_array_head;
+} __attribute__ ((packed)) uint_array_head;
 
 typedef void* pvoid;
 
 typedef struct {
 	const pvoid *data;
 	int	 size;
-} ptr_array_head;
+} __attribute__ ((packed)) ptr_array_head;
 
 typedef struct {
 	double *data;
 	int		size;
-} double_array_head;
+} __attribute__ ((packed)) double_array_head;
 
 #define pvoid_size sizeof(pvoid)
 

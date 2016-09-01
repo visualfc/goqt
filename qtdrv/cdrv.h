@@ -44,31 +44,31 @@ typedef	unsigned int uint32;
 typedef struct {
     const char **data;
     int size;
-} string_array_head;
+} __attribute__ ((packed)) string_array_head;
 
 struct string_head_cache {
     const char *data;
     int         len;
-};
+}__attribute__ ((packed));
 
 
 struct slice_head {
     char *data;
     uint32 len;
     uint32 cap;
-};
+}__attribute__ ((packed));
 
 template <class T>
 struct slice_head_t {
     T *data;
     uint32 len;
     uint32 cap;
-};
+}__attribute__ ((packed));
 
 struct Iface {
     void *tab;
     void *data;
-};
+}__attribute__ ((packed));
 
 Q_DECLARE_METATYPE(Iface)
 Q_DECLARE_TYPEINFO(Iface, Q_MOVABLE_TYPE);
