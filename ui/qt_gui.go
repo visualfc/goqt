@@ -71531,6 +71531,18 @@ func NewStringListModelFromDriver(drv Driver) *QStringListModel {
 	return _p
 }
 
+//QStringListModel
+func NewStringListModelWithParent(parent QObjectInterface) *QStringListModel {
+	var __rv uintptr
+	err := DirectQtDrv(unsafe.Pointer(&__rv), 358000, 358104, Native(parent), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	if err != nil || __rv == 0 {
+		return nil
+	}
+	_p := &QStringListModel{}
+	_p.SetDriver(__rv, 358000, false)
+	return _p
+}
+
 //QStringListModel::setStringList(QStringList const&)
 func (q *QStringListModel) SetStringList(strings []string) {
 	_strings, _strings_size := NewCSArray(strings)

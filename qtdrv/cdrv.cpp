@@ -16,7 +16,7 @@
 
 #include <QtGui>
 #include "cdrv.h"
-#include "cdrv_signal.h"	
+#include "cdrv_signal.h"
 
 
 int drv_QAbstractGraphicsShapeItem(void *_p, int funcid, void *p1, void *p2, void *p3, void *p4, void *p5, void *p6, void *p7, void *p8, void *p9, void *p10, void *p11, void *p12);
@@ -420,14 +420,14 @@ int drv_QWidgetAction(void *_p, int funcid, void *p1, void *p2, void *p3, void *
 int drv_QWizard(void *_p, int funcid, void *p1, void *p2, void *p3, void *p4, void *p5, void *p6, void *p7, void *p8, void *p9, void *p10, void *p11, void *p12);
 int drv_QWizardPage(void *_p, int funcid, void *p1, void *p2, void *p3, void *p4, void *p5, void *p6, void *p7, void *p8, void *p9, void *p10, void *p11, void *p12);
 // QAbstractGraphicsShapeItem
-int drv_QAbstractGraphicsShapeItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QAbstractGraphicsShapeItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QAbstractGraphicsShapeItem *pThis = (QAbstractGraphicsShapeItem*)_p;
 	switch (funcid) {
 	case 1000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 1102: {
 		*(void**)p1 = new QBrush(pThis->brush());
 		break;
@@ -453,14 +453,14 @@ int drv_QAbstractGraphicsShapeItem(void *_p, int funcid, void* p1,void* p2,void*
 }
 
 // QAbstractTextDocumentLayout_PaintContext
-int drv_QAbstractTextDocumentLayout_PaintContext(void *_p, int funcid, void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QAbstractTextDocumentLayout_PaintContext(void *_p, int funcid, void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QAbstractTextDocumentLayout::PaintContext *pThis = (QAbstractTextDocumentLayout::PaintContext*)_p;
 	switch (funcid) {
 	case 2000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 2102: {
 		*(void**)_p = new QAbstractTextDocumentLayout::PaintContext();
 		break;
@@ -472,14 +472,14 @@ int drv_QAbstractTextDocumentLayout_PaintContext(void *_p, int funcid, void*,voi
 }
 
 // QAbstractTextDocumentLayout_Selection
-int drv_QAbstractTextDocumentLayout_Selection(void *_p, int funcid, void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QAbstractTextDocumentLayout_Selection(void *_p, int funcid, void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QAbstractTextDocumentLayout::Selection *pThis = (QAbstractTextDocumentLayout::Selection*)_p;
 	switch (funcid) {
 	case 3000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	default:
 		return -1;
 	}
@@ -487,14 +487,14 @@ int drv_QAbstractTextDocumentLayout_Selection(void *_p, int funcid, void*,void*,
 }
 
 // QAbstractUndoItem
-int drv_QAbstractUndoItem(void *_p, int funcid, void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QAbstractUndoItem(void *_p, int funcid, void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QAbstractUndoItem *pThis = (QAbstractUndoItem*)_p;
 	switch (funcid) {
 	case 4000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 4102: {
 		pThis->redo();
 		break;
@@ -510,14 +510,14 @@ int drv_QAbstractUndoItem(void *_p, int funcid, void*,void*,void*,void*,void*,vo
 }
 
 // QActionEvent
-int drv_QActionEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QActionEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QActionEvent *pThis = (QActionEvent*)_p;
 	switch (funcid) {
 	case 5000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 5102: {
 		*(void**)_p = new QActionEvent(*(int*)p1,(QAction*)(p2),(QAction*)(p3));
 		break;
@@ -537,14 +537,14 @@ int drv_QActionEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 }
 
 // QApplication
-int drv_QApplication(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QApplication(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QApplication *pThis = (QApplication*)_p;
 	switch (funcid) {
 	case 6000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 6102: {
 		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(lastWindowClosed()),uis,SLOT(call()))) {
@@ -1018,7 +1018,7 @@ int drv_QApplication(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		drvSetString(p4,QCoreApplication::translate(drvGet_const_char(p1),drvGet_const_char(p2),drvGet_const_char(p3)));
 #else
 		drvSetString(p4,QCoreApplication::translate(drvGet_const_char(p1),drvGet_const_char(p2),drvGet_const_char(p3),QCoreApplication::UnicodeUTF8));
-#endif		
+#endif
 		break;
 	}
 	case 6214: {
@@ -1026,7 +1026,7 @@ int drv_QApplication(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		drvSetString(p5,QCoreApplication::translate(drvGet_const_char(p1),drvGet_const_char(p2),drvGet_const_char(p3),*(int*)p4));
 #else
 		drvSetString(p5,QCoreApplication::translate(drvGet_const_char(p1),drvGet_const_char(p2),drvGet_const_char(p3),QCoreApplication::UnicodeUTF8,*(int*)p4));
-#endif		
+#endif
 		break;
 	}
 	case 6215: {
@@ -1053,14 +1053,14 @@ int drv_QApplication(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 }
 
 // QBasicTimer
-int drv_QBasicTimer(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QBasicTimer(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QBasicTimer *pThis = (QBasicTimer*)_p;
 	switch (funcid) {
 	case 7000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 7102: {
 		*(void**)_p = new QBasicTimer();
 		break;
@@ -1088,14 +1088,14 @@ int drv_QBasicTimer(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,vo
 }
 
 // QBitmap
-int drv_QBitmap(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QBitmap(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QBitmap *pThis = (QBitmap*)_p;
 	switch (funcid) {
 	case 8000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 8102: {
 		*(void**)_p = new QBitmap();
 		break;
@@ -1154,14 +1154,14 @@ int drv_QBitmap(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 }
 
 // QBrush
-int drv_QBrush(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QBrush(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QBrush *pThis = (QBrush*)_p;
 	switch (funcid) {
 	case 9000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 9102: {
 		*(void**)_p = new QBrush();
 		break;
@@ -1286,14 +1286,14 @@ int drv_QBrush(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,v
 }
 
 // QByteArrayMatcher
-int drv_QByteArrayMatcher(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QByteArrayMatcher(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QByteArrayMatcher *pThis = (QByteArrayMatcher*)_p;
 	switch (funcid) {
 	case 10000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 10102: {
 		*(void**)_p = new QByteArrayMatcher();
 		break;
@@ -1330,14 +1330,14 @@ int drv_QByteArrayMatcher(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 }
 
 // QChildEvent
-int drv_QChildEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QChildEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QChildEvent *pThis = (QChildEvent*)_p;
 	switch (funcid) {
 	case 11000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 11102: {
 		*(void**)_p = new QChildEvent(*(QEvent::Type*)p1,(QObject*)(p2));
 		break;
@@ -1365,14 +1365,14 @@ int drv_QChildEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QCloseEvent
-int drv_QCloseEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QCloseEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QCloseEvent *pThis = (QCloseEvent*)_p;
 	switch (funcid) {
 	case 12000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 12102: {
 		*(void**)_p = new QCloseEvent();
 		break;
@@ -1384,14 +1384,14 @@ int drv_QCloseEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QColor
-int drv_QColor(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void*,void*,void*,void*,void*,void*)	
+int drv_QColor(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void*,void*,void*,void*,void*,void*)
 {
 	QColor *pThis = (QColor*)_p;
 	switch (funcid) {
 	case 13000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 13102: {
 		*(void**)_p = new QColor();
 		break;
@@ -1784,14 +1784,14 @@ int drv_QColor(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 }
 
 // QColormap
-int drv_QColormap(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QColormap(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QColormap *pThis = (QColormap*)_p;
 	switch (funcid) {
 	case 14000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 14102: {
 		if(p1==0)return -2;
 		*(void**)_p = new QColormap(*(QColormap*)(p1));
@@ -1845,14 +1845,14 @@ int drv_QColormap(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void
 }
 
 // QConicalGradient
-int drv_QConicalGradient(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QConicalGradient(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QConicalGradient *pThis = (QConicalGradient*)_p;
 	switch (funcid) {
 	case 15000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 15102: {
 		*(void**)_p = new QConicalGradient();
 		break;
@@ -1894,14 +1894,14 @@ int drv_QConicalGradient(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 }
 
 // QContextMenuEvent
-int drv_QContextMenuEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QContextMenuEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QContextMenuEvent *pThis = (QContextMenuEvent*)_p;
 	switch (funcid) {
 	case 16000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 16102: {
 		if(p2==0)return -2;
 		*(void**)_p = new QContextMenuEvent(*(QContextMenuEvent::Reason*)p1,*(QPoint*)(p2));
@@ -1954,14 +1954,14 @@ int drv_QContextMenuEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 }
 
 // QCryptographicHash
-int drv_QCryptographicHash(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QCryptographicHash(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QCryptographicHash *pThis = (QCryptographicHash*)_p;
 	switch (funcid) {
 	case 17000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 17102: {
 		*(void**)_p = new QCryptographicHash(*(QCryptographicHash::Algorithm*)p1);
 		break;
@@ -1989,14 +1989,14 @@ int drv_QCryptographicHash(void *_p, int funcid, void* p1,void* p2,void* p3,void
 }
 
 // QCursor
-int drv_QCursor(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QCursor(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QCursor *pThis = (QCursor*)_p;
 	switch (funcid) {
 	case 18000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 18102: {
 		*(void**)_p = new QCursor();
 		break;
@@ -2065,14 +2065,14 @@ int drv_QCursor(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,
 }
 
 // QDate
-int drv_QDate(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QDate(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QDate *pThis = (QDate*)_p;
 	switch (funcid) {
 	case 19000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 19102: {
 		*(void**)_p = new QDate();
 		break;
@@ -2238,14 +2238,14 @@ int drv_QDate(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,vo
 }
 
 // QDateTime
-int drv_QDateTime(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QDateTime(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QDateTime *pThis = (QDateTime*)_p;
 	switch (funcid) {
 	case 20000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 20102: {
 		*(void**)_p = new QDateTime();
 		break;
@@ -2422,14 +2422,14 @@ int drv_QDateTime(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,v
 }
 
 // QDesktopServices
-int drv_QDesktopServices(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QDesktopServices(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QDesktopServices *pThis = (QDesktopServices*)_p;
 	switch (funcid) {
 	case 21000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 21102: {
 		*(void**)_p = new QDesktopServices();
 		break;
@@ -2439,7 +2439,7 @@ int drv_QDesktopServices(void *_p, int funcid, void* p1,void* p2,void* p3,void*,
 		drvSetString(p2,QStandardPaths::displayName(*(QStandardPaths::StandardLocation*)p1));
 #else
 		drvSetString(p2,QDesktopServices::displayName(*(QDesktopServices::StandardLocation*)p1));
-#endif		
+#endif
 		break;
 	}
 	case 21104: {
@@ -2456,7 +2456,7 @@ int drv_QDesktopServices(void *_p, int funcid, void* p1,void* p2,void* p3,void*,
 		drvSetString(p2,QStandardPaths::writableLocation(*(QStandardPaths::StandardLocation*)p1));
 #else
 		drvSetString(p2,QDesktopServices::storageLocation(*(QDesktopServices::StandardLocation*)p1));
-#endif		
+#endif
 		break;
 	}
 	case 21107: {
@@ -2470,14 +2470,14 @@ int drv_QDesktopServices(void *_p, int funcid, void* p1,void* p2,void* p3,void*,
 }
 
 // QDir
-int drv_QDir(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QDir(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QDir *pThis = (QDir*)_p;
 	switch (funcid) {
 	case 22000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 22102: {
 		*(void**)_p = new QDir();
 		break;
@@ -2750,14 +2750,14 @@ int drv_QDir(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 }
 
 // QDirIterator
-int drv_QDirIterator(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QDirIterator(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QDirIterator *pThis = (QDirIterator*)_p;
 	switch (funcid) {
 	case 23000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 23102: {
 		if(p1==0)return -2;
 		*(void**)_p = new QDirIterator(*(QDir*)(p1),*(QFlags<QDirIterator::IteratorFlag>*)p2);
@@ -2806,14 +2806,14 @@ int drv_QDirIterator(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 }
 
 // QDragEnterEvent
-int drv_QDragEnterEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QDragEnterEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QDragEnterEvent *pThis = (QDragEnterEvent*)_p;
 	switch (funcid) {
 	case 24000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	default:
 		return drv_QDragMoveEvent(_p,funcid,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12);
 	}
@@ -2821,14 +2821,14 @@ int drv_QDragEnterEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 }
 
 // QDragLeaveEvent
-int drv_QDragLeaveEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QDragLeaveEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QDragLeaveEvent *pThis = (QDragLeaveEvent*)_p;
 	switch (funcid) {
 	case 25000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 25102: {
 		*(void**)_p = new QDragLeaveEvent();
 		break;
@@ -2840,14 +2840,14 @@ int drv_QDragLeaveEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 }
 
 // QDragMoveEvent
-int drv_QDragMoveEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QDragMoveEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QDragMoveEvent *pThis = (QDragMoveEvent*)_p;
 	switch (funcid) {
 	case 26000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 26102: {
 		pThis->accept();
 		break;
@@ -2877,14 +2877,14 @@ int drv_QDragMoveEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 }
 
 // QDropEvent
-int drv_QDropEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QDropEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QDropEvent *pThis = (QDropEvent*)_p;
 	switch (funcid) {
 	case 27000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 27102: {
 		pThis->acceptProposedAction();
 		break;
@@ -2932,14 +2932,14 @@ int drv_QDropEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 }
 
 // QDynamicPropertyChangeEvent
-int drv_QDynamicPropertyChangeEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QDynamicPropertyChangeEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QDynamicPropertyChangeEvent *pThis = (QDynamicPropertyChangeEvent*)_p;
 	switch (funcid) {
 	case 28000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 28102: {
 		*(void**)_p = new QDynamicPropertyChangeEvent(drvGetByteArrayHead(p1));
 		break;
@@ -2955,14 +2955,14 @@ int drv_QDynamicPropertyChangeEvent(void *_p, int funcid, void* p1,void* p2,void
 }
 
 // QEasingCurve
-int drv_QEasingCurve(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QEasingCurve(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QEasingCurve *pThis = (QEasingCurve*)_p;
 	switch (funcid) {
 	case 29000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 29102: {
 		*(void**)_p = new QEasingCurve();
 		break;
@@ -3019,14 +3019,14 @@ int drv_QEasingCurve(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,v
 }
 
 // QElapsedTimer
-int drv_QElapsedTimer(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QElapsedTimer(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QElapsedTimer *pThis = (QElapsedTimer*)_p;
 	switch (funcid) {
 	case 30000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 30102: {
 		*(void**)_p = new QElapsedTimer();
 		break;
@@ -3084,14 +3084,14 @@ int drv_QElapsedTimer(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,
 }
 
 // QEvent
-int drv_QEvent(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QEvent(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QEvent *pThis = (QEvent*)_p;
 	switch (funcid) {
 	case 31000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 31102: {
 		*(void**)_p = new QEvent(*(QEvent::Type*)p1);
 		break;
@@ -3135,14 +3135,14 @@ int drv_QEvent(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,v
 }
 
 // QFactoryInterface
-int drv_QFactoryInterface(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QFactoryInterface(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QFactoryInterface *pThis = (QFactoryInterface*)_p;
 	switch (funcid) {
 	case 32000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 32102: {
 		drvSetStringArray(p1,pThis->keys());
 		break;
@@ -3154,14 +3154,14 @@ int drv_QFactoryInterface(void *_p, int funcid, void* p1,void*,void*,void*,void*
 }
 
 // QFileIconProvider
-int drv_QFileIconProvider(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QFileIconProvider(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QFileIconProvider *pThis = (QFileIconProvider*)_p;
 	switch (funcid) {
 	case 33000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 33102: {
 		*(void**)_p = new QFileIconProvider();
 		break;
@@ -3187,14 +3187,14 @@ int drv_QFileIconProvider(void *_p, int funcid, void* p1,void* p2,void*,void*,vo
 }
 
 // QFileInfo
-int drv_QFileInfo(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QFileInfo(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QFileInfo *pThis = (QFileInfo*)_p;
 	switch (funcid) {
 	case 34000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 34102: {
 		*(void**)_p = new QFileInfo();
 		break;
@@ -3407,14 +3407,14 @@ int drv_QFileInfo(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void
 }
 
 // QFileOpenEvent
-int drv_QFileOpenEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QFileOpenEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QFileOpenEvent *pThis = (QFileOpenEvent*)_p;
 	switch (funcid) {
 	case 35000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 35102: {
 		*(void**)_p = new QFileOpenEvent(drvGetStringHead(p1));
 		break;
@@ -3439,14 +3439,14 @@ int drv_QFileOpenEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 }
 
 // QFocusEvent
-int drv_QFocusEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QFocusEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QFocusEvent *pThis = (QFocusEvent*)_p;
 	switch (funcid) {
 	case 36000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 36102: {
 		*(void**)_p = new QFocusEvent(*(QEvent::Type*)p1,*(Qt::FocusReason*)p2);
 		break;
@@ -3470,14 +3470,14 @@ int drv_QFocusEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QFont
-int drv_QFont(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QFont(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QFont *pThis = (QFont*)_p;
 	switch (funcid) {
 	case 37000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 37102: {
 		*(void**)_p = new QFont();
 		break;
@@ -3606,7 +3606,7 @@ int drv_QFont(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,vo
 		QFont::removeSubstitutions(drvGetStringHead(p1));
 #else
 		QFont::removeSubstitution(drvGetStringHead(p1));
-#endif		
+#endif
 		break;
 	}
 	case 37133: {
@@ -3765,14 +3765,14 @@ int drv_QFont(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,vo
 }
 
 // QFontDatabase
-int drv_QFontDatabase(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QFontDatabase(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QFontDatabase *pThis = (QFontDatabase*)_p;
 	switch (funcid) {
 	case 38000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 38102: {
 		*(void**)_p = new QFontDatabase();
 		break;
@@ -3910,14 +3910,14 @@ int drv_QFontDatabase(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 }
 
 // QFontInfo
-int drv_QFontInfo(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QFontInfo(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QFontInfo *pThis = (QFontInfo*)_p;
 	switch (funcid) {
 	case 39000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 39102: {
 		if(p1==0)return -2;
 		*(void**)_p = new QFontInfo(*(QFont*)(p1));
@@ -3995,14 +3995,14 @@ int drv_QFontInfo(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,v
 }
 
 // QFontMetrics
-int drv_QFontMetrics(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void*,void*,void*)	
+int drv_QFontMetrics(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void*,void*,void*)
 {
 	QFontMetrics *pThis = (QFontMetrics*)_p;
 	switch (funcid) {
 	case 40000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 40102: {
 		if(p1==0)return -2;
 		*(void**)_p = new QFontMetrics(*(QFont*)(p1));
@@ -4142,14 +4142,14 @@ int drv_QFontMetrics(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 }
 
 // QFontMetricsF
-int drv_QFontMetricsF(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void*,void*,void*,void*,void*,void*)	
+int drv_QFontMetricsF(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void*,void*,void*,void*,void*,void*)
 {
 	QFontMetricsF *pThis = (QFontMetricsF*)_p;
 	switch (funcid) {
 	case 41000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 41102: {
 		if(p1==0)return -2;
 		*(void**)_p = new QFontMetricsF(*(QFont*)(p1));
@@ -4278,14 +4278,14 @@ int drv_QFontMetricsF(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 }
 
 // QGenericArgument
-int drv_QGenericArgument(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QGenericArgument(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QGenericArgument *pThis = (QGenericArgument*)_p;
 	switch (funcid) {
 	case 42000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 42102: {
 		*(void**)_p = new QGenericArgument();
 		break;
@@ -4309,14 +4309,14 @@ int drv_QGenericArgument(void *_p, int funcid, void* p1,void* p2,void*,void*,voi
 }
 
 // QGenericReturnArgument
-int drv_QGenericReturnArgument(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGenericReturnArgument(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGenericReturnArgument *pThis = (QGenericReturnArgument*)_p;
 	switch (funcid) {
 	case 43000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 43102: {
 		*(void**)_p = new QGenericReturnArgument();
 		break;
@@ -4332,14 +4332,14 @@ int drv_QGenericReturnArgument(void *_p, int funcid, void* p1,void* p2,void* p3,
 }
 
 // QGestureEvent
-int drv_QGestureEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGestureEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGestureEvent *pThis = (QGestureEvent*)_p;
 	switch (funcid) {
 	case 44000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 44102: {
 		*(void**)_p = new QGestureEvent(drvGetObjectArrayHeadT<QGesture*>(p1));
 		break;
@@ -4428,14 +4428,14 @@ int drv_QGestureEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 }
 
 // QGestureRecognizer
-int drv_QGestureRecognizer(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QGestureRecognizer(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QGestureRecognizer *pThis = (QGestureRecognizer*)_p;
 	switch (funcid) {
 	case 45000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 45102: {
 		*(void**)p2 = pThis->create((QObject*)(p1));
 		break;
@@ -4463,14 +4463,14 @@ int drv_QGestureRecognizer(void *_p, int funcid, void* p1,void* p2,void* p3,void
 }
 
 // QGradient
-int drv_QGradient(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QGradient(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QGradient *pThis = (QGradient*)_p;
 	switch (funcid) {
 	case 46000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 46102: {
 		*(void**)_p = new QGradient();
 		break;
@@ -4515,14 +4515,14 @@ int drv_QGradient(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void
 }
 
 // QHashDummyValue
-int drv_QHashDummyValue(void *_p, int funcid, void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QHashDummyValue(void *_p, int funcid, void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QHashDummyValue *pThis = (QHashDummyValue*)_p;
 	switch (funcid) {
 	case 47000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	default:
 		return -1;
 	}
@@ -4530,14 +4530,14 @@ int drv_QHashDummyValue(void *_p, int funcid, void*,void*,void*,void*,void*,void
 }
 
 // QHelpEvent
-int drv_QHelpEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QHelpEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QHelpEvent *pThis = (QHelpEvent*)_p;
 	switch (funcid) {
 	case 48000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 48102: {
 		if(p2==0)return -2;
 	if(p3==0)return -2;
@@ -4575,14 +4575,14 @@ int drv_QHelpEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 }
 
 // QHideEvent
-int drv_QHideEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QHideEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QHideEvent *pThis = (QHideEvent*)_p;
 	switch (funcid) {
 	case 49000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 49102: {
 		*(void**)_p = new QHideEvent();
 		break;
@@ -4594,14 +4594,14 @@ int drv_QHideEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 }
 
 // QHoverEvent
-int drv_QHoverEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QHoverEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QHoverEvent *pThis = (QHoverEvent*)_p;
 	switch (funcid) {
 	case 50000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 50102: {
 		if(p2==0)return -2;
 	if(p3==0)return -2;
@@ -4623,14 +4623,14 @@ int drv_QHoverEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QIcon
-int drv_QIcon(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void*,void*,void*,void*)	
+int drv_QIcon(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void*,void*,void*,void*)
 {
 	QIcon *pThis = (QIcon*)_p;
 	switch (funcid) {
 	case 51000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 51102: {
 		*(void**)_p = new QIcon();
 		break;
@@ -4771,14 +4771,14 @@ int drv_QIcon(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 }
 
 // QIconDragEvent
-int drv_QIconDragEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QIconDragEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QIconDragEvent *pThis = (QIconDragEvent*)_p;
 	switch (funcid) {
 	case 52000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 52102: {
 		*(void**)_p = new QIconDragEvent();
 		break;
@@ -4790,14 +4790,14 @@ int drv_QIconDragEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 }
 
 // QImage
-int drv_QImage(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QImage(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QImage *pThis = (QImage*)_p;
 	switch (funcid) {
 	case 53000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 53102: {
 		*(void**)_p = new QImage();
 		break;
@@ -5200,14 +5200,14 @@ int drv_QImage(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 }
 
 // QImageIOHandler
-int drv_QImageIOHandler(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QImageIOHandler(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QImageIOHandler *pThis = (QImageIOHandler*)_p;
 	switch (funcid) {
 	case 54000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 54102: {
 		*(bool*)p1 = pThis->canRead();
 		break;
@@ -5289,14 +5289,14 @@ int drv_QImageIOHandler(void *_p, int funcid, void* p1,void* p2,void*,void*,void
 }
 
 // QImageReader
-int drv_QImageReader(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QImageReader(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QImageReader *pThis = (QImageReader*)_p;
 	switch (funcid) {
 	case 55000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 55102: {
 		*(void**)_p = new QImageReader();
 		break;
@@ -5484,14 +5484,14 @@ int drv_QImageReader(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,v
 }
 
 // QImageWriter
-int drv_QImageWriter(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QImageWriter(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QImageWriter *pThis = (QImageWriter*)_p;
 	switch (funcid) {
 	case 56000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 56102: {
 		*(void**)_p = new QImageWriter();
 		break;
@@ -5596,14 +5596,14 @@ int drv_QImageWriter(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,v
 }
 
 // QInputEvent
-int drv_QInputEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QInputEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QInputEvent *pThis = (QInputEvent*)_p;
 	switch (funcid) {
 	case 57000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 57102: {
 		*(void**)_p = new QInputEvent(*(QEvent::Type*)p1,*(QFlags<Qt::KeyboardModifier>*)p2);
 		break;
@@ -5623,14 +5623,14 @@ int drv_QInputEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QInputMethodEvent
-int drv_QInputMethodEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QInputMethodEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QInputMethodEvent *pThis = (QInputMethodEvent*)_p;
 	switch (funcid) {
 	case 58000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 58102: {
 		*(void**)_p = new QInputMethodEvent();
 		break;
@@ -5679,14 +5679,14 @@ int drv_QInputMethodEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 }
 
 // QInputMethodEvent_Attribute
-int drv_QInputMethodEvent_Attribute(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QInputMethodEvent_Attribute(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QInputMethodEvent::Attribute *pThis = (QInputMethodEvent::Attribute*)_p;
 	switch (funcid) {
 	case 59000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 59102: {
 		if(p4==0)return -2;
 		*(void**)_p = new QInputMethodEvent::Attribute(*(QInputMethodEvent::AttributeType*)p1,*(int*)p2,*(int*)p3,*(QVariant*)(p4));
@@ -5699,14 +5699,14 @@ int drv_QInputMethodEvent_Attribute(void *_p, int funcid, void* p1,void* p2,void
 }
 
 // QIntVariantMap
-int drv_QIntVariantMap(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QIntVariantMap(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QIntVariantMap *pThis = (QIntVariantMap*)_p;
 	switch (funcid) {
 	case 60000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 60102: {
 		*(void**)_p = new QIntVariantMap();
 		break;
@@ -5731,14 +5731,14 @@ int drv_QIntVariantMap(void *_p, int funcid, void* p1,void* p2,void*,void*,void*
 }
 
 // QItemEditorCreatorBase
-int drv_QItemEditorCreatorBase(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QItemEditorCreatorBase(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QItemEditorCreatorBase *pThis = (QItemEditorCreatorBase*)_p;
 	switch (funcid) {
 	case 61000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 61102: {
 		*(void**)p2 = pThis->createWidget((QWidget*)(p1));
 		break;
@@ -5754,14 +5754,14 @@ int drv_QItemEditorCreatorBase(void *_p, int funcid, void* p1,void* p2,void*,voi
 }
 
 // QItemEditorFactory
-int drv_QItemEditorFactory(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QItemEditorFactory(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QItemEditorFactory *pThis = (QItemEditorFactory*)_p;
 	switch (funcid) {
 	case 62000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 62102: {
 		*(void**)_p = new QItemEditorFactory();
 		break;
@@ -5793,14 +5793,14 @@ int drv_QItemEditorFactory(void *_p, int funcid, void* p1,void* p2,void* p3,void
 }
 
 // QItemSelection
-int drv_QItemSelection(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QItemSelection(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QItemSelection *pThis = (QItemSelection*)_p;
 	switch (funcid) {
 	case 63000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 63102: {
 		*(void**)_p = new QItemSelection();
 		break;
@@ -5844,14 +5844,14 @@ int drv_QItemSelection(void *_p, int funcid, void* p1,void* p2,void* p3,void*,vo
 }
 
 // QItemSelectionRange
-int drv_QItemSelectionRange(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QItemSelectionRange(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QItemSelectionRange *pThis = (QItemSelectionRange*)_p;
 	switch (funcid) {
 	case 64000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 64102: {
 		*(void**)_p = new QItemSelectionRange();
 		break;
@@ -5951,14 +5951,14 @@ int drv_QItemSelectionRange(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 }
 
 // QKeyEvent
-int drv_QKeyEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QKeyEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QKeyEvent *pThis = (QKeyEvent*)_p;
 	switch (funcid) {
 	case 65000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 65102: {
 		*(void**)_p = new QKeyEvent(*(QEvent::Type*)p1,*(int*)p2,*(QFlags<Qt::KeyboardModifier>*)p3,drvGetStringHead(p4),*(bool*)p5,*(unsigned short*)p6);
 		break;
@@ -6006,14 +6006,14 @@ int drv_QKeyEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 }
 
 // QKeySequence
-int drv_QKeySequence(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QKeySequence(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QKeySequence *pThis = (QKeySequence*)_p;
 	switch (funcid) {
 	case 66000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 66102: {
 		*(void**)_p = new QKeySequence();
 		break;
@@ -6087,14 +6087,14 @@ int drv_QKeySequence(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 }
 
 // QLayoutItem
-int drv_QLayoutItem(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QLayoutItem(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QLayoutItem *pThis = (QLayoutItem*)_p;
 	switch (funcid) {
 	case 67000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 67102: {
 		*(QFlags<Qt::AlignmentFlag>*)p1 = pThis->alignment();
 		break;
@@ -6171,14 +6171,14 @@ int drv_QLayoutItem(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,vo
 }
 
 // QLibraryInfo
-int drv_QLibraryInfo(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QLibraryInfo(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QLibraryInfo *pThis = (QLibraryInfo*)_p;
 	switch (funcid) {
 	case 68000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 68102: {
 		*(void**)p1 = new QDate(QLibraryInfo::buildDate());
 		break;
@@ -6202,14 +6202,14 @@ int drv_QLibraryInfo(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,v
 }
 
 // QLine
-int drv_QLine(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QLine(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QLine *pThis = (QLine*)_p;
 	switch (funcid) {
 	case 69000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 69102: {
 		*(void**)_p = new QLine();
 		break;
@@ -6305,14 +6305,14 @@ int drv_QLine(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,vo
 }
 
 // QLineF
-int drv_QLineF(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QLineF(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QLineF *pThis = (QLineF*)_p;
 	switch (funcid) {
 	case 70000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 70102: {
 		*(void**)_p = new QLineF();
 		break;
@@ -6469,14 +6469,14 @@ int drv_QLineF(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,v
 }
 
 // QLinearGradient
-int drv_QLinearGradient(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QLinearGradient(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QLinearGradient *pThis = (QLinearGradient*)_p;
 	switch (funcid) {
 	case 71000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 71102: {
 		*(void**)_p = new QLinearGradient();
 		break;
@@ -6524,14 +6524,14 @@ int drv_QLinearGradient(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 }
 
 // QListWidgetItem
-int drv_QListWidgetItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QListWidgetItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QListWidgetItem *pThis = (QListWidgetItem*)_p;
 	switch (funcid) {
 	case 72000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 72102: {
 		*(void**)_p = new QListWidgetItem();
 		break;
@@ -6717,14 +6717,14 @@ int drv_QListWidgetItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 }
 
 // QLocale
-int drv_QLocale(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QLocale(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QLocale *pThis = (QLocale*)_p;
 	switch (funcid) {
 	case 73000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 73102: {
 		*(void**)_p = new QLocale();
 		break;
@@ -7075,14 +7075,14 @@ int drv_QLocale(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,
 }
 
 // QMargins
-int drv_QMargins(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QMargins(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QMargins *pThis = (QMargins*)_p;
 	switch (funcid) {
 	case 74000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 74102: {
 		*(void**)_p = new QMargins();
 		break;
@@ -7134,14 +7134,14 @@ int drv_QMargins(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 }
 
 // QMatrix
-int drv_QMatrix(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void*,void*,void*,void*,void*,void*)	
+int drv_QMatrix(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void*,void*,void*,void*,void*,void*)
 {
 	QMatrix *pThis = (QMatrix*)_p;
 	switch (funcid) {
 	case 75000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 75102: {
 		*(void**)_p = new QMatrix();
 		break;
@@ -7245,14 +7245,14 @@ int drv_QMatrix(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 }
 
 // QMetaEnum
-int drv_QMetaEnum(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QMetaEnum(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QMetaEnum *pThis = (QMetaEnum*)_p;
 	switch (funcid) {
 	case 76000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 76102: {
 		*(void**)_p = new QMetaEnum();
 		break;
@@ -7312,14 +7312,14 @@ int drv_QMetaEnum(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void
 }
 
 // QMetaMethod
-int drv_QMetaMethod(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QMetaMethod(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QMetaMethod *pThis = (QMetaMethod*)_p;
 	switch (funcid) {
 	case 77000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 77102: {
 		*(void**)_p = new QMetaMethod();
 		break;
@@ -7357,7 +7357,7 @@ int drv_QMetaMethod(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*
 		drvSetByteArray(p1,pThis->methodSignature());
 #else
 		drvSetByteArray(p1,pThis->signature());
-#endif		
+#endif
 		break;
 	}
 	case 77111: {
@@ -7375,14 +7375,14 @@ int drv_QMetaMethod(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*
 }
 
 // QMetaObject
-int drv_QMetaObject(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void*)	
+int drv_QMetaObject(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void*)
 {
 	QMetaObject *pThis = (QMetaObject*)_p;
 	switch (funcid) {
 	case 78000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 78102: {
 		*(void**)_p = new QMetaObject();
 		break;
@@ -7534,14 +7534,14 @@ int drv_QMetaObject(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QMetaProperty
-int drv_QMetaProperty(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QMetaProperty(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QMetaProperty *pThis = (QMetaProperty*)_p;
 	switch (funcid) {
 	case 79000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 79102: {
 		*(void**)_p = new QMetaProperty();
 		break;
@@ -7682,14 +7682,14 @@ int drv_QMetaProperty(void *_p, int funcid, void* p1,void* p2,void* p3,void*,voi
 }
 
 // QModelIndex
-int drv_QModelIndex(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QModelIndex(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QModelIndex *pThis = (QModelIndex*)_p;
 	switch (funcid) {
 	case 80000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 80102: {
 		*(void**)_p = new QModelIndex();
 		break;
@@ -7754,14 +7754,14 @@ int drv_QModelIndex(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*
 }
 
 // QMouseEvent
-int drv_QMouseEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QMouseEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QMouseEvent *pThis = (QMouseEvent*)_p;
 	switch (funcid) {
 	case 81000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 81102: {
 		if(p2==0)return -2;
 		*(void**)_p = new QMouseEvent(*(QEvent::Type*)p1,*(QPoint*)(p2),*(Qt::MouseButton*)p3,*(QFlags<Qt::MouseButton>*)p4,*(QFlags<Qt::KeyboardModifier>*)p5);
@@ -7802,7 +7802,7 @@ int drv_QMouseEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		*(void**)p1 = new QPointF(pThis->localPos());
 #else
 		*(void**)p1 = new QPointF(pThis->posF());
-#endif		
+#endif
 		break;
 	}
 	case 81111: {
@@ -7820,14 +7820,14 @@ int drv_QMouseEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QMoveEvent
-int drv_QMoveEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QMoveEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QMoveEvent *pThis = (QMoveEvent*)_p;
 	switch (funcid) {
 	case 82000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 82102: {
 		if(p1==0)return -2;
 	if(p2==0)return -2;
@@ -7849,14 +7849,14 @@ int drv_QMoveEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 }
 
 // QPaintDevice
-int drv_QPaintDevice(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QPaintDevice(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QPaintDevice *pThis = (QPaintDevice*)_p;
 	switch (funcid) {
 	case 83000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 83102: {
 		*(int*)p1 = pThis->colorCount();
 		break;
@@ -7916,14 +7916,14 @@ int drv_QPaintDevice(void *_p, int funcid, void* p1,void*,void*,void*,void*,void
 }
 
 // QPaintEngine
-int drv_QPaintEngine(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QPaintEngine(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QPaintEngine *pThis = (QPaintEngine*)_p;
 	switch (funcid) {
 	case 84000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 84102: {
 		*(bool*)p2 = pThis->begin(drvGetPaintDevice(p1));
 		break;
@@ -8092,14 +8092,14 @@ int drv_QPaintEngine(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 }
 
 // QPaintEngineState
-int drv_QPaintEngineState(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QPaintEngineState(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QPaintEngineState *pThis = (QPaintEngineState*)_p;
 	switch (funcid) {
 	case 85000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 85102: {
 		*(void**)_p = new QPaintEngineState();
 		break;
@@ -8187,14 +8187,14 @@ int drv_QPaintEngineState(void *_p, int funcid, void* p1,void*,void*,void*,void*
 }
 
 // QPaintEvent
-int drv_QPaintEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QPaintEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QPaintEvent *pThis = (QPaintEvent*)_p;
 	switch (funcid) {
 	case 86000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 86102: {
 		if(p1==0)return -2;
 		*(void**)_p = new QPaintEvent(*(QRect*)(p1));
@@ -8220,14 +8220,14 @@ int drv_QPaintEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QPainter
-int drv_QPainter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void*,void*,void*)	
+int drv_QPainter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void*,void*,void*)
 {
 	QPainter *pThis = (QPainter*)_p;
 	switch (funcid) {
 	case 87000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 87102: {
 		*(void**)_p = new QPainter();
 		break;
@@ -9280,14 +9280,14 @@ int drv_QPainter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 }
 
 // QPainter_PixmapFragment
-int drv_QPainter_PixmapFragment(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void*,void*,void*,void*,void*)	
+int drv_QPainter_PixmapFragment(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void*,void*,void*,void*,void*)
 {
 	QPainter::PixmapFragment *pThis = (QPainter::PixmapFragment*)_p;
 	switch (funcid) {
 	case 88000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 88102: {
 		*(void**)_p = new QPainter::PixmapFragment();
 		break;
@@ -9305,14 +9305,14 @@ int drv_QPainter_PixmapFragment(void *_p, int funcid, void* p1,void* p2,void* p3
 }
 
 // QPainterPath
-int drv_QPainterPath(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void*,void*,void*,void*,void*)	
+int drv_QPainterPath(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void*,void*,void*,void*,void*)
 {
 	QPainterPath *pThis = (QPainterPath*)_p;
 	switch (funcid) {
 	case 89000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 89102: {
 		*(void**)_p = new QPainterPath();
 		break;
@@ -9642,14 +9642,14 @@ int drv_QPainterPath(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 }
 
 // QPainterPath_Element
-int drv_QPainterPath_Element(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QPainterPath_Element(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QPainterPath::Element *pThis = (QPainterPath::Element*)_p;
 	switch (funcid) {
 	case 90000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 90102: {
 		*(void**)_p = new QPainterPath::Element();
 		break;
@@ -9673,14 +9673,14 @@ int drv_QPainterPath_Element(void *_p, int funcid, void* p1,void*,void*,void*,vo
 }
 
 // QPainterPathStroker
-int drv_QPainterPathStroker(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QPainterPathStroker(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QPainterPathStroker *pThis = (QPainterPathStroker*)_p;
 	switch (funcid) {
 	case 91000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 91102: {
 		*(void**)_p = new QPainterPathStroker();
 		break;
@@ -9757,14 +9757,14 @@ int drv_QPainterPathStroker(void *_p, int funcid, void* p1,void* p2,void*,void*,
 }
 
 // QPalette
-int drv_QPalette(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void*,void*)	
+int drv_QPalette(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void*,void*)
 {
 	QPalette *pThis = (QPalette*)_p;
 	switch (funcid) {
 	case 92000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 92102: {
 		*(void**)_p = new QPalette();
 		break;
@@ -9991,14 +9991,14 @@ int drv_QPalette(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 }
 
 // QPen
-int drv_QPen(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QPen(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void*,void*,void*,void*,void*,void*,void*)
 {
 	QPen *pThis = (QPen*)_p;
 	switch (funcid) {
 	case 93000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 93102: {
 		*(void**)_p = new QPen();
 		break;
@@ -10127,14 +10127,14 @@ int drv_QPen(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,
 }
 
 // QPersistentModelIndex
-int drv_QPersistentModelIndex(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QPersistentModelIndex(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QPersistentModelIndex *pThis = (QPersistentModelIndex*)_p;
 	switch (funcid) {
 	case 94000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 94102: {
 		*(void**)_p = new QPersistentModelIndex();
 		break;
@@ -10204,14 +10204,14 @@ int drv_QPersistentModelIndex(void *_p, int funcid, void* p1,void* p2,void* p3,v
 }
 
 // QPicture
-int drv_QPicture(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QPicture(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QPicture *pThis = (QPicture*)_p;
 	switch (funcid) {
 	case 95000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 95102: {
 		*(void**)_p = new QPicture();
 		break;
@@ -10321,14 +10321,14 @@ int drv_QPicture(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 }
 
 // QPictureIO
-int drv_QPictureIO(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QPictureIO(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QPictureIO *pThis = (QPictureIO*)_p;
 	switch (funcid) {
 	case 96000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 96102: {
 		*(void**)_p = new QPictureIO();
 		break;
@@ -10445,14 +10445,14 @@ int drv_QPictureIO(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,voi
 }
 
 // QPixmap
-int drv_QPixmap(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QPixmap(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QPixmap *pThis = (QPixmap*)_p;
 	switch (funcid) {
 	case 97000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 97102: {
 		*(void**)_p = new QPixmap();
 		break;
@@ -10740,14 +10740,14 @@ int drv_QPixmap(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 }
 
 // QPixmapCache
-int drv_QPixmapCache(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QPixmapCache(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QPixmapCache *pThis = (QPixmapCache*)_p;
 	switch (funcid) {
 	case 98000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 98102: {
 		*(void**)_p = new QPixmapCache();
 		break;
@@ -10810,14 +10810,14 @@ int drv_QPixmapCache(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void
 }
 
 // QPixmapCache_Key
-int drv_QPixmapCache_Key(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QPixmapCache_Key(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QPixmapCache::Key *pThis = (QPixmapCache::Key*)_p;
 	switch (funcid) {
 	case 99000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 99102: {
 		*(void**)_p = new QPixmapCache::Key();
 		break;
@@ -10834,14 +10834,14 @@ int drv_QPixmapCache_Key(void *_p, int funcid, void* p1,void*,void*,void*,void*,
 }
 
 // QPoint
-int drv_QPoint(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QPoint(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QPoint *pThis = (QPoint*)_p;
 	switch (funcid) {
 	case 100000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 100102: {
 		*(void**)_p = new QPoint();
 		break;
@@ -10889,14 +10889,14 @@ int drv_QPoint(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,v
 }
 
 // QPointF
-int drv_QPointF(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QPointF(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QPointF *pThis = (QPointF*)_p;
 	switch (funcid) {
 	case 101000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 101102: {
 		*(void**)_p = new QPointF();
 		break;
@@ -10953,14 +10953,14 @@ int drv_QPointF(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,
 }
 
 // QPolygon
-int drv_QPolygon(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QPolygon(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QPolygon *pThis = (QPolygon*)_p;
 	switch (funcid) {
 	case 102000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 102102: {
 		*(void**)_p = new QPolygon();
 		break;
@@ -11053,14 +11053,14 @@ int drv_QPolygon(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,vo
 }
 
 // QPolygonF
-int drv_QPolygonF(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QPolygonF(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QPolygonF *pThis = (QPolygonF*)_p;
 	switch (funcid) {
 	case 103000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 103102: {
 		*(void**)_p = new QPolygonF();
 		break;
@@ -11145,14 +11145,14 @@ int drv_QPolygonF(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,v
 }
 
 // QPrintEngine
-int drv_QPrintEngine(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QPrintEngine(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QPrintEngine *pThis = (QPrintEngine*)_p;
 	switch (funcid) {
 	case 104000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 104102: {
 		*(bool*)p1 = pThis->abort();
 		break;
@@ -11185,14 +11185,14 @@ int drv_QPrintEngine(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,v
 }
 
 // QPrinter
-int drv_QPrinter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QPrinter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QPrinter *pThis = (QPrinter*)_p;
 	switch (funcid) {
 	case 105000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 105102: {
 		*(void**)_p = new QPrinter();
 		break;
@@ -11458,14 +11458,14 @@ int drv_QPrinter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 }
 
 // QPrinterInfo
-int drv_QPrinterInfo(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QPrinterInfo(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QPrinterInfo *pThis = (QPrinterInfo*)_p;
 	switch (funcid) {
 	case 106000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 106102: {
 		*(void**)_p = new QPrinterInfo();
 		break;
@@ -11511,14 +11511,14 @@ int drv_QPrinterInfo(void *_p, int funcid, void* p1,void*,void*,void*,void*,void
 }
 
 // QProcessEnvironment
-int drv_QProcessEnvironment(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QProcessEnvironment(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QProcessEnvironment *pThis = (QProcessEnvironment*)_p;
 	switch (funcid) {
 	case 107000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 107102: {
 		*(void**)_p = new QProcessEnvironment();
 		break;
@@ -11571,14 +11571,14 @@ int drv_QProcessEnvironment(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 }
 
 // QQuaternion
-int drv_QQuaternion(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QQuaternion(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void*,void*,void*,void*,void*,void*,void*)
 {
 	QQuaternion *pThis = (QQuaternion*)_p;
 	switch (funcid) {
 	case 108000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 108102: {
 		*(void**)_p = new QQuaternion();
 		break;
@@ -11707,14 +11707,14 @@ int drv_QQuaternion(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QRadialGradient
-int drv_QRadialGradient(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QRadialGradient(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QRadialGradient *pThis = (QRadialGradient*)_p;
 	switch (funcid) {
 	case 109000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 109102: {
 		*(void**)_p = new QRadialGradient();
 		break;
@@ -11779,14 +11779,14 @@ int drv_QRadialGradient(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 }
 
 // QReadLocker
-int drv_QReadLocker(void *_p, int funcid, void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QReadLocker(void *_p, int funcid, void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QReadLocker *pThis = (QReadLocker*)_p;
 	switch (funcid) {
 	case 110000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 110102: {
 		pThis->relock();
 		break;
@@ -11802,14 +11802,14 @@ int drv_QReadLocker(void *_p, int funcid, void*,void*,void*,void*,void*,void*,vo
 }
 
 // QRect
-int drv_QRect(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QRect(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void*,void*,void*,void*,void*,void*,void*)
 {
 	QRect *pThis = (QRect*)_p;
 	switch (funcid) {
 	case 111000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 111102: {
 		*(void**)_p = new QRect();
 		break;
@@ -12106,14 +12106,14 @@ int drv_QRect(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 }
 
 // QRectF
-int drv_QRectF(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QRectF(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void*,void*,void*,void*,void*,void*,void*)
 {
 	QRectF *pThis = (QRectF*)_p;
 	switch (funcid) {
 	case 112000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 112102: {
 		*(void**)_p = new QRectF();
 		break;
@@ -12409,14 +12409,14 @@ int drv_QRectF(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 }
 
 // QRegExp
-int drv_QRegExp(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QRegExp(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QRegExp *pThis = (QRegExp*)_p;
 	switch (funcid) {
 	case 113000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 113102: {
 		*(void**)_p = new QRegExp();
 		break;
@@ -12533,14 +12533,14 @@ int drv_QRegExp(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,
 }
 
 // QRegion
-int drv_QRegion(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QRegion(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void*,void*,void*,void*,void*,void*,void*)
 {
 	QRegion *pThis = (QRegion*)_p;
 	switch (funcid) {
 	case 114000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 114102: {
 		*(void**)_p = new QRegion();
 		break;
@@ -12665,7 +12665,7 @@ int drv_QRegion(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 }
 
 // QResHelp
-int drv_QResHelp(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QResHelp(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void*,void*,void*,void*,void*,void*,void*)
 {
 	QResHelp *pThis = (QResHelp*)_p;
 	switch (funcid) {
@@ -12684,14 +12684,14 @@ int drv_QResHelp(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 }
 
 // QResizeEvent
-int drv_QResizeEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QResizeEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QResizeEvent *pThis = (QResizeEvent*)_p;
 	switch (funcid) {
 	case 116000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 116102: {
 		if(p1==0)return -2;
 	if(p2==0)return -2;
@@ -12713,14 +12713,14 @@ int drv_QResizeEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 }
 
 // QResource
-int drv_QResource(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QResource(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QResource *pThis = (QResource*)_p;
 	switch (funcid) {
 	case 117000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 117102: {
 		*(void**)_p = new QResource();
 		break;
@@ -12813,14 +12813,14 @@ int drv_QResource(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,v
 }
 
 // QShortcutEvent
-int drv_QShortcutEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QShortcutEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QShortcutEvent *pThis = (QShortcutEvent*)_p;
 	switch (funcid) {
 	case 118000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 118102: {
 		if(p1==0)return -2;
 		*(void**)_p = new QShortcutEvent(*(QKeySequence*)(p1),*(int*)p2,*(bool*)p3);
@@ -12845,14 +12845,14 @@ int drv_QShortcutEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 }
 
 // QShowEvent
-int drv_QShowEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QShowEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QShowEvent *pThis = (QShowEvent*)_p;
 	switch (funcid) {
 	case 119000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 119102: {
 		*(void**)_p = new QShowEvent();
 		break;
@@ -12864,14 +12864,14 @@ int drv_QShowEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 }
 
 // QSize
-int drv_QSize(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QSize(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QSize *pThis = (QSize*)_p;
 	switch (funcid) {
 	case 120000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 120102: {
 		*(void**)_p = new QSize();
 		break;
@@ -12951,14 +12951,14 @@ int drv_QSize(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*
 }
 
 // QSizeF
-int drv_QSizeF(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QSizeF(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QSizeF *pThis = (QSizeF*)_p;
 	switch (funcid) {
 	case 121000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 121102: {
 		*(void**)_p = new QSizeF();
 		break;
@@ -13047,14 +13047,14 @@ int drv_QSizeF(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void
 }
 
 // QSizePolicy
-int drv_QSizePolicy(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QSizePolicy(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QSizePolicy *pThis = (QSizePolicy*)_p;
 	switch (funcid) {
 	case 122000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 122102: {
 		*(void**)_p = new QSizePolicy();
 		break;
@@ -13135,14 +13135,14 @@ int drv_QSizePolicy(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*
 }
 
 // QSpacerItem
-int drv_QSpacerItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QSpacerItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QSpacerItem *pThis = (QSpacerItem*)_p;
 	switch (funcid) {
 	case 123000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 123102: {
 		*(void**)_p = new QSpacerItem(*(int*)p1,*(int*)p2,*(QSizePolicy::Policy*)p3,*(QSizePolicy::Policy*)p4);
 		break;
@@ -13158,14 +13158,14 @@ int drv_QSpacerItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QStandardItem
-int drv_QStandardItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QStandardItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QStandardItem *pThis = (QStandardItem*)_p;
 	switch (funcid) {
 	case 124000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 124102: {
 		*(void**)_p = new QStandardItem();
 		break;
@@ -13525,14 +13525,14 @@ int drv_QStandardItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*,voi
 }
 
 // QStateMachine_SignalEvent
-int drv_QStateMachine_SignalEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QStateMachine_SignalEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QStateMachine::SignalEvent *pThis = (QStateMachine::SignalEvent*)_p;
 	switch (funcid) {
 	case 125000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 125102: {
 		*(void**)_p = new QStateMachine::SignalEvent((QObject*)(p1),*(int*)p2,drvGetNoObjectArrayHeadT<QVariant>(p3));
 		break;
@@ -13556,14 +13556,14 @@ int drv_QStateMachine_SignalEvent(void *_p, int funcid, void* p1,void* p2,void* 
 }
 
 // QStateMachine_WrappedEvent
-int drv_QStateMachine_WrappedEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QStateMachine_WrappedEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QStateMachine::WrappedEvent *pThis = (QStateMachine::WrappedEvent*)_p;
 	switch (funcid) {
 	case 126000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 126102: {
 		*(void**)_p = new QStateMachine::WrappedEvent((QObject*)(p1),(QEvent*)(p2));
 		break;
@@ -13583,14 +13583,14 @@ int drv_QStateMachine_WrappedEvent(void *_p, int funcid, void* p1,void* p2,void*
 }
 
 // QStaticText
-int drv_QStaticText(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QStaticText(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QStaticText *pThis = (QStaticText*)_p;
 	switch (funcid) {
 	case 127000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 127102: {
 		*(void**)_p = new QStaticText();
 		break;
@@ -13664,14 +13664,14 @@ int drv_QStaticText(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,vo
 }
 
 // QStatusTipEvent
-int drv_QStatusTipEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QStatusTipEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QStatusTipEvent *pThis = (QStatusTipEvent*)_p;
 	switch (funcid) {
 	case 128000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 128102: {
 		*(void**)_p = new QStatusTipEvent(drvGetStringHead(p1));
 		break;
@@ -13687,14 +13687,14 @@ int drv_QStatusTipEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 }
 
 // QStringMatcher
-int drv_QStringMatcher(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QStringMatcher(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QStringMatcher *pThis = (QStringMatcher*)_p;
 	switch (funcid) {
 	case 129000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 129102: {
 		*(void**)_p = new QStringMatcher();
 		break;
@@ -13747,14 +13747,14 @@ int drv_QStringMatcher(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 }
 
 // QStringVariantMap
-int drv_QStringVariantMap(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QStringVariantMap(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QStringVariantMap *pThis = (QStringVariantMap*)_p;
 	switch (funcid) {
 	case 130000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 130102: {
 		*(void**)_p = new QStringVariantMap();
 		break;
@@ -13779,14 +13779,14 @@ int drv_QStringVariantMap(void *_p, int funcid, void* p1,void* p2,void*,void*,vo
 }
 
 // QStyleFactory
-int drv_QStyleFactory(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QStyleFactory(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QStyleFactory *pThis = (QStyleFactory*)_p;
 	switch (funcid) {
 	case 131000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 131102: {
 		*(void**)_p = new QStyleFactory();
 		break;
@@ -13806,14 +13806,14 @@ int drv_QStyleFactory(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,
 }
 
 // QStyleHintReturn
-int drv_QStyleHintReturn(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QStyleHintReturn(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QStyleHintReturn *pThis = (QStyleHintReturn*)_p;
 	switch (funcid) {
 	case 132000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 132102: {
 		*(void**)_p = new QStyleHintReturn();
 		break;
@@ -13829,14 +13829,14 @@ int drv_QStyleHintReturn(void *_p, int funcid, void* p1,void* p2,void*,void*,voi
 }
 
 // QStyleHintReturnMask
-int drv_QStyleHintReturnMask(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QStyleHintReturnMask(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QStyleHintReturnMask *pThis = (QStyleHintReturnMask*)_p;
 	switch (funcid) {
 	case 133000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 133102: {
 		*(void**)_p = new QStyleHintReturnMask();
 		break;
@@ -13848,14 +13848,14 @@ int drv_QStyleHintReturnMask(void *_p, int funcid, void* p1,void* p2,void* p3,vo
 }
 
 // QStyleHintReturnVariant
-int drv_QStyleHintReturnVariant(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QStyleHintReturnVariant(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QStyleHintReturnVariant *pThis = (QStyleHintReturnVariant*)_p;
 	switch (funcid) {
 	case 134000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 134102: {
 		*(void**)_p = new QStyleHintReturnVariant();
 		break;
@@ -13867,14 +13867,14 @@ int drv_QStyleHintReturnVariant(void *_p, int funcid, void* p1,void* p2,void* p3
 }
 
 // QStylePainter
-int drv_QStylePainter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QStylePainter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QStylePainter *pThis = (QStylePainter*)_p;
 	switch (funcid) {
 	case 135000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 135102: {
 		*(void**)_p = new QStylePainter();
 		break;
@@ -13918,14 +13918,14 @@ int drv_QStylePainter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 }
 
 // QTableWidgetItem
-int drv_QTableWidgetItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTableWidgetItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTableWidgetItem *pThis = (QTableWidgetItem*)_p;
 	switch (funcid) {
 	case 136000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 136102: {
 		*(void**)_p = new QTableWidgetItem();
 		break;
@@ -14111,14 +14111,14 @@ int drv_QTableWidgetItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*,
 }
 
 // QTableWidgetSelectionRange
-int drv_QTableWidgetSelectionRange(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTableWidgetSelectionRange(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTableWidgetSelectionRange *pThis = (QTableWidgetSelectionRange*)_p;
 	switch (funcid) {
 	case 137000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 137102: {
 		*(void**)_p = new QTableWidgetSelectionRange();
 		break;
@@ -14163,14 +14163,14 @@ int drv_QTableWidgetSelectionRange(void *_p, int funcid, void* p1,void* p2,void*
 }
 
 // QTabletEvent
-int drv_QTabletEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTabletEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTabletEvent *pThis = (QTabletEvent*)_p;
 	switch (funcid) {
 	case 138000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 138102: {
 		*(QTabletEvent::TabletDevice*)p1 = pThis->device();
 		break;
@@ -14246,14 +14246,14 @@ int drv_QTabletEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 }
 
 // QTextBlock
-int drv_QTextBlock(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTextBlock(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTextBlock *pThis = (QTextBlock*)_p;
 	switch (funcid) {
 	case 139000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 139102: {
 		*(void**)_p = new QTextBlock();
 		break;
@@ -14394,14 +14394,14 @@ int drv_QTextBlock(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,voi
 }
 
 // QTextBlock_iterator
-int drv_QTextBlock_iterator(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTextBlock_iterator(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTextBlock::iterator *pThis = (QTextBlock::iterator*)_p;
 	switch (funcid) {
 	case 140000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 140102: {
 		*(bool*)p1 = pThis->atEnd();
 		break;
@@ -14426,14 +14426,14 @@ int drv_QTextBlock_iterator(void *_p, int funcid, void* p1,void*,void*,void*,voi
 }
 
 // QTextBlockFormat
-int drv_QTextBlockFormat(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTextBlockFormat(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTextBlockFormat *pThis = (QTextBlockFormat*)_p;
 	switch (funcid) {
 	case 141000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 141102: {
 		*(void**)_p = new QTextBlockFormat();
 		break;
@@ -14529,14 +14529,14 @@ int drv_QTextBlockFormat(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 }
 
 // QTextBlockUserData
-int drv_QTextBlockUserData(void *_p, int funcid, void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTextBlockUserData(void *_p, int funcid, void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTextBlockUserData *pThis = (QTextBlockUserData*)_p;
 	switch (funcid) {
 	case 142000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 142102: {
 		*(void**)_p = new QTextBlockUserData();
 		break;
@@ -14548,14 +14548,14 @@ int drv_QTextBlockUserData(void *_p, int funcid, void*,void*,void*,void*,void*,v
 }
 
 // QTextBoundaryFinder
-int drv_QTextBoundaryFinder(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTextBoundaryFinder(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTextBoundaryFinder *pThis = (QTextBoundaryFinder*)_p;
 	switch (funcid) {
 	case 143000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 143102: {
 		*(void**)_p = new QTextBoundaryFinder();
 		break;
@@ -14624,14 +14624,14 @@ int drv_QTextBoundaryFinder(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 }
 
 // QTextCharFormat
-int drv_QTextCharFormat(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTextCharFormat(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTextCharFormat *pThis = (QTextCharFormat*)_p;
 	switch (funcid) {
 	case 144000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 144102: {
 		*(void**)_p = new QTextCharFormat();
 		break;
@@ -14862,7 +14862,7 @@ int drv_QTextCharFormat(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 }
 
 // QTextCodec
-int drv_QTextCodec(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTextCodec(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTextCodec *pThis = (QTextCodec*)_p;
 	switch (funcid) {
@@ -14969,14 +14969,14 @@ int drv_QTextCodec(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 }
 
 // QTextCodec_ConverterState
-int drv_QTextCodec_ConverterState(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTextCodec_ConverterState(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTextCodec::ConverterState *pThis = (QTextCodec::ConverterState*)_p;
 	switch (funcid) {
 	case 146000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 146102: {
 		*(void**)_p = new QTextCodec::ConverterState();
 		break;
@@ -14992,14 +14992,14 @@ int drv_QTextCodec_ConverterState(void *_p, int funcid, void* p1,void*,void*,voi
 }
 
 // QTextCursor
-int drv_QTextCursor(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTextCursor(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTextCursor *pThis = (QTextCursor*)_p;
 	switch (funcid) {
 	case 147000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 147102: {
 		*(void**)_p = new QTextCursor();
 		break;
@@ -15325,14 +15325,14 @@ int drv_QTextCursor(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QTextDecoder
-int drv_QTextDecoder(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTextDecoder(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTextDecoder *pThis = (QTextDecoder*)_p;
 	switch (funcid) {
 	case 148000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 148102: {
 		*(void**)_p = new QTextDecoder((QTextCodec*)(p1));
 		break;
@@ -15356,14 +15356,14 @@ int drv_QTextDecoder(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,v
 }
 
 // QTextDocumentFragment
-int drv_QTextDocumentFragment(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTextDocumentFragment(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTextDocumentFragment *pThis = (QTextDocumentFragment*)_p;
 	switch (funcid) {
 	case 149000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 149102: {
 		*(void**)_p = new QTextDocumentFragment();
 		break;
@@ -15417,14 +15417,14 @@ int drv_QTextDocumentFragment(void *_p, int funcid, void* p1,void* p2,void* p3,v
 }
 
 // QTextDocumentWriter
-int drv_QTextDocumentWriter(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTextDocumentWriter(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTextDocumentWriter *pThis = (QTextDocumentWriter*)_p;
 	switch (funcid) {
 	case 150000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 150102: {
 		*(void**)_p = new QTextDocumentWriter();
 		break;
@@ -15489,14 +15489,14 @@ int drv_QTextDocumentWriter(void *_p, int funcid, void* p1,void* p2,void*,void*,
 }
 
 // QTextEdit_ExtraSelection
-int drv_QTextEdit_ExtraSelection(void *_p, int funcid, void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTextEdit_ExtraSelection(void *_p, int funcid, void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTextEdit::ExtraSelection *pThis = (QTextEdit::ExtraSelection*)_p;
 	switch (funcid) {
 	case 151000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	default:
 		return -1;
 	}
@@ -15504,14 +15504,14 @@ int drv_QTextEdit_ExtraSelection(void *_p, int funcid, void*,void*,void*,void*,v
 }
 
 // QTextEncoder
-int drv_QTextEncoder(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTextEncoder(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTextEncoder *pThis = (QTextEncoder*)_p;
 	switch (funcid) {
 	case 152000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 152102: {
 		*(void**)_p = new QTextEncoder((QTextCodec*)(p1));
 		break;
@@ -15539,14 +15539,14 @@ int drv_QTextEncoder(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void
 }
 
 // QTextFormat
-int drv_QTextFormat(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTextFormat(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTextFormat *pThis = (QTextFormat*)_p;
 	switch (funcid) {
 	case 153000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 153102: {
 		*(void**)_p = new QTextFormat();
 		break;
@@ -15751,14 +15751,14 @@ int drv_QTextFormat(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,vo
 }
 
 // QTextFragment
-int drv_QTextFragment(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTextFragment(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTextFragment *pThis = (QTextFragment*)_p;
 	switch (funcid) {
 	case 154000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 154102: {
 		*(void**)_p = new QTextFragment();
 		break;
@@ -15803,14 +15803,14 @@ int drv_QTextFragment(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,
 }
 
 // QTextFrame_iterator
-int drv_QTextFrame_iterator(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTextFrame_iterator(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTextFrame::iterator *pThis = (QTextFrame::iterator*)_p;
 	switch (funcid) {
 	case 155000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 155102: {
 		*(bool*)p1 = pThis->atEnd();
 		break;
@@ -15843,14 +15843,14 @@ int drv_QTextFrame_iterator(void *_p, int funcid, void* p1,void*,void*,void*,voi
 }
 
 // QTextFrameFormat
-int drv_QTextFrameFormat(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTextFrameFormat(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTextFrameFormat *pThis = (QTextFrameFormat*)_p;
 	switch (funcid) {
 	case 156000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 156102: {
 		*(void**)_p = new QTextFrameFormat();
 		break;
@@ -15981,14 +15981,14 @@ int drv_QTextFrameFormat(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 }
 
 // QTextImageFormat
-int drv_QTextImageFormat(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTextImageFormat(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTextImageFormat *pThis = (QTextImageFormat*)_p;
 	switch (funcid) {
 	case 157000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 157102: {
 		*(void**)_p = new QTextImageFormat();
 		break;
@@ -16028,14 +16028,14 @@ int drv_QTextImageFormat(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 }
 
 // QTextInlineObject
-int drv_QTextInlineObject(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTextInlineObject(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTextInlineObject *pThis = (QTextInlineObject*)_p;
 	switch (funcid) {
 	case 158000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 158102: {
 		*(void**)_p = new QTextInlineObject();
 		break;
@@ -16099,14 +16099,14 @@ int drv_QTextInlineObject(void *_p, int funcid, void* p1,void*,void*,void*,void*
 }
 
 // QTextItem
-int drv_QTextItem(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTextItem(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTextItem *pThis = (QTextItem*)_p;
 	switch (funcid) {
 	case 159000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 159102: {
 		*(void**)_p = new QTextItem();
 		break;
@@ -16142,14 +16142,14 @@ int drv_QTextItem(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,v
 }
 
 // QTextLayout
-int drv_QTextLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTextLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTextLayout *pThis = (QTextLayout*)_p;
 	switch (funcid) {
 	case 160000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 160102: {
 		*(void**)_p = new QTextLayout();
 		break;
@@ -16321,14 +16321,14 @@ int drv_QTextLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QTextLayout_FormatRange
-int drv_QTextLayout_FormatRange(void *_p, int funcid, void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTextLayout_FormatRange(void *_p, int funcid, void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTextLayout::FormatRange *pThis = (QTextLayout::FormatRange*)_p;
 	switch (funcid) {
 	case 161000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	default:
 		return -1;
 	}
@@ -16336,14 +16336,14 @@ int drv_QTextLayout_FormatRange(void *_p, int funcid, void*,void*,void*,void*,vo
 }
 
 // QTextLength
-int drv_QTextLength(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTextLength(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTextLength *pThis = (QTextLength*)_p;
 	switch (funcid) {
 	case 162000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 162102: {
 		*(void**)_p = new QTextLength();
 		break;
@@ -16371,14 +16371,14 @@ int drv_QTextLength(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,vo
 }
 
 // QTextLine
-int drv_QTextLine(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTextLine(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTextLine *pThis = (QTextLine*)_p;
 	switch (funcid) {
 	case 163000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 163102: {
 		*(void**)_p = new QTextLine();
 		break;
@@ -16508,14 +16508,14 @@ int drv_QTextLine(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,v
 }
 
 // QTextListFormat
-int drv_QTextListFormat(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTextListFormat(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTextListFormat *pThis = (QTextListFormat*)_p;
 	switch (funcid) {
 	case 164000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 164102: {
 		*(void**)_p = new QTextListFormat();
 		break;
@@ -16547,14 +16547,14 @@ int drv_QTextListFormat(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 }
 
 // QTextObjectInterface
-int drv_QTextObjectInterface(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTextObjectInterface(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTextObjectInterface *pThis = (QTextObjectInterface*)_p;
 	switch (funcid) {
 	case 165000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 165102: {
 		if(p2==0)return -2;
 	if(p5==0)return -2;
@@ -16573,14 +16573,14 @@ int drv_QTextObjectInterface(void *_p, int funcid, void* p1,void* p2,void* p3,vo
 }
 
 // QTextOption
-int drv_QTextOption(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTextOption(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTextOption *pThis = (QTextOption*)_p;
 	switch (funcid) {
 	case 166000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 166102: {
 		*(void**)_p = new QTextOption();
 		break;
@@ -16665,14 +16665,14 @@ int drv_QTextOption(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*
 }
 
 // QTextOption_Tab
-int drv_QTextOption_Tab(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTextOption_Tab(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTextOption::Tab *pThis = (QTextOption::Tab*)_p;
 	switch (funcid) {
 	case 167000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 167102: {
 		*(void**)_p = new QTextOption::Tab();
 		break;
@@ -16688,14 +16688,14 @@ int drv_QTextOption_Tab(void *_p, int funcid, void* p1,void* p2,void* p3,void*,v
 }
 
 // QTextTableCell
-int drv_QTextTableCell(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTextTableCell(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTextTableCell *pThis = (QTextTableCell*)_p;
 	switch (funcid) {
 	case 168000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 168102: {
 		*(void**)_p = new QTextTableCell();
 		break;
@@ -16769,14 +16769,14 @@ int drv_QTextTableCell(void *_p, int funcid, void* p1,void*,void*,void*,void*,vo
 }
 
 // QTextTableCellFormat
-int drv_QTextTableCellFormat(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTextTableCellFormat(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTextTableCellFormat *pThis = (QTextTableCellFormat*)_p;
 	switch (funcid) {
 	case 169000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 169102: {
 		*(void**)_p = new QTextTableCellFormat();
 		break;
@@ -16828,14 +16828,14 @@ int drv_QTextTableCellFormat(void *_p, int funcid, void* p1,void* p2,void* p3,vo
 }
 
 // QTextTableFormat
-int drv_QTextTableFormat(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTextTableFormat(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTextTableFormat *pThis = (QTextTableFormat*)_p;
 	switch (funcid) {
 	case 170000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 170102: {
 		*(void**)_p = new QTextTableFormat();
 		break;
@@ -16903,14 +16903,14 @@ int drv_QTextTableFormat(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 }
 
 // QTileRules
-int drv_QTileRules(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTileRules(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTileRules *pThis = (QTileRules*)_p;
 	switch (funcid) {
 	case 171000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 171102: {
 		*(void**)_p = new QTileRules();
 		break;
@@ -16930,14 +16930,14 @@ int drv_QTileRules(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,voi
 }
 
 // QTime
-int drv_QTime(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTime(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTime *pThis = (QTime*)_p;
 	switch (funcid) {
 	case 172000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 172102: {
 		*(void**)_p = new QTime();
 		break;
@@ -17048,14 +17048,14 @@ int drv_QTime(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 }
 
 // QTimerEvent
-int drv_QTimerEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTimerEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTimerEvent *pThis = (QTimerEvent*)_p;
 	switch (funcid) {
 	case 173000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 173102: {
 		*(void**)_p = new QTimerEvent(*(int*)p1);
 		break;
@@ -17071,14 +17071,14 @@ int drv_QTimerEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QToolBarChangeEvent
-int drv_QToolBarChangeEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QToolBarChangeEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QToolBarChangeEvent *pThis = (QToolBarChangeEvent*)_p;
 	switch (funcid) {
 	case 174000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 174102: {
 		*(void**)_p = new QToolBarChangeEvent(*(bool*)p1);
 		break;
@@ -17094,14 +17094,14 @@ int drv_QToolBarChangeEvent(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 }
 
 // QToolTip
-int drv_QToolTip(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QToolTip(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QToolTip *pThis = (QToolTip*)_p;
 	switch (funcid) {
 	case 175000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 175102: {
 		*(void**)p1 = new QFont(QToolTip::font());
 		break;
@@ -17150,14 +17150,14 @@ int drv_QToolTip(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 }
 
 // QTouchEvent
-int drv_QTouchEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTouchEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTouchEvent *pThis = (QTouchEvent*)_p;
 	switch (funcid) {
 	case 176000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 176102: {
 		pThis->setTouchPointStates(*(QFlags<Qt::TouchPointState>*)p1);
 		break;
@@ -17181,14 +17181,14 @@ int drv_QTouchEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QTouchEvent_TouchPoint
-int drv_QTouchEvent_TouchPoint(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTouchEvent_TouchPoint(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTouchEvent::TouchPoint *pThis = (QTouchEvent::TouchPoint*)_p;
 	switch (funcid) {
 	case 177000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 177102: {
 		*(void**)_p = new QTouchEvent::TouchPoint();
 		break;
@@ -17368,14 +17368,14 @@ int drv_QTouchEvent_TouchPoint(void *_p, int funcid, void* p1,void*,void*,void*,
 }
 
 // QTransform
-int drv_QTransform(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void*,void*,void*)	
+int drv_QTransform(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void*,void*,void*)
 {
 	QTransform *pThis = (QTransform*)_p;
 	switch (funcid) {
 	case 178000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 178102: {
 		*(void**)_p = new QTransform();
 		break;
@@ -17622,14 +17622,14 @@ int drv_QTransform(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 }
 
 // QTreeWidgetItem
-int drv_QTreeWidgetItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTreeWidgetItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTreeWidgetItem *pThis = (QTreeWidgetItem*)_p;
 	switch (funcid) {
 	case 179000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 179102: {
 		*(void**)_p = new QTreeWidgetItem();
 		break;
@@ -17918,14 +17918,14 @@ int drv_QTreeWidgetItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*,v
 }
 
 // QTreeWidgetItemIterator
-int drv_QTreeWidgetItemIterator(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QTreeWidgetItemIterator(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QTreeWidgetItemIterator *pThis = (QTreeWidgetItemIterator*)_p;
 	switch (funcid) {
 	case 180000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 180102: {
 		if(p1==0)return -2;
 		*(void**)_p = new QTreeWidgetItemIterator(*(QTreeWidgetItemIterator*)(p1));
@@ -17946,14 +17946,14 @@ int drv_QTreeWidgetItemIterator(void *_p, int funcid, void* p1,void* p2,void*,vo
 }
 
 // QUndoCommand
-int drv_QUndoCommand(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QUndoCommand(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QUndoCommand *pThis = (QUndoCommand*)_p;
 	switch (funcid) {
 	case 181000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 181102: {
 		*(void**)_p = new QUndoCommand();
 		break;
@@ -18005,14 +18005,14 @@ int drv_QUndoCommand(void *_p, int funcid, void* p1,void* p2,void*,void*,void*,v
 }
 
 // QUrl
-int drv_QUrl(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QUrl(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QUrl *pThis = (QUrl*)_p;
 	switch (funcid) {
 	case 182000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 182102: {
 		*(void**)_p = new QUrl();
 		break;
@@ -18132,7 +18132,7 @@ int drv_QUrl(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		drvSetString(p2,pThis->query());
 #else
 		drvSetString(p2,fromEncodedComponent_helper(pThis->encodedQuery()));
-#endif		
+#endif
 		break;
 	}
 	case 182131: {
@@ -18140,7 +18140,7 @@ int drv_QUrl(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		drvSetString(p2,pThis->query(*(QUrl::ComponentFormattingOption*)p1));
 #else
 		drvSetString(p2,fromEncodedComponent_helper(pThis->encodedQuery()));
-#endif		
+#endif
 		break;
 	}
 	case 182132: {
@@ -18185,7 +18185,7 @@ int drv_QUrl(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		pThis->setQuery(drvGetStringHead(p1));
 #else
 		pThis->setEncodedQuery(toLatin1_helper(drvGetStringHead(p1)));
-#endif		
+#endif
 		break;
 	}
 	case 182142: {
@@ -18194,7 +18194,7 @@ int drv_QUrl(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		pThis->setQuery(*(QUrlQuery*)(p1));
 #else
 		pThis->setEncodedQuery(toLatin1_helper((*(QUrlQuery*)(p1)).toString()));
-#endif		
+#endif
 		break;
 	}
 	case 182143: {
@@ -18202,7 +18202,7 @@ int drv_QUrl(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		pThis->setQuery(drvGetStringHead(p1),*(QUrl::ParsingMode*)p2);
 #else
 		pThis->setEncodedQuery(toLatin1_helper(drvGetStringHead(p1)));
-#endif		
+#endif
 		break;
 	}
 	case 182144: {
@@ -18234,7 +18234,7 @@ int drv_QUrl(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		drvSetByteArray(p2,pThis->toEncoded(*(QFlags<QUrl::UrlFormattingOption>*)p1));
 #else
 		drvSetByteArray(p2,pThis->toEncoded(*(QFlags<QUrl::FormattingOption>*)p1));
-#endif		
+#endif
 		break;
 	}
 	case 182151: {
@@ -18242,7 +18242,7 @@ int drv_QUrl(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		drvSetByteArray(p2,pThis->toEncoded(*(QFlags<QUrl::UrlFormattingOption>*)p1));
 #else
 		drvSetByteArray(p2,pThis->toEncoded(*(QFlags<QUrl::FormattingOption>*)p1));
-#endif		
+#endif
 		break;
 	}
 	case 182152: {
@@ -18262,7 +18262,7 @@ int drv_QUrl(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		drvSetString(p2,pThis->toString(*(QFlags<QUrl::UrlFormattingOption>*)p1));
 #else
 		drvSetString(p2,pThis->toString(*(QFlags<QUrl::FormattingOption>*)p1));
-#endif		
+#endif
 		break;
 	}
 	case 182156: {
@@ -18270,7 +18270,7 @@ int drv_QUrl(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 		drvSetString(p2,pThis->toString(*(QFlags<QUrl::UrlFormattingOption>*)p1));
 #else
 		drvSetString(p2,pThis->toString(*(QFlags<QUrl::FormattingOption>*)p1));
-#endif		
+#endif
 		break;
 	}
 	case 182157: {
@@ -18288,14 +18288,14 @@ int drv_QUrl(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,voi
 }
 
 // QUuid
-int drv_QUuid(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void*)	
+int drv_QUuid(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void*)
 {
 	QUuid *pThis = (QUuid*)_p;
 	switch (funcid) {
 	case 183000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 183102: {
 		*(void**)_p = new QUuid();
 		break;
@@ -18335,14 +18335,14 @@ int drv_QUuid(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 }
 
 // QVariant
-int drv_QVariant(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QVariant(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QVariant *pThis = (QVariant*)_p;
 	switch (funcid) {
 	case 184000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 184102: {
 		*(void**)_p = new QVariant();
 		break;
@@ -18674,14 +18674,14 @@ int drv_QVariant(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,vo
 }
 
 // QVariantComparisonHelper
-int drv_QVariantComparisonHelper(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QVariantComparisonHelper(void *_p, int funcid, void* p1,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QVariantComparisonHelper *pThis = (QVariantComparisonHelper*)_p;
 	switch (funcid) {
 	case 185000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 185102: {
 		if(p1==0)return -2;
 		*(void**)_p = new QVariantComparisonHelper(*(QVariant*)(p1));
@@ -18694,14 +18694,14 @@ int drv_QVariantComparisonHelper(void *_p, int funcid, void* p1,void*,void*,void
 }
 
 // QVector2D
-int drv_QVector2D(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QVector2D(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QVector2D *pThis = (QVector2D*)_p;
 	switch (funcid) {
 	case 186000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 186102: {
 		*(void**)_p = new QVector2D();
 		break;
@@ -18795,14 +18795,14 @@ int drv_QVector2D(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,v
 }
 
 // QVector3D
-int drv_QVector3D(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QVector3D(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QVector3D *pThis = (QVector3D*)_p;
 	switch (funcid) {
 	case 187000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 187102: {
 		*(void**)_p = new QVector3D();
 		break;
@@ -18947,14 +18947,14 @@ int drv_QVector3D(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 }
 
 // QVector4D
-int drv_QVector4D(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QVector4D(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QVector4D *pThis = (QVector4D*)_p;
 	switch (funcid) {
 	case 188000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 188102: {
 		*(void**)_p = new QVector4D();
 		break;
@@ -19082,14 +19082,14 @@ int drv_QVector4D(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 }
 
 // QWhatsThis
-int drv_QWhatsThis(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QWhatsThis(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QWhatsThis *pThis = (QWhatsThis*)_p;
 	switch (funcid) {
 	case 189000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 189102: {
 		*(void**)p1 = QWhatsThis::createAction();
 		break;
@@ -19126,14 +19126,14 @@ int drv_QWhatsThis(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,
 }
 
 // QWhatsThisClickedEvent
-int drv_QWhatsThisClickedEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QWhatsThisClickedEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QWhatsThisClickedEvent *pThis = (QWhatsThisClickedEvent*)_p;
 	switch (funcid) {
 	case 190000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 190102: {
 		*(void**)_p = new QWhatsThisClickedEvent(drvGetStringHead(p1));
 		break;
@@ -19149,14 +19149,14 @@ int drv_QWhatsThisClickedEvent(void *_p, int funcid, void* p1,void* p2,void* p3,
 }
 
 // QWheelEvent
-int drv_QWheelEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QWheelEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QWheelEvent *pThis = (QWheelEvent*)_p;
 	switch (funcid) {
 	case 191000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 191102: {
 		if(p1==0)return -2;
 		*(void**)_p = new QWheelEvent(*(QPoint*)(p1),*(int*)p2,*(QFlags<Qt::MouseButton>*)p3,*(QFlags<Qt::KeyboardModifier>*)p4,*(Qt::Orientation*)p5);
@@ -19211,14 +19211,14 @@ int drv_QWheelEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QWidgetItem
-int drv_QWidgetItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QWidgetItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QWidgetItem *pThis = (QWidgetItem*)_p;
 	switch (funcid) {
 	case 192000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 192102: {
 		*(void**)_p = new QWidgetItem((QWidget*)(p1));
 		break;
@@ -19230,14 +19230,14 @@ int drv_QWidgetItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QWindowStateChangeEvent
-int drv_QWindowStateChangeEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QWindowStateChangeEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QWindowStateChangeEvent *pThis = (QWindowStateChangeEvent*)_p;
 	switch (funcid) {
 	case 193000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 193102: {
 		*(void**)_p = new QWindowStateChangeEvent(*(QFlags<Qt::WindowState>*)p1);
 		break;
@@ -19261,14 +19261,14 @@ int drv_QWindowStateChangeEvent(void *_p, int funcid, void* p1,void* p2,void* p3
 }
 
 // QAbstractAnimation
-int drv_QAbstractAnimation(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QAbstractAnimation(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QAbstractAnimation *pThis = (QAbstractAnimation*)_p;
 	switch (funcid) {
 	case 194000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 194102: {
 		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(finished()),uis,SLOT(call()))) {
@@ -19388,14 +19388,14 @@ int drv_QAbstractAnimation(void *_p, int funcid, void* p1,void* p2,void* p3,void
 }
 
 // QAbstractButton
-int drv_QAbstractButton(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QAbstractButton(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QAbstractButton *pThis = (QAbstractButton*)_p;
 	switch (funcid) {
 	case 195000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 195102: {
 		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(clicked()),uis,SLOT(call()))) {
@@ -19562,14 +19562,14 @@ int drv_QAbstractButton(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 }
 
 // QAbstractItemDelegate
-int drv_QAbstractItemDelegate(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QAbstractItemDelegate(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QAbstractItemDelegate *pThis = (QAbstractItemDelegate*)_p;
 	switch (funcid) {
 	case 196000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 196102: {
 		UISignal25 *uis = new UISignal25(pThis);
 		if (QObject::connect(pThis,SIGNAL(sizeHintChanged(QModelIndex const&)),uis,SLOT(call(QModelIndex const&)))) {
@@ -19613,14 +19613,14 @@ int drv_QAbstractItemDelegate(void *_p, int funcid, void* p1,void* p2,void* p3,v
 }
 
 // QAbstractItemModel
-int drv_QAbstractItemModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QAbstractItemModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QAbstractItemModel *pThis = (QAbstractItemModel*)_p;
 	switch (funcid) {
 	case 197000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 197102: {
 		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(layoutChanged()),uis,SLOT(call()))) {
@@ -19943,14 +19943,14 @@ int drv_QAbstractItemModel(void *_p, int funcid, void* p1,void* p2,void* p3,void
 }
 
 // QAbstractItemView
-int drv_QAbstractItemView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QAbstractItemView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QAbstractItemView *pThis = (QAbstractItemView*)_p;
 	switch (funcid) {
 	case 198000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 198102: {
 		UISignal25 *uis = new UISignal25(pThis);
 		if (QObject::connect(pThis,SIGNAL(pressed(QModelIndex const&)),uis,SLOT(call(QModelIndex const&)))) {
@@ -20461,14 +20461,14 @@ int drv_QAbstractItemView(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 }
 
 // QAbstractListModel
-int drv_QAbstractListModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QAbstractListModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QAbstractListModel *pThis = (QAbstractListModel*)_p;
 	switch (funcid) {
 	case 199000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 199102: {
 		*(void**)p2 = new QModelIndex(pThis->index(*(int*)p1));
 		break;
@@ -20480,14 +20480,14 @@ int drv_QAbstractListModel(void *_p, int funcid, void* p1,void* p2,void* p3,void
 }
 
 // QAbstractPrintDialog
-int drv_QAbstractPrintDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QAbstractPrintDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QAbstractPrintDialog *pThis = (QAbstractPrintDialog*)_p;
 	switch (funcid) {
 	case 200000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 200102: {
 		pThis->addEnabledOption(*(QAbstractPrintDialog::PrintDialogOption*)p1);
 		break;
@@ -20555,14 +20555,14 @@ int drv_QAbstractPrintDialog(void *_p, int funcid, void* p1,void* p2,void* p3,vo
 }
 
 // QAbstractProxyModel
-int drv_QAbstractProxyModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QAbstractProxyModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QAbstractProxyModel *pThis = (QAbstractProxyModel*)_p;
 	switch (funcid) {
 	case 201000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 201102: {
 		if(p1==0)return -2;
 		*(void**)p2 = new QModelIndex(pThis->mapFromSource(*(QModelIndex*)(p1)));
@@ -20598,14 +20598,14 @@ int drv_QAbstractProxyModel(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 }
 
 // QAbstractScrollArea
-int drv_QAbstractScrollArea(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QAbstractScrollArea(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QAbstractScrollArea *pThis = (QAbstractScrollArea*)_p;
 	switch (funcid) {
 	case 202000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 202102: {
 		*(void**)_p = new QAbstractScrollArea();
 		break;
@@ -20702,14 +20702,14 @@ int drv_QAbstractScrollArea(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 }
 
 // QAbstractSlider
-int drv_QAbstractSlider(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QAbstractSlider(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QAbstractSlider *pThis = (QAbstractSlider*)_p;
 	switch (funcid) {
 	case 203000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 203102: {
 		UISignal72 *uis = new UISignal72(pThis);
 		if (QObject::connect(pThis,SIGNAL(rangeChanged(int,int)),uis,SLOT(call(int,int)))) {
@@ -20875,14 +20875,14 @@ int drv_QAbstractSlider(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 }
 
 // QAbstractSpinBox
-int drv_QAbstractSpinBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QAbstractSpinBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QAbstractSpinBox *pThis = (QAbstractSpinBox*)_p;
 	switch (funcid) {
 	case 204000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 204102: {
 		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(editingFinished()),uis,SLOT(call()))) {
@@ -21033,14 +21033,14 @@ int drv_QAbstractSpinBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 }
 
 // QAbstractState
-int drv_QAbstractState(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QAbstractState(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QAbstractState *pThis = (QAbstractState*)_p;
 	switch (funcid) {
 	case 205000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 205102: {
 		*(void**)p1 = pThis->machine();
 		break;
@@ -21064,14 +21064,14 @@ int drv_QAbstractState(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 }
 
 // QAbstractTableModel
-int drv_QAbstractTableModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QAbstractTableModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QAbstractTableModel *pThis = (QAbstractTableModel*)_p;
 	switch (funcid) {
 	case 206000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	default:
 		return drv_QAbstractItemModel(_p,funcid,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12);
 	}
@@ -21079,14 +21079,14 @@ int drv_QAbstractTableModel(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 }
 
 // QAbstractTextDocumentLayout
-int drv_QAbstractTextDocumentLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QAbstractTextDocumentLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QAbstractTextDocumentLayout *pThis = (QAbstractTextDocumentLayout*)_p;
 	switch (funcid) {
 	case 207000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 207102: {
 		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(pageCountChanged(int)),uis,SLOT(call(int)))) {
@@ -21212,14 +21212,14 @@ int drv_QAbstractTextDocumentLayout(void *_p, int funcid, void* p1,void* p2,void
 }
 
 // QAbstractTransition
-int drv_QAbstractTransition(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QAbstractTransition(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QAbstractTransition *pThis = (QAbstractTransition*)_p;
 	switch (funcid) {
 	case 208000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 208102: {
 		pThis->addAnimation((QAbstractAnimation*)(p1));
 		break;
@@ -21271,14 +21271,14 @@ int drv_QAbstractTransition(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 }
 
 // QAction
-int drv_QAction(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QAction(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QAction *pThis = (QAction*)_p;
 	switch (funcid) {
 	case 209000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 209102: {
 		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(changed()),uis,SLOT(call()))) {
@@ -21558,14 +21558,14 @@ int drv_QAction(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 }
 
 // QActionGroup
-int drv_QActionGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QActionGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QActionGroup *pThis = (QActionGroup*)_p;
 	switch (funcid) {
 	case 210000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 210102: {
 		UISignal6 *uis = new UISignal6(pThis);
 		if (QObject::connect(pThis,SIGNAL(hovered(QAction*)),uis,SLOT(call(QAction*)))) {
@@ -21651,14 +21651,14 @@ int drv_QActionGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 }
 
 // QAnimationGroup
-int drv_QAnimationGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QAnimationGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QAnimationGroup *pThis = (QAnimationGroup*)_p;
 	switch (funcid) {
 	case 211000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 211102: {
 		pThis->addAnimation((QAbstractAnimation*)(p1));
 		break;
@@ -21698,14 +21698,14 @@ int drv_QAnimationGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 }
 
 // QBoxLayout
-int drv_QBoxLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QBoxLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QBoxLayout *pThis = (QBoxLayout*)_p;
 	switch (funcid) {
 	case 212000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 212102: {
 		*(void**)_p = new QBoxLayout(*(QBoxLayout::Direction*)p1,(QWidget*)(p2));
 		break;
@@ -21813,14 +21813,14 @@ int drv_QBoxLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 }
 
 // QButtonGroup
-int drv_QButtonGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QButtonGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QButtonGroup *pThis = (QButtonGroup*)_p;
 	switch (funcid) {
 	case 213000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 213102: {
 		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(buttonClicked(int)),uis,SLOT(call(int)))) {
@@ -21922,14 +21922,14 @@ int drv_QButtonGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 }
 
 // QCalendarWidget
-int drv_QCalendarWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QCalendarWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QCalendarWidget *pThis = (QCalendarWidget*)_p;
 	switch (funcid) {
 	case 214000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 214102: {
 		UISignal10 *uis = new UISignal10(pThis);
 		if (QObject::connect(pThis,SIGNAL(clicked(QDate const&)),uis,SLOT(call(QDate const&)))) {
@@ -22150,14 +22150,14 @@ int drv_QCalendarWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 }
 
 // QCheckBox
-int drv_QCheckBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QCheckBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QCheckBox *pThis = (QCheckBox*)_p;
 	switch (funcid) {
 	case 215000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 215102: {
 		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(stateChanged(int)),uis,SLOT(call(int)))) {
@@ -22200,7 +22200,7 @@ int drv_QCheckBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 }
 
 // QClipboard
-int drv_QClipboard(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QClipboard(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QClipboard *pThis = (QClipboard*)_p;
 	switch (funcid) {
@@ -22347,14 +22347,14 @@ int drv_QClipboard(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 }
 
 // QColorDialog
-int drv_QColorDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QColorDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QColorDialog *pThis = (QColorDialog*)_p;
 	switch (funcid) {
 	case 217000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 217102: {
 		UISignal9 *uis = new UISignal9(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentColorChanged(QColor const&)),uis,SLOT(call(QColor const&)))) {
@@ -22442,7 +22442,7 @@ int drv_QColorDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		QColorDialog::setCustomColor(*(int*)p1,(*(QColor*)(p2)));
 #else
 		QColorDialog::setCustomColor(*(int*)p1,(*(QColor*)(p2)).rgb());
-#endif		
+#endif
 		break;
 	}
 	case 217121: {
@@ -22463,7 +22463,7 @@ int drv_QColorDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 		QColorDialog::setStandardColor(*(int*)p1,(*(QColor*)(p2)));
 #else
 		QColorDialog::setStandardColor(*(int*)p1,(*(QColor*)(p2)).rgb());
-#endif		
+#endif
 		break;
 	}
 	case 217125: {
@@ -22477,14 +22477,14 @@ int drv_QColorDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 }
 
 // QColumnView
-int drv_QColumnView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QColumnView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QColumnView *pThis = (QColumnView*)_p;
 	switch (funcid) {
 	case 218000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 218102: {
 		UISignal25 *uis = new UISignal25(pThis);
 		if (QObject::connect(pThis,SIGNAL(updatePreviewWidget(QModelIndex const&)),uis,SLOT(call(QModelIndex const&)))) {
@@ -22540,14 +22540,14 @@ int drv_QColumnView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QComboBox
-int drv_QComboBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QComboBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QComboBox *pThis = (QComboBox*)_p;
 	switch (funcid) {
 	case 219000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 219102: {
 		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(highlighted(QString const&)),uis,SLOT(call(QString const&)))) {
@@ -22888,14 +22888,14 @@ int drv_QComboBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 }
 
 // QCommandLinkButton
-int drv_QCommandLinkButton(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QCommandLinkButton(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QCommandLinkButton *pThis = (QCommandLinkButton*)_p;
 	switch (funcid) {
 	case 220000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 220102: {
 		*(void**)_p = new QCommandLinkButton();
 		break;
@@ -22927,14 +22927,14 @@ int drv_QCommandLinkButton(void *_p, int funcid, void* p1,void* p2,void* p3,void
 }
 
 // QCommonStyle
-int drv_QCommonStyle(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QCommonStyle(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QCommonStyle *pThis = (QCommonStyle*)_p;
 	switch (funcid) {
 	case 221000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 221102: {
 		*(void**)_p = new QCommonStyle();
 		break;
@@ -22946,14 +22946,14 @@ int drv_QCommonStyle(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 }
 
 // QCompleter
-int drv_QCompleter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QCompleter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QCompleter *pThis = (QCompleter*)_p;
 	switch (funcid) {
 	case 222000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 222102: {
 		UISignal25 *uis = new UISignal25(pThis);
 		if (QObject::connect(pThis,SIGNAL(highlighted(QModelIndex const&)),uis,SLOT(call(QModelIndex const&)))) {
@@ -23134,14 +23134,14 @@ int drv_QCompleter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 }
 
 // QDataWidgetMapper
-int drv_QDataWidgetMapper(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QDataWidgetMapper(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QDataWidgetMapper *pThis = (QDataWidgetMapper*)_p;
 	switch (funcid) {
 	case 223000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 223102: {
 		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentIndexChanged(int)),uis,SLOT(call(int)))) {
@@ -23270,14 +23270,14 @@ int drv_QDataWidgetMapper(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 }
 
 // QDateEdit
-int drv_QDateEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QDateEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QDateEdit *pThis = (QDateEdit*)_p;
 	switch (funcid) {
 	case 224000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 224102: {
 		*(void**)_p = new QDateEdit();
 		break;
@@ -23298,14 +23298,14 @@ int drv_QDateEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 }
 
 // QDateTimeEdit
-int drv_QDateTimeEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QDateTimeEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QDateTimeEdit *pThis = (QDateTimeEdit*)_p;
 	switch (funcid) {
 	case 225000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 225102: {
 		UISignal11 *uis = new UISignal11(pThis);
 		if (QObject::connect(pThis,SIGNAL(dateTimeChanged(QDateTime const&)),uis,SLOT(call(QDateTime const&)))) {
@@ -23557,14 +23557,14 @@ int drv_QDateTimeEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 }
 
 // QDesktopWidget
-int drv_QDesktopWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QDesktopWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QDesktopWidget *pThis = (QDesktopWidget*)_p;
 	switch (funcid) {
 	case 226000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 226102: {
 		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(resized(int)),uis,SLOT(call(int)))) {
@@ -23668,14 +23668,14 @@ int drv_QDesktopWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 }
 
 // QDial
-int drv_QDial(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QDial(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QDial *pThis = (QDial*)_p;
 	switch (funcid) {
 	case 227000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 227102: {
 		*(void**)_p = new QDial();
 		break;
@@ -23719,14 +23719,14 @@ int drv_QDial(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 }
 
 // QDialog
-int drv_QDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QDialog *pThis = (QDialog*)_p;
 	switch (funcid) {
 	case 228000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 228102: {
 		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(finished(int)),uis,SLOT(call(int)))) {
@@ -23827,14 +23827,14 @@ int drv_QDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 }
 
 // QDialogButtonBox
-int drv_QDialogButtonBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QDialogButtonBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QDialogButtonBox *pThis = (QDialogButtonBox*)_p;
 	switch (funcid) {
 	case 229000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 229102: {
 		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(accepted()),uis,SLOT(call()))) {
@@ -23946,14 +23946,14 @@ int drv_QDialogButtonBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 }
 
 // QDirModel
-int drv_QDirModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QDirModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QDirModel *pThis = (QDirModel*)_p;
 	switch (funcid) {
 	case 230000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 230102: {
 		*(void**)_p = new QDirModel();
 		break;
@@ -24089,14 +24089,14 @@ int drv_QDirModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 }
 
 // QDockWidget
-int drv_QDockWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QDockWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QDockWidget *pThis = (QDockWidget*)_p;
 	switch (funcid) {
 	case 231000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 231102: {
 		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(topLevelChanged(bool)),uis,SLOT(call(bool)))) {
@@ -24199,14 +24199,14 @@ int drv_QDockWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QDoubleSpinBox
-int drv_QDoubleSpinBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QDoubleSpinBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QDoubleSpinBox *pThis = (QDoubleSpinBox*)_p;
 	switch (funcid) {
 	case 232000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 232102: {
 		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(valueChanged(QString const&)),uis,SLOT(call(QString const&)))) {
@@ -24308,14 +24308,14 @@ int drv_QDoubleSpinBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 }
 
 // QDoubleValidator
-int drv_QDoubleValidator(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QDoubleValidator(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QDoubleValidator *pThis = (QDoubleValidator*)_p;
 	switch (funcid) {
 	case 233000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 233102: {
 		*(void**)_p = new QDoubleValidator();
 		break;
@@ -24371,14 +24371,14 @@ int drv_QDoubleValidator(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 }
 
 // QDrag
-int drv_QDrag(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QDrag(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QDrag *pThis = (QDrag*)_p;
 	switch (funcid) {
 	case 234000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 234102: {
 		UISignal58 *uis = new UISignal58(pThis);
 		if (QObject::connect(pThis,SIGNAL(targetChanged(QWidget*)),uis,SLOT(call(QWidget*)))) {
@@ -24463,14 +24463,14 @@ int drv_QDrag(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 }
 
 // QErrorMessage
-int drv_QErrorMessage(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QErrorMessage(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QErrorMessage *pThis = (QErrorMessage*)_p;
 	switch (funcid) {
 	case 235000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 235102: {
 		*(void**)_p = new QErrorMessage();
 		break;
@@ -24498,14 +24498,14 @@ int drv_QErrorMessage(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 }
 
 // QEventLoop
-int drv_QEventLoop(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QEventLoop(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QEventLoop *pThis = (QEventLoop*)_p;
 	switch (funcid) {
 	case 236000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 236102: {
 		*(void**)_p = new QEventLoop();
 		break;
@@ -24561,14 +24561,14 @@ int drv_QEventLoop(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 }
 
 // QEventTransition
-int drv_QEventTransition(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QEventTransition(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QEventTransition *pThis = (QEventTransition*)_p;
 	switch (funcid) {
 	case 237000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 237102: {
 		*(void**)_p = new QEventTransition();
 		break;
@@ -24604,14 +24604,14 @@ int drv_QEventTransition(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 }
 
 // QFile
-int drv_QFile(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QFile(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QFile *pThis = (QFile*)_p;
 	switch (funcid) {
 	case 238000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 238102: {
 		*(void**)_p = new QFile();
 		break;
@@ -24763,14 +24763,14 @@ int drv_QFile(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 }
 
 // QFileDialog
-int drv_QFileDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QFileDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QFileDialog *pThis = (QFileDialog*)_p;
 	switch (funcid) {
 	case 239000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 239102: {
 		UISignal43 *uis = new UISignal43(pThis);
 		if (QObject::connect(pThis,SIGNAL(filesSelected(QStringList const&)),uis,SLOT(call(QStringList const&)))) {
@@ -25060,14 +25060,14 @@ int drv_QFileDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QFileSystemModel
-int drv_QFileSystemModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QFileSystemModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QFileSystemModel *pThis = (QFileSystemModel*)_p;
 	switch (funcid) {
 	case 240000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 240102: {
 		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(directoryLoaded(QString const&)),uis,SLOT(call(QString const&)))) {
@@ -25240,14 +25240,14 @@ int drv_QFileSystemModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 }
 
 // QFileSystemWatcher
-int drv_QFileSystemWatcher(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QFileSystemWatcher(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QFileSystemWatcher *pThis = (QFileSystemWatcher*)_p;
 	switch (funcid) {
 	case 241000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 241102: {
 		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(fileChanged(QString const&)),uis,SLOT(call(QString const&)))) {
@@ -25305,14 +25305,14 @@ int drv_QFileSystemWatcher(void *_p, int funcid, void* p1,void* p2,void* p3,void
 }
 
 // QFinalState
-int drv_QFinalState(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QFinalState(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QFinalState *pThis = (QFinalState*)_p;
 	switch (funcid) {
 	case 242000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 242102: {
 		*(void**)_p = new QFinalState();
 		break;
@@ -25328,14 +25328,14 @@ int drv_QFinalState(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QFocusFrame
-int drv_QFocusFrame(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QFocusFrame(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QFocusFrame *pThis = (QFocusFrame*)_p;
 	switch (funcid) {
 	case 243000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 243102: {
 		*(void**)_p = new QFocusFrame();
 		break;
@@ -25359,14 +25359,14 @@ int drv_QFocusFrame(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QFontComboBox
-int drv_QFontComboBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QFontComboBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QFontComboBox *pThis = (QFontComboBox*)_p;
 	switch (funcid) {
 	case 244000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 244102: {
 		UISignal17 *uis = new UISignal17(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentFontChanged(QFont const&)),uis,SLOT(call(QFont const&)))) {
@@ -25414,14 +25414,14 @@ int drv_QFontComboBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 }
 
 // QFontDialog
-int drv_QFontDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QFontDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QFontDialog *pThis = (QFontDialog*)_p;
 	switch (funcid) {
 	case 245000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 245102: {
 		UISignal17 *uis = new UISignal17(pThis);
 		if (QObject::connect(pThis,SIGNAL(fontSelected(QFont const&)),uis,SLOT(call(QFont const&)))) {
@@ -25520,14 +25520,14 @@ int drv_QFontDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QFormLayout
-int drv_QFormLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QFormLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QFormLayout *pThis = (QFormLayout*)_p;
 	switch (funcid) {
 	case 246000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 246102: {
 		*(void**)_p = new QFormLayout();
 		break;
@@ -25687,14 +25687,14 @@ int drv_QFormLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QFrame
-int drv_QFrame(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QFrame(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QFrame *pThis = (QFrame*)_p;
 	switch (funcid) {
 	case 247000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 247102: {
 		*(void**)_p = new QFrame();
 		break;
@@ -25767,14 +25767,14 @@ int drv_QFrame(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 }
 
 // QFutureWatcherBase
-int drv_QFutureWatcherBase(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QFutureWatcherBase(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QFutureWatcherBase *pThis = (QFutureWatcherBase*)_p;
 	switch (funcid) {
 	case 248000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 248102: {
 		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(finished()),uis,SLOT(call()))) {
@@ -25924,14 +25924,14 @@ int drv_QFutureWatcherBase(void *_p, int funcid, void* p1,void* p2,void* p3,void
 }
 
 // QGesture
-int drv_QGesture(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGesture(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGesture *pThis = (QGesture*)_p;
 	switch (funcid) {
 	case 249000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 249102: {
 		*(void**)_p = new QGesture();
 		break;
@@ -25980,14 +25980,14 @@ int drv_QGesture(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 }
 
 // QGraphicsAnchor
-int drv_QGraphicsAnchor(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsAnchor(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsAnchor *pThis = (QGraphicsAnchor*)_p;
 	switch (funcid) {
 	case 250000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 250102: {
 		pThis->setSizePolicy(*(QSizePolicy::Policy*)p1);
 		break;
@@ -26015,14 +26015,14 @@ int drv_QGraphicsAnchor(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 }
 
 // QGraphicsAnchorLayout
-int drv_QGraphicsAnchorLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsAnchorLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsAnchorLayout *pThis = (QGraphicsAnchorLayout*)_p;
 	switch (funcid) {
 	case 251000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 251102: {
 		*(void**)_p = new QGraphicsAnchorLayout();
 		break;
@@ -26074,14 +26074,14 @@ int drv_QGraphicsAnchorLayout(void *_p, int funcid, void* p1,void* p2,void* p3,v
 }
 
 // QGraphicsBlurEffect
-int drv_QGraphicsBlurEffect(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsBlurEffect(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsBlurEffect *pThis = (QGraphicsBlurEffect*)_p;
 	switch (funcid) {
 	case 252000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 252102: {
 		UISignal67 *uis = new UISignal67(pThis);
 		if (QObject::connect(pThis,SIGNAL(blurRadiusChanged(double)),uis,SLOT(call(double)))) {
@@ -26127,14 +26127,14 @@ int drv_QGraphicsBlurEffect(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 }
 
 // QGraphicsColorizeEffect
-int drv_QGraphicsColorizeEffect(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsColorizeEffect(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsColorizeEffect *pThis = (QGraphicsColorizeEffect*)_p;
 	switch (funcid) {
 	case 253000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 253102: {
 		UISignal9 *uis = new UISignal9(pThis);
 		if (QObject::connect(pThis,SIGNAL(colorChanged(QColor const&)),uis,SLOT(call(QColor const&)))) {
@@ -26181,14 +26181,14 @@ int drv_QGraphicsColorizeEffect(void *_p, int funcid, void* p1,void* p2,void* p3
 }
 
 // QGraphicsDropShadowEffect
-int drv_QGraphicsDropShadowEffect(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsDropShadowEffect(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsDropShadowEffect *pThis = (QGraphicsDropShadowEffect*)_p;
 	switch (funcid) {
 	case 254000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 254102: {
 		UISignal67 *uis = new UISignal67(pThis);
 		if (QObject::connect(pThis,SIGNAL(blurRadiusChanged(double)),uis,SLOT(call(double)))) {
@@ -26275,14 +26275,14 @@ int drv_QGraphicsDropShadowEffect(void *_p, int funcid, void* p1,void* p2,void* 
 }
 
 // QGraphicsEffect
-int drv_QGraphicsEffect(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsEffect(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsEffect *pThis = (QGraphicsEffect*)_p;
 	switch (funcid) {
 	case 255000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 255102: {
 		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(enabledChanged(bool)),uis,SLOT(call(bool)))) {
@@ -26346,14 +26346,14 @@ int drv_QGraphicsEffect(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 }
 
 // QGraphicsEllipseItem
-int drv_QGraphicsEllipseItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsEllipseItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsEllipseItem *pThis = (QGraphicsEllipseItem*)_p;
 	switch (funcid) {
 	case 256000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 256102: {
 		*(void**)_p = new QGraphicsEllipseItem();
 		break;
@@ -26407,14 +26407,14 @@ int drv_QGraphicsEllipseItem(void *_p, int funcid, void* p1,void* p2,void* p3,vo
 }
 
 // QGraphicsGridLayout
-int drv_QGraphicsGridLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsGridLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsGridLayout *pThis = (QGraphicsGridLayout*)_p;
 	switch (funcid) {
 	case 257000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 257102: {
 		*(void**)_p = new QGraphicsGridLayout();
 		break;
@@ -26586,14 +26586,14 @@ int drv_QGraphicsGridLayout(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 }
 
 // QGraphicsItem
-int drv_QGraphicsItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void*,void*,void*,void*,void*,void*)	
+int drv_QGraphicsItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void*,void*,void*,void*,void*,void*)
 {
 	QGraphicsItem *pThis = (QGraphicsItem*)_p;
 	switch (funcid) {
 	case 258000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 258102: {
 		*(bool*)p1 = pThis->acceptDrops();
 		break;
@@ -27409,14 +27409,14 @@ int drv_QGraphicsItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 }
 
 // QGraphicsItemAnimation
-int drv_QGraphicsItemAnimation(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsItemAnimation(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsItemAnimation *pThis = (QGraphicsItemAnimation*)_p;
 	switch (funcid) {
 	case 259000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 259102: {
 		*(void**)_p = new QGraphicsItemAnimation();
 		break;
@@ -27525,14 +27525,14 @@ int drv_QGraphicsItemAnimation(void *_p, int funcid, void* p1,void* p2,void* p3,
 }
 
 // QGraphicsItemGroup
-int drv_QGraphicsItemGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsItemGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsItemGroup *pThis = (QGraphicsItemGroup*)_p;
 	switch (funcid) {
 	case 260000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 260102: {
 		*(void**)_p = new QGraphicsItemGroup();
 		break;
@@ -27556,14 +27556,14 @@ int drv_QGraphicsItemGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void
 }
 
 // QGraphicsLayout
-int drv_QGraphicsLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsLayout *pThis = (QGraphicsLayout*)_p;
 	switch (funcid) {
 	case 261000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 261102: {
 		pThis->activate();
 		break;
@@ -27611,14 +27611,14 @@ int drv_QGraphicsLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 }
 
 // QGraphicsLayoutItem
-int drv_QGraphicsLayoutItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QGraphicsLayoutItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QGraphicsLayoutItem *pThis = (QGraphicsLayoutItem*)_p;
 	switch (funcid) {
 	case 262000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 262102: {
 		*(void**)p1 = new QRectF(pThis->contentsRect());
 		break;
@@ -27775,14 +27775,14 @@ int drv_QGraphicsLayoutItem(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 }
 
 // QGraphicsLineItem
-int drv_QGraphicsLineItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsLineItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsLineItem *pThis = (QGraphicsLineItem*)_p;
 	switch (funcid) {
 	case 263000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 263102: {
 		*(void**)_p = new QGraphicsLineItem();
 		break;
@@ -27829,14 +27829,14 @@ int drv_QGraphicsLineItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 }
 
 // QGraphicsLinearLayout
-int drv_QGraphicsLinearLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsLinearLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsLinearLayout *pThis = (QGraphicsLinearLayout*)_p;
 	switch (funcid) {
 	case 264000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 264102: {
 		*(void**)_p = new QGraphicsLinearLayout();
 		break;
@@ -27936,14 +27936,14 @@ int drv_QGraphicsLinearLayout(void *_p, int funcid, void* p1,void* p2,void* p3,v
 }
 
 // QGraphicsObject
-int drv_QGraphicsObject(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsObject(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsObject *pThis = (QGraphicsObject*)_p;
 	switch (funcid) {
 	case 265000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 265102: {
 		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(rotationChanged()),uis,SLOT(call()))) {
@@ -28055,14 +28055,14 @@ int drv_QGraphicsObject(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 }
 
 // QGraphicsOpacityEffect
-int drv_QGraphicsOpacityEffect(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsOpacityEffect(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsOpacityEffect *pThis = (QGraphicsOpacityEffect*)_p;
 	switch (funcid) {
 	case 266000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 266102: {
 		UISignal67 *uis = new UISignal67(pThis);
 		if (QObject::connect(pThis,SIGNAL(opacityChanged(double)),uis,SLOT(call(double)))) {
@@ -28109,14 +28109,14 @@ int drv_QGraphicsOpacityEffect(void *_p, int funcid, void* p1,void* p2,void* p3,
 }
 
 // QGraphicsPathItem
-int drv_QGraphicsPathItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsPathItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsPathItem *pThis = (QGraphicsPathItem*)_p;
 	switch (funcid) {
 	case 267000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 267102: {
 		*(void**)_p = new QGraphicsPathItem();
 		break;
@@ -28146,14 +28146,14 @@ int drv_QGraphicsPathItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 }
 
 // QGraphicsPixmapItem
-int drv_QGraphicsPixmapItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsPixmapItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsPixmapItem *pThis = (QGraphicsPixmapItem*)_p;
 	switch (funcid) {
 	case 268000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 268102: {
 		*(void**)_p = new QGraphicsPixmapItem();
 		break;
@@ -28212,14 +28212,14 @@ int drv_QGraphicsPixmapItem(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 }
 
 // QGraphicsPolygonItem
-int drv_QGraphicsPolygonItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsPolygonItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsPolygonItem *pThis = (QGraphicsPolygonItem*)_p;
 	switch (funcid) {
 	case 269000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 269102: {
 		*(void**)_p = new QGraphicsPolygonItem();
 		break;
@@ -28257,14 +28257,14 @@ int drv_QGraphicsPolygonItem(void *_p, int funcid, void* p1,void* p2,void* p3,vo
 }
 
 // QGraphicsProxyWidget
-int drv_QGraphicsProxyWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsProxyWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsProxyWidget *pThis = (QGraphicsProxyWidget*)_p;
 	switch (funcid) {
 	case 270000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 270102: {
 		*(void**)_p = new QGraphicsProxyWidget();
 		break;
@@ -28300,14 +28300,14 @@ int drv_QGraphicsProxyWidget(void *_p, int funcid, void* p1,void* p2,void* p3,vo
 }
 
 // QGraphicsRectItem
-int drv_QGraphicsRectItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsRectItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsRectItem *pThis = (QGraphicsRectItem*)_p;
 	switch (funcid) {
 	case 271000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 271102: {
 		*(void**)_p = new QGraphicsRectItem();
 		break;
@@ -28345,14 +28345,14 @@ int drv_QGraphicsRectItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 }
 
 // QGraphicsRotation
-int drv_QGraphicsRotation(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsRotation(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsRotation *pThis = (QGraphicsRotation*)_p;
 	switch (funcid) {
 	case 272000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 272102: {
 		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(axisChanged()),uis,SLOT(call()))) {
@@ -28419,14 +28419,14 @@ int drv_QGraphicsRotation(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 }
 
 // QGraphicsScale
-int drv_QGraphicsScale(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsScale(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsScale *pThis = (QGraphicsScale*)_p;
 	switch (funcid) {
 	case 273000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 273102: {
 		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(xScaleChanged()),uis,SLOT(call()))) {
@@ -28510,14 +28510,14 @@ int drv_QGraphicsScale(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 }
 
 // QGraphicsScene
-int drv_QGraphicsScene(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsScene(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsScene *pThis = (QGraphicsScene*)_p;
 	switch (funcid) {
 	case 274000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 274102: {
 		UISignal36 *uis = new UISignal36(pThis);
 		if (QObject::connect(pThis,SIGNAL(sceneRectChanged(QRectF const&)),uis,SLOT(call(QRectF const&)))) {
@@ -29038,14 +29038,14 @@ int drv_QGraphicsScene(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 }
 
 // QGraphicsSceneContextMenuEvent
-int drv_QGraphicsSceneContextMenuEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsSceneContextMenuEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsSceneContextMenuEvent *pThis = (QGraphicsSceneContextMenuEvent*)_p;
 	switch (funcid) {
 	case 275000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 275102: {
 		*(void**)_p = new QGraphicsSceneContextMenuEvent();
 		break;
@@ -29104,14 +29104,14 @@ int drv_QGraphicsSceneContextMenuEvent(void *_p, int funcid, void* p1,void* p2,v
 }
 
 // QGraphicsSceneDragDropEvent
-int drv_QGraphicsSceneDragDropEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsSceneDragDropEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsSceneDragDropEvent *pThis = (QGraphicsSceneDragDropEvent*)_p;
 	switch (funcid) {
 	case 276000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 276102: {
 		*(void**)_p = new QGraphicsSceneDragDropEvent();
 		break;
@@ -29214,14 +29214,14 @@ int drv_QGraphicsSceneDragDropEvent(void *_p, int funcid, void* p1,void* p2,void
 }
 
 // QGraphicsSceneEvent
-int drv_QGraphicsSceneEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsSceneEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsSceneEvent *pThis = (QGraphicsSceneEvent*)_p;
 	switch (funcid) {
 	case 277000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 277102: {
 		*(void**)_p = new QGraphicsSceneEvent(*(QEvent::Type*)p1);
 		break;
@@ -29241,14 +29241,14 @@ int drv_QGraphicsSceneEvent(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 }
 
 // QGraphicsSceneHelpEvent
-int drv_QGraphicsSceneHelpEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsSceneHelpEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsSceneHelpEvent *pThis = (QGraphicsSceneHelpEvent*)_p;
 	switch (funcid) {
 	case 278000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 278102: {
 		*(void**)_p = new QGraphicsSceneHelpEvent();
 		break;
@@ -29282,14 +29282,14 @@ int drv_QGraphicsSceneHelpEvent(void *_p, int funcid, void* p1,void* p2,void* p3
 }
 
 // QGraphicsSceneHoverEvent
-int drv_QGraphicsSceneHoverEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsSceneHoverEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsSceneHoverEvent *pThis = (QGraphicsSceneHoverEvent*)_p;
 	switch (funcid) {
 	case 279000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 279102: {
 		*(void**)_p = new QGraphicsSceneHoverEvent();
 		break;
@@ -29367,14 +29367,14 @@ int drv_QGraphicsSceneHoverEvent(void *_p, int funcid, void* p1,void* p2,void* p
 }
 
 // QGraphicsSceneMouseEvent
-int drv_QGraphicsSceneMouseEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsSceneMouseEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsSceneMouseEvent *pThis = (QGraphicsSceneMouseEvent*)_p;
 	switch (funcid) {
 	case 280000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 280102: {
 		*(void**)_p = new QGraphicsSceneMouseEvent();
 		break;
@@ -29495,14 +29495,14 @@ int drv_QGraphicsSceneMouseEvent(void *_p, int funcid, void* p1,void* p2,void* p
 }
 
 // QGraphicsSceneMoveEvent
-int drv_QGraphicsSceneMoveEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsSceneMoveEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsSceneMoveEvent *pThis = (QGraphicsSceneMoveEvent*)_p;
 	switch (funcid) {
 	case 281000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 281102: {
 		*(void**)_p = new QGraphicsSceneMoveEvent();
 		break;
@@ -29532,14 +29532,14 @@ int drv_QGraphicsSceneMoveEvent(void *_p, int funcid, void* p1,void* p2,void* p3
 }
 
 // QGraphicsSceneResizeEvent
-int drv_QGraphicsSceneResizeEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsSceneResizeEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsSceneResizeEvent *pThis = (QGraphicsSceneResizeEvent*)_p;
 	switch (funcid) {
 	case 282000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 282102: {
 		*(void**)_p = new QGraphicsSceneResizeEvent();
 		break;
@@ -29569,14 +29569,14 @@ int drv_QGraphicsSceneResizeEvent(void *_p, int funcid, void* p1,void* p2,void* 
 }
 
 // QGraphicsSceneWheelEvent
-int drv_QGraphicsSceneWheelEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsSceneWheelEvent(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsSceneWheelEvent *pThis = (QGraphicsSceneWheelEvent*)_p;
 	switch (funcid) {
 	case 283000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 283102: {
 		*(void**)_p = new QGraphicsSceneWheelEvent();
 		break;
@@ -29651,14 +29651,14 @@ int drv_QGraphicsSceneWheelEvent(void *_p, int funcid, void* p1,void* p2,void* p
 }
 
 // QGraphicsSimpleTextItem
-int drv_QGraphicsSimpleTextItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsSimpleTextItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsSimpleTextItem *pThis = (QGraphicsSimpleTextItem*)_p;
 	switch (funcid) {
 	case 284000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 284102: {
 		*(void**)_p = new QGraphicsSimpleTextItem();
 		break;
@@ -29695,14 +29695,14 @@ int drv_QGraphicsSimpleTextItem(void *_p, int funcid, void* p1,void* p2,void* p3
 }
 
 // QGraphicsTextItem
-int drv_QGraphicsTextItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsTextItem(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsTextItem *pThis = (QGraphicsTextItem*)_p;
 	switch (funcid) {
 	case 285000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 285102: {
 		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(linkActivated(QString const&)),uis,SLOT(call(QString const&)))) {
@@ -29823,14 +29823,14 @@ int drv_QGraphicsTextItem(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 }
 
 // QGraphicsTransform
-int drv_QGraphicsTransform(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsTransform(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsTransform *pThis = (QGraphicsTransform*)_p;
 	switch (funcid) {
 	case 286000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 286102: {
 		pThis->update();
 		break;
@@ -29842,14 +29842,14 @@ int drv_QGraphicsTransform(void *_p, int funcid, void* p1,void* p2,void* p3,void
 }
 
 // QGraphicsView
-int drv_QGraphicsView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsView *pThis = (QGraphicsView*)_p;
 	switch (funcid) {
 	case 287000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 287102: {
 		*(void**)_p = new QGraphicsView();
 		break;
@@ -30272,14 +30272,14 @@ int drv_QGraphicsView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 }
 
 // QGraphicsWidget
-int drv_QGraphicsWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGraphicsWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGraphicsWidget *pThis = (QGraphicsWidget*)_p;
 	switch (funcid) {
 	case 288000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 288102: {
 		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(layoutChanged()),uis,SLOT(call()))) {
@@ -30588,14 +30588,14 @@ int drv_QGraphicsWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 }
 
 // QGridLayout
-int drv_QGridLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGridLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGridLayout *pThis = (QGridLayout*)_p;
 	switch (funcid) {
 	case 289000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 289102: {
 		*(void**)_p = new QGridLayout();
 		break;
@@ -30723,14 +30723,14 @@ int drv_QGridLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QGroupBox
-int drv_QGroupBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QGroupBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QGroupBox *pThis = (QGroupBox*)_p;
 	switch (funcid) {
 	case 290000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 290102: {
 		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(clicked()),uis,SLOT(call()))) {
@@ -30811,14 +30811,14 @@ int drv_QGroupBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 }
 
 // QHBoxLayout
-int drv_QHBoxLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QHBoxLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QHBoxLayout *pThis = (QHBoxLayout*)_p;
 	switch (funcid) {
 	case 291000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 291102: {
 		*(void**)_p = new QHBoxLayout();
 		break;
@@ -30834,14 +30834,14 @@ int drv_QHBoxLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QHeaderView
-int drv_QHeaderView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QHeaderView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QHeaderView *pThis = (QHeaderView*)_p;
 	switch (funcid) {
 	case 292000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 292102: {
 		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(sectionEntered(int)),uis,SLOT(call(int)))) {
@@ -30968,7 +30968,7 @@ int drv_QHeaderView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		*(bool*)p1 = pThis->sectionsClickable();
 #else
 		*(bool*)p1 = pThis->isClickable();
-#endif		
+#endif
 		break;
 	}
 	case 292125: {
@@ -30976,7 +30976,7 @@ int drv_QHeaderView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		*(bool*)p1 = pThis->sectionsMovable();
 #else
 		*(bool*)p1 = pThis->isMovable();
-#endif		
+#endif
 		break;
 	}
 	case 292126: {
@@ -31034,7 +31034,7 @@ int drv_QHeaderView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		*(QHeaderView::ResizeMode*)p2 = pThis->sectionResizeMode(*(int*)p1);
 #else
 		*(QHeaderView::ResizeMode*)p2 = pThis->resizeMode(*(int*)p1);
-#endif		
+#endif
 		break;
 	}
 	case 292139: {
@@ -31104,7 +31104,7 @@ int drv_QHeaderView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		pThis->setSectionsClickable(*(bool*)p1);
 #else
 		pThis->setClickable(*(bool*)p1);
-#endif		
+#endif
 		break;
 	}
 	case 292155: {
@@ -31128,7 +31128,7 @@ int drv_QHeaderView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		pThis->setSectionsMovable(*(bool*)p1);
 #else
 		pThis->setMovable(*(bool*)p1);
-#endif		
+#endif
 		break;
 	}
 	case 292160: {
@@ -31148,7 +31148,7 @@ int drv_QHeaderView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		pThis->setSectionResizeMode(*(QHeaderView::ResizeMode*)p1);
 #else
 		pThis->setResizeMode(*(QHeaderView::ResizeMode*)p1);
-#endif		
+#endif
 		break;
 	}
 	case 292164: {
@@ -31156,7 +31156,7 @@ int drv_QHeaderView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 		pThis->setSectionResizeMode(*(int*)p1,*(QHeaderView::ResizeMode*)p2);
 #else
 		pThis->setResizeMode(*(int*)p1,*(QHeaderView::ResizeMode*)p2);
-#endif		
+#endif
 		break;
 	}
 	case 292165: {
@@ -31218,14 +31218,14 @@ int drv_QHeaderView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QHistoryState
-int drv_QHistoryState(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QHistoryState(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QHistoryState *pThis = (QHistoryState*)_p;
 	switch (funcid) {
 	case 293000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 293102: {
 		*(void**)_p = new QHistoryState();
 		break;
@@ -31261,14 +31261,14 @@ int drv_QHistoryState(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 }
 
 // QIODevice
-int drv_QIODevice(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QIODevice(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QIODevice *pThis = (QIODevice*)_p;
 	switch (funcid) {
 	case 294000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 294102: {
 		UISignal75 *uis = new UISignal75(pThis);
 		if (QObject::connect(pThis,SIGNAL(bytesWritten(qint64)),uis,SLOT(call(qint64)))) {
@@ -31456,14 +31456,14 @@ int drv_QIODevice(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 }
 
 // QInputDialog
-int drv_QInputDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QInputDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QInputDialog *pThis = (QInputDialog*)_p;
 	switch (funcid) {
 	case 295000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 295102: {
 		UISignal67 *uis = new UISignal67(pThis);
 		if (QObject::connect(pThis,SIGNAL(doubleValueSelected(double)),uis,SLOT(call(double)))) {
@@ -31701,14 +31701,14 @@ int drv_QInputDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 }
 
 // QIntValidator
-int drv_QIntValidator(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QIntValidator(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QIntValidator *pThis = (QIntValidator*)_p;
 	switch (funcid) {
 	case 296000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 296102: {
 		*(void**)_p = new QIntValidator();
 		break;
@@ -31748,14 +31748,14 @@ int drv_QIntValidator(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 }
 
 // QItemDelegate
-int drv_QItemDelegate(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QItemDelegate(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QItemDelegate *pThis = (QItemDelegate*)_p;
 	switch (funcid) {
 	case 297000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 297102: {
 		*(void**)_p = new QItemDelegate();
 		break;
@@ -31799,14 +31799,14 @@ int drv_QItemDelegate(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 }
 
 // QItemSelectionModel
-int drv_QItemSelectionModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QItemSelectionModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QItemSelectionModel *pThis = (QItemSelectionModel*)_p;
 	switch (funcid) {
 	case 298000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 298102: {
 		UISignal26 *uis = new UISignal26(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentRowChanged(QModelIndex const&,QModelIndex const&)),uis,SLOT(call(QModelIndex const&,QModelIndex const&)))) {
@@ -31944,14 +31944,14 @@ int drv_QItemSelectionModel(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 }
 
 // QKeyEventTransition
-int drv_QKeyEventTransition(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QKeyEventTransition(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QKeyEventTransition *pThis = (QKeyEventTransition*)_p;
 	switch (funcid) {
 	case 299000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 299102: {
 		*(void**)_p = new QKeyEventTransition();
 		break;
@@ -31987,14 +31987,14 @@ int drv_QKeyEventTransition(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 }
 
 // QLCDNumber
-int drv_QLCDNumber(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QLCDNumber(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QLCDNumber *pThis = (QLCDNumber*)_p;
 	switch (funcid) {
 	case 300000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 300102: {
 		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(overflow()),uis,SLOT(call()))) {
@@ -32097,14 +32097,14 @@ int drv_QLCDNumber(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 }
 
 // QLabel
-int drv_QLabel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QLabel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QLabel *pThis = (QLabel*)_p;
 	switch (funcid) {
 	case 301000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 301102: {
 		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(linkActivated(QString const&)),uis,SLOT(call(QString const&)))) {
@@ -32272,14 +32272,14 @@ int drv_QLabel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 }
 
 // QLayout
-int drv_QLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QLayout *pThis = (QLayout*)_p;
 	switch (funcid) {
 	case 302000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 302102: {
 		*(bool*)p1 = pThis->activate();
 		break;
@@ -32442,14 +32442,14 @@ int drv_QLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 }
 
 // QLibrary
-int drv_QLibrary(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QLibrary(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QLibrary *pThis = (QLibrary*)_p;
 	switch (funcid) {
 	case 303000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 303102: {
 		*(void**)_p = new QLibrary();
 		break;
@@ -32499,7 +32499,7 @@ int drv_QLibrary(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		*(QFunctionPointer*)p2 = pThis->resolve(drvGet_const_char(p1));
 #else
 		*(void**)p2 = pThis->resolve(drvGet_const_char(p1));
-#endif		
+#endif
 		break;
 	}
 	case 303114: {
@@ -32507,7 +32507,7 @@ int drv_QLibrary(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		*(QFunctionPointer*)p3 = QLibrary::resolve(drvGetStringHead(p1),drvGet_const_char(p2));
 #else
 		*(void**)p3 = QLibrary::resolve(drvGetStringHead(p1),drvGet_const_char(p2));
-#endif		
+#endif
 		break;
 	}
 	case 303115: {
@@ -32515,7 +32515,7 @@ int drv_QLibrary(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		*(QFunctionPointer*)p4 = QLibrary::resolve(drvGetStringHead(p1),drvGetStringHead(p2),drvGet_const_char(p3));
 #else
 		*(void**)p4 = QLibrary::resolve(drvGetStringHead(p1),drvGetStringHead(p2),drvGet_const_char(p3));
-#endif		
+#endif
 		break;
 	}
 	case 303116: {
@@ -32523,7 +32523,7 @@ int drv_QLibrary(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 		*(QFunctionPointer*)p4 = QLibrary::resolve(drvGetStringHead(p1),*(int*)p2,drvGet_const_char(p3));
 #else
 		*(void**)p4 = QLibrary::resolve(drvGetStringHead(p1),*(int*)p2,drvGet_const_char(p3));
-#endif		
+#endif
 		break;
 	}
 	case 303117: {
@@ -32553,14 +32553,14 @@ int drv_QLibrary(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 }
 
 // QLineEdit
-int drv_QLineEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QLineEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QLineEdit *pThis = (QLineEdit*)_p;
 	switch (funcid) {
 	case 304000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 304102: {
 		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(textEdited(QString const&)),uis,SLOT(call(QString const&)))) {
@@ -32864,14 +32864,14 @@ int drv_QLineEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 }
 
 // QListView
-int drv_QListView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QListView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QListView *pThis = (QListView*)_p;
 	switch (funcid) {
 	case 305000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 305102: {
 		UISignal20 *uis = new UISignal20(pThis);
 		if (QObject::connect(pThis,SIGNAL(indexesMoved(QList<QModelIndex> const&)),uis,SLOT(call(QList<QModelIndex> const&)))) {
@@ -33030,14 +33030,14 @@ int drv_QListView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 }
 
 // QListWidget
-int drv_QListWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QListWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QListWidget *pThis = (QListWidget*)_p;
 	switch (funcid) {
 	case 306000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 306102: {
 		UISignal22 *uis = new UISignal22(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemActivated(QListWidgetItem*)),uis,SLOT(call(QListWidgetItem*)))) {
@@ -33305,14 +33305,14 @@ int drv_QListWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QMainWindow
-int drv_QMainWindow(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QMainWindow(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QMainWindow *pThis = (QMainWindow*)_p;
 	switch (funcid) {
 	case 307000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 307102: {
 		UISignal65 *uis = new UISignal65(pThis);
 		if (QObject::connect(pThis,SIGNAL(toolButtonStyleChanged(Qt::ToolButtonStyle)),uis,SLOT(call(Qt::ToolButtonStyle)))) {
@@ -33556,14 +33556,14 @@ int drv_QMainWindow(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QMdiArea
-int drv_QMdiArea(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QMdiArea(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QMdiArea *pThis = (QMdiArea*)_p;
 	switch (funcid) {
 	case 308000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 308102: {
 		UISignal24 *uis = new UISignal24(pThis);
 		if (QObject::connect(pThis,SIGNAL(subWindowActivated(QMdiSubWindow*)),uis,SLOT(call(QMdiSubWindow*)))) {
@@ -33707,14 +33707,14 @@ int drv_QMdiArea(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 }
 
 // QMdiSubWindow
-int drv_QMdiSubWindow(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QMdiSubWindow(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QMdiSubWindow *pThis = (QMdiSubWindow*)_p;
 	switch (funcid) {
 	case 309000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 309102: {
 		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(aboutToActivate()),uis,SLOT(call()))) {
@@ -33812,14 +33812,14 @@ int drv_QMdiSubWindow(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 }
 
 // QMenu
-int drv_QMenu(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QMenu(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QMenu *pThis = (QMenu*)_p;
 	switch (funcid) {
 	case 310000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 310102: {
 		UISignal6 *uis = new UISignal6(pThis);
 		if (QObject::connect(pThis,SIGNAL(hovered(QAction*)),uis,SLOT(call(QAction*)))) {
@@ -34034,14 +34034,14 @@ int drv_QMenu(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5
 }
 
 // QMenuBar
-int drv_QMenuBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QMenuBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QMenuBar *pThis = (QMenuBar*)_p;
 	switch (funcid) {
 	case 311000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 311102: {
 		UISignal6 *uis = new UISignal6(pThis);
 		if (QObject::connect(pThis,SIGNAL(hovered(QAction*)),uis,SLOT(call(QAction*)))) {
@@ -34161,14 +34161,14 @@ int drv_QMenuBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 }
 
 // QMessageBox
-int drv_QMessageBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QMessageBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QMessageBox *pThis = (QMessageBox*)_p;
 	switch (funcid) {
 	case 312000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 312102: {
 		UISignal5 *uis = new UISignal5(pThis);
 		if (QObject::connect(pThis,SIGNAL(buttonClicked(QAbstractButton*)),uis,SLOT(call(QAbstractButton*)))) {
@@ -34404,14 +34404,14 @@ int drv_QMessageBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QMimeData
-int drv_QMimeData(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QMimeData(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QMimeData *pThis = (QMimeData*)_p;
 	switch (funcid) {
 	case 313000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 313102: {
 		*(void**)_p = new QMimeData();
 		break;
@@ -34513,14 +34513,14 @@ int drv_QMimeData(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 }
 
 // QMouseEventTransition
-int drv_QMouseEventTransition(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QMouseEventTransition(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QMouseEventTransition *pThis = (QMouseEventTransition*)_p;
 	switch (funcid) {
 	case 314000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 314102: {
 		*(void**)_p = new QMouseEventTransition();
 		break;
@@ -34565,14 +34565,14 @@ int drv_QMouseEventTransition(void *_p, int funcid, void* p1,void* p2,void* p3,v
 }
 
 // QMovie
-int drv_QMovie(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QMovie(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QMovie *pThis = (QMovie*)_p;
 	switch (funcid) {
 	case 315000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 315102: {
 		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(frameChanged(int)),uis,SLOT(call(int)))) {
@@ -34763,14 +34763,14 @@ int drv_QMovie(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 }
 
 // QObject
-int drv_QObject(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)	
+int drv_QObject(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,void*,void*,void*,void*,void*,void*,void*)
 {
 	QObject *pThis = (QObject*)_p;
 	switch (funcid) {
 	case 316000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 316102: {
 		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(destroyed()),uis,SLOT(call()))) {
@@ -34914,14 +34914,14 @@ int drv_QObject(void *_p, int funcid, void* p1,void* p2,void* p3,void*,void*,voi
 }
 
 // QObjectCleanupHandler
-int drv_QObjectCleanupHandler(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QObjectCleanupHandler(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QObjectCleanupHandler *pThis = (QObjectCleanupHandler*)_p;
 	switch (funcid) {
 	case 317000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 317102: {
 		*(void**)_p = new QObjectCleanupHandler();
 		break;
@@ -34949,14 +34949,14 @@ int drv_QObjectCleanupHandler(void *_p, int funcid, void* p1,void* p2,void* p3,v
 }
 
 // QPanGesture
-int drv_QPanGesture(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QPanGesture(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QPanGesture *pThis = (QPanGesture*)_p;
 	switch (funcid) {
 	case 318000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 318102: {
 		*(void**)_p = new QPanGesture();
 		break;
@@ -35002,14 +35002,14 @@ int drv_QPanGesture(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QParallelAnimationGroup
-int drv_QParallelAnimationGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QParallelAnimationGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QParallelAnimationGroup *pThis = (QParallelAnimationGroup*)_p;
 	switch (funcid) {
 	case 319000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 319102: {
 		*(void**)_p = new QParallelAnimationGroup();
 		break;
@@ -35025,14 +35025,14 @@ int drv_QParallelAnimationGroup(void *_p, int funcid, void* p1,void* p2,void* p3
 }
 
 // QPauseAnimation
-int drv_QPauseAnimation(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QPauseAnimation(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QPauseAnimation *pThis = (QPauseAnimation*)_p;
 	switch (funcid) {
 	case 320000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 320102: {
 		*(void**)_p = new QPauseAnimation();
 		break;
@@ -35056,14 +35056,14 @@ int drv_QPauseAnimation(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 }
 
 // QPinchGesture
-int drv_QPinchGesture(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QPinchGesture(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QPinchGesture *pThis = (QPinchGesture*)_p;
 	switch (funcid) {
 	case 321000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 321102: {
 		*(void**)_p = new QPinchGesture();
 		break;
@@ -35170,14 +35170,14 @@ int drv_QPinchGesture(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 }
 
 // QPlainTextDocumentLayout
-int drv_QPlainTextDocumentLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QPlainTextDocumentLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QPlainTextDocumentLayout *pThis = (QPlainTextDocumentLayout*)_p;
 	switch (funcid) {
 	case 322000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 322102: {
 		*(void**)_p = new QPlainTextDocumentLayout((QTextDocument*)(p1));
 		break;
@@ -35206,14 +35206,14 @@ int drv_QPlainTextDocumentLayout(void *_p, int funcid, void* p1,void* p2,void* p
 }
 
 // QPlainTextEdit
-int drv_QPlainTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QPlainTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QPlainTextEdit *pThis = (QPlainTextEdit*)_p;
 	switch (funcid) {
 	case 323000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 323102: {
 		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(copyAvailable(bool)),uis,SLOT(call(bool)))) {
@@ -35585,14 +35585,14 @@ int drv_QPlainTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 }
 
 // QPluginLoader
-int drv_QPluginLoader(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QPluginLoader(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QPluginLoader *pThis = (QPluginLoader*)_p;
 	switch (funcid) {
 	case 324000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 324102: {
 		*(void**)_p = new QPluginLoader();
 		break;
@@ -35652,14 +35652,14 @@ int drv_QPluginLoader(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 }
 
 // QPrintDialog
-int drv_QPrintDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QPrintDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QPrintDialog *pThis = (QPrintDialog*)_p;
 	switch (funcid) {
 	case 325000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 325102: {
 		UISignal31 *uis = new UISignal31(pThis);
 		if (QObject::connect(pThis,SIGNAL(accepted(QPrinter*)),uis,SLOT(call(QPrinter*)))) {
@@ -35718,14 +35718,14 @@ int drv_QPrintDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 }
 
 // QPrintPreviewDialog
-int drv_QPrintPreviewDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QPrintPreviewDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QPrintPreviewDialog *pThis = (QPrintPreviewDialog*)_p;
 	switch (funcid) {
 	case 326000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 326102: {
 		UISignal31 *uis = new UISignal31(pThis);
 		if (QObject::connect(pThis,SIGNAL(paintRequested(QPrinter*)),uis,SLOT(call(QPrinter*)))) {
@@ -35764,14 +35764,14 @@ int drv_QPrintPreviewDialog(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 }
 
 // QPrintPreviewWidget
-int drv_QPrintPreviewWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QPrintPreviewWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QPrintPreviewWidget *pThis = (QPrintPreviewWidget*)_p;
 	switch (funcid) {
 	case 327000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 327102: {
 		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(previewChanged()),uis,SLOT(call()))) {
@@ -35901,14 +35901,14 @@ int drv_QPrintPreviewWidget(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 }
 
 // QProcess
-int drv_QProcess(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QProcess(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QProcess *pThis = (QProcess*)_p;
 	switch (funcid) {
 	case 328000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 328102: {
 		UISignal32 *uis = new UISignal32(pThis);
 		if (QObject::connect(pThis,SIGNAL(error(QProcess::ProcessError)),uis,SLOT(call(QProcess::ProcessError)))) {
@@ -36154,14 +36154,14 @@ int drv_QProcess(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 }
 
 // QProgressBar
-int drv_QProgressBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QProgressBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QProgressBar *pThis = (QProgressBar*)_p;
 	switch (funcid) {
 	case 329000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 329102: {
 		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(valueChanged(int)),uis,SLOT(call(int)))) {
@@ -36268,14 +36268,14 @@ int drv_QProgressBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 }
 
 // QProgressDialog
-int drv_QProgressDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QProgressDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QProgressDialog *pThis = (QProgressDialog*)_p;
 	switch (funcid) {
 	case 330000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 330102: {
 		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(canceled()),uis,SLOT(call()))) {
@@ -36402,14 +36402,14 @@ int drv_QProgressDialog(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 }
 
 // QPropertyAnimation
-int drv_QPropertyAnimation(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QPropertyAnimation(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QPropertyAnimation *pThis = (QPropertyAnimation*)_p;
 	switch (funcid) {
 	case 331000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 331102: {
 		*(void**)_p = new QPropertyAnimation();
 		break;
@@ -36445,14 +36445,14 @@ int drv_QPropertyAnimation(void *_p, int funcid, void* p1,void* p2,void* p3,void
 }
 
 // QProxyStyle
-int drv_QProxyStyle(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QProxyStyle(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QProxyStyle *pThis = (QProxyStyle*)_p;
 	switch (funcid) {
 	case 332000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 332102: {
 		*(void**)_p = new QProxyStyle();
 		break;
@@ -36476,14 +36476,14 @@ int drv_QProxyStyle(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QPushButton
-int drv_QPushButton(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QPushButton(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QPushButton *pThis = (QPushButton*)_p;
 	switch (funcid) {
 	case 333000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 333102: {
 		*(void**)_p = new QPushButton();
 		break;
@@ -36544,14 +36544,14 @@ int drv_QPushButton(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QRadioButton
-int drv_QRadioButton(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QRadioButton(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QRadioButton *pThis = (QRadioButton*)_p;
 	switch (funcid) {
 	case 334000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 334102: {
 		*(void**)_p = new QRadioButton();
 		break;
@@ -36571,14 +36571,14 @@ int drv_QRadioButton(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 }
 
 // QRegExpValidator
-int drv_QRegExpValidator(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QRegExpValidator(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QRegExpValidator *pThis = (QRegExpValidator*)_p;
 	switch (funcid) {
 	case 335000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 335102: {
 		*(void**)_p = new QRegExpValidator();
 		break;
@@ -36608,14 +36608,14 @@ int drv_QRegExpValidator(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 }
 
 // QRubberBand
-int drv_QRubberBand(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QRubberBand(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QRubberBand *pThis = (QRubberBand*)_p;
 	switch (funcid) {
 	case 336000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 336102: {
 		*(void**)_p = new QRubberBand(*(QRubberBand::Shape*)p1,(QWidget*)(p2));
 		break;
@@ -36658,14 +36658,14 @@ int drv_QRubberBand(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QScrollArea
-int drv_QScrollArea(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QScrollArea(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QScrollArea *pThis = (QScrollArea*)_p;
 	switch (funcid) {
 	case 337000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 337102: {
 		*(void**)_p = new QScrollArea();
 		break;
@@ -36721,14 +36721,14 @@ int drv_QScrollArea(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QScrollBar
-int drv_QScrollBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QScrollBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QScrollBar *pThis = (QScrollBar*)_p;
 	switch (funcid) {
 	case 338000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 338102: {
 		*(void**)_p = new QScrollBar();
 		break;
@@ -36748,14 +36748,14 @@ int drv_QScrollBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 }
 
 // QSequentialAnimationGroup
-int drv_QSequentialAnimationGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QSequentialAnimationGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QSequentialAnimationGroup *pThis = (QSequentialAnimationGroup*)_p;
 	switch (funcid) {
 	case 339000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 339102: {
 		UISignal2 *uis = new UISignal2(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentAnimationChanged(QAbstractAnimation*)),uis,SLOT(call(QAbstractAnimation*)))) {
@@ -36790,7 +36790,7 @@ int drv_QSequentialAnimationGroup(void *_p, int funcid, void* p1,void* p2,void* 
 }
 
 // QSessionManager
-int drv_QSessionManager(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QSessionManager(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QSessionManager *pThis = (QSessionManager*)_p;
 	switch (funcid) {
@@ -36865,14 +36865,14 @@ int drv_QSessionManager(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 }
 
 // QSettings
-int drv_QSettings(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QSettings(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QSettings *pThis = (QSettings*)_p;
 	switch (funcid) {
 	case 341000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 341102: {
 		*(void**)_p = new QSettings();
 		break;
@@ -37045,14 +37045,14 @@ int drv_QSettings(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 }
 
 // QSharedMemory
-int drv_QSharedMemory(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QSharedMemory(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QSharedMemory *pThis = (QSharedMemory*)_p;
 	switch (funcid) {
 	case 342000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 342102: {
 		*(void**)_p = new QSharedMemory();
 		break;
@@ -37132,14 +37132,14 @@ int drv_QSharedMemory(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 }
 
 // QShortcut
-int drv_QShortcut(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QShortcut(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QShortcut *pThis = (QShortcut*)_p;
 	switch (funcid) {
 	case 343000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 343102: {
 		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(activatedAmbiguously()),uis,SLOT(call()))) {
@@ -37219,14 +37219,14 @@ int drv_QShortcut(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 }
 
 // QSignalMapper
-int drv_QSignalMapper(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QSignalMapper(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QSignalMapper *pThis = (QSignalMapper*)_p;
 	switch (funcid) {
 	case 344000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 344102: {
 		UISignal28 *uis = new UISignal28(pThis);
 		if (QObject::connect(pThis,SIGNAL(mapped(QObject*)),uis,SLOT(call(QObject*)))) {
@@ -37314,14 +37314,14 @@ int drv_QSignalMapper(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 }
 
 // QSizeGrip
-int drv_QSizeGrip(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QSizeGrip(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QSizeGrip *pThis = (QSizeGrip*)_p;
 	switch (funcid) {
 	case 345000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 345102: {
 		*(void**)_p = new QSizeGrip((QWidget*)(p1));
 		break;
@@ -37333,14 +37333,14 @@ int drv_QSizeGrip(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 }
 
 // QSlider
-int drv_QSlider(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QSlider(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QSlider *pThis = (QSlider*)_p;
 	switch (funcid) {
 	case 346000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 346102: {
 		*(void**)_p = new QSlider();
 		break;
@@ -37376,14 +37376,14 @@ int drv_QSlider(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 }
 
 // QSortFilterProxyModel
-int drv_QSortFilterProxyModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QSortFilterProxyModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QSortFilterProxyModel *pThis = (QSortFilterProxyModel*)_p;
 	switch (funcid) {
 	case 347000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 347102: {
 		*(void**)_p = new QSortFilterProxyModel();
 		break;
@@ -37520,14 +37520,14 @@ int drv_QSortFilterProxyModel(void *_p, int funcid, void* p1,void* p2,void* p3,v
 }
 
 // QSpinBox
-int drv_QSpinBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QSpinBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QSpinBox *pThis = (QSpinBox*)_p;
 	switch (funcid) {
 	case 348000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 348102: {
 		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(valueChanged(QString const&)),uis,SLOT(call(QString const&)))) {
@@ -37621,14 +37621,14 @@ int drv_QSpinBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 }
 
 // QSplashScreen
-int drv_QSplashScreen(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QSplashScreen(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QSplashScreen *pThis = (QSplashScreen*)_p;
 	switch (funcid) {
 	case 349000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 349102: {
 		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(messageChanged(QString const&)),uis,SLOT(call(QString const&)))) {
@@ -37688,14 +37688,14 @@ int drv_QSplashScreen(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 }
 
 // QSplitter
-int drv_QSplitter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QSplitter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QSplitter *pThis = (QSplitter*)_p;
 	switch (funcid) {
 	case 350000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 350102: {
 		UISignal72 *uis = new UISignal72(pThis);
 		if (QObject::connect(pThis,SIGNAL(splitterMoved(int,int)),uis,SLOT(call(int,int)))) {
@@ -37830,14 +37830,14 @@ int drv_QSplitter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 }
 
 // QSplitterHandle
-int drv_QSplitterHandle(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QSplitterHandle(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QSplitterHandle *pThis = (QSplitterHandle*)_p;
 	switch (funcid) {
 	case 351000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 351102: {
 		*(void**)_p = new QSplitterHandle(*(Qt::Orientation*)p1,(QSplitter*)(p2));
 		break;
@@ -37873,14 +37873,14 @@ int drv_QSplitterHandle(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 }
 
 // QStackedLayout
-int drv_QStackedLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QStackedLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QStackedLayout *pThis = (QStackedLayout*)_p;
 	switch (funcid) {
 	case 352000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 352102: {
 		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(widgetRemoved(int)),uis,SLOT(call(int)))) {
@@ -37950,14 +37950,14 @@ int drv_QStackedLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 }
 
 // QStackedWidget
-int drv_QStackedWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QStackedWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QStackedWidget *pThis = (QStackedWidget*)_p;
 	switch (funcid) {
 	case 353000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 353102: {
 		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(widgetRemoved(int)),uis,SLOT(call(int)))) {
@@ -38027,14 +38027,14 @@ int drv_QStackedWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 }
 
 // QStandardItemModel
-int drv_QStandardItemModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QStandardItemModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QStandardItemModel *pThis = (QStandardItemModel*)_p;
 	switch (funcid) {
 	case 354000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 354102: {
 		UISignal40 *uis = new UISignal40(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemChanged(QStandardItem*)),uis,SLOT(call(QStandardItem*)))) {
@@ -38218,14 +38218,14 @@ int drv_QStandardItemModel(void *_p, int funcid, void* p1,void* p2,void* p3,void
 }
 
 // QState
-int drv_QState(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QState(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QState *pThis = (QState*)_p;
 	switch (funcid) {
 	case 355000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 355102: {
 		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(finished()),uis,SLOT(call()))) {
@@ -38304,14 +38304,14 @@ int drv_QState(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 }
 
 // QStateMachine
-int drv_QStateMachine(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QStateMachine(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QStateMachine *pThis = (QStateMachine*)_p;
 	switch (funcid) {
 	case 356000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 356102: {
 		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(started()),uis,SLOT(call()))) {
@@ -38433,14 +38433,14 @@ int drv_QStateMachine(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 }
 
 // QStatusBar
-int drv_QStatusBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QStatusBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QStatusBar *pThis = (QStatusBar*)_p;
 	switch (funcid) {
 	case 357000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 357102: {
 		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(messageChanged(QString const&)),uis,SLOT(call(QString const&)))) {
@@ -38523,20 +38523,24 @@ int drv_QStatusBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 }
 
 // QStringListModel
-int drv_QStringListModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QStringListModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QStringListModel *pThis = (QStringListModel*)_p;
 	switch (funcid) {
 	case 358000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 358102: {
 		pThis->setStringList(drvGetStringArray(p1));
 		break;
 	}
 	case 358103: {
 		drvSetStringArray(p1,pThis->stringList());
+		break;
+	}
+	case 358104: {
+		*(void**)_p = new QStringListModel((QObject*)p1);
 		break;
 	}
 	default:
@@ -38546,14 +38550,14 @@ int drv_QStringListModel(void *_p, int funcid, void* p1,void* p2,void* p3,void* 
 }
 
 // QStyle
-int drv_QStyle(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QStyle(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QStyle *pThis = (QStyle*)_p;
 	switch (funcid) {
 	case 359000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 359102: {
 		if(p3==0)return -2;
 	if(p4==0)return -2;
@@ -38660,14 +38664,14 @@ int drv_QStyle(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 }
 
 // QStyledItemDelegate
-int drv_QStyledItemDelegate(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QStyledItemDelegate(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QStyledItemDelegate *pThis = (QStyledItemDelegate*)_p;
 	switch (funcid) {
 	case 360000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 360102: {
 		*(void**)_p = new QStyledItemDelegate();
 		break;
@@ -38697,14 +38701,14 @@ int drv_QStyledItemDelegate(void *_p, int funcid, void* p1,void* p2,void* p3,voi
 }
 
 // QSwipeGesture
-int drv_QSwipeGesture(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QSwipeGesture(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QSwipeGesture *pThis = (QSwipeGesture*)_p;
 	switch (funcid) {
 	case 361000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 361102: {
 		*(void**)_p = new QSwipeGesture();
 		break;
@@ -38736,14 +38740,14 @@ int drv_QSwipeGesture(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 }
 
 // QSyntaxHighlighter
-int drv_QSyntaxHighlighter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QSyntaxHighlighter(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QSyntaxHighlighter *pThis = (QSyntaxHighlighter*)_p;
 	switch (funcid) {
 	case 362000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 362102: {
 		*(void**)p1 = new QTextBlock(pThis->currentBlock());
 		break;
@@ -38815,14 +38819,14 @@ int drv_QSyntaxHighlighter(void *_p, int funcid, void* p1,void* p2,void* p3,void
 }
 
 // QSyntaxHighlighterHook
-int drv_QSyntaxHighlighterHook(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QSyntaxHighlighterHook(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QSyntaxHighlighterHook *pThis = (QSyntaxHighlighterHook*)_p;
 	switch (funcid) {
 	case 363000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 363102: {
 		UISignal41 *uis = new UISignal41(pThis);
 		if (QObject::connect(pThis,SIGNAL(hook_highlightBlock(QString const&)),uis,SLOT(call(QString const&)))) {
@@ -38849,14 +38853,14 @@ int drv_QSyntaxHighlighterHook(void *_p, int funcid, void* p1,void* p2,void* p3,
 }
 
 // QSystemTrayIcon
-int drv_QSystemTrayIcon(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QSystemTrayIcon(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QSystemTrayIcon *pThis = (QSystemTrayIcon*)_p;
 	switch (funcid) {
 	case 364000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 364102: {
 		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(messageClicked()),uis,SLOT(call()))) {
@@ -38948,14 +38952,14 @@ int drv_QSystemTrayIcon(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 }
 
 // QTabBar
-int drv_QTabBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTabBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTabBar *pThis = (QTabBar*)_p;
 	switch (funcid) {
 	case 365000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 365102: {
 		UISignal72 *uis = new UISignal72(pThis);
 		if (QObject::connect(pThis,SIGNAL(tabMoved(int,int)),uis,SLOT(call(int,int)))) {
@@ -39203,14 +39207,14 @@ int drv_QTabBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 }
 
 // QTabWidget
-int drv_QTabWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTabWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTabWidget *pThis = (QTabWidget*)_p;
 	switch (funcid) {
 	case 366000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 366102: {
 		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentChanged(int)),uis,SLOT(call(int)))) {
@@ -39432,14 +39436,14 @@ int drv_QTabWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 }
 
 // QTableView
-int drv_QTableView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTableView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTableView *pThis = (QTableView*)_p;
 	switch (funcid) {
 	case 367000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 367102: {
 		*(void**)_p = new QTableView();
 		break;
@@ -39647,14 +39651,14 @@ int drv_QTableView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 }
 
 // QTableWidget
-int drv_QTableWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTableWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTableWidget *pThis = (QTableWidget*)_p;
 	switch (funcid) {
 	case 368000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 368102: {
 		UISignal45 *uis = new UISignal45(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemEntered(QTableWidgetItem*)),uis,SLOT(call(QTableWidgetItem*)))) {
@@ -40030,14 +40034,14 @@ int drv_QTableWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 }
 
 // QTapAndHoldGesture
-int drv_QTapAndHoldGesture(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTapAndHoldGesture(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTapAndHoldGesture *pThis = (QTapAndHoldGesture*)_p;
 	switch (funcid) {
 	case 369000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 369102: {
 		*(void**)_p = new QTapAndHoldGesture();
 		break;
@@ -40070,14 +40074,14 @@ int drv_QTapAndHoldGesture(void *_p, int funcid, void* p1,void* p2,void* p3,void
 }
 
 // QTapGesture
-int drv_QTapGesture(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTapGesture(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTapGesture *pThis = (QTapGesture*)_p;
 	switch (funcid) {
 	case 370000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 370102: {
 		*(void**)_p = new QTapGesture();
 		break;
@@ -40102,14 +40106,14 @@ int drv_QTapGesture(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QTemporaryFile
-int drv_QTemporaryFile(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTemporaryFile(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTemporaryFile *pThis = (QTemporaryFile*)_p;
 	switch (funcid) {
 	case 371000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 371102: {
 		*(void**)_p = new QTemporaryFile();
 		break;
@@ -40166,7 +40170,7 @@ int drv_QTemporaryFile(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4
 }
 
 // QTextBlockGroup
-int drv_QTextBlockGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTextBlockGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTextBlockGroup *pThis = (QTextBlockGroup*)_p;
 	switch (funcid) {
@@ -40196,14 +40200,14 @@ int drv_QTextBlockGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p
 }
 
 // QTextBrowser
-int drv_QTextBrowser(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTextBrowser(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTextBrowser *pThis = (QTextBrowser*)_p;
 	switch (funcid) {
 	case 373000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 373102: {
 		UISignal56 *uis = new UISignal56(pThis);
 		if (QObject::connect(pThis,SIGNAL(sourceChanged(QUrl const&)),uis,SLOT(call(QUrl const&)))) {
@@ -40345,14 +40349,14 @@ int drv_QTextBrowser(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,v
 }
 
 // QTextDocument
-int drv_QTextDocument(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTextDocument(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTextDocument *pThis = (QTextDocument*)_p;
 	switch (funcid) {
 	case 374000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 374102: {
 		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(undoAvailable(bool)),uis,SLOT(call(bool)))) {
@@ -40773,14 +40777,14 @@ int drv_QTextDocument(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 }
 
 // QTextEdit
-int drv_QTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTextEdit *pThis = (QTextEdit*)_p;
 	switch (funcid) {
 	case 375000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 375102: {
 		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(copyAvailable(bool)),uis,SLOT(call(bool)))) {
@@ -41220,14 +41224,14 @@ int drv_QTextEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 }
 
 // QTextFrame
-int drv_QTextFrame(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTextFrame(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTextFrame *pThis = (QTextFrame*)_p;
 	switch (funcid) {
 	case 376000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 376102: {
 		*(void**)_p = new QTextFrame((QTextDocument*)(p1));
 		break;
@@ -41280,14 +41284,14 @@ int drv_QTextFrame(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 }
 
 // QTextList
-int drv_QTextList(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTextList(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTextList *pThis = (QTextList*)_p;
 	switch (funcid) {
 	case 377000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 377102: {
 		*(void**)_p = new QTextList((QTextDocument*)(p1));
 		break;
@@ -41344,7 +41348,7 @@ int drv_QTextList(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 }
 
 // QTextObject
-int drv_QTextObject(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTextObject(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTextObject *pThis = (QTextObject*)_p;
 	switch (funcid) {
@@ -41376,14 +41380,14 @@ int drv_QTextObject(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QTextTable
-int drv_QTextTable(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTextTable(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTextTable *pThis = (QTextTable*)_p;
 	switch (funcid) {
 	case 379000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 379102: {
 		*(void**)_p = new QTextTable((QTextDocument*)(p1));
 		break;
@@ -41476,14 +41480,14 @@ int drv_QTextTable(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 }
 
 // QTimeEdit
-int drv_QTimeEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTimeEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTimeEdit *pThis = (QTimeEdit*)_p;
 	switch (funcid) {
 	case 380000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 380102: {
 		*(void**)_p = new QTimeEdit();
 		break;
@@ -41504,14 +41508,14 @@ int drv_QTimeEdit(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 }
 
 // QTimeLine
-int drv_QTimeLine(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTimeLine(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTimeLine *pThis = (QTimeLine*)_p;
 	switch (funcid) {
 	case 381000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 381102: {
 		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(frameChanged(int)),uis,SLOT(call(int)))) {
@@ -41672,14 +41676,14 @@ int drv_QTimeLine(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 }
 
 // QTimer
-int drv_QTimer(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTimer(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTimer *pThis = (QTimer*)_p;
 	switch (funcid) {
 	case 382000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 382102: {
 		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(timeout()),uis,SLOT(call()))) {
@@ -41742,14 +41746,14 @@ int drv_QTimer(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p
 }
 
 // QToolBar
-int drv_QToolBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QToolBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QToolBar *pThis = (QToolBar*)_p;
 	switch (funcid) {
 	case 383000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 383102: {
 		UISignal66 *uis = new UISignal66(pThis);
 		if (QObject::connect(pThis,SIGNAL(movableChanged(bool)),uis,SLOT(call(bool)))) {
@@ -41945,14 +41949,14 @@ int drv_QToolBar(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 }
 
 // QToolBox
-int drv_QToolBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QToolBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QToolBox *pThis = (QToolBox*)_p;
 	switch (funcid) {
 	case 384000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 384102: {
 		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(currentChanged(int)),uis,SLOT(call(int)))) {
@@ -42066,14 +42070,14 @@ int drv_QToolBox(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void*
 }
 
 // QToolButton
-int drv_QToolButton(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QToolButton(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QToolButton *pThis = (QToolButton*)_p;
 	switch (funcid) {
 	case 385000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 385102: {
 		UISignal6 *uis = new UISignal6(pThis);
 		if (QObject::connect(pThis,SIGNAL(triggered(QAction*)),uis,SLOT(call(QAction*)))) {
@@ -42148,14 +42152,14 @@ int drv_QToolButton(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QTranslator
-int drv_QTranslator(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTranslator(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTranslator *pThis = (QTranslator*)_p;
 	switch (funcid) {
 	case 386000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 386102: {
 		*(void**)_p = new QTranslator();
 		break;
@@ -42195,14 +42199,14 @@ int drv_QTranslator(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QTreeView
-int drv_QTreeView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTreeView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTreeView *pThis = (QTreeView*)_p;
 	switch (funcid) {
 	case 387000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 387102: {
 		UISignal25 *uis = new UISignal25(pThis);
 		if (QObject::connect(pThis,SIGNAL(collapsed(QModelIndex const&)),uis,SLOT(call(QModelIndex const&)))) {
@@ -42476,14 +42480,14 @@ int drv_QTreeView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 }
 
 // QTreeWidget
-int drv_QTreeWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QTreeWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QTreeWidget *pThis = (QTreeWidget*)_p;
 	switch (funcid) {
 	case 388000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 388102: {
 		UISignal54 *uis = new UISignal54(pThis);
 		if (QObject::connect(pThis,SIGNAL(itemEntered(QTreeWidgetItem*,int)),uis,SLOT(call(QTreeWidgetItem*,int)))) {
@@ -42811,14 +42815,14 @@ int drv_QTreeWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QUiLoader
-int drv_QUiLoader(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QUiLoader(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QUiLoader *pThis = (QUiLoader*)_p;
 	switch (funcid) {
 	case 389000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 389102: {
 		*(void**)_p = new QUiLoader();
 		break;
@@ -42911,14 +42915,14 @@ int drv_QUiLoader(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 }
 
 // QUndoGroup
-int drv_QUndoGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QUndoGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QUndoGroup *pThis = (QUndoGroup*)_p;
 	switch (funcid) {
 	case 390000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 390102: {
 		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(indexChanged(int)),uis,SLOT(call(int)))) {
@@ -43047,14 +43051,14 @@ int drv_QUndoGroup(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 }
 
 // QUndoStack
-int drv_QUndoStack(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QUndoStack(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QUndoStack *pThis = (QUndoStack*)_p;
 	switch (funcid) {
 	case 391000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 391102: {
 		UISignal68 *uis = new UISignal68(pThis);
 		if (QObject::connect(pThis,SIGNAL(indexChanged(int)),uis,SLOT(call(int)))) {
@@ -43216,14 +43220,14 @@ int drv_QUndoStack(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 }
 
 // QUndoView
-int drv_QUndoView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QUndoView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QUndoView *pThis = (QUndoView*)_p;
 	switch (funcid) {
 	case 392000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 392102: {
 		*(void**)_p = new QUndoView();
 		break;
@@ -43280,14 +43284,14 @@ int drv_QUndoView(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 }
 
 // QUrlQuery
-int drv_QUrlQuery(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QUrlQuery(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QUrlQuery *pThis = (QUrlQuery*)_p;
 	switch (funcid) {
 	case 393000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 393102: {
 		*(void**)_p = new QUrlQuery();
 		break;
@@ -43386,14 +43390,14 @@ int drv_QUrlQuery(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void
 }
 
 // QVBoxLayout
-int drv_QVBoxLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QVBoxLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QVBoxLayout *pThis = (QVBoxLayout*)_p;
 	switch (funcid) {
 	case 394000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 394102: {
 		*(void**)_p = new QVBoxLayout();
 		break;
@@ -43409,14 +43413,14 @@ int drv_QVBoxLayout(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,vo
 }
 
 // QValidator
-int drv_QValidator(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QValidator(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QValidator *pThis = (QValidator*)_p;
 	switch (funcid) {
 	case 395000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 395102: {
 		QString _p1=drvGetStringRef(p1);
 		pThis->fixup(_p1);
@@ -43445,14 +43449,14 @@ int drv_QValidator(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,voi
 }
 
 // QVariantAnimation
-int drv_QVariantAnimation(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QVariantAnimation(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QVariantAnimation *pThis = (QVariantAnimation*)_p;
 	switch (funcid) {
 	case 396000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 396102: {
 		UISignal57 *uis = new UISignal57(pThis);
 		if (QObject::connect(pThis,SIGNAL(valueChanged(QVariant const&)),uis,SLOT(call(QVariant const&)))) {
@@ -43522,14 +43526,14 @@ int drv_QVariantAnimation(void *_p, int funcid, void* p1,void* p2,void* p3,void*
 }
 
 // QWidget
-int drv_QWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QWidget *pThis = (QWidget*)_p;
 	switch (funcid) {
 	case 397000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 397102: {
 		UISignal29 *uis = new UISignal29(pThis);
 		if (QObject::connect(pThis,SIGNAL(customContextMenuRequested(QPoint const&)),uis,SLOT(call(QPoint const&)))) {
@@ -44708,14 +44712,14 @@ int drv_QWidget(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 }
 
 // QWidgetAction
-int drv_QWidgetAction(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QWidgetAction(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QWidgetAction *pThis = (QWidgetAction*)_p;
 	switch (funcid) {
 	case 398000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 398102: {
 		*(void**)_p = new QWidgetAction((QObject*)(p1));
 		break;
@@ -44755,14 +44759,14 @@ int drv_QWidgetAction(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,
 }
 
 // QWizard
-int drv_QWizard(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QWizard(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QWizard *pThis = (QWizard*)_p;
 	switch (funcid) {
 	case 399000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 399102: {
 		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(helpRequested()),uis,SLOT(call()))) {
@@ -44979,14 +44983,14 @@ int drv_QWizard(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* 
 }
 
 // QWizardPage
-int drv_QWizardPage(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)	
+int drv_QWizardPage(void *_p, int funcid, void* p1,void* p2,void* p3,void* p4,void* p5,void* p6,void* p7,void* p8,void* p9,void* p10,void* p11,void* p12)
 {
 	QWizardPage *pThis = (QWizardPage*)_p;
 	switch (funcid) {
 	case 400000+1: {
 		delete pThis;
 		break;
-	} 
+	}
 	case 400102: {
 		UISignal1 *uis = new UISignal1(pThis);
 		if (QObject::connect(pThis,SIGNAL(completeChanged()),uis,SLOT(call()))) {
