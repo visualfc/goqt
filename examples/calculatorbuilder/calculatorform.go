@@ -8,7 +8,7 @@ import (
 	"github.com/visualfc/goqt/ui"
 )
 
-type CalclatorForm struct {
+type CalculatorForm struct {
 	*ui.QWidget
 	spinBox1    *ui.QSpinBox
 	spinBox2    *ui.QSpinBox
@@ -19,8 +19,8 @@ func IsValidDriver(v ui.Driver) bool {
 	return !reflect.ValueOf(v).IsNil()
 }
 
-func NewCalclatorForm() (*CalclatorForm, error) {
-	w := &CalclatorForm{}
+func NewCalculatorForm() (*CalculatorForm, error) {
+	w := &CalculatorForm{}
 	w.QWidget = ui.NewWidget()
 
 	file := ui.NewFileWithName(":/forms/calculatorform.ui")
