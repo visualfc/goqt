@@ -9,7 +9,7 @@ import (
 
 func main() {
 	ui.RunEx(os.Args, func() {
-		w, err := NewCalclatorForm()
+		w, err := NewCalculatorForm()
 		if err != nil {
 			log.Fatalln(err)
 		}
