@@ -20,3 +20,12 @@ SOURCES += main.cpp
 #target.path=$$[QT_INSTALL_BINS]
 #INSTALLS += target
 #include(../../qt_targets.pri)
+
+unix:!symbian {
+    maemo5 {
+        target.path = /opt/usr/bin
+    } else {
+        target.path = /usr/bin
+    }
+    INSTALLS += target
+}
